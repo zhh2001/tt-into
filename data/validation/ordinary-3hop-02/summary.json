@@ -1,0 +1,82 @@
+{
+  "run_id": "ordinary-3hop-02",
+  "start_utc": "2026-10-09T17:39:15.966744+00:00",
+  "hops": 3,
+  "sink_nodes": 1,
+  "seed": 0,
+  "status": "passed",
+  "diagnostics_enabled": false,
+  "cases": [
+    {
+      "name": "ordinary_udp_smoke",
+      "status": "passed",
+      "errors": [],
+      "hops": 3,
+      "threshold_us": 100000,
+      "capacity": 3,
+      "input_packets": 4,
+      "received_packets": 4,
+      "report_packets": 4,
+      "samples_per_node": [
+        4,
+        4,
+        4
+      ],
+      "diagnostics_enabled": false
+    }
+  ],
+  "versions": {
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "bmv2": "1.15.0-2bdd0b7b",
+    "python": "3.12.3",
+    "mininet": "2.3.0"
+  },
+  "start_load_average": [
+    0.37255859375,
+    0.21630859375,
+    0.1298828125
+  ],
+  "source_sha256": {
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/p4/tt_int.p4": "34556a39f692a80a6812c28b6b49e0491c94cb88c867427d3de4a5a9a012859a",
+    "experiments/analyze_validation.py": "faf46d411088543edf9ece22acd0455e47d7e3f3fc2b165942cb3a269f1244dd",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/run_smoke.py": "20094bba9f4b9facdb0d76f886cc78a01a2fcb632de42aebecd001a07a28606f",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736"
+  },
+  "scope": "普通版本的转发、遥测及 UDP 应用检查，不是性能实验",
+  "finish_utc": "2026-10-09T17:39:19.151524+00:00",
+  "finish_load_average": [
+    0.34228515625,
+    0.21240234375,
+    0.12890625
+  ],
+  "verified_measurement_sources": [
+    "experiments/build.py",
+    "experiments/packet_io.py",
+    "experiments/run_smoke.py",
+    "experiments/run_validation.py",
+    "experiments/topology.py",
+    "src/collector/codec.py",
+    "src/p4/tt_int.p4"
+  ],
+  "wire_checks": {
+    "checked_ipv4_frames": 20,
+    "maximum_output_ip_length": 128,
+    "empty_output_capture_files": 4,
+    "ipv4_checksum_and_mtu_passed": true,
+    "byte_convention": "抓包帧字节，不含 FCS、前导码或物理层间隔"
+  },
+  "analysis_sha256": "af8b4ce858014e09493433075b5dfd654b0c2e855b1af8613961f953ad7a7382",
+  "interpretation": "单次确定性正确性检查；各场景输入包数不同，不作为等预算性能比较",
+  "public_artifact_sha256": {
+    "ordinary_udp_smoke/packets-main.json": "845ab8bdd7f46cdc32757a32fbba8497509a09f70282958b3f2514e4a32dc61c",
+    "ordinary_udp_smoke/send-main.jsonl": "17f7bdcb080b9a1d559a1cf680815b45d256ea595e009882d3ed488e0119b398",
+    "ordinary_udp_smoke/destination.jsonl": "254aa6562c240026480eb18b66c399a4ddb5d72092169ccca2da0cfcacdfa7aa",
+    "ordinary_udp_smoke/collector.jsonl": "218275b7c2a232eb5652b3f4ab82bfc4d4782ab5bff0a3740c3daba31c534381",
+    "ordinary_udp_smoke/destination.pcap": "b75c9f9ae10794d1c72b6c1f39bed67e08a0a3cb1574152b44b6aefa062bc334",
+    "ordinary_udp_smoke/collector.pcap": "2f514728eb197d222608e0acbc59c380cde57e632283f647b2efb43bbfe46154"
+  }
+}
