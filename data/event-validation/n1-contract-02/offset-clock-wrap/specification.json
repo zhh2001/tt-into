@@ -1,0 +1,190 @@
+{
+  "name": "offset-clock-wrap",
+  "nodes": [
+    {
+      "node": 1,
+      "offset_us": 250,
+      "clock_bits": 8,
+      "instance": "fixed"
+    }
+  ],
+  "packets": [
+    {
+      "packet_id": 1,
+      "flow": {
+        "session": 19,
+        "tag": 1001
+      },
+      "hops": [
+        {
+          "object_id": {
+            "node": 1,
+            "port": 2,
+            "queue": 0
+          },
+          "link": "e1",
+          "ingress_us": 0,
+          "egress_us": 1,
+          "mtu": 1500,
+          "queue_packets": 1
+        }
+      ],
+      "sink_us": 2,
+      "report_arrivals_us": [
+        3
+      ],
+      "ip_bytes": 120,
+      "export_emitted": true
+    },
+    {
+      "packet_id": 2,
+      "flow": {
+        "session": 19,
+        "tag": 1001
+      },
+      "hops": [
+        {
+          "object_id": {
+            "node": 1,
+            "port": 2,
+            "queue": 0
+          },
+          "link": "e1",
+          "ingress_us": 9,
+          "egress_us": 10,
+          "mtu": 1500,
+          "queue_packets": 1
+        }
+      ],
+      "sink_us": 11,
+      "report_arrivals_us": [
+        12
+      ],
+      "ip_bytes": 120,
+      "export_emitted": true
+    },
+    {
+      "packet_id": 3,
+      "flow": {
+        "session": 19,
+        "tag": 1001
+      },
+      "hops": [
+        {
+          "object_id": {
+            "node": 1,
+            "port": 2,
+            "queue": 0
+          },
+          "link": "e1",
+          "ingress_us": 10,
+          "egress_us": 11,
+          "mtu": 1500,
+          "queue_packets": 1
+        }
+      ],
+      "sink_us": 12,
+      "report_arrivals_us": [
+        13
+      ],
+      "ip_bytes": 120,
+      "export_emitted": true
+    }
+  ],
+  "writes": [
+    {
+      "write_id": "install-19:1001-1-enabled",
+      "node": 1,
+      "flow": {
+        "session": 19,
+        "tag": 1001
+      },
+      "field": "enabled",
+      "value": true,
+      "version": 1,
+      "issued_us": -20,
+      "effective_us": -19,
+      "ack_us": -18,
+      "cost": {
+        "request_bytes": 10,
+        "reply_bytes": 4,
+        "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+      },
+      "kind": "installation",
+      "success": true
+    },
+    {
+      "write_id": "install-19:1001-1-threshold_us",
+      "node": 1,
+      "flow": {
+        "session": 19,
+        "tag": 1001
+      },
+      "field": "threshold_us",
+      "value": 10,
+      "version": 1,
+      "issued_us": -20,
+      "effective_us": -19,
+      "ack_us": -18,
+      "cost": {
+        "request_bytes": 10,
+        "reply_bytes": 4,
+        "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+      },
+      "kind": "installation",
+      "success": true
+    }
+  ],
+  "reads": [],
+  "capacity": 1,
+  "tasks": [
+    {
+      "task_id": "task-1:2:0:queue_packets",
+      "object_id": {
+        "node": 1,
+        "port": 2,
+        "queue": 0
+      },
+      "start_us": 0,
+      "end_us": 120,
+      "target_us": 20,
+      "weight": 1.0
+    }
+  ],
+  "window_us": [
+    0,
+    120
+  ],
+  "clip": 2,
+  "checkpoint_us": null,
+  "expected": {
+    "selected": {
+      "1": [
+        1
+      ],
+      "2": [],
+      "3": [
+        1
+      ]
+    },
+    "inband_per_link_bytes": {
+      "e1": 60
+    },
+    "export_attempt_bytes": 120
+  },
+  "routes": [
+    {
+      "flow": {
+        "session": 19,
+        "tag": 1001
+      },
+      "objects": [
+        {
+          "node": 1,
+          "port": 2,
+          "queue": 0
+        }
+      ]
+    }
+  ]
+}

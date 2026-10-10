@@ -118,3 +118,9 @@ python3 experiments/analyze_validation.py \
 四种格式的诊断版及任务精简格式的普通版共完成 46 项网络检查，完整交付 9450 包，核查 44704 个输出 IPv4 帧。全部单元检查现为 36 项。年龄采用同一宿主单调时钟的发送与接收因果区间，保留前史及冷启动未知状态，不依赖跨交换机时间戳相减。
 
 相同插入分配的四种格式分别为 3144、2520、2232、2136 byte-hop 的捕获开销，另列 Ethernet 最小帧长补齐的推导值。格式缩减不构成编排创新，反馈增加采样也同时增加实际成本。实现边界、复现步骤和数据入口见[固定路径适配说明](experiments/README-strong.md)。图提供[格式与蓄水池 PNG](figures/strong-validation/strong-format-and-reservoir.png)、[PDF](figures/strong-validation/strong-format-and-reservoir.pdf)及[反馈轨迹 PNG](figures/strong-validation/strong-feedback-timeline.png)、[PDF](figures/strong-validation/strong-feedback-timeline.pdf)。
+
+## 通用事件与评价接口
+
+独立事件层按 ingress、egress、逐字段配置生效和报告可用时刻执行固定路径 TT-INT。它支持多流、多跳、在途更新、容量/MTU 阻挡、报告重复与条件时钟回绕，提供共享对象的连续时效损失和分层费用。候选报告格式增加 FlowTag 与 Session，已有 P4 和协议版本保持独立。
+
+当前全部 146 项单元检查通过，10 个确定性案例通过 227 项独立核对。这些结果是事件模型正确性证据，尚无新编排策略或网络性能比较。运行、字段、预算及观察限制见[复现说明](experiments/README-event-validation.md)，完整记录见[运行清单](data/event-validation/n1-contract-02/manifest.json)。

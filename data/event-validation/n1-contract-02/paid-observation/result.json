@@ -1,0 +1,612 @@
+{
+  "events": [
+    {
+      "time_us": -20,
+      "kind": "request",
+      "operation_id": "install-19:1001-1-enabled"
+    },
+    {
+      "time_us": -20,
+      "kind": "request",
+      "operation_id": "install-19:1001-1-threshold_us"
+    },
+    {
+      "time_us": -19,
+      "kind": "apply",
+      "write_id": "install-19:1001-1-enabled",
+      "node": 1,
+      "flow": "19:1001",
+      "field": "enabled",
+      "value": true,
+      "version": 1,
+      "success": true
+    },
+    {
+      "time_us": -19,
+      "kind": "apply",
+      "write_id": "install-19:1001-1-threshold_us",
+      "node": 1,
+      "flow": "19:1001",
+      "field": "threshold_us",
+      "value": 10,
+      "version": 1,
+      "success": true
+    },
+    {
+      "time_us": -18,
+      "kind": "ack",
+      "write_id": "install-19:1001-1-enabled",
+      "success": true
+    },
+    {
+      "time_us": -18,
+      "kind": "ack",
+      "write_id": "install-19:1001-1-threshold_us",
+      "success": true
+    },
+    {
+      "time_us": 0,
+      "kind": "ingress",
+      "packet_id": 1,
+      "node": 1
+    },
+    {
+      "time_us": 1,
+      "kind": "egress",
+      "packet_id": 1,
+      "node": 1,
+      "object_id": "1:2:0:queue_packets",
+      "link": "e1",
+      "decision": "insert",
+      "ingress_local_us": 0,
+      "elapsed_us": null,
+      "threshold_us": 10,
+      "enabled": true,
+      "enabled_version": 1,
+      "threshold_version": 1,
+      "extra_bytes": 24,
+      "count": 1,
+      "last_local_us": 0
+    },
+    {
+      "time_us": 2,
+      "kind": "request",
+      "operation_id": "count-1"
+    },
+    {
+      "time_us": 2,
+      "kind": "sink",
+      "packet_id": 1,
+      "emitted": true,
+      "export_bytes": 60
+    },
+    {
+      "time_us": 3,
+      "kind": "read_snapshot",
+      "read_id": "count-1",
+      "count": 1
+    },
+    {
+      "time_us": 3,
+      "kind": "report",
+      "packet_id": 1,
+      "flow": "19:1001",
+      "records": 1
+    },
+    {
+      "time_us": 4,
+      "kind": "read_available",
+      "read_id": "count-1",
+      "success": true
+    },
+    {
+      "time_us": 10,
+      "kind": "ingress",
+      "packet_id": 2,
+      "node": 1
+    },
+    {
+      "time_us": 11,
+      "kind": "egress",
+      "packet_id": 2,
+      "node": 1,
+      "object_id": "1:2:0:queue_packets",
+      "link": "e1",
+      "decision": "insert",
+      "ingress_local_us": 10,
+      "elapsed_us": 10,
+      "threshold_us": 10,
+      "enabled": true,
+      "enabled_version": 1,
+      "threshold_version": 1,
+      "extra_bytes": 24,
+      "count": 1,
+      "last_local_us": 10
+    },
+    {
+      "time_us": 12,
+      "kind": "request",
+      "operation_id": "count-2"
+    },
+    {
+      "time_us": 12,
+      "kind": "sink",
+      "packet_id": 2,
+      "emitted": true,
+      "export_bytes": 60
+    },
+    {
+      "time_us": 13,
+      "kind": "read_snapshot",
+      "read_id": "count-2",
+      "count": 2
+    },
+    {
+      "time_us": 13,
+      "kind": "report",
+      "packet_id": 2,
+      "flow": "19:1001",
+      "records": 1
+    },
+    {
+      "time_us": 14,
+      "kind": "read_available",
+      "read_id": "count-2",
+      "success": true
+    },
+    {
+      "time_us": 50,
+      "kind": "ingress",
+      "packet_id": 3,
+      "node": 1
+    },
+    {
+      "time_us": 51,
+      "kind": "egress",
+      "packet_id": 3,
+      "node": 1,
+      "object_id": "1:2:0:queue_packets",
+      "link": "e1",
+      "decision": "insert",
+      "ingress_local_us": 50,
+      "elapsed_us": 40,
+      "threshold_us": 10,
+      "enabled": true,
+      "enabled_version": 1,
+      "threshold_version": 1,
+      "extra_bytes": 24,
+      "count": 1,
+      "last_local_us": 50
+    },
+    {
+      "time_us": 52,
+      "kind": "sink",
+      "packet_id": 3,
+      "emitted": true,
+      "export_bytes": 60
+    },
+    {
+      "time_us": 53,
+      "kind": "report",
+      "packet_id": 3,
+      "flow": "19:1001",
+      "records": 1
+    }
+  ],
+  "cost_events": [
+    {
+      "time_us": -20,
+      "resource": "control",
+      "kind": "installation",
+      "operation_id": "install-19:1001-1-enabled",
+      "part": "request",
+      "bytes": 10,
+      "basis": "serialized_rpc",
+      "node": 1,
+      "flow": "19:1001",
+      "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+    },
+    {
+      "time_us": -20,
+      "resource": "control",
+      "kind": "installation",
+      "operation_id": "install-19:1001-1-threshold_us",
+      "part": "request",
+      "bytes": 10,
+      "basis": "serialized_rpc",
+      "node": 1,
+      "flow": "19:1001",
+      "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+    },
+    {
+      "time_us": -18,
+      "resource": "control",
+      "kind": "installation",
+      "operation_id": "install-19:1001-1-enabled",
+      "part": "reply",
+      "bytes": 4,
+      "basis": "serialized_rpc",
+      "node": 1,
+      "flow": "19:1001",
+      "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+    },
+    {
+      "time_us": -18,
+      "resource": "control",
+      "kind": "installation",
+      "operation_id": "install-19:1001-1-threshold_us",
+      "part": "reply",
+      "bytes": 4,
+      "basis": "serialized_rpc",
+      "node": 1,
+      "flow": "19:1001",
+      "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+    },
+    {
+      "time_us": 1,
+      "resource": "inband",
+      "link": "e1",
+      "packet_id": 1,
+      "bytes": 24,
+      "basis": "ipv4_increment"
+    },
+    {
+      "time_us": 2,
+      "resource": "control",
+      "kind": "observation",
+      "operation_id": "count-1",
+      "part": "request",
+      "bytes": 10,
+      "basis": "serialized_rpc",
+      "node": 1,
+      "flow": "19:1001",
+      "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+    },
+    {
+      "time_us": 2,
+      "resource": "export",
+      "packet_id": 1,
+      "bytes": 60,
+      "basis": "ethernet_without_fcs_with_padding"
+    },
+    {
+      "time_us": 4,
+      "resource": "control",
+      "kind": "observation",
+      "operation_id": "count-1",
+      "part": "reply",
+      "bytes": 4,
+      "basis": "serialized_rpc",
+      "node": 1,
+      "flow": "19:1001",
+      "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+    },
+    {
+      "time_us": 11,
+      "resource": "inband",
+      "link": "e1",
+      "packet_id": 2,
+      "bytes": 24,
+      "basis": "ipv4_increment"
+    },
+    {
+      "time_us": 12,
+      "resource": "control",
+      "kind": "observation",
+      "operation_id": "count-2",
+      "part": "request",
+      "bytes": 10,
+      "basis": "serialized_rpc",
+      "node": 1,
+      "flow": "19:1001",
+      "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+    },
+    {
+      "time_us": 12,
+      "resource": "export",
+      "packet_id": 2,
+      "bytes": 60,
+      "basis": "ethernet_without_fcs_with_padding"
+    },
+    {
+      "time_us": 14,
+      "resource": "control",
+      "kind": "observation",
+      "operation_id": "count-2",
+      "part": "reply",
+      "bytes": 4,
+      "basis": "serialized_rpc",
+      "node": 1,
+      "flow": "19:1001",
+      "provenance": "预声明合成 RPC 请求 10 B、回复 4 B，仅用于账本核对"
+    },
+    {
+      "time_us": 51,
+      "resource": "inband",
+      "link": "e1",
+      "packet_id": 3,
+      "bytes": 24,
+      "basis": "ipv4_increment"
+    },
+    {
+      "time_us": 52,
+      "resource": "export",
+      "packet_id": 3,
+      "bytes": 60,
+      "basis": "ethernet_without_fcs_with_padding"
+    }
+  ],
+  "receipts": [
+    {
+      "object_id": {
+        "node": 1,
+        "port": 2,
+        "queue": 0
+      },
+      "generated_us": 1,
+      "received_us": 3,
+      "accepted": true
+    },
+    {
+      "object_id": {
+        "node": 1,
+        "port": 2,
+        "queue": 0
+      },
+      "generated_us": 11,
+      "received_us": 13,
+      "accepted": true
+    },
+    {
+      "object_id": {
+        "node": 1,
+        "port": 2,
+        "queue": 0
+      },
+      "generated_us": 51,
+      "received_us": 53,
+      "accepted": true
+    }
+  ],
+  "exports": [
+    {
+      "packet_id": 1,
+      "time_us": 2,
+      "payload_hex": "01ff0601000003e900000013010100000000000100000001",
+      "bytes_without_padding": 58,
+      "frame_bytes_without_fcs": 60
+    },
+    {
+      "packet_id": 2,
+      "time_us": 12,
+      "payload_hex": "01ff0601000003e900000013010100000000000b00000001",
+      "bytes_without_padding": 58,
+      "frame_bytes_without_fcs": 60
+    },
+    {
+      "packet_id": 3,
+      "time_us": 52,
+      "payload_hex": "01ff0601000003e900000013010100000000003300000001",
+      "bytes_without_padding": 58,
+      "frame_bytes_without_fcs": 60
+    }
+  ],
+  "selected": {
+    "1": [
+      1
+    ],
+    "2": [
+      1
+    ],
+    "3": [
+      1
+    ]
+  },
+  "dropped_packets": [],
+  "inband_per_link_bytes": {
+    "e1": 72
+  },
+  "export_attempt_bytes": 180,
+  "received_report_bytes": 180,
+  "successful_insertions": {
+    "1": 3
+  },
+  "control_serialized_bytes_by_kind": {
+    "installation": 28,
+    "observation": 28,
+    "update": 0
+  },
+  "issued_write_rpc_count_by_kind": {
+    "installation": 2,
+    "update": 0
+  },
+  "allocated_gate_keys": 1,
+  "allocated_source_counter_keys": 1,
+  "state_contract": "事件状态键数，不是 P4 静态数组释放、进程内存或硬件占用",
+  "task_metrics": {
+    "clip": 2,
+    "task_count": 1,
+    "weighted_active_duration_us": 120.0,
+    "weighted_clipped_normalized_loss": 1.2608333333333335,
+    "weighted_active_interval_coverage": 1.0,
+    "tasks": [
+      {
+        "task_id": "task-1:2:0:queue_packets",
+        "object_id": "1:2:0:queue_packets",
+        "active_interval_us": [
+          0,
+          120
+        ],
+        "weight": 1.0,
+        "target_us": 20,
+        "clipped_normalized_loss": 1.2608333333333335,
+        "generation_age": {
+          "node": "1:2:0:queue_packets",
+          "violation_fraction": 0.6166666666666667,
+          "unknown_fraction": 0.025,
+          "mean_age_us": null,
+          "mean_known_age_us": 28.44871794871795,
+          "p95_age_us": 66.0,
+          "p99_age_us": null,
+          "longest_no_effective_update_us": 67,
+          "first_report_wait_us": 3,
+          "fulfilled": false
+        },
+        "effective_receipt_recency": {
+          "node": "1:2:0:queue_packets",
+          "violation_fraction": 0.5833333333333334,
+          "unknown_fraction": 0.025,
+          "mean_age_us": null,
+          "mean_known_age_us": 26.44871794871795,
+          "p95_age_us": 63.99999999999999,
+          "p99_age_us": null,
+          "longest_no_effective_update_us": 67,
+          "first_report_wait_us": 3,
+          "fulfilled": false
+        },
+        "first_effective_report_wait_us": 3,
+        "active_interval_effective_coverage": true
+      }
+    ]
+  },
+  "window_costs": {
+    "window_us": [
+      0,
+      120
+    ],
+    "inband_per_link_bytes": {
+      "e1": 72
+    },
+    "inband_per_link_bytes_per_s": {
+      "e1": 600000.0
+    },
+    "export_attempt_bytes": 180,
+    "export_attempt_bytes_per_s": 1500000.0,
+    "control_serialized_bytes_by_kind": {
+      "installation": 0,
+      "observation": 28,
+      "update": 0
+    },
+    "control_request_count_by_kind": {
+      "installation": 0,
+      "observation": 2,
+      "update": 0
+    },
+    "updated_entry_count": 0,
+    "inband_over_budget_bytes_per_s": {
+      "e1": 500000.0
+    },
+    "export_over_budget_bytes_per_s": 500000.0,
+    "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+  },
+  "checkpoint": {
+    "view": {
+      "now_us": 20,
+      "reports": [
+        {
+          "received_us": 3,
+          "flow": {
+            "session": 19,
+            "tag": 1001
+          },
+          "records": [
+            {
+              "node": 1,
+              "hop": 1,
+              "generated_local_us": 1,
+              "queue_packets": 1
+            }
+          ]
+        },
+        {
+          "received_us": 13,
+          "flow": {
+            "session": 19,
+            "tag": 1001
+          },
+          "records": [
+            {
+              "node": 1,
+              "hop": 1,
+              "generated_local_us": 11,
+              "queue_packets": 1
+            }
+          ]
+        }
+      ],
+      "counts": [
+        {
+          "read_id": "count-1",
+          "flow": {
+            "session": 19,
+            "tag": 1001
+          },
+          "issued_us": 2,
+          "available_us": 4,
+          "count": 1
+        },
+        {
+          "read_id": "count-2",
+          "flow": {
+            "session": 19,
+            "tag": 1001
+          },
+          "issued_us": 12,
+          "available_us": 14,
+          "count": 2
+        }
+      ],
+      "confirmations": [
+        {
+          "write_id": "install-19:1001-1-enabled",
+          "received_us": -18,
+          "node": 1,
+          "flow": {
+            "session": 19,
+            "tag": 1001
+          },
+          "field": "enabled",
+          "value": true,
+          "version": 1,
+          "success": true
+        },
+        {
+          "write_id": "install-19:1001-1-threshold_us",
+          "received_us": -18,
+          "node": 1,
+          "flow": {
+            "session": 19,
+            "tag": 1001
+          },
+          "field": "threshold_us",
+          "value": 10,
+          "version": 1,
+          "success": true
+        }
+      ],
+      "cache": [
+        {
+          "object_id": {
+            "node": 1,
+            "port": 2,
+            "queue": 0
+          },
+          "generated_local_us": 11,
+          "received_us": 13,
+          "queue_packets": 1
+        }
+      ]
+    },
+    "rate_estimates": [
+      {
+        "flow": {
+          "session": 19,
+          "tag": 1001
+        },
+        "observed_until_us": 14,
+        "rate_pps": 100000.0,
+        "observation_count": 2
+      }
+    ]
+  }
+}
