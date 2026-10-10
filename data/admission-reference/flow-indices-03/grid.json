@@ -1,0 +1,43 @@
+{
+  "early_phase_shapes": 72,
+  "early_branch_thresholds": [
+    1,
+    null
+  ],
+  "early_shared_flow1_and2": [
+    1,
+    100001,
+    null
+  ],
+  "early_shared_flow3": [
+    1,
+    null
+  ],
+  "late_branch_thresholds": [
+    1,
+    100001,
+    200001,
+    300001,
+    500001,
+    null
+  ],
+  "late_shared_each_flow_thresholds": [
+    1,
+    100001,
+    200001,
+    null
+  ],
+  "initialization": {
+    "all_initially_disabled_us": -800000,
+    "shared_flow3_us": -175001,
+    "branch1_and_shared_flow1_us": -100001,
+    "branch2_and_shared_flow2_us": -50001,
+    "full_early_policy_us": 0,
+    "late_policy_us": 1200000
+  },
+  "gate_state_reset": false,
+  "control_cost_measured": false,
+  "source_ratio": 1,
+  "trial_count_per_capacity": 165888,
+  "tuning_uses_whole_known_trace": true
+}

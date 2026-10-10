@@ -1,0 +1,22 @@
+{
+  "source_envelopes": "与原始网格一致，所有合法包固定封装，空头仍计费",
+  "capacity_zero_initially": true,
+  "gate_state_reset": false,
+  "activate_us": {
+    "shared_flow3": -175001,
+    "branch1_flow1": -100001,
+    "branch2_flow2": -50001,
+    "shared_flow1_and2": 0
+  },
+  "demand_change_preparation_us": 1200000,
+  "late_threshold_options_extended_us": [
+    1,
+    100001,
+    200001,
+    300001,
+    500001,
+    null
+  ],
+  "extra_control_calls_measured": false,
+  "interpretation": "已知窗口起点及业务时刻的许可初始化，不据此宣称未知业务硬保证"
+}

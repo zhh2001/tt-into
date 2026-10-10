@@ -1,0 +1,1626 @@
+{
+  "status": "passed",
+  "verified_runs": [
+    {
+      "run_id": "fork-01",
+      "manifest_sha256": "ef8348f2b18eb37d164aa7270ecdf2bd8c7e63fe55fd12a6a8a46e5460b162eb",
+      "artifacts_verified": 6,
+      "executed_sources_verified": 6
+    },
+    {
+      "run_id": "history-01",
+      "manifest_sha256": "4bfba0cd64e2e5c6d9d8b84d132bc66b6169c45ca4b973a9650cf829a18e2509",
+      "artifacts_verified": 2,
+      "executed_sources_verified": 6
+    },
+    {
+      "run_id": "initialization-01",
+      "manifest_sha256": "7cb730ab0a9e1a8794a6bcf2d7813af1d74fc007545f638db0aa8eafcb69b274",
+      "artifacts_verified": 7,
+      "executed_sources_verified": 7
+    },
+    {
+      "run_id": "flow-indices-01",
+      "manifest_sha256": "ca73b04e517cc7a55b3979169e2ea7604a6ebf21f3bd95d1c75df0ad02e05342",
+      "artifacts_verified": 5,
+      "executed_sources_verified": 7
+    },
+    {
+      "run_id": "flow-indices-02",
+      "manifest_sha256": "d6fbdf44c7570214153a1ab35fde1e38d65f8edfc4f73e34c06e8a94b56f660e",
+      "artifacts_verified": 5,
+      "executed_sources_verified": 7
+    },
+    {
+      "run_id": "flow-indices-03",
+      "manifest_sha256": "0f141fc8a2b2c11d58907fa6447693224b4741a3477df98db7ab53249480fb63",
+      "artifacts_verified": 5,
+      "executed_sources_verified": 7
+    }
+  ],
+  "verified_final_candidates": 56,
+  "cases": [
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          640
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          640
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          640
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          640
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          800
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          800
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          800
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          800
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          960
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          960
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          960
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          960
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1120
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1120
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1120
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1120
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1280
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1280
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1280
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1280
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1600
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1600
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1600
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1600
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          2048
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          2048
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          2048
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 1,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          2048
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2940,
+        "data_total_byte_hops": 4464
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          640
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          640
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          640
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          640
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          800
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          800
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          800
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          800
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2
+      ],
+      "weight": 4,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          680
+        ],
+        "export_bytes": 1800,
+        "data_total_byte_hops": 3096
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          960
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          960
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          960
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          960
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1120
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1120
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1120
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1120
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1280
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1280
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1280
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1280
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1600
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1600
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1600
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          1600
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          2048
+        ],
+        "export_bytes": 1200,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1
+      ],
+      "weight": 2,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          128,
+          500
+        ],
+        "export_bytes": 900,
+        "data_total_byte_hops": 1836
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          2048
+        ],
+        "export_bytes": 2400,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          2048
+        ],
+        "export_bytes": 3600,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    },
+    {
+      "capacity": 2,
+      "budget": {
+        "inband_per_link_bytes": [
+          1024,
+          1024,
+          2048
+        ],
+        "export_bytes": 5000,
+        "control_per_link_bytes": [
+          0
+        ]
+      },
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "weight": 5,
+      "cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 2178,
+        "data_total_byte_hops": 3654
+      }
+    }
+  ],
+  "source_sha256": {
+    "experiments/check_admission_outputs.py": "c8e0a2a3bb1bce91a28e3602a760f83e5b25f940cae1405e81c5054962bbb756",
+    "src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "src/orchestration/trace_admission.py": "15948f61fc3605442aec7eb64c47d080f72830dcf636a8a3d9e83a05982971aa",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537"
+  },
+  "scope": "源文件与产物完整性、事件资格、独立费用与连续年龄核查，不是网络测量"
+}
