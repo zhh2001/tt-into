@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "run_id": "causal-slots-03",
+  "start_utc": "2026-10-10T07:04:16.807450+00:00",
+  "scope": "准确原模型与条件事件适配，不是 BMv2 测量、完整论文复现或新增算法比较",
+  "software": {
+    "python": "3.12.3",
+    "scipy": "1.11.4",
+    "solver": "scipy.optimize.milp/HiGHS"
+  },
+  "host_load_start": [
+    0.28173828125,
+    0.32568359375,
+    0.208984375
+  ],
+  "source_sha256": {
+    "experiments/run_assignment_reference.py": "6ff3d5b19d343eb08010df51053a09eefdd832a1fd7183083bd978f53eaa9aa5",
+    "src/orchestration/assignment_reference.py": "df65ffcd8fcac4fe54cb76a2634ec15406a4a98fa9121a3cfa78369401df72a9",
+    "src/orchestration/slot_reference.py": "636e488201a56259eae68eca4d4d909f83ca8aefd0c8f79ff6a6850644c9c880",
+    "src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "src/orchestration/deployment.py": "bb45175ab83c6103be941e93ff9349418e97d66136ec3892b8929097a7587689",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537"
+  },
+  "end_utc": "2026-10-10T07:05:01.554411+00:00",
+  "duration_seconds": 42.269438752002316,
+  "host_load_end": [
+    0.8564453125,
+    0.48583984375,
+    0.27099609375
+  ],
+  "artifact_sha256": {
+    "model-audit.json": "899c7175e3772baa94e12b456102f77496b89419cfb68352388412e5382bc2ff",
+    "heldout-results.json.gz": "fe7016eec0102cc982953806c3fbd54896447e858d66d95d26bfdfd4d51f62dc",
+    "workloads.json.gz": "2533b3f66af9fa4db640cad13a72e74cf7c3a7e20d5875b47371adb7e6a24c77",
+    "specification.json": "47e35a2f8bdec1cd6294698b725b242f4549dc417d86da5e6bf53348801ac5d1",
+    "selected-parameters.json": "db63a53db71785d2714c7e3157023777b7ecc433fd66230651a456e9359c9f9f",
+    "runtime-api-calibration.json": "40575859a3dc21b349fd52829a41019575802ad4fb1208fae0d03269ac84dc14",
+    "training-results.json.gz": "548e1f1307c0c8f421b43344594022a59edb1e3cfd9ee408cc2220a43825ff3c",
+    "summary.json": "75dfa88a08d0a23d850b929c5d2d0789a755e1142fc372aab27c3e11fb836878"
+  }
+}

@@ -1,0 +1,1270 @@
+{
+  "scenarios": [
+    "jitter",
+    "burst",
+    "low_traffic",
+    "deadline_change",
+    "report_delay",
+    "report_loss",
+    "budget_shortfall"
+  ],
+  "training_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "heldout_seeds": [
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219
+  ],
+  "capacities": [
+    1,
+    2
+  ],
+  "grid": {
+    "tt": [
+      {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "always"
+      },
+      {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "half"
+      },
+      {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "margin"
+      },
+      {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "off"
+      },
+      {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "always",
+        "branch2": "half",
+        "shared": "always"
+      },
+      {
+        "branch1": "always",
+        "branch2": "half",
+        "shared": "half"
+      },
+      {
+        "branch1": "always",
+        "branch2": "half",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "always",
+        "branch2": "half",
+        "shared": "margin"
+      },
+      {
+        "branch1": "always",
+        "branch2": "half",
+        "shared": "off"
+      },
+      {
+        "branch1": "always",
+        "branch2": "half",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "always",
+        "branch2": "half",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "always",
+        "branch2": "half",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "always",
+        "branch2": "deadline",
+        "shared": "always"
+      },
+      {
+        "branch1": "always",
+        "branch2": "deadline",
+        "shared": "half"
+      },
+      {
+        "branch1": "always",
+        "branch2": "deadline",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "always",
+        "branch2": "deadline",
+        "shared": "margin"
+      },
+      {
+        "branch1": "always",
+        "branch2": "deadline",
+        "shared": "off"
+      },
+      {
+        "branch1": "always",
+        "branch2": "deadline",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "always",
+        "branch2": "deadline",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "always",
+        "branch2": "deadline",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "always",
+        "branch2": "margin",
+        "shared": "always"
+      },
+      {
+        "branch1": "always",
+        "branch2": "margin",
+        "shared": "half"
+      },
+      {
+        "branch1": "always",
+        "branch2": "margin",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "always",
+        "branch2": "margin",
+        "shared": "margin"
+      },
+      {
+        "branch1": "always",
+        "branch2": "margin",
+        "shared": "off"
+      },
+      {
+        "branch1": "always",
+        "branch2": "margin",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "always",
+        "branch2": "margin",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "always",
+        "branch2": "margin",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "always",
+        "branch2": "off",
+        "shared": "always"
+      },
+      {
+        "branch1": "always",
+        "branch2": "off",
+        "shared": "half"
+      },
+      {
+        "branch1": "always",
+        "branch2": "off",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "always",
+        "branch2": "off",
+        "shared": "margin"
+      },
+      {
+        "branch1": "always",
+        "branch2": "off",
+        "shared": "off"
+      },
+      {
+        "branch1": "always",
+        "branch2": "off",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "always",
+        "branch2": "off",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "always",
+        "branch2": "off",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "half",
+        "branch2": "always",
+        "shared": "always"
+      },
+      {
+        "branch1": "half",
+        "branch2": "always",
+        "shared": "half"
+      },
+      {
+        "branch1": "half",
+        "branch2": "always",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "half",
+        "branch2": "always",
+        "shared": "margin"
+      },
+      {
+        "branch1": "half",
+        "branch2": "always",
+        "shared": "off"
+      },
+      {
+        "branch1": "half",
+        "branch2": "always",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "half",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "half",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "half",
+        "branch2": "half",
+        "shared": "always"
+      },
+      {
+        "branch1": "half",
+        "branch2": "half",
+        "shared": "half"
+      },
+      {
+        "branch1": "half",
+        "branch2": "half",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "half",
+        "branch2": "half",
+        "shared": "margin"
+      },
+      {
+        "branch1": "half",
+        "branch2": "half",
+        "shared": "off"
+      },
+      {
+        "branch1": "half",
+        "branch2": "half",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "half",
+        "branch2": "half",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "half",
+        "branch2": "half",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "half",
+        "branch2": "deadline",
+        "shared": "always"
+      },
+      {
+        "branch1": "half",
+        "branch2": "deadline",
+        "shared": "half"
+      },
+      {
+        "branch1": "half",
+        "branch2": "deadline",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "half",
+        "branch2": "deadline",
+        "shared": "margin"
+      },
+      {
+        "branch1": "half",
+        "branch2": "deadline",
+        "shared": "off"
+      },
+      {
+        "branch1": "half",
+        "branch2": "deadline",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "half",
+        "branch2": "deadline",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "half",
+        "branch2": "deadline",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "half",
+        "branch2": "margin",
+        "shared": "always"
+      },
+      {
+        "branch1": "half",
+        "branch2": "margin",
+        "shared": "half"
+      },
+      {
+        "branch1": "half",
+        "branch2": "margin",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "half",
+        "branch2": "margin",
+        "shared": "margin"
+      },
+      {
+        "branch1": "half",
+        "branch2": "margin",
+        "shared": "off"
+      },
+      {
+        "branch1": "half",
+        "branch2": "margin",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "half",
+        "branch2": "margin",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "half",
+        "branch2": "margin",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "half",
+        "branch2": "off",
+        "shared": "always"
+      },
+      {
+        "branch1": "half",
+        "branch2": "off",
+        "shared": "half"
+      },
+      {
+        "branch1": "half",
+        "branch2": "off",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "half",
+        "branch2": "off",
+        "shared": "margin"
+      },
+      {
+        "branch1": "half",
+        "branch2": "off",
+        "shared": "off"
+      },
+      {
+        "branch1": "half",
+        "branch2": "off",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "half",
+        "branch2": "off",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "half",
+        "branch2": "off",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "always",
+        "shared": "always"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "always",
+        "shared": "half"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "always",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "always",
+        "shared": "margin"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "always",
+        "shared": "off"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "always",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "half",
+        "shared": "always"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "half",
+        "shared": "half"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "half",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "half",
+        "shared": "margin"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "half",
+        "shared": "off"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "half",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "half",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "half",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "deadline",
+        "shared": "always"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "deadline",
+        "shared": "half"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "deadline",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "deadline",
+        "shared": "margin"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "deadline",
+        "shared": "off"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "deadline",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "deadline",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "deadline",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "margin",
+        "shared": "always"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "margin",
+        "shared": "half"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "margin",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "margin",
+        "shared": "margin"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "margin",
+        "shared": "off"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "margin",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "margin",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "margin",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "off",
+        "shared": "always"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "off",
+        "shared": "half"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "off",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "off",
+        "shared": "margin"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "off",
+        "shared": "off"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "off",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "off",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "deadline",
+        "branch2": "off",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "always",
+        "shared": "always"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "always",
+        "shared": "half"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "always",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "always",
+        "shared": "margin"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "always",
+        "shared": "off"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "always",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "half",
+        "shared": "always"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "half",
+        "shared": "half"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "half",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "half",
+        "shared": "margin"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "half",
+        "shared": "off"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "half",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "half",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "half",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "deadline",
+        "shared": "always"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "deadline",
+        "shared": "half"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "deadline",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "deadline",
+        "shared": "margin"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "deadline",
+        "shared": "off"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "deadline",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "deadline",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "deadline",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "margin",
+        "shared": "always"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "margin",
+        "shared": "half"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "margin",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "margin",
+        "shared": "margin"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "margin",
+        "shared": "off"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "margin",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "margin",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "margin",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "off",
+        "shared": "always"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "off",
+        "shared": "half"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "off",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "off",
+        "shared": "margin"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "off",
+        "shared": "off"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "off",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "off",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "margin",
+        "branch2": "off",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "off",
+        "branch2": "always",
+        "shared": "always"
+      },
+      {
+        "branch1": "off",
+        "branch2": "always",
+        "shared": "half"
+      },
+      {
+        "branch1": "off",
+        "branch2": "always",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "off",
+        "branch2": "always",
+        "shared": "margin"
+      },
+      {
+        "branch1": "off",
+        "branch2": "always",
+        "shared": "off"
+      },
+      {
+        "branch1": "off",
+        "branch2": "always",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "off",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "off",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "off",
+        "branch2": "half",
+        "shared": "always"
+      },
+      {
+        "branch1": "off",
+        "branch2": "half",
+        "shared": "half"
+      },
+      {
+        "branch1": "off",
+        "branch2": "half",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "off",
+        "branch2": "half",
+        "shared": "margin"
+      },
+      {
+        "branch1": "off",
+        "branch2": "half",
+        "shared": "off"
+      },
+      {
+        "branch1": "off",
+        "branch2": "half",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "off",
+        "branch2": "half",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "off",
+        "branch2": "half",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "off",
+        "branch2": "deadline",
+        "shared": "always"
+      },
+      {
+        "branch1": "off",
+        "branch2": "deadline",
+        "shared": "half"
+      },
+      {
+        "branch1": "off",
+        "branch2": "deadline",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "off",
+        "branch2": "deadline",
+        "shared": "margin"
+      },
+      {
+        "branch1": "off",
+        "branch2": "deadline",
+        "shared": "off"
+      },
+      {
+        "branch1": "off",
+        "branch2": "deadline",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "off",
+        "branch2": "deadline",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "off",
+        "branch2": "deadline",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "off",
+        "branch2": "margin",
+        "shared": "always"
+      },
+      {
+        "branch1": "off",
+        "branch2": "margin",
+        "shared": "half"
+      },
+      {
+        "branch1": "off",
+        "branch2": "margin",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "off",
+        "branch2": "margin",
+        "shared": "margin"
+      },
+      {
+        "branch1": "off",
+        "branch2": "margin",
+        "shared": "off"
+      },
+      {
+        "branch1": "off",
+        "branch2": "margin",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "off",
+        "branch2": "margin",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "off",
+        "branch2": "margin",
+        "shared": "flow3"
+      },
+      {
+        "branch1": "off",
+        "branch2": "off",
+        "shared": "always"
+      },
+      {
+        "branch1": "off",
+        "branch2": "off",
+        "shared": "half"
+      },
+      {
+        "branch1": "off",
+        "branch2": "off",
+        "shared": "deadline"
+      },
+      {
+        "branch1": "off",
+        "branch2": "off",
+        "shared": "margin"
+      },
+      {
+        "branch1": "off",
+        "branch2": "off",
+        "shared": "off"
+      },
+      {
+        "branch1": "off",
+        "branch2": "off",
+        "shared": "flow1"
+      },
+      {
+        "branch1": "off",
+        "branch2": "off",
+        "shared": "flow2"
+      },
+      {
+        "branch1": "off",
+        "branch2": "off",
+        "shared": "flow3"
+      }
+    ],
+    "dinto": [
+      {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 1.0,
+        "average_change_bytes": 12.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 1.0,
+        "average_change_bytes": 12.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 1.0,
+        "average_change_bytes": 24.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 1.0,
+        "average_change_bytes": 24.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 1.0,
+        "average_change_bytes": 48.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 1.0,
+        "average_change_bytes": 48.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 10.0,
+        "average_change_bytes": 0.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 10.0,
+        "average_change_bytes": 0.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 10.0,
+        "average_change_bytes": 12.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 10.0,
+        "average_change_bytes": 12.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 10.0,
+        "average_change_bytes": 24.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 10.0,
+        "average_change_bytes": 24.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 10.0,
+        "average_change_bytes": 48.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 10.0,
+        "average_change_bytes": 48.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 100.0,
+        "average_change_bytes": 0.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 100.0,
+        "average_change_bytes": 0.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 100.0,
+        "average_change_bytes": 12.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 100.0,
+        "average_change_bytes": 12.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 100.0,
+        "average_change_bytes": 24.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 100.0,
+        "average_change_bytes": 24.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 100.0,
+        "average_change_bytes": 48.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 100.0,
+        "average_change_bytes": 48.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 1000.0,
+        "average_change_bytes": 0.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 1000.0,
+        "average_change_bytes": 0.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 1000.0,
+        "average_change_bytes": 12.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 1000.0,
+        "average_change_bytes": 12.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 1000.0,
+        "average_change_bytes": 24.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 1000.0,
+        "average_change_bytes": 24.0,
+        "gain": "age"
+      },
+      {
+        "tradeoff": 1000.0,
+        "average_change_bytes": 48.0,
+        "gain": "static"
+      },
+      {
+        "tradeoff": 1000.0,
+        "average_change_bytes": 48.0,
+        "gain": "age"
+      }
+    ],
+    "intopp": [
+      {
+        "lookahead_us": 0
+      }
+    ],
+    "intopp_ahead": [
+      {
+        "lookahead_us": 50000
+      },
+      {
+        "lookahead_us": 100000
+      },
+      {
+        "lookahead_us": 200000
+      },
+      {
+        "lookahead_us": 300000
+      }
+    ]
+  },
+  "warmup_us": [
+    -800000,
+    0
+  ],
+  "measurement_us": [
+    0,
+    2400000
+  ],
+  "slot_us": 100000,
+  "fixed_effect_delay_us": 2000,
+  "traffic_guard_us": [
+    -100,
+    5000
+  ],
+  "state_record_bytes": 12,
+  "envelope_bytes": 4,
+  "source_ratio": 1,
+  "weights": [
+    2,
+    2,
+    1
+  ],
+  "loss_probability": 0.15,
+  "training_selection": "每容量、每方法跨全部训练场景：最大平均预算内履约权重，再最小违约、数据费用、API费用、网格索引",
+  "admission_promised_before_execution": false,
+  "runtime_api_budget_enforced_online": false,
+  "assignment_capacity_adaptation": "每流 B=12*K，不包含包速率、4 B 包头或逐链路费用，另在整次运行评价",
+  "dinto_gain_adaptation": "static 为任务权重，age 为基于已收报告的管理员收益变体，不含熵学习",
+  "intopp_task_adaptation": "三个单项应用，无在线聚类；H 为已收报告的经过时间，提前量仅在强变体使用",
+  "budget_cost_basis": "带内/导出为不含FCS的帧增量；运行时API为校准的请求加回复，分列不相加",
+  "missing_network_costs": [
+    "固定路由CLI安装",
+    "TCP握手与帧开销",
+    "主机进程和处理时间"
+  ],
+  "fixed_effect_delay_is_measured": false,
+  "assignment_audit_seed": 715,
+  "revision": "补齐原式逐流到期筛选及节点重复权重，事件适配与原网格不变，采用新的保留种子200..219"
+}
