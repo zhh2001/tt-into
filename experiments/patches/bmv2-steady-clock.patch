@@ -1,0 +1,23 @@
+--- a/targets/simple_switch/simple_switch.h
++++ b/targets/simple_switch/simple_switch.h
+@@ -80 +80,2 @@
+-  using clock = std::chrono::high_resolution_clock;
++  using clock = std::chrono::steady_clock;
++  static_assert(clock::is_steady, "switch elapsed clock must be steady");
+--- a/targets/simple_switch/simple_switch.cpp
++++ b/targets/simple_switch/simple_switch.cpp
+@@ -375 +375 @@
+-  auto tp = clock::now();
++  auto tp = std::chrono::system_clock::now();
+--- a/include/bm/bm_sim/queueing.h
++++ b/include/bm/bm_sim/queueing.h
+@@ -388,2 +388,2 @@
+-  // using clock = std::chrono::steady_clock;
+-  using clock = std::chrono::high_resolution_clock;
++  using clock = std::chrono::steady_clock;
++  static_assert(clock::is_steady, "queue scheduling clock must be steady");
+@@ -699,2 +699,2 @@
+-  // using clock = std::chrono::steady_clock;
+-  using clock = std::chrono::high_resolution_clock;
++  using clock = std::chrono::steady_clock;
++  static_assert(clock::is_steady, "queue scheduling clock must be steady");

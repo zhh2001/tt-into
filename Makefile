@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: build diagnostics test validate validate3 state state-diagnostics baseline baseline-diagnostics strong strong-ordinary
+.PHONY: build diagnostics test validate validate3 state state-diagnostics baseline baseline-diagnostics strong strong-ordinary steady
 
 build:
 	$(PYTHON) experiments/build.py
@@ -34,3 +34,6 @@ strong:
 
 strong-ordinary:
 	$(PYTHON) experiments/build_strong.py --format task --ordinary
+
+steady:
+	$(PYTHON) experiments/build_steady_bmv2.py --output build/bmv2-steady --jobs 2

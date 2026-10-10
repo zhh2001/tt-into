@@ -1,0 +1,2664 @@
+{
+  "run_id": "steady-task-ordinary-01",
+  "status": "passed",
+  "format": {
+    "id": 2,
+    "version": 4,
+    "header": 5,
+    "record": 12,
+    "reservoir": true
+  },
+  "format_name": "task",
+  "diagnostics": false,
+  "topology": "3 sampling nodes + sink",
+  "workload_seed": 0,
+  "data_plane_rng_seed": null,
+  "data_plane_rng": "v1model random，保留实际抽签，不宣称可配置种子",
+  "source_sha256": {
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/run_steady_validation.py": "1362b3160c20dba6c52f6ddc5d65d3cbd61abccd3056d63cc69638acf04173c8",
+    "experiments/clock_jump.c": "d10d7ebc271d082f120a16ca9dee8cba1acc28892cc46cf9919efaf4aaf280c5",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5"
+  },
+  "start_utc": "2026-10-10T03:09:33.079405+00:00",
+  "start_load_average": [
+    0.25390625,
+    0.83642578125,
+    0.60888671875
+  ],
+  "versions": {
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "bmv2": "1.15.0-2bdd0b7b-steady-unknown",
+    "python": "3.12.3",
+    "mininet": "2.3.0"
+  },
+  "cases": [
+    {
+      "errors": [],
+      "input_packets": 24,
+      "received_packets": 24,
+      "report_packets": 24,
+      "reported_samples_per_node": [
+        12,
+        6,
+        6
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "shared",
+      "configuration": {
+        "mode": 0,
+        "scope": "port",
+        "thresholds": [
+          100000,
+          300000,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [],
+      "start_monotonic_ns": 41366722912070,
+      "end_monotonic_ns": 41369377912070,
+      "age": {
+        "evaluated": true,
+        "origin_packet_id": 9,
+        "window_us": [
+          0,
+          1604972.203
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "unknown_fraction": 0.0,
+            "p95_age_lower_us": 190590.44910625,
+            "p95_age_upper_us": 193659.55698125,
+            "maximum_causal_interval_width_us": 4359.333000000013,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "unknown_fraction": 0.0,
+            "p95_age_lower_us": 381180.8982125,
+            "p95_age_upper_us": 383025.1479625,
+            "maximum_causal_interval_width_us": 2610.4070000000065,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "unknown_fraction": 0.0,
+            "p95_age_lower_us": 379724.1912125,
+            "p95_age_upper_us": 382080.2562124999,
+            "maximum_causal_interval_width_us": 2773.712999999989,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "samples": [
+          {
+            "packet_id": 1,
+            "node": 1,
+            "generation_lower_us": -800030.275,
+            "generation_upper_us": -797912.11,
+            "availability_us": -797912.11
+          },
+          {
+            "packet_id": 3,
+            "node": 1,
+            "generation_lower_us": -600033.034,
+            "generation_upper_us": -598805.499,
+            "availability_us": -598805.499
+          },
+          {
+            "packet_id": 5,
+            "node": 1,
+            "generation_lower_us": -400044.125,
+            "generation_upper_us": -397427.64,
+            "availability_us": -397427.64
+          },
+          {
+            "packet_id": 7,
+            "node": 1,
+            "generation_lower_us": -200010.54,
+            "generation_upper_us": -195651.207,
+            "availability_us": -195651.207
+          },
+          {
+            "packet_id": 9,
+            "node": 1,
+            "generation_lower_us": 0.0,
+            "generation_upper_us": 2352.706,
+            "availability_us": 2352.706
+          },
+          {
+            "packet_id": 11,
+            "node": 1,
+            "generation_lower_us": 200001.269,
+            "generation_upper_us": 203622.031,
+            "availability_us": 203622.031
+          },
+          {
+            "packet_id": 13,
+            "node": 1,
+            "generation_lower_us": 400048.649,
+            "generation_upper_us": 403166.885,
+            "availability_us": 403166.885
+          },
+          {
+            "packet_id": 15,
+            "node": 1,
+            "generation_lower_us": 599964.249,
+            "generation_upper_us": 603383.067,
+            "availability_us": 603383.067
+          },
+          {
+            "packet_id": 17,
+            "node": 1,
+            "generation_lower_us": 799979.874,
+            "generation_upper_us": 803492.471,
+            "availability_us": 803492.471
+          },
+          {
+            "packet_id": 19,
+            "node": 1,
+            "generation_lower_us": 1000017.656,
+            "generation_upper_us": 1003199.785,
+            "availability_us": 1003199.785
+          },
+          {
+            "packet_id": 21,
+            "node": 1,
+            "generation_lower_us": 1199971.912,
+            "generation_upper_us": 1203193.265,
+            "availability_us": 1203193.265
+          },
+          {
+            "packet_id": 23,
+            "node": 1,
+            "generation_lower_us": 1399966.611,
+            "generation_upper_us": 1402092.873,
+            "availability_us": 1402092.873
+          },
+          {
+            "packet_id": 2,
+            "node": 2,
+            "generation_lower_us": -795076.431,
+            "generation_upper_us": -793040.838,
+            "availability_us": -793040.838
+          },
+          {
+            "packet_id": 6,
+            "node": 2,
+            "generation_lower_us": -395042.717,
+            "generation_upper_us": -392432.31,
+            "availability_us": -392432.31
+          },
+          {
+            "packet_id": 10,
+            "node": 2,
+            "generation_lower_us": 4930.496,
+            "generation_upper_us": 6204.765,
+            "availability_us": 6204.765
+          },
+          {
+            "packet_id": 14,
+            "node": 2,
+            "generation_lower_us": 405055.622,
+            "generation_upper_us": 406958.201,
+            "availability_us": 406958.201
+          },
+          {
+            "packet_id": 18,
+            "node": 2,
+            "generation_lower_us": 804962.533,
+            "generation_upper_us": 806703.729,
+            "availability_us": 806703.729
+          },
+          {
+            "packet_id": 22,
+            "node": 2,
+            "generation_lower_us": 1205042.507,
+            "generation_upper_us": 1207501.462,
+            "availability_us": 1207501.462
+          },
+          {
+            "packet_id": 4,
+            "node": 3,
+            "generation_lower_us": -595022.161,
+            "generation_upper_us": -593742.291,
+            "availability_us": -593742.291
+          },
+          {
+            "packet_id": 8,
+            "node": 3,
+            "generation_lower_us": -195009.435,
+            "generation_upper_us": -192235.722,
+            "availability_us": -192235.722
+          },
+          {
+            "packet_id": 12,
+            "node": 3,
+            "generation_lower_us": 204990.266,
+            "generation_upper_us": 207345.667,
+            "availability_us": 207345.667
+          },
+          {
+            "packet_id": 16,
+            "node": 3,
+            "generation_lower_us": 604975.654,
+            "generation_upper_us": 607172.867,
+            "availability_us": 607172.867
+          },
+          {
+            "packet_id": 20,
+            "node": 3,
+            "generation_lower_us": 1004988.844,
+            "generation_upper_us": 1007086.777,
+            "availability_us": 1007086.777
+          },
+          {
+            "packet_id": 24,
+            "node": 3,
+            "generation_lower_us": 1404972.203,
+            "generation_upper_us": 1406909.653,
+            "availability_us": 1406909.653
+          }
+        ],
+        "clock_domain": "同一 Linux 宿主 CLOCK_MONOTONIC 的发送前与采集 recvmsg 后边界",
+        "generation_bound": "发送前 <= 真实队列快照生成事件 <= 采集 recvmsg 完成",
+        "switch_timestamps_used_for_cross_device_age": false,
+        "availability": "采集进程取到报告的时刻，保留实际前史",
+        "fulfilled_tasks": 3
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 1062,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1227.535,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1274.269,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1279.87,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          264,
+          336,
+          408
+        ],
+        "export_bytes": 1224,
+        "export_bytes_with_minimum_ethernet_padding": 1440,
+        "frames": [
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        "total_byte_hops": 2232,
+        "total_byte_hops_with_minimum_ethernet_padding": 2448,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 12,
+      "received_packets": 12,
+      "report_packets": 4,
+      "reported_samples_per_node": [
+        4,
+        0,
+        0
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "ratio",
+      "configuration": {
+        "mode": 0,
+        "scope": "flow",
+        "thresholds": [
+          1,
+          1,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [],
+      "start_monotonic_ns": 41370164214434,
+      "end_monotonic_ns": 41370834214434,
+      "age": {
+        "evaluated": false,
+        "reason": "本场景用于选择、统计或格式边界检查"
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 2398,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1761.216,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": false,
+            "compatible": null
+          },
+          "3": {
+            "observed": false,
+            "compatible": null
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          68,
+          68,
+          68
+        ],
+        "export_bytes": 204,
+        "export_bytes_with_minimum_ethernet_padding": 240,
+        "frames": [
+          12,
+          12,
+          12,
+          12,
+          4
+        ],
+        "total_byte_hops": 408,
+        "total_byte_hops_with_minimum_ethernet_padding": 444,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 192,
+      "received_packets": 192,
+      "report_packets": 32,
+      "reported_samples_per_node": [
+        32,
+        0,
+        0
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "dev_filter",
+      "configuration": {
+        "mode": 0,
+        "scope": "flow",
+        "thresholds": [
+          1,
+          1,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [
+        {
+          "flow": 1,
+          "rate_pps": 41.44141247857193,
+          "delta_dev_us": 0,
+          "count": 17,
+          "dev": 0,
+          "time": 41372162626169,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 1,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41372162626169
+        },
+        {
+          "flow": 2,
+          "rate_pps": 46.21743329611168,
+          "delta_dev_us": 130119,
+          "count": 19,
+          "dev": 130119,
+          "time": 41372163508776,
+          "rate_fail": 0,
+          "dev_fail": 1,
+          "checks": 1,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41372163508776
+        },
+        {
+          "flow": 1,
+          "rate_pps": 40.1183192539471,
+          "delta_dev_us": 0,
+          "count": 33,
+          "dev": 0,
+          "time": 41372561446466,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 2,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41372561446466
+        },
+        {
+          "flow": 2,
+          "rate_pps": 37.60596448848215,
+          "delta_dev_us": 130360,
+          "count": 34,
+          "dev": 260479,
+          "time": 41372562381673,
+          "rate_fail": 0,
+          "dev_fail": 2,
+          "checks": 2,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41372562381673
+        },
+        {
+          "flow": 1,
+          "rate_pps": 40.48344940566615,
+          "delta_dev_us": 0,
+          "count": 49,
+          "dev": 0,
+          "time": 41372956669705,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 3,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41372956669705
+        },
+        {
+          "flow": 2,
+          "rate_pps": 37.985482768972126,
+          "delta_dev_us": 130494,
+          "count": 49,
+          "dev": 390973,
+          "time": 41372957269375,
+          "rate_fail": 0,
+          "dev_fail": 3,
+          "checks": 3,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41372957269375
+        },
+        {
+          "flow": 1,
+          "rate_pps": 39.546290940520144,
+          "delta_dev_us": 0,
+          "count": 65,
+          "dev": 0,
+          "time": 41373361258849,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 4,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41373361258849
+        },
+        {
+          "flow": 2,
+          "rate_pps": 42.03350283310384,
+          "delta_dev_us": 130059,
+          "count": 66,
+          "dev": 521032,
+          "time": 41373361708664,
+          "rate_fail": 0,
+          "dev_fail": 4,
+          "checks": 4,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41373361708664
+        },
+        {
+          "flow": 1,
+          "rate_pps": 40.553376985900776,
+          "delta_dev_us": 0,
+          "count": 81,
+          "dev": 0,
+          "time": 41373755800591,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 5,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41373755800591
+        },
+        {
+          "flow": 2,
+          "rate_pps": 37.983086845509725,
+          "delta_dev_us": 130375,
+          "count": 81,
+          "dev": 651407,
+          "time": 41373756621275,
+          "rate_fail": 0,
+          "dev_fail": 5,
+          "checks": 5,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41373756621275
+        },
+        {
+          "flow": 1,
+          "rate_pps": 36.96303949616834,
+          "delta_dev_us": 0,
+          "count": 96,
+          "dev": 0,
+          "time": 41374161611374,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 6,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41374161611374
+        },
+        {
+          "flow": 2,
+          "rate_pps": 36.93680141104294,
+          "delta_dev_us": 65064,
+          "count": 96,
+          "dev": 716471,
+          "time": 41374162720326,
+          "rate_fail": 0,
+          "dev_fail": 6,
+          "checks": 6,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41374162720326
+        }
+      ],
+      "start_monotonic_ns": 41371752408491,
+      "end_monotonic_ns": 41374577408491,
+      "age": {
+        "evaluated": false,
+        "reason": "本场景用于选择、统计或格式边界检查"
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 2836,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 721.683,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": false,
+            "compatible": null
+          },
+          "3": {
+            "observed": false,
+            "compatible": null
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          544,
+          544,
+          544
+        ],
+        "export_bytes": 1632,
+        "export_bytes_with_minimum_ethernet_padding": 1920,
+        "frames": [
+          192,
+          192,
+          192,
+          192,
+          32
+        ],
+        "total_byte_hops": 3264,
+        "total_byte_hops_with_minimum_ethernet_padding": 3552,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 60,
+      "received_packets": 60,
+      "report_packets": 8,
+      "reported_samples_per_node": [
+        7,
+        7,
+        7
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "feedback_base",
+      "configuration": {
+        "mode": 0,
+        "scope": "port",
+        "thresholds": [
+          100000,
+          100000,
+          100000
+        ],
+        "capacities": [
+          3,
+          3,
+          3
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [],
+      "start_monotonic_ns": 41375466121928,
+      "end_monotonic_ns": 41377096121928,
+      "age": {
+        "evaluated": true,
+        "origin_packet_id": 6145,
+        "window_us": [
+          0,
+          1379985.42
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.32626337602900174,
+            "violation_upper": 0.3279476061420996,
+            "unknown_fraction": 0.3207111007013393,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 3147.822999999975,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.3207111007013393,
+            "violation_upper": 0.3207111007013393,
+            "unknown_fraction": 0.3207111007013393,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 3147.822999999975,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.3207111007013393,
+            "violation_upper": 0.3207111007013393,
+            "unknown_fraction": 0.3207111007013393,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 3147.822999999975,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "samples": [
+          {
+            "packet_id": 6167,
+            "node": 1,
+            "generation_lower_us": 440014.402,
+            "generation_upper_us": 442576.643,
+            "availability_us": 442576.643
+          },
+          {
+            "packet_id": 6172,
+            "node": 1,
+            "generation_lower_us": 540048.604,
+            "generation_upper_us": 542922.843,
+            "availability_us": 542922.843
+          },
+          {
+            "packet_id": 6178,
+            "node": 1,
+            "generation_lower_us": 660043.954,
+            "generation_upper_us": 663191.777,
+            "availability_us": 663191.777
+          },
+          {
+            "packet_id": 6184,
+            "node": 1,
+            "generation_lower_us": 780061.589,
+            "generation_upper_us": 783160.747,
+            "availability_us": 783160.747
+          },
+          {
+            "packet_id": 6189,
+            "node": 1,
+            "generation_lower_us": 880046.919,
+            "generation_upper_us": 882637.286,
+            "availability_us": 882637.286
+          },
+          {
+            "packet_id": 6195,
+            "node": 1,
+            "generation_lower_us": 999993.208,
+            "generation_upper_us": 1002019.701,
+            "availability_us": 1002019.701
+          },
+          {
+            "packet_id": 6201,
+            "node": 1,
+            "generation_lower_us": 1119999.148,
+            "generation_upper_us": 1122323.361,
+            "availability_us": 1122323.361
+          },
+          {
+            "packet_id": 6167,
+            "node": 2,
+            "generation_lower_us": 440014.402,
+            "generation_upper_us": 442576.643,
+            "availability_us": 442576.643
+          },
+          {
+            "packet_id": 6172,
+            "node": 2,
+            "generation_lower_us": 540048.604,
+            "generation_upper_us": 542922.843,
+            "availability_us": 542922.843
+          },
+          {
+            "packet_id": 6178,
+            "node": 2,
+            "generation_lower_us": 660043.954,
+            "generation_upper_us": 663191.777,
+            "availability_us": 663191.777
+          },
+          {
+            "packet_id": 6184,
+            "node": 2,
+            "generation_lower_us": 780061.589,
+            "generation_upper_us": 783160.747,
+            "availability_us": 783160.747
+          },
+          {
+            "packet_id": 6190,
+            "node": 2,
+            "generation_lower_us": 899984.045,
+            "generation_upper_us": 900830.118,
+            "availability_us": 900830.118
+          },
+          {
+            "packet_id": 6195,
+            "node": 2,
+            "generation_lower_us": 999993.208,
+            "generation_upper_us": 1002019.701,
+            "availability_us": 1002019.701
+          },
+          {
+            "packet_id": 6201,
+            "node": 2,
+            "generation_lower_us": 1119999.148,
+            "generation_upper_us": 1122323.361,
+            "availability_us": 1122323.361
+          },
+          {
+            "packet_id": 6167,
+            "node": 3,
+            "generation_lower_us": 440014.402,
+            "generation_upper_us": 442576.643,
+            "availability_us": 442576.643
+          },
+          {
+            "packet_id": 6172,
+            "node": 3,
+            "generation_lower_us": 540048.604,
+            "generation_upper_us": 542922.843,
+            "availability_us": 542922.843
+          },
+          {
+            "packet_id": 6178,
+            "node": 3,
+            "generation_lower_us": 660043.954,
+            "generation_upper_us": 663191.777,
+            "availability_us": 663191.777
+          },
+          {
+            "packet_id": 6184,
+            "node": 3,
+            "generation_lower_us": 780061.589,
+            "generation_upper_us": 783160.747,
+            "availability_us": 783160.747
+          },
+          {
+            "packet_id": 6190,
+            "node": 3,
+            "generation_lower_us": 899984.045,
+            "generation_upper_us": 900830.118,
+            "availability_us": 900830.118
+          },
+          {
+            "packet_id": 6195,
+            "node": 3,
+            "generation_lower_us": 999993.208,
+            "generation_upper_us": 1002019.701,
+            "availability_us": 1002019.701
+          },
+          {
+            "packet_id": 6201,
+            "node": 3,
+            "generation_lower_us": 1119999.148,
+            "generation_upper_us": 1122323.361,
+            "availability_us": 1122323.361
+          }
+        ],
+        "clock_domain": "同一 Linux 宿主 CLOCK_MONOTONIC 的发送前与采集 recvmsg 后边界",
+        "generation_bound": "发送前 <= 真实队列快照生成事件 <= 采集 recvmsg 完成",
+        "switch_timestamps_used_for_cross_device_age": false,
+        "availability": "采集进程取到报告的时刻，保留实际前史",
+        "fulfilled_tasks": 0
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 2003,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 2026.493,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 846.073,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 846.073,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          432,
+          564,
+          696
+        ],
+        "export_bytes": 564,
+        "export_bytes_with_minimum_ethernet_padding": 573,
+        "frames": [
+          60,
+          60,
+          60,
+          60,
+          8
+        ],
+        "total_byte_hops": 2256,
+        "total_byte_hops_with_minimum_ethernet_padding": 2265,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 60,
+      "received_packets": 60,
+      "report_packets": 18,
+      "reported_samples_per_node": [
+        16,
+        16,
+        16
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "feedback_pro",
+      "configuration": {
+        "mode": 0,
+        "scope": "port",
+        "thresholds": [
+          100000,
+          100000,
+          100000
+        ],
+        "capacities": [
+          3,
+          3,
+          3
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [
+        {
+          "node": 1,
+          "value": 1,
+          "decision_monotonic_ns": 41378151918433,
+          "before_monotonic_ns": 41378152110126,
+          "after_monotonic_ns": 41378152452394,
+          "latest_received_monotonic_ns": 41377950328268
+        },
+        {
+          "node": 2,
+          "value": 1,
+          "decision_monotonic_ns": 41378151918433,
+          "before_monotonic_ns": 41378152456010,
+          "after_monotonic_ns": 41378152678493,
+          "latest_received_monotonic_ns": 41377950328268
+        },
+        {
+          "node": 3,
+          "value": 1,
+          "decision_monotonic_ns": 41378151918433,
+          "before_monotonic_ns": 41378152680147,
+          "after_monotonic_ns": 41378152836545,
+          "latest_received_monotonic_ns": 41377950328268
+        },
+        {
+          "node": 1,
+          "value": 0,
+          "decision_monotonic_ns": 41378574870210,
+          "before_monotonic_ns": 41378575191429,
+          "after_monotonic_ns": 41378575523798,
+          "latest_received_monotonic_ns": 41378572756214
+        },
+        {
+          "node": 2,
+          "value": 0,
+          "decision_monotonic_ns": 41378574870210,
+          "before_monotonic_ns": 41378575525398,
+          "after_monotonic_ns": 41378575775746,
+          "latest_received_monotonic_ns": 41378572756214
+        },
+        {
+          "node": 3,
+          "value": 0,
+          "decision_monotonic_ns": 41378574870210,
+          "before_monotonic_ns": 41378575777825,
+          "after_monotonic_ns": 41378576040674,
+          "latest_received_monotonic_ns": 41378572756214
+        },
+        {
+          "node": 1,
+          "value": 1,
+          "decision_monotonic_ns": 41379312921023,
+          "before_monotonic_ns": 41379313047496,
+          "after_monotonic_ns": 41379313248116,
+          "latest_received_monotonic_ns": 41379111207653
+        },
+        {
+          "node": 2,
+          "value": 1,
+          "decision_monotonic_ns": 41379333583619,
+          "before_monotonic_ns": 41379334027740,
+          "after_monotonic_ns": 41379334393438,
+          "latest_received_monotonic_ns": 41379131370574
+        },
+        {
+          "node": 3,
+          "value": 1,
+          "decision_monotonic_ns": 41379333583619,
+          "before_monotonic_ns": 41379334395506,
+          "after_monotonic_ns": 41379334677432,
+          "latest_received_monotonic_ns": 41379131370574
+        }
+      ],
+      "start_monotonic_ns": 41377950328268,
+      "end_monotonic_ns": 41379580328268,
+      "age": {
+        "evaluated": true,
+        "origin_packet_id": 8193,
+        "window_us": [
+          0,
+          1380088.195
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.3050275667346028,
+            "violation_upper": 0.3050275667346028,
+            "unknown_fraction": 0.3050275667346028,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 3514.4439999999013,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.3050275667346028,
+            "violation_upper": 0.3050275667346028,
+            "unknown_fraction": 0.3050275667346028,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 3843.125,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.3050275667346028,
+            "violation_upper": 0.3050275667346028,
+            "unknown_fraction": 0.3050275667346028,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 3843.125,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "samples": [
+          {
+            "packet_id": 8214,
+            "node": 1,
+            "generation_lower_us": 420016.743,
+            "generation_upper_us": 420964.944,
+            "availability_us": 420964.944
+          },
+          {
+            "packet_id": 8215,
+            "node": 1,
+            "generation_lower_us": 440035.626,
+            "generation_upper_us": 441001.346,
+            "availability_us": 441001.346
+          },
+          {
+            "packet_id": 8216,
+            "node": 1,
+            "generation_lower_us": 460075.284,
+            "generation_upper_us": 463286.524,
+            "availability_us": 463286.524
+          },
+          {
+            "packet_id": 8217,
+            "node": 1,
+            "generation_lower_us": 480038.3,
+            "generation_upper_us": 482263.449,
+            "availability_us": 482263.449
+          },
+          {
+            "packet_id": 8218,
+            "node": 1,
+            "generation_lower_us": 500034.07,
+            "generation_upper_us": 500983.443,
+            "availability_us": 500983.443
+          },
+          {
+            "packet_id": 8219,
+            "node": 1,
+            "generation_lower_us": 520008.708,
+            "generation_upper_us": 520966.725,
+            "availability_us": 520966.725
+          },
+          {
+            "packet_id": 8220,
+            "node": 1,
+            "generation_lower_us": 540010.116,
+            "generation_upper_us": 541101.505,
+            "availability_us": 541101.505
+          },
+          {
+            "packet_id": 8221,
+            "node": 1,
+            "generation_lower_us": 560028.344,
+            "generation_upper_us": 563542.788,
+            "availability_us": 563542.788
+          },
+          {
+            "packet_id": 8222,
+            "node": 1,
+            "generation_lower_us": 579998.499,
+            "generation_upper_us": 582022.892,
+            "availability_us": 582022.892
+          },
+          {
+            "packet_id": 8223,
+            "node": 1,
+            "generation_lower_us": 600006.601,
+            "generation_upper_us": 601296.526,
+            "availability_us": 601296.526
+          },
+          {
+            "packet_id": 8224,
+            "node": 1,
+            "generation_lower_us": 619999.129,
+            "generation_upper_us": 622407.763,
+            "availability_us": 622407.763
+          },
+          {
+            "packet_id": 8229,
+            "node": 1,
+            "generation_lower_us": 720098.19,
+            "generation_upper_us": 723032.23,
+            "availability_us": 723032.23
+          },
+          {
+            "packet_id": 8235,
+            "node": 1,
+            "generation_lower_us": 840052.226,
+            "generation_upper_us": 842023.493,
+            "availability_us": 842023.493
+          },
+          {
+            "packet_id": 8240,
+            "node": 1,
+            "generation_lower_us": 940052.79,
+            "generation_upper_us": 943446.003,
+            "availability_us": 943446.003
+          },
+          {
+            "packet_id": 8245,
+            "node": 1,
+            "generation_lower_us": 1040084.733,
+            "generation_upper_us": 1043098.888,
+            "availability_us": 1043098.888
+          },
+          {
+            "packet_id": 8251,
+            "node": 1,
+            "generation_lower_us": 1160027.752,
+            "generation_upper_us": 1160859.202,
+            "availability_us": 1160859.202
+          },
+          {
+            "packet_id": 8214,
+            "node": 2,
+            "generation_lower_us": 420016.743,
+            "generation_upper_us": 420964.944,
+            "availability_us": 420964.944
+          },
+          {
+            "packet_id": 8215,
+            "node": 2,
+            "generation_lower_us": 440035.626,
+            "generation_upper_us": 441001.346,
+            "availability_us": 441001.346
+          },
+          {
+            "packet_id": 8216,
+            "node": 2,
+            "generation_lower_us": 460075.284,
+            "generation_upper_us": 463286.524,
+            "availability_us": 463286.524
+          },
+          {
+            "packet_id": 8217,
+            "node": 2,
+            "generation_lower_us": 480038.3,
+            "generation_upper_us": 482263.449,
+            "availability_us": 482263.449
+          },
+          {
+            "packet_id": 8218,
+            "node": 2,
+            "generation_lower_us": 500034.07,
+            "generation_upper_us": 500983.443,
+            "availability_us": 500983.443
+          },
+          {
+            "packet_id": 8219,
+            "node": 2,
+            "generation_lower_us": 520008.708,
+            "generation_upper_us": 520966.725,
+            "availability_us": 520966.725
+          },
+          {
+            "packet_id": 8220,
+            "node": 2,
+            "generation_lower_us": 540010.116,
+            "generation_upper_us": 541101.505,
+            "availability_us": 541101.505
+          },
+          {
+            "packet_id": 8221,
+            "node": 2,
+            "generation_lower_us": 560028.344,
+            "generation_upper_us": 563542.788,
+            "availability_us": 563542.788
+          },
+          {
+            "packet_id": 8222,
+            "node": 2,
+            "generation_lower_us": 579998.499,
+            "generation_upper_us": 582022.892,
+            "availability_us": 582022.892
+          },
+          {
+            "packet_id": 8223,
+            "node": 2,
+            "generation_lower_us": 600006.601,
+            "generation_upper_us": 601296.526,
+            "availability_us": 601296.526
+          },
+          {
+            "packet_id": 8224,
+            "node": 2,
+            "generation_lower_us": 619999.129,
+            "generation_upper_us": 622407.763,
+            "availability_us": 622407.763
+          },
+          {
+            "packet_id": 8229,
+            "node": 2,
+            "generation_lower_us": 720098.19,
+            "generation_upper_us": 723032.23,
+            "availability_us": 723032.23
+          },
+          {
+            "packet_id": 8235,
+            "node": 2,
+            "generation_lower_us": 840052.226,
+            "generation_upper_us": 842023.493,
+            "availability_us": 842023.493
+          },
+          {
+            "packet_id": 8240,
+            "node": 2,
+            "generation_lower_us": 940052.79,
+            "generation_upper_us": 943446.003,
+            "availability_us": 943446.003
+          },
+          {
+            "packet_id": 8246,
+            "node": 2,
+            "generation_lower_us": 1060118.563,
+            "generation_upper_us": 1063961.688,
+            "availability_us": 1063961.688
+          },
+          {
+            "packet_id": 8252,
+            "node": 2,
+            "generation_lower_us": 1180088.195,
+            "generation_upper_us": 1181022.123,
+            "availability_us": 1181022.123
+          },
+          {
+            "packet_id": 8214,
+            "node": 3,
+            "generation_lower_us": 420016.743,
+            "generation_upper_us": 420964.944,
+            "availability_us": 420964.944
+          },
+          {
+            "packet_id": 8215,
+            "node": 3,
+            "generation_lower_us": 440035.626,
+            "generation_upper_us": 441001.346,
+            "availability_us": 441001.346
+          },
+          {
+            "packet_id": 8216,
+            "node": 3,
+            "generation_lower_us": 460075.284,
+            "generation_upper_us": 463286.524,
+            "availability_us": 463286.524
+          },
+          {
+            "packet_id": 8217,
+            "node": 3,
+            "generation_lower_us": 480038.3,
+            "generation_upper_us": 482263.449,
+            "availability_us": 482263.449
+          },
+          {
+            "packet_id": 8218,
+            "node": 3,
+            "generation_lower_us": 500034.07,
+            "generation_upper_us": 500983.443,
+            "availability_us": 500983.443
+          },
+          {
+            "packet_id": 8219,
+            "node": 3,
+            "generation_lower_us": 520008.708,
+            "generation_upper_us": 520966.725,
+            "availability_us": 520966.725
+          },
+          {
+            "packet_id": 8220,
+            "node": 3,
+            "generation_lower_us": 540010.116,
+            "generation_upper_us": 541101.505,
+            "availability_us": 541101.505
+          },
+          {
+            "packet_id": 8221,
+            "node": 3,
+            "generation_lower_us": 560028.344,
+            "generation_upper_us": 563542.788,
+            "availability_us": 563542.788
+          },
+          {
+            "packet_id": 8222,
+            "node": 3,
+            "generation_lower_us": 579998.499,
+            "generation_upper_us": 582022.892,
+            "availability_us": 582022.892
+          },
+          {
+            "packet_id": 8223,
+            "node": 3,
+            "generation_lower_us": 600006.601,
+            "generation_upper_us": 601296.526,
+            "availability_us": 601296.526
+          },
+          {
+            "packet_id": 8224,
+            "node": 3,
+            "generation_lower_us": 619999.129,
+            "generation_upper_us": 622407.763,
+            "availability_us": 622407.763
+          },
+          {
+            "packet_id": 8229,
+            "node": 3,
+            "generation_lower_us": 720098.19,
+            "generation_upper_us": 723032.23,
+            "availability_us": 723032.23
+          },
+          {
+            "packet_id": 8235,
+            "node": 3,
+            "generation_lower_us": 840052.226,
+            "generation_upper_us": 842023.493,
+            "availability_us": 842023.493
+          },
+          {
+            "packet_id": 8240,
+            "node": 3,
+            "generation_lower_us": 940052.79,
+            "generation_upper_us": 943446.003,
+            "availability_us": 943446.003
+          },
+          {
+            "packet_id": 8246,
+            "node": 3,
+            "generation_lower_us": 1060118.563,
+            "generation_upper_us": 1063961.688,
+            "availability_us": 1063961.688
+          },
+          {
+            "packet_id": 8252,
+            "node": 3,
+            "generation_lower_us": 1180088.195,
+            "generation_upper_us": 1181022.123,
+            "availability_us": 1181022.123
+          }
+        ],
+        "clock_domain": "同一 Linux 宿主 CLOCK_MONOTONIC 的发送前与采集 recvmsg 后边界",
+        "generation_bound": "发送前 <= 真实队列快照生成事件 <= 采集 recvmsg 完成",
+        "switch_timestamps_used_for_cross_device_age": false,
+        "availability": "采集进程取到报告的时刻，保留实际前史",
+        "fulfilled_tasks": 0
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 3566540220,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 831.45,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 927.415,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 924.735,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          636,
+          984,
+          1320
+        ],
+        "export_bytes": 1278,
+        "export_bytes_with_minimum_ethernet_padding": 1296,
+        "frames": [
+          60,
+          60,
+          60,
+          60,
+          18
+        ],
+        "total_byte_hops": 4218,
+        "total_byte_hops_with_minimum_ethernet_padding": 4236,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 6,
+      "received_packets": 6,
+      "report_packets": 1,
+      "reported_samples_per_node": [
+        1,
+        0,
+        0
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "mtu",
+      "configuration": {
+        "mode": 0,
+        "scope": "flow",
+        "thresholds": [
+          1,
+          1,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [],
+      "start_monotonic_ns": 41380461699079,
+      "end_monotonic_ns": 41381061699079,
+      "age": {
+        "evaluated": false,
+        "reason": "本场景用于选择、统计或格式边界检查"
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 1349,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 2630.309,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": false,
+            "compatible": null
+          },
+          "3": {
+            "observed": false,
+            "compatible": null
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          27,
+          27,
+          27
+        ],
+        "export_bytes": 51,
+        "export_bytes_with_minimum_ethernet_padding": 60,
+        "frames": [
+          6,
+          6,
+          6,
+          6,
+          1
+        ],
+        "total_byte_hops": 132,
+        "total_byte_hops_with_minimum_ethernet_padding": 141,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 768,
+      "received_packets": 768,
+      "report_packets": 768,
+      "reported_samples_per_node": [
+        249,
+        264,
+        255
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "uniform",
+      "configuration": {
+        "mode": 1,
+        "scope": "flow",
+        "thresholds": [
+          1,
+          1,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [],
+      "start_monotonic_ns": 41382106704360,
+      "end_monotonic_ns": 41384090704360,
+      "age": {
+        "evaluated": false,
+        "reason": "本场景用于选择、统计或格式边界检查"
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 3757,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 546.144,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 552.785,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 556.263,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          13056,
+          13056,
+          13056
+        ],
+        "export_bytes": 39168,
+        "export_bytes_with_minimum_ethernet_padding": 46080,
+        "frames": [
+          768,
+          768,
+          768,
+          768,
+          768
+        ],
+        "total_byte_hops": 78336,
+        "total_byte_hops_with_minimum_ethernet_padding": 85248,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 768,
+      "received_packets": 768,
+      "report_packets": 768,
+      "reported_samples_per_node": [
+        391,
+        240,
+        137
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "weighted",
+      "configuration": {
+        "mode": 2,
+        "scope": "flow",
+        "thresholds": [
+          1,
+          1,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [],
+      "start_monotonic_ns": 41385134406516,
+      "end_monotonic_ns": 41387118406516,
+      "age": {
+        "evaluated": false,
+        "reason": "本场景用于选择、统计或格式边界检查"
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 2692,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 570.015,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 564.836,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 578.883,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          13056,
+          13056,
+          13056
+        ],
+        "export_bytes": 39168,
+        "export_bytes_with_minimum_ethernet_padding": 46080,
+        "frames": [
+          768,
+          768,
+          768,
+          768,
+          768
+        ],
+        "total_byte_hops": 78336,
+        "total_byte_hops_with_minimum_ethernet_padding": 85248,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 192,
+      "received_packets": 192,
+      "report_packets": 39,
+      "reported_samples_per_node": [
+        13,
+        13,
+        13
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "dev_uniform",
+      "configuration": {
+        "mode": 1,
+        "scope": "flow",
+        "thresholds": [
+          1,
+          1,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [
+        {
+          "flow": 1,
+          "rate_pps": 41.518489822277076,
+          "delta_dev_us": 0,
+          "count": 17,
+          "dev": 0,
+          "time": 41388422660861,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 1,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41388422660861
+        },
+        {
+          "flow": 2,
+          "rate_pps": 43.91687225089834,
+          "delta_dev_us": 130343,
+          "count": 18,
+          "dev": 130343,
+          "time": 41388423069989,
+          "rate_fail": 0,
+          "dev_fail": 1,
+          "checks": 1,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41388423069989
+        },
+        {
+          "flow": 1,
+          "rate_pps": 40.53305065583806,
+          "delta_dev_us": 0,
+          "count": 33,
+          "dev": 0,
+          "time": 41388817400456,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 2,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41388817400456
+        },
+        {
+          "flow": 2,
+          "rate_pps": 37.95039577139486,
+          "delta_dev_us": 130630,
+          "count": 33,
+          "dev": 260973,
+          "time": 41388818322784,
+          "rate_fail": 0,
+          "dev_fail": 2,
+          "checks": 2,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41388818322784
+        },
+        {
+          "flow": 1,
+          "rate_pps": 39.5266161029512,
+          "delta_dev_us": 0,
+          "count": 49,
+          "dev": 0,
+          "time": 41389222190989,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 3,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41389222190989
+        },
+        {
+          "flow": 2,
+          "rate_pps": 41.99722538660336,
+          "delta_dev_us": 130325,
+          "count": 50,
+          "dev": 391298,
+          "time": 41389223111430,
+          "rate_fail": 0,
+          "dev_fail": 3,
+          "checks": 3,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41389223111430
+        },
+        {
+          "flow": 1,
+          "rate_pps": 40.48846898398927,
+          "delta_dev_us": 0,
+          "count": 65,
+          "dev": 0,
+          "time": 41389617365230,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 4,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41389617365230
+        },
+        {
+          "flow": 2,
+          "rate_pps": 37.98026683583381,
+          "delta_dev_us": 130299,
+          "count": 65,
+          "dev": 521597,
+          "time": 41389618053363,
+          "rate_fail": 0,
+          "dev_fail": 4,
+          "checks": 4,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41389618053363
+        },
+        {
+          "flow": 1,
+          "rate_pps": 39.56875713059917,
+          "delta_dev_us": 0,
+          "count": 81,
+          "dev": 0,
+          "time": 41390021724658,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 5,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41390021724658
+        },
+        {
+          "flow": 2,
+          "rate_pps": 42.02243581803378,
+          "delta_dev_us": 130296,
+          "count": 82,
+          "dev": 651893,
+          "time": 41390022599165,
+          "rate_fail": 0,
+          "dev_fail": 5,
+          "checks": 5,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41390022599165
+        },
+        {
+          "flow": 1,
+          "rate_pps": 37.96285460713369,
+          "delta_dev_us": 0,
+          "count": 96,
+          "dev": 0,
+          "time": 41390416847737,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 6,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41390416847737
+        },
+        {
+          "flow": 2,
+          "rate_pps": 35.43784574712717,
+          "delta_dev_us": 65228,
+          "count": 96,
+          "dev": 717121,
+          "time": 41390417657039,
+          "rate_fail": 0,
+          "dev_fail": 6,
+          "checks": 6,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41390417657039
+        }
+      ],
+      "start_monotonic_ns": 41388013204735,
+      "end_monotonic_ns": 41390838204735,
+      "age": {
+        "evaluated": false,
+        "reason": "本场景用于选择、统计或格式边界检查"
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 13535,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 897.894,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1094.018,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 910.491,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          663,
+          663,
+          663
+        ],
+        "export_bytes": 1989,
+        "export_bytes_with_minimum_ethernet_padding": 2340,
+        "frames": [
+          192,
+          192,
+          192,
+          192,
+          39
+        ],
+        "total_byte_hops": 3978,
+        "total_byte_hops_with_minimum_ethernet_padding": 4329,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 192,
+      "received_packets": 192,
+      "report_packets": 39,
+      "reported_samples_per_node": [
+        22,
+        7,
+        10
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "dev_weighted",
+      "configuration": {
+        "mode": 2,
+        "scope": "flow",
+        "thresholds": [
+          1,
+          1,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [
+        {
+          "flow": 1,
+          "rate_pps": 41.41800524644796,
+          "delta_dev_us": 0,
+          "count": 17,
+          "dev": 0,
+          "time": 41392119313810,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 1,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41392119313810
+        },
+        {
+          "flow": 2,
+          "rate_pps": 46.163114810203076,
+          "delta_dev_us": 130594,
+          "count": 19,
+          "dev": 130594,
+          "time": 41392120448311,
+          "rate_fail": 0,
+          "dev_fail": 1,
+          "checks": 1,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41392120448311
+        },
+        {
+          "flow": 1,
+          "rate_pps": 40.46807438707889,
+          "delta_dev_us": 0,
+          "count": 33,
+          "dev": 0,
+          "time": 41392514687206,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 2,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41392514687206
+        },
+        {
+          "flow": 2,
+          "rate_pps": 37.96282030712043,
+          "delta_dev_us": 130272,
+          "count": 34,
+          "dev": 260866,
+          "time": 41392515571747,
+          "rate_fail": 0,
+          "dev_fail": 2,
+          "checks": 2,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41392515571747
+        },
+        {
+          "flow": 1,
+          "rate_pps": 40.470765249660055,
+          "delta_dev_us": 0,
+          "count": 49,
+          "dev": 0,
+          "time": 41392910034314,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 3,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41392910034314
+        },
+        {
+          "flow": 2,
+          "rate_pps": 37.95786215732933,
+          "delta_dev_us": 130311,
+          "count": 49,
+          "dev": 391177,
+          "time": 41392910746795,
+          "rate_fail": 0,
+          "dev_fail": 3,
+          "checks": 3,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41392910746795
+        },
+        {
+          "flow": 1,
+          "rate_pps": 39.53015563852408,
+          "delta_dev_us": 0,
+          "count": 65,
+          "dev": 0,
+          "time": 41393314788602,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 4,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41393314788602
+        },
+        {
+          "flow": 2,
+          "rate_pps": 41.981457111428554,
+          "delta_dev_us": 130712,
+          "count": 66,
+          "dev": 521889,
+          "time": 41393315687480,
+          "rate_fail": 0,
+          "dev_fail": 4,
+          "checks": 4,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41393315687480
+        },
+        {
+          "flow": 1,
+          "rate_pps": 39.519104563877875,
+          "delta_dev_us": 0,
+          "count": 81,
+          "dev": 0,
+          "time": 41393719656075,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 5,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41393719656075
+        },
+        {
+          "flow": 2,
+          "rate_pps": 41.98660480106749,
+          "delta_dev_us": 130041,
+          "count": 83,
+          "dev": 651930,
+          "time": 41393720578518,
+          "rate_fail": 0,
+          "dev_fail": 5,
+          "checks": 5,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41393720578518
+        },
+        {
+          "flow": 1,
+          "rate_pps": 37.93542268676008,
+          "delta_dev_us": 0,
+          "count": 96,
+          "dev": 0,
+          "time": 41394115064876,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 6,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41394115064876
+        },
+        {
+          "flow": 2,
+          "rate_pps": 32.866568729011156,
+          "delta_dev_us": 65252,
+          "count": 96,
+          "dev": 717182,
+          "time": 41394116117222,
+          "rate_fail": 0,
+          "dev_fail": 6,
+          "checks": 6,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41394116117222
+        }
+      ],
+      "start_monotonic_ns": 41391708864299,
+      "end_monotonic_ns": 41394533864299,
+      "age": {
+        "evaluated": false,
+        "reason": "本场景用于选择、统计或格式边界检查"
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 163901,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 998.191,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 955.29,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 993.551,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": false,
+          "compatible": null
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          663,
+          663,
+          663
+        ],
+        "export_bytes": 1989,
+        "export_bytes_with_minimum_ethernet_padding": 2340,
+        "frames": [
+          192,
+          192,
+          192,
+          192,
+          39
+        ],
+        "total_byte_hops": 3978,
+        "total_byte_hops_with_minimum_ethernet_padding": 4329,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    }
+  ],
+  "finish_utc": "2026-10-10T03:10:07.482223+00:00",
+  "finish_load_average": [
+    0.26806640625,
+    0.78662109375,
+    0.599609375
+  ],
+  "runtime_clock": {
+    "build": {
+      "status": "passed",
+      "upstream_commit": "2bdd0b7b2b2ae89faf2720f2158e9842bc6d2dd2",
+      "upstream_url": "https://codeload.github.com/p4lang/behavioral-model/tar.gz/2bdd0b7b2b2ae89faf2720f2158e9842bc6d2dd2",
+      "start_utc": "2026-10-10T02:59:18.942729+00:00",
+      "patch_sha256": "9c93a28c153f2be7cc285a271322fbf7c66e206c052fdce58a4673a9a5bf4809",
+      "script_sha256": "7f39da5077a3fbb5dbcbecd75354b663767fe9423d25843a8ba9a1327702e218",
+      "original_binary_sha256": "a86e02305e98682d002bb6e6c1a938b2fb16ac2f950c524368443fca5b0fe231",
+      "jobs": 2,
+      "timestamp_unit": "microseconds since each switch starts; 48-bit P4 field",
+      "elapsed_clock": "std::chrono::steady_clock",
+      "wall_epoch_api": "std::chrono::system_clock",
+      "commands": [
+        [
+          "patch",
+          "--batch",
+          "--forward",
+          "-p1",
+          "-i",
+          "<project>/experiments/patches/bmv2-steady-clock.patch"
+        ],
+        [
+          "./autogen.sh"
+        ],
+        [
+          "./configure",
+          "--prefix=<build>/install",
+          "--disable-tests",
+          "--without-pi",
+          "--with-thrift",
+          "--with-nanomsg",
+          "--disable-dependency-tracking"
+        ],
+        [
+          "make",
+          "-j2"
+        ],
+        [
+          "make",
+          "install"
+        ]
+      ],
+      "archive_sha256": "aa0272d0c147454e20be5af21db79bd6e275b5ca75b009cd17042581d8f70f82",
+      "upstream_file_sha256": {
+        "targets/simple_switch/simple_switch.h": "9649dd2ddebd63b73d3d35d1e3868cfbdbefee5840a570f16b74d441ea1dcf39",
+        "targets/simple_switch/simple_switch.cpp": "34f0956de14651a0ed1dd0a3a02e1595507784e2eb8e310179f8ad66914c9f4e",
+        "include/bm/bm_sim/queueing.h": "7c6a1b25e29bdadb8f008d79aaffbf2b86eabd07f24366370ce47af6437309a5"
+      },
+      "patched_file_sha256": {
+        "targets/simple_switch/simple_switch.h": "664f081cddd286ffcb018f0558a766d5963b6d42a24a3e419f9da07a57b27dc6",
+        "targets/simple_switch/simple_switch.cpp": "d75c9d7fb3a16753dd221bfe23fe2571090228e7fe627440e1e911f3c363ff58",
+        "include/bm/bm_sim/queueing.h": "94204719476f0d8ee88b2fdff354f2c7900dab3ad6437bc657eb41d2cf39838e"
+      },
+      "binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+      "version": "1.15.0-2bdd0b7b-steady-unknown",
+      "linked_libraries": [
+        {
+          "name": "libruntimestubs.so.0",
+          "sha256": "a96e4958076221fff5ed9bd10f5ac5fb33b775c81df478f91456cb892fc0ec35",
+          "scope": "project"
+        },
+        {
+          "name": "libthrift-0.16.0.so",
+          "sha256": "52614f2b3b87f1905e00f22eea8e95286fbc4e88958d1525258a1f281613a775",
+          "scope": "system"
+        },
+        {
+          "name": "libboost_program_options.so.1.83.0",
+          "sha256": "15f34bcb75dfb0fa30af13cf2b82fb7a9a8e0fbbadf7cabcd397dd65bde552f3",
+          "scope": "system"
+        },
+        {
+          "name": "libboost_filesystem.so.1.83.0",
+          "sha256": "2c137b29a3740fb6d12a4c18823bc2b15215646c3ba3bb208b89782df28559f0",
+          "scope": "system"
+        },
+        {
+          "name": "libsimpleswitch_thrift.so.0",
+          "sha256": "60b07b8c5f1385f86985c72f47bfa27e78ad267ce8ab35c5e7fb7b9a7ab31def",
+          "scope": "project"
+        },
+        {
+          "name": "libboost_thread.so.1.83.0",
+          "sha256": "dfb8b2e4e5d5d945a9ebdd6645816e2297d535cd6a7e529bd66a2f6332142270",
+          "scope": "system"
+        },
+        {
+          "name": "libpcap.so.0.8",
+          "sha256": "78e6aff56b3a9cf55b52d650f851b67bb337afeb7ea0bf162996161a563fb91f",
+          "scope": "system"
+        },
+        {
+          "name": "libgmp.so.10",
+          "sha256": "0ccdfb6d6f5c039465f6d002cf7e4c072d48ac6a2cffc8dd6c748dec31592804",
+          "scope": "system"
+        },
+        {
+          "name": "libnanomsg.so.5.0.0",
+          "sha256": "eff9cf6ba8403abca1a60a920657784cffee4db8dd8b65cf66405d789654ea38",
+          "scope": "system"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+          "scope": "system"
+        },
+        {
+          "name": "libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0",
+          "scope": "system"
+        },
+        {
+          "name": "libgcc_s.so.1",
+          "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+          "scope": "system"
+        },
+        {
+          "name": "libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf",
+          "scope": "system"
+        },
+        {
+          "name": "libssl.so.3",
+          "sha256": "a40e7b67489bbd257e432c700ff8f6a1ad796425b5eccecdc2930127fdd86624",
+          "scope": "system"
+        },
+        {
+          "name": "libcrypto.so.3",
+          "sha256": "6866ed711dab8927e1bf82bf1cd30e828bdfc34f3cc1e83b1c9eb01ce6c37d9a",
+          "scope": "system"
+        },
+        {
+          "name": "libibverbs.so.1",
+          "sha256": "249242c3ba29d72b7a9be560b768bf43fc5924c8a166f4e3bbb224bd81ade3ab",
+          "scope": "system"
+        },
+        {
+          "name": "libdbus-1.so.3",
+          "sha256": "a6ae7b4ef48562b40d7b9ba8efd2e49f6528b7cc6364bea382dcee4b473b5413",
+          "scope": "system"
+        },
+        {
+          "name": "libnl-route-3.so.200",
+          "sha256": "088b0021d638306f5541e7baab06a0182b07db0a280e19b3b40c746f729b3773",
+          "scope": "system"
+        },
+        {
+          "name": "libnl-3.so.200",
+          "sha256": "afcb69e2ef0b46c2ce7b7483848332fa9462776d33163f64209acf01f86eddd7",
+          "scope": "system"
+        },
+        {
+          "name": "libsystemd.so.0",
+          "sha256": "bdf59c828b547bcdbe7b3576c0810d9d9d2e982d8b61b365812542da6a4c4a99",
+          "scope": "system"
+        },
+        {
+          "name": "libcap.so.2",
+          "sha256": "6ac6abc86ac891c6e13486470e26f1d939f47fda9e6b5d5508a7f5ec881adc84",
+          "scope": "system"
+        },
+        {
+          "name": "libgcrypt.so.20",
+          "sha256": "6ad6d7007ee1ad8319eb18ba9a512cf09dda49396a303774c68b47477020bad4",
+          "scope": "system"
+        },
+        {
+          "name": "liblz4.so.1",
+          "sha256": "40bffd0a098387368b16b992abd5f7cf43c0fa2f05cabe5a6d483719554adfda",
+          "scope": "system"
+        },
+        {
+          "name": "liblzma.so.5",
+          "sha256": "696e868dd0700a19a6d65fc01608ec2d70d3cb91f65710e89180cd2e688f30cb",
+          "scope": "system"
+        },
+        {
+          "name": "libzstd.so.1",
+          "sha256": "0a2128bc10841fb29e76d08d945864dfb0b6a66da5df6df5d8299197439e54bb",
+          "scope": "system"
+        },
+        {
+          "name": "libgpg-error.so.0",
+          "sha256": "6cb18a007bfcb623029f4528a36b46578fea7dc34c2b505b8e6e0d99e6348cd1",
+          "scope": "system"
+        }
+      ],
+      "finish_utc": "2026-10-10T03:06:11.226356+00:00"
+    },
+    "build_manifest_sha256": "f5d34a315d08bc98f2303bc33b2e9ad1d146490ee49ee5174f59ca9481975057",
+    "actual_binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+    "legacy_positive_control": false,
+    "realtime_jumps_in_switch_only": false,
+    "start_utc": "2026-10-10T03:09:32.907469+00:00",
+    "clock_jump_library_sha256": null,
+    "clock_jump_source_sha256": "d10d7ebc271d082f120a16ca9dee8cba1acc28892cc46cf9919efaf4aaf280c5",
+    "wrapper_sha256": "1362b3160c20dba6c52f6ddc5d65d3cbd61abccd3056d63cc69638acf04173c8",
+    "host_realtime_modified": false,
+    "injected_events": []
+  },
+  "analysis_sha256": "5b3ba09d37b916d397c5e596dfc7b770ad9e0e7cae541c96d8a7bf49b20e3821",
+  "analysis_dependencies": {
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d"
+  },
+  "control_capture": {
+    "loopback_outgoing_frame_bytes": 948196,
+    "socket_drop_counter": 0,
+    "scope": "本机 Thrift/TCP 帧含 GSO，非部署控制网络；不公开载荷"
+  },
+  "wire_checks": {
+    "passed": true,
+    "checked_frames": 10797,
+    "maximum_ip_length": 1500
+  },
+  "public_artifact_sha256": {
+    "control-events.jsonl": "d6021d1943217d5fef03b7a6032fe13fecca506815e4a352482e6ee75bda24b0",
+    "rpc-frame-counts.jsonl": "10e7ff333e77948c5f26e0b1efd24c14e0b05c5b3b4becf313320b695ef8d6c1",
+    "weighted/collector.jsonl": "9bbd2edc8c67932f0864ebc894aa7e4c27b7c04258573fe0c1ded401dd55db5c",
+    "weighted/packets.json": "8f0e588b4629fdfab30472f0548678872d90de300b6077a2e89bf4903fb88064",
+    "weighted/destination.pcap": "bf7d42b509ab2946e50c7e1292b67e84855485b71e7cbe90bb58a236ce5d93e8",
+    "weighted/send.jsonl": "9ee2739ec6593f5f6bbfe38e84d2ee4f8c0c16b87342356a1a7801756b848181",
+    "weighted/destination.jsonl": "f9587d9c104af0d7f2aadfc40d9a594ee65a85956bf063556bcce54e60f12cd1",
+    "weighted/wire-observations.jsonl": "00b6a0c051d3c77dc134c0c4d0440fe1ca9fa7c2ddfab392aac62b39feac4d71",
+    "weighted/collector.pcap": "19e67d66ac16ec65328b036547735bfc62a1d75a5a01d55fdb7a9db307976f80",
+    "feedback_pro/collector.jsonl": "4bc14f6febbc5e28369792e9b2a48e3f7e29ebe7982429dabfcaa73fa2e92dc9",
+    "feedback_pro/packets.json": "8d920e3d2e008591c3d049c1b021099f1a414bb7d9f30c923e481eaf886f8ec5",
+    "feedback_pro/destination.pcap": "5e4b9b7405e982407c4512c8aa277a2a95cac56e09a009a6c8dab4c34652b546",
+    "feedback_pro/send.jsonl": "9bb446a0fe0f5d49650e9c0c9248231a306dfad743630e8e5f9364ad13f368f4",
+    "feedback_pro/destination.jsonl": "9e6863ed1ae8f195288c93f4a4da92b0360ee5fb65ac2e99b7862620c560ce82",
+    "feedback_pro/wire-observations.jsonl": "f777615a89eabff2244ef08b1903c5203e90ca079ad1d92b06d4a0638023c01f",
+    "feedback_pro/collector.pcap": "f29d63fb0c5cc3cb84b4723b77e3510b889b6b96e87a33b1e999709c1ff3ab58",
+    "dev_uniform/collector.jsonl": "953fa6ceb5adeeefe15261ac9a4aa684628553843560ed2d44c0961bd3a74547",
+    "dev_uniform/packets.json": "5188ec322d8c904710769483539e79f76502ee2822689bb8da8781d3860bd5d2",
+    "dev_uniform/destination.pcap": "cb3511633369dd33c5c4000f780012d837c37ffbeb3d18515af628a58e811a6e",
+    "dev_uniform/send.jsonl": "2015e2d86cdc08cc545859d5476bf9479003268cb02a086f27534353b33be2bd",
+    "dev_uniform/destination.jsonl": "f9de2ad56bcd3dd7a55fbf72e05c351107a33503fdb384201dbcedbc42b23855",
+    "dev_uniform/wire-observations.jsonl": "603dc5d0413becc002b3b7d4c9a99135e04ec18772b7740ff10e96e31d85f470",
+    "dev_uniform/collector.pcap": "3ab4db1cf5c5d5da9700cf69abff7dae9246afb0adc767742a7c4d711ce0dc2d",
+    "feedback_base/collector.jsonl": "c38c9272ac50067483fed6d12eee605f5c26e226758675e4d19e864b3dc12544",
+    "feedback_base/packets.json": "7a8d517fb35031ca8270bd6e82c7e68f8a3887966cb374ebde78b5bcd9b63ea1",
+    "feedback_base/destination.pcap": "8af487f26b381cbc836b49f30a9a11e189b310ab61c2e88abbcf9b91c67c8fbd",
+    "feedback_base/send.jsonl": "a50f469c19abff54866e3af0f11badec851b2119164d0a4463b68c1ad2556bcc",
+    "feedback_base/destination.jsonl": "962d51f70e76ffe13e4c5a4454459d3008f8754f4a025a4ff0cf75c8bf095c2b",
+    "feedback_base/wire-observations.jsonl": "c09059f29af8a3eb9895cd30bb1bac2ec428b9ef0d64311c12a035bc2fae021f",
+    "feedback_base/collector.pcap": "7980b1dfa3cfcba93b7434d2a8358bb7ed0adc34e5db1b780c0b63aaa8140af3",
+    "ratio/collector.jsonl": "98c59d087cd9e0c3241d3fc2c5cf503271ed3e2e96d9081d3db2c6b3650a792c",
+    "ratio/packets.json": "9d863075264d56e4c076123e7687a2449aa204ac0edc1b0357d033ab5a726a63",
+    "ratio/destination.pcap": "5571ff3fcc8404f82f322744b6994b163c9358a545875192c0bb161d0af6615c",
+    "ratio/send.jsonl": "f633a55c1aa05a606a86aaf92440154c18bf7d21b188e9bc6bb05fc38acd7355",
+    "ratio/destination.jsonl": "f09bba4eebd8dfda5f1cbf3e7a9d6145c759c127752b83f009471a20a0933a0d",
+    "ratio/wire-observations.jsonl": "fc89663ac03c574e5df2e5da1d70b6d78a0fe700d0f501692f00f8fc444a317c",
+    "ratio/collector.pcap": "89bd5c30ed03fd5793858feaa21684865781c5c0e5e5d34ec6aa149bf924c82f",
+    "shared/collector.jsonl": "68844afd04b820499cda98347d1e84fd9794a18b12cb37c2a7829c4613fac340",
+    "shared/packets.json": "929b1907133e7902706a8fe3def1cb515345475e7de190abe7e5a2ce056ad3ee",
+    "shared/destination.pcap": "0979e1a4493bd151010680e1e001b1942da778664c4bb78bf4d51c969bfc81be",
+    "shared/send.jsonl": "432a06868145ebf286e0a95db3205d1f42ccb01316ba122e4765fab46007431b",
+    "shared/destination.jsonl": "89ce4e042990c0f566183e772c54a246806037344a3bfc88a986813251f3a30f",
+    "shared/wire-observations.jsonl": "9e0bd60fff5b0df16c57c855abf3b9a49a14836f106e61645c27f707b3b62d13",
+    "shared/collector.pcap": "643674747df1b84a53f0389fdebb7f814cc77b06bc6acdd9f7ae72c1ee104019",
+    "dev_filter/collector.jsonl": "30582de90169b390b69d7e958586f2180bc7218daa5108da53872f0f05b19f26",
+    "dev_filter/packets.json": "229a25ccb68717c19f21ee87545fc9ac13bee4907c9678fabb17efe00eadaed8",
+    "dev_filter/destination.pcap": "0d377b144d5e7ca336aa33b46648cbf213e28b8a4181d36b7b8277a980478038",
+    "dev_filter/send.jsonl": "ccb331727ccc393784b8778e8ff1a2b9e1d16c31f185ec0b3f33308ddc22d9e9",
+    "dev_filter/destination.jsonl": "5ad36ca274b836edebd9477603447d2188050448230c89df92aa3c9781e01aec",
+    "dev_filter/wire-observations.jsonl": "14f4c8262f478247e8c85582e8aba19a307453dd5af5b123e82ac572009e9f64",
+    "dev_filter/collector.pcap": "7fdf80bf4f678e9f31bdf40f3c734b4d505898380d8dd85a48a716c3a56b3729",
+    "uniform/collector.jsonl": "5ff644eb7d0d0ba1fe71be82ac967d69374f7f29164e11febc37e4376539017b",
+    "uniform/packets.json": "898deeb6b849239d41acbc04697a206dfac0fb674ee4885978540570250070a2",
+    "uniform/destination.pcap": "54ca2cdb4873ac39c282db26d106e9e0139c2f80fd51864360e61037ed64c37f",
+    "uniform/send.jsonl": "488105dd8ac3dcb1c678686abbbd17a02348095720db623016bb0b9b14dcd5bb",
+    "uniform/destination.jsonl": "54d973c0154f5441a3587c8e1d69c5e0e6d3b45876aa11f1d8a291da6683116d",
+    "uniform/wire-observations.jsonl": "1059e90ab5477a740d50a42d56683cb9b82e464af0c95c3692a7b46ef3a395b7",
+    "uniform/collector.pcap": "5dde46d294ca3fe84d2b58aa2ae09a2d4e38ef533fb683c5aa02fbfb92a85a42",
+    "dev_weighted/collector.jsonl": "2269c148366a4e4f4654074228988d40120fff0aa564958e9371a67f6ab5fd3f",
+    "dev_weighted/packets.json": "997a5efed7b1859537ce40f3def8757f7bf51db81aaf95e5e030fb4af4e1042d",
+    "dev_weighted/destination.pcap": "545a3ef08d89d6f685642feeb63ffa1d9d09c5c44c9adc4f4220f2f2d01e0332",
+    "dev_weighted/send.jsonl": "6347dd88cbcc52a277d8e1e6ae2904448e009c1f1a651ac2695b945a5e56658e",
+    "dev_weighted/destination.jsonl": "5a66de9ec4f4a73b0684e189ab0ad4c7da64080787a319212d09416e8347c440",
+    "dev_weighted/wire-observations.jsonl": "204dee7a73e2e46d1a3fd947a03fcac831b3ff68642dd83b885729cb5cd001d5",
+    "dev_weighted/collector.pcap": "561b24a07687bb7e75690204093679a975aaf9d22f390144b471534279c016a3",
+    "mtu/collector.jsonl": "972c36d603d050c15ead5cedb5ff5daee3668ea882a46bb8b453e45fecc50956",
+    "mtu/packets.json": "a5ae012cd26e92eca6bea5fe6f24857473e5e72c2977619f385b54e8b75d2f5a",
+    "mtu/destination.pcap": "82c1ddf701ec06c175f17a897e7f3398d3d96b771988e38889b5d7f164a30adc",
+    "mtu/send.jsonl": "7088594a3e83d1fd64bed932248ab64273f8777f29305b65a1d098e27c223f25",
+    "mtu/destination.jsonl": "1d5d87b5836384c32a5c6424bf6d7aaa3d574e3882311fda4625af5681f866df",
+    "mtu/wire-observations.jsonl": "c3815f54e950267c032678b3b931d9b6b55bf85800a63278d946024021462ffa",
+    "mtu/collector.pcap": "80794a36e9e4cc0e9436abfeb75b256814358ed913ea2d5d858f17299ec53b49"
+  }
+}

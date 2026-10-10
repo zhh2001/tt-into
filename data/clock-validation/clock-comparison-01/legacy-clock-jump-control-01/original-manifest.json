@@ -1,0 +1,716 @@
+{
+  "run_id": "legacy-clock-jump-control-01",
+  "status": "failed",
+  "format": {
+    "id": 0,
+    "version": 2,
+    "header": 8,
+    "record": 20,
+    "reservoir": true
+  },
+  "format_name": "common",
+  "diagnostics": true,
+  "topology": "3 sampling nodes + sink",
+  "workload_seed": 0,
+  "data_plane_rng_seed": null,
+  "data_plane_rng": "v1model random，保留实际抽签，不宣称可配置种子",
+  "source_sha256": {
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/run_steady_validation.py": "1362b3160c20dba6c52f6ddc5d65d3cbd61abccd3056d63cc69638acf04173c8",
+    "experiments/clock_jump.c": "d10d7ebc271d082f120a16ca9dee8cba1acc28892cc46cf9919efaf4aaf280c5",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5"
+  },
+  "start_utc": "2026-10-10T03:12:02.997646+00:00",
+  "start_load_average": [
+    0.35107421875,
+    0.65234375,
+    0.568359375
+  ],
+  "versions": {
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "bmv2": "1.15.0-2bdd0b7b",
+    "python": "3.12.3",
+    "mininet": "2.3.0"
+  },
+  "cases": [
+    {
+      "errors": [
+        "业务或报告数量重复、缺失",
+        "业务恢复错误 3",
+        "业务恢复错误 4",
+        "业务恢复错误 5",
+        "业务恢复错误 6",
+        "业务恢复错误 7",
+        "业务恢复错误 8",
+        "业务恢复错误 9",
+        "业务恢复错误 10",
+        "业务恢复错误 11",
+        "业务恢复错误 12",
+        "业务恢复错误 13",
+        "业务恢复错误 14",
+        "业务恢复错误 15",
+        "业务恢复错误 16",
+        "业务恢复错误 17",
+        "业务恢复错误 18",
+        "业务恢复错误 19",
+        "业务恢复错误 20",
+        "业务恢复错误 21",
+        "业务恢复错误 22",
+        "业务恢复错误 23",
+        "业务恢复错误 24",
+        "选择决策不符 3/2",
+        "门控索引不符 3/2",
+        "选择决策不符 3/3",
+        "门控索引不符 3/3",
+        "选择决策不符 4/2",
+        "门控索引不符 4/2",
+        "选择决策不符 4/3",
+        "门控索引不符 4/3",
+        "选择决策不符 5/2",
+        "门控索引不符 5/2",
+        "选择决策不符 5/3",
+        "门控索引不符 5/3",
+        "选择决策不符 6/2",
+        "门控索引不符 6/2",
+        "选择决策不符 6/3",
+        "门控索引不符 6/3",
+        "选择决策不符 7/2",
+        "门控索引不符 7/2",
+        "选择决策不符 7/3",
+        "门控索引不符 7/3",
+        "选择决策不符 8/2",
+        "门控索引不符 8/2",
+        "选择决策不符 8/3",
+        "门控索引不符 8/3",
+        "选择决策不符 9/2",
+        "门控索引不符 9/2",
+        "选择决策不符 9/3",
+        "门控索引不符 9/3",
+        "选择决策不符 10/2",
+        "门控索引不符 10/2",
+        "选择决策不符 10/3",
+        "门控索引不符 10/3",
+        "选择决策不符 11/2",
+        "门控索引不符 11/2",
+        "选择决策不符 11/3",
+        "门控索引不符 11/3",
+        "选择决策不符 12/2",
+        "门控索引不符 12/2",
+        "选择决策不符 12/3",
+        "门控索引不符 12/3",
+        "选择决策不符 13/2",
+        "门控索引不符 13/2",
+        "选择决策不符 13/3",
+        "门控索引不符 13/3",
+        "选择决策不符 14/2",
+        "门控索引不符 14/2",
+        "选择决策不符 14/3",
+        "门控索引不符 14/3",
+        "选择决策不符 15/2",
+        "门控索引不符 15/2",
+        "选择决策不符 15/3",
+        "门控索引不符 15/3",
+        "选择决策不符 16/2",
+        "门控索引不符 16/2",
+        "选择决策不符 16/3",
+        "门控索引不符 16/3",
+        "选择决策不符 17/2",
+        "门控索引不符 17/2",
+        "选择决策不符 17/3",
+        "门控索引不符 17/3",
+        "选择决策不符 18/2",
+        "门控索引不符 18/2",
+        "选择决策不符 18/3",
+        "门控索引不符 18/3",
+        "选择决策不符 19/2",
+        "门控索引不符 19/2",
+        "选择决策不符 19/3",
+        "门控索引不符 19/3",
+        "选择决策不符 20/2",
+        "门控索引不符 20/2",
+        "选择决策不符 20/3",
+        "门控索引不符 20/3",
+        "选择决策不符 21/2",
+        "门控索引不符 21/2",
+        "选择决策不符 21/3",
+        "门控索引不符 21/3",
+        "选择决策不符 22/2",
+        "门控索引不符 22/2",
+        "选择决策不符 22/3",
+        "门控索引不符 22/3",
+        "选择决策不符 23/2",
+        "门控索引不符 23/2",
+        "选择决策不符 23/3",
+        "门控索引不符 23/3",
+        "选择决策不符 24/2",
+        "门控索引不符 24/2",
+        "选择决策不符 24/3",
+        "门控索引不符 24/3",
+        "独立记录核对错误 3",
+        "独立记录核对错误 4",
+        "独立记录核对错误 5",
+        "独立记录核对错误 6",
+        "独立记录核对错误 7",
+        "独立记录核对错误 9",
+        "独立记录核对错误 11",
+        "独立记录核对错误 13",
+        "独立记录核对错误 15",
+        "独立记录核对错误 17",
+        "独立记录核对错误 19",
+        "独立记录核对错误 21",
+        "独立记录核对错误 23",
+        "最终门控状态错误 2/258",
+        "最终门控状态错误 3/258"
+      ],
+      "input_packets": 24,
+      "received_packets": 2,
+      "report_packets": 2,
+      "successful_insertions_per_node": [
+        12,
+        2,
+        1
+      ],
+      "expected_inband_per_link_bytes": [
+        432,
+        472,
+        492
+      ],
+      "expected_export_bytes": 930,
+      "reported_samples_per_node": [
+        1,
+        1,
+        0
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "failed",
+      "name": "shared",
+      "configuration": {
+        "mode": 0,
+        "scope": "port",
+        "thresholds": [
+          100000,
+          300000,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [],
+      "start_monotonic_ns": 41503183292824,
+      "end_monotonic_ns": 41505838292824
+    }
+  ],
+  "finish_utc": "2026-10-10T03:12:09.014573+00:00",
+  "finish_load_average": [
+    0.32275390625,
+    0.64111328125,
+    0.56494140625
+  ],
+  "runtime_clock": {
+    "build": {
+      "status": "passed",
+      "upstream_commit": "2bdd0b7b2b2ae89faf2720f2158e9842bc6d2dd2",
+      "upstream_url": "https://codeload.github.com/p4lang/behavioral-model/tar.gz/2bdd0b7b2b2ae89faf2720f2158e9842bc6d2dd2",
+      "start_utc": "2026-10-10T02:59:18.942729+00:00",
+      "patch_sha256": "9c93a28c153f2be7cc285a271322fbf7c66e206c052fdce58a4673a9a5bf4809",
+      "script_sha256": "7f39da5077a3fbb5dbcbecd75354b663767fe9423d25843a8ba9a1327702e218",
+      "original_binary_sha256": "a86e02305e98682d002bb6e6c1a938b2fb16ac2f950c524368443fca5b0fe231",
+      "jobs": 2,
+      "timestamp_unit": "microseconds since each switch starts; 48-bit P4 field",
+      "elapsed_clock": "std::chrono::steady_clock",
+      "wall_epoch_api": "std::chrono::system_clock",
+      "commands": [
+        [
+          "patch",
+          "--batch",
+          "--forward",
+          "-p1",
+          "-i",
+          "<project>/experiments/patches/bmv2-steady-clock.patch"
+        ],
+        [
+          "./autogen.sh"
+        ],
+        [
+          "./configure",
+          "--prefix=<build>/install",
+          "--disable-tests",
+          "--without-pi",
+          "--with-thrift",
+          "--with-nanomsg",
+          "--disable-dependency-tracking"
+        ],
+        [
+          "make",
+          "-j2"
+        ],
+        [
+          "make",
+          "install"
+        ]
+      ],
+      "archive_sha256": "aa0272d0c147454e20be5af21db79bd6e275b5ca75b009cd17042581d8f70f82",
+      "upstream_file_sha256": {
+        "targets/simple_switch/simple_switch.h": "9649dd2ddebd63b73d3d35d1e3868cfbdbefee5840a570f16b74d441ea1dcf39",
+        "targets/simple_switch/simple_switch.cpp": "34f0956de14651a0ed1dd0a3a02e1595507784e2eb8e310179f8ad66914c9f4e",
+        "include/bm/bm_sim/queueing.h": "7c6a1b25e29bdadb8f008d79aaffbf2b86eabd07f24366370ce47af6437309a5"
+      },
+      "patched_file_sha256": {
+        "targets/simple_switch/simple_switch.h": "664f081cddd286ffcb018f0558a766d5963b6d42a24a3e419f9da07a57b27dc6",
+        "targets/simple_switch/simple_switch.cpp": "d75c9d7fb3a16753dd221bfe23fe2571090228e7fe627440e1e911f3c363ff58",
+        "include/bm/bm_sim/queueing.h": "94204719476f0d8ee88b2fdff354f2c7900dab3ad6437bc657eb41d2cf39838e"
+      },
+      "binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+      "version": "1.15.0-2bdd0b7b-steady-unknown",
+      "linked_libraries": [
+        {
+          "name": "libruntimestubs.so.0",
+          "sha256": "a96e4958076221fff5ed9bd10f5ac5fb33b775c81df478f91456cb892fc0ec35",
+          "scope": "project"
+        },
+        {
+          "name": "libthrift-0.16.0.so",
+          "sha256": "52614f2b3b87f1905e00f22eea8e95286fbc4e88958d1525258a1f281613a775",
+          "scope": "system"
+        },
+        {
+          "name": "libboost_program_options.so.1.83.0",
+          "sha256": "15f34bcb75dfb0fa30af13cf2b82fb7a9a8e0fbbadf7cabcd397dd65bde552f3",
+          "scope": "system"
+        },
+        {
+          "name": "libboost_filesystem.so.1.83.0",
+          "sha256": "2c137b29a3740fb6d12a4c18823bc2b15215646c3ba3bb208b89782df28559f0",
+          "scope": "system"
+        },
+        {
+          "name": "libsimpleswitch_thrift.so.0",
+          "sha256": "60b07b8c5f1385f86985c72f47bfa27e78ad267ce8ab35c5e7fb7b9a7ab31def",
+          "scope": "project"
+        },
+        {
+          "name": "libboost_thread.so.1.83.0",
+          "sha256": "dfb8b2e4e5d5d945a9ebdd6645816e2297d535cd6a7e529bd66a2f6332142270",
+          "scope": "system"
+        },
+        {
+          "name": "libpcap.so.0.8",
+          "sha256": "78e6aff56b3a9cf55b52d650f851b67bb337afeb7ea0bf162996161a563fb91f",
+          "scope": "system"
+        },
+        {
+          "name": "libgmp.so.10",
+          "sha256": "0ccdfb6d6f5c039465f6d002cf7e4c072d48ac6a2cffc8dd6c748dec31592804",
+          "scope": "system"
+        },
+        {
+          "name": "libnanomsg.so.5.0.0",
+          "sha256": "eff9cf6ba8403abca1a60a920657784cffee4db8dd8b65cf66405d789654ea38",
+          "scope": "system"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+          "scope": "system"
+        },
+        {
+          "name": "libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0",
+          "scope": "system"
+        },
+        {
+          "name": "libgcc_s.so.1",
+          "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+          "scope": "system"
+        },
+        {
+          "name": "libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf",
+          "scope": "system"
+        },
+        {
+          "name": "libssl.so.3",
+          "sha256": "a40e7b67489bbd257e432c700ff8f6a1ad796425b5eccecdc2930127fdd86624",
+          "scope": "system"
+        },
+        {
+          "name": "libcrypto.so.3",
+          "sha256": "6866ed711dab8927e1bf82bf1cd30e828bdfc34f3cc1e83b1c9eb01ce6c37d9a",
+          "scope": "system"
+        },
+        {
+          "name": "libibverbs.so.1",
+          "sha256": "249242c3ba29d72b7a9be560b768bf43fc5924c8a166f4e3bbb224bd81ade3ab",
+          "scope": "system"
+        },
+        {
+          "name": "libdbus-1.so.3",
+          "sha256": "a6ae7b4ef48562b40d7b9ba8efd2e49f6528b7cc6364bea382dcee4b473b5413",
+          "scope": "system"
+        },
+        {
+          "name": "libnl-route-3.so.200",
+          "sha256": "088b0021d638306f5541e7baab06a0182b07db0a280e19b3b40c746f729b3773",
+          "scope": "system"
+        },
+        {
+          "name": "libnl-3.so.200",
+          "sha256": "afcb69e2ef0b46c2ce7b7483848332fa9462776d33163f64209acf01f86eddd7",
+          "scope": "system"
+        },
+        {
+          "name": "libsystemd.so.0",
+          "sha256": "bdf59c828b547bcdbe7b3576c0810d9d9d2e982d8b61b365812542da6a4c4a99",
+          "scope": "system"
+        },
+        {
+          "name": "libcap.so.2",
+          "sha256": "6ac6abc86ac891c6e13486470e26f1d939f47fda9e6b5d5508a7f5ec881adc84",
+          "scope": "system"
+        },
+        {
+          "name": "libgcrypt.so.20",
+          "sha256": "6ad6d7007ee1ad8319eb18ba9a512cf09dda49396a303774c68b47477020bad4",
+          "scope": "system"
+        },
+        {
+          "name": "liblz4.so.1",
+          "sha256": "40bffd0a098387368b16b992abd5f7cf43c0fa2f05cabe5a6d483719554adfda",
+          "scope": "system"
+        },
+        {
+          "name": "liblzma.so.5",
+          "sha256": "696e868dd0700a19a6d65fc01608ec2d70d3cb91f65710e89180cd2e688f30cb",
+          "scope": "system"
+        },
+        {
+          "name": "libzstd.so.1",
+          "sha256": "0a2128bc10841fb29e76d08d945864dfb0b6a66da5df6df5d8299197439e54bb",
+          "scope": "system"
+        },
+        {
+          "name": "libgpg-error.so.0",
+          "sha256": "6cb18a007bfcb623029f4528a36b46578fea7dc34c2b505b8e6e0d99e6348cd1",
+          "scope": "system"
+        }
+      ],
+      "finish_utc": "2026-10-10T03:06:11.226356+00:00"
+    },
+    "build_manifest_sha256": "f5d34a315d08bc98f2303bc33b2e9ad1d146490ee49ee5174f59ca9481975057",
+    "actual_binary_sha256": "a86e02305e98682d002bb6e6c1a938b2fb16ac2f950c524368443fca5b0fe231",
+    "legacy_positive_control": true,
+    "realtime_jumps_in_switch_only": true,
+    "start_utc": "2026-10-10T03:12:02.824557+00:00",
+    "clock_jump_library_sha256": "45a9feb4b767835851699c03aa4616f9ef098b2afcbf8a2a898bb1bc92f66dca",
+    "clock_jump_source_sha256": "d10d7ebc271d082f120a16ca9dee8cba1acc28892cc46cf9919efaf4aaf280c5",
+    "wrapper_sha256": "1362b3160c20dba6c52f6ddc5d65d3cbd61abccd3056d63cc69638acf04173c8",
+    "host_realtime_modified": false,
+    "injected_events": [
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 101965339,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 286100629,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 184293885,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 441188191,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 151454268,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 450114213,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 348316033,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 214906806,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 651037259,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 495750375,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 606258507,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 825327960,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 470886435,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 632258810,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 1016616652,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 1017376847,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 984366055,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 823115156,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 1015855093,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 1017340802,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 1310259303,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 1208421608,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 1465879426,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 1206960058,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 1470131876,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 1636474682,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 1528419802,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 1630552699,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 1836543491,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 1495794183,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 1724393379,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 2016610829,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 2017405666,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 2236624740,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 2015852123,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 2017293608,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 2436400902,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 2334426332,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 2232610397,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 2430228820,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 2636445752,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 2836559726,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 3016551108,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 2882254473,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 3017436141,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 3236432251,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 3015856817,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 3017303484,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 3436445835,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 3281997632,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 3636558874,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 3836404083,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 3681895620,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163946,
+        "elapsed_in_process_ns": 4016603571,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163962,
+        "elapsed_in_process_ns": 4017411766,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163978,
+        "elapsed_in_process_ns": 4015912052,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163992,
+        "elapsed_in_process_ns": 4017377067,
+        "realtime_shift_seconds": -3600
+      }
+    ]
+  }
+}

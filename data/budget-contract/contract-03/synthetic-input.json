@@ -1,0 +1,148 @@
+{
+  "tasks": [
+    {
+      "node": 1,
+      "deadline_us": 8.5,
+      "weight": 2,
+      "epsilon": 0.0,
+      "initial_generated_us": -1
+    },
+    {
+      "node": 2,
+      "deadline_us": 12,
+      "weight": 1,
+      "epsilon": 0.0,
+      "initial_generated_us": -1
+    }
+  ],
+  "base_packets": [
+    {
+      "packet_id": 1,
+      "flow": 1,
+      "path": [
+        1,
+        2
+      ],
+      "gate_us": [
+        2,
+        2.1
+      ],
+      "generated_us": [
+        2,
+        2.1
+      ],
+      "arrival_us": 2.2,
+      "ip_bytes": 120,
+      "capacity": 1,
+      "eligible_nodes": null,
+      "source_permitted": true,
+      "export_emitted": true
+    },
+    {
+      "packet_id": 2,
+      "flow": 1,
+      "path": [
+        1,
+        2
+      ],
+      "gate_us": [
+        6,
+        6.1
+      ],
+      "generated_us": [
+        6,
+        6.1
+      ],
+      "arrival_us": 6.2,
+      "ip_bytes": 120,
+      "capacity": 1,
+      "eligible_nodes": null,
+      "source_permitted": true,
+      "export_emitted": true
+    },
+    {
+      "packet_id": 3,
+      "flow": 1,
+      "path": [
+        1,
+        2
+      ],
+      "gate_us": [
+        10,
+        10.1
+      ],
+      "generated_us": [
+        10,
+        10.1
+      ],
+      "arrival_us": 10.2,
+      "ip_bytes": 120,
+      "capacity": 1,
+      "eligible_nodes": null,
+      "source_permitted": true,
+      "export_emitted": true
+    },
+    {
+      "packet_id": 4,
+      "flow": 1,
+      "path": [
+        1,
+        2
+      ],
+      "gate_us": [
+        14,
+        14.1
+      ],
+      "generated_us": [
+        14,
+        14.1
+      ],
+      "arrival_us": 14.2,
+      "ip_bytes": 120,
+      "capacity": 1,
+      "eligible_nodes": null,
+      "source_permitted": true,
+      "export_emitted": true
+    }
+  ],
+  "window_us": [
+    0,
+    18
+  ],
+  "budget": {
+    "inband_per_link_bytes": [
+      64,
+      84
+    ],
+    "export_bytes": 186,
+    "control_per_link_bytes": [
+      15,
+      20
+    ]
+  },
+  "control_ledger": [
+    {
+      "kind": "installation",
+      "issued_us": -5,
+      "effective_us": -1,
+      "bytes_per_link": [
+        8,
+        10
+      ],
+      "provenance": "手算合成假设，不是 RPC 测量",
+      "basis": "ethernet_without_fcs"
+    },
+    {
+      "kind": "observation",
+      "issued_us": 1,
+      "effective_us": 2,
+      "bytes_per_link": [
+        7,
+        10
+      ],
+      "provenance": "手算合成假设，不是 RPC 测量",
+      "basis": "ethernet_without_fcs"
+    }
+  ],
+  "scope": "给定合成已收初始样本，未来轨迹已知，资格和控制账本固定，权限安装可实现性未证明"
+}

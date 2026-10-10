@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "start_utc": "2026-10-10T03:14:29.752901+00:00",
+  "script_sha256": "84deb9457ef95bf2ef1ad99d0f4d22a1801c024d6689563e98f190c7b9f193c5",
+  "runs": [
+    {
+      "run_id": "steady-common-01",
+      "input_manifest_sha256": "06245615f5d9644c167c4ddf94bf35c88c6d5e8c5b7c9b6c0043f9d79bb5cd9f",
+      "original_status": "passed",
+      "legacy_positive_control": false,
+      "cases": 10,
+      "input_packets": 2274,
+      "received_packets": 2274,
+      "injected_events": 0,
+      "source_clock_checks": [
+        {
+          "case": "shared",
+          "observed_packets": 24,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "ratio",
+          "observed_packets": 12,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "dev_filter",
+          "observed_packets": 192,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "feedback_base",
+          "observed_packets": 60,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "feedback_pro",
+          "observed_packets": 60,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "mtu",
+          "observed_packets": 6,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "uniform",
+          "observed_packets": 768,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "weighted",
+          "observed_packets": 768,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "dev_uniform",
+          "observed_packets": 192,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "dev_weighted",
+          "observed_packets": 192,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        }
+      ]
+    },
+    {
+      "run_id": "steady-task-ordinary-01",
+      "input_manifest_sha256": "d1b2a9018a6406f87ce0d0683ee1626a44cd8059b15df494e626d2bcd9ea615d",
+      "original_status": "passed",
+      "legacy_positive_control": false,
+      "cases": 10,
+      "input_packets": 2274,
+      "received_packets": 2274,
+      "injected_events": 0,
+      "source_clock_checks": []
+    },
+    {
+      "run_id": "steady-clock-jump-01",
+      "input_manifest_sha256": "d309f93f39674cb60b6ad45df13e58a64fceff4f26af916f328662b3434c44fe",
+      "original_status": "passed",
+      "legacy_positive_control": false,
+      "cases": 3,
+      "input_packets": 276,
+      "received_packets": 276,
+      "injected_events": 161,
+      "source_clock_checks": [
+        {
+          "case": "shared",
+          "observed_packets": 24,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "dev_filter",
+          "observed_packets": 192,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        },
+        {
+          "case": "feedback_pro",
+          "observed_packets": 60,
+          "compatible": true,
+          "gap_us": 0.0,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        }
+      ]
+    },
+    {
+      "run_id": "legacy-clock-jump-control-01",
+      "input_manifest_sha256": "480402142121e80cd73d86eaac527486538d8d7b0922a5b86eb273a2f9dc7de3",
+      "original_status": "failed",
+      "legacy_positive_control": true,
+      "cases": 1,
+      "input_packets": 24,
+      "received_packets": 2,
+      "injected_events": 57,
+      "source_clock_checks": [
+        {
+          "case": "shared",
+          "observed_packets": 24,
+          "compatible": false,
+          "gap_us": 7199481365.202,
+          "bound": "发送前 <= ingress 时间事件 <= 对应诊断寄存器 RPC 读回后",
+          "modulo": "48 bit 相邻差按最短有符号位移展开，仅用于本次短轨迹"
+        }
+      ]
+    }
+  ],
+  "scope": "进程内 CLOCK_REALTIME 扰动正确性检查；宿主未改时钟，不是随机性能重复",
+  "finish_utc": "2026-10-10T03:14:29.789834+00:00",
+  "artifact_sha256": {
+    "legacy-clock-jump-control-01/collector.jsonl": "938546e299a32ce1c48ba7fa3c475969acc22ca00c2a183f815830d9004e7a80",
+    "legacy-clock-jump-control-01/packets.json": "929b1907133e7902706a8fe3def1cb515345475e7de190abe7e5a2ce056ad3ee",
+    "legacy-clock-jump-control-01/destination.pcap": "ab16c7c7a83ddfe768fd1a4642c3f78bbc2c8cd00dd80421c3ecd89fe7625c8e",
+    "legacy-clock-jump-control-01/clock-series.json": "1f1f6eeee8afb24e0b9c118d7d11dded14c58be2cdb0bd3e2e4f21923383afaa",
+    "legacy-clock-jump-control-01/send.jsonl": "3d0bbb65fe3342fa26df93b1bd385fbaf3b96142613edf0ab68eaba0a34b5606",
+    "legacy-clock-jump-control-01/destination.jsonl": "74c516eb60e312294d4f27ff837d168675c2ebaf6d41e6ec05a5dea45c0bb2de",
+    "legacy-clock-jump-control-01/original-manifest.json": "480402142121e80cd73d86eaac527486538d8d7b0922a5b86eb273a2f9dc7de3",
+    "legacy-clock-jump-control-01/observations.jsonl": "5c5bb12cd1e4b0150426063eb758367fb1922b92329086b1b86be626109dcf3d",
+    "legacy-clock-jump-control-01/collector.pcap": "7a2c7efc490168950b5a2c421729c13ace9a546a8aa270e01482f24decfbdee6",
+    "steady-task-ordinary-01/clock-series.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "steady-common-01/clock-series.json": "42f3e5244f55f88ffb8a02cc3dfbb76ed73de04adc102816d56b71529a7abf39",
+    "steady-clock-jump-01/clock-series.json": "3a1d718a81f9f8817ce131cf8671e14cff98034a2bb65b00e934a155eec5c912"
+  }
+}

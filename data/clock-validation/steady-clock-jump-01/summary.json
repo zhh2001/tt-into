@@ -1,0 +1,2269 @@
+{
+  "run_id": "steady-clock-jump-01",
+  "status": "passed",
+  "format": {
+    "id": 0,
+    "version": 2,
+    "header": 8,
+    "record": 20,
+    "reservoir": true
+  },
+  "format_name": "common",
+  "diagnostics": true,
+  "topology": "3 sampling nodes + sink",
+  "workload_seed": 0,
+  "data_plane_rng_seed": null,
+  "data_plane_rng": "v1model random，保留实际抽签，不宣称可配置种子",
+  "source_sha256": {
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/run_steady_validation.py": "1362b3160c20dba6c52f6ddc5d65d3cbd61abccd3056d63cc69638acf04173c8",
+    "experiments/clock_jump.c": "d10d7ebc271d082f120a16ca9dee8cba1acc28892cc46cf9919efaf4aaf280c5",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5"
+  },
+  "start_utc": "2026-10-10T03:11:30.511961+00:00",
+  "start_load_average": [
+    0.169921875,
+    0.6513671875,
+    0.56591796875
+  ],
+  "versions": {
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "bmv2": "1.15.0-2bdd0b7b-steady-unknown",
+    "python": "3.12.3",
+    "mininet": "2.3.0"
+  },
+  "cases": [
+    {
+      "errors": [],
+      "input_packets": 24,
+      "received_packets": 24,
+      "report_packets": 24,
+      "successful_insertions_per_node": [
+        12,
+        6,
+        6
+      ],
+      "expected_inband_per_link_bytes": [
+        432,
+        552,
+        672
+      ],
+      "expected_export_bytes": 1488,
+      "reported_samples_per_node": [
+        12,
+        6,
+        6
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "shared",
+      "configuration": {
+        "mode": 0,
+        "scope": "port",
+        "thresholds": [
+          100000,
+          300000,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [],
+      "start_monotonic_ns": 41473710853943,
+      "end_monotonic_ns": 41476365853943,
+      "age": {
+        "evaluated": true,
+        "origin_packet_id": 9,
+        "window_us": [
+          0,
+          1604967.298
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "unknown_fraction": 0.0,
+            "p95_age_lower_us": 190589.86663749997,
+            "p95_age_upper_us": 193027.91438749994,
+            "maximum_causal_interval_width_us": 4043.4159999999683,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "unknown_fraction": 0.0,
+            "p95_age_lower_us": 381179.73327499995,
+            "p95_age_upper_us": 382591.52577499993,
+            "maximum_causal_interval_width_us": 2388.8709999999264,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "unknown_fraction": 0.0,
+            "p95_age_lower_us": 380005.028025,
+            "p95_age_upper_us": 381820.570775,
+            "maximum_causal_interval_width_us": 2346.743999999948,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "samples": [
+          {
+            "packet_id": 1,
+            "node": 1,
+            "generation_lower_us": -799991.141,
+            "generation_upper_us": -798523.595,
+            "availability_us": -798523.595
+          },
+          {
+            "packet_id": 3,
+            "node": 1,
+            "generation_lower_us": -600029.76,
+            "generation_upper_us": -598026.354,
+            "availability_us": -598026.354
+          },
+          {
+            "packet_id": 5,
+            "node": 1,
+            "generation_lower_us": -400039.075,
+            "generation_upper_us": -398176.176,
+            "availability_us": -398176.176
+          },
+          {
+            "packet_id": 7,
+            "node": 1,
+            "generation_lower_us": -199967.913,
+            "generation_upper_us": -198303.175,
+            "availability_us": -198303.175
+          },
+          {
+            "packet_id": 9,
+            "node": 1,
+            "generation_lower_us": 0.0,
+            "generation_upper_us": 1391.401,
+            "availability_us": 1391.401
+          },
+          {
+            "packet_id": 11,
+            "node": 1,
+            "generation_lower_us": 199978.988,
+            "generation_upper_us": 202811.381,
+            "availability_us": 202811.381
+          },
+          {
+            "packet_id": 13,
+            "node": 1,
+            "generation_lower_us": 400087.361,
+            "generation_upper_us": 402201.684,
+            "availability_us": 402201.684
+          },
+          {
+            "packet_id": 15,
+            "node": 1,
+            "generation_lower_us": 600063.941,
+            "generation_upper_us": 604107.357,
+            "availability_us": 604107.357
+          },
+          {
+            "packet_id": 17,
+            "node": 1,
+            "generation_lower_us": 800003.498,
+            "generation_upper_us": 801587.672,
+            "availability_us": 801587.672
+          },
+          {
+            "packet_id": 19,
+            "node": 1,
+            "generation_lower_us": 1000023.164,
+            "generation_upper_us": 1003511.171,
+            "availability_us": 1003511.171
+          },
+          {
+            "packet_id": 21,
+            "node": 1,
+            "generation_lower_us": 1200020.303,
+            "generation_upper_us": 1202632.535,
+            "availability_us": 1202632.535
+          },
+          {
+            "packet_id": 23,
+            "node": 1,
+            "generation_lower_us": 1400032.695,
+            "generation_upper_us": 1401471.131,
+            "availability_us": 1401471.131
+          },
+          {
+            "packet_id": 2,
+            "node": 2,
+            "generation_lower_us": -794981.602,
+            "generation_upper_us": -792592.731,
+            "availability_us": -792592.731
+          },
+          {
+            "packet_id": 6,
+            "node": 2,
+            "generation_lower_us": -394989.142,
+            "generation_upper_us": -393867.401,
+            "availability_us": -393867.401
+          },
+          {
+            "packet_id": 10,
+            "node": 2,
+            "generation_lower_us": 5015.79,
+            "generation_upper_us": 5965.85,
+            "availability_us": 5965.85
+          },
+          {
+            "packet_id": 14,
+            "node": 2,
+            "generation_lower_us": 404980.025,
+            "generation_upper_us": 406637.946,
+            "availability_us": 406637.946
+          },
+          {
+            "packet_id": 18,
+            "node": 2,
+            "generation_lower_us": 805009.423,
+            "generation_upper_us": 806189.09,
+            "availability_us": 806189.09
+          },
+          {
+            "packet_id": 22,
+            "node": 2,
+            "generation_lower_us": 1204977.841,
+            "generation_upper_us": 1206837.363,
+            "availability_us": 1206837.363
+          },
+          {
+            "packet_id": 4,
+            "node": 3,
+            "generation_lower_us": -594985.504,
+            "generation_upper_us": -593572.598,
+            "availability_us": -593572.598
+          },
+          {
+            "packet_id": 8,
+            "node": 3,
+            "generation_lower_us": -195039.689,
+            "generation_upper_us": -193904.84,
+            "availability_us": -193904.84
+          },
+          {
+            "packet_id": 12,
+            "node": 3,
+            "generation_lower_us": 204988.447,
+            "generation_upper_us": 206954.038,
+            "availability_us": 206954.038
+          },
+          {
+            "packet_id": 16,
+            "node": 3,
+            "generation_lower_us": 605162.949,
+            "generation_upper_us": 606977.936,
+            "availability_us": 606977.936
+          },
+          {
+            "packet_id": 20,
+            "node": 3,
+            "generation_lower_us": 1005011.444,
+            "generation_upper_us": 1007358.188,
+            "availability_us": 1007358.188
+          },
+          {
+            "packet_id": 24,
+            "node": 3,
+            "generation_lower_us": 1404967.298,
+            "generation_upper_us": 1406363.637,
+            "availability_us": 1406363.637
+          }
+        ],
+        "clock_domain": "同一 Linux 宿主 CLOCK_MONOTONIC 的发送前与采集 recvmsg 后边界",
+        "generation_bound": "发送前 <= 真实队列快照生成事件 <= 采集 recvmsg 完成",
+        "switch_timestamps_used_for_cross_device_age": false,
+        "availability": "采集进程取到报告的时刻，保留实际前史",
+        "fulfilled_tasks": 3
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 993,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1312.131,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 950.06,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1134.849,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": true,
+          "compatible": true,
+          "intersection_width_us": 975.444,
+          "incompatible_gap_us": 0.0
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          432,
+          552,
+          672
+        ],
+        "export_bytes": 1488,
+        "export_bytes_with_minimum_ethernet_padding": 1488,
+        "frames": [
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        "total_byte_hops": 3144,
+        "total_byte_hops_with_minimum_ethernet_padding": 3144,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 192,
+      "received_packets": 192,
+      "report_packets": 39,
+      "successful_insertions_per_node": [
+        39,
+        0,
+        0
+      ],
+      "expected_inband_per_link_bytes": [
+        1092,
+        1092,
+        1092
+      ],
+      "expected_export_bytes": 2418,
+      "reported_samples_per_node": [
+        39,
+        0,
+        0
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "dev_filter",
+      "configuration": {
+        "mode": 0,
+        "scope": "flow",
+        "thresholds": [
+          1,
+          1,
+          1
+        ],
+        "capacities": [
+          1,
+          1,
+          1
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [
+        {
+          "flow": 1,
+          "rate_pps": 39.88995368998265,
+          "delta_dev_us": 0,
+          "count": 16,
+          "dev": 0,
+          "time": 41477775122062,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 1,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41477775122062
+        },
+        {
+          "flow": 2,
+          "rate_pps": 42.25587618292529,
+          "delta_dev_us": 130527,
+          "count": 17,
+          "dev": 130527,
+          "time": 41477776329473,
+          "rate_fail": 0,
+          "dev_fail": 1,
+          "checks": 1,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41477776329473
+        },
+        {
+          "flow": 1,
+          "rate_pps": 41.99086620606408,
+          "delta_dev_us": 0,
+          "count": 33,
+          "dev": 0,
+          "time": 41478179972010,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 2,
+          "removed": false,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41478179972010
+        },
+        {
+          "flow": 2,
+          "rate_pps": 41.998612168213434,
+          "delta_dev_us": 130307,
+          "count": 34,
+          "dev": 260834,
+          "time": 41478181104753,
+          "rate_fail": 0,
+          "dev_fail": 2,
+          "checks": 2,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41478181104753
+        },
+        {
+          "flow": 1,
+          "rate_pps": 39.54818414314766,
+          "delta_dev_us": 0,
+          "count": 49,
+          "dev": 0,
+          "time": 41478584541786,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 3,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41478584541786
+        },
+        {
+          "flow": 2,
+          "rate_pps": 42.0811886531768,
+          "delta_dev_us": 130485,
+          "count": 51,
+          "dev": 391319,
+          "time": 41478585085737,
+          "rate_fail": 0,
+          "dev_fail": 3,
+          "checks": 3,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41478585085737
+        },
+        {
+          "flow": 1,
+          "rate_pps": 40.58822495158135,
+          "delta_dev_us": 0,
+          "count": 65,
+          "dev": 0,
+          "time": 41478978744785,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 4,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41478978744785
+        },
+        {
+          "flow": 2,
+          "rate_pps": 35.504323470517996,
+          "delta_dev_us": 130397,
+          "count": 65,
+          "dev": 521716,
+          "time": 41478979403911,
+          "rate_fail": 0,
+          "dev_fail": 4,
+          "checks": 4,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41478979403911
+        },
+        {
+          "flow": 1,
+          "rate_pps": 39.52993276921978,
+          "delta_dev_us": 0,
+          "count": 81,
+          "dev": 0,
+          "time": 41479383501355,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 5,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41479383501355
+        },
+        {
+          "flow": 2,
+          "rate_pps": 41.98872823952066,
+          "delta_dev_us": 130574,
+          "count": 82,
+          "dev": 652290,
+          "time": 41479384274473,
+          "rate_fail": 0,
+          "dev_fail": 5,
+          "checks": 5,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 2,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41479384274473
+        },
+        {
+          "flow": 1,
+          "rate_pps": 38.031914354157244,
+          "delta_dev_us": 0,
+          "count": 96,
+          "dev": 0,
+          "time": 41479777906955,
+          "rate_fail": 0,
+          "dev_fail": 0,
+          "checks": 6,
+          "removed": false,
+          "eligible": true,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41479777906955
+        },
+        {
+          "flow": 2,
+          "rate_pps": 35.52239338275865,
+          "delta_dev_us": 65019,
+          "count": 96,
+          "dev": 717309,
+          "time": 41479778392061,
+          "rate_fail": 0,
+          "dev_fail": 6,
+          "checks": 6,
+          "removed": true,
+          "eligible": false,
+          "ratio_n": 1,
+          "sampling_margin_alpha": 2,
+          "observed_monotonic_ns": 41479778392061
+        }
+      ],
+      "start_monotonic_ns": 41477374018563,
+      "end_monotonic_ns": 41480199018563,
+      "age": {
+        "evaluated": false,
+        "reason": "本场景用于选择、统计或格式边界检查"
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 3491,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1176.383,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": false,
+            "compatible": null
+          },
+          "3": {
+            "observed": false,
+            "compatible": null
+          }
+        },
+        "source_arrival": {
+          "observed": true,
+          "compatible": true,
+          "intersection_width_us": 559.344,
+          "incompatible_gap_us": 0.0
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          1092,
+          1092,
+          1092
+        ],
+        "export_bytes": 2418,
+        "export_bytes_with_minimum_ethernet_padding": 2418,
+        "frames": [
+          192,
+          192,
+          192,
+          192,
+          39
+        ],
+        "total_byte_hops": 5694,
+        "total_byte_hops_with_minimum_ethernet_padding": 5694,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    },
+    {
+      "errors": [],
+      "input_packets": 60,
+      "received_packets": 60,
+      "report_packets": 17,
+      "successful_insertions_per_node": [
+        29,
+        29,
+        28
+      ],
+      "expected_inband_per_link_bytes": [
+        1060,
+        1640,
+        2200
+      ],
+      "expected_export_bytes": 1674,
+      "reported_samples_per_node": [
+        16,
+        16,
+        16
+      ],
+      "capture_socket_drop_counter": 0,
+      "status": "passed",
+      "name": "feedback_pro",
+      "configuration": {
+        "mode": 0,
+        "scope": "port",
+        "thresholds": [
+          100000,
+          100000,
+          100000
+        ],
+        "capacities": [
+          3,
+          3,
+          3
+        ],
+        "weights": [
+          3,
+          2,
+          1
+        ]
+      },
+      "controller": [
+        {
+          "node": 1,
+          "value": 1,
+          "decision_monotonic_ns": 41481339147777,
+          "before_monotonic_ns": 41481339361452,
+          "after_monotonic_ns": 41481339940252,
+          "latest_received_monotonic_ns": 41481136888735
+        },
+        {
+          "node": 2,
+          "value": 1,
+          "decision_monotonic_ns": 41481339147777,
+          "before_monotonic_ns": 41481339944151,
+          "after_monotonic_ns": 41481340409244,
+          "latest_received_monotonic_ns": 41481136888735
+        },
+        {
+          "node": 3,
+          "value": 1,
+          "decision_monotonic_ns": 41481339147777,
+          "before_monotonic_ns": 41481340411976,
+          "after_monotonic_ns": 41481340857314,
+          "latest_received_monotonic_ns": 41481136888735
+        },
+        {
+          "node": 1,
+          "value": 0,
+          "decision_monotonic_ns": 41481758012843,
+          "before_monotonic_ns": 41481758347538,
+          "after_monotonic_ns": 41481758741544,
+          "latest_received_monotonic_ns": 41481739044421
+        },
+        {
+          "node": 2,
+          "value": 0,
+          "decision_monotonic_ns": 41481758012843,
+          "before_monotonic_ns": 41481758743620,
+          "after_monotonic_ns": 41481759258928,
+          "latest_received_monotonic_ns": 41481739044421
+        },
+        {
+          "node": 3,
+          "value": 0,
+          "decision_monotonic_ns": 41481758012843,
+          "before_monotonic_ns": 41481759262336,
+          "after_monotonic_ns": 41481759711027,
+          "latest_received_monotonic_ns": 41481739044421
+        },
+        {
+          "node": 1,
+          "value": 1,
+          "decision_monotonic_ns": 41482506570643,
+          "before_monotonic_ns": 41482506898576,
+          "after_monotonic_ns": 41482507208260,
+          "latest_received_monotonic_ns": 41482300729825
+        },
+        {
+          "node": 2,
+          "value": 1,
+          "decision_monotonic_ns": 41482527690104,
+          "before_monotonic_ns": 41482527923730,
+          "after_monotonic_ns": 41482528176619,
+          "latest_received_monotonic_ns": 41482319479571
+        },
+        {
+          "node": 3,
+          "value": 1,
+          "decision_monotonic_ns": 41482527690104,
+          "before_monotonic_ns": 41482528177494,
+          "after_monotonic_ns": 41482528273627,
+          "latest_received_monotonic_ns": 41482319479571
+        }
+      ],
+      "start_monotonic_ns": 41481136888735,
+      "end_monotonic_ns": 41482766888735,
+      "age": {
+        "evaluated": true,
+        "origin_packet_id": 4097,
+        "window_us": [
+          0,
+          1379962.637
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.3063544603780457,
+            "violation_upper": 0.3063544603780457,
+            "unknown_fraction": 0.3063544603780457,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 4071.5509999999776,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.3063544603780457,
+            "violation_upper": 0.3063544603780457,
+            "unknown_fraction": 0.3063544603780457,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 4071.5509999999776,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.3063544603780457,
+            "violation_upper": 0.3063544603780457,
+            "unknown_fraction": 0.3063544603780457,
+            "p95_age_lower_us": null,
+            "p95_age_upper_us": null,
+            "maximum_causal_interval_width_us": 4071.5509999999776,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "samples": [
+          {
+            "packet_id": 4118,
+            "node": 1,
+            "generation_lower_us": 419964.343,
+            "generation_upper_us": 422757.709,
+            "availability_us": 422757.709
+          },
+          {
+            "packet_id": 4119,
+            "node": 1,
+            "generation_lower_us": 439978.19,
+            "generation_upper_us": 441773.532,
+            "availability_us": 441773.532
+          },
+          {
+            "packet_id": 4120,
+            "node": 1,
+            "generation_lower_us": 459952.953,
+            "generation_upper_us": 462253.334,
+            "availability_us": 462253.334
+          },
+          {
+            "packet_id": 4121,
+            "node": 1,
+            "generation_lower_us": 480021.821,
+            "generation_upper_us": 483599.505,
+            "availability_us": 483599.505
+          },
+          {
+            "packet_id": 4122,
+            "node": 1,
+            "generation_lower_us": 499987.919,
+            "generation_upper_us": 502738.269,
+            "availability_us": 502738.269
+          },
+          {
+            "packet_id": 4123,
+            "node": 1,
+            "generation_lower_us": 520000.949,
+            "generation_upper_us": 522509.918,
+            "availability_us": 522509.918
+          },
+          {
+            "packet_id": 4124,
+            "node": 1,
+            "generation_lower_us": 540023.762,
+            "generation_upper_us": 542327.04,
+            "availability_us": 542327.04
+          },
+          {
+            "packet_id": 4125,
+            "node": 1,
+            "generation_lower_us": 559987.322,
+            "generation_upper_us": 562359.313,
+            "availability_us": 562359.313
+          },
+          {
+            "packet_id": 4126,
+            "node": 1,
+            "generation_lower_us": 579977.045,
+            "generation_upper_us": 584048.596,
+            "availability_us": 584048.596
+          },
+          {
+            "packet_id": 4127,
+            "node": 1,
+            "generation_lower_us": 600038.567,
+            "generation_upper_us": 602078.462,
+            "availability_us": 602078.462
+          },
+          {
+            "packet_id": 4128,
+            "node": 1,
+            "generation_lower_us": 620029.174,
+            "generation_upper_us": 622906.497,
+            "availability_us": 622906.497
+          },
+          {
+            "packet_id": 4134,
+            "node": 1,
+            "generation_lower_us": 739980.364,
+            "generation_upper_us": 742111.561,
+            "availability_us": 742111.561
+          },
+          {
+            "packet_id": 4139,
+            "node": 1,
+            "generation_lower_us": 839982.085,
+            "generation_upper_us": 842212.247,
+            "availability_us": 842212.247
+          },
+          {
+            "packet_id": 4145,
+            "node": 1,
+            "generation_lower_us": 959997.801,
+            "generation_upper_us": 962375.096,
+            "availability_us": 962375.096
+          },
+          {
+            "packet_id": 4150,
+            "node": 1,
+            "generation_lower_us": 1059977.505,
+            "generation_upper_us": 1063894.99,
+            "availability_us": 1063894.99
+          },
+          {
+            "packet_id": 4155,
+            "node": 1,
+            "generation_lower_us": 1159986.546,
+            "generation_upper_us": 1163763.866,
+            "availability_us": 1163763.866
+          },
+          {
+            "packet_id": 4118,
+            "node": 2,
+            "generation_lower_us": 419964.343,
+            "generation_upper_us": 422757.709,
+            "availability_us": 422757.709
+          },
+          {
+            "packet_id": 4119,
+            "node": 2,
+            "generation_lower_us": 439978.19,
+            "generation_upper_us": 441773.532,
+            "availability_us": 441773.532
+          },
+          {
+            "packet_id": 4120,
+            "node": 2,
+            "generation_lower_us": 459952.953,
+            "generation_upper_us": 462253.334,
+            "availability_us": 462253.334
+          },
+          {
+            "packet_id": 4121,
+            "node": 2,
+            "generation_lower_us": 480021.821,
+            "generation_upper_us": 483599.505,
+            "availability_us": 483599.505
+          },
+          {
+            "packet_id": 4122,
+            "node": 2,
+            "generation_lower_us": 499987.919,
+            "generation_upper_us": 502738.269,
+            "availability_us": 502738.269
+          },
+          {
+            "packet_id": 4123,
+            "node": 2,
+            "generation_lower_us": 520000.949,
+            "generation_upper_us": 522509.918,
+            "availability_us": 522509.918
+          },
+          {
+            "packet_id": 4124,
+            "node": 2,
+            "generation_lower_us": 540023.762,
+            "generation_upper_us": 542327.04,
+            "availability_us": 542327.04
+          },
+          {
+            "packet_id": 4125,
+            "node": 2,
+            "generation_lower_us": 559987.322,
+            "generation_upper_us": 562359.313,
+            "availability_us": 562359.313
+          },
+          {
+            "packet_id": 4126,
+            "node": 2,
+            "generation_lower_us": 579977.045,
+            "generation_upper_us": 584048.596,
+            "availability_us": 584048.596
+          },
+          {
+            "packet_id": 4127,
+            "node": 2,
+            "generation_lower_us": 600038.567,
+            "generation_upper_us": 602078.462,
+            "availability_us": 602078.462
+          },
+          {
+            "packet_id": 4128,
+            "node": 2,
+            "generation_lower_us": 620029.174,
+            "generation_upper_us": 622906.497,
+            "availability_us": 622906.497
+          },
+          {
+            "packet_id": 4134,
+            "node": 2,
+            "generation_lower_us": 739980.364,
+            "generation_upper_us": 742111.561,
+            "availability_us": 742111.561
+          },
+          {
+            "packet_id": 4139,
+            "node": 2,
+            "generation_lower_us": 839982.085,
+            "generation_upper_us": 842212.247,
+            "availability_us": 842212.247
+          },
+          {
+            "packet_id": 4145,
+            "node": 2,
+            "generation_lower_us": 959997.801,
+            "generation_upper_us": 962375.096,
+            "availability_us": 962375.096
+          },
+          {
+            "packet_id": 4150,
+            "node": 2,
+            "generation_lower_us": 1059977.505,
+            "generation_upper_us": 1063894.99,
+            "availability_us": 1063894.99
+          },
+          {
+            "packet_id": 4156,
+            "node": 2,
+            "generation_lower_us": 1179962.637,
+            "generation_upper_us": 1182513.612,
+            "availability_us": 1182513.612
+          },
+          {
+            "packet_id": 4118,
+            "node": 3,
+            "generation_lower_us": 419964.343,
+            "generation_upper_us": 422757.709,
+            "availability_us": 422757.709
+          },
+          {
+            "packet_id": 4119,
+            "node": 3,
+            "generation_lower_us": 439978.19,
+            "generation_upper_us": 441773.532,
+            "availability_us": 441773.532
+          },
+          {
+            "packet_id": 4120,
+            "node": 3,
+            "generation_lower_us": 459952.953,
+            "generation_upper_us": 462253.334,
+            "availability_us": 462253.334
+          },
+          {
+            "packet_id": 4121,
+            "node": 3,
+            "generation_lower_us": 480021.821,
+            "generation_upper_us": 483599.505,
+            "availability_us": 483599.505
+          },
+          {
+            "packet_id": 4122,
+            "node": 3,
+            "generation_lower_us": 499987.919,
+            "generation_upper_us": 502738.269,
+            "availability_us": 502738.269
+          },
+          {
+            "packet_id": 4123,
+            "node": 3,
+            "generation_lower_us": 520000.949,
+            "generation_upper_us": 522509.918,
+            "availability_us": 522509.918
+          },
+          {
+            "packet_id": 4124,
+            "node": 3,
+            "generation_lower_us": 540023.762,
+            "generation_upper_us": 542327.04,
+            "availability_us": 542327.04
+          },
+          {
+            "packet_id": 4125,
+            "node": 3,
+            "generation_lower_us": 559987.322,
+            "generation_upper_us": 562359.313,
+            "availability_us": 562359.313
+          },
+          {
+            "packet_id": 4126,
+            "node": 3,
+            "generation_lower_us": 579977.045,
+            "generation_upper_us": 584048.596,
+            "availability_us": 584048.596
+          },
+          {
+            "packet_id": 4127,
+            "node": 3,
+            "generation_lower_us": 600038.567,
+            "generation_upper_us": 602078.462,
+            "availability_us": 602078.462
+          },
+          {
+            "packet_id": 4128,
+            "node": 3,
+            "generation_lower_us": 620029.174,
+            "generation_upper_us": 622906.497,
+            "availability_us": 622906.497
+          },
+          {
+            "packet_id": 4134,
+            "node": 3,
+            "generation_lower_us": 739980.364,
+            "generation_upper_us": 742111.561,
+            "availability_us": 742111.561
+          },
+          {
+            "packet_id": 4139,
+            "node": 3,
+            "generation_lower_us": 839982.085,
+            "generation_upper_us": 842212.247,
+            "availability_us": 842212.247
+          },
+          {
+            "packet_id": 4145,
+            "node": 3,
+            "generation_lower_us": 959997.801,
+            "generation_upper_us": 962375.096,
+            "availability_us": 962375.096
+          },
+          {
+            "packet_id": 4150,
+            "node": 3,
+            "generation_lower_us": 1059977.505,
+            "generation_upper_us": 1063894.99,
+            "availability_us": 1063894.99
+          },
+          {
+            "packet_id": 4156,
+            "node": 3,
+            "generation_lower_us": 1179962.637,
+            "generation_upper_us": 1182513.612,
+            "availability_us": 1182513.612
+          }
+        ],
+        "clock_domain": "同一 Linux 宿主 CLOCK_MONOTONIC 的发送前与采集 recvmsg 后边界",
+        "generation_bound": "发送前 <= 真实队列快照生成事件 <= 采集 recvmsg 完成",
+        "switch_timestamps_used_for_cross_device_age": false,
+        "availability": "采集进程取到报告的时刻，保留实际前史",
+        "fulfilled_tasks": 0
+      },
+      "clock_diagnostics": {
+        "send_wall_monotonic_offset_estimate_variation_ns": 1545,
+        "reported_nodes": {
+          "1": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1795.168,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1795.342,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "observed": true,
+            "compatible": true,
+            "intersection_width_us": 1795.342,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "source_arrival": {
+          "observed": true,
+          "compatible": true,
+          "intersection_width_us": 902.598,
+          "incompatible_gap_us": 0.0
+        },
+        "interpretation": "恒偏移可相容性核对，不证明同步或持续稳定；单调域因果年龄不依赖该假设",
+        "incompatible_local_clock_observed": false
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          1060,
+          1640,
+          2200
+        ],
+        "export_bytes": 1674,
+        "export_bytes_with_minimum_ethernet_padding": 1674,
+        "frames": [
+          60,
+          60,
+          60,
+          60,
+          17
+        ],
+        "total_byte_hops": 6574,
+        "total_byte_hops_with_minimum_ethernet_padding": 6574,
+        "padding_interpretation": "按捕获导出帧不足 60 B 时补齐推导，不是硬件测量；原业务帧均大于 60 B",
+        "scope": "全部本场景包，不含另列的控制通信；不含 FCS、前导码及物理间隔"
+      }
+    }
+  ],
+  "finish_utc": "2026-10-10T03:11:45.939209+00:00",
+  "finish_load_average": [
+    0.3486328125,
+    0.66845703125,
+    0.57275390625
+  ],
+  "runtime_clock": {
+    "build": {
+      "status": "passed",
+      "upstream_commit": "2bdd0b7b2b2ae89faf2720f2158e9842bc6d2dd2",
+      "upstream_url": "https://codeload.github.com/p4lang/behavioral-model/tar.gz/2bdd0b7b2b2ae89faf2720f2158e9842bc6d2dd2",
+      "start_utc": "2026-10-10T02:59:18.942729+00:00",
+      "patch_sha256": "9c93a28c153f2be7cc285a271322fbf7c66e206c052fdce58a4673a9a5bf4809",
+      "script_sha256": "7f39da5077a3fbb5dbcbecd75354b663767fe9423d25843a8ba9a1327702e218",
+      "original_binary_sha256": "a86e02305e98682d002bb6e6c1a938b2fb16ac2f950c524368443fca5b0fe231",
+      "jobs": 2,
+      "timestamp_unit": "microseconds since each switch starts; 48-bit P4 field",
+      "elapsed_clock": "std::chrono::steady_clock",
+      "wall_epoch_api": "std::chrono::system_clock",
+      "commands": [
+        [
+          "patch",
+          "--batch",
+          "--forward",
+          "-p1",
+          "-i",
+          "<project>/experiments/patches/bmv2-steady-clock.patch"
+        ],
+        [
+          "./autogen.sh"
+        ],
+        [
+          "./configure",
+          "--prefix=<build>/install",
+          "--disable-tests",
+          "--without-pi",
+          "--with-thrift",
+          "--with-nanomsg",
+          "--disable-dependency-tracking"
+        ],
+        [
+          "make",
+          "-j2"
+        ],
+        [
+          "make",
+          "install"
+        ]
+      ],
+      "archive_sha256": "aa0272d0c147454e20be5af21db79bd6e275b5ca75b009cd17042581d8f70f82",
+      "upstream_file_sha256": {
+        "targets/simple_switch/simple_switch.h": "9649dd2ddebd63b73d3d35d1e3868cfbdbefee5840a570f16b74d441ea1dcf39",
+        "targets/simple_switch/simple_switch.cpp": "34f0956de14651a0ed1dd0a3a02e1595507784e2eb8e310179f8ad66914c9f4e",
+        "include/bm/bm_sim/queueing.h": "7c6a1b25e29bdadb8f008d79aaffbf2b86eabd07f24366370ce47af6437309a5"
+      },
+      "patched_file_sha256": {
+        "targets/simple_switch/simple_switch.h": "664f081cddd286ffcb018f0558a766d5963b6d42a24a3e419f9da07a57b27dc6",
+        "targets/simple_switch/simple_switch.cpp": "d75c9d7fb3a16753dd221bfe23fe2571090228e7fe627440e1e911f3c363ff58",
+        "include/bm/bm_sim/queueing.h": "94204719476f0d8ee88b2fdff354f2c7900dab3ad6437bc657eb41d2cf39838e"
+      },
+      "binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+      "version": "1.15.0-2bdd0b7b-steady-unknown",
+      "linked_libraries": [
+        {
+          "name": "libruntimestubs.so.0",
+          "sha256": "a96e4958076221fff5ed9bd10f5ac5fb33b775c81df478f91456cb892fc0ec35",
+          "scope": "project"
+        },
+        {
+          "name": "libthrift-0.16.0.so",
+          "sha256": "52614f2b3b87f1905e00f22eea8e95286fbc4e88958d1525258a1f281613a775",
+          "scope": "system"
+        },
+        {
+          "name": "libboost_program_options.so.1.83.0",
+          "sha256": "15f34bcb75dfb0fa30af13cf2b82fb7a9a8e0fbbadf7cabcd397dd65bde552f3",
+          "scope": "system"
+        },
+        {
+          "name": "libboost_filesystem.so.1.83.0",
+          "sha256": "2c137b29a3740fb6d12a4c18823bc2b15215646c3ba3bb208b89782df28559f0",
+          "scope": "system"
+        },
+        {
+          "name": "libsimpleswitch_thrift.so.0",
+          "sha256": "60b07b8c5f1385f86985c72f47bfa27e78ad267ce8ab35c5e7fb7b9a7ab31def",
+          "scope": "project"
+        },
+        {
+          "name": "libboost_thread.so.1.83.0",
+          "sha256": "dfb8b2e4e5d5d945a9ebdd6645816e2297d535cd6a7e529bd66a2f6332142270",
+          "scope": "system"
+        },
+        {
+          "name": "libpcap.so.0.8",
+          "sha256": "78e6aff56b3a9cf55b52d650f851b67bb337afeb7ea0bf162996161a563fb91f",
+          "scope": "system"
+        },
+        {
+          "name": "libgmp.so.10",
+          "sha256": "0ccdfb6d6f5c039465f6d002cf7e4c072d48ac6a2cffc8dd6c748dec31592804",
+          "scope": "system"
+        },
+        {
+          "name": "libnanomsg.so.5.0.0",
+          "sha256": "eff9cf6ba8403abca1a60a920657784cffee4db8dd8b65cf66405d789654ea38",
+          "scope": "system"
+        },
+        {
+          "name": "libstdc++.so.6",
+          "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+          "scope": "system"
+        },
+        {
+          "name": "libm.so.6",
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0",
+          "scope": "system"
+        },
+        {
+          "name": "libgcc_s.so.1",
+          "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+          "scope": "system"
+        },
+        {
+          "name": "libc.so.6",
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf",
+          "scope": "system"
+        },
+        {
+          "name": "libssl.so.3",
+          "sha256": "a40e7b67489bbd257e432c700ff8f6a1ad796425b5eccecdc2930127fdd86624",
+          "scope": "system"
+        },
+        {
+          "name": "libcrypto.so.3",
+          "sha256": "6866ed711dab8927e1bf82bf1cd30e828bdfc34f3cc1e83b1c9eb01ce6c37d9a",
+          "scope": "system"
+        },
+        {
+          "name": "libibverbs.so.1",
+          "sha256": "249242c3ba29d72b7a9be560b768bf43fc5924c8a166f4e3bbb224bd81ade3ab",
+          "scope": "system"
+        },
+        {
+          "name": "libdbus-1.so.3",
+          "sha256": "a6ae7b4ef48562b40d7b9ba8efd2e49f6528b7cc6364bea382dcee4b473b5413",
+          "scope": "system"
+        },
+        {
+          "name": "libnl-route-3.so.200",
+          "sha256": "088b0021d638306f5541e7baab06a0182b07db0a280e19b3b40c746f729b3773",
+          "scope": "system"
+        },
+        {
+          "name": "libnl-3.so.200",
+          "sha256": "afcb69e2ef0b46c2ce7b7483848332fa9462776d33163f64209acf01f86eddd7",
+          "scope": "system"
+        },
+        {
+          "name": "libsystemd.so.0",
+          "sha256": "bdf59c828b547bcdbe7b3576c0810d9d9d2e982d8b61b365812542da6a4c4a99",
+          "scope": "system"
+        },
+        {
+          "name": "libcap.so.2",
+          "sha256": "6ac6abc86ac891c6e13486470e26f1d939f47fda9e6b5d5508a7f5ec881adc84",
+          "scope": "system"
+        },
+        {
+          "name": "libgcrypt.so.20",
+          "sha256": "6ad6d7007ee1ad8319eb18ba9a512cf09dda49396a303774c68b47477020bad4",
+          "scope": "system"
+        },
+        {
+          "name": "liblz4.so.1",
+          "sha256": "40bffd0a098387368b16b992abd5f7cf43c0fa2f05cabe5a6d483719554adfda",
+          "scope": "system"
+        },
+        {
+          "name": "liblzma.so.5",
+          "sha256": "696e868dd0700a19a6d65fc01608ec2d70d3cb91f65710e89180cd2e688f30cb",
+          "scope": "system"
+        },
+        {
+          "name": "libzstd.so.1",
+          "sha256": "0a2128bc10841fb29e76d08d945864dfb0b6a66da5df6df5d8299197439e54bb",
+          "scope": "system"
+        },
+        {
+          "name": "libgpg-error.so.0",
+          "sha256": "6cb18a007bfcb623029f4528a36b46578fea7dc34c2b505b8e6e0d99e6348cd1",
+          "scope": "system"
+        }
+      ],
+      "finish_utc": "2026-10-10T03:06:11.226356+00:00"
+    },
+    "build_manifest_sha256": "f5d34a315d08bc98f2303bc33b2e9ad1d146490ee49ee5174f59ca9481975057",
+    "actual_binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+    "legacy_positive_control": false,
+    "realtime_jumps_in_switch_only": true,
+    "start_utc": "2026-10-10T03:11:30.324117+00:00",
+    "clock_jump_library_sha256": "45a9feb4b767835851699c03aa4616f9ef098b2afcbf8a2a898bb1bc92f66dca",
+    "clock_jump_source_sha256": "d10d7ebc271d082f120a16ca9dee8cba1acc28892cc46cf9919efaf4aaf280c5",
+    "wrapper_sha256": "1362b3160c20dba6c52f6ddc5d65d3cbd61abccd3056d63cc69638acf04173c8",
+    "host_realtime_modified": false,
+    "injected_events": [
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 130193051,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 231245249,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 121576341,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 224016931,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 445949846,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 354205130,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 450190372,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 277637289,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 603152868,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 437583465,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 642144182,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 871167817,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 834263114,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 764096447,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 1009540015,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 1008713477,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 853810197,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 956251418,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 1008252143,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 1008423451,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 1362086186,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 1261437318,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 1479276484,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 1312061106,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 1414184084,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 1257757194,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 1762080243,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 1661612708,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 1559858556,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 1457826590,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 1899275018,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 1621718828,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 1724159336,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 1858322000,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 2009560044,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 2008665910,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 1959515852,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 1857414385,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 2008396344,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 2247279929,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 2008412251,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 2261887558,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 2407205623,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 2461699350,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 2360097271,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 2258102865,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 2762288062,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 2662502033,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 2561461256,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 2459792487,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 2962053713,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 2861651327,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 2759798195,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 2657659902,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 3009524396,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 3008691801,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 2960819386,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 2859028677,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 3008206319,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 3008434765,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 3362152525,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 3261893895,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 3562172054,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 3461514646,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 3359654126,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 3257579260,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 4009517930,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 4008713423,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 4008173292,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 4217149356,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 3911587307,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 4673824464,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 4673030159,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 4604041075,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 4672744062,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 5025501585,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 4925601639,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 4824691770,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 5025067074,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 4821917461,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 5200189460,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 5022821013,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 5013613239,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 5218182713,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 5400311819,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 5224329222,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 5424465340,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 5220412609,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 5600213816,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 5422594299,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 5624501532,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 5420576253,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 5800280748,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 5623629974,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 5824796577,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 5621193856,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 6000247753,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 5823286649,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 6025140071,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 5822535912,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 6200310747,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 6022895696,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 6225349189,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 6022593757,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 6400297116,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 6223536134,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 6424876176,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 6221403555,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 6600332695,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 6423750489,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 6600430987,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 6420941789,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 6800644550,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 6623551185,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 6800099918,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 6622196337,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 7000235106,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 6824048622,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 7025303404,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 6822275491,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 7200221420,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 7022615875,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 7224845785,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 7021324073,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 7400207817,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 7673862286,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 7673020738,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 7672526324,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 7672694382,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 8673907486,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 8673080229,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 8586457223,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 8484545068,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 8808122824,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 8605851354,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 8807681936,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 8604140233,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 9008220991,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 8806519447,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 9007820550,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 8804211087,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 9208167917,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 9006425053,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 9207761983,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 9004420698,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 9408209955,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 9206282949,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 9407675574,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 9204190672,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 9608332033,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 9406678053,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 9607303006,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 9403156120,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 9808147697,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 9606187752,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 9807926524,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 9604440395,
+        "realtime_shift_seconds": -3600
+      },
+      {
+        "process_id": 163597,
+        "elapsed_in_process_ns": 10673842175,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163611,
+        "elapsed_in_process_ns": 10672993214,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163627,
+        "elapsed_in_process_ns": 10672499029,
+        "realtime_shift_seconds": 3600
+      },
+      {
+        "process_id": 163641,
+        "elapsed_in_process_ns": 10672714764,
+        "realtime_shift_seconds": 3600
+      }
+    ]
+  },
+  "analysis_sha256": "5b3ba09d37b916d397c5e596dfc7b770ad9e0e7cae541c96d8a7bf49b20e3821",
+  "analysis_dependencies": {
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d"
+  },
+  "control_capture": {
+    "loopback_outgoing_frame_bytes": 5093009,
+    "socket_drop_counter": 0,
+    "scope": "本机 Thrift/TCP 帧含 GSO，非部署控制网络；不公开载荷"
+  },
+  "wire_checks": {
+    "passed": true,
+    "checked_frames": 1184,
+    "maximum_ip_length": 188
+  },
+  "public_artifact_sha256": {
+    "control-events.jsonl": "bdd6c25a7c0ae031d93633754d435f2d26ac21180d959dc4225366baffa32456",
+    "rpc-frame-counts.jsonl": "f271553ce6339b5e82bf294a1b580b1cede2a0abc0bcaad387e3fa7ad6a1be73",
+    "feedback_pro/collector.jsonl": "716a38ddfa11d5616cf530e7b7abf084a9c2f0dfd9552e3a44a9faa4c45f6691",
+    "feedback_pro/packets.json": "98004d88eac258f355a465cbac03f98702cadd0f2e8381ff0f1f5075dcd4d0ff",
+    "feedback_pro/destination.pcap": "32276c784ddbc02ff98ea6d816693c11adc868eeb8680cdd51ce25e8086b3db8",
+    "feedback_pro/send.jsonl": "6d74bd4d8627c7d3aebef7b506643e388212f61ad0a9c995fc805003c8b023aa",
+    "feedback_pro/destination.jsonl": "04fadd99df20f6be51f94808ce2479d8dda61a98ce88eab499329b57d9869ef4",
+    "feedback_pro/observations.jsonl": "dcec9e71ed35462aa349ff70eeccb6d81766adcc5bd7a9926748844d4cf83e74",
+    "feedback_pro/wire-observations.jsonl": "0483f5c2e4b606892983b9f85532495c1126cf7fe3034d9dec4f6b7dd19141f1",
+    "feedback_pro/collector.pcap": "f363f47a41bb746ef648d37c21a273da0ea00395891c83954fb94697d66f4be4",
+    "shared/collector.jsonl": "92ed71ae8dd484d24cc4ebfd1425db2d1a4a0d985daa862c95d3bfa79a28efea",
+    "shared/packets.json": "929b1907133e7902706a8fe3def1cb515345475e7de190abe7e5a2ce056ad3ee",
+    "shared/destination.pcap": "c42adfb24f2531d583e52fe403e9af5e61a6242677f6fcdb103a308c38e03da0",
+    "shared/send.jsonl": "fd26315c4abe851c03065de1ee4f22840dcfce44171eb4df84bcbfb75dbac749",
+    "shared/destination.jsonl": "bd9b02e79f426253cff51f2df56047dd40d18dff4bf52a8d0e018d04d68f268c",
+    "shared/observations.jsonl": "a0e5989c26d62c902db89340a356ba6afb9c35bb8437ec70ae45979f23e8ace1",
+    "shared/wire-observations.jsonl": "133bbafa799a6f9a596babddabefb01332b920ae458d92cb27ecee4f5ad80899",
+    "shared/collector.pcap": "c74068d60dfc9f751bbe4a44f4ad55f4375f0534622bd3f2991a0880e4359128",
+    "dev_filter/collector.jsonl": "d33298d0ae3c46ae69b7e155b23dd22269c3949718995e74da5e180dae4711d4",
+    "dev_filter/packets.json": "4db3ddd327a9d98a2bd018cc5497d03208cf7ef50b31964ffa0d6fe80ed78a75",
+    "dev_filter/destination.pcap": "1e985930ab23f7f5edcfbfc3300b6b32753e20bc7bc403f00843027f8c80a66b",
+    "dev_filter/send.jsonl": "4f8d93ac563bc9ca48f932ab49607ebc893b33cd7965e3afd921710aa0e3ed52",
+    "dev_filter/destination.jsonl": "20b0b0adf61ec73117ea3c2a3dc42950cb65457f949f6aa62477aac814927b08",
+    "dev_filter/observations.jsonl": "b4b066c83a770ec31b3fa101fc499ab9bead7d5fd86b953bae51b4ddb875f9bd",
+    "dev_filter/wire-observations.jsonl": "0edff465d515afc201aa4e314b49a9f73dc88ef92a3e84ee7ef1f03aca23f743",
+    "dev_filter/collector.pcap": "a80e1d46cde9d121f5fe46961358c59c5bf28df4bd1f0a600ebca0be9f669563"
+  }
+}

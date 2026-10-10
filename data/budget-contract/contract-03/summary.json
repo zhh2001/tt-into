@@ -1,0 +1,5860 @@
+{
+  "status": "passed",
+  "run_id": "contract-03",
+  "start_utc": "2026-10-10T03:22:53.169464+00:00",
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4"
+  },
+  "synthetic_workload_seed": null,
+  "randomness": "确定性给定轨迹和 MILP，没有随机工作负载",
+  "synthetic_topology": "two sampling nodes on one common chain",
+  "start_load_average": [
+    0.28076171875,
+    0.2978515625,
+    0.39990234375
+  ],
+  "source_sha256": {
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "src/orchestration/budget_oracle.py": "57836cc45a3df8f7262c9350ac31578b65e1270cdd6127f2bf08222af91433b9",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "experiments/check_budget_contract.py": "846689c2dc146edb61049f1f642ca19d92a3ad6a1da8f4b99463295c37a26e31"
+  },
+  "runs": [
+    {
+      "run": "steady-common-01",
+      "input_summary_sha256": "aa4c393720b647280961398d60c40a3ed73d71b1e6bf948aab1eeb7c77b9fa2c",
+      "wire_checks": [
+        {
+          "case": "shared",
+          "packets": 24,
+          "cost": {
+            "inband_per_link_bytes": [
+              432,
+              552,
+              672
+            ],
+            "export_bytes": 1488,
+            "export_bytes_without_padding": 1488,
+            "data_total_byte_hops": 3144,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 3144
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        },
+        {
+          "case": "ratio",
+          "packets": 12,
+          "cost": {
+            "inband_per_link_bytes": [
+              112,
+              112,
+              112
+            ],
+            "export_bytes": 248,
+            "export_bytes_without_padding": 248,
+            "data_total_byte_hops": 584,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 584
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        },
+        {
+          "case": "dev_filter",
+          "packets": 192,
+          "cost": {
+            "inband_per_link_bytes": [
+              1092,
+              1092,
+              1092
+            ],
+            "export_bytes": 2418,
+            "export_bytes_without_padding": 2418,
+            "data_total_byte_hops": 5694,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 5694
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        },
+        {
+          "case": "feedback_base",
+          "packets": 60,
+          "cost": {
+            "inband_per_link_bytes": [
+              700,
+              920,
+              1140
+            ],
+            "export_bytes": 798,
+            "export_bytes_without_padding": 798,
+            "data_total_byte_hops": 3558,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 3558
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        },
+        {
+          "case": "feedback_pro",
+          "packets": 60,
+          "cost": {
+            "inband_per_link_bytes": [
+              1040,
+              1600,
+              2160
+            ],
+            "export_bytes": 1758,
+            "export_bytes_without_padding": 1758,
+            "data_total_byte_hops": 6558,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 6558
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        },
+        {
+          "case": "mtu",
+          "packets": 6,
+          "cost": {
+            "inband_per_link_bytes": [
+              44,
+              44,
+              44
+            ],
+            "export_bytes": 62,
+            "export_bytes_without_padding": 62,
+            "data_total_byte_hops": 194,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 194
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        }
+      ],
+      "metered_rpc_by_kind": {
+        "installation": {
+          "calls": 827,
+          "request_bytes": 70314,
+          "reply_bytes": 25265
+        },
+        "validation": {
+          "calls": 400,
+          "request_bytes": 31500,
+          "reply_bytes": 11526160
+        },
+        "observation": {
+          "calls": 72,
+          "request_bytes": 5796,
+          "reply_bytes": 2880
+        },
+        "update": {
+          "calls": 45,
+          "request_bytes": 5598,
+          "reply_bytes": 1386
+        },
+        "calibration": {
+          "calls": 4,
+          "request_bytes": 364,
+          "reply_bytes": 120
+        }
+      },
+      "serialized_ledger_totals": {
+        "control_per_link_bytes": [
+          52984,
+          5059121,
+          28922,
+          3083940,
+          28922,
+          3083940,
+          2744,
+          328810
+        ],
+        "control_by_kind": {
+          "installation": [
+            28544,
+            9985,
+            20070,
+            7340,
+            20070,
+            7340,
+            1630,
+            600
+          ],
+          "observation": [
+            5796,
+            2880,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "update": [
+            5034,
+            1206,
+            282,
+            90,
+            282,
+            90,
+            0,
+            0
+          ],
+          "calibration": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            364,
+            120
+          ],
+          "validation": [
+            13610,
+            5045050,
+            8570,
+            3076510,
+            8570,
+            3076510,
+            750,
+            328090
+          ],
+          "unattributed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "control_basis": "serialized_rpc",
+        "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+      },
+      "captured_control_ledger_totals": {
+        "control_per_link_bytes": [
+          132602,
+          5969472,
+          81744,
+          3716563,
+          81686,
+          3719653,
+          19214,
+          625080
+        ],
+        "control_by_kind": {
+          "installation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "observation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "update": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "calibration": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "unattributed": [
+            132602,
+            5969472,
+            81744,
+            3716563,
+            81686,
+            3719653,
+            19214,
+            625080
+          ]
+        },
+        "control_basis": "ethernet_without_fcs",
+        "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+      },
+      "captured_control_ledger": [
+        {
+          "kind": "unattributed",
+          "issued_us": 0,
+          "effective_us": 0,
+          "bytes_per_link": [
+            132602,
+            5969472,
+            81744,
+            3716563,
+            81686,
+            3719653,
+            19214,
+            625080
+          ],
+          "provenance": "steady-common-01/rpc-frame-counts.jsonl",
+          "basis": "ethernet_without_fcs"
+        }
+      ],
+      "loopback_captured_frame_bytes": 14346014,
+      "scope": "序列化账本仅含持久 Client 调用，初始化 CLI、TCP 建连、确认与分段另含于捕获总量；两者不可直接相加"
+    },
+    {
+      "run": "steady-task-ordinary-01",
+      "input_summary_sha256": "9746bb743457c72d888d17064009651f07a77184712c41dc88674edb7e064029",
+      "wire_checks": [
+        {
+          "case": "shared",
+          "packets": 24,
+          "cost": {
+            "inband_per_link_bytes": [
+              264,
+              336,
+              408
+            ],
+            "export_bytes": 1440,
+            "export_bytes_without_padding": 1224,
+            "data_total_byte_hops": 2448,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 2448
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        },
+        {
+          "case": "ratio",
+          "packets": 12,
+          "cost": {
+            "inband_per_link_bytes": [
+              68,
+              68,
+              68
+            ],
+            "export_bytes": 240,
+            "export_bytes_without_padding": 204,
+            "data_total_byte_hops": 444,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 444
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        },
+        {
+          "case": "mtu",
+          "packets": 6,
+          "cost": {
+            "inband_per_link_bytes": [
+              27,
+              27,
+              27
+            ],
+            "export_bytes": 60,
+            "export_bytes_without_padding": 51,
+            "data_total_byte_hops": 141,
+            "control_per_link_bytes": [
+              0
+            ],
+            "control_by_kind": {
+              "installation": [
+                0
+              ],
+              "observation": [
+                0
+              ],
+              "update": [
+                0
+              ],
+              "calibration": [
+                0
+              ],
+              "validation": [
+                0
+              ],
+              "unattributed": [
+                0
+              ]
+            },
+            "control_basis": "ethernet_without_fcs",
+            "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+            "total_byte_hops": 141
+          },
+          "passed": true,
+          "source_plan": "从首链路恢复实际封装，逐链路字节独立核对；不是采样决策预测或年龄复现"
+        }
+      ],
+      "metered_rpc_by_kind": {
+        "installation": {
+          "calls": 487,
+          "request_bytes": 44454,
+          "reply_bytes": 15065
+        },
+        "observation": {
+          "calls": 72,
+          "request_bytes": 5796,
+          "reply_bytes": 2880
+        },
+        "update": {
+          "calls": 45,
+          "request_bytes": 5598,
+          "reply_bytes": 1386
+        },
+        "calibration": {
+          "calls": 4,
+          "request_bytes": 364,
+          "reply_bytes": 120
+        }
+      },
+      "serialized_ledger_totals": {
+        "control_per_link_bytes": [
+          27754,
+          9571,
+          13592,
+          4730,
+          13592,
+          4730,
+          1274,
+          420
+        ],
+        "control_by_kind": {
+          "installation": [
+            16924,
+            5485,
+            13310,
+            4640,
+            13310,
+            4640,
+            910,
+            300
+          ],
+          "observation": [
+            5796,
+            2880,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "update": [
+            5034,
+            1206,
+            282,
+            90,
+            282,
+            90,
+            0,
+            0
+          ],
+          "calibration": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            364,
+            120
+          ],
+          "validation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "unattributed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "control_basis": "serialized_rpc",
+        "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+      },
+      "captured_control_ledger_totals": {
+        "control_per_link_bytes": [
+          54044,
+          221677,
+          28398,
+          207860,
+          28464,
+          207860,
+          5666,
+          194227
+        ],
+        "control_by_kind": {
+          "installation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "observation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "update": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "calibration": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "unattributed": [
+            54044,
+            221677,
+            28398,
+            207860,
+            28464,
+            207860,
+            5666,
+            194227
+          ]
+        },
+        "control_basis": "ethernet_without_fcs",
+        "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+      },
+      "captured_control_ledger": [
+        {
+          "kind": "unattributed",
+          "issued_us": 0,
+          "effective_us": 0,
+          "bytes_per_link": [
+            54044,
+            221677,
+            28398,
+            207860,
+            28464,
+            207860,
+            5666,
+            194227
+          ],
+          "provenance": "steady-task-ordinary-01/rpc-frame-counts.jsonl",
+          "basis": "ethernet_without_fcs"
+        }
+      ],
+      "loopback_captured_frame_bytes": 948196,
+      "scope": "序列化账本仅含持久 Client 调用，初始化 CLI、TCP 建连、确认与分段另含于捕获总量；两者不可直接相加"
+    }
+  ],
+  "synthetic": [
+    {
+      "case": "budget_source",
+      "format": "common",
+      "source_mode": "fixed",
+      "result": {
+        "format": "common",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            2
+          ],
+          "3": [],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          2
+        ],
+        "admitted_weight": 1,
+        "cost": {
+          "inband_per_link_bytes": [
+            32,
+            52
+          ],
+          "export_bytes": 62,
+          "export_bytes_without_padding": 62,
+          "data_total_byte_hops": 146,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 181
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.5833333333333334,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.3888888888888889
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "budget_source",
+      "format": "common",
+      "source_mode": "optional",
+      "result": {
+        "format": "common",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            1
+          ],
+          "3": [
+            2
+          ],
+          "4": [
+            1
+          ]
+        },
+        "source_selected": {
+          "1": false,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            64,
+            84
+          ],
+          "export_bytes": 186,
+          "export_bytes_without_padding": 186,
+          "data_total_byte_hops": 334,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 369
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.7222222222222223,
+              "mean_known_age_us": 3.7222222222222223,
+              "p95_age_us": 7.299999999999996,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "budget_source",
+      "format": "compact",
+      "source_mode": "fixed",
+      "result": {
+        "format": "compact",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            1
+          ],
+          "3": [
+            2
+          ],
+          "4": [
+            1
+          ]
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            56,
+            68
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 162,
+          "data_total_byte_hops": 304,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 339
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.7222222222222223,
+              "mean_known_age_us": 3.7222222222222223,
+              "p95_age_us": 7.299999999999996,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "budget_source",
+      "format": "compact",
+      "source_mode": "optional",
+      "result": {
+        "format": "compact",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            1
+          ],
+          "3": [
+            2
+          ],
+          "4": [
+            1
+          ]
+        },
+        "source_selected": {
+          "1": false,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            48,
+            60
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 162,
+          "data_total_byte_hops": 288,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 323
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.7222222222222223,
+              "mean_known_age_us": 3.7222222222222223,
+              "p95_age_us": 7.299999999999996,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "budget_source",
+      "format": "task",
+      "source_mode": "fixed",
+      "result": {
+        "format": "task",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            1
+          ],
+          "3": [
+            2
+          ],
+          "4": [
+            1
+          ]
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            44,
+            56
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 153,
+          "data_total_byte_hops": 280,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 315
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.7222222222222223,
+              "mean_known_age_us": 3.7222222222222223,
+              "p95_age_us": 7.299999999999996,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "budget_source",
+      "format": "task",
+      "source_mode": "optional",
+      "result": {
+        "format": "task",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            1
+          ],
+          "3": [
+            2
+          ],
+          "4": [
+            1
+          ]
+        },
+        "source_selected": {
+          "1": false,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            39,
+            51
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 153,
+          "data_total_byte_hops": 270,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 305
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.7222222222222223,
+              "mean_known_age_us": 3.7222222222222223,
+              "p95_age_us": 7.299999999999996,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "budget_source",
+      "format": "prefix",
+      "source_mode": "fixed",
+      "result": {
+        "format": "prefix",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            1
+          ],
+          "3": [
+            2
+          ],
+          "4": [
+            1
+          ]
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            40,
+            52
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 150,
+          "data_total_byte_hops": 272,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 307
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.7222222222222223,
+              "mean_known_age_us": 3.7222222222222223,
+              "p95_age_us": 7.299999999999996,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "budget_source",
+      "format": "prefix",
+      "source_mode": "optional",
+      "result": {
+        "format": "prefix",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            1
+          ],
+          "3": [
+            2
+          ],
+          "4": [
+            1
+          ]
+        },
+        "source_selected": {
+          "1": false,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            36,
+            48
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 150,
+          "data_total_byte_hops": 264,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 299
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.7222222222222223,
+              "mean_known_age_us": 3.7222222222222223,
+              "p95_age_us": 7.299999999999996,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "control_shortfall",
+      "format": "common",
+      "source_mode": "fixed",
+      "result": {
+        "format": "common",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "infeasible",
+        "reason": "预声明控制账本已超预算"
+      }
+    },
+    {
+      "case": "control_shortfall",
+      "format": "common",
+      "source_mode": "optional",
+      "result": {
+        "format": "common",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "infeasible",
+        "reason": "预声明控制账本已超预算"
+      }
+    },
+    {
+      "case": "control_shortfall",
+      "format": "compact",
+      "source_mode": "fixed",
+      "result": {
+        "format": "compact",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "infeasible",
+        "reason": "预声明控制账本已超预算"
+      }
+    },
+    {
+      "case": "control_shortfall",
+      "format": "compact",
+      "source_mode": "optional",
+      "result": {
+        "format": "compact",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "infeasible",
+        "reason": "预声明控制账本已超预算"
+      }
+    },
+    {
+      "case": "control_shortfall",
+      "format": "task",
+      "source_mode": "fixed",
+      "result": {
+        "format": "task",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "infeasible",
+        "reason": "预声明控制账本已超预算"
+      }
+    },
+    {
+      "case": "control_shortfall",
+      "format": "task",
+      "source_mode": "optional",
+      "result": {
+        "format": "task",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "infeasible",
+        "reason": "预声明控制账本已超预算"
+      }
+    },
+    {
+      "case": "control_shortfall",
+      "format": "prefix",
+      "source_mode": "fixed",
+      "result": {
+        "format": "prefix",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "infeasible",
+        "reason": "预声明控制账本已超预算"
+      }
+    },
+    {
+      "case": "control_shortfall",
+      "format": "prefix",
+      "source_mode": "optional",
+      "result": {
+        "format": "prefix",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "infeasible",
+        "reason": "预声明控制账本已超预算"
+      }
+    },
+    {
+      "case": "report_loss",
+      "format": "common",
+      "source_mode": "fixed",
+      "result": {
+        "format": "common",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [],
+          "3": [
+            2
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          2
+        ],
+        "admitted_weight": 1,
+        "cost": {
+          "inband_per_link_bytes": [
+            32,
+            52
+          ],
+          "export_bytes": 62,
+          "export_bytes_without_padding": 62,
+          "data_total_byte_hops": 146,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 181
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.5833333333333334,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.3888888888888889
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_loss",
+      "format": "common",
+      "source_mode": "optional",
+      "result": {
+        "format": "common",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            56,
+            56
+          ],
+          "export_bytes": 124,
+          "export_bytes_without_padding": 124,
+          "data_total_byte_hops": 236,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 271
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_loss",
+      "format": "compact",
+      "source_mode": "fixed",
+      "result": {
+        "format": "compact",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            56,
+            56
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 108,
+          "data_total_byte_hops": 232,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 267
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_loss",
+      "format": "compact",
+      "source_mode": "optional",
+      "result": {
+        "format": "compact",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            40,
+            40
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 108,
+          "data_total_byte_hops": 200,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 235
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_loss",
+      "format": "task",
+      "source_mode": "fixed",
+      "result": {
+        "format": "task",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            44,
+            44
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 102,
+          "data_total_byte_hops": 208,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 243
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_loss",
+      "format": "task",
+      "source_mode": "optional",
+      "result": {
+        "format": "task",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            34,
+            34
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 102,
+          "data_total_byte_hops": 188,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 223
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_loss",
+      "format": "prefix",
+      "source_mode": "fixed",
+      "result": {
+        "format": "prefix",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            40,
+            40
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 100,
+          "data_total_byte_hops": 200,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 235
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_loss",
+      "format": "prefix",
+      "source_mode": "optional",
+      "result": {
+        "format": "prefix",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            32,
+            32
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 100,
+          "data_total_byte_hops": 184,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 219
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_delay",
+      "format": "common",
+      "source_mode": "fixed",
+      "result": {
+        "format": "common",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [],
+          "3": [
+            2
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          2
+        ],
+        "admitted_weight": 1,
+        "cost": {
+          "inband_per_link_bytes": [
+            32,
+            52
+          ],
+          "export_bytes": 62,
+          "export_bytes_without_padding": 62,
+          "data_total_byte_hops": 146,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 181
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.5833333333333334,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.19,
+              "mean_known_age_us": 5.19,
+              "p95_age_us": 10.299999999999997,
+              "p99_age_us": 11.019999999999998,
+              "longest_no_effective_update_us": 10.2,
+              "first_report_wait_us": 10.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.3888888888888889
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_delay",
+      "format": "common",
+      "source_mode": "optional",
+      "result": {
+        "format": "common",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            56,
+            56
+          ],
+          "export_bytes": 124,
+          "export_bytes_without_padding": 124,
+          "data_total_byte_hops": 236,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 271
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_delay",
+      "format": "compact",
+      "source_mode": "fixed",
+      "result": {
+        "format": "compact",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            56,
+            56
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 108,
+          "data_total_byte_hops": 232,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 267
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_delay",
+      "format": "compact",
+      "source_mode": "optional",
+      "result": {
+        "format": "compact",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            40,
+            40
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 108,
+          "data_total_byte_hops": 200,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 235
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_delay",
+      "format": "task",
+      "source_mode": "fixed",
+      "result": {
+        "format": "task",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            44,
+            44
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 102,
+          "data_total_byte_hops": 208,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 243
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_delay",
+      "format": "task",
+      "source_mode": "optional",
+      "result": {
+        "format": "task",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            34,
+            34
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 102,
+          "data_total_byte_hops": 188,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 223
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_delay",
+      "format": "prefix",
+      "source_mode": "fixed",
+      "result": {
+        "format": "prefix",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            40,
+            40
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 100,
+          "data_total_byte_hops": 200,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 235
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "report_delay",
+      "format": "prefix",
+      "source_mode": "optional",
+      "result": {
+        "format": "prefix",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1
+        ],
+        "admitted_weight": 2,
+        "cost": {
+          "inband_per_link_bytes": [
+            32,
+            32
+          ],
+          "export_bytes": 120,
+          "export_bytes_without_padding": 100,
+          "data_total_byte_hops": 184,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 219
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.3888888888888889,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.12962962962962962
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "eligibility",
+      "format": "common",
+      "source_mode": "fixed",
+      "result": {
+        "format": "common",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [],
+          "2": [
+            2
+          ],
+          "3": [],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          2
+        ],
+        "admitted_weight": 1,
+        "cost": {
+          "inband_per_link_bytes": [
+            32,
+            52
+          ],
+          "export_bytes": 62,
+          "export_bytes_without_padding": 62,
+          "data_total_byte_hops": 146,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 181
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.5833333333333334,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 10.0,
+              "mean_known_age_us": 10.0,
+              "p95_age_us": 18.099999999999998,
+              "p99_age_us": 18.82,
+              "longest_no_effective_update_us": 18,
+              "first_report_wait_us": null,
+              "fulfilled": false
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 1,
+          "weighted_violation_fraction": 0.3888888888888889
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "eligibility",
+      "format": "common",
+      "source_mode": "optional",
+      "result": {
+        "format": "common",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            64,
+            84
+          ],
+          "export_bytes": 186,
+          "export_bytes_without_padding": 186,
+          "data_total_byte_hops": 334,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 369
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "eligibility",
+      "format": "compact",
+      "source_mode": "fixed",
+      "result": {
+        "format": "compact",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            56,
+            68
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 162,
+          "data_total_byte_hops": 304,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 339
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "eligibility",
+      "format": "compact",
+      "source_mode": "optional",
+      "result": {
+        "format": "compact",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            48,
+            60
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 162,
+          "data_total_byte_hops": 288,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 323
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "eligibility",
+      "format": "task",
+      "source_mode": "fixed",
+      "result": {
+        "format": "task",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            44,
+            56
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 153,
+          "data_total_byte_hops": 280,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 315
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "eligibility",
+      "format": "task",
+      "source_mode": "optional",
+      "result": {
+        "format": "task",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            39,
+            51
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 153,
+          "data_total_byte_hops": 270,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 305
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "eligibility",
+      "format": "prefix",
+      "source_mode": "fixed",
+      "result": {
+        "format": "prefix",
+        "source_mode": "fixed",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            40,
+            52
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 150,
+          "data_total_byte_hops": 272,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 307
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    },
+    {
+      "case": "eligibility",
+      "format": "prefix",
+      "source_mode": "optional",
+      "result": {
+        "format": "prefix",
+        "source_mode": "optional",
+        "gate_scope": "flow",
+        "future_packets_known": true,
+        "control_cost": {
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计"
+        },
+        "deployment_feasibility_established": false,
+        "scope": "共同链、固定资格与延迟/丢失、无替换的逐包选择下界；账本不证明这些权限可免费安装",
+        "status": "optimal",
+        "solver_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "cost_solver_status": 0,
+        "selected": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            1
+          ],
+          "4": []
+        },
+        "source_selected": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": false
+        },
+        "accepted_nodes": [
+          1,
+          2
+        ],
+        "admitted_weight": 3,
+        "cost": {
+          "inband_per_link_bytes": [
+            36,
+            48
+          ],
+          "export_bytes": 180,
+          "export_bytes_without_padding": 150,
+          "data_total_byte_hops": 264,
+          "control_per_link_bytes": [
+            15,
+            20
+          ],
+          "control_by_kind": {
+            "installation": [
+              8,
+              10
+            ],
+            "observation": [
+              7,
+              10
+            ],
+            "update": [
+              0,
+              0
+            ],
+            "calibration": [
+              0,
+              0
+            ],
+            "validation": [
+              0,
+              0
+            ],
+            "unattributed": [
+              0,
+              0
+            ]
+          },
+          "control_basis": "ethernet_without_fcs",
+          "control_contract": "完整预声明账本，含窗口前安装，不由求解器优化或自动估计",
+          "total_byte_hops": 299
+        },
+        "metrics": {
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 3.9000000000000004,
+              "mean_known_age_us": 3.9000000000000004,
+              "p95_age_us": 7.649999999999999,
+              "p99_age_us": 8.019999999999998,
+              "longest_no_effective_update_us": 7.999999999999999,
+              "first_report_wait_us": 2.2,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 5.345555555555556,
+              "mean_known_age_us": 5.345555555555556,
+              "p95_age_us": 10.999999999999998,
+              "p99_age_us": 11.72,
+              "longest_no_effective_update_us": 11.8,
+              "first_report_wait_us": 6.2,
+              "fulfilled": true
+            }
+          ],
+          "fulfilled_task_count": 2,
+          "weighted_violation_fraction": 0.0
+        },
+        "cost_optimal": true
+      }
+    }
+  ],
+  "interpretation": "真实网络字节核对与合成离线下界分列，不是可部署控制方案或创新证据",
+  "finish_utc": "2026-10-10T03:22:53.324334+00:00",
+  "wall_seconds": 0.15488622699922416,
+  "finish_load_average": [
+    0.28076171875,
+    0.2978515625,
+    0.39990234375
+  ],
+  "artifact_sha256": {
+    "steady-task-ordinary-01-control-ledger.json": "4fb8b1f2328ddc4ab5e3da3d87a90661b3e14ee4c0d085c1e5a95d2f17435bc2",
+    "steady-common-01-control-ledger.json": "1c0525c5a4c6df259276b37dee74b33203b13a98affde0da0e9b29f5cc6b91f7",
+    "synthetic-input.json": "ec93eb04acf6a134ef568dfe54281e6642d77e3b76d7a0f8d9d7a6c9217e9ceb"
+  }
+}
