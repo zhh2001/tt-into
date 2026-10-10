@@ -75,24 +75,24 @@ class ControlLedger:
             raise ValueError('相同费用身份出现冲突')
         self._charges[key] = charge
 
-    def completed_rpc(self, operation_id, row, origin_ns=0):
+    def completed_rpc(self, operation_id, row, origin_ns=0, provenance=None):
         """归因使用调用边界，完整长度最早在返回后可用。"""
         before, after = row['before_monotonic_ns'] - origin_ns, row['after_monotonic_ns'] - origin_ns
         if before > after:
             raise ValueError('调用边界倒序')
         charges = tuple(Charge(operation_id, API, row['kind'], part, stamp, after,
-                               row[key], row['success'], '自有调用实际传输计数；调用边界归因，非精确帧发送时刻')
+                               row[key], row['success'], provenance or '自有调用实际传输计数；调用边界归因，非精确帧发送时刻')
                         for part, stamp, key in (('request', before, 'request_serialized_bytes'),
                                                 ('reply', after, 'reply_serialized_bytes')))
         for charge in charges:
             self.add(charge)
 
-    def received_notice(self, operation_id, payload, received_ns, origin_ns=0):
+    def received_notice(self, operation_id, payload, received_ns, origin_ns=0, provenance=None):
         if not isinstance(payload, bytes):
             raise ValueError('通知需提供实际收到的字节')
         stamp = received_ns - origin_ns
         self.add(Charge(operation_id, NOTICE, 'management_notice', 'payload', stamp, stamp,
-                        len(payload), True, '实收本地 UNIX 数据报有效负载，不含网络帧费用'))
+                        len(payload), True, provenance or '实收本地 UNIX 数据报有效负载，不含网络帧费用'))
 
     def snapshot(self, cutoff_ns):
         return ControlSnapshot(cutoff_ns, tuple(sorted((r for r in self._charges.values() if r.known_ns <= cutoff_ns),

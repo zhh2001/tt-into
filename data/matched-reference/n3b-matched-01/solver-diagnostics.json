@@ -1,0 +1,2846 @@
+[
+  {
+    "scenario": "stable",
+    "budget_level": "low",
+    "time_us": 4000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/stable-low-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          400000,
+          800000,
+          400000,
+          150000
+        ],
+        "predicted_loss": 0.765149211545,
+        "local_loss": 0.7849961501450001,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 120,
+            "e2": 120,
+            "e3": 300
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 120.0,
+            "e2": 120.0,
+            "e3": 300.0
+          },
+          "export_attempt_bytes": 540,
+          "export_attempt_bytes_per_s": 540.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 248
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 2
+          },
+          "updated_entry_count": 2,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 2,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 490.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          400000,
+          150000,
+          400000,
+          1000000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 40,
+        "forecast": {
+          "config": [
+            400000,
+            150000,
+            400000,
+            1000000
+          ],
+          "predicted_loss": 0.8035899001450001,
+          "local_loss": 0.8035899001450001,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 120,
+              "e2": 120,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 120.0,
+              "e2": 120.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.03844068860000005
+    },
+    "local": {
+      "exact": {
+        "config": [
+          800000,
+          null,
+          50000,
+          50000
+        ],
+        "predicted_loss": 1.8894078779316668,
+        "local_loss": 0.638775599525,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 108,
+            "e2": 192,
+            "e3": 300
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 108.0,
+            "e2": 192.0,
+            "e3": 300.0
+          },
+          "export_attempt_bytes": 540,
+          "export_attempt_bytes_per_s": 540.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 491
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 4
+          },
+          "updated_entry_count": 4,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 4,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 733.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          400000,
+          150000,
+          400000,
+          800000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            400000,
+            150000,
+            400000,
+            800000
+          ],
+          "predicted_loss": 0.8035899001450001,
+          "local_loss": 0.7607888246650001,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 120,
+              "e2": 120,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 120.0,
+              "e2": 120.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 124
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 366.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.12201322514000013
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "low",
+    "time_us": 7000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/stable-low-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          400000,
+          800000,
+          400000,
+          150000
+        ],
+        "predicted_loss": 0.7715520241716667,
+        "local_loss": 0.8008883703050002,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 120,
+            "e2": 120,
+            "e3": 300
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 120.0,
+            "e2": 120.0,
+            "e3": 300.0
+          },
+          "export_attempt_bytes": 540,
+          "export_attempt_bytes_per_s": 540.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 248
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 2
+          },
+          "updated_entry_count": 2,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 2,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 490.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          400000,
+          150000,
+          400000,
+          1000000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 40,
+        "forecast": {
+          "config": [
+            400000,
+            150000,
+            400000,
+            1000000
+          ],
+          "predicted_loss": 0.7903017377716666,
+          "local_loss": 0.7903017377716666,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 120,
+              "e2": 120,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 120.0,
+              "e2": 120.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.018749713599999884
+    },
+    "local": {
+      "exact": {
+        "config": [
+          800000,
+          null,
+          50000,
+          50000
+        ],
+        "predicted_loss": 1.94943251636,
+        "local_loss": 0.640829744325,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 108,
+            "e2": 192,
+            "e3": 300
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 108.0,
+            "e2": 192.0,
+            "e3": 300.0
+          },
+          "export_attempt_bytes": 540,
+          "export_attempt_bytes_per_s": 540.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 491
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 4
+          },
+          "updated_entry_count": 4,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 4,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 733.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          400000,
+          150000,
+          400000,
+          1000000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 40,
+        "forecast": {
+          "config": [
+            400000,
+            150000,
+            400000,
+            1000000
+          ],
+          "predicted_loss": 0.7903017377716666,
+          "local_loss": 0.7903017377716666,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 120,
+              "e2": 120,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 120.0,
+              "e2": 120.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.14947199344666662
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "time_us": 4000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/stable-high-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          150000,
+          400000,
+          200000,
+          50000
+        ],
+        "predicted_loss": 0.5611484079983333,
+        "local_loss": 0.3962054913316667,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 144,
+            "e2": 144,
+            "e3": 360
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 144.0,
+            "e2": 144.0,
+            "e3": 360.0
+          },
+          "export_attempt_bytes": 840,
+          "export_attempt_bytes_per_s": 840.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 0
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 0
+          },
+          "updated_entry_count": 0,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 0,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 242.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          150000,
+          400000,
+          200000,
+          50000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 41,
+        "forecast": {
+          "config": [
+            150000,
+            400000,
+            200000,
+            50000
+          ],
+          "predicted_loss": 0.5611484079983333,
+          "local_loss": 0.3962054913316667,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 144,
+              "e2": 144,
+              "e3": 360
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 144.0,
+              "e2": 144.0,
+              "e3": 360.0
+            },
+            "export_attempt_bytes": 840,
+            "export_attempt_bytes_per_s": 840.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    },
+    "local": {
+      "exact": {
+        "config": [
+          150000,
+          400000,
+          50000,
+          50000
+        ],
+        "predicted_loss": 0.8515576343116668,
+        "local_loss": 0.3488752829983333,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 144,
+            "e2": 192,
+            "e3": 360
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 144.0,
+            "e2": 192.0,
+            "e3": 360.0
+          },
+          "export_attempt_bytes": 840,
+          "export_attempt_bytes_per_s": 840.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 124
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 1
+          },
+          "updated_entry_count": 1,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 1,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 366.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          150000,
+          400000,
+          50000,
+          50000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            150000,
+            400000,
+            50000,
+            50000
+          ],
+          "predicted_loss": 0.8515576343116668,
+          "local_loss": 0.3488752829983333,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 144,
+              "e2": 192,
+              "e3": 360
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 144.0,
+              "e2": 192.0,
+              "e3": 360.0
+            },
+            "export_attempt_bytes": 840,
+            "export_attempt_bytes_per_s": 840.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 124
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 366.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "time_us": 7000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/stable-high-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          150000,
+          50000,
+          200000,
+          50000
+        ],
+        "predicted_loss": 0.5419812434783333,
+        "local_loss": 0.33722202953166663,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 144,
+            "e2": 144,
+            "e3": 384
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 144.0,
+            "e2": 144.0,
+            "e3": 384.0
+          },
+          "export_attempt_bytes": 960,
+          "export_attempt_bytes_per_s": 960.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 124
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 1
+          },
+          "updated_entry_count": 1,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 1,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 366.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          150000,
+          50000,
+          200000,
+          50000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            150000,
+            50000,
+            200000,
+            50000
+          ],
+          "predicted_loss": 0.5419812434783333,
+          "local_loss": 0.33722202953166663,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 144,
+              "e2": 144,
+              "e3": 384
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 144.0,
+              "e2": 144.0,
+              "e3": 384.0
+            },
+            "export_attempt_bytes": 960,
+            "export_attempt_bytes_per_s": 960.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 124
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 366.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    },
+    "local": {
+      "exact": {
+        "config": [
+          50000,
+          50000,
+          50000,
+          50000
+        ],
+        "predicted_loss": 1.6970917628333333,
+        "local_loss": 0.24234098786500002,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 192,
+            "e2": 192,
+            "e3": 384
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 192.0,
+            "e2": 192.0,
+            "e3": 384.0
+          },
+          "export_attempt_bytes": 960,
+          "export_attempt_bytes_per_s": 960.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 372
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 3
+          },
+          "updated_entry_count": 3,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 3,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 614.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          50000,
+          200000,
+          150000,
+          50000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            50000,
+            200000,
+            150000,
+            50000
+          ],
+          "predicted_loss": 0.5839923404583334,
+          "local_loss": 0.3322931265116667,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 192,
+              "e2": 144,
+              "e3": 384
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 192.0,
+              "e2": 144.0,
+              "e3": 384.0
+            },
+            "export_attempt_bytes": 960,
+            "export_attempt_bytes_per_s": 960.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 372
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 3
+            },
+            "updated_entry_count": 3,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 3,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 614.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.08995213864666668
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "low",
+    "time_us": 4000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/shared_priority-low-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          800000,
+          null,
+          800000,
+          100000
+        ],
+        "predicted_loss": 0.8237381467833332,
+        "local_loss": 0.7195714801166666,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 108,
+            "e2": 108,
+            "e3": 300
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 108.0,
+            "e2": 108.0,
+            "e3": 300.0
+          },
+          "export_attempt_bytes": 540,
+          "export_attempt_bytes_per_s": 540.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 0
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 0
+          },
+          "updated_entry_count": 0,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 0,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 242.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          800000,
+          null,
+          800000,
+          100000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 40,
+        "forecast": {
+          "config": [
+            800000,
+            null,
+            800000,
+            100000
+          ],
+          "predicted_loss": 0.8237381467833332,
+          "local_loss": 0.7195714801166666,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 108,
+              "e2": 108,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 108.0,
+              "e2": 108.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    },
+    "local": {
+      "exact": {
+        "config": [
+          800000,
+          null,
+          50000,
+          100000
+        ],
+        "predicted_loss": 2.49802333645,
+        "local_loss": 0.5970962717833334,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 108,
+            "e2": 192,
+            "e3": 300
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 108.0,
+            "e2": 192.0,
+            "e3": 300.0
+          },
+          "export_attempt_bytes": 540,
+          "export_attempt_bytes_per_s": 540.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 124
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 1
+          },
+          "updated_entry_count": 1,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 1,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 366.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          800000,
+          null,
+          50000,
+          100000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            800000,
+            null,
+            50000,
+            100000
+          ],
+          "predicted_loss": 2.49802333645,
+          "local_loss": 0.5970962717833334,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 108,
+              "e2": 192,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 108.0,
+              "e2": 192.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 124
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 366.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "low",
+    "time_us": 7000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/shared_priority-low-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          1000000,
+          null,
+          1000000,
+          100000
+        ],
+        "predicted_loss": 0.8612612999833333,
+        "local_loss": 0.7570946333166667,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 108,
+            "e2": 108,
+            "e3": 300
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 108.0,
+            "e2": 108.0,
+            "e3": 300.0
+          },
+          "export_attempt_bytes": 540,
+          "export_attempt_bytes_per_s": 540.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 248
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 2
+          },
+          "updated_entry_count": 2,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 2,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 490.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          1000000,
+          null,
+          800000,
+          100000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            1000000,
+            null,
+            800000,
+            100000
+          ],
+          "predicted_loss": 0.9131277583166667,
+          "local_loss": 0.7271277583166667,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 108,
+              "e2": 120,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 108.0,
+              "e2": 120.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 124
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 366.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.051866458333333365
+    },
+    "local": {
+      "exact": {
+        "config": [
+          1000000,
+          null,
+          50000,
+          100000
+        ],
+        "predicted_loss": 2.5596334780666665,
+        "local_loss": 0.6177527583166668,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 108,
+            "e2": 192,
+            "e3": 300
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 108.0,
+            "e2": 192.0,
+            "e3": 300.0
+          },
+          "export_attempt_bytes": 540,
+          "export_attempt_bytes_per_s": 540.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 248
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 2
+          },
+          "updated_entry_count": 2,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 2,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 490.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          1000000,
+          null,
+          800000,
+          100000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            1000000,
+            null,
+            800000,
+            100000
+          ],
+          "predicted_loss": 0.9131277583166667,
+          "local_loss": 0.7271277583166667,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 108,
+              "e2": 120,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 108.0,
+              "e2": 120.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 124
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 366.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.10937499999999989
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "time_us": 4000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/shared_priority-high-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          600000,
+          50000,
+          400000,
+          150000
+        ],
+        "predicted_loss": 0.5561904257433333,
+        "local_loss": 0.5132187590766667,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 108,
+            "e2": 120,
+            "e3": 360
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 108.0,
+            "e2": 120.0,
+            "e3": 360.0
+          },
+          "export_attempt_bytes": 840,
+          "export_attempt_bytes_per_s": 840.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 0
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 0
+          },
+          "updated_entry_count": 0,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 0,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 242.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          600000,
+          50000,
+          400000,
+          150000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 41,
+        "forecast": {
+          "config": [
+            600000,
+            50000,
+            400000,
+            150000
+          ],
+          "predicted_loss": 0.5561904257433333,
+          "local_loss": 0.5132187590766667,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 108,
+              "e2": 120,
+              "e3": 360
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 108.0,
+              "e2": 120.0,
+              "e3": 360.0
+            },
+            "export_attempt_bytes": 840,
+            "export_attempt_bytes_per_s": 840.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    },
+    "local": {
+      "exact": {
+        "config": [
+          50000,
+          50000,
+          400000,
+          150000
+        ],
+        "predicted_loss": 0.8890831029166666,
+        "local_loss": 0.4305878840766667,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 192,
+            "e2": 120,
+            "e3": 360
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 192.0,
+            "e2": 120.0,
+            "e3": 360.0
+          },
+          "export_attempt_bytes": 840,
+          "export_attempt_bytes_per_s": 840.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 124
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 1
+          },
+          "updated_entry_count": 1,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 1,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 366.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          50000,
+          50000,
+          400000,
+          150000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            50000,
+            50000,
+            400000,
+            150000
+          ],
+          "predicted_loss": 0.8890831029166666,
+          "local_loss": 0.4305878840766667,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 192,
+              "e2": 120,
+              "e3": 360
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 192.0,
+              "e2": 120.0,
+              "e3": 360.0
+            },
+            "export_attempt_bytes": 840,
+            "export_attempt_bytes_per_s": 840.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 124
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 366.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "time_us": 7000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/shared_priority-high-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          400000,
+          50000,
+          600000,
+          50000
+        ],
+        "predicted_loss": 0.5327164734500001,
+        "local_loss": 0.43574619419666677,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 120,
+            "e2": 120,
+            "e3": 384
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 120.0,
+            "e2": 120.0,
+            "e3": 384.0
+          },
+          "export_attempt_bytes": 960,
+          "export_attempt_bytes_per_s": 960.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 372
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 3
+          },
+          "updated_entry_count": 3,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 3,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 614.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          800000,
+          50000,
+          400000,
+          50000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            800000,
+            50000,
+            400000,
+            50000
+          ],
+          "predicted_loss": 0.55099200005,
+          "local_loss": 0.4855666525300001,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 108,
+              "e2": 120,
+              "e3": 384
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 108.0,
+              "e2": 120.0,
+              "e3": 384.0
+            },
+            "export_attempt_bytes": 960,
+            "export_attempt_bytes_per_s": 960.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 248
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 2
+            },
+            "updated_entry_count": 2,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 2,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 490.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.01827552659999998
+    },
+    "local": {
+      "exact": {
+        "config": [
+          50000,
+          50000,
+          50000,
+          50000
+        ],
+        "predicted_loss": 2.341172776786667,
+        "local_loss": 0.3041570691966667,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 192,
+            "e2": 192,
+            "e3": 384
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 192.0,
+            "e2": 192.0,
+            "e3": 384.0
+          },
+          "export_attempt_bytes": 960,
+          "export_attempt_bytes_per_s": 960.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 372
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 3
+          },
+          "updated_entry_count": 3,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 3,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 614.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          50000,
+          50000,
+          200000,
+          100000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            50000,
+            50000,
+            200000,
+            100000
+          ],
+          "predicted_loss": 0.8771322743833334,
+          "local_loss": 0.32391561086333337,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 192,
+              "e2": 144,
+              "e3": 384
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 192.0,
+              "e2": 144.0,
+              "e3": 384.0
+            },
+            "export_attempt_bytes": 960,
+            "export_attempt_bytes_per_s": 960.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 372
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 3
+            },
+            "updated_entry_count": 3,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 3,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 614.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.019758541666666685
+    }
+  },
+  {
+    "scenario": "unannounced_switch",
+    "budget_level": "low",
+    "time_us": 4000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/unannounced_switch-low-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          1000000,
+          150000,
+          400000,
+          150000
+        ],
+        "predicted_loss": 1.0105390191245833,
+        "local_loss": 0.9450230160279167,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 180,
+            "e2": 48,
+            "e3": 288
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 180.0,
+            "e2": 48.0,
+            "e3": 288.0
+          },
+          "export_attempt_bytes": 480,
+          "export_attempt_bytes_per_s": 480.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 367
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 3
+          },
+          "updated_entry_count": 2,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 3,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 609.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          null,
+          100000,
+          400000,
+          150000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 42,
+        "forecast": {
+          "config": [
+            null,
+            100000,
+            400000,
+            150000
+          ],
+          "predicted_loss": 1.4502921168233334,
+          "local_loss": 1.42655452433,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 168,
+              "e2": 48,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 168.0,
+              "e2": 48.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.43975309769875004
+    },
+    "local": {
+      "exact": {
+        "config": [
+          1000000,
+          150000,
+          400000,
+          150000
+        ],
+        "predicted_loss": 1.0105390191245833,
+        "local_loss": 0.9450230160279167,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 180,
+            "e2": 48,
+            "e3": 288
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 180.0,
+            "e2": 48.0,
+            "e3": 288.0
+          },
+          "export_attempt_bytes": 480,
+          "export_attempt_bytes_per_s": 480.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 367
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 3
+          },
+          "updated_entry_count": 2,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.0,
+        "update_rpc_count": 3,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 609.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          null,
+          100000,
+          400000,
+          150000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 42,
+        "forecast": {
+          "config": [
+            null,
+            100000,
+            400000,
+            150000
+          ],
+          "predicted_loss": 1.4502921168233334,
+          "local_loss": 1.42655452433,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 168,
+              "e2": 48,
+              "e3": 300
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 168.0,
+              "e2": 48.0,
+              "e3": 300.0
+            },
+            "export_attempt_bytes": 540,
+            "export_attempt_bytes_per_s": 540.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.0,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.48153150830208324
+    }
+  },
+  {
+    "scenario": "unannounced_switch",
+    "budget_level": "low",
+    "time_us": 7000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/unannounced_switch-low-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          400000,
+          150000,
+          400000,
+          150000
+        ],
+        "predicted_loss": 0.9367520212920833,
+        "local_loss": 0.8716178863054167,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 48,
+            "e2": 192,
+            "e3": 288
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 48.0,
+            "e2": 192.0,
+            "e3": 288.0
+          },
+          "export_attempt_bytes": 480,
+          "export_attempt_bytes_per_s": 480.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 119
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 1
+          },
+          "updated_entry_count": 1,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 1,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 361.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          400000,
+          150000,
+          400000,
+          150000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            400000,
+            150000,
+            400000,
+            150000
+          ],
+          "predicted_loss": 0.9367520212920833,
+          "local_loss": 0.8716178863054167,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 48,
+              "e2": 192,
+              "e3": 288
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 48.0,
+              "e2": 192.0,
+              "e3": 288.0
+            },
+            "export_attempt_bytes": 480,
+            "export_attempt_bytes_per_s": 480.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 119
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 361.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    },
+    "local": {
+      "exact": {
+        "config": [
+          400000,
+          150000,
+          400000,
+          150000
+        ],
+        "predicted_loss": 0.9367520212920833,
+        "local_loss": 0.8716178863054167,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 48,
+            "e2": 192,
+            "e3": 288
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 48.0,
+            "e2": 192.0,
+            "e3": 288.0
+          },
+          "export_attempt_bytes": 480,
+          "export_attempt_bytes_per_s": 480.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 119
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 1
+          },
+          "updated_entry_count": 1,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 1,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 361.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          400000,
+          150000,
+          400000,
+          150000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            400000,
+            150000,
+            400000,
+            150000
+          ],
+          "predicted_loss": 0.9367520212920833,
+          "local_loss": 0.8716178863054167,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 48,
+              "e2": 192,
+              "e3": 288
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 48.0,
+              "e2": 192.0,
+              "e3": 288.0
+            },
+            "export_attempt_bytes": 480,
+            "export_attempt_bytes_per_s": 480.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 119
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 361.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    }
+  },
+  {
+    "scenario": "unannounced_switch",
+    "budget_level": "high",
+    "time_us": 4000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/unannounced_switch-high-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          150000,
+          50000,
+          150000,
+          50000
+        ],
+        "predicted_loss": 0.4963126092125,
+        "local_loss": 0.41787741629249997,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 228,
+            "e2": 48,
+            "e3": 384
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 228.0,
+            "e2": 48.0,
+            "e3": 384.0
+          },
+          "export_attempt_bytes": 960,
+          "export_attempt_bytes_per_s": 960.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 248
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 2
+          },
+          "updated_entry_count": 2,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 2,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 490.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          150000,
+          50000,
+          100000,
+          50000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            150000,
+            50000,
+            100000,
+            50000
+          ],
+          "predicted_loss": 0.4963126092125,
+          "local_loss": 0.41787741629249997,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 228,
+              "e2": 48,
+              "e3": 384
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 228.0,
+              "e2": 48.0,
+              "e3": 384.0
+            },
+            "export_attempt_bytes": 960,
+            "export_attempt_bytes_per_s": 960.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 372
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 3
+            },
+            "updated_entry_count": 3,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 3,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 614.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.0
+    },
+    "local": {
+      "exact": {
+        "config": [
+          100000,
+          50000,
+          150000,
+          50000
+        ],
+        "predicted_loss": 0.5103832293491667,
+        "local_loss": 0.38484418237916673,
+        "cost": {
+          "window_us": [
+            4000000,
+            5000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 252,
+            "e2": 48,
+            "e3": 384
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 252.0,
+            "e2": 48.0,
+            "e3": 384.0
+          },
+          "export_attempt_bytes": 960,
+          "export_attempt_bytes_per_s": 960.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 248
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 2
+          },
+          "updated_entry_count": 2,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.1166666666666667,
+        "update_rpc_count": 2,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 490.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          100000,
+          50000,
+          100000,
+          50000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            100000,
+            50000,
+            100000,
+            50000
+          ],
+          "predicted_loss": 0.5103832293491667,
+          "local_loss": 0.38484418237916673,
+          "cost": {
+            "window_us": [
+              4000000,
+              5000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 252,
+              "e2": 48,
+              "e3": 384
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 252.0,
+              "e2": 48.0,
+              "e3": 384.0
+            },
+            "export_attempt_bytes": 960,
+            "export_attempt_bytes_per_s": 960.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 372
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 3
+            },
+            "updated_entry_count": 3,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.1166666666666667,
+          "update_rpc_count": 3,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 614.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": false,
+      "objective_gap": 0.0
+    }
+  },
+  {
+    "scenario": "unannounced_switch",
+    "budget_level": "high",
+    "time_us": 7000000,
+    "parameter_index": 4,
+    "input_calibration_run": "calibration-runs/unannounced_switch-high-1301-phase_guard-p4.json.gz",
+    "configuration_count": 6561,
+    "scope": "合法预测代理网格参照，非真实未来最优",
+    "joint": {
+      "exact": {
+        "config": [
+          400000,
+          100000,
+          150000,
+          50000
+        ],
+        "predicted_loss": 0.49541187127666664,
+        "local_loss": 0.42035798430666665,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 48,
+            "e2": 216,
+            "e3": 384
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 48.0,
+            "e2": 216.0,
+            "e3": 384.0
+          },
+          "export_attempt_bytes": 960,
+          "export_attempt_bytes_per_s": 960.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 0
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 0
+          },
+          "updated_entry_count": 0,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.06666666666666665,
+        "update_rpc_count": 0,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 242.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          400000,
+          100000,
+          150000,
+          50000
+        ],
+        "reason": "joint_capacity_proxy",
+        "evaluated_candidates": 41,
+        "forecast": {
+          "config": [
+            400000,
+            100000,
+            150000,
+            50000
+          ],
+          "predicted_loss": 0.49541187127666664,
+          "local_loss": 0.42035798430666665,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 48,
+              "e2": 216,
+              "e3": 384
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 48.0,
+              "e2": 216.0,
+              "e3": 384.0
+            },
+            "export_attempt_bytes": 960,
+            "export_attempt_bytes_per_s": 960.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 0
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 0
+            },
+            "updated_entry_count": 0,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.06666666666666665,
+          "update_rpc_count": 0,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 242.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    },
+    "local": {
+      "exact": {
+        "config": [
+          400000,
+          100000,
+          50000,
+          50000
+        ],
+        "predicted_loss": 1.8677602174341665,
+        "local_loss": 0.35851183856749996,
+        "cost": {
+          "window_us": [
+            7000000,
+            8000000
+          ],
+          "inband_per_link_bytes": {
+            "e1": 48,
+            "e2": 336,
+            "e3": 384
+          },
+          "inband_per_link_bytes_per_s": {
+            "e1": 48.0,
+            "e2": 336.0,
+            "e3": 384.0
+          },
+          "export_attempt_bytes": 960,
+          "export_attempt_bytes_per_s": 960.0,
+          "control_serialized_bytes_by_kind": {
+            "installation": 0,
+            "observation": 242,
+            "update": 124
+          },
+          "control_request_count_by_kind": {
+            "installation": 0,
+            "observation": 2,
+            "update": 1
+          },
+          "updated_entry_count": 1,
+          "inband_over_budget_bytes_per_s": {},
+          "export_over_budget_bytes_per_s": null,
+          "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+        },
+        "predicted_excess": 0.46666666666666656,
+        "update_rpc_count": 1,
+        "update_allowed": true,
+        "effective_budget_excess": 0.0,
+        "guard_enabled": true,
+        "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+        "predicted_api_bytes_per_s": 366.0,
+        "known_notice_debt": 0.0
+      },
+      "limited": {
+        "config": [
+          400000,
+          100000,
+          50000,
+          50000
+        ],
+        "reason": "local_proxy_with_capacity_cost",
+        "evaluated_candidates": 48,
+        "forecast": {
+          "config": [
+            400000,
+            100000,
+            50000,
+            50000
+          ],
+          "predicted_loss": 1.8677602174341665,
+          "local_loss": 0.35851183856749996,
+          "cost": {
+            "window_us": [
+              7000000,
+              8000000
+            ],
+            "inband_per_link_bytes": {
+              "e1": 48,
+              "e2": 336,
+              "e3": 384
+            },
+            "inband_per_link_bytes_per_s": {
+              "e1": 48.0,
+              "e2": 336.0,
+              "e3": 384.0
+            },
+            "export_attempt_bytes": 960,
+            "export_attempt_bytes_per_s": 960.0,
+            "control_serialized_bytes_by_kind": {
+              "installation": 0,
+              "observation": 242,
+              "update": 124
+            },
+            "control_request_count_by_kind": {
+              "installation": 0,
+              "observation": 2,
+              "update": 1
+            },
+            "updated_entry_count": 1,
+            "inband_over_budget_bytes_per_s": {},
+            "export_over_budget_bytes_per_s": null,
+            "budget_contract": "实测窗口平均 byte/s；不把 API 字节与数据帧相加"
+          },
+          "predicted_excess": 0.46666666666666656,
+          "update_rpc_count": 1,
+          "update_allowed": true,
+          "effective_budget_excess": 0.0,
+          "guard_enabled": true,
+          "control_forecast_source": "下一周期计划源计数与字段写，失败长度未预知；已收通知不重复收费",
+          "predicted_api_bytes_per_s": 366.0,
+          "known_notice_debt": 0.0
+        }
+      },
+      "rank_matches": true,
+      "objective_gap": 0.0
+    }
+  }
+]

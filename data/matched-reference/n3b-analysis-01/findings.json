@@ -1,0 +1,150 @@
+{
+  "heldout_runs": 576,
+  "actual_feasible_runs": 523,
+  "feasible_runs_by_method": {
+    "static": 59,
+    "feedback": 60,
+    "local": 66,
+    "joint": 66,
+    "phase_joint": 68,
+    "uniform_guard": 68,
+    "phase_guard": 68,
+    "phase_local_guard": 68
+  },
+  "four_pair_improvements_over_static": {
+    "feedback": [],
+    "local": [],
+    "joint": [
+      {
+        "scenario": "switch",
+        "budget_level": "high"
+      },
+      {
+        "scenario": "sparse_stop",
+        "budget_level": "low"
+      },
+      {
+        "scenario": "sparse_stop",
+        "budget_level": "high"
+      }
+    ],
+    "phase_joint": [
+      {
+        "scenario": "shared_priority",
+        "budget_level": "high"
+      }
+    ],
+    "uniform_guard": [
+      {
+        "scenario": "shared_priority",
+        "budget_level": "high"
+      },
+      {
+        "scenario": "sparse_stop",
+        "budget_level": "low"
+      },
+      {
+        "scenario": "sparse_stop",
+        "budget_level": "high"
+      },
+      {
+        "scenario": "report_impairment",
+        "budget_level": "high"
+      },
+      {
+        "scenario": "unannounced_switch",
+        "budget_level": "high"
+      }
+    ],
+    "phase_guard": [],
+    "phase_local_guard": [
+      {
+        "scenario": "unannounced_switch",
+        "budget_level": "high"
+      }
+    ]
+  },
+  "selected_parameters": {
+    "selected_indices": {
+      "uniform_guard": 2,
+      "phase_guard": 4,
+      "phase_local_guard": 4
+    },
+    "parameters": [
+      {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.1,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.1,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      {
+        "gain_margin": 0.15,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      {
+        "gain_margin": 0.15,
+        "reserve_fraction": 0.1,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    ],
+    "frozen_utc": "2026-10-10T14:31:54.587144+00:00",
+    "test_not_generated": true,
+    "training_selection_sha256": "00d69e12d73d243d885adec70a8dadc410f365c9648847bdb9aabea71eea6daf"
+  },
+  "solver": {
+    "joint": {
+      "exact_rank_matches": 6,
+      "points": 12,
+      "mean_objective_gap": 0.04725712373600694,
+      "max_objective_gap": 0.43975309769875004
+    },
+    "local": {
+      "exact_rank_matches": 5,
+      "points": 12,
+      "mean_objective_gap": 0.08100853393350693,
+      "max_objective_gap": 0.48153150830208324
+    },
+    "scope": "固定校准视图的同代理网格搜索诊断，不是未来真实最优或保留样本"
+  },
+  "scope": "九场景、两预算、四保留种子的合成事件比较；完整配置集合与策略信息一致，无硬预算或网络性能结论",
+  "single_second_scope": "单秒超限诊断独立于预声明总窗口平均达标，不将后者称逐秒监管"
+}

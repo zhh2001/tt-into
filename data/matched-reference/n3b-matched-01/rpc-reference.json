@@ -1,0 +1,59 @@
+{
+  "calls": {
+    "threshold_us": {
+      "method": "bm_register_write",
+      "register": "TTEgress.time_threshold",
+      "success": true,
+      "request_bytes": 94,
+      "reply_bytes": 30,
+      "matched_calls": 48,
+      "provenance": "N3 两版本实际序列化计数，错误长度仅对应指定受控错误"
+    },
+    "enabled": {
+      "method": "bm_register_write",
+      "register": "TTEgress.max_count",
+      "success": true,
+      "request_bytes": 89,
+      "reply_bytes": 30,
+      "matched_calls": 54,
+      "provenance": "N3 两版本实际序列化计数，错误长度仅对应指定受控错误"
+    },
+    "read": {
+      "method": "bm_register_read",
+      "register": "TTIngress.packet_count",
+      "success": true,
+      "request_bytes": 81,
+      "reply_bytes": 40,
+      "matched_calls": 196,
+      "provenance": "N3 两版本实际序列化计数，错误长度仅对应指定受控错误"
+    },
+    "failed_write": {
+      "method": "bm_register_write",
+      "register": "TTEgress.missing_for_fault",
+      "success": false,
+      "request_bytes": 97,
+      "reply_bytes": 41,
+      "matched_calls": 2,
+      "provenance": "N3 两版本实际序列化计数，错误长度仅对应指定受控错误"
+    },
+    "failed_read": {
+      "method": "bm_register_read",
+      "register": "TTIngress.missing_for_fault",
+      "success": false,
+      "request_bytes": 86,
+      "reply_bytes": 40,
+      "matched_calls": 2,
+      "provenance": "N3 两版本实际序列化计数，错误长度仅对应指定受控错误"
+    },
+    "reconciliation": {
+      "method": "bm_register_read",
+      "register": "TTEgress.max_count",
+      "success": true,
+      "request_bytes": 77,
+      "reply_bytes": 40,
+      "matched_calls": 2,
+      "provenance": "N3 两版本实际序列化计数，错误长度仅对应指定受控错误"
+    }
+  },
+  "scope": "实际 API 字节，非管理帧；失败长度不推广到任意异常"
+}
