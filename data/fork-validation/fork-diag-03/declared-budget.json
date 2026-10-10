@@ -1,0 +1,11 @@
+{
+  "scope": "正确性运行的宽松预声明费用上限，不是等预算性能比较",
+  "per_case_inband_per_link_bytes": [1024, 1024, 2048],
+  "per_case_export_bytes_with_minimum_ethernet_padding": 5000,
+  "whole_run_control_per_node_direction_bytes": 8388608,
+  "control_directions": "四个节点各自 request/reply 共八方向，包含启动、CLI、计量操作和诊断",
+  "control_basis": "captured_loopback_ethernet_without_fcs",
+  "data_scope": "包含 800 ms 预热及全部业务包",
+  "report_age_scope": "保留实际预热，两个需求阶段分别积分",
+  "control_and_data_physical_networks": "数据为 Mininet 链路，控制为本机 loopback；不能推导生产部署开销"
+}

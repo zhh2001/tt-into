@@ -1,0 +1,712 @@
+{
+  "static_groups": [
+    {
+      "name": "tt_fixed",
+      "configuration_seed_trials": 84375,
+      "fully_fulfilled_trials": 0,
+      "best_selection_rule": "先最多满足六个对象阶段要求，再最小违约比例之和，再最小数据费用",
+      "best_policy": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1,
+            "capacity": 1
+          }
+        ],
+        "scope": "flow",
+        "ratios": [
+          1,
+          1,
+          1
+        ],
+        "counter_offsets": [
+          0,
+          0,
+          0
+        ],
+        "selection": "prefix",
+        "weights": [
+          1,
+          1,
+          1
+        ],
+        "format_name": "prefix"
+      },
+      "best_seed": null,
+      "best": [
+        {
+          "window_us": [
+            0,
+            1220000
+          ],
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 49467.13114754098,
+              "mean_known_age_us": 49467.13114754098,
+              "p95_age_us": 95041.66666666666,
+              "p99_age_us": 99108.33333333333,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 120,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 50276.96721311475,
+              "mean_known_age_us": 50276.96721311475,
+              "p95_age_us": 95031.66666666666,
+              "p99_age_us": 99098.33333333333,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 50120,
+              "fulfilled": true
+            },
+            {
+              "node": 3,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 101486.80327868853,
+              "mean_known_age_us": 101486.80327868853,
+              "p95_age_us": 190652.14285714284,
+              "p99_age_us": 198061.66666666666,
+              "longest_no_effective_update_us": 200000,
+              "first_report_wait_us": 25100,
+              "fulfilled": true
+            }
+          ]
+        },
+        {
+          "window_us": [
+            1220000,
+            2400000
+          ],
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 50784.83050847457,
+              "mean_known_age_us": 50784.83050847457,
+              "p95_age_us": 95188.33333333333,
+              "p99_age_us": 99121.66666666666,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 80120,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 49947.542372881355,
+              "mean_known_age_us": 49947.542372881355,
+              "p95_age_us": 95198.33333333333,
+              "p99_age_us": 99131.66666666666,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 30120,
+              "fulfilled": true
+            },
+            {
+              "node": 3,
+              "violation_fraction": 0.11065677966101695,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 98656.01694915254,
+              "mean_known_age_us": 98656.01694915254,
+              "p95_age_us": 189314.99999999997,
+              "p99_age_us": 198128.3333333333,
+              "longest_no_effective_update_us": 200000,
+              "first_report_wait_us": 5100,
+              "fulfilled": false
+            }
+          ]
+        }
+      ],
+      "best_wire": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_bytes": 4800,
+        "data_total_byte_hops": 7104
+      },
+      "grid_threshold_us": [
+        1,
+        100001,
+        200001,
+        300001,
+        null
+      ],
+      "source_ratio_options": [
+        1,
+        2
+      ],
+      "counter_phase_options": "所有 0..N-1，冷启动写入后保留完整预热",
+      "seed_options": [
+        null
+      ],
+      "seeds_are_python_reference_only": false,
+      "limitations": "有限网格；蓄水池仅共享门控及 N=1；未实现完整 Dev 选流、反馈控制或通用调度"
+    },
+    {
+      "name": "shared_fixed",
+      "configuration_seed_trials": 3375,
+      "fully_fulfilled_trials": 0,
+      "best_selection_rule": "先最多满足六个对象阶段要求，再最小违约比例之和，再最小数据费用",
+      "best_policy": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 0,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 2,
+            "flow": 0,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 0,
+            "threshold_us": 1,
+            "capacity": 1
+          }
+        ],
+        "scope": "port",
+        "ratios": [
+          1,
+          1,
+          1
+        ],
+        "counter_offsets": [
+          0,
+          0,
+          0
+        ],
+        "selection": "prefix",
+        "weights": [
+          1,
+          1,
+          1
+        ],
+        "format_name": "prefix"
+      },
+      "best_seed": null,
+      "best": [
+        {
+          "window_us": [
+            0,
+            1220000
+          ],
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 49467.13114754098,
+              "mean_known_age_us": 49467.13114754098,
+              "p95_age_us": 95041.66666666666,
+              "p99_age_us": 99108.33333333333,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 120,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 50276.96721311475,
+              "mean_known_age_us": 50276.96721311475,
+              "p95_age_us": 95031.66666666666,
+              "p99_age_us": 99098.33333333333,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 50120,
+              "fulfilled": true
+            },
+            {
+              "node": 3,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 101486.80327868853,
+              "mean_known_age_us": 101486.80327868853,
+              "p95_age_us": 190652.14285714284,
+              "p99_age_us": 198061.66666666666,
+              "longest_no_effective_update_us": 200000,
+              "first_report_wait_us": 25100,
+              "fulfilled": true
+            }
+          ]
+        },
+        {
+          "window_us": [
+            1220000,
+            2400000
+          ],
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 50784.83050847457,
+              "mean_known_age_us": 50784.83050847457,
+              "p95_age_us": 95188.33333333333,
+              "p99_age_us": 99121.66666666666,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 80120,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 49947.542372881355,
+              "mean_known_age_us": 49947.542372881355,
+              "p95_age_us": 95198.33333333333,
+              "p99_age_us": 99131.66666666666,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 30120,
+              "fulfilled": true
+            },
+            {
+              "node": 3,
+              "violation_fraction": 0.11065677966101695,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 98656.01694915254,
+              "mean_known_age_us": 98656.01694915254,
+              "p95_age_us": 189314.99999999997,
+              "p99_age_us": 198128.3333333333,
+              "longest_no_effective_update_us": 200000,
+              "first_report_wait_us": 5100,
+              "fulfilled": false
+            }
+          ]
+        }
+      ],
+      "best_wire": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_bytes": 4800,
+        "data_total_byte_hops": 7104
+      },
+      "grid_threshold_us": [
+        1,
+        100001,
+        200001,
+        300001,
+        null
+      ],
+      "source_ratio_options": [
+        1,
+        2
+      ],
+      "counter_phase_options": "所有 0..N-1，冷启动写入后保留完整预热",
+      "seed_options": [
+        null
+      ],
+      "seeds_are_python_reference_only": false,
+      "limitations": "有限网格；蓄水池仅共享门控及 N=1；未实现完整 Dev 选流、反馈控制或通用调度"
+    },
+    {
+      "name": "weighted_reservoir",
+      "configuration_seed_trials": 19000,
+      "fully_fulfilled_trials": 0,
+      "best_selection_rule": "先最多满足六个对象阶段要求，再最小违约比例之和，再最小数据费用",
+      "best_policy": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 0,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 2,
+            "flow": 0,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 0,
+            "threshold_us": 100001,
+            "capacity": 1
+          }
+        ],
+        "scope": "port",
+        "ratios": [
+          1,
+          1,
+          1
+        ],
+        "counter_offsets": [
+          0,
+          0,
+          0
+        ],
+        "selection": "reservoir",
+        "weights": [
+          4,
+          4,
+          1
+        ],
+        "format_name": "task"
+      },
+      "best_seed": 6,
+      "best": [
+        {
+          "window_us": [
+            0,
+            1220000
+          ],
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 49467.13114754098,
+              "mean_known_age_us": 49467.13114754098,
+              "p95_age_us": 95041.66666666666,
+              "p99_age_us": 99108.33333333333,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 120,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 50276.96721311475,
+              "mean_known_age_us": 50276.96721311475,
+              "p95_age_us": 95031.66666666666,
+              "p99_age_us": 99098.33333333333,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 50120,
+              "fulfilled": true
+            },
+            {
+              "node": 3,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 102000.73606557377,
+              "mean_known_age_us": 102000.73606557377,
+              "p95_age_us": 193261.66666666666,
+              "p99_age_us": 212874.99999999985,
+              "longest_no_effective_update_us": 200000,
+              "first_report_wait_us": 25100,
+              "fulfilled": true
+            }
+          ]
+        },
+        {
+          "window_us": [
+            1220000,
+            2400000
+          ],
+          "tasks": [
+            {
+              "node": 1,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 50784.83050847457,
+              "mean_known_age_us": 50784.83050847457,
+              "p95_age_us": 95188.33333333333,
+              "p99_age_us": 99121.66666666666,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 80120,
+              "fulfilled": true
+            },
+            {
+              "node": 2,
+              "violation_fraction": 0.0,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 49947.542372881355,
+              "mean_known_age_us": 49947.542372881355,
+              "p95_age_us": 95198.33333333333,
+              "p99_age_us": 99131.66666666666,
+              "longest_no_effective_update_us": 100000,
+              "first_report_wait_us": 30120,
+              "fulfilled": true
+            },
+            {
+              "node": 3,
+              "violation_fraction": 0.11065677966101695,
+              "unknown_fraction": 0.0,
+              "mean_age_us": 98656.01694915254,
+              "mean_known_age_us": 98656.01694915254,
+              "p95_age_us": 189314.99999999997,
+              "p99_age_us": 198128.3333333333,
+              "longest_no_effective_update_us": 200000,
+              "first_report_wait_us": 5100,
+              "fulfilled": false
+            }
+          ]
+        }
+      ],
+      "best_wire": {
+        "inband_per_link_bytes": [
+          544,
+          544,
+          1348
+        ],
+        "export_bytes": 4740,
+        "data_total_byte_hops": 7176
+      },
+      "grid_threshold_us": [
+        1,
+        100001,
+        200001,
+        300001,
+        null
+      ],
+      "source_ratio_options": [
+        1
+      ],
+      "counter_phase_options": "所有 0..N-1，冷启动写入后保留完整预热",
+      "seed_options": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "seeds_are_python_reference_only": true,
+      "limitations": "有限网格；蓄水池仅共享门控及 N=1；未实现完整 Dev 选流、反馈控制或通用调度"
+    }
+  ],
+  "scheduled_tt": [
+    {
+      "window_us": [
+        0,
+        1220000
+      ],
+      "tasks": [
+        {
+          "node": 1,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 51096.639344262294,
+          "mean_known_age_us": 51096.639344262294,
+          "p95_age_us": 96698.33333333333,
+          "p99_age_us": 107794.99999999988,
+          "longest_no_effective_update_us": 119880,
+          "first_report_wait_us": 120,
+          "fulfilled": true
+        },
+        {
+          "node": 2,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 50276.96721311475,
+          "mean_known_age_us": 50276.96721311475,
+          "p95_age_us": 95031.66666666666,
+          "p99_age_us": 99098.33333333333,
+          "longest_no_effective_update_us": 100000,
+          "first_report_wait_us": 50120,
+          "fulfilled": true
+        },
+        {
+          "node": 3,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 98634.83803278688,
+          "mean_known_age_us": 98634.83803278688,
+          "p95_age_us": 189928.3333333333,
+          "p99_age_us": 198061.66666666666,
+          "longest_no_effective_update_us": 200000,
+          "first_report_wait_us": 25100,
+          "fulfilled": true
+        }
+      ]
+    },
+    {
+      "window_us": [
+        1220000,
+        2400000
+      ],
+      "tasks": [
+        {
+          "node": 1,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 201642.45762711865,
+          "mean_known_age_us": 201642.45762711865,
+          "p95_age_us": 380448.3333333333,
+          "p99_age_us": 396181.6666666666,
+          "longest_no_effective_update_us": 400000,
+          "first_report_wait_us": 280120,
+          "fulfilled": true
+        },
+        {
+          "node": 2,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 202489.91525423728,
+          "mean_known_age_us": 202489.91525423728,
+          "p95_age_us": 380448.3333333333,
+          "p99_age_us": 396181.6666666666,
+          "longest_no_effective_update_us": 400000,
+          "first_report_wait_us": 330120,
+          "fulfilled": true
+        },
+        {
+          "node": 3,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 41225.84949152543,
+          "mean_known_age_us": 41225.84949152543,
+          "p95_age_us": 130388.33333333331,
+          "p99_age_us": 146121.66666666663,
+          "longest_no_effective_update_us": 150000,
+          "first_report_wait_us": 5100,
+          "fulfilled": true
+        }
+      ]
+    }
+  ],
+  "capacity2_static_tt": [
+    {
+      "window_us": [
+        0,
+        1220000
+      ],
+      "tasks": [
+        {
+          "node": 1,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 49467.13114754098,
+          "mean_known_age_us": 49467.13114754098,
+          "p95_age_us": 95041.66666666666,
+          "p99_age_us": 99108.33333333333,
+          "longest_no_effective_update_us": 100000,
+          "first_report_wait_us": 120,
+          "fulfilled": true
+        },
+        {
+          "node": 2,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 50276.96721311475,
+          "mean_known_age_us": 50276.96721311475,
+          "p95_age_us": 95031.66666666666,
+          "p99_age_us": 99098.33333333333,
+          "longest_no_effective_update_us": 100000,
+          "first_report_wait_us": 50120,
+          "fulfilled": true
+        },
+        {
+          "node": 3,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 21778.280655737704,
+          "mean_known_age_us": 21778.280655737704,
+          "p95_age_us": 46712.777777777774,
+          "p99_age_us": 49423.88888888888,
+          "longest_no_effective_update_us": 50000,
+          "first_report_wait_us": 120,
+          "fulfilled": true
+        }
+      ]
+    },
+    {
+      "window_us": [
+        1220000,
+        2400000
+      ],
+      "tasks": [
+        {
+          "node": 1,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 50784.83050847457,
+          "mean_known_age_us": 50784.83050847457,
+          "p95_age_us": 95188.33333333333,
+          "p99_age_us": 99121.66666666666,
+          "longest_no_effective_update_us": 100000,
+          "first_report_wait_us": 80120,
+          "fulfilled": true
+        },
+        {
+          "node": 2,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 49947.542372881355,
+          "mean_known_age_us": 49947.542372881355,
+          "p95_age_us": 95198.33333333333,
+          "p99_age_us": 99131.66666666666,
+          "longest_no_effective_update_us": 100000,
+          "first_report_wait_us": 30120,
+          "fulfilled": true
+        },
+        {
+          "node": 3,
+          "violation_fraction": 0.0,
+          "unknown_fraction": 0.0,
+          "mean_age_us": 22168.222372881355,
+          "mean_known_age_us": 22168.222372881355,
+          "p95_age_us": 46810.555555555555,
+          "p99_age_us": 49432.777777777774,
+          "longest_no_effective_update_us": 50000,
+          "first_report_wait_us": 5100,
+          "fulfilled": true
+        }
+      ]
+    }
+  ],
+  "capacity2_static_wire": {
+    "inband_per_link_bytes": [
+      512,
+      512,
+      2048
+    ],
+    "export_bytes": 4928,
+    "data_total_byte_hops": 8000
+  },
+  "scheduled_wire": {
+    "inband_per_link_bytes": [
+      404,
+      404,
+      1280
+    ],
+    "export_bytes": 4800,
+    "data_total_byte_hops": 6888
+  },
+  "control_cost_included": false,
+  "joint_budget_feasibility_established": false,
+  "conclusion": "K=1 时原有 TT-INT 调阈值即能解决；K=2 时固定阈值也能解决，不能作为新增贡献"
+}

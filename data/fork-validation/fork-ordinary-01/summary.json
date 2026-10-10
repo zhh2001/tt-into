@@ -1,0 +1,449 @@
+{
+  "run_id": "fork-ordinary-01",
+  "start_utc": "2026-10-10T03:43:56.398382+00:00",
+  "status": "passed",
+  "scope": "软件正确性与成本验证，不是统计性能比较",
+  "random_seed": null,
+  "diagnostics": false,
+  "source_sha256": {
+    "experiments/run_fork_validation.py": "677ef85b808e92d7bb1da778bdd8d49378c693bfdbed956f6aa533f63abdd5b5",
+    "experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/path_reference.py": "91e7fd392f294b26c3d0814b9d505e0137217cbb5988e4085636c8246cb864b3",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d"
+  },
+  "p4_json_sha256": "b78c33dc8a625234f71768304a5e9990291e6b995699b31caef3b3ad476b6991",
+  "steady_binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+  "software": {
+    "bmv2": "1.15.0-2bdd0b7b-steady-unknown",
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "mininet": "2.3.0"
+  },
+  "host": {
+    "cpu_count": 16,
+    "load_start": [
+      1.07958984375,
+      0.60693359375,
+      0.3896484375
+    ],
+    "load_end": [
+      1.1533203125,
+      0.63037109375,
+      0.3984375
+    ]
+  },
+  "cases": [
+    {
+      "name": "scheduled_tt",
+      "scope": "flow",
+      "initial_threshold_us": 1,
+      "origin_monotonic_ns": 43228492970133,
+      "dynamic": true,
+      "rpc_log_begin": 64,
+      "updates": [
+        {
+          "node": 1,
+          "method": "bm_register_write",
+          "arguments": [
+            "TTEgress.time_threshold",
+            1,
+            300001
+          ],
+          "before_monotonic_ns": 43230445740938,
+          "after_monotonic_ns": 43230445995445,
+          "kind": "online_update",
+          "request_serialized_bytes": 94,
+          "reply_serialized_bytes": 30
+        },
+        {
+          "node": 2,
+          "method": "bm_register_write",
+          "arguments": [
+            "TTEgress.time_threshold",
+            2,
+            300001
+          ],
+          "before_monotonic_ns": 43230446013347,
+          "after_monotonic_ns": 43230446183874,
+          "kind": "online_update",
+          "request_serialized_bytes": 94,
+          "reply_serialized_bytes": 30
+        }
+      ],
+      "all_preupdate_reports_received_ns": 43230445715835,
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "record_counts": [
+        23,
+        23,
+        34
+      ],
+      "rpc_log_end": 66,
+      "age": {
+        "phases": [
+          {
+            "window_us": [
+              800000,
+              2020000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 96583.33333333333,
+                "p95_age_upper_us": 97964.37491666667,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 2813.402
+              },
+              {
+                "node": 2,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 94962.235,
+                "p95_age_upper_us": 96259.42108333332,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3927.862
+              },
+              {
+                "node": 3,
+                "deadline_us": 250000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 189838.23416666666,
+                "p95_age_upper_us": 191088.1871666667,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3112.188
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          },
+          {
+            "window_us": [
+              2020000,
+              3200000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 380192.6263333333,
+                "p95_age_upper_us": 382285.49733333336,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 2813.402
+              },
+              {
+                "node": 2,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 370273.0949999999,
+                "p95_age_upper_us": 372326.0019999998,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3927.862
+              },
+              {
+                "node": 3,
+                "deadline_us": 175000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 105690.70433333327,
+                "p95_age_upper_us": 106932.5906666666,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3112.188
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          }
+        ],
+        "clock_domain": "同一宿主 CLOCK_MONOTONIC，发送前 <= 生成 <= recvmsg 完成",
+        "switch_timestamps_used_for_age": false,
+        "availability": "采集进程 recvmsg 完成",
+        "initial_sample": "使用每项实际报告前史，未人工置零年龄",
+        "local_offset_compatibility": {
+          "1": {
+            "compatible": true,
+            "intersection_width_us": 759.922,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "compatible": true,
+            "intersection_width_us": 701.574,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "compatible": true,
+            "intersection_width_us": 507.569,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "maximum_send_lateness_us": 639.866
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          404,
+          404,
+          1280
+        ],
+        "export_bytes": 4000,
+        "export_bytes_with_minimum_ethernet_padding": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 6888,
+        "scope": "全部业务包及预热，附加带内字节和导出帧，不含 FCS/前导码/物理间隔",
+        "within_declared_budget": true
+      }
+    }
+  ],
+  "format": "prefix 4+12 B, 无许可及版本切换字段",
+  "tasks": [
+    {
+      "node": 1,
+      "port": 2,
+      "queue_class": 0
+    },
+    {
+      "node": 2,
+      "port": 2,
+      "queue_class": 0
+    },
+    {
+      "node": 3,
+      "port": 2,
+      "queue_class": 0
+    }
+  ],
+  "requirements_window_offset_us": [
+    [
+      800000,
+      2020000
+    ],
+    [
+      2020000,
+      3200000
+    ]
+  ],
+  "deadlines_us": [
+    [
+      150000,
+      150000,
+      250000
+    ],
+    [
+      650000,
+      650000,
+      175000
+    ]
+  ],
+  "warmup_us": [
+    0,
+    800000
+  ],
+  "update": "预声明调阈值，提前排空在途报告，不重置成功门控",
+  "control_cost_basis": "RPC 序列化及全量 loopback Ethernet 帧分别保存",
+  "declared_budget": {
+    "scope": "正确性运行的宽松预声明费用上限，不是等预算性能比较",
+    "per_case_inband_per_link_bytes": [
+      1024,
+      1024,
+      2048
+    ],
+    "per_case_export_bytes_with_minimum_ethernet_padding": 5000,
+    "whole_run_control_per_node_direction_bytes": 8388608,
+    "control_directions": "四个节点各自 request/reply 共八方向，包含启动、CLI、计量操作和诊断",
+    "control_basis": "captured_loopback_ethernet_without_fcs",
+    "data_scope": "包含 800 ms 预热及全部业务包",
+    "report_age_scope": "保留实际预热，两个需求阶段分别积分",
+    "control_and_data_physical_networks": "数据为 Mininet 链路，控制为本机 loopback；不能推导生产部署开销"
+  },
+  "budget_sha256": "28058e2dbe1b422e9daa733f52726f46f1afc74ae1f4cde37c78f1e008cb8503",
+  "end_utc": "2026-10-10T03:44:02.058403+00:00",
+  "duration_seconds": 5.6078333359982935,
+  "control_cost": {
+    "metered_rpc_by_kind": {
+      "installation": {
+        "calls": 64,
+        "request_serialized_bytes": 6331,
+        "reply_serialized_bytes": 2007,
+        "rpc_elapsed_us": [
+          305.522,
+          110.399,
+          143.747,
+          69.61,
+          59.462,
+          142.698,
+          137.005,
+          107.891,
+          115.126,
+          116.3,
+          96.062,
+          77.81,
+          200.013,
+          120.593,
+          103.246,
+          112.35,
+          128.676,
+          65.185,
+          57.524,
+          74.955,
+          128.292,
+          321.021,
+          187.313,
+          165.952,
+          100.808,
+          115.34,
+          170.374,
+          105.528,
+          98.89,
+          69.372,
+          162.749,
+          139.363,
+          205.132,
+          161.264,
+          91.183,
+          87.922,
+          50.764,
+          95.048,
+          91.703,
+          78.354,
+          99.654,
+          139.79,
+          429.355,
+          230.782,
+          146.29,
+          144.811,
+          134.91,
+          122.565,
+          148.222,
+          82.449,
+          71.121,
+          97.139,
+          81.747,
+          73.28,
+          112.373,
+          71.127,
+          71.168,
+          70.979,
+          79.679,
+          57.094,
+          85.93,
+          102.303,
+          138.746,
+          494.771
+        ]
+      },
+      "update": {
+        "calls": 2,
+        "request_serialized_bytes": 188,
+        "reply_serialized_bytes": 60,
+        "rpc_elapsed_us": [
+          254.507,
+          170.527
+        ]
+      }
+    },
+    "captured_control_per_node_direction_bytes": [
+      6775,
+      167719,
+      6701,
+      167665,
+      6549,
+      167623,
+      3512,
+      165894
+    ],
+    "captured_control_total_bytes": 692438,
+    "within_declared_budget": true,
+    "physical_attribution": "unattributed，含 CLI/握手/TCP/诊断/GSO，不按收包时间归因 RPC",
+    "serialization_added_to_physical": false
+  },
+  "wire_checks": {
+    "passed": true,
+    "checked_ipv4_output_frames": 304
+  },
+  "budget_check": {
+    "data": true,
+    "whole_run_control": true,
+    "scope": "预声明宽松正确性预算，不是等预算性能结论"
+  },
+  "scheduled_tt_causal_age_feasible": true,
+  "scheduled_tt_correctness_budget_feasible": true,
+  "fair_performance_comparison_completed": false,
+  "novelty_established": false,
+  "analysis_sha256": "cccf3e82b6d01397be54a635f807c5d43c95fb80004d8602854e3d3024a67cf5",
+  "analysis_dependencies": {
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e"
+  },
+  "artifact_sha256": {
+    "declared-budget.json": "28058e2dbe1b422e9daa733f52726f46f1afc74ae1f4cde37c78f1e008cb8503",
+    "rpc-operations.jsonl": "28914b388db4ed4271dbab4f59a751dd5f1652bb381cc228e3e96bc415b794c8",
+    "rpc-frame-counts.jsonl": "ecf2b563082475e93a05b9468472cd6b6ce4c6c1e28a55e512d5d71706f073c4",
+    "scheduled_tt/collector.jsonl": "1cfa8d1c8cf945f08436d9e0bbcf61949b16f07e6c317a59303baad3cdd911df",
+    "scheduled_tt/packets.json": "0d1103f0be91a2c885e9acfa232e97f7d2dcbc73b00e338c8089eb51b3af1e94",
+    "scheduled_tt/destination.pcap": "3291be648dbf3125842e842cd700113eef4ab19cc662a4c9c8b07614683af262",
+    "scheduled_tt/result.json": "a93250dde3a9b01a3c64db6f36388ef6229838ae401fc7dd7f28e3efe7beae45",
+    "scheduled_tt/send.jsonl": "6e71b1e8102325189be73bc7b4dd1bbc35a5efc6f616e31947cfd68747c9cdfc",
+    "scheduled_tt/destination.jsonl": "a67aa14897cfea10e0079d767e3fa61cd8b5506527bc606817682bd28636e876",
+    "scheduled_tt/wire-observations.jsonl": "978af6241d40d148db65a49b2c2228f311cf403b1aa4d9bc816729cabbb158cc",
+    "scheduled_tt/collector.pcap": "c15ef54f6d408c4e0df05e4382f2095d768c0d12bea5b8fddc8c79e3d3e517e8",
+    "executed-source/experiments/analyze_fork_validation.py": "cccf3e82b6d01397be54a635f807c5d43c95fb80004d8602854e3d3024a67cf5",
+    "executed-source/experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "executed-source/experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "executed-source/experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "executed-source/experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "executed-source/experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "executed-source/experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "executed-source/experiments/run_fork_validation.py": "677ef85b808e92d7bb1da778bdd8d49378c693bfdbed956f6aa533f63abdd5b5",
+    "executed-source/experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "executed-source/experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "executed-source/experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "executed-source/experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "executed-source/src/orchestration/path_reference.py": "91e7fd392f294b26c3d0814b9d505e0137217cbb5988e4085636c8246cb864b3",
+    "executed-source/src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "executed-source/src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "executed-source/src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "executed-source/src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "executed-source/src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "executed-source/src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "executed-source/src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "executed-source/src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "executed-source/src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749"
+  }
+}

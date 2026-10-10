@@ -1,0 +1,49 @@
+{
+  "name": "scheduled_tt",
+  "scope": "flow",
+  "initial_threshold_us": 1,
+  "origin_monotonic_ns": 43228492970133,
+  "dynamic": true,
+  "rpc_log_begin": 64,
+  "updates": [
+    {
+      "node": 1,
+      "method": "bm_register_write",
+      "arguments": [
+        "TTEgress.time_threshold",
+        1,
+        300001
+      ],
+      "before_monotonic_ns": 43230445740938,
+      "after_monotonic_ns": 43230445995445,
+      "kind": "online_update",
+      "request_serialized_bytes": 94,
+      "reply_serialized_bytes": 30
+    },
+    {
+      "node": 2,
+      "method": "bm_register_write",
+      "arguments": [
+        "TTEgress.time_threshold",
+        2,
+        300001
+      ],
+      "before_monotonic_ns": 43230446013347,
+      "after_monotonic_ns": 43230446183874,
+      "kind": "online_update",
+      "request_serialized_bytes": 94,
+      "reply_serialized_bytes": 30
+    }
+  ],
+  "all_preupdate_reports_received_ns": 43230445715835,
+  "status": "passed",
+  "errors": [],
+  "packet_count": 80,
+  "report_count": 80,
+  "record_counts": [
+    23,
+    23,
+    34
+  ],
+  "rpc_log_end": 66
+}

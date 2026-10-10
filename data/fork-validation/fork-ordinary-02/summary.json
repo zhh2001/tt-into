@@ -1,0 +1,671 @@
+{
+  "run_id": "fork-ordinary-02",
+  "start_utc": "2026-10-10T03:46:24.893737+00:00",
+  "status": "passed",
+  "scope": "软件正确性与成本验证，不是统计性能比较",
+  "random_seed": null,
+  "diagnostics": false,
+  "source_sha256": {
+    "experiments/run_fork_validation.py": "24c3ada67ddc41cc266802ff78cf27f11b80c3ca37cb9e1e03179b55a856462a",
+    "experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d"
+  },
+  "p4_json_sha256": "b78c33dc8a625234f71768304a5e9990291e6b995699b31caef3b3ad476b6991",
+  "steady_binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+  "software": {
+    "bmv2": "1.15.0-2bdd0b7b-steady-unknown",
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "mininet": "2.3.0"
+  },
+  "host": {
+    "cpu_count": 16,
+    "load_start": [
+      0.5615234375,
+      0.53662109375,
+      0.38671875
+    ],
+    "load_end": [
+      0.474609375,
+      0.5185546875,
+      0.3818359375
+    ]
+  },
+  "cases": [
+    {
+      "name": "scheduled_tt",
+      "scope": "flow",
+      "initial_threshold_us": 1,
+      "capacity": 1,
+      "origin_monotonic_ns": 43362481412078,
+      "dynamic": true,
+      "rpc_log_begin": 64,
+      "updates": [
+        {
+          "node": 1,
+          "method": "bm_register_write",
+          "arguments": [
+            "TTEgress.time_threshold",
+            1,
+            300001
+          ],
+          "before_monotonic_ns": 43364434278219,
+          "after_monotonic_ns": 43364434702306,
+          "kind": "online_update",
+          "request_serialized_bytes": 94,
+          "reply_serialized_bytes": 30
+        },
+        {
+          "node": 2,
+          "method": "bm_register_write",
+          "arguments": [
+            "TTEgress.time_threshold",
+            2,
+            300001
+          ],
+          "before_monotonic_ns": 43364434716053,
+          "after_monotonic_ns": 43364434859962,
+          "kind": "online_update",
+          "request_serialized_bytes": 94,
+          "reply_serialized_bytes": 30
+        }
+      ],
+      "all_preupdate_reports_received_ns": 43364434250317,
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "record_counts": [
+        23,
+        23,
+        34
+      ],
+      "rpc_log_end": 66,
+      "age": {
+        "phases": [
+          {
+            "window_us": [
+              800000,
+              2020000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 96583.33333333333,
+                "p95_age_upper_us": 98032.10425,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3086.463
+              },
+              {
+                "node": 2,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 94931.63116666666,
+                "p95_age_upper_us": 96409.41258333335,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 4015.303
+              },
+              {
+                "node": 3,
+                "deadline_us": 250000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 189870.68633333332,
+                "p95_age_upper_us": 190695.75483333334,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3756.939
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          },
+          {
+            "window_us": [
+              2020000,
+              3200000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 340270.8509999997,
+                "p95_age_upper_us": 343357.31399999966,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3086.463
+              },
+              {
+                "node": 2,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 369940.57399999996,
+                "p95_age_upper_us": 373275.0649999999,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 4015.303
+              },
+              {
+                "node": 3,
+                "deadline_us": 175000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 73244.44966666671,
+                "p95_age_upper_us": 75366.25599999996,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3756.939
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          }
+        ],
+        "clock_domain": "同一宿主 CLOCK_MONOTONIC，发送前 <= 生成 <= recvmsg 完成",
+        "switch_timestamps_used_for_age": false,
+        "availability": "采集进程 recvmsg 完成",
+        "initial_sample": "使用每项实际报告前史，未人工置零年龄",
+        "local_offset_compatibility": {
+          "1": {
+            "compatible": true,
+            "intersection_width_us": 746.691,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "compatible": true,
+            "intersection_width_us": 792.264,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "compatible": true,
+            "intersection_width_us": 502.044,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "maximum_send_lateness_us": 413.272
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          404,
+          404,
+          1280
+        ],
+        "export_bytes": 4000,
+        "export_bytes_with_minimum_ethernet_padding": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 6888,
+        "scope": "全部业务包及预热，附加带内字节和导出帧，不含 FCS/前导码/物理间隔",
+        "within_declared_budget": true
+      }
+    },
+    {
+      "name": "static_capacity2",
+      "scope": "flow",
+      "initial_threshold_us": 1,
+      "capacity": 2,
+      "origin_monotonic_ns": 43366315910440,
+      "dynamic": false,
+      "rpc_log_begin": 130,
+      "updates": [],
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "record_counts": [
+        32,
+        32,
+        80
+      ],
+      "rpc_log_end": 130,
+      "age": {
+        "phases": [
+          {
+            "window_us": [
+              800000,
+              2020000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 95217.72583333333,
+                "p95_age_upper_us": 97737.72700000001,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 4816.296
+              },
+              {
+                "node": 2,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 94771.05283333332,
+                "p95_age_upper_us": 96968.20433333333,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3456.434
+              },
+              {
+                "node": 3,
+                "deadline_us": 250000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 46957.86329411763,
+                "p95_age_upper_us": 49108.60749999999,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 4816.296
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          },
+          {
+            "window_us": [
+              2020000,
+              3200000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 94782.27416666667,
+                "p95_age_upper_us": 97752.63324999993,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 4816.296
+              },
+              {
+                "node": 2,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 95253.22325,
+                "p95_age_upper_us": 97549.97499999995,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3456.434
+              },
+              {
+                "node": 3,
+                "deadline_us": 175000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 46630.326833333296,
+                "p95_age_upper_us": 49294.06483333329,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 4816.296
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          }
+        ],
+        "clock_domain": "同一宿主 CLOCK_MONOTONIC，发送前 <= 生成 <= recvmsg 完成",
+        "switch_timestamps_used_for_age": false,
+        "availability": "采集进程 recvmsg 完成",
+        "initial_sample": "使用每项实际报告前史，未人工置零年龄",
+        "local_offset_compatibility": {
+          "1": {
+            "compatible": true,
+            "intersection_width_us": 1075.498,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "compatible": true,
+            "intersection_width_us": 780.228,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "compatible": true,
+            "intersection_width_us": 541.989,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "maximum_send_lateness_us": 4237.835
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          2048
+        ],
+        "export_bytes": 4768,
+        "export_bytes_with_minimum_ethernet_padding": 4928,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 8000,
+        "scope": "全部业务包及预热，附加带内字节和导出帧，不含 FCS/前导码/物理间隔",
+        "within_declared_budget": true
+      }
+    }
+  ],
+  "format": "prefix 4+12 B, 无许可及版本切换字段",
+  "tasks": [
+    {
+      "node": 1,
+      "port": 2,
+      "queue_class": 0
+    },
+    {
+      "node": 2,
+      "port": 2,
+      "queue_class": 0
+    },
+    {
+      "node": 3,
+      "port": 2,
+      "queue_class": 0
+    }
+  ],
+  "requirements_window_offset_us": [
+    [
+      800000,
+      2020000
+    ],
+    [
+      2020000,
+      3200000
+    ]
+  ],
+  "deadlines_us": [
+    [
+      150000,
+      150000,
+      250000
+    ],
+    [
+      650000,
+      650000,
+      175000
+    ]
+  ],
+  "warmup_us": [
+    0,
+    800000
+  ],
+  "update": "预声明调阈值，提前排空在途报告，不重置成功门控",
+  "control_cost_basis": "RPC 序列化及全量 loopback Ethernet 帧分别保存",
+  "declared_budget": {
+    "scope": "正确性运行的宽松预声明费用上限，不是等预算性能比较",
+    "per_case_inband_per_link_bytes": [
+      1024,
+      1024,
+      2048
+    ],
+    "per_case_export_bytes_with_minimum_ethernet_padding": 5000,
+    "whole_run_control_per_node_direction_bytes": 8388608,
+    "control_directions": "四个节点各自 request/reply 共八方向，包含启动、CLI、计量操作和诊断",
+    "control_basis": "captured_loopback_ethernet_without_fcs",
+    "data_scope": "包含 800 ms 预热及全部业务包",
+    "report_age_scope": "保留实际预热，两个需求阶段分别积分",
+    "control_and_data_physical_networks": "数据为 Mininet 链路，控制为本机 loopback；不能推导生产部署开销"
+  },
+  "budget_sha256": "28058e2dbe1b422e9daa733f52726f46f1afc74ae1f4cde37c78f1e008cb8503",
+  "end_utc": "2026-10-10T03:46:38.291747+00:00",
+  "duration_seconds": 9.706416928995168,
+  "control_cost": {
+    "metered_rpc_by_kind": {
+      "installation": {
+        "calls": 128,
+        "request_serialized_bytes": 12437,
+        "reply_serialized_bytes": 3978,
+        "rpc_elapsed_us": [
+          402.673,
+          236.11,
+          139.453,
+          159.782,
+          157.342,
+          244.085,
+          140.558,
+          102.324,
+          108.654,
+          150.697,
+          80.841,
+          58.171,
+          215.026,
+          98.313,
+          139.325,
+          108.607,
+          197.646,
+          134.646,
+          93.739,
+          76.796,
+          99.238,
+          254.089,
+          130.279,
+          99.235,
+          162.096,
+          75.499,
+          68.881,
+          157.9,
+          102.994,
+          88.555,
+          62.191,
+          77.633,
+          76.561,
+          101.462,
+          105.67,
+          82.53,
+          74.989,
+          98.861,
+          76.43,
+          83.729,
+          68.88,
+          97.218,
+          317.433,
+          154.347,
+          191.883,
+          263.445,
+          114.514,
+          105.806,
+          121.617,
+          236.474,
+          168.057,
+          195.535,
+          155.294,
+          130.475,
+          180.854,
+          80.616,
+          212.929,
+          132.144,
+          178.676,
+          120.232,
+          106.709,
+          110.663,
+          145.765,
+          254.123,
+          384.779,
+          252.349,
+          215.946,
+          235.246,
+          130.757,
+          165.377,
+          215.58,
+          109.04,
+          159.953,
+          145.336,
+          90.317,
+          119.056,
+          243.762,
+          110.92,
+          82.974,
+          147.501,
+          92.613,
+          112.959,
+          75.755,
+          69.929,
+          68.701,
+          187.482,
+          142.056,
+          100.548,
+          85.308,
+          76.007,
+          78.68,
+          79.467,
+          65.558,
+          60.647,
+          62.287,
+          60.852,
+          57.989,
+          74.788,
+          55.286,
+          52.032,
+          63.804,
+          68.549,
+          57.215,
+          57.24,
+          57.546,
+          70.934,
+          190.406,
+          123.35,
+          107.786,
+          85.403,
+          91.484,
+          75.631,
+          77.838,
+          75.137,
+          79.243,
+          54.626,
+          60.023,
+          73.204,
+          92.004,
+          88.304,
+          79.689,
+          221.714,
+          74.984,
+          77.82,
+          108.762,
+          75.292,
+          69.036,
+          117.744
+        ]
+      },
+      "update": {
+        "calls": 2,
+        "request_serialized_bytes": 188,
+        "reply_serialized_bytes": 60,
+        "rpc_elapsed_us": [
+          424.087,
+          143.909
+        ]
+      }
+    },
+    "captured_control_per_node_direction_bytes": [
+      10298,
+      169752,
+      10364,
+      169752,
+      10088,
+      169764,
+      3603,
+      165924
+    ],
+    "captured_control_total_bytes": 709545,
+    "within_declared_budget": true,
+    "physical_attribution": "unattributed，含 CLI/握手/TCP/诊断/GSO，不按收包时间归因 RPC",
+    "serialization_added_to_physical": false
+  },
+  "wire_checks": {
+    "passed": true,
+    "checked_ipv4_output_frames": 608
+  },
+  "budget_check": {
+    "data": true,
+    "whole_run_control": true,
+    "scope": "预声明宽松正确性预算，不是等预算性能结论"
+  },
+  "scheduled_tt_causal_age_feasible": true,
+  "scheduled_tt_correctness_budget_feasible": true,
+  "fair_performance_comparison_completed": false,
+  "novelty_established": false,
+  "analysis_sha256": "fe4386837191923c23469ee1ce27d8f64fc4e4eed33935464fd2355cc4df6f41",
+  "analysis_dependencies": {
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e"
+  },
+  "artifact_sha256": {
+    "declared-budget.json": "28058e2dbe1b422e9daa733f52726f46f1afc74ae1f4cde37c78f1e008cb8503",
+    "rpc-operations.jsonl": "41c3722eb0464674dea7d165f33d0069f66f6171708f93513931f2974282ecf6",
+    "rpc-frame-counts.jsonl": "0f75af304ec8355fa7c913153344e05d8a5deafeb1ec41d5e600dc03239268eb",
+    "static_capacity2/collector.jsonl": "cdbc76f1b7a838a7d23b98dda7655d5bc0d6a01c3dc5635c11c8646a1a65f7b4",
+    "static_capacity2/packets.json": "407325d141a8daa52ed570a9bc2967ba98e2e4882a7360ef866b378f9617cf13",
+    "static_capacity2/destination.pcap": "ad3ccb7f2e63c580175c35562a8580785aeb4f1d4f23e60f3b488fed2ca75ed9",
+    "static_capacity2/result.json": "9878786ca140cd6ed569d256dd2f2605fbf9c94cc43c0bd5e89247926c94e64a",
+    "static_capacity2/send.jsonl": "9d1c36ddfade5a58f78e15b24dea45fdad1e7e2debeedba6d4f8d270067cbc7b",
+    "static_capacity2/destination.jsonl": "3dd6ee8d73dc8ac0b916b1bd696f80209833d986a8a8c06c5548d5773e816777",
+    "static_capacity2/wire-observations.jsonl": "9a0cb492ead1396996094674dc2469cb38c79af6c31776b5217d3808eafa360c",
+    "static_capacity2/collector.pcap": "5f95a29faab603975f658935f6b97808784b6317fbf7773840087ac9e8322576",
+    "scheduled_tt/collector.jsonl": "2d2829d1f14a240549b960d3d0b9802f86b30d7f552ed2547428c8713d33191a",
+    "scheduled_tt/packets.json": "0d1103f0be91a2c885e9acfa232e97f7d2dcbc73b00e338c8089eb51b3af1e94",
+    "scheduled_tt/destination.pcap": "a88aa1108719768e14efec39cf65da6c64602c4b0fd2fa904378f46909acc897",
+    "scheduled_tt/result.json": "6efcd2762f1f087040c3d87cebaaeff6a56aeef216e68ac0a4f049fd49356665",
+    "scheduled_tt/send.jsonl": "2980937e9233f3a3432a09a924704ac6fc121f221908c5936e0848af80a4a105",
+    "scheduled_tt/destination.jsonl": "79aadb74ec8f6d4844a868179a958298f6ca7d2d4a65b62dd6592c3b8ab9b20b",
+    "scheduled_tt/wire-observations.jsonl": "9d9bd88c263ca2cfeab5560b726f2bd26e28034ab70a54507085e0e28c0fcbba",
+    "scheduled_tt/collector.pcap": "0404990effcaadffbc75d3fda562e775beba7411c3499397cfc2f3af3e685ffb",
+    "executed-source/experiments/analyze_fork_validation.py": "fe4386837191923c23469ee1ce27d8f64fc4e4eed33935464fd2355cc4df6f41",
+    "executed-source/experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "executed-source/experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "executed-source/experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "executed-source/experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "executed-source/experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "executed-source/experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "executed-source/experiments/run_fork_validation.py": "24c3ada67ddc41cc266802ff78cf27f11b80c3ca37cb9e1e03179b55a856462a",
+    "executed-source/experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "executed-source/experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "executed-source/experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "executed-source/experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "executed-source/src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "executed-source/src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "executed-source/src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "executed-source/src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "executed-source/src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "executed-source/src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "executed-source/src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "executed-source/src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "executed-source/src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "executed-source/src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "policy_family": "TT-INT 原有控制器阈值调整的预声明适配",
+  "policies": [
+    {
+      "effective_us": -800000,
+      "policy": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1,
+            "capacity": 1
+          }
+        ],
+        "scope": "flow",
+        "ratios": [
+          1,
+          1,
+          1
+        ],
+        "counter_offsets": [
+          0,
+          0,
+          0
+        ],
+        "selection": "prefix",
+        "weights": [
+          1,
+          1,
+          1
+        ],
+        "format_name": "prefix"
+      }
+    },
+    {
+      "effective_us": 1200000,
+      "policy": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 300001,
+            "capacity": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 300001,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1,
+            "capacity": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1,
+            "capacity": 1
+          }
+        ],
+        "scope": "flow",
+        "ratios": [
+          1,
+          1,
+          1
+        ],
+        "counter_offsets": [
+          0,
+          0,
+          0
+        ],
+        "selection": "prefix",
+        "weights": [
+          1,
+          1,
+          1
+        ],
+        "format_name": "prefix"
+      }
+    }
+  ],
+  "updates": [
+    {
+      "node": 1,
+      "register": "TTEgress.time_threshold",
+      "index": 1,
+      "value": 300001
+    },
+    {
+      "node": 2,
+      "register": "TTEgress.time_threshold",
+      "index": 2,
+      "value": 300001
+    }
+  ],
+  "reset_gate_on_update": false,
+  "availability_information": "已知需求切换，无在线预测",
+  "deployment_feasibility_established": false,
+  "control_bytes": null,
+  "note": "本文件不伪造实际安装时刻或控制价目，网络运行另行核对"
+}
