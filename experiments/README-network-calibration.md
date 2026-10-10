@@ -42,13 +42,13 @@ python3 experiments/check_calibration_analysis.py --analysis data/network-entry-
 
 ## 后续有限静态挑战
 
-[预声明候选](../data/network-static-plan/n3e-candidates-01/candidate-plan.json) 每配置单元 24 个，由旧模型训练 11/29 的完整 6561 网格评分产生。包含全禁用、全 50 ms、模型排序、邻近配置及统一网格随机候选，保留去重与选入理由。当前状态为 `prepared`，没有新的网络评分。
+[预声明候选](../data/network-static-plan/n3e-candidates-01/candidate-plan.json) 每配置单元 24 个，由旧模型训练 11/29 的完整 6561 网格评分产生。包含全禁用、全 50 ms、模型排序、邻近配置及统一网格随机候选，保留去重与选入理由。该文件保留首例前的 `prepared` 状态，当时没有新的网络评分。
 
 ```bash
 python3 experiments/prepare_network_static.py --reference data/matched-reference/n3b-matched-01 --output data/network-static-plan/<new-plan-id>
 ```
 
-候选后续在 11/29 两个已消费训练业务上分别运行，预计 192 案例。实际费用上界在两业务都达标后，按最坏年龄损失上界选择。有限候选不称全网格网络最优或已经完成网络充分调参。正式比较还需动态校准、预算与未消费测试分组冻结。
+该清单作为首例前的冻结输入保持 `prepared`，实际 192 案例已完成，见 [有限静态训练](README-network-static.md)。实际费用上界在两业务都达标后，按最坏年龄损失上界选择。有限候选不称全网格网络最优或已经完成网络充分调参。正式比较还需静态重复确认、动态校准、预算与未消费测试分组冻结。
 
 ## 保留运行结果
 
