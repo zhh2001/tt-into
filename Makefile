@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: build diagnostics test validate validate3 state state-diagnostics baseline baseline-diagnostics
+.PHONY: build diagnostics test validate validate3 state state-diagnostics baseline baseline-diagnostics strong strong-ordinary
 
 build:
 	$(PYTHON) experiments/build.py
@@ -28,3 +28,9 @@ baseline:
 
 baseline-diagnostics:
 	$(PYTHON) experiments/build_baseline.py --diagnostics
+
+strong:
+	$(PYTHON) experiments/build_strong.py --format common
+
+strong-ordinary:
+	$(PYTHON) experiments/build_strong.py --format task --ordinary

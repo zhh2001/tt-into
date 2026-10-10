@@ -93,8 +93,16 @@ python3 experiments/analyze_validation.py \
 
 ## 简单基线的真实执行
 
-`baseline_int.p4` 在共同状态格式上启用共享端口门控、源端静态许可和版本更新，并加入 TT-INT 原有逐流阈值与容量参数的调参对照。诊断版完成 9 项、普通版完成 5 项网络检查，共交付 506 个业务与标定包，核查 2522 个输出 IPv4 帧。全部单元检查现为 27 项。
+`baseline_int.p4` 在共同状态格式上启用共享端口门控、源端静态许可和版本更新，并加入 TT-INT 原有逐流阈值与容量参数的调参对照。该阶段诊断版完成 9 项、普通版完成 5 项网络检查，共交付 506 个业务与标定包，核查 2522 个输出 IPv4 帧。当时全部单元检查为 27 项。
 
 有效年龄测量中，共享门控、静态许可和 TT-INT 逐流调参均能满足简单场景的三个任务。TT-INT 调参使用节点上的逐流容量 0 禁止采样，无须源端掩码实现同样分配。这些结果用于排除简单解释，不构成新算法的性能结论。两项运行的宿主时钟变化超过预设条件，保留其转发与成本数据，年龄指标标为不可评估。
 
 实现、参数、时钟条件及成本口径见[基线执行复现说明](experiments/README-baselines.md)。公开测量见[诊断版摘要](data/baseline-validation/baseline-core-02/summary.json)和[普通版摘要](data/baseline-validation/baseline-ordinary-02/summary.json)。实测图提供 [PNG](figures/baseline-validation/baseline-execution.png) 和 [PDF](figures/baseline-validation/baseline-execution.pdf)。
+
+## 间隔筛选、反馈与格式对照
+
+独立的 `strong_int.p4` 增加到包间隔偏差 Dev、源端 1:N、端口布尔反馈及 K=1 的均匀与整数加权流式蓄水池。控制端使用持久 Thrift 连接，按实际计数筛选流并更新采样比率，反馈由实际收到的报告触发。它是 INTDirector 和 INT-label 部分机制的固定路径适配，完整路径扩展、发现与策略优化尚未复现。
+
+四种格式的诊断版及任务精简格式的普通版共完成 46 项网络检查，完整交付 9450 包，核查 44704 个输出 IPv4 帧。全部单元检查现为 36 项。年龄采用同一宿主单调时钟的发送与接收因果区间，保留前史及冷启动未知状态，不依赖跨交换机时间戳相减。
+
+相同插入分配的四种格式分别为 3144、2520、2232、2136 byte-hop 的捕获开销，另列 Ethernet 最小帧长补齐的推导值。格式缩减不构成编排创新，反馈增加采样也同时增加实际成本。实现边界、复现步骤和数据入口见[固定路径适配说明](experiments/README-strong.md)。图提供[格式与蓄水池 PNG](figures/strong-validation/strong-format-and-reservoir.png)、[PDF](figures/strong-validation/strong-format-and-reservoir.pdf)及[反馈轨迹 PNG](figures/strong-validation/strong-feedback-timeline.png)、[PDF](figures/strong-validation/strong-feedback-timeline.pdf)。

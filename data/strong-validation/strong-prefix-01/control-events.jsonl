@@ -1,0 +1,784 @@
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39305864044385, "after_monotonic_ns": 39305864401700, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39305864407233, "after_monotonic_ns": 39305864567587, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39305864572035, "after_monotonic_ns": 39305864706672, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39305864710657, "after_monotonic_ns": 39305864800937, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39305864803325, "after_monotonic_ns": 39305864881812, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39305864884786, "after_monotonic_ns": 39305865014304, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39305865016356, "after_monotonic_ns": 39305865108962, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39305865113630, "after_monotonic_ns": 39305865192272, "kind": "installation"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "03"]], "before_monotonic_ns": 39305865197730, "after_monotonic_ns": 39305865260337, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39305865263708, "after_monotonic_ns": 39305865329983, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39305865332612, "after_monotonic_ns": 39305865385680, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39305865387878, "after_monotonic_ns": 39305865439088, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39305865441535, "after_monotonic_ns": 39305865497568, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39305865499577, "after_monotonic_ns": 39305865553323, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39305865555297, "after_monotonic_ns": 39305865676853, "kind": "installation"}
+{"node": 1, "method": "bm_mt_add_entry", "arguments": ["TTIngress.sampling_policy", [{"type": 0, "exact": {"key": "00000001"}, "lpm": null, "ternary": null, "valid": null, "range": null}], "TTIngress.sampling", ["01", "00000001"], {"priority": null}], "before_monotonic_ns": 39305865690465, "after_monotonic_ns": 39305865801284, "kind": "installation"}
+{"node": 1, "method": "bm_mt_add_entry", "arguments": ["TTIngress.sampling_policy", [{"type": 0, "exact": {"key": "00000002"}, "lpm": null, "ternary": null, "valid": null, "range": null}], "TTIngress.sampling", ["01", "00000001"], {"priority": null}], "before_monotonic_ns": 39305865813974, "after_monotonic_ns": 39305865896085, "kind": "installation"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39305865902992, "after_monotonic_ns": 39305866147586, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39305866153342, "after_monotonic_ns": 39305866286619, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39305866290470, "after_monotonic_ns": 39305866388840, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39305866390608, "after_monotonic_ns": 39305866480565, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39305866482171, "after_monotonic_ns": 39305866561753, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39305866563248, "after_monotonic_ns": 39305866674333, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39305866677617, "after_monotonic_ns": 39305866826865, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39305866831095, "after_monotonic_ns": 39305866901989, "kind": "installation"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "02"]], "before_monotonic_ns": 39305866906164, "after_monotonic_ns": 39305866962013, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 300000], "before_monotonic_ns": 39305866965417, "after_monotonic_ns": 39305867073196, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39305867075352, "after_monotonic_ns": 39305867163069, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39305867168777, "after_monotonic_ns": 39305867297835, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 300000], "before_monotonic_ns": 39305867300975, "after_monotonic_ns": 39305867395111, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39305867399753, "after_monotonic_ns": 39305867525168, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39305867528822, "after_monotonic_ns": 39305867648200, "kind": "installation"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39305867651795, "after_monotonic_ns": 39305867942532, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39305867946118, "after_monotonic_ns": 39305868091565, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39305868094258, "after_monotonic_ns": 39305868199517, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39305868202340, "after_monotonic_ns": 39305868282310, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39305868284495, "after_monotonic_ns": 39305868355985, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39305868357487, "after_monotonic_ns": 39305868489199, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39305868494775, "after_monotonic_ns": 39305868581763, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39305868585162, "after_monotonic_ns": 39305868662048, "kind": "installation"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "01"]], "before_monotonic_ns": 39305868665842, "after_monotonic_ns": 39305868742620, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 1], "before_monotonic_ns": 39305868748189, "after_monotonic_ns": 39305868888436, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39305868892308, "after_monotonic_ns": 39305868995087, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39305868998409, "after_monotonic_ns": 39305869072108, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 1], "before_monotonic_ns": 39305869075935, "after_monotonic_ns": 39305869143577, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39305869145766, "after_monotonic_ns": 39305869199822, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39305869201718, "after_monotonic_ns": 39305869258662, "kind": "installation"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 0], "before_monotonic_ns": 39305869261475, "after_monotonic_ns": 39305869438924, "kind": "installation"}
+{"node": 4, "method": "bm_register_reset", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39305869442112, "after_monotonic_ns": 39305869915167, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39305869918816, "after_monotonic_ns": 39305871183683, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39305871187684, "after_monotonic_ns": 39305871830390, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39305871833361, "after_monotonic_ns": 39305872469858, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39305872472619, "after_monotonic_ns": 39305873258773, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39305873262704, "after_monotonic_ns": 39305873900779, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39305873904487, "after_monotonic_ns": 39305874571160, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39305874574287, "after_monotonic_ns": 39305875191470, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39305875194986, "after_monotonic_ns": 39305875844439, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39305875847349, "after_monotonic_ns": 39305876518443, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39305876526380, "after_monotonic_ns": 39305877796347, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39305877798989, "after_monotonic_ns": 39305878496167, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39305878498860, "after_monotonic_ns": 39305879151999, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39305879154236, "after_monotonic_ns": 39305879771994, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39305879775320, "after_monotonic_ns": 39305880406116, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39305880408978, "after_monotonic_ns": 39305881004168, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39305881006218, "after_monotonic_ns": 39305881681696, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39305881683804, "after_monotonic_ns": 39305882351285, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39305882352958, "after_monotonic_ns": 39305882980359, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39305882982663, "after_monotonic_ns": 39305883690061, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39305883692264, "after_monotonic_ns": 39305884363435, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39305884369631, "after_monotonic_ns": 39305884996073, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39305884997988, "after_monotonic_ns": 39305885584751, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39305885587010, "after_monotonic_ns": 39305886207527, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39305886209515, "after_monotonic_ns": 39305886841453, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39305886844746, "after_monotonic_ns": 39305887506879, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39305887510096, "after_monotonic_ns": 39305888176320, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39305888178594, "after_monotonic_ns": 39305888800777, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39305888804247, "after_monotonic_ns": 39305889410337, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39305889420700, "after_monotonic_ns": 39305890026564, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39305890028417, "after_monotonic_ns": 39305890665101, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39305890666928, "after_monotonic_ns": 39305891293226, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39305891295076, "after_monotonic_ns": 39305891941590, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39305891943877, "after_monotonic_ns": 39305892605004, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39309368335190, "after_monotonic_ns": 39309373035796, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39309373049358, "after_monotonic_ns": 39309375866308, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39309375874032, "after_monotonic_ns": 39309378731659, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39309378737366, "after_monotonic_ns": 39309380353508, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39309380358668, "after_monotonic_ns": 39309381942353, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39309381946840, "after_monotonic_ns": 39309383195947, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39309383201809, "after_monotonic_ns": 39309384454711, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39309384460283, "after_monotonic_ns": 39309385583074, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39309385586581, "after_monotonic_ns": 39309386701032, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39309386703768, "after_monotonic_ns": 39309387827056, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39309387830660, "after_monotonic_ns": 39309388939744, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39309388943885, "after_monotonic_ns": 39309390122056, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39309390124934, "after_monotonic_ns": 39309391251924, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39309391255154, "after_monotonic_ns": 39309392413262, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39309392415887, "after_monotonic_ns": 39309393558080, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39309393561062, "after_monotonic_ns": 39309394801832, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39309394804835, "after_monotonic_ns": 39309395945521, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39309395947727, "after_monotonic_ns": 39309397082816, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39309397085443, "after_monotonic_ns": 39309398156276, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39309398158244, "after_monotonic_ns": 39309399315694, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39309399318732, "after_monotonic_ns": 39309400536522, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39309400539352, "after_monotonic_ns": 39309401743833, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39309401746571, "after_monotonic_ns": 39309402881043, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39309402884406, "after_monotonic_ns": 39309404006631, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39309404010135, "after_monotonic_ns": 39309405206638, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39309405210323, "after_monotonic_ns": 39309406301462, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39309406303770, "after_monotonic_ns": 39309407377352, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39309407381132, "after_monotonic_ns": 39309408525808, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39309408529412, "after_monotonic_ns": 39309409737177, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39309409740343, "after_monotonic_ns": 39309410913266, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39309410916793, "after_monotonic_ns": 39309412341460, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39309412344762, "after_monotonic_ns": 39309413832163, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39309413835887, "after_monotonic_ns": 39309415026417, "kind": "diagnostic_read"}
+{"node": 4, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39309415030721, "after_monotonic_ns": 39309416360568, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39309416470756, "after_monotonic_ns": 39309416831166, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39309416853594, "after_monotonic_ns": 39309417200419, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39309417260598, "after_monotonic_ns": 39309417583033, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39309417586401, "after_monotonic_ns": 39309417860450, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39309417930261, "after_monotonic_ns": 39309418201267, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39309418205065, "after_monotonic_ns": 39309418460051, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39309445362972, "after_monotonic_ns": 39309445700503, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39309445705612, "after_monotonic_ns": 39309445885692, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39309445888747, "after_monotonic_ns": 39309446046788, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39309446050811, "after_monotonic_ns": 39309446282832, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39309446286911, "after_monotonic_ns": 39309446383182, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39309446385168, "after_monotonic_ns": 39309446480211, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39309446483072, "after_monotonic_ns": 39309446576234, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39309446580679, "after_monotonic_ns": 39309446670831, "kind": "installation"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "03"]], "before_monotonic_ns": 39309446676756, "after_monotonic_ns": 39309446737942, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39309446741237, "after_monotonic_ns": 39309446797559, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39309446799806, "after_monotonic_ns": 39309446848213, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39309446850466, "after_monotonic_ns": 39309446917618, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39309446921042, "after_monotonic_ns": 39309446975373, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39309446977361, "after_monotonic_ns": 39309447036650, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39309447038615, "after_monotonic_ns": 39309447087460, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39309447092477, "after_monotonic_ns": 39309447199330, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39309447204042, "after_monotonic_ns": 39309447267175, "kind": "installation"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39309447270269, "after_monotonic_ns": 39309447415825, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39309447417494, "after_monotonic_ns": 39309447539809, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39309447541450, "after_monotonic_ns": 39309447640583, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39309447642321, "after_monotonic_ns": 39309447749036, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39309447750589, "after_monotonic_ns": 39309447837730, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39309447840528, "after_monotonic_ns": 39309447932300, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39309447933930, "after_monotonic_ns": 39309448035164, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39309448038085, "after_monotonic_ns": 39309448121580, "kind": "installation"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "02"]], "before_monotonic_ns": 39309448126274, "after_monotonic_ns": 39309448198457, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39309448201317, "after_monotonic_ns": 39309448258694, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39309448261533, "after_monotonic_ns": 39309448312831, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39309448314825, "after_monotonic_ns": 39309448409776, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39309448412773, "after_monotonic_ns": 39309448477544, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39309448480276, "after_monotonic_ns": 39309448531585, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39309448533584, "after_monotonic_ns": 39309448579986, "kind": "installation"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39309448582306, "after_monotonic_ns": 39309448732870, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39309448734471, "after_monotonic_ns": 39309448859872, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39309448861375, "after_monotonic_ns": 39309448976048, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39309448977528, "after_monotonic_ns": 39309449061249, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39309449062765, "after_monotonic_ns": 39309449148454, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39309449151240, "after_monotonic_ns": 39309449264767, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39309449268077, "after_monotonic_ns": 39309449376500, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39309449381473, "after_monotonic_ns": 39309449470102, "kind": "installation"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "01"]], "before_monotonic_ns": 39309449474512, "after_monotonic_ns": 39309449556347, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39309449560956, "after_monotonic_ns": 39309449635048, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39309449638318, "after_monotonic_ns": 39309449704855, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39309449707077, "after_monotonic_ns": 39309449787899, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39309449791383, "after_monotonic_ns": 39309449865705, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39309449868915, "after_monotonic_ns": 39309449949651, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39309449952625, "after_monotonic_ns": 39309450022443, "kind": "installation"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 0], "before_monotonic_ns": 39309450025771, "after_monotonic_ns": 39309450143871, "kind": "installation"}
+{"node": 4, "method": "bm_register_reset", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39309450165781, "after_monotonic_ns": 39309450789549, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39309450795017, "after_monotonic_ns": 39309451391993, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39309451395351, "after_monotonic_ns": 39309451936610, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39309451940977, "after_monotonic_ns": 39309452426820, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39309452429464, "after_monotonic_ns": 39309452879982, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39309452883062, "after_monotonic_ns": 39309453316662, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39309453318414, "after_monotonic_ns": 39309453786927, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39309453790421, "after_monotonic_ns": 39309454257506, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39309454261091, "after_monotonic_ns": 39309454946468, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39309454949809, "after_monotonic_ns": 39309455416901, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39309455420651, "after_monotonic_ns": 39309456055784, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39309456058838, "after_monotonic_ns": 39309456591823, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39309456594791, "after_monotonic_ns": 39309457078337, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39309457081436, "after_monotonic_ns": 39309457515512, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39309457517997, "after_monotonic_ns": 39309457993424, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39309457996580, "after_monotonic_ns": 39309458460212, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39309458462799, "after_monotonic_ns": 39309458906323, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39309458908815, "after_monotonic_ns": 39309459345103, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39309459347196, "after_monotonic_ns": 39309459779784, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39309459783276, "after_monotonic_ns": 39309460365662, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39309460368311, "after_monotonic_ns": 39309460827398, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39309460829984, "after_monotonic_ns": 39309461278733, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39309461280872, "after_monotonic_ns": 39309461730409, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39309461733003, "after_monotonic_ns": 39309462177110, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39309462178706, "after_monotonic_ns": 39309462600593, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39309462602290, "after_monotonic_ns": 39309463020865, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39309463022373, "after_monotonic_ns": 39309463459299, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39309463461471, "after_monotonic_ns": 39309463898588, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39309463901058, "after_monotonic_ns": 39309464388349, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39309464391484, "after_monotonic_ns": 39309464853652, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39309464855582, "after_monotonic_ns": 39309465313572, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39309465316709, "after_monotonic_ns": 39309465790844, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39309465792947, "after_monotonic_ns": 39309466256642, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39309466260126, "after_monotonic_ns": 39309466704916, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000003"]], "before_monotonic_ns": 39309466717823, "after_monotonic_ns": 39309466902466, "kind": "installation"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39310948981661, "after_monotonic_ns": 39310950286478, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39310950291471, "after_monotonic_ns": 39310951390608, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39310951394623, "after_monotonic_ns": 39310952515367, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39310952518731, "after_monotonic_ns": 39310953614929, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39310953617600, "after_monotonic_ns": 39310954679996, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39310954682066, "after_monotonic_ns": 39310955745921, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39310955750521, "after_monotonic_ns": 39310956897475, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39310956902955, "after_monotonic_ns": 39310957970177, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39310957972544, "after_monotonic_ns": 39310959082474, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39310959087014, "after_monotonic_ns": 39310960615929, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39310960619808, "after_monotonic_ns": 39310961962819, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39310961966704, "after_monotonic_ns": 39310963067501, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39310963070922, "after_monotonic_ns": 39310964170803, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39310964172825, "after_monotonic_ns": 39310965284679, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39310965289138, "after_monotonic_ns": 39310966359158, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39310966362240, "after_monotonic_ns": 39310967787669, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39310967791618, "after_monotonic_ns": 39310968913432, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39310968916683, "after_monotonic_ns": 39310969997008, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39310969999406, "after_monotonic_ns": 39310971090461, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39310971092902, "after_monotonic_ns": 39310972378967, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39310972382913, "after_monotonic_ns": 39310973474006, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39310973476510, "after_monotonic_ns": 39310974582444, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39310974585237, "after_monotonic_ns": 39310975672080, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39310975674277, "after_monotonic_ns": 39310977054682, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39310977069938, "after_monotonic_ns": 39310978647969, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39310978653154, "after_monotonic_ns": 39310979849071, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39310979853492, "after_monotonic_ns": 39310981051101, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39310981054166, "after_monotonic_ns": 39310982669282, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39310982673270, "after_monotonic_ns": 39310983797578, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39310983801399, "after_monotonic_ns": 39310984949945, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39310984953937, "after_monotonic_ns": 39310986021763, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39310986024937, "after_monotonic_ns": 39310987094370, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39310987096892, "after_monotonic_ns": 39310988279371, "kind": "diagnostic_read"}
+{"node": 4, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39310988285339, "after_monotonic_ns": 39310989382580, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39310989435467, "after_monotonic_ns": 39310989734636, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39310989737250, "after_monotonic_ns": 39310990067225, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39310990127058, "after_monotonic_ns": 39310990434538, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39310990438081, "after_monotonic_ns": 39310990739195, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39310990795491, "after_monotonic_ns": 39310991088847, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39310991092059, "after_monotonic_ns": 39310991381592, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39311016981960, "after_monotonic_ns": 39311017349595, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39311017356472, "after_monotonic_ns": 39311017589562, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39311017594016, "after_monotonic_ns": 39311017748582, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39311017751250, "after_monotonic_ns": 39311017881007, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39311017884523, "after_monotonic_ns": 39311017996196, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39311017998594, "after_monotonic_ns": 39311018113415, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39311018116771, "after_monotonic_ns": 39311018423656, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39311018429876, "after_monotonic_ns": 39311018578107, "kind": "installation"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "03"]], "before_monotonic_ns": 39311018584743, "after_monotonic_ns": 39311018684231, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39311018689281, "after_monotonic_ns": 39311018788435, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39311018794886, "after_monotonic_ns": 39311018903972, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39311018908529, "after_monotonic_ns": 39311019036902, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39311019041585, "after_monotonic_ns": 39311019165583, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39311019169468, "after_monotonic_ns": 39311019241712, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39311019244123, "after_monotonic_ns": 39311019294841, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39311019300806, "after_monotonic_ns": 39311019486533, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39311019495385, "after_monotonic_ns": 39311019656225, "kind": "installation"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39311019665159, "after_monotonic_ns": 39311020036072, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39311020039815, "after_monotonic_ns": 39311020197434, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39311020201086, "after_monotonic_ns": 39311020339837, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39311020343055, "after_monotonic_ns": 39311020430923, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39311020432728, "after_monotonic_ns": 39311020636384, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39311020638202, "after_monotonic_ns": 39311020741309, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39311020743349, "after_monotonic_ns": 39311020840321, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39311020846992, "after_monotonic_ns": 39311020927628, "kind": "installation"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "02"]], "before_monotonic_ns": 39311020932757, "after_monotonic_ns": 39311021016547, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39311021021137, "after_monotonic_ns": 39311021083011, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39311021085354, "after_monotonic_ns": 39311021152387, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39311021154803, "after_monotonic_ns": 39311021208040, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39311021210680, "after_monotonic_ns": 39311021257398, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39311021259482, "after_monotonic_ns": 39311021307364, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39311021309427, "after_monotonic_ns": 39311021356795, "kind": "installation"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39311021359561, "after_monotonic_ns": 39311021560478, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39311021565554, "after_monotonic_ns": 39311021843976, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39311021847048, "after_monotonic_ns": 39311021995264, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39311021998220, "after_monotonic_ns": 39311022087540, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39311022089337, "after_monotonic_ns": 39311022163307, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39311022164697, "after_monotonic_ns": 39311022286608, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39311022291622, "after_monotonic_ns": 39311022405210, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39311022409257, "after_monotonic_ns": 39311022479748, "kind": "installation"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "01"]], "before_monotonic_ns": 39311022483762, "after_monotonic_ns": 39311022539470, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39311022542298, "after_monotonic_ns": 39311022595951, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39311022598167, "after_monotonic_ns": 39311022644112, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39311022646570, "after_monotonic_ns": 39311022694499, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39311022696591, "after_monotonic_ns": 39311022754724, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39311022758716, "after_monotonic_ns": 39311022821851, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39311022824605, "after_monotonic_ns": 39311022875122, "kind": "installation"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 0], "before_monotonic_ns": 39311022878468, "after_monotonic_ns": 39311022956219, "kind": "installation"}
+{"node": 4, "method": "bm_register_reset", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39311022958388, "after_monotonic_ns": 39311023380131, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39311023383417, "after_monotonic_ns": 39311023853300, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39311023855549, "after_monotonic_ns": 39311024294665, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39311024296790, "after_monotonic_ns": 39311024745514, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39311024750853, "after_monotonic_ns": 39311025235374, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39311025238440, "after_monotonic_ns": 39311025679639, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39311025681722, "after_monotonic_ns": 39311026138440, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39311026143388, "after_monotonic_ns": 39311026650076, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39311026654223, "after_monotonic_ns": 39311027198037, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39311027202192, "after_monotonic_ns": 39311027694767, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39311027717775, "after_monotonic_ns": 39311028347693, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39311028354584, "after_monotonic_ns": 39311029012063, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39311029015533, "after_monotonic_ns": 39311029482317, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39311029486475, "after_monotonic_ns": 39311029953943, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39311029956356, "after_monotonic_ns": 39311030401858, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39311030407203, "after_monotonic_ns": 39311030841115, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39311030844514, "after_monotonic_ns": 39311031323910, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39311031326071, "after_monotonic_ns": 39311032035956, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39311032044538, "after_monotonic_ns": 39311032610367, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39311032617453, "after_monotonic_ns": 39311033420427, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39311033427016, "after_monotonic_ns": 39311034201564, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39311034205488, "after_monotonic_ns": 39311034664634, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39311034666747, "after_monotonic_ns": 39311035142150, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39311035144357, "after_monotonic_ns": 39311035621976, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39311035626138, "after_monotonic_ns": 39311036090346, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39311036092909, "after_monotonic_ns": 39311036535053, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39311036537435, "after_monotonic_ns": 39311037007966, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39311037011627, "after_monotonic_ns": 39311037670934, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39311037676570, "after_monotonic_ns": 39311038219336, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39311038223842, "after_monotonic_ns": 39311038697922, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39311038700926, "after_monotonic_ns": 39311039171530, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39311039177012, "after_monotonic_ns": 39311039675088, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39311039680206, "after_monotonic_ns": 39311040207259, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39311040212008, "after_monotonic_ns": 39311040706454, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["00", "00000001"]], "before_monotonic_ns": 39311040721057, "after_monotonic_ns": 39311040892948, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["00", "00000001"]], "before_monotonic_ns": 39311040903364, "after_monotonic_ns": 39311041023613, "kind": "installation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 1], "before_monotonic_ns": 39312220284349, "after_monotonic_ns": 39312220504538, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 1], "before_monotonic_ns": 39312220511337, "after_monotonic_ns": 39312220607858, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["00", "00000002"]], "before_monotonic_ns": 39312220629183, "after_monotonic_ns": 39312220758501, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 2], "before_monotonic_ns": 39312220766503, "after_monotonic_ns": 39312220893621, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 2], "before_monotonic_ns": 39312220897515, "after_monotonic_ns": 39312221003634, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["00", "00000002"]], "before_monotonic_ns": 39312221022587, "after_monotonic_ns": 39312221139638, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 1], "before_monotonic_ns": 39312613742679, "after_monotonic_ns": 39312614047200, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 1], "before_monotonic_ns": 39312614059486, "after_monotonic_ns": 39312614221936, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["00", "00000002"]], "before_monotonic_ns": 39312614269854, "after_monotonic_ns": 39312614401796, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 2], "before_monotonic_ns": 39312614408081, "after_monotonic_ns": 39312614541659, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 2], "before_monotonic_ns": 39312614547348, "after_monotonic_ns": 39312614663109, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["00", "00000001"]], "before_monotonic_ns": 39312614710042, "after_monotonic_ns": 39312614881583, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 1], "before_monotonic_ns": 39313017758007, "after_monotonic_ns": 39313018368529, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 1], "before_monotonic_ns": 39313018382934, "after_monotonic_ns": 39313018587423, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39313018617776, "after_monotonic_ns": 39313018886582, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 2], "before_monotonic_ns": 39313018897337, "after_monotonic_ns": 39313019123225, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 2], "before_monotonic_ns": 39313019130606, "after_monotonic_ns": 39313019353633, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["00", "00000002"]], "before_monotonic_ns": 39313019379414, "after_monotonic_ns": 39313019632357, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 1], "before_monotonic_ns": 39313422525493, "after_monotonic_ns": 39313422922302, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 1], "before_monotonic_ns": 39313422932556, "after_monotonic_ns": 39313423113308, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39313423140747, "after_monotonic_ns": 39313423463267, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 2], "before_monotonic_ns": 39313423473683, "after_monotonic_ns": 39313423665549, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 2], "before_monotonic_ns": 39313423673069, "after_monotonic_ns": 39313423860553, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["00", "00000001"]], "before_monotonic_ns": 39313423884551, "after_monotonic_ns": 39313424096772, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 1], "before_monotonic_ns": 39313817031351, "after_monotonic_ns": 39313817933102, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 1], "before_monotonic_ns": 39313817944324, "after_monotonic_ns": 39313818157171, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000002"]], "before_monotonic_ns": 39313818186684, "after_monotonic_ns": 39313818476601, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 2], "before_monotonic_ns": 39313818679667, "after_monotonic_ns": 39313818947597, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 2], "before_monotonic_ns": 39313818954979, "after_monotonic_ns": 39313819186402, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["00", "00000002"]], "before_monotonic_ns": 39313819209756, "after_monotonic_ns": 39313819487963, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 1], "before_monotonic_ns": 39314223009302, "after_monotonic_ns": 39314223319619, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 1], "before_monotonic_ns": 39314223332835, "after_monotonic_ns": 39314223534822, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39314223600351, "after_monotonic_ns": 39314223848856, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.packet_count", 2], "before_monotonic_ns": 39314223857468, "after_monotonic_ns": 39314224048861, "kind": "online_observation"}
+{"node": 1, "method": "bm_register_read", "arguments": ["TTIngress.arrival_dev", 2], "before_monotonic_ns": 39314224056234, "after_monotonic_ns": 39314224237751, "kind": "online_observation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["00", "00000001"]], "before_monotonic_ns": 39314224288118, "after_monotonic_ns": 39314224467187, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39314772344571, "after_monotonic_ns": 39314775040139, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39314775046994, "after_monotonic_ns": 39314776830873, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39314776834866, "after_monotonic_ns": 39314778208880, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39314778212646, "after_monotonic_ns": 39314779458809, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39314779462287, "after_monotonic_ns": 39314780710206, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39314780713416, "after_monotonic_ns": 39314781974841, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39314781978823, "after_monotonic_ns": 39314783338304, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39314783342268, "after_monotonic_ns": 39314784544697, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39314784547920, "after_monotonic_ns": 39314785814770, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39314785818339, "after_monotonic_ns": 39314787212677, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39314787217044, "after_monotonic_ns": 39314788645265, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39314788649610, "after_monotonic_ns": 39314789941513, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39314789945406, "after_monotonic_ns": 39314791290625, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39314791294125, "after_monotonic_ns": 39314792727420, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39314792731048, "after_monotonic_ns": 39314794187205, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39314794192057, "after_monotonic_ns": 39314795770496, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39314795773900, "after_monotonic_ns": 39314797060623, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39314797064062, "after_monotonic_ns": 39314798340149, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39314798343739, "after_monotonic_ns": 39314799522012, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39314799525199, "after_monotonic_ns": 39314800720801, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39314800724512, "after_monotonic_ns": 39314801961402, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39314801964655, "after_monotonic_ns": 39314803929780, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39314803934184, "after_monotonic_ns": 39314805248731, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39314805253037, "after_monotonic_ns": 39314806606215, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39314806613606, "after_monotonic_ns": 39314808183310, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39314808187265, "after_monotonic_ns": 39314809424631, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39314809427902, "after_monotonic_ns": 39314810686414, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39314810692707, "after_monotonic_ns": 39314811979894, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39314811983731, "after_monotonic_ns": 39314813201962, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39314813205518, "after_monotonic_ns": 39314814369004, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39314814373094, "after_monotonic_ns": 39314815631959, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39314815634251, "after_monotonic_ns": 39314816944127, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39314816946814, "after_monotonic_ns": 39314818524853, "kind": "diagnostic_read"}
+{"node": 4, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39314818528383, "after_monotonic_ns": 39314820237801, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39314820768086, "after_monotonic_ns": 39314821121442, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39314821124674, "after_monotonic_ns": 39314821426724, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39314821484485, "after_monotonic_ns": 39314821840241, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39314821842804, "after_monotonic_ns": 39314822111400, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39314822173846, "after_monotonic_ns": 39314822520785, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39314822523301, "after_monotonic_ns": 39314822812556, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39314849567911, "after_monotonic_ns": 39314850056888, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39314850062770, "after_monotonic_ns": 39314850257530, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39314850261324, "after_monotonic_ns": 39314850440437, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39314850443588, "after_monotonic_ns": 39314850560886, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39314850564634, "after_monotonic_ns": 39314850675507, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39314850677503, "after_monotonic_ns": 39314850764053, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39314850765698, "after_monotonic_ns": 39314850848203, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39314850852086, "after_monotonic_ns": 39314850970179, "kind": "installation"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "03"]], "before_monotonic_ns": 39314850977028, "after_monotonic_ns": 39314851119784, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39314851124488, "after_monotonic_ns": 39314851204022, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 3], "before_monotonic_ns": 39314851208174, "after_monotonic_ns": 39314851263977, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39314851266371, "after_monotonic_ns": 39314851329359, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39314851332653, "after_monotonic_ns": 39314851405017, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 3], "before_monotonic_ns": 39314851407148, "after_monotonic_ns": 39314851461110, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39314851463232, "after_monotonic_ns": 39314851519839, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39314851526579, "after_monotonic_ns": 39314851622393, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39314851627737, "after_monotonic_ns": 39314851729295, "kind": "installation"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39314851732506, "after_monotonic_ns": 39314851920380, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39314851923308, "after_monotonic_ns": 39314852160164, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39314852163399, "after_monotonic_ns": 39314852320801, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39314852323707, "after_monotonic_ns": 39314852416214, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39314852417734, "after_monotonic_ns": 39314852520885, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39314852522445, "after_monotonic_ns": 39314852613189, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39314852615056, "after_monotonic_ns": 39314852725103, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39314852728928, "after_monotonic_ns": 39314852809221, "kind": "installation"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "02"]], "before_monotonic_ns": 39314852814113, "after_monotonic_ns": 39314852873873, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39314852876878, "after_monotonic_ns": 39314852934669, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 3], "before_monotonic_ns": 39314852937563, "after_monotonic_ns": 39314852989492, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39314852991732, "after_monotonic_ns": 39314853039355, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39314853041692, "after_monotonic_ns": 39314853092853, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 3], "before_monotonic_ns": 39314853095609, "after_monotonic_ns": 39314853170303, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39314853173951, "after_monotonic_ns": 39314853263136, "kind": "installation"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39314853267173, "after_monotonic_ns": 39314853475841, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39314853478008, "after_monotonic_ns": 39314853622123, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39314853624654, "after_monotonic_ns": 39314853888089, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39314853891365, "after_monotonic_ns": 39314854074747, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39314854077135, "after_monotonic_ns": 39314854219577, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39314854221887, "after_monotonic_ns": 39314854474473, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39314854477830, "after_monotonic_ns": 39314854608360, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39314854613614, "after_monotonic_ns": 39314854740552, "kind": "installation"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "01"]], "before_monotonic_ns": 39314854744943, "after_monotonic_ns": 39314854826139, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39314854831118, "after_monotonic_ns": 39314854909356, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 3], "before_monotonic_ns": 39314854912405, "after_monotonic_ns": 39314854978103, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39314854980678, "after_monotonic_ns": 39314855045067, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39314855048476, "after_monotonic_ns": 39314855109484, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 3], "before_monotonic_ns": 39314855111635, "after_monotonic_ns": 39314855167170, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39314855169254, "after_monotonic_ns": 39314855236752, "kind": "installation"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 0], "before_monotonic_ns": 39314855241665, "after_monotonic_ns": 39314855328542, "kind": "installation"}
+{"node": 4, "method": "bm_register_reset", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39314855331859, "after_monotonic_ns": 39314856531249, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39314856543880, "after_monotonic_ns": 39314857163697, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39314857166902, "after_monotonic_ns": 39314858438025, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39314858441745, "after_monotonic_ns": 39314859014693, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39314859017971, "after_monotonic_ns": 39314860318253, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39314860322440, "after_monotonic_ns": 39314860953708, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39314860957582, "after_monotonic_ns": 39314861555687, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39314861558968, "after_monotonic_ns": 39314862117544, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39314862120684, "after_monotonic_ns": 39314863286209, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39314863288835, "after_monotonic_ns": 39314863849967, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39314863854069, "after_monotonic_ns": 39314864491453, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39314864494803, "after_monotonic_ns": 39314865071067, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39314865074150, "after_monotonic_ns": 39314865548952, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39314865552316, "after_monotonic_ns": 39314866007588, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39314866009453, "after_monotonic_ns": 39314867145612, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39314867148590, "after_monotonic_ns": 39314867734435, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39314867737718, "after_monotonic_ns": 39314868322848, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39314868325007, "after_monotonic_ns": 39314868862259, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39314868863907, "after_monotonic_ns": 39314869975320, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39314869978155, "after_monotonic_ns": 39314870580735, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39314870582795, "after_monotonic_ns": 39314871113306, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39314871115286, "after_monotonic_ns": 39314871688116, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39314871691603, "after_monotonic_ns": 39314872287811, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39314872290318, "after_monotonic_ns": 39314873370781, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39314873373360, "after_monotonic_ns": 39314873951118, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39314873954693, "after_monotonic_ns": 39314874537781, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39314874540471, "after_monotonic_ns": 39314875145280, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39314875147252, "after_monotonic_ns": 39314876337028, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39314876341221, "after_monotonic_ns": 39314876922256, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39314876925552, "after_monotonic_ns": 39314877493873, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39314877496322, "after_monotonic_ns": 39314878572257, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39314878575099, "after_monotonic_ns": 39314879323259, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39314879326820, "after_monotonic_ns": 39314879892607, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39314879895544, "after_monotonic_ns": 39314880526167, "kind": "cold_start_reset"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 1], "before_monotonic_ns": 39314880532049, "after_monotonic_ns": 39314880629413, "kind": "loss_injection"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 0], "before_monotonic_ns": 39316029195586, "after_monotonic_ns": 39316029606558, "kind": "loss_injection"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39317393153012, "after_monotonic_ns": 39317396915460, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39317396927499, "after_monotonic_ns": 39317399907332, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39317399915219, "after_monotonic_ns": 39317402090688, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39317402097414, "after_monotonic_ns": 39317403291263, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39317403295919, "after_monotonic_ns": 39317404456260, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39317404459351, "after_monotonic_ns": 39317405771538, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39317405777022, "after_monotonic_ns": 39317406942865, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39317406946989, "after_monotonic_ns": 39317408054393, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39317408058029, "after_monotonic_ns": 39317409142967, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39317409145773, "after_monotonic_ns": 39317410204523, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39317410206832, "after_monotonic_ns": 39317411267819, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39317411269981, "after_monotonic_ns": 39317412370580, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39317412373354, "after_monotonic_ns": 39317413481033, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39317413484990, "after_monotonic_ns": 39317414570279, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39317414572556, "after_monotonic_ns": 39317415711165, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39317415713771, "after_monotonic_ns": 39317416919873, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39317416924156, "after_monotonic_ns": 39317418174146, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39317418178224, "after_monotonic_ns": 39317419328009, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39317419331643, "after_monotonic_ns": 39317420569893, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39317420572808, "after_monotonic_ns": 39317421872047, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39317421875897, "after_monotonic_ns": 39317423016336, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39317423019740, "after_monotonic_ns": 39317424250667, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39317424254277, "after_monotonic_ns": 39317425336518, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39317425339314, "after_monotonic_ns": 39317426622829, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39317426627503, "after_monotonic_ns": 39317428643633, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39317428649119, "after_monotonic_ns": 39317429746552, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39317429751022, "after_monotonic_ns": 39317430849110, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39317430854211, "after_monotonic_ns": 39317432052991, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39317432059580, "after_monotonic_ns": 39317433232050, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39317433236651, "after_monotonic_ns": 39317434536037, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39317434541496, "after_monotonic_ns": 39317435659044, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39317435661861, "after_monotonic_ns": 39317436851253, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39317436855841, "after_monotonic_ns": 39317438157653, "kind": "diagnostic_read"}
+{"node": 4, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39317438161233, "after_monotonic_ns": 39317439315082, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39317439470235, "after_monotonic_ns": 39317439791901, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39317439794325, "after_monotonic_ns": 39317440095752, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39317440152790, "after_monotonic_ns": 39317440448690, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39317440451353, "after_monotonic_ns": 39317440723799, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39317440779042, "after_monotonic_ns": 39317441109063, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39317441112179, "after_monotonic_ns": 39317441364974, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39317465352012, "after_monotonic_ns": 39317465949641, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39317465954802, "after_monotonic_ns": 39317466192567, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39317466196985, "after_monotonic_ns": 39317466345811, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39317466348918, "after_monotonic_ns": 39317466441046, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39317466442914, "after_monotonic_ns": 39317466522509, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39317466524534, "after_monotonic_ns": 39317466600736, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39317466602296, "after_monotonic_ns": 39317466697395, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39317466701590, "after_monotonic_ns": 39317466803193, "kind": "installation"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "03"]], "before_monotonic_ns": 39317466808446, "after_monotonic_ns": 39317466890442, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39317466894481, "after_monotonic_ns": 39317466991285, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 3], "before_monotonic_ns": 39317466997278, "after_monotonic_ns": 39317467105101, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39317467109701, "after_monotonic_ns": 39317467191739, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39317467195265, "after_monotonic_ns": 39317467270201, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 3], "before_monotonic_ns": 39317467272204, "after_monotonic_ns": 39317467372236, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39317467376135, "after_monotonic_ns": 39317467445319, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39317467451113, "after_monotonic_ns": 39317467546170, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39317467551098, "after_monotonic_ns": 39317467680977, "kind": "installation"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39317467685858, "after_monotonic_ns": 39317467928523, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39317467931175, "after_monotonic_ns": 39317468106272, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39317468109000, "after_monotonic_ns": 39317468233568, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39317468235613, "after_monotonic_ns": 39317468317944, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39317468319682, "after_monotonic_ns": 39317468458075, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39317468460068, "after_monotonic_ns": 39317468548418, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39317468550170, "after_monotonic_ns": 39317468689724, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39317468694249, "after_monotonic_ns": 39317468806976, "kind": "installation"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "02"]], "before_monotonic_ns": 39317468831373, "after_monotonic_ns": 39317468910442, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39317468914245, "after_monotonic_ns": 39317468968429, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 3], "before_monotonic_ns": 39317468970435, "after_monotonic_ns": 39317469026863, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39317469030049, "after_monotonic_ns": 39317469086256, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39317469088507, "after_monotonic_ns": 39317469139276, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 3], "before_monotonic_ns": 39317469141352, "after_monotonic_ns": 39317469189987, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39317469191921, "after_monotonic_ns": 39317469240486, "kind": "installation"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39317469242965, "after_monotonic_ns": 39317469490892, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39317469496162, "after_monotonic_ns": 39317469800186, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39317469803382, "after_monotonic_ns": 39317469980227, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39317469984086, "after_monotonic_ns": 39317470212182, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39317470214543, "after_monotonic_ns": 39317470307454, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39317470311064, "after_monotonic_ns": 39317470399347, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39317470401226, "after_monotonic_ns": 39317470478948, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["01"]], "before_monotonic_ns": 39317470482889, "after_monotonic_ns": 39317470561546, "kind": "installation"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "01"]], "before_monotonic_ns": 39317470565527, "after_monotonic_ns": 39317470640893, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39317470645399, "after_monotonic_ns": 39317470726610, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 3], "before_monotonic_ns": 39317470730163, "after_monotonic_ns": 39317470834596, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39317470837504, "after_monotonic_ns": 39317470902688, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 258, 100000], "before_monotonic_ns": 39317470905868, "after_monotonic_ns": 39317470958243, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 3], "before_monotonic_ns": 39317470960318, "after_monotonic_ns": 39317471008684, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39317471010921, "after_monotonic_ns": 39317471078598, "kind": "installation"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 0], "before_monotonic_ns": 39317471083447, "after_monotonic_ns": 39317471170987, "kind": "installation"}
+{"node": 4, "method": "bm_register_reset", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39317471173780, "after_monotonic_ns": 39317471783151, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39317471786349, "after_monotonic_ns": 39317472259520, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39317472261730, "after_monotonic_ns": 39317472718980, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39317472720954, "after_monotonic_ns": 39317473246770, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39317473250345, "after_monotonic_ns": 39317473865759, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39317473869685, "after_monotonic_ns": 39317474459671, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39317474463352, "after_monotonic_ns": 39317474905380, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39317474907739, "after_monotonic_ns": 39317475337215, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39317475339172, "after_monotonic_ns": 39317475791326, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39317475794421, "after_monotonic_ns": 39317476256181, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39317476259421, "after_monotonic_ns": 39317476729705, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39317476731387, "after_monotonic_ns": 39317477165413, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39317477167267, "after_monotonic_ns": 39317477598730, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39317477600415, "after_monotonic_ns": 39317478038337, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39317478040646, "after_monotonic_ns": 39317478471263, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39317478473117, "after_monotonic_ns": 39317478895815, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39317478899082, "after_monotonic_ns": 39317479352728, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39317479354342, "after_monotonic_ns": 39317479781057, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39317479782818, "after_monotonic_ns": 39317480232562, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39317480235020, "after_monotonic_ns": 39317480722702, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39317480728102, "after_monotonic_ns": 39317481190059, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39317481193063, "after_monotonic_ns": 39317481621182, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39317481623236, "after_monotonic_ns": 39317482058946, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39317482060799, "after_monotonic_ns": 39317482495828, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39317482499521, "after_monotonic_ns": 39317482956786, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39317482960085, "after_monotonic_ns": 39317483411789, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39317483414524, "after_monotonic_ns": 39317483876118, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39317483878944, "after_monotonic_ns": 39317484348325, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39317484352365, "after_monotonic_ns": 39317484816838, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39317484819910, "after_monotonic_ns": 39317485259352, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39317485261360, "after_monotonic_ns": 39317485678656, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39317485680383, "after_monotonic_ns": 39317486095438, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39317486097234, "after_monotonic_ns": 39317486547701, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39317486549961, "after_monotonic_ns": 39317487015410, "kind": "cold_start_reset"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 1], "before_monotonic_ns": 39317487024427, "after_monotonic_ns": 39317487154718, "kind": "loss_injection"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 1], "before_monotonic_ns": 39318398990448, "after_monotonic_ns": 39318399334015, "kind": "online_update"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 1], "before_monotonic_ns": 39318399349644, "after_monotonic_ns": 39318399611460, "kind": "online_update"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 1], "before_monotonic_ns": 39318399629328, "after_monotonic_ns": 39318399905098, "kind": "online_update"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 0], "before_monotonic_ns": 39318605536533, "after_monotonic_ns": 39318605949049, "kind": "loss_injection"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 0], "before_monotonic_ns": 39318823990659, "after_monotonic_ns": 39318824484616, "kind": "online_update"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 0], "before_monotonic_ns": 39318824503091, "after_monotonic_ns": 39318824815076, "kind": "online_update"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 0], "before_monotonic_ns": 39318824833499, "after_monotonic_ns": 39318825073881, "kind": "online_update"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 1], "before_monotonic_ns": 39319562485887, "after_monotonic_ns": 39319563164561, "kind": "online_update"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 1], "before_monotonic_ns": 39319584923614, "after_monotonic_ns": 39319585375790, "kind": "online_update"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.force_sampling", 2, 1], "before_monotonic_ns": 39319585392211, "after_monotonic_ns": 39319585743190, "kind": "online_update"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39319963522189, "after_monotonic_ns": 39319968346201, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39319968362185, "after_monotonic_ns": 39319973635622, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39319973649878, "after_monotonic_ns": 39319975932305, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39319975940727, "after_monotonic_ns": 39319977486186, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39319977491696, "after_monotonic_ns": 39319978681463, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39319978686374, "after_monotonic_ns": 39319979870755, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39319979876401, "after_monotonic_ns": 39319980988644, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39319980992397, "after_monotonic_ns": 39319982104230, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39319982107879, "after_monotonic_ns": 39319983212584, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39319983215923, "after_monotonic_ns": 39319984314819, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39319984317193, "after_monotonic_ns": 39319985372460, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39319985374557, "after_monotonic_ns": 39319986502035, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39319986505632, "after_monotonic_ns": 39319987562296, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39319987564529, "after_monotonic_ns": 39319988737984, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39319988741042, "after_monotonic_ns": 39319989844161, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39319989847562, "after_monotonic_ns": 39319990968529, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39319990971294, "after_monotonic_ns": 39319992125835, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39319992128328, "after_monotonic_ns": 39319993405148, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39319993409191, "after_monotonic_ns": 39319994567087, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39319994571176, "after_monotonic_ns": 39319995734521, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39319995738063, "after_monotonic_ns": 39319996871702, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39319996874887, "after_monotonic_ns": 39319998002928, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39319998005942, "after_monotonic_ns": 39319999142380, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39319999145987, "after_monotonic_ns": 39320000234768, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39320000238099, "after_monotonic_ns": 39320001363444, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39320001366916, "after_monotonic_ns": 39320002833470, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39320002837490, "after_monotonic_ns": 39320003968744, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39320003971582, "after_monotonic_ns": 39320005074166, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39320005077158, "after_monotonic_ns": 39320006276008, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39320006279647, "after_monotonic_ns": 39320007585756, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39320007589328, "after_monotonic_ns": 39320008698643, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39320008701046, "after_monotonic_ns": 39320009842676, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39320009845739, "after_monotonic_ns": 39320010931503, "kind": "diagnostic_read"}
+{"node": 4, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39320010935102, "after_monotonic_ns": 39320012044459, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39320012207228, "after_monotonic_ns": 39320012502510, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39320012504485, "after_monotonic_ns": 39320012774182, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39320012831481, "after_monotonic_ns": 39320013122625, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39320013125491, "after_monotonic_ns": 39320013403170, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39320013462043, "after_monotonic_ns": 39320013726638, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39320013729183, "after_monotonic_ns": 39320013984825, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39320038813802, "after_monotonic_ns": 39320039181929, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39320039187598, "after_monotonic_ns": 39320039392405, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39320039397146, "after_monotonic_ns": 39320039577534, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39320039581306, "after_monotonic_ns": 39320039711052, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39320039713226, "after_monotonic_ns": 39320039825944, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39320039827780, "after_monotonic_ns": 39320039970808, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39320039972434, "after_monotonic_ns": 39320040193666, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39320040199483, "after_monotonic_ns": 39320040302073, "kind": "installation"}
+{"node": 1, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "03"]], "before_monotonic_ns": 39320040308592, "after_monotonic_ns": 39320040396462, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39320040401548, "after_monotonic_ns": 39320040507277, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39320040510879, "after_monotonic_ns": 39320040578025, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39320040581467, "after_monotonic_ns": 39320040638095, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39320040641075, "after_monotonic_ns": 39320040691866, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39320040694061, "after_monotonic_ns": 39320040741521, "kind": "installation"}
+{"node": 1, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39320040743663, "after_monotonic_ns": 39320040825380, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 0, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39320040830420, "after_monotonic_ns": 39320040929761, "kind": "installation"}
+{"node": 1, "method": "bm_mt_modify_entry", "arguments": ["TTIngress.sampling_policy", 1, "TTIngress.sampling", ["01", "00000001"]], "before_monotonic_ns": 39320040936994, "after_monotonic_ns": 39320041063165, "kind": "installation"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39320041067711, "after_monotonic_ns": 39320041321573, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39320041324086, "after_monotonic_ns": 39320041471838, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39320041473640, "after_monotonic_ns": 39320041588813, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39320041590581, "after_monotonic_ns": 39320041678449, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39320041679992, "after_monotonic_ns": 39320041778101, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39320041783682, "after_monotonic_ns": 39320041905011, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39320041908068, "after_monotonic_ns": 39320042013764, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39320042020127, "after_monotonic_ns": 39320042118099, "kind": "installation"}
+{"node": 2, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "02"]], "before_monotonic_ns": 39320042123293, "after_monotonic_ns": 39320042202859, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39320042207256, "after_monotonic_ns": 39320042269698, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39320042271907, "after_monotonic_ns": 39320042327399, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39320042330532, "after_monotonic_ns": 39320042387219, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39320042389922, "after_monotonic_ns": 39320042444860, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39320042447506, "after_monotonic_ns": 39320042501199, "kind": "installation"}
+{"node": 2, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39320042503724, "after_monotonic_ns": 39320042558268, "kind": "installation"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39320042561283, "after_monotonic_ns": 39320042712177, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39320042714057, "after_monotonic_ns": 39320042849129, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.force_sampling"], "before_monotonic_ns": 39320042850941, "after_monotonic_ns": 39320042961628, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.packet_count"], "before_monotonic_ns": 39320042964509, "after_monotonic_ns": 39320043053028, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_last"], "before_monotonic_ns": 39320043054818, "after_monotonic_ns": 39320043127926, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_valid"], "before_monotonic_ns": 39320043129485, "after_monotonic_ns": 39320043220313, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTIngress.arrival_dev"], "before_monotonic_ns": 39320043221965, "after_monotonic_ns": 39320043302010, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.gate_policy", "TTEgress.choose_scope", ["00"]], "before_monotonic_ns": 39320043304821, "after_monotonic_ns": 39320043380055, "kind": "installation"}
+{"node": 3, "method": "bm_mt_set_default_action", "arguments": ["TTEgress.selection_policy", "TTEgress.select_mode", ["00", "01"]], "before_monotonic_ns": 39320043385517, "after_monotonic_ns": 39320043446148, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 1, 1], "before_monotonic_ns": 39320043449372, "after_monotonic_ns": 39320043505655, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 1, 1], "before_monotonic_ns": 39320043508143, "after_monotonic_ns": 39320043609864, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 1, 100000], "before_monotonic_ns": 39320043613069, "after_monotonic_ns": 39320043683161, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.time_threshold", 2, 1], "before_monotonic_ns": 39320043686171, "after_monotonic_ns": 39320043739106, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTEgress.max_count", 2, 1], "before_monotonic_ns": 39320043741194, "after_monotonic_ns": 39320043788839, "kind": "installation"}
+{"node": 3, "method": "bm_register_write", "arguments": ["TTIngress.ideal_interval", 2, 100000], "before_monotonic_ns": 39320043790772, "after_monotonic_ns": 39320043842045, "kind": "installation"}
+{"node": 4, "method": "bm_register_write", "arguments": ["TTEgress.drop_report", 0, 0], "before_monotonic_ns": 39320043845458, "after_monotonic_ns": 39320043926819, "kind": "installation"}
+{"node": 4, "method": "bm_register_reset", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39320043929562, "after_monotonic_ns": 39320044739827, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39320044742880, "after_monotonic_ns": 39320045197210, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39320045199404, "after_monotonic_ns": 39320045775083, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39320045777228, "after_monotonic_ns": 39320046222483, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39320046225373, "after_monotonic_ns": 39320046669763, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39320046674361, "after_monotonic_ns": 39320047152141, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39320047154570, "after_monotonic_ns": 39320047605346, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39320047608387, "after_monotonic_ns": 39320048070528, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39320048072926, "after_monotonic_ns": 39320048498155, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39320048500351, "after_monotonic_ns": 39320048990979, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39320048996173, "after_monotonic_ns": 39320049529969, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39320049535148, "after_monotonic_ns": 39320050039454, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39320050043906, "after_monotonic_ns": 39320050543508, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39320050549625, "after_monotonic_ns": 39320051179869, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39320051183724, "after_monotonic_ns": 39320051666145, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39320051669700, "after_monotonic_ns": 39320052154695, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39320052160062, "after_monotonic_ns": 39320052654073, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39320052659588, "after_monotonic_ns": 39320053105371, "kind": "cold_start_reset"}
+{"node": 2, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39320053107631, "after_monotonic_ns": 39320053538505, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39320053541530, "after_monotonic_ns": 39320054017755, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39320054021470, "after_monotonic_ns": 39320054490460, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39320054493315, "after_monotonic_ns": 39320054919833, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39320054921818, "after_monotonic_ns": 39320055360727, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39320055363957, "after_monotonic_ns": 39320055795898, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39320055798057, "after_monotonic_ns": 39320056248043, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39320056250214, "after_monotonic_ns": 39320056701423, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39320056706212, "after_monotonic_ns": 39320057160146, "kind": "cold_start_reset"}
+{"node": 3, "method": "bm_register_reset", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39320057163251, "after_monotonic_ns": 39320057830179, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39320057836013, "after_monotonic_ns": 39320058371853, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39320058376998, "after_monotonic_ns": 39320058891604, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39320058896298, "after_monotonic_ns": 39320059361245, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39320059364750, "after_monotonic_ns": 39320059859079, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39320059862036, "after_monotonic_ns": 39320060329702, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_reset", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39320060332787, "after_monotonic_ns": 39320060776909, "kind": "cold_start_reset"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_time"], "before_monotonic_ns": 39321475903224, "after_monotonic_ns": 39321480245494, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_count"], "before_monotonic_ns": 39321480262535, "after_monotonic_ns": 39321483477036, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_dev"], "before_monotonic_ns": 39321483486817, "after_monotonic_ns": 39321485785399, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_ratio"], "before_monotonic_ns": 39321485792580, "after_monotonic_ns": 39321487440724, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_active"], "before_monotonic_ns": 39321487446494, "after_monotonic_ns": 39321488853127, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTIngress.trace_source_sampled"], "before_monotonic_ns": 39321488857022, "after_monotonic_ns": 39321489997652, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39321490002871, "after_monotonic_ns": 39321491213107, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39321491217088, "after_monotonic_ns": 39321492442728, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39321492445817, "after_monotonic_ns": 39321493590025, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39321493593622, "after_monotonic_ns": 39321494699854, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39321494702917, "after_monotonic_ns": 39321495780974, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39321495783112, "after_monotonic_ns": 39321496966658, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39321496970799, "after_monotonic_ns": 39321498073833, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39321498077292, "after_monotonic_ns": 39321499151409, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39321499153615, "after_monotonic_ns": 39321500305353, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39321500308738, "after_monotonic_ns": 39321501378892, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39321501381052, "after_monotonic_ns": 39321502590904, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39321502594795, "after_monotonic_ns": 39321503758118, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39321503761770, "after_monotonic_ns": 39321504919634, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39321504923678, "after_monotonic_ns": 39321506056699, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39321506060640, "after_monotonic_ns": 39321507199095, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39321507202032, "after_monotonic_ns": 39321508309001, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39321508311506, "after_monotonic_ns": 39321509488813, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39321509492448, "after_monotonic_ns": 39321510781500, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_arrival"], "before_monotonic_ns": 39321510785294, "after_monotonic_ns": 39321511916884, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_generated"], "before_monotonic_ns": 39321511919658, "after_monotonic_ns": 39321513029233, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_value"], "before_monotonic_ns": 39321513032228, "after_monotonic_ns": 39321514121111, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_decision"], "before_monotonic_ns": 39321514123309, "after_monotonic_ns": 39321515228275, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_count_before"], "before_monotonic_ns": 39321515230417, "after_monotonic_ns": 39321516447745, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_gate_index"], "before_monotonic_ns": 39321516451311, "after_monotonic_ns": 39321517543858, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_draw"], "before_monotonic_ns": 39321517547479, "after_monotonic_ns": 39321518639343, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_seen"], "before_monotonic_ns": 39321518642631, "after_monotonic_ns": 39321519751093, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_force"], "before_monotonic_ns": 39321519753294, "after_monotonic_ns": 39321520862753, "kind": "diagnostic_read"}
+{"node": 4, "method": "bm_register_read_all", "arguments": ["TTEgress.trace_drop"], "before_monotonic_ns": 39321520866210, "after_monotonic_ns": 39321522003424, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39321522037583, "after_monotonic_ns": 39321522340374, "kind": "diagnostic_read"}
+{"node": 1, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39321522343247, "after_monotonic_ns": 39321522594474, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39321522654039, "after_monotonic_ns": 39321522947279, "kind": "diagnostic_read"}
+{"node": 2, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39321522950882, "after_monotonic_ns": 39321523361350, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.last_timestamp"], "before_monotonic_ns": 39321523432707, "after_monotonic_ns": 39321523857047, "kind": "diagnostic_read"}
+{"node": 3, "method": "bm_register_read_all", "arguments": ["TTEgress.has_sample"], "before_monotonic_ns": 39321523860724, "after_monotonic_ns": 39321524224400, "kind": "diagnostic_read"}
