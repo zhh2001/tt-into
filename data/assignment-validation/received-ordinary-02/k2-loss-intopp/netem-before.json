@@ -1,0 +1,42 @@
+{
+  "command": [
+    "tc",
+    "qdisc",
+    "replace",
+    "dev",
+    "pfs4-eth3",
+    "root",
+    "netem",
+    "limit",
+    "4096",
+    "loss",
+    "random",
+    "15%"
+  ],
+  "stdout": "",
+  "stderr": "",
+  "statistics": [
+    {
+      "kind": "netem",
+      "handle": "8002:",
+      "root": true,
+      "refcnt": 17,
+      "options": {
+        "limit": 4096,
+        "loss-random": {
+          "loss": 0.15,
+          "correlation": 0
+        },
+        "ecn": false,
+        "gap": 0
+      },
+      "bytes": 80416,
+      "packets": 1530,
+      "drops": 78,
+      "overlimits": 0,
+      "requeues": 0,
+      "backlog": 0,
+      "qlen": 0
+    }
+  ]
+}

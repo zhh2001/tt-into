@@ -1,0 +1,33 @@
+table_set_default TTIngress.node_config set_node 1 1 0 1500
+table_add TTIngress.ipv4_forward forward 10.0.0.2 => 2 02:00:00:00:00:02 02:00:00:10:00:01
+table_add TTIngress.flow_map assign_flow 10.0.0.1 10.0.0.2 17 10101 9000 => 1
+table_add TTIngress.flow_map assign_flow 10.0.0.1 10.0.0.2 17 10102 9000 => 2
+table_add TTIngress.flow_map assign_flow 10.0.0.1 10.0.0.2 17 10103 9000 => 3
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of TTIngress.node_config
+action:              set_node
+runtime data:        01	01	00	05:dc
+RuntimeCmd: Adding entry to exact match table TTIngress.ipv4_forward
+match key:           EXACT-0a:00:00:02
+action:              forward
+runtime data:        00:02	02:00:00:00:00:02	02:00:00:10:00:01
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table TTIngress.flow_map
+match key:           EXACT-0a:00:00:01	EXACT-0a:00:00:02	EXACT-11	EXACT-27:75	EXACT-23:28
+action:              assign_flow
+runtime data:        00:00:00:01
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table TTIngress.flow_map
+match key:           EXACT-0a:00:00:01	EXACT-0a:00:00:02	EXACT-11	EXACT-27:76	EXACT-23:28
+action:              assign_flow
+runtime data:        00:00:00:02
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to exact match table TTIngress.flow_map
+match key:           EXACT-0a:00:00:01	EXACT-0a:00:00:02	EXACT-11	EXACT-27:77	EXACT-23:28
+action:              assign_flow
+runtime data:        00:00:00:03
+Entry has been added with handle 2
+RuntimeCmd: 
+

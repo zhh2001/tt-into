@@ -1,0 +1,91 @@
+{
+  "name": "k1-delay-tt",
+  "capacity": 1,
+  "scenario": "delay",
+  "family": "tt",
+  "parameters": {
+    "branch1": "always",
+    "branch2": "always",
+    "shared": "flow3"
+  },
+  "origin_monotonic_ns": 57486324853202,
+  "installation_rpc_indices": [
+    115,
+    179
+  ],
+  "activation_rpc_indices": [
+    194,
+    197
+  ],
+  "activated_monotonic_ns": 57485632864738,
+  "target": [
+    {
+      "node": 1,
+      "flow": 1,
+      "threshold_us": 1
+    },
+    {
+      "node": 2,
+      "flow": 2,
+      "threshold_us": 1
+    },
+    {
+      "node": 3,
+      "flow": 1,
+      "threshold_us": null
+    },
+    {
+      "node": 3,
+      "flow": 2,
+      "threshold_us": null
+    },
+    {
+      "node": 3,
+      "flow": 3,
+      "threshold_us": 1
+    }
+  ],
+  "cold_decision": {
+    "thresholds": [
+      {
+        "node": 1,
+        "flow": 1,
+        "threshold_us": 1
+      },
+      {
+        "node": 2,
+        "flow": 2,
+        "threshold_us": 1
+      },
+      {
+        "node": 3,
+        "flow": 1,
+        "threshold_us": null
+      },
+      {
+        "node": 3,
+        "flow": 2,
+        "threshold_us": null
+      },
+      {
+        "node": 3,
+        "flow": 3,
+        "threshold_us": 1
+      }
+    ],
+    "assignment": [],
+    "queue_before": 0.0,
+    "queue_after": 0.0,
+    "variation_bytes": 0,
+    "objective": null
+  },
+  "status": "passed",
+  "errors": [],
+  "packet_count": 80,
+  "report_count": 80,
+  "received_record_counts": [
+    32,
+    32,
+    16
+  ]
+}

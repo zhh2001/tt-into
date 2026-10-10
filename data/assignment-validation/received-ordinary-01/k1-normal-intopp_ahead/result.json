@@ -1,0 +1,110 @@
+{
+  "name": "k1-normal-intopp_ahead",
+  "capacity": 1,
+  "scenario": "normal",
+  "family": "intopp_ahead",
+  "parameters": {
+    "lookahead_us": 50000,
+    "flow_order": [
+      1,
+      2,
+      3
+    ]
+  },
+  "origin_monotonic_ns": 57143339480771,
+  "installation_rpc_indices": [
+    201,
+    265
+  ],
+  "activation_rpc_indices": [
+    265,
+    268
+  ],
+  "activated_monotonic_ns": 57142626548320,
+  "target": [
+    {
+      "node": 1,
+      "flow": 1,
+      "threshold_us": 1
+    },
+    {
+      "node": 2,
+      "flow": 2,
+      "threshold_us": 1
+    },
+    {
+      "node": 3,
+      "flow": 1,
+      "threshold_us": null
+    },
+    {
+      "node": 3,
+      "flow": 2,
+      "threshold_us": null
+    },
+    {
+      "node": 3,
+      "flow": 3,
+      "threshold_us": 1
+    }
+  ],
+  "cold_decision": {
+    "thresholds": [
+      {
+        "node": 1,
+        "flow": 1,
+        "threshold_us": 1
+      },
+      {
+        "node": 2,
+        "flow": 2,
+        "threshold_us": 1
+      },
+      {
+        "node": 3,
+        "flow": 1,
+        "threshold_us": null
+      },
+      {
+        "node": 3,
+        "flow": 2,
+        "threshold_us": null
+      },
+      {
+        "node": 3,
+        "flow": 3,
+        "threshold_us": 1
+      }
+    ],
+    "assignment": [
+      {
+        "node": 1,
+        "kind": 1,
+        "flow": 1
+      },
+      {
+        "node": 2,
+        "kind": 1,
+        "flow": 2
+      },
+      {
+        "node": 3,
+        "kind": 1,
+        "flow": 3
+      }
+    ],
+    "queue_before": 0.0,
+    "queue_after": 0.0,
+    "variation_bytes": 36,
+    "objective": 5
+  },
+  "status": "passed",
+  "errors": [],
+  "packet_count": 80,
+  "report_count": 80,
+  "received_record_counts": [
+    32,
+    32,
+    16
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "name": "k2-normal-dinto",
+  "capacity": 2,
+  "scenario": "normal",
+  "family": "dinto",
+  "parameters": {
+    "tradeoff": 1.0,
+    "average_change_bytes": 0.0,
+    "gain": "static",
+    "flow_order": [
+      2,
+      1,
+      3
+    ]
+  },
+  "origin_monotonic_ns": 57374119775647,
+  "installation_rpc_indices": [
+    871,
+    935
+  ],
+  "activation_rpc_indices": [
+    935,
+    938
+  ],
+  "activated_monotonic_ns": 57373407492731,
+  "target": [
+    {
+      "node": 1,
+      "flow": 1,
+      "threshold_us": 1
+    },
+    {
+      "node": 2,
+      "flow": 2,
+      "threshold_us": 1
+    },
+    {
+      "node": 3,
+      "flow": 1,
+      "threshold_us": null
+    },
+    {
+      "node": 3,
+      "flow": 2,
+      "threshold_us": 1
+    },
+    {
+      "node": 3,
+      "flow": 3,
+      "threshold_us": null
+    }
+  ],
+  "cold_decision": {
+    "thresholds": [
+      {
+        "node": 1,
+        "flow": 1,
+        "threshold_us": 1
+      },
+      {
+        "node": 2,
+        "flow": 2,
+        "threshold_us": 1
+      },
+      {
+        "node": 3,
+        "flow": 1,
+        "threshold_us": null
+      },
+      {
+        "node": 3,
+        "flow": 2,
+        "threshold_us": 1
+      },
+      {
+        "node": 3,
+        "flow": 3,
+        "threshold_us": null
+      }
+    ],
+    "assignment": [
+      {
+        "node": 1,
+        "kind": 1,
+        "flow": 1
+      },
+      {
+        "node": 2,
+        "kind": 1,
+        "flow": 2
+      },
+      {
+        "node": 3,
+        "kind": 1,
+        "flow": 2
+      }
+    ],
+    "queue_before": 0.0,
+    "queue_after": 36.0,
+    "variation_bytes": 36,
+    "objective": -5.0
+  },
+  "status": "passed",
+  "errors": [],
+  "packet_count": 80,
+  "report_count": 64,
+  "received_record_counts": [
+    32,
+    32,
+    32
+  ]
+}

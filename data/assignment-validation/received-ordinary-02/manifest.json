@@ -1,0 +1,2646 @@
+{
+  "run_id": "received-ordinary-02",
+  "status": "passed",
+  "start_utc": "2026-10-10T07:59:51.368618+00:00",
+  "scope": "冻结配置的软件正确性验证，独立导出链路损伤，无统计性能结论",
+  "diagnostics": false,
+  "families": [
+    "tt",
+    "dinto",
+    "intopp",
+    "intopp_ahead"
+  ],
+  "seed": 300,
+  "netem_seed": null,
+  "netem_randomness": "本机 tc 6.1 不支持 seed，保存实际丢失与延迟，不视为配对随机重复",
+  "source_sha256": {
+    "experiments/run_fork_validation.py": "24c3ada67ddc41cc266802ff78cf27f11b80c3ca37cb9e1e03179b55a856462a",
+    "experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "experiments/run_assignment_validation.py": "12a813587d1a3564b04b38902345ee72542d6284be1b4515610b9882d65ea995",
+    "experiments/admission_io.py": "3a5b8a933f826c80fe440a2b66c276088ca264dfbbd0c7788fc2575f6cce491c",
+    "src/orchestration/live_assignment.py": "a2aabff9beaeed0307454b5e540a3491bef2b2071393ee79272523156a588968",
+    "src/orchestration/assignment_reference.py": "48ce29f17309537af056460f3b27ac130ec4fb6cdb87355a2b362c0a54dde3d5",
+    "src/orchestration/slot_reference.py": "5d00049b824b16778843c3ca1f923faca050e02d4bd30b8dc6a0a45e966fa6c0",
+    "src/orchestration/deployment.py": "bb45175ab83c6103be941e93ff9349418e97d66136ec3892b8929097a7587689"
+  },
+  "input_sha256": {
+    "frozen-parameters.json": "7793f5a288089956b50b02824fac1787586c2136e051467fc2b3458731de9b9f",
+    "source-workload.json": "cdabec685cbd0ba7820a286330495d611b0fae1f472b8b703c6ffac68e36276a",
+    "declared-budget.json": "086aacc0024eaf9825b65fa352a8709de8bfa14dcb96fdef4859e221c63c679e"
+  },
+  "p4_json_sha256": "b78c33dc8a625234f71768304a5e9990291e6b995699b31caef3b3ad476b6991",
+  "steady_binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+  "software": {
+    "bmv2": "1.15.0-2bdd0b7b-steady-unknown",
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "mininet": "2.3.0",
+    "tc": "tc utility, iproute2-6.1.0, libbpf 1.3.0"
+  },
+  "host": {
+    "cpu_count": 16,
+    "load_start": [
+      0.1689453125,
+      0.13671875,
+      0.10107421875
+    ],
+    "load_end": [
+      0.34765625,
+      0.267578125,
+      0.15771484375
+    ]
+  },
+  "cases": [
+    {
+      "name": "k1-normal-tt",
+      "capacity": 1,
+      "scenario": "normal",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      "origin_monotonic_ns": 57317417723649,
+      "installation_rpc_indices": [
+        0,
+        64
+      ],
+      "activation_rpc_indices": [
+        64,
+        67
+      ],
+      "activated_monotonic_ns": 57316674010127,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ]
+    },
+    {
+      "name": "k1-normal-dinto",
+      "capacity": 1,
+      "scenario": "normal",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57321784042722,
+      "installation_rpc_indices": [
+        67,
+        131
+      ],
+      "activation_rpc_indices": [
+        131,
+        134
+      ],
+      "activated_monotonic_ns": 57321071515162,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ]
+    },
+    {
+      "name": "k1-normal-intopp",
+      "capacity": 1,
+      "scenario": "normal",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57326140779752,
+      "installation_rpc_indices": [
+        134,
+        198
+      ],
+      "activation_rpc_indices": [
+        198,
+        201
+      ],
+      "activated_monotonic_ns": 57325459263792,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ]
+    },
+    {
+      "name": "k1-normal-intopp_ahead",
+      "capacity": 1,
+      "scenario": "normal",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57330489599150,
+      "installation_rpc_indices": [
+        201,
+        265
+      ],
+      "activation_rpc_indices": [
+        265,
+        268
+      ],
+      "activated_monotonic_ns": 57329787492895,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ]
+    },
+    {
+      "name": "k1-delay-tt",
+      "capacity": 1,
+      "scenario": "delay",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      "origin_monotonic_ns": 57334833365570,
+      "installation_rpc_indices": [
+        268,
+        332
+      ],
+      "activation_rpc_indices": [
+        332,
+        335
+      ],
+      "activated_monotonic_ns": 57334129516525,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ]
+    },
+    {
+      "name": "k1-delay-dinto",
+      "capacity": 1,
+      "scenario": "delay",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57339206184833,
+      "installation_rpc_indices": [
+        335,
+        399
+      ],
+      "activation_rpc_indices": [
+        399,
+        402
+      ],
+      "activated_monotonic_ns": 57338504180074,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ]
+    },
+    {
+      "name": "k1-delay-intopp",
+      "capacity": 1,
+      "scenario": "delay",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57343608128588,
+      "installation_rpc_indices": [
+        402,
+        466
+      ],
+      "activation_rpc_indices": [
+        466,
+        469
+      ],
+      "activated_monotonic_ns": 57342875278919,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ]
+    },
+    {
+      "name": "k1-delay-intopp_ahead",
+      "capacity": 1,
+      "scenario": "delay",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57347922803223,
+      "installation_rpc_indices": [
+        469,
+        533
+      ],
+      "activation_rpc_indices": [
+        533,
+        536
+      ],
+      "activated_monotonic_ns": 57347210665474,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ]
+    },
+    {
+      "name": "k1-loss-tt",
+      "capacity": 1,
+      "scenario": "loss",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      "origin_monotonic_ns": 57352286576802,
+      "installation_rpc_indices": [
+        536,
+        600
+      ],
+      "activation_rpc_indices": [
+        600,
+        603
+      ],
+      "activated_monotonic_ns": 57351563938530,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        24,
+        26,
+        14
+      ]
+    },
+    {
+      "name": "k1-loss-dinto",
+      "capacity": 1,
+      "scenario": "loss",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57356664622548,
+      "installation_rpc_indices": [
+        603,
+        667
+      ],
+      "activation_rpc_indices": [
+        667,
+        670
+      ],
+      "activated_monotonic_ns": 57355932085450,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 73,
+      "received_record_counts": [
+        31,
+        27,
+        15
+      ]
+    },
+    {
+      "name": "k1-loss-intopp",
+      "capacity": 1,
+      "scenario": "loss",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57361017539036,
+      "installation_rpc_indices": [
+        670,
+        734
+      ],
+      "activation_rpc_indices": [
+        734,
+        737
+      ],
+      "activated_monotonic_ns": 57360304895106,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 70,
+      "received_record_counts": [
+        28,
+        27,
+        15
+      ]
+    },
+    {
+      "name": "k1-loss-intopp_ahead",
+      "capacity": 1,
+      "scenario": "loss",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57365372265289,
+      "installation_rpc_indices": [
+        737,
+        801
+      ],
+      "activation_rpc_indices": [
+        801,
+        804
+      ],
+      "activated_monotonic_ns": 57364659519700,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 58,
+      "received_record_counts": [
+        24,
+        22,
+        12
+      ]
+    },
+    {
+      "name": "k2-normal-tt",
+      "capacity": 2,
+      "scenario": "normal",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      "origin_monotonic_ns": 57369759873803,
+      "installation_rpc_indices": [
+        804,
+        868
+      ],
+      "activation_rpc_indices": [
+        868,
+        871
+      ],
+      "activated_monotonic_ns": 57369046910511,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "k2-normal-dinto",
+      "capacity": 2,
+      "scenario": "normal",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57374119775647,
+      "installation_rpc_indices": [
+        871,
+        935
+      ],
+      "activation_rpc_indices": [
+        935,
+        938
+      ],
+      "activated_monotonic_ns": 57373407492731,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "k2-normal-intopp",
+      "capacity": 2,
+      "scenario": "normal",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57378491772939,
+      "installation_rpc_indices": [
+        938,
+        1002
+      ],
+      "activation_rpc_indices": [
+        1002,
+        1005
+      ],
+      "activated_monotonic_ns": 57377789991224,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "k2-normal-intopp_ahead",
+      "capacity": 2,
+      "scenario": "normal",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57382845140645,
+      "installation_rpc_indices": [
+        1005,
+        1069
+      ],
+      "activation_rpc_indices": [
+        1069,
+        1072
+      ],
+      "activated_monotonic_ns": 57382132995238,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "k2-delay-tt",
+      "capacity": 2,
+      "scenario": "delay",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      "origin_monotonic_ns": 57387209180856,
+      "installation_rpc_indices": [
+        1072,
+        1136
+      ],
+      "activation_rpc_indices": [
+        1136,
+        1139
+      ],
+      "activated_monotonic_ns": 57386485463349,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "k2-delay-dinto",
+      "capacity": 2,
+      "scenario": "delay",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57391601075976,
+      "installation_rpc_indices": [
+        1139,
+        1203
+      ],
+      "activation_rpc_indices": [
+        1203,
+        1206
+      ],
+      "activated_monotonic_ns": 57390856849649,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "k2-delay-intopp",
+      "capacity": 2,
+      "scenario": "delay",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57396004561239,
+      "installation_rpc_indices": [
+        1206,
+        1270
+      ],
+      "activation_rpc_indices": [
+        1270,
+        1273
+      ],
+      "activated_monotonic_ns": 57395271900275,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "k2-delay-intopp_ahead",
+      "capacity": 2,
+      "scenario": "delay",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57400377815881,
+      "installation_rpc_indices": [
+        1273,
+        1337
+      ],
+      "activation_rpc_indices": [
+        1337,
+        1340
+      ],
+      "activated_monotonic_ns": 57399675659688,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "k2-loss-tt",
+      "capacity": 2,
+      "scenario": "loss",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      "origin_monotonic_ns": 57404729964714,
+      "installation_rpc_indices": [
+        1340,
+        1404
+      ],
+      "activation_rpc_indices": [
+        1404,
+        1407
+      ],
+      "activated_monotonic_ns": 57404017415802,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 52,
+      "received_record_counts": [
+        26,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "k2-loss-dinto",
+      "capacity": 2,
+      "scenario": "loss",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57409073509329,
+      "installation_rpc_indices": [
+        1407,
+        1471
+      ],
+      "activation_rpc_indices": [
+        1471,
+        1474
+      ],
+      "activated_monotonic_ns": 57408371290747,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 53,
+      "received_record_counts": [
+        27,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "k2-loss-intopp",
+      "capacity": 2,
+      "scenario": "loss",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57413462076084,
+      "installation_rpc_indices": [
+        1474,
+        1538
+      ],
+      "activation_rpc_indices": [
+        1538,
+        1541
+      ],
+      "activated_monotonic_ns": 57412749455198,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 49,
+      "received_record_counts": [
+        23,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "k2-loss-intopp_ahead",
+      "capacity": 2,
+      "scenario": "loss",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57417848390471,
+      "installation_rpc_indices": [
+        1541,
+        1605
+      ],
+      "activation_rpc_indices": [
+        1605,
+        1608
+      ],
+      "activated_monotonic_ns": 57417135943536,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 51,
+      "received_record_counts": [
+        25,
+        26,
+        26
+      ]
+    }
+  ],
+  "requirements_window_offset_us": [
+    [
+      800000,
+      3200000
+    ]
+  ],
+  "deadlines_us": [
+    [
+      220000,
+      220000,
+      260000
+    ]
+  ],
+  "warmup_us": [
+    0,
+    800000
+  ],
+  "slot_us": 100000,
+  "format": "prefix 4+12 B",
+  "clock_input": "在线只用已收报告和已发生的本机发送前日志界；固定偏移区间，非可部署同步协议",
+  "effect": "初次容量启用在业务开始前完成，后续目标变化立即失败，不测试跨节点动态原子更新",
+  "control": "逐 API 序列化和全程 loopback 帧分别保存，文件仪表与求解为主机计算",
+  "declared_budget": {
+    "scope": "宽松正确性预算，费用含预热，不作等预算性能推断",
+    "per_case_inband_per_link_bytes": [
+      1024,
+      1024,
+      2048
+    ],
+    "per_case_export_padded_bytes": 5000,
+    "whole_run_control_per_node_direction_bytes": 134217728
+  },
+  "end_utc": "2026-10-10T08:01:49.834808+00:00",
+  "duration_seconds": 106.61422491999838
+}

@@ -1,0 +1,5909 @@
+{
+  "run_id": "received-ordinary-02",
+  "status": "passed",
+  "start_utc": "2026-10-10T07:59:51.368618+00:00",
+  "scope": "冻结配置的软件正确性验证，独立导出链路损伤，无统计性能结论",
+  "diagnostics": false,
+  "families": [
+    "tt",
+    "dinto",
+    "intopp",
+    "intopp_ahead"
+  ],
+  "seed": 300,
+  "netem_seed": null,
+  "netem_randomness": "本机 tc 6.1 不支持 seed，保存实际丢失与延迟，不视为配对随机重复",
+  "source_sha256": {
+    "experiments/run_fork_validation.py": "24c3ada67ddc41cc266802ff78cf27f11b80c3ca37cb9e1e03179b55a856462a",
+    "experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "experiments/run_assignment_validation.py": "12a813587d1a3564b04b38902345ee72542d6284be1b4515610b9882d65ea995",
+    "experiments/admission_io.py": "3a5b8a933f826c80fe440a2b66c276088ca264dfbbd0c7788fc2575f6cce491c",
+    "src/orchestration/live_assignment.py": "a2aabff9beaeed0307454b5e540a3491bef2b2071393ee79272523156a588968",
+    "src/orchestration/assignment_reference.py": "48ce29f17309537af056460f3b27ac130ec4fb6cdb87355a2b362c0a54dde3d5",
+    "src/orchestration/slot_reference.py": "5d00049b824b16778843c3ca1f923faca050e02d4bd30b8dc6a0a45e966fa6c0",
+    "src/orchestration/deployment.py": "bb45175ab83c6103be941e93ff9349418e97d66136ec3892b8929097a7587689"
+  },
+  "input_sha256": {
+    "frozen-parameters.json": "7793f5a288089956b50b02824fac1787586c2136e051467fc2b3458731de9b9f",
+    "source-workload.json": "cdabec685cbd0ba7820a286330495d611b0fae1f472b8b703c6ffac68e36276a",
+    "declared-budget.json": "086aacc0024eaf9825b65fa352a8709de8bfa14dcb96fdef4859e221c63c679e"
+  },
+  "p4_json_sha256": "b78c33dc8a625234f71768304a5e9990291e6b995699b31caef3b3ad476b6991",
+  "steady_binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+  "software": {
+    "bmv2": "1.15.0-2bdd0b7b-steady-unknown",
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "mininet": "2.3.0",
+    "tc": "tc utility, iproute2-6.1.0, libbpf 1.3.0"
+  },
+  "host": {
+    "cpu_count": 16,
+    "load_start": [
+      0.1689453125,
+      0.13671875,
+      0.10107421875
+    ],
+    "load_end": [
+      0.34765625,
+      0.267578125,
+      0.15771484375
+    ]
+  },
+  "cases": [
+    {
+      "name": "k1-normal-tt",
+      "capacity": 1,
+      "scenario": "normal",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      "origin_monotonic_ns": 57317417723649,
+      "installation_rpc_indices": [
+        0,
+        64
+      ],
+      "activation_rpc_indices": [
+        64,
+        67
+      ],
+      "activated_monotonic_ns": 57316674010127,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 80,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 126.951,
+        "maximum_observe_and_solve_us": 2514.737
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 104775.4804,
+            "p95_age_upper_us": 105510.10789999989,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106292.59783333332,
+            "p95_age_upper_us": 106946.19883333324,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 192181.6456666667,
+            "p95_age_upper_us": 192690.60966666669,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 5,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978651459,
+            57315979389299
+          ],
+          "2": [
+            57316082750462,
+            57316083404063
+          ],
+          "3": [
+            57316187127770,
+            57316187636734
+          ]
+        },
+        "maximum_generation_interval_width_us": 737.84,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 2073.232
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 4690.027
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6331,
+          "reply_serialized_bytes": 2007
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-normal-dinto",
+      "capacity": 1,
+      "scenario": "normal",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57321784042722,
+      "installation_rpc_indices": [
+        67,
+        131
+      ],
+      "activation_rpc_indices": [
+        131,
+        134
+      ],
+      "activated_monotonic_ns": 57321071515162,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 80,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 173.771,
+        "maximum_observe_and_solve_us": 2365.046
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106149.94433333329,
+            "p95_age_upper_us": 106819.4393333334,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106671.18909090912,
+            "p95_age_upper_us": 107626.85009090898,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 192345.44312499996,
+            "p95_age_upper_us": 193078.04512499992,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 5,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978651710,
+            57315979321205
+          ],
+          "2": [
+            57316082658069,
+            57316083613730
+          ],
+          "3": [
+            57316187041742,
+            57316187774344
+          ]
+        },
+        "maximum_generation_interval_width_us": 955.661,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 2767.149
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 330.151
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-normal-intopp",
+      "capacity": 1,
+      "scenario": "normal",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57326140779752,
+      "installation_rpc_indices": [
+        134,
+        198
+      ],
+      "activation_rpc_indices": [
+        198,
+        201
+      ],
+      "activated_monotonic_ns": 57325459263792,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 80,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 208.093,
+        "maximum_observe_and_solve_us": 4147.893
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 105339.85911111112,
+            "p95_age_upper_us": 106292.48711111114,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 107261.3489999999,
+            "p95_age_upper_us": 108003.5958181817,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 192308.8386666667,
+            "p95_age_upper_us": 192943.24866666668,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 5,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978572784,
+            57315979525412
+          ],
+          "2": [
+            57316082701165,
+            57316083445596
+          ],
+          "3": [
+            57316187003643,
+            57316187638053
+          ]
+        },
+        "maximum_generation_interval_width_us": 952.628,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3271.588
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 154.691
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-normal-intopp_ahead",
+      "capacity": 1,
+      "scenario": "normal",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57330489599150,
+      "installation_rpc_indices": [
+        201,
+        265
+      ],
+      "activation_rpc_indices": [
+        265,
+        268
+      ],
+      "activated_monotonic_ns": 57329787492895,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 80,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 136.671,
+        "maximum_observe_and_solve_us": 3208.501
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 105926.12733333328,
+            "p95_age_upper_us": 106736.67733333322,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106843.38466666662,
+            "p95_age_upper_us": 107578.2936666666,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 192738.36462500002,
+            "p95_age_upper_us": 193300.39325000002,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 5,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978630086,
+            57315979440636
+          ],
+          "2": [
+            57316082717517,
+            57316083452426
+          ],
+          "3": [
+            57316187090339,
+            57316187656678
+          ]
+        },
+        "maximum_generation_interval_width_us": 810.55,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3167.818
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 292.438
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-delay-tt",
+      "capacity": 1,
+      "scenario": "delay",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      "origin_monotonic_ns": 57334833365570,
+      "installation_rpc_indices": [
+        268,
+        332
+      ],
+      "activation_rpc_indices": [
+        332,
+        335
+      ],
+      "activated_monotonic_ns": 57334129516525,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 80,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 260.584,
+        "maximum_observe_and_solve_us": 2560.292
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.04939605916666677,
+            "violation_upper": 0.05186310916666713,
+            "p95_age_lower_us": 219818.81775000002,
+            "p95_age_upper_us": 220558.93275000012,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0866877112499999,
+            "violation_upper": 0.08959272374999962,
+            "p95_age_lower_us": 230753.82014285712,
+            "p95_age_upper_us": 231528.49014285704,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.1743392237499996,
+            "violation_upper": 0.17733089875000016,
+            "p95_age_lower_us": 301590.04259999987,
+            "p95_age_upper_us": 302308.04459999996,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978649472,
+            57315979389587
+          ],
+          "2": [
+            57316082723457,
+            57316083498127
+          ],
+          "3": [
+            57316187029117,
+            57316187747119
+          ]
+        },
+        "maximum_generation_interval_width_us": 774.67,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 61895.032,
+          "maximum_upper": 139637.676
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 246.037
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-delay-dinto",
+      "capacity": 1,
+      "scenario": "delay",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57339206184833,
+      "installation_rpc_indices": [
+        335,
+        399
+      ],
+      "activation_rpc_indices": [
+        399,
+        402
+      ],
+      "activated_monotonic_ns": 57338504180074,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 80,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 165.721,
+        "maximum_observe_and_solve_us": 2425.25
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.06389726000000005,
+            "violation_upper": 0.06643715708333382,
+            "p95_age_lower_us": 224169.178,
+            "p95_age_upper_us": 224912.18700000006,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.08244742791666698,
+            "violation_upper": 0.08472882791666703,
+            "p95_age_lower_us": 230481.5295714286,
+            "p95_age_upper_us": 231165.94957142865,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.2082892808333333,
+            "violation_upper": 0.2114870158333329,
+            "p95_age_lower_us": 311638.87874999986,
+            "p95_age_upper_us": 312278.4257499998,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978624451,
+            57315979367460
+          ],
+          "2": [
+            57316082731287,
+            57316083415707
+          ],
+          "3": [
+            57316187056589,
+            57316187696136
+          ]
+        },
+        "maximum_generation_interval_width_us": 743.009,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 62551.231,
+          "maximum_upper": 140972.227
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 273.319
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-delay-intopp",
+      "capacity": 1,
+      "scenario": "delay",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57343608128588,
+      "installation_rpc_indices": [
+        402,
+        466
+      ],
+      "activation_rpc_indices": [
+        466,
+        469
+      ],
+      "activated_monotonic_ns": 57342875278919,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 80,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 163.286,
+        "maximum_observe_and_solve_us": 3328.846
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.07121004416666658,
+            "violation_upper": 0.07311935541666607,
+            "p95_age_lower_us": 227559.13799999992,
+            "p95_age_upper_us": 228213.7589999998,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.05008582333333339,
+            "violation_upper": 0.05186397833333336,
+            "p95_age_lower_us": 220034.32933333333,
+            "p95_age_upper_us": 220745.5913333333,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.20041560750000004,
+            "violation_upper": 0.20294633625000036,
+            "p95_age_lower_us": 301508.18687499996,
+            "p95_age_upper_us": 302060.3458750001,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978658498,
+            57315979313119
+          ],
+          "2": [
+            57316082716090,
+            57316083427352
+          ],
+          "3": [
+            57316187066718,
+            57316187618877
+          ]
+        },
+        "maximum_generation_interval_width_us": 711.262,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 60707.997,
+          "maximum_upper": 141600.473
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 328.985
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-delay-intopp_ahead",
+      "capacity": 1,
+      "scenario": "delay",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57347922803223,
+      "installation_rpc_indices": [
+        469,
+        533
+      ],
+      "activation_rpc_indices": [
+        533,
+        536
+      ],
+      "activated_monotonic_ns": 57347210665474,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 80,
+      "received_record_counts": [
+        32,
+        32,
+        16
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 80,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 176.624,
+        "maximum_observe_and_solve_us": 3173.225
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.05153412333333317,
+            "violation_upper": 0.05367181541666694,
+            "p95_age_lower_us": 220525.98514285707,
+            "p95_age_upper_us": 221258.90814285722,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.05633101041666659,
+            "violation_upper": 0.05920478750000009,
+            "p95_age_lower_us": 222170.63214285707,
+            "p95_age_upper_us": 223155.92714285717,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.2294117145833327,
+            "violation_upper": 0.23301734499999982,
+            "p95_age_lower_us": 306817.0531666665,
+            "p95_age_upper_us": 307603.73616666655,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978643466,
+            57315979376389
+          ],
+          "2": [
+            57316082657538,
+            57316083642833
+          ],
+          "3": [
+            57316187021666,
+            57316187808349
+          ]
+        },
+        "maximum_generation_interval_width_us": 985.295,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 61468.603,
+          "maximum_upper": 139738.878
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 140.403
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-loss-tt",
+      "capacity": 1,
+      "scenario": "loss",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow3"
+      },
+      "origin_monotonic_ns": 57352286576802,
+      "installation_rpc_indices": [
+        536,
+        600
+      ],
+      "activation_rpc_indices": [
+        600,
+        603
+      ],
+      "activated_monotonic_ns": 57351563938530,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        24,
+        26,
+        14
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 64,
+        "missing_packet_ids": [
+          801,
+          802,
+          805,
+          806,
+          809,
+          811,
+          819,
+          820,
+          827,
+          833,
+          834,
+          838,
+          849,
+          852,
+          858,
+          864
+        ],
+        "missing_reports": 16,
+        "netem_drop_counter_delta": 16,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 388.887,
+        "maximum_observe_and_solve_us": 1939.879
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0025315550000000317,
+            "violation_upper": 0.002860873333333293,
+            "p95_age_lower_us": 186460.87674999994,
+            "p95_age_upper_us": 187243.63074999987,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 168109.42200000002,
+            "p95_age_upper_us": 168953.47600000002,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.05827562875000003,
+            "violation_upper": 0.05856416666666667,
+            "p95_age_lower_us": 279861.50899999985,
+            "p95_age_upper_us": 280553.99999999977,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 2,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978623895,
+            57315979414259
+          ],
+          "2": [
+            57316082699565,
+            57316083543619
+          ],
+          "3": [
+            57316187025348,
+            57316187717839
+          ]
+        },
+        "maximum_generation_interval_width_us": 844.054,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3047.096
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 272.939
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-loss-dinto",
+      "capacity": 1,
+      "scenario": "loss",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57356664622548,
+      "installation_rpc_indices": [
+        603,
+        667
+      ],
+      "activation_rpc_indices": [
+        667,
+        670
+      ],
+      "activated_monotonic_ns": 57355932085450,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 73,
+      "received_record_counts": [
+        31,
+        27,
+        15
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 73,
+        "missing_packet_ids": [
+          903,
+          904,
+          927,
+          932,
+          940,
+          953,
+          970
+        ],
+        "missing_reports": 7,
+        "netem_drop_counter_delta": 7,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 245.641,
+        "maximum_observe_and_solve_us": 2898.353
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 105919.45433333333,
+            "p95_age_upper_us": 106633.24911111116,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.005697579999999919,
+            "violation_upper": 0.006538958333333139,
+            "p95_age_lower_us": 182238.9873333332,
+            "p95_age_upper_us": 183248.6413333332,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.05034897166666672,
+            "violation_upper": 0.05069537000000002,
+            "p95_age_lower_us": 260837.53199999977,
+            "p95_age_upper_us": 261668.8879999998,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 2,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978654078,
+            57315979368388
+          ],
+          "2": [
+            57316082662834,
+            57316083672488
+          ],
+          "3": [
+            57316187008413,
+            57316187839769
+          ]
+        },
+        "maximum_generation_interval_width_us": 1009.654,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 2751.425
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 200.083
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-loss-intopp",
+      "capacity": 1,
+      "scenario": "loss",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57361017539036,
+      "installation_rpc_indices": [
+        670,
+        734
+      ],
+      "activation_rpc_indices": [
+        734,
+        737
+      ],
+      "activated_monotonic_ns": 57360304895106,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 70,
+      "received_record_counts": [
+        28,
+        27,
+        15
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 70,
+        "missing_packet_ids": [
+          1015,
+          1017,
+          1021,
+          1023,
+          1026,
+          1053,
+          1058,
+          1064,
+          1069,
+          1080
+        ],
+        "missing_reports": 10,
+        "netem_drop_counter_delta": 10,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 457.707,
+        "maximum_observe_and_solve_us": 2990.969
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 166537.72724999988,
+            "p95_age_upper_us": 167318.66724999988,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.005144787916666634,
+            "violation_upper": 0.005471720000000011,
+            "p95_age_lower_us": 159520.03866666654,
+            "p95_age_upper_us": 160304.67566666653,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.010537657083333325,
+            "violation_upper": 0.010537657083333325,
+            "p95_age_lower_us": 195857.91014285717,
+            "p95_age_upper_us": 196398.46014285702,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 2,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978615028,
+            57315979395968
+          ],
+          "2": [
+            57316082726012,
+            57316083510649
+          ],
+          "3": [
+            57316187077315,
+            57316187617865
+          ]
+        },
+        "maximum_generation_interval_width_us": 784.637,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3052.138
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 341.015
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k1-loss-intopp_ahead",
+      "capacity": 1,
+      "scenario": "loss",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          1,
+          2,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57365372265289,
+      "installation_rpc_indices": [
+        737,
+        801
+      ],
+      "activation_rpc_indices": [
+        801,
+        804
+      ],
+      "activated_monotonic_ns": 57364659519700,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": 1
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 3
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 58,
+      "received_record_counts": [
+        24,
+        22,
+        12
+      ],
+      "export_delivery": {
+        "emitted_reports": 80,
+        "received_reports": 58,
+        "missing_packet_ids": [
+          1101,
+          1103,
+          1105,
+          1113,
+          1117,
+          1119,
+          1124,
+          1127,
+          1131,
+          1134,
+          1136,
+          1137,
+          1139,
+          1142,
+          1143,
+          1145,
+          1156,
+          1167,
+          1168,
+          1170,
+          1173,
+          1180
+        ],
+        "missing_reports": 22,
+        "netem_drop_counter_delta": 22,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          16
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 136.474,
+        "maximum_observe_and_solve_us": 2446.419
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.12862751416666665,
+            "violation_upper": 0.12898566125000002,
+            "p95_age_lower_us": 408706.03399999975,
+            "p95_age_upper_us": 409565.5869999998,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.11818492541666667,
+            "violation_upper": 0.11876385541666667,
+            "p95_age_lower_us": 301821.9104999999,
+            "p95_age_upper_us": 302516.6264999999,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.2180380329166666,
+            "violation_upper": 0.21868257374999997,
+            "p95_age_lower_us": 492329.8639999998,
+            "p95_age_upper_us": 493103.31299999985,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978639246,
+            57315979498799
+          ],
+          "2": [
+            57316082727973,
+            57316083422689
+          ],
+          "3": [
+            57316186997289,
+            57316187770738
+          ]
+        },
+        "maximum_generation_interval_width_us": 859.553,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3036.866
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 286.631
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1280
+        ],
+        "export_frame_bytes": 4000,
+        "export_padded_bytes": 4800,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 80
+        },
+        "data_total_byte_hops_with_padding": 7104,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-normal-tt",
+      "capacity": 2,
+      "scenario": "normal",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      "origin_monotonic_ns": 57369759873803,
+      "installation_rpc_indices": [
+        804,
+        868
+      ],
+      "activation_rpc_indices": [
+        868,
+        871
+      ],
+      "activated_monotonic_ns": 57369046910511,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 64,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 1119.024,
+        "maximum_observe_and_solve_us": 2576.562
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106251.54200000002,
+            "p95_age_upper_us": 106992.55700000003,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 107566.63254545449,
+            "p95_age_upper_us": 108290.46654545442,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 107060.54163636357,
+            "p95_age_upper_us": 107784.3756363635,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 5,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978652964,
+            57315979393979
+          ],
+          "2": [
+            57316082710329,
+            57316083434163
+          ],
+          "3": [
+            57316186847329,
+            57316187571163
+          ]
+        },
+        "maximum_generation_interval_width_us": 741.015,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3101.019
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 219.616
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-normal-dinto",
+      "capacity": 2,
+      "scenario": "normal",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57374119775647,
+      "installation_rpc_indices": [
+        871,
+        935
+      ],
+      "activation_rpc_indices": [
+        935,
+        938
+      ],
+      "activated_monotonic_ns": 57373407492731,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 64,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 171.847,
+        "maximum_observe_and_solve_us": 2580.923
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106051.47288888885,
+            "p95_age_upper_us": 106785.90388888893,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 107157.2399999999,
+            "p95_age_upper_us": 107898.1073636363,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106788.51272727262,
+            "p95_age_upper_us": 107529.38009090904,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 5,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978641427,
+            57315979375858
+          ],
+          "2": [
+            57316082725645,
+            57316083468781
+          ],
+          "3": [
+            57316186869645,
+            57316187612781
+          ]
+        },
+        "maximum_generation_interval_width_us": 743.136,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3169.169
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 282.158
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-normal-intopp",
+      "capacity": 2,
+      "scenario": "normal",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57378491772939,
+      "installation_rpc_indices": [
+        938,
+        1002
+      ],
+      "activation_rpc_indices": [
+        1002,
+        1005
+      ],
+      "activated_monotonic_ns": 57377789991224,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 64,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 276.679,
+        "maximum_observe_and_solve_us": 3101.444
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 105720.6061111111,
+            "p95_age_upper_us": 106406.94233333328,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106605.99027272726,
+            "p95_age_upper_us": 107586.67227272729,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106197.26299999999,
+            "p95_age_upper_us": 107209.76399999992,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 5,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978677070,
+            57315979363902
+          ],
+          "2": [
+            57316082665242,
+            57316083645924
+          ],
+          "3": [
+            57316186718423,
+            57316187730924
+          ]
+        },
+        "maximum_generation_interval_width_us": 1012.501,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3051.555
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 166.134
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-normal-intopp_ahead",
+      "capacity": 2,
+      "scenario": "normal",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57382845140645,
+      "installation_rpc_indices": [
+        1005,
+        1069
+      ],
+      "activation_rpc_indices": [
+        1069,
+        1072
+      ],
+      "activated_monotonic_ns": 57382132995238,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 64,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 198.002,
+        "maximum_observe_and_solve_us": 3539.698
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106219.18844444437,
+            "p95_age_upper_us": 106974.9564444445,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 107191.96925,
+            "p95_age_upper_us": 107912.69325000004,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 106801.13763636365,
+            "p95_age_upper_us": 107521.86163636368,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 5,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978610440,
+            57315979366208
+          ],
+          "2": [
+            57316082707332,
+            57316083428056
+          ],
+          "3": [
+            57316186869332,
+            57316187590056
+          ]
+        },
+        "maximum_generation_interval_width_us": 755.768,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 31.756,
+          "maximum_upper": 3265.992
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 273.833
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-delay-tt",
+      "capacity": 2,
+      "scenario": "delay",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      "origin_monotonic_ns": 57387209180856,
+      "installation_rpc_indices": [
+        1072,
+        1136
+      ],
+      "activation_rpc_indices": [
+        1136,
+        1139
+      ],
+      "activated_monotonic_ns": 57386485463349,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 64,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 141.792,
+        "maximum_observe_and_solve_us": 2321.368
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.04230321374999956,
+            "violation_upper": 0.0456247595833337,
+            "p95_age_lower_us": 218310.30016666657,
+            "p95_age_upper_us": 219099.6491666667,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.05532514708333338,
+            "violation_upper": 0.05710571458333366,
+            "p95_age_lower_us": 222377.30099999998,
+            "p95_age_upper_us": 223089.52800000014,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.00153076125000002,
+            "violation_upper": 0.0018275225000000015,
+            "p95_age_lower_us": 222014.90099999998,
+            "p95_age_upper_us": 222727.12800000014,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978658622,
+            57315979447971
+          ],
+          "2": [
+            57316082717477,
+            57316083429704
+          ],
+          "3": [
+            57316186877477,
+            57316187589704
+          ]
+        },
+        "maximum_generation_interval_width_us": 789.349,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 60530.747,
+          "maximum_upper": 139469.054
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 213.933
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-delay-dinto",
+      "capacity": 2,
+      "scenario": "delay",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57391601075976,
+      "installation_rpc_indices": [
+        1139,
+        1203
+      ],
+      "activation_rpc_indices": [
+        1203,
+        1206
+      ],
+      "activated_monotonic_ns": 57390856849649,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 64,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 186.468,
+        "maximum_observe_and_solve_us": 2629.781
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.03982363208333331,
+            "violation_upper": 0.04220499875000018,
+            "p95_age_lower_us": 216947.08962499996,
+            "p95_age_upper_us": 217661.49962500003,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.03515854750000008,
+            "violation_upper": 0.03650643500000015,
+            "p95_age_lower_us": 213413.34616666668,
+            "p95_age_upper_us": 214060.3321666667,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 213051.51283333334,
+            "p95_age_upper_us": 213698.49883333337,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 1,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978642512,
+            57315979356922
+          ],
+          "2": [
+            57316082744271,
+            57316083391257
+          ],
+          "3": [
+            57316186907271,
+            57316187554257
+          ]
+        },
+        "maximum_generation_interval_width_us": 714.41,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 61009.9,
+          "maximum_upper": 140759.618
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 852.324
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-delay-intopp",
+      "capacity": 2,
+      "scenario": "delay",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57396004561239,
+      "installation_rpc_indices": [
+        1206,
+        1270
+      ],
+      "activation_rpc_indices": [
+        1270,
+        1273
+      ],
+      "activated_monotonic_ns": 57395271900275,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 64,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 144.934,
+        "maximum_observe_and_solve_us": 3254.427
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.04885614250000018,
+            "violation_upper": 0.05123744916666687,
+            "p95_age_lower_us": 219607.82028571435,
+            "p95_age_upper_us": 220424.26828571432,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.05153477958333339,
+            "violation_upper": 0.05327003958333313,
+            "p95_age_lower_us": 220613.91183333332,
+            "p95_age_upper_us": 221308.01583333322,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 220196.0785,
+            "p95_age_upper_us": 220908.18249999988,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 1,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978616571,
+            57315979433019
+          ],
+          "2": [
+            57316082740209,
+            57316083434313
+          ],
+          "3": [
+            57316186884209,
+            57316187596313
+          ]
+        },
+        "maximum_generation_interval_width_us": 816.448,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 62179.32,
+          "maximum_upper": 141152.993
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 525.049
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-delay-intopp_ahead",
+      "capacity": 2,
+      "scenario": "delay",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57400377815881,
+      "installation_rpc_indices": [
+        1273,
+        1337
+      ],
+      "activation_rpc_indices": [
+        1337,
+        1340
+      ],
+      "activated_monotonic_ns": 57399675659688,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 64,
+      "received_record_counts": [
+        32,
+        32,
+        32
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 64,
+        "missing_packet_ids": [],
+        "missing_reports": 0,
+        "netem_drop_counter_delta": 0,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 626.146,
+        "maximum_observe_and_solve_us": 3016.066
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.044593384583333485,
+            "violation_upper": 0.04707805458333353,
+            "p95_age_lower_us": 218378.01537500002,
+            "p95_age_upper_us": 219123.416375,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.037223856666666395,
+            "violation_upper": 0.03874726500000019,
+            "p95_age_lower_us": 214209.66266666653,
+            "p95_age_upper_us": 215123.70766666677,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 213732.82933333318,
+            "p95_age_upper_us": 214646.87433333343,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": true
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 1,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978634204,
+            57315979379605
+          ],
+          "2": [
+            57316082679076,
+            57316083593121
+          ],
+          "3": [
+            57316186797076,
+            57316187711121
+          ]
+        },
+        "maximum_generation_interval_width_us": 914.045,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 62045.631,
+          "maximum_upper": 142218.175
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 480.857
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-loss-tt",
+      "capacity": 2,
+      "scenario": "loss",
+      "family": "tt",
+      "parameters": {
+        "branch1": "always",
+        "branch2": "always",
+        "shared": "flow2"
+      },
+      "origin_monotonic_ns": 57404729964714,
+      "installation_rpc_indices": [
+        1340,
+        1404
+      ],
+      "activation_rpc_indices": [
+        1404,
+        1407
+      ],
+      "activated_monotonic_ns": 57404017415802,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 0,
+        "objective": null
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 52,
+      "received_record_counts": [
+        26,
+        26,
+        26
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 52,
+        "missing_packet_ids": [
+          2008,
+          2018,
+          2020,
+          2036,
+          2041,
+          2053,
+          2061,
+          2064,
+          2068,
+          2071,
+          2074,
+          2075
+        ],
+        "missing_reports": 12,
+        "netem_drop_counter_delta": 12,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 214.265,
+        "maximum_observe_and_solve_us": 2001.615
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.06635646083333355,
+            "violation_upper": 0.06728897916666678,
+            "p95_age_lower_us": 239627.75300000014,
+            "p95_age_upper_us": 240746.77500000002,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.02228929208333352,
+            "violation_upper": 0.022642437916666775,
+            "p95_age_lower_us": 189558.6566666666,
+            "p95_age_upper_us": 190406.20666666672,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.010155162916666644,
+            "violation_upper": 0.010508308749999997,
+            "p95_age_lower_us": 189064.6566666666,
+            "p95_age_upper_us": 189912.20666666672,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978573086,
+            57315979692108
+          ],
+          "2": [
+            57316082709111,
+            57316083556661
+          ],
+          "3": [
+            57316186804111,
+            57316187651661
+          ]
+        },
+        "maximum_generation_interval_width_us": 1119.022,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 2886.793
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 1296.729
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-loss-dinto",
+      "capacity": 2,
+      "scenario": "loss",
+      "family": "dinto",
+      "parameters": {
+        "tradeoff": 1.0,
+        "average_change_bytes": 0.0,
+        "gain": "static",
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57409073509329,
+      "installation_rpc_indices": [
+        1407,
+        1471
+      ],
+      "activation_rpc_indices": [
+        1471,
+        1474
+      ],
+      "activated_monotonic_ns": 57408371290747,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 36.0,
+        "variation_bytes": 36,
+        "objective": -5.0
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 53,
+      "received_record_counts": [
+        27,
+        26,
+        26
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 53,
+        "missing_packet_ids": [
+          2106,
+          2109,
+          2113,
+          2126,
+          2131,
+          2135,
+          2138,
+          2145,
+          2149,
+          2150,
+          2155
+        ],
+        "missing_reports": 11,
+        "netem_drop_counter_delta": 11,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 238.231,
+        "maximum_observe_and_solve_us": 2687.335
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0014520900000000257,
+            "violation_upper": 0.0018200891666666334,
+            "p95_age_lower_us": 165598.19766666665,
+            "p95_age_upper_us": 166293.82766666656,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.023241765416666747,
+            "violation_upper": 0.023570979583333342,
+            "p95_age_lower_us": 190876.96166666667,
+            "p95_age_upper_us": 191667.0756666665,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0064766970833333715,
+            "violation_upper": 0.006827163749999987,
+            "p95_age_lower_us": 190630.79766666656,
+            "p95_age_upper_us": 191471.91766666644,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978629453,
+            57315979325083
+          ],
+          "2": [
+            57316082667720,
+            57316083457834
+          ],
+          "3": [
+            57316186757878,
+            57316187598998
+          ]
+        },
+        "maximum_generation_interval_width_us": 841.12,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 30.379,
+          "maximum_upper": 3154.32
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 257.12
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-loss-intopp",
+      "capacity": 2,
+      "scenario": "loss",
+      "family": "intopp",
+      "parameters": {
+        "lookahead_us": 0,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57413462076084,
+      "installation_rpc_indices": [
+        1474,
+        1538
+      ],
+      "activation_rpc_indices": [
+        1538,
+        1541
+      ],
+      "activated_monotonic_ns": 57412749455198,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 49,
+      "received_record_counts": [
+        23,
+        26,
+        26
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 49,
+        "missing_packet_ids": [
+          2203,
+          2211,
+          2221,
+          2229,
+          2231,
+          2241,
+          2245,
+          2254,
+          2258,
+          2260,
+          2261,
+          2268,
+          2270,
+          2271,
+          2276
+        ],
+        "missing_reports": 15,
+        "netem_drop_counter_delta": 15,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 141.413,
+        "maximum_observe_and_solve_us": 3675.451
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.04115069333333338,
+            "violation_upper": 0.04143990708333333,
+            "p95_age_lower_us": 208988.6076666666,
+            "p95_age_upper_us": 209682.72066666663,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.060919192499999775,
+            "violation_upper": 0.06194599499999992,
+            "p95_age_lower_us": 233103.0309999996,
+            "p95_age_upper_us": 234335.19399999978,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.02714367166666644,
+            "violation_upper": 0.028166311666666492,
+            "p95_age_lower_us": 232572.4059999996,
+            "p95_age_upper_us": 233799.57399999967,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978655063,
+            57315979349176
+          ],
+          "2": [
+            57316082585291,
+            57316083817454
+          ],
+          "3": [
+            57316186594411,
+            57316187821579
+          ]
+        },
+        "maximum_generation_interval_width_us": 1232.163,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 0.0,
+          "maximum_upper": 3195.307
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 221.852
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    },
+    {
+      "name": "k2-loss-intopp_ahead",
+      "capacity": 2,
+      "scenario": "loss",
+      "family": "intopp_ahead",
+      "parameters": {
+        "lookahead_us": 50000,
+        "flow_order": [
+          2,
+          1,
+          3
+        ]
+      },
+      "origin_monotonic_ns": 57417848390471,
+      "installation_rpc_indices": [
+        1541,
+        1605
+      ],
+      "activation_rpc_indices": [
+        1605,
+        1608
+      ],
+      "activated_monotonic_ns": 57417135943536,
+      "target": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "cold_decision": {
+        "thresholds": [
+          {
+            "node": 1,
+            "flow": 1,
+            "threshold_us": 1
+          },
+          {
+            "node": 2,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 1,
+            "threshold_us": null
+          },
+          {
+            "node": 3,
+            "flow": 2,
+            "threshold_us": 1
+          },
+          {
+            "node": 3,
+            "flow": 3,
+            "threshold_us": null
+          }
+        ],
+        "assignment": [
+          {
+            "node": 1,
+            "kind": 1,
+            "flow": 1
+          },
+          {
+            "node": 2,
+            "kind": 1,
+            "flow": 2
+          },
+          {
+            "node": 3,
+            "kind": 1,
+            "flow": 2
+          }
+        ],
+        "queue_before": 0.0,
+        "queue_after": 0.0,
+        "variation_bytes": 36,
+        "objective": 5
+      },
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 51,
+      "received_record_counts": [
+        25,
+        26,
+        26
+      ],
+      "export_delivery": {
+        "emitted_reports": 64,
+        "received_reports": 51,
+        "missing_packet_ids": [
+          2304,
+          2324,
+          2327,
+          2333,
+          2334,
+          2344,
+          2348,
+          2351,
+          2358,
+          2359,
+          2360,
+          2364,
+          2368
+        ],
+        "missing_reports": 13,
+        "netem_drop_counter_delta": 13,
+        "netem_scope": "qdisc 还可含背景帧，不能把总 drops 全部归给遥测报告",
+        "emitted_record_counts": [
+          32,
+          32,
+          32
+        ]
+      },
+      "decision_checks": {
+        "checked_decisions": 31,
+        "passed": true,
+        "maximum_slot_lateness_us": 162.649,
+        "maximum_observe_and_solve_us": 2576.218
+      },
+      "age": {
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 220000,
+            "violation_lower": 0.0029265470833333288,
+            "violation_upper": 0.003204989166666637,
+            "p95_age_lower_us": 180250.21666666656,
+            "p95_age_upper_us": 180918.47766666667,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 220000,
+            "violation_lower": 0.018020705000000112,
+            "violation_upper": 0.018311196250000116,
+            "p95_age_lower_us": 191784.06250000003,
+            "p95_age_upper_us": 192481.24150000003,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 260000,
+            "violation_lower": 0.0012686216666667799,
+            "violation_upper": 0.0015755550000001676,
+            "p95_age_lower_us": 191533.06250000003,
+            "p95_age_upper_us": 192269.70250000007,
+            "unknown_fraction": 0.0,
+            "fulfilled_by_upper_age": false
+          }
+        ],
+        "fulfilled_weight_by_upper_age": 0,
+        "clock_offset_intervals_ns": {
+          "1": [
+            57315978655626,
+            57315979323887
+          ],
+          "2": [
+            57316082725317,
+            57316083422496
+          ],
+          "3": [
+            57316186844856,
+            57316187581496
+          ]
+        },
+        "maximum_generation_interval_width_us": 736.64,
+        "record_delivery_delay_bounds_us": {
+          "minimum_lower": 39.244,
+          "maximum_upper": 2790.356
+        },
+        "assumptions": "单宿主单调时钟，生成早于对应恢复业务接收，单节点恒定偏移；非精确年龄真值",
+        "clock_calibration": "离线用发送前及业务接收界收紧区间；全部实际导出含丢失报告只校准时钟，不作为已收到状态",
+        "availability": "实际 collector recvmsg 完成，窗口后报告保留但不提前使用",
+        "maximum_send_lateness_us": 180.119
+      },
+      "runtime_api": {
+        "installation": {
+          "calls": 64,
+          "request_serialized_bytes": 6106,
+          "reply_serialized_bytes": 1971
+        },
+        "initial_activation": {
+          "calls": 3,
+          "request_serialized_bytes": 267,
+          "reply_serialized_bytes": 90
+        }
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          512,
+          512,
+          1472
+        ],
+        "export_frame_bytes": 3584,
+        "export_padded_bytes": 3904,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 64
+        },
+        "data_total_byte_hops_with_padding": 6400,
+        "scope": "全部业务和预热，sink 发出尝试含丢失，最小 Ethernet 填充，无 FCS/前导码/物理间隔"
+      },
+      "correctness_data_budget_satisfied": true
+    }
+  ],
+  "requirements_window_offset_us": [
+    [
+      800000,
+      3200000
+    ]
+  ],
+  "deadlines_us": [
+    [
+      220000,
+      220000,
+      260000
+    ]
+  ],
+  "warmup_us": [
+    0,
+    800000
+  ],
+  "slot_us": 100000,
+  "format": "prefix 4+12 B",
+  "clock_input": "在线只用已收报告和已发生的本机发送前日志界；固定偏移区间，非可部署同步协议",
+  "effect": "初次容量启用在业务开始前完成，后续目标变化立即失败，不测试跨节点动态原子更新",
+  "control": "逐 API 序列化和全程 loopback 帧分别保存，文件仪表与求解为主机计算",
+  "declared_budget": {
+    "scope": "宽松正确性预算，费用含预热，不作等预算性能推断",
+    "per_case_inband_per_link_bytes": [
+      1024,
+      1024,
+      2048
+    ],
+    "per_case_export_padded_bytes": 5000,
+    "whole_run_control_per_node_direction_bytes": 134217728
+  },
+  "end_utc": "2026-10-10T08:01:49.834808+00:00",
+  "duration_seconds": 106.61422491999838,
+  "control_cost": {
+    "api_by_kind": {
+      "cold_start_reset": {
+        "calls": 504,
+        "request_serialized_bytes": 37728,
+        "reply_serialized_bytes": 15120
+      },
+      "installation": {
+        "calls": 1032,
+        "request_serialized_bytes": 109041,
+        "reply_serialized_bytes": 32220
+      },
+      "initial_activation": {
+        "calls": 72,
+        "request_serialized_bytes": 6408,
+        "reply_serialized_bytes": 2160
+      }
+    },
+    "whole_run_loopback_per_node_direction_bytes": [
+      91364,
+      216752,
+      91298,
+      216752,
+      91298,
+      216752,
+      8575,
+      168036
+    ],
+    "whole_run_loopback_frame_bytes": 1100827,
+    "serialization_added_to_physical": false,
+    "attribution": "含 CLI/握手/TCP/诊断/GSO，整次运行计费，不按时间归因到单次 RPC",
+    "within_correctness_budget": true
+  },
+  "checks": {
+    "output_frames": 7104,
+    "business_packets": 1920,
+    "online_decisions": 744,
+    "passed": true
+  },
+  "fair_performance_comparison_completed": false,
+  "novelty_established": false,
+  "analysis_sha256": "83c2e75e4bafe5069a327ad774e2ab93af12982bef2f09fa210ca0a267d55f17",
+  "analysis_dependencies": {
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d"
+  },
+  "raw_artifact_sha256": {
+    "declared-budget.json": "086aacc0024eaf9825b65fa352a8709de8bfa14dcb96fdef4859e221c63c679e",
+    "executed-source/experiments/admission_io.py": "3a5b8a933f826c80fe440a2b66c276088ca264dfbbd0c7788fc2575f6cce491c",
+    "executed-source/experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "executed-source/experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "executed-source/experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "executed-source/experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "executed-source/experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "executed-source/experiments/run_assignment_validation.py": "12a813587d1a3564b04b38902345ee72542d6284be1b4515610b9882d65ea995",
+    "executed-source/experiments/run_fork_validation.py": "24c3ada67ddc41cc266802ff78cf27f11b80c3ca37cb9e1e03179b55a856462a",
+    "executed-source/experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "executed-source/experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "executed-source/experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "executed-source/experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "executed-source/experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "executed-source/src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "executed-source/src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "executed-source/src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "executed-source/src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "executed-source/src/orchestration/assignment_reference.py": "48ce29f17309537af056460f3b27ac130ec4fb6cdb87355a2b362c0a54dde3d5",
+    "executed-source/src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "executed-source/src/orchestration/deployment.py": "bb45175ab83c6103be941e93ff9349418e97d66136ec3892b8929097a7587689",
+    "executed-source/src/orchestration/live_assignment.py": "a2aabff9beaeed0307454b5e540a3491bef2b2071393ee79272523156a588968",
+    "executed-source/src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "executed-source/src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "executed-source/src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "executed-source/src/orchestration/slot_reference.py": "5d00049b824b16778843c3ca1f923faca050e02d4bd30b8dc6a0a45e966fa6c0",
+    "executed-source/src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "executed-source/src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "frozen-parameters.json": "7793f5a288089956b50b02824fac1787586c2136e051467fc2b3458731de9b9f",
+    "k1-delay-dinto/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-delay-dinto/collector.jsonl": "e27254b42b539089d638757c2ba1dad386ebaaacdaec5673b56bc96792cf41af",
+    "k1-delay-dinto/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-delay-dinto/collector.pcap": "5359eb57e239f4070b43e25562db706a3a9d50aa9bfb8bb169f8ed72f749184c",
+    "k1-delay-dinto/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-delay-dinto/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-delay-dinto/decisions.jsonl": "a42acad9217a6a6eff6025ddf7285c64702ddc9415c042a27520fdc99d9e0ff5",
+    "k1-delay-dinto/destination.jsonl": "e438c1e50e35b64bce0994ba6b7f5610c745fc14a4481dfd05c11221aacce74a",
+    "k1-delay-dinto/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-delay-dinto/destination.pcap": "ee4a310825a48dfc6e94665f57863890d9e7fd3a2a324ed0b8793b3317bcd50c",
+    "k1-delay-dinto/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-delay-dinto/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-delay-dinto/netem-after.json": "27369a1b1772671a62cd4b90a07238b4dd94c08f121dd79693482032ca00792e",
+    "k1-delay-dinto/netem-before.json": "af78ea1b94f78cb4ab2276992aeca909fb1c4b82a4f42ee36d8c67115cb86fe5",
+    "k1-delay-dinto/packets.json": "1d501b125bcc6d5986b2c9a6df6f560d78f90869873fec7cd50815dcaabd6390",
+    "k1-delay-dinto/result.json": "a65f2d7c64016cab231e5c07592339ded5ffa6e7ea877c42166fe63246da90fb",
+    "k1-delay-dinto/send.jsonl": "ca56fc1c18510d44ed53b1cfb88e3a1a169cdab1e88e261c70976697d1d15236",
+    "k1-delay-intopp/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-delay-intopp/collector.jsonl": "2cee7a75893121219919b42a81ac79c6f1cf7c12421f92dced776d6193d0f281",
+    "k1-delay-intopp/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-delay-intopp/collector.pcap": "fc36b4cdb41e8d042444ccdfa973a0e77215ae6833f78c812840f60c089e5ec3",
+    "k1-delay-intopp/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-delay-intopp/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-delay-intopp/decisions.jsonl": "75c10566e2f1e5e2059f379d9f5582b1f6f16e5ac71de243481de64f33ab7308",
+    "k1-delay-intopp/destination.jsonl": "ba39e793498619d0658ee3a1e3c96618344c316e560f058a8f207c5c250fa020",
+    "k1-delay-intopp/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-delay-intopp/destination.pcap": "c4b747e9335d3ff5b5f35314f202d4459bce823d25844f86de641cd971a5bfbb",
+    "k1-delay-intopp/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-delay-intopp/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-delay-intopp/netem-after.json": "78f2506763550d060087ab77883d205f86839492596ac93bad428d8e69fc88a8",
+    "k1-delay-intopp/netem-before.json": "0474cac2c5c39721908e71ade31262418976725374091c81f4e74d42a54c9f4e",
+    "k1-delay-intopp/packets.json": "15fce606921dc839d3c57d5e34d851917037fb7d71e5af11ef129a356a4698d0",
+    "k1-delay-intopp/result.json": "f59783717be5bb9f992b9008feda3f997499623b58228cbab90b5c3a5eb60dee",
+    "k1-delay-intopp/send.jsonl": "64195e077679af80a24f061997af26f58c8bbb47dcb8644a9df4b468b93b882f",
+    "k1-delay-intopp_ahead/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-delay-intopp_ahead/collector.jsonl": "ef483dcdd5592c77560f1c45b92c73ca434f1779612e0dd8e14a3ed33effbe39",
+    "k1-delay-intopp_ahead/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-delay-intopp_ahead/collector.pcap": "090692bc67b3273448a61cb379b08ff9a936b5cd729610c7cb10afd6475e0c4d",
+    "k1-delay-intopp_ahead/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-delay-intopp_ahead/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-delay-intopp_ahead/decisions.jsonl": "578cf948b654973bba7842561b9f9529ba8c9cbe8c89c6828fa05cf153bb905c",
+    "k1-delay-intopp_ahead/destination.jsonl": "cab41c130e754a46d7226756ddc908cce3f1fe99467d4d74593b54660ed51e88",
+    "k1-delay-intopp_ahead/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-delay-intopp_ahead/destination.pcap": "58517ca761e14e26b15f11ed5782fadfc705186ff9e0c0a093e61ccca443da9f",
+    "k1-delay-intopp_ahead/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-delay-intopp_ahead/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-delay-intopp_ahead/netem-after.json": "faf0e261a43e6c924a485e4d49dc5dbfc8ca3a56078fdb0052d12442d861b83f",
+    "k1-delay-intopp_ahead/netem-before.json": "704c102ec2e9defbd45945fd1054022aec3d6ff255aaa58a902a29e2a0117a48",
+    "k1-delay-intopp_ahead/packets.json": "4e05cb449402912e85d6afbc1073d10540a9715444fb8f7f89c45c1401b2a697",
+    "k1-delay-intopp_ahead/result.json": "67088862b1614161414d262d98bb963fb51a578176bf4acc76d66c3bf7f46327",
+    "k1-delay-intopp_ahead/send.jsonl": "099ea0896a15278002ca7d4a8a8bb9eee3f355d832a7dddae592a5c613c6cc7e",
+    "k1-delay-tt/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-delay-tt/collector.jsonl": "4c2be8e3a0cfa996c7e2e033313825cb39b2c5ad623771a48641d4072a64099c",
+    "k1-delay-tt/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-delay-tt/collector.pcap": "4492f8cbc25d4be3e6db62a9b6905ea477e05f9228de8380e2701ac3bf19fd12",
+    "k1-delay-tt/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-delay-tt/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-delay-tt/decisions.jsonl": "1c6523c0367171793e90c7c009c5b8ecc8e2942b18740622b7dddb1740d514ae",
+    "k1-delay-tt/destination.jsonl": "d59590e5fbba4ddf5316ff14bf90a4a119bbc723fad14e5318301e56fccf5184",
+    "k1-delay-tt/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-delay-tt/destination.pcap": "decc915fdc699f2dda46e6e0e333b963220b4fd2b1b6f221cf705e28b0fda8bd",
+    "k1-delay-tt/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-delay-tt/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-delay-tt/netem-after.json": "a7e578e0d653c1f9483c6f6ab723abc9c29a76fe0bdf21406b73756a49cae55d",
+    "k1-delay-tt/netem-before.json": "7f7e6facf8692945c48284b24026b3e211c8da461ebc821af9e8960d98c15d0a",
+    "k1-delay-tt/packets.json": "3a397eb379b94d5264ba545a29cb35eb5560256314a820e0720664cb2eca736c",
+    "k1-delay-tt/result.json": "b842594ce789948e32b20a9c22e10f2874db806437879660f21a13885f2cf0e7",
+    "k1-delay-tt/send.jsonl": "398e2e556cd6f20fdb2e115f1cce35fcf8a88d43fd9b0016f8d56fa0e9178db4",
+    "k1-loss-dinto/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-loss-dinto/collector.jsonl": "ecef2d422ad73325aa46426a4c5e2aaffb1acee8cdd50920d1423a7657a4a89b",
+    "k1-loss-dinto/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-loss-dinto/collector.pcap": "7ee3d634c9cf635f113ad21dceddb483228dbddb10384c40e23d030a82f0a0b8",
+    "k1-loss-dinto/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-loss-dinto/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-loss-dinto/decisions.jsonl": "6bea75f5051c9b8de253f3ccd9ffc30b7df61e03b3eeaa5df513a52022618e2a",
+    "k1-loss-dinto/destination.jsonl": "2e8a95acf938a65295e308838534ec6c3aad8e7324c3d6f13770273eab8e9dac",
+    "k1-loss-dinto/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-loss-dinto/destination.pcap": "09bc0be811d41090540bd51024e5841116cc31869817966465fe9ea16ee51824",
+    "k1-loss-dinto/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-loss-dinto/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-loss-dinto/netem-after.json": "b7a4eb450793c22aa6e6bef82ab933670a451e435e1f8fb1c9286b4296903e16",
+    "k1-loss-dinto/netem-before.json": "f365db05c90266ec1f514e80e898f2a4e629d9ff7fd4ddc4e826c159c9aea16e",
+    "k1-loss-dinto/packets.json": "064149f5c8bcdafbcfe72eed1406b88b0ca4f90c42e1fd4d5a11e328e67bf987",
+    "k1-loss-dinto/result.json": "fdbff7bccd82e756ed72740c8948589dfb3a6472487fdc57bc21d20ed5570d33",
+    "k1-loss-dinto/send.jsonl": "efadff0cdbfa3ba0a4e51128561baadd2b9e49b180ab8ced49bb880e91d52c09",
+    "k1-loss-intopp/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-loss-intopp/collector.jsonl": "6892f29beee98f5683929d2050d5cbff839ca3f1cf050ce2ab05658fdeb328c2",
+    "k1-loss-intopp/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-loss-intopp/collector.pcap": "d7200ed116707c9beb94c7f57927d47246de786ac1e531fac3a40c0e159bbbad",
+    "k1-loss-intopp/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-loss-intopp/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-loss-intopp/decisions.jsonl": "e253d7e7a364a319516123efde2a8e35581b035ecbc6a2b912ed6a6c32f737a5",
+    "k1-loss-intopp/destination.jsonl": "0cabefa018cf6c56b20ee2586da24bf920fba7cc988eee9d84973063855cc90c",
+    "k1-loss-intopp/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-loss-intopp/destination.pcap": "3e30be76897d1ef56c12c5c7e29110e2805e7ad38a8f266693ab59fc798b2777",
+    "k1-loss-intopp/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-loss-intopp/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-loss-intopp/netem-after.json": "46eb60ec1e6626d267427e72525a683f6674dca8ed88e3a3212b9d8642d5f0e9",
+    "k1-loss-intopp/netem-before.json": "79e398648618bc33a516e9d8e7151162c124e49a3d85cfa76bdace7e06066937",
+    "k1-loss-intopp/packets.json": "75dcfaf5942798bf1afe7403246cfa3c7c2494fe12b13c3aefe2ba54d1965147",
+    "k1-loss-intopp/result.json": "66cdc49bb54d00fe5688a077b60e3eaf58951fb85f6538a8042e31bbe43c2b2a",
+    "k1-loss-intopp/send.jsonl": "63e5c6d46b63f6c81eac2c799b9a10e6e272867552a33878b73e14c841b61de4",
+    "k1-loss-intopp_ahead/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-loss-intopp_ahead/collector.jsonl": "872500352d9b60f811bc9a3084bc24d719d934fd9167976d5d9dc6f5fc74c7ba",
+    "k1-loss-intopp_ahead/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-loss-intopp_ahead/collector.pcap": "5cf11d0060b7fcce804db5ded951551a08f73a6b3a1707b70a3072b8bb22f351",
+    "k1-loss-intopp_ahead/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-loss-intopp_ahead/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-loss-intopp_ahead/decisions.jsonl": "f8ac03d4ad65d39fa3689ad760d094ab7beb3509b2cb6a83fb977e1d4a0b073a",
+    "k1-loss-intopp_ahead/destination.jsonl": "84f01e899781a186b614fa1969ddfdf49cbb0f16d1d9f0c84b5d0b1471236af1",
+    "k1-loss-intopp_ahead/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-loss-intopp_ahead/destination.pcap": "ef14113493b74e650a41781127d00eb7faf8d025fb8496441f26c2b26c77d902",
+    "k1-loss-intopp_ahead/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-loss-intopp_ahead/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-loss-intopp_ahead/netem-after.json": "eb14f21f48341bf33bd059f9ae4da21faf6ddfaa15a42d4315dcbc835514c0df",
+    "k1-loss-intopp_ahead/netem-before.json": "e370e37be2319efe857b83e749d9607af3c1144b6708f4b5b1186a19a556e228",
+    "k1-loss-intopp_ahead/packets.json": "f212159727ebfc838bd0b5bd6c742bd1c484036f94e9f38555448c20ba069d07",
+    "k1-loss-intopp_ahead/result.json": "4c3987b6d58b76e5f2f72146ef5396a6a3272490cf5500ab6900b8c00171bf0d",
+    "k1-loss-intopp_ahead/send.jsonl": "4e6db5e082eff08ddd8900e4a621624b9dd2d0f84eb9cbb2a30dde3cf37b3f34",
+    "k1-loss-tt/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-loss-tt/collector.jsonl": "3a876ac75ed95a17541fa318ca326d4f5a51f6b629db1a4dfdab81039b8a5a4a",
+    "k1-loss-tt/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-loss-tt/collector.pcap": "3780b6f7d1f3cfb4eb5a44b544f6b9588b11c796b55b6da4ae23414055804f4b",
+    "k1-loss-tt/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-loss-tt/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-loss-tt/decisions.jsonl": "21999480a81a031f4f1cd159997bdf704dcf6e3f611006b6b56b001297b51f51",
+    "k1-loss-tt/destination.jsonl": "fecbf91da85df2620895c0af4a2fa5cd744edda7b93fca0409910785dc99d001",
+    "k1-loss-tt/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-loss-tt/destination.pcap": "36fc4e7d6ea2c6b57656e39217ce123c4c156b4dc32e4c3174d860d3c94e038a",
+    "k1-loss-tt/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-loss-tt/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-loss-tt/netem-after.json": "211ff23a8a695e0114b38577e03ff2738b1072a4ee3e25fae9fb24df1b41a23a",
+    "k1-loss-tt/netem-before.json": "4492ccc1f53baaea3faa16ade0fd5b6cd89951e1b7183cbd096c5697d6f19144",
+    "k1-loss-tt/packets.json": "a86c804363aaf279c39006bca1b91443666197c3438f35848f55d13b7fd09067",
+    "k1-loss-tt/result.json": "36c60a9e0df3b91ff956c7bdc6d623afcbb7a1e664a8ca398e81b0479269de62",
+    "k1-loss-tt/send.jsonl": "d34aa07a2c96dcb4366ede753fb1834224d363f18159713f64663edd8a623ac8",
+    "k1-normal-dinto/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-normal-dinto/collector.jsonl": "d4577f3ad84e71df0a1ab623fae04a173b56bda39f179695042eab7995c20324",
+    "k1-normal-dinto/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-normal-dinto/collector.pcap": "d309289551b41f6b5d9e19cbe1998350e6735df18b48c1e72c7ba53e8622731b",
+    "k1-normal-dinto/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-normal-dinto/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-normal-dinto/decisions.jsonl": "2d72676b0883943867cc7d26602a7734fab78268ff4e2db6a26621ff8dbc7046",
+    "k1-normal-dinto/destination.jsonl": "87a862347a752e16750c525d350c33abcc136146a0c4062cc9a8e2ceb138774c",
+    "k1-normal-dinto/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-normal-dinto/destination.pcap": "f57928c1bfb18fc278755d58d4fa85d6122df88d6ef3090f242549bb4c2c1888",
+    "k1-normal-dinto/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-normal-dinto/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-normal-dinto/netem-after.json": "6d6325ba8fd3ee38da9d843b181ae87d12f652c63ca08565941b04f8a1807083",
+    "k1-normal-dinto/netem-before.json": "0f50f77d3e3122956fc42d16eb3751c70a1b4179c577756a201fb31400c4bccc",
+    "k1-normal-dinto/packets.json": "4e09580952107dc99899b5e20dc4a62f03de955fe898d2878492758fecc50a71",
+    "k1-normal-dinto/result.json": "7312130bf70d12ba79861327c2f68e6bbb634139c96fff7823f44f676b6314bf",
+    "k1-normal-dinto/send.jsonl": "c9b1b1431e18bfc5ae36ae6f0a1db7f4e8981fcf9743c54fc725f11a14099fd1",
+    "k1-normal-intopp/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-normal-intopp/collector.jsonl": "3cd94299933bed5cfa98d95c675e2b9e45e471e748544239e9c8ade171b82d1e",
+    "k1-normal-intopp/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-normal-intopp/collector.pcap": "3ab86aba2ecb018322bcb72aee662bc88ac17ebd9b5d913f2fae34fc5f70fa61",
+    "k1-normal-intopp/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-normal-intopp/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-normal-intopp/decisions.jsonl": "4189f4515112628330b8020291cc79c2f9953bda22d09004ab21529333cd4a97",
+    "k1-normal-intopp/destination.jsonl": "00850be664ff2b5db9f6f1fabe824fece8b630de068c0f769e8f4ed30a6be474",
+    "k1-normal-intopp/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-normal-intopp/destination.pcap": "621b0fdb3ef8effb3ff5bb56c6f56c33028b500f0d050490d4b669609ea01716",
+    "k1-normal-intopp/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-normal-intopp/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-normal-intopp/netem-after.json": "2c411ef9c567322941446bb0495588a64eaa10e70fb4b6c2e6c3aa53f1021bbb",
+    "k1-normal-intopp/netem-before.json": "52043bf9f764b0912406f224db188af037fd73f999c89f51544c5afb3f1967cf",
+    "k1-normal-intopp/packets.json": "88883eb659764303e6e0b50e831e1542759851bef533785e11109fd0b0d1293f",
+    "k1-normal-intopp/result.json": "043b9e7231e2c16b5d270e708e4f65b9420aa5e36be5dd7e69bdb137d7c32dc7",
+    "k1-normal-intopp/send.jsonl": "f7aa103a9014a7ce35b4e9d57c9fc788c63dba4822d69e1ee226ee2ff26696db",
+    "k1-normal-intopp_ahead/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-normal-intopp_ahead/collector.jsonl": "23236bb5f7d7aead9672dcb9cb4529ca11802e571b9716aa13429fa1475830d0",
+    "k1-normal-intopp_ahead/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-normal-intopp_ahead/collector.pcap": "af58a17568cb181904636195cfacb9938f15fe69bacd4219bfe7dff99570d731",
+    "k1-normal-intopp_ahead/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-normal-intopp_ahead/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-normal-intopp_ahead/decisions.jsonl": "9ad4fdbadcce1c10307d3afda8a7017b19c63804950c44a20609b82a8dd69a1a",
+    "k1-normal-intopp_ahead/destination.jsonl": "8e0ca0d1fc06b9bfb2c5212fa2fdb45aff9dae1e037879373aa9d715a251c9b0",
+    "k1-normal-intopp_ahead/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-normal-intopp_ahead/destination.pcap": "7b6189202cbd80e06d74fc32f3ce55c36c35ac7da5058cf2bb934157eac8316a",
+    "k1-normal-intopp_ahead/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-normal-intopp_ahead/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-normal-intopp_ahead/netem-after.json": "ccf6860e0dcc2dc2e02ddaf962c3314fc0fba189ad8f0be31d75520da218f8bf",
+    "k1-normal-intopp_ahead/netem-before.json": "777aecd2e4f32360c3702198ac358690a857c7eae08afab0f78f747ff9275ace",
+    "k1-normal-intopp_ahead/packets.json": "04ceefb4dbe50b4ffd2902ec3702313cf51eea85dd137c9cad04ae3e1fc39af2",
+    "k1-normal-intopp_ahead/result.json": "f80ed3d169af95aac5aa55fc3b328b8261884b456605b149497740e2e88c70d2",
+    "k1-normal-intopp_ahead/send.jsonl": "524a6dc0ba69479a5df8422bb70a6a96eded648749eb048bfba6ae47b76d276b",
+    "k1-normal-tt/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k1-normal-tt/collector.jsonl": "6940ef62cd8d0406fd6f0a9a897b2af9da9fa711d1a0053fb8249cf170d36066",
+    "k1-normal-tt/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-normal-tt/collector.pcap": "13c5ad546bdbc6c3a7933e6f39cd4cc0616bb19a84a5518ae577b0d544e706bb",
+    "k1-normal-tt/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-normal-tt/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-normal-tt/decisions.jsonl": "d6f992e152fa89cae7dae0db7d2f363ffb588569fc5bf434e99e31ed085cf67a",
+    "k1-normal-tt/destination.jsonl": "1d81a7368c89c6410fd63f974d684d2f8f71abeb06e35d3a2af2e250590b49c8",
+    "k1-normal-tt/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k1-normal-tt/destination.pcap": "830d3decfabbff08e34d05a2759cf8415d9cdbbcaeb3cb9c72f324d195c4a527",
+    "k1-normal-tt/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k1-normal-tt/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k1-normal-tt/netem-after.json": "636fa92869298d63189ca34aba8da541e254acfa0526915fcbf99982ef325b88",
+    "k1-normal-tt/netem-before.json": "2f05c48005c7230bbd25abbaffcf9747dea464cadb1749151860dc58d3226d8a",
+    "k1-normal-tt/packets.json": "d8d8505df402dd8dd14e433a991df11c6fd5ca5e2be84802aae402076c123435",
+    "k1-normal-tt/result.json": "a0727a6bbabadbadcf62266cbcc82c5173be954495bf1db198e21405be1c0e09",
+    "k1-normal-tt/send.jsonl": "aa1fe262272f1e5692603afc127cb5a2d78ad736334758dbcfcb956e68922cc9",
+    "k2-delay-dinto/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-delay-dinto/collector.jsonl": "73ab0b16079f1dcb038c0e4773b71039938a15c3d63c6e969f13df67cc79873e",
+    "k2-delay-dinto/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-delay-dinto/collector.pcap": "f5c8966edcbc61ee26e2287b5359b71a3e86b80315bfd71ae0e11f17deaef536",
+    "k2-delay-dinto/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-delay-dinto/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-delay-dinto/decisions.jsonl": "26b91550e4f5d259f27d728a5becd6c35fe687fd3bf7600b3e7e450483828f13",
+    "k2-delay-dinto/destination.jsonl": "760024178b8dbf3678aadd9a26dbb756ebd1ca5b72c5f43946e30750fdef4fda",
+    "k2-delay-dinto/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-delay-dinto/destination.pcap": "5f1c3ffcddee323c3ef1774c7c76aa0e7439ff014f08e8e0e46c2eb3eb6f691b",
+    "k2-delay-dinto/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-delay-dinto/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-delay-dinto/netem-after.json": "1364347a6dde6886f46db0437ee94b56c5bda38e59b62645d3cab7a2fc0cff12",
+    "k2-delay-dinto/netem-before.json": "eb31c36bfa5e92cd13fc4080432f16bc02ca042f25dcb0fc2ec6a081b2626126",
+    "k2-delay-dinto/packets.json": "7ba0b4febbc3a5065f6fd3f37fc08ecb91872fcabe1a1402a285e16a83a5d69f",
+    "k2-delay-dinto/result.json": "d1782cdf2ac6b16d621c3150a78432a20a60614a1514f321c24a628e621169ef",
+    "k2-delay-dinto/send.jsonl": "c3e747156799a03ecff07c6bf9cfc33c6c86ae6bc7c4009d00ec31ce8f27dbe1",
+    "k2-delay-intopp/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-delay-intopp/collector.jsonl": "cc438c74338e08eee01adf4231a0719ad22915876eca38a8000eba8d89fddee5",
+    "k2-delay-intopp/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-delay-intopp/collector.pcap": "27155f7bef73d83526ad65b34f7539ea6af10eae1eea3a2708d7e4e98d32cd00",
+    "k2-delay-intopp/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-delay-intopp/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-delay-intopp/decisions.jsonl": "c1f89fd470a9b4b96de32a9520d5abac7eae847b083d784f4f50518383205f67",
+    "k2-delay-intopp/destination.jsonl": "1e497b02d8be05e8111f30a051285b34194f129ce9475d12f927f978462a4edf",
+    "k2-delay-intopp/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-delay-intopp/destination.pcap": "3c1d3d00b02f2a89dac582e2adb782e80f4b9e4bfdb19e8b087828a927dd8cbf",
+    "k2-delay-intopp/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-delay-intopp/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-delay-intopp/netem-after.json": "03718566da7bb1d48b8e0765bb0eb69d09894c95a3088c7a161207b4f6aca26f",
+    "k2-delay-intopp/netem-before.json": "69ca2fced792cfa4e8cb7057ccfb2951ec7bcc87b3af6346425890b871613511",
+    "k2-delay-intopp/packets.json": "76cae9e21277c66a81de09c24fdddfaf312c0c39468ddad2b5d939d532731a0f",
+    "k2-delay-intopp/result.json": "bbb3b49569170a24edc4ded43c04bcccef02d647396fa045fdfd6c9907920ae0",
+    "k2-delay-intopp/send.jsonl": "ce6fdc3b7ce150d7951ef79d030230972cd8bb73332b77d5a480743b5c25e4d9",
+    "k2-delay-intopp_ahead/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-delay-intopp_ahead/collector.jsonl": "72d060aa4c21c481766a55f202af102c46e4879df0ed426abd4f7cc02870eed2",
+    "k2-delay-intopp_ahead/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-delay-intopp_ahead/collector.pcap": "bcd23eea7333418550166cdd7d9e0bf0346191926bf81de3a5e0f1e5935c6320",
+    "k2-delay-intopp_ahead/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-delay-intopp_ahead/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-delay-intopp_ahead/decisions.jsonl": "758fa04a99a8233f655c29b73fbae1186f8d3d009beb12da801b6df3df300173",
+    "k2-delay-intopp_ahead/destination.jsonl": "dd62a409676302b9a501be310e34037c7381fd9a021a76c52ac600e592a2b8df",
+    "k2-delay-intopp_ahead/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-delay-intopp_ahead/destination.pcap": "7aebbc1f61607a90a59492f417b7b832955f10cfe5f511c904003de7734fd8ac",
+    "k2-delay-intopp_ahead/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-delay-intopp_ahead/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-delay-intopp_ahead/netem-after.json": "cbe85ccdf8ca34ba34174a92c26b0319658ae349f6e9a12e1bffe49a437aa548",
+    "k2-delay-intopp_ahead/netem-before.json": "e1ea3c6bf95ebb1d47cb564c8896dbe75dd4dba87a36aa834b66e2ee6e83e1a3",
+    "k2-delay-intopp_ahead/packets.json": "35d579645cd5ebe9bbb2874a9c1cdbbb7d65c8e376dc03053bf95583ee8d402c",
+    "k2-delay-intopp_ahead/result.json": "64e74afcbebae46df7c606a19bd90b50dffb110052a6e84d9350865be72d08dc",
+    "k2-delay-intopp_ahead/send.jsonl": "0e7aad37883dc43ebdc28aed919ad622a87c21cda15a6e22e4781e994f848d30",
+    "k2-delay-tt/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-delay-tt/collector.jsonl": "23a7a519c0d070d51a0fd8fd72874c39425b860a165b3d2d1a2e151eed48de13",
+    "k2-delay-tt/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-delay-tt/collector.pcap": "9d30fe11fa7f6a30944f282896e6347cf884595f33e4ed5178783cca01106d8b",
+    "k2-delay-tt/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-delay-tt/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-delay-tt/decisions.jsonl": "d615cd0f3762a31ee42ee5f332027d4cd2a7716b9429355748694c0019f7c87b",
+    "k2-delay-tt/destination.jsonl": "937727452bf158e770a77a101cc0870e56b3a931e2830f25e1ec2f6295625ccc",
+    "k2-delay-tt/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-delay-tt/destination.pcap": "d5e799d7f0c0b022f26b3c4ff194e4f13efe01df7dbf2ae14c2f4803ca602b69",
+    "k2-delay-tt/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-delay-tt/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-delay-tt/netem-after.json": "f3e27b18c1419b40d9e5c0e769b4b0793656973f26cea1d4b2e01b89c8410ea4",
+    "k2-delay-tt/netem-before.json": "bd5cf653da7b81b016645e2e1c967db65d83e556aa2a493f42a438ffdeb3aa45",
+    "k2-delay-tt/packets.json": "52aa6555b452cdf7cbd5239528d781368626ad59bcc3f7acbdace30bb8ce7c88",
+    "k2-delay-tt/result.json": "4c867eaf8de180b08213953725ad8ecd72207164c6a7fa8b163df558be538fdb",
+    "k2-delay-tt/send.jsonl": "06950c0414f7669decca814c6850b5832e6d35d4b418ca8c5bbecc8b47b24ee6",
+    "k2-loss-dinto/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-loss-dinto/collector.jsonl": "790de3fce1aa63e854fb498c86aff82d7056e03d05481e7f4295173ad2af1b3b",
+    "k2-loss-dinto/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-loss-dinto/collector.pcap": "7989364219b46c4961724d9395cd94cbd52ab5068ae6c4e0a9537ae56a436f04",
+    "k2-loss-dinto/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-loss-dinto/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-loss-dinto/decisions.jsonl": "547856cfc881ec0a07cbfa113eb2409deec8cce70d01699d3c83ab745049e563",
+    "k2-loss-dinto/destination.jsonl": "cc6196d24bbd31a778961a1b5aebfe399c623dbb631a384cdf3dc447a5ee109e",
+    "k2-loss-dinto/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-loss-dinto/destination.pcap": "6afe93e6705dffd7a701ddd595cea6f066e8e044a415fab1dcb1b14603205766",
+    "k2-loss-dinto/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-loss-dinto/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-loss-dinto/netem-after.json": "e706e3ff340306805b23963ebe6816f7375f669c9c5d07c80638ef78a51115cd",
+    "k2-loss-dinto/netem-before.json": "efaebecf3e822cf7f3f33d3f3aa90c7dc48b219f1013b46a75a3a4bc8ea6258f",
+    "k2-loss-dinto/packets.json": "b34dca9bd6704e3fc13986afa1486a0721ac655702b984c9f1736ff39cda3888",
+    "k2-loss-dinto/result.json": "69efd44cc48bea10d2d48159bf7a7f1d089930a2de720872743e5cad8f9b7bab",
+    "k2-loss-dinto/send.jsonl": "839d22eb23cc0b305ffedd40107dad1b3a41ddd4591b26ca0cea94abc7889bf3",
+    "k2-loss-intopp/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-loss-intopp/collector.jsonl": "09bb9fd8c9b14d40c752cf4fe9a91b0225e6ca2daf36e40082a382baa7833e6c",
+    "k2-loss-intopp/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-loss-intopp/collector.pcap": "9eba56303f623a8dbf2ac2338116f26a6df6b643413dd4edd240807833fa1fb4",
+    "k2-loss-intopp/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-loss-intopp/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-loss-intopp/decisions.jsonl": "2c4a8965ef255deb9290564403391cdab9f3422345aad613212b461584df2e19",
+    "k2-loss-intopp/destination.jsonl": "94a383dfe03323fe352b555ea6c205c18361a63074dfb9b0230476cb99441849",
+    "k2-loss-intopp/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-loss-intopp/destination.pcap": "c4038093e92e49d82466c35a14565d63c428ae523145507bb15db66f0257f63c",
+    "k2-loss-intopp/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-loss-intopp/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-loss-intopp/netem-after.json": "eb77c3fbf8a583fb22f15b4d57d737046f1d05bfea0d856c7c8e45f49d13ec78",
+    "k2-loss-intopp/netem-before.json": "4b9aa673f335476fc60174ef7260ca5c20a90e4259a22384d000bba96358d6c7",
+    "k2-loss-intopp/packets.json": "f43922c43faa247f68394b9df6a076cff3253ca2e9cbebae3a8b6a8ba49b15a7",
+    "k2-loss-intopp/result.json": "9327ee066a2c4c1ad692cfb6f6aaddabbdb91fe8f3ceb3ea2dae545d160327ec",
+    "k2-loss-intopp/send.jsonl": "bc879adc0e585ebece9c7f0a63a64a0055b9c380565b281b51c8c4b516d69374",
+    "k2-loss-intopp_ahead/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-loss-intopp_ahead/collector.jsonl": "c089a2075d5a58c47a469da0401131f2d822cd6854079183be38bf5538f7c499",
+    "k2-loss-intopp_ahead/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-loss-intopp_ahead/collector.pcap": "583c4fcec3e572acb80f6ecbe2ec47f0858c6e7a257e1fa5dc869f0c2647f30c",
+    "k2-loss-intopp_ahead/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-loss-intopp_ahead/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-loss-intopp_ahead/decisions.jsonl": "ff871be3ae559c33f372fbd39a15445451804ff147f8055f929522346b6438a6",
+    "k2-loss-intopp_ahead/destination.jsonl": "7a7b886eb7becd1fc8a471ecee9052db4d1f67e607ed815c20f71b37d6f4d7c2",
+    "k2-loss-intopp_ahead/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-loss-intopp_ahead/destination.pcap": "a91aca55f17f049aff4bf8cb1d12cd07ba3c2a76132b3286f0e75e5f96e5a3ca",
+    "k2-loss-intopp_ahead/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-loss-intopp_ahead/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-loss-intopp_ahead/netem-after.json": "a9b48cb8e0e02b2d2cf79a8ead6a22618ac2a8c484e8ad5e478edfcd3dda999b",
+    "k2-loss-intopp_ahead/netem-before.json": "2023c534dc720e7731f28103e2aeb75fd7574fb3b3822265a27f7f56f672a0a0",
+    "k2-loss-intopp_ahead/packets.json": "8d4433d222a31b61b47d748f1943432bb871d9b7e8d5d1ac422768008185b2cf",
+    "k2-loss-intopp_ahead/result.json": "ade805df608d9972a863fea82bd9dbe24fbc609df078c804b20659dc89b180b9",
+    "k2-loss-intopp_ahead/send.jsonl": "7850475b00753b42acae14cded6814f47c651b3dac115f83a1bf74112cda4803",
+    "k2-loss-tt/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-loss-tt/collector.jsonl": "b6e78c9055b4c372cbb42803ba62e857626d174dccc4b007ebf164270bf5b534",
+    "k2-loss-tt/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-loss-tt/collector.pcap": "3d55e5c58e38b367a336a03150b54e07042910a22c36cbdd544a697337d9163c",
+    "k2-loss-tt/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-loss-tt/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-loss-tt/decisions.jsonl": "aea2c88ebd63e36f39701dd0655c81d447da2c94fd4f1a42427da10a344e2e77",
+    "k2-loss-tt/destination.jsonl": "5b352872d166d4ea9bc2c32395941ff78dd8ef216cf50fe3017a4272e4c039a4",
+    "k2-loss-tt/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-loss-tt/destination.pcap": "ab3755c995c01cae25b295647bfcc541e81328bd6ca8a43a78841ff1d417ee80",
+    "k2-loss-tt/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-loss-tt/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-loss-tt/netem-after.json": "737a98b3df68ca1c1a5db0e019ec1ed8e036f35ccef5e5ace70c98ef7ccf0fc4",
+    "k2-loss-tt/netem-before.json": "ae115d2e76656267f6e433a22558006466922af6304a9bdb28874b4e79bb30b4",
+    "k2-loss-tt/packets.json": "c1f681fc7afe431f244e9146d32a4feeb16430e98dd160615c306927ea79e7d6",
+    "k2-loss-tt/result.json": "780060c4bd51f57a7c4b9e9a6ddbe8da38055d112462ea0809cb96864cc08ab5",
+    "k2-loss-tt/send.jsonl": "301861fa1e17fa2b32a6ae5ebf54846059c4f3bc49b402b9db243a37f2a46b90",
+    "k2-normal-dinto/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-normal-dinto/collector.jsonl": "0ddc83fbf886f4d4508d1a3204aca3cdd8c8804cbe4e686fdf1092f2e74680be",
+    "k2-normal-dinto/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-normal-dinto/collector.pcap": "0f5b14c86f79679b329f4f20d6786ee0d835a3388100a158f87543941eed9f63",
+    "k2-normal-dinto/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-normal-dinto/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-normal-dinto/decisions.jsonl": "f312ac2e38b2b9082a11e19b46106bab9ccbbde4329fd5a0cbaf0d10f3852173",
+    "k2-normal-dinto/destination.jsonl": "25e768258060740ed0b1e8a9bfe090a6ea15b90c324b93707b218e028b5d997f",
+    "k2-normal-dinto/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-normal-dinto/destination.pcap": "12b86e9a88fb50b383832584df370ff4ef9c5db5d44221a1b055aafc21b30498",
+    "k2-normal-dinto/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-normal-dinto/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-normal-dinto/netem-after.json": "a5e7a54d71e0c2b09228d3c6b99a2491665ce799844ed2b237599ad2a0b4fccb",
+    "k2-normal-dinto/netem-before.json": "513d65bb9cfb58dea74cfbebbbb8f2652b6f4986ed4a77cc1ef07dea664ccbda",
+    "k2-normal-dinto/packets.json": "f08f40ec3d16dfcf28d2627e07bc946788d201ec7dd834adc2198ad6e33ef9cc",
+    "k2-normal-dinto/result.json": "fed4ccbb73d35738d267a067798990297d4515407ba8d8ce95a057b745b1847b",
+    "k2-normal-dinto/send.jsonl": "27f4fce151a7a00a100111b0fdeebe7d09ae10c60e5106d80e44e9bee6031ca4",
+    "k2-normal-intopp/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-normal-intopp/collector.jsonl": "3e5e325c52a7ee5a0b893acee1583827d3001174fb4daf9e2bc165c96b558f22",
+    "k2-normal-intopp/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-normal-intopp/collector.pcap": "a8a973aee8dc5b83bb54529c3a026df6fe423baa9485a951667e61531596de8d",
+    "k2-normal-intopp/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-normal-intopp/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-normal-intopp/decisions.jsonl": "0625c0ccf0383756fbcfadf82b537fbd6f9c302144bbd8b4295d2bc78242fc40",
+    "k2-normal-intopp/destination.jsonl": "66c20db518cd2bce7afeac2b2d5f1256583b7ea29a7fe62c0f59edaf20efdb6d",
+    "k2-normal-intopp/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-normal-intopp/destination.pcap": "fbf158b8248c6dbd0a449423381e727bd51bfa71d2060f4a057088f4baa8a1b0",
+    "k2-normal-intopp/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-normal-intopp/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-normal-intopp/netem-after.json": "5a578e30f1c1d5862b23c3324286d5598c9b5b7d33bfa1f59e1eda395f1b3998",
+    "k2-normal-intopp/netem-before.json": "1189430859bbb28867b2146270e432f36855003ab804fa496e62f6e4c66d6918",
+    "k2-normal-intopp/packets.json": "46d19176249e9df677908857f87a0781529a4e70004bd032f2d1655b078281e8",
+    "k2-normal-intopp/result.json": "47f4bd155ebb53ed7a2474c11456494d6912b6a82da33f3ed002d228413463b8",
+    "k2-normal-intopp/send.jsonl": "bec45d21db927b1021467f9e5952c967c265a347e6b75d35e2819bcae5d9e8a9",
+    "k2-normal-intopp_ahead/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-normal-intopp_ahead/collector.jsonl": "9a4d88b347d28d0b7629c7bf092ddce99353fddde3e8a8851905106571133fe7",
+    "k2-normal-intopp_ahead/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-normal-intopp_ahead/collector.pcap": "bbf0ab848b369ae015a78f8f51a010dfe88d27aefa9c100018aba04a9b161970",
+    "k2-normal-intopp_ahead/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-normal-intopp_ahead/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-normal-intopp_ahead/decisions.jsonl": "fadabd67200d2fd0ba8ae5a733f3c3dbdfdca4f410cf8da0617cb371528586bc",
+    "k2-normal-intopp_ahead/destination.jsonl": "042a00e26033731d4d709033cdc1eb5b572687cef4b560655da98a502373d14d",
+    "k2-normal-intopp_ahead/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-normal-intopp_ahead/destination.pcap": "cdf929cabaf9def7e3e3b38e1e5a7e29aa8842c78cc87491e049ae7407404b0e",
+    "k2-normal-intopp_ahead/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-normal-intopp_ahead/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-normal-intopp_ahead/netem-after.json": "080e5889a281a81d89ddc504ce75bbc0e9f40829ee9b9329028559baab4ca7c9",
+    "k2-normal-intopp_ahead/netem-before.json": "46639912e7403a69d01262b3dcd3f4f473c24edf8970cbd5a7d83662ae49171b",
+    "k2-normal-intopp_ahead/packets.json": "a1a5ffcbc9d5a7a59d5f6b8af81bfd425a7cc369889c0b66824d4fcf5532bf63",
+    "k2-normal-intopp_ahead/result.json": "759d7ffe5314156fb0e2238f73554d4910f8cac5b6bd19abcfe79894104eb750",
+    "k2-normal-intopp_ahead/send.jsonl": "ad44507ad29b62052d52216d9298510139deb30d343de8049f9c59c4debf9184",
+    "k2-normal-tt/barriers.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "k2-normal-tt/collector.jsonl": "05db3fb9399836210e6b703ffd270249bcb19a3339b1c86bf7a90cb7af1bad5a",
+    "k2-normal-tt/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-normal-tt/collector.pcap": "ce8b125d39420fb6ebb2b59876abcbc8d08c2524ebbd41ab2b624362fcb9c4b0",
+    "k2-normal-tt/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-normal-tt/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-normal-tt/decisions.jsonl": "be2bb51c2b02623320d7dcc85127fcedd044356eb577c8239290b976175da6ad",
+    "k2-normal-tt/destination.jsonl": "c3b858ff395a795737869ba0b93c3a0b5fd7da87cc6faee6ef04cd5e42bb1522",
+    "k2-normal-tt/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "k2-normal-tt/destination.pcap": "218127659dabc78d486aa48232b3ea21898f0529eb7eda41d452bc7093c4b73b",
+    "k2-normal-tt/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "k2-normal-tt/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "k2-normal-tt/netem-after.json": "88b9ced6df83af5bc3e73a709b1903a38d3da64727fea0938f8aa50f84466342",
+    "k2-normal-tt/netem-before.json": "46c9211f5d99752f210ba01c95f88114b4218cc0b748b0a5c512c586972cdf35",
+    "k2-normal-tt/packets.json": "7f277a027f97617eb845c984bbbe1299fc9abb3b4f12c516cbe7a47b5e319867",
+    "k2-normal-tt/result.json": "1b1a11307849a9c23f3caf064406607b4878dca1ea2ff57aecd4cdbba3c94dea",
+    "k2-normal-tt/send.jsonl": "3007e70a7c0d61148bb2d3608bf306067e6a37ad79a54705007a6bdbeace8902",
+    "launch/simple_switch": "413c569f5c95669553570ef5af7113ef8e0785b400e8b4f9fc17e751ddba012c",
+    "manifest.json": "4c70d36edf120b202881eafb36c7b298a83ce6cf66b9b59c446b9193745a583e",
+    "node-1/control.log": "eead2e1ba7bcdc981b81923cafbb2195fa6f9bbdcb48713fa5659bbf929727bf",
+    "node-1/pfs1-eth1_in.pcap": "040a18c2854eab65ee0198f9e225d75bf04e6a643b45687a1ef544e7dbaca886",
+    "node-1/pfs1-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "node-1/pfs1-eth2_in.pcap": "a43670a589e34ae68cc50ac8750b22647f4dd52c1d86390366102a936f478fc1",
+    "node-1/pfs1-eth2_out.pcap": "9d34b0bb9403027ae1c018024df80baff6ab322016255134a5499e0fc45e77d5",
+    "node-1/switch.log": "ed613972a75ba5f4e4968fe8d1ce316ff596d3a384af91b885ca990fe9562c30",
+    "node-2/control.log": "20c181a0ac9f4189a31ee3b0f72c8c2d99722b9d0763b4251a5e0f21589858c1",
+    "node-2/pfs2-eth1_in.pcap": "ae4b00d97e357c8f29e6faf77d7f18232ae93b7e04366245caa845e88fd472d7",
+    "node-2/pfs2-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "node-2/pfs2-eth2_in.pcap": "b4c289f0ba1c71d07cac1d7fbfa626e98ee3efcf585de5a3321574e722ff658c",
+    "node-2/pfs2-eth2_out.pcap": "5049d02a41e3a9641d5ba60faf462465a2f24aed6799a40be7dd24bc6887dab3",
+    "node-2/switch.log": "54fe3af4cf80cd35f3a19d9ad16670d45903211b01b4aa6eb71ae7968524b6e2",
+    "node-3/control.log": "1ca1167ab7feda22f4cc2ca886f7d079120b5ec826eab9cacb3ba25350782948",
+    "node-3/pfs3-eth1_in.pcap": "7d09194c2cef00e9a7b5eba814cc61b68946d46ba75660585f7f9dabe65867d6",
+    "node-3/pfs3-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "node-3/pfs3-eth2_in.pcap": "4d651209d23aa3403fa5e1950598326b9cac8e9a948792e1c7c00f92daa25ab5",
+    "node-3/pfs3-eth2_out.pcap": "3ca26eb8e27b05310a253be11099bf0a8f77a58403acb195d2d1971127e1afbb",
+    "node-3/pfs3-eth3_in.pcap": "2240bdcfbc1514c330ce5aab8cea908f95c437d1d24056177c3282f327ce84b8",
+    "node-3/pfs3-eth3_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "node-3/pfs3-eth4_in.pcap": "233789e33041f1c0764a0531b21fb697854897b5691838893210c8256283d305",
+    "node-3/pfs3-eth4_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "node-3/switch.log": "27e0aec6102b9edb32a7f70c6ee8b031f6ccfdc99f3a36b509981675c48f1ce5",
+    "node-4/control.log": "cd51d30f1b8bcb9b37716e00e0d44eb25ccfa747c4b99e799a5e894f3d69d003",
+    "node-4/pfs4-eth1_in.pcap": "5f42f84719bb3d3c32e17480c8a8b720fa64211a8af631a9e6ab0408bc8edca2",
+    "node-4/pfs4-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "node-4/pfs4-eth2_in.pcap": "11b0bac1b984c642e027543a575a39f6475d272cf655cdee0c424ea34a5cbbde",
+    "node-4/pfs4-eth2_out.pcap": "1c6df84fe5371212fa61d37d5c4b2ac5ec2d22f056771ba5a3316e09337a9f86",
+    "node-4/pfs4-eth3_in.pcap": "7ac63c005df60d03e20258348ab9283132292083ce34e5093d915cd2c68e84ab",
+    "node-4/pfs4-eth3_out.pcap": "7717599fa5677f883ad0c7d389f50c692d7f58fbd32df1a4aeb91607df42a5bc",
+    "node-4/switch.log": "32f0f9c8e454ebdbd4ba5b8f8a7d471c55017e3278b45a6be5f5f4197615fc74",
+    "rpc-capture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rpc-operations.jsonl": "5268c3b0eeb466711c441395dae1174d49ac00d9e06889ab2b55a8db9e10f8fb",
+    "rpc.jsonl": "9d27389fb6c5cc2c2874995f48e01f659acdd5f4f344e1b0592d2966c2dece53",
+    "rpc.pcap": "40eb27069f40c655ff2f94facc470bdbd6d47a08fbf5d8921f355650ab9e0b89",
+    "rpc.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "rpc.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "source-workload.json": "cdabec685cbd0ba7820a286330495d611b0fae1f472b8b703c6ffac68e36276a"
+  },
+  "artifact_sha256": {
+    "executed-source/experiments/analyze_assignment_validation.py": "83c2e75e4bafe5069a327ad774e2ab93af12982bef2f09fa210ca0a267d55f17",
+    "executed-source/src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "executed-source/src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "executed-source/src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "executed-source/src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "k1-delay-dinto/wire-observations.jsonl": "7698bd847e9fc43972d12dbcd4dbda15eb168d56efaeb78061938146fb841809",
+    "k1-delay-intopp/wire-observations.jsonl": "20ea1b1a352b3386d312d79f13c52fa3cb3b3765656c49661d5ed56853574d89",
+    "k1-delay-intopp_ahead/wire-observations.jsonl": "d8c87d646e3088ba185f337c64d599a232fccbf6b938caa30073bc78c170aca8",
+    "k1-delay-tt/wire-observations.jsonl": "e5ec3b4dea3d38c1212d2b4b183b55d669afdc685d6b45f2188a49b9a848bda6",
+    "k1-loss-dinto/wire-observations.jsonl": "f42235ed0b6141fe7a81a9f62b5462cef76241a9814e271f6a31ba5726e7d353",
+    "k1-loss-intopp/wire-observations.jsonl": "479d31d3d60c7eb79d885bdd95e21f5df69cf7c928dc4e2a9664ba3de4301315",
+    "k1-loss-intopp_ahead/wire-observations.jsonl": "cce339fcca067378d39a076c79b95d6ef570c04765e2fccb6746336aebcd2350",
+    "k1-loss-tt/wire-observations.jsonl": "c9a66a482a44293c2c71ea5405c44d93fcc613451ae0898a22607b28b27d1393",
+    "k1-normal-dinto/wire-observations.jsonl": "72c06a760304c95c5270effd16669ecd11d74b8309ad53f5468d6e25191ff873",
+    "k1-normal-intopp/wire-observations.jsonl": "45e85d2f8470ba764335feb7b65dda9c2b27b4eaa463bcd9497cb6ccfa041387",
+    "k1-normal-intopp_ahead/wire-observations.jsonl": "a568379e44eb6e6a7caded88c541cea4bcdad43ad12172c18147f127c829b9e9",
+    "k1-normal-tt/wire-observations.jsonl": "705eeb69ce0ed128fe90e342885ae47688f843c9cbff770402691617e6834aef",
+    "k2-delay-dinto/wire-observations.jsonl": "8503bcb16dc9d48351ae4bfde9aecb6fe34edd9c25c230c7e08478521b036861",
+    "k2-delay-intopp/wire-observations.jsonl": "c8e5851c59d83051d8c658b9d135e5db425b0977b4549176004808cc66c3c1ef",
+    "k2-delay-intopp_ahead/wire-observations.jsonl": "deb838b74abac52e7536aba27ac571c14c2142eceb0253fdf78f65145e7984be",
+    "k2-delay-tt/wire-observations.jsonl": "4ac075af6d7b50f255f0426bec1a9562f2f4cc60d34741105a945e4c38899794",
+    "k2-loss-dinto/wire-observations.jsonl": "50577ca9d29bd7f6267c6fbaf918630acb81d98b947b05a8679af54a3aff9196",
+    "k2-loss-intopp/wire-observations.jsonl": "69798f16742ab2452091620d6781a36d22c03a5789d43fd87318f5acc6eb8e6d",
+    "k2-loss-intopp_ahead/wire-observations.jsonl": "ea15c98ce988e8e0706e3c36c657b54a0b91b85680b24392b81edc0e03f4f5c5",
+    "k2-loss-tt/wire-observations.jsonl": "dda4a1fd3e5f8b09d25098ed2f77c180919ce7944f58616560be5d529d2e3ec7",
+    "k2-normal-dinto/wire-observations.jsonl": "1341bde3d203c5bc19be70e76c6e334b974cba7c7ca87a8f446978e47be8563f",
+    "k2-normal-intopp/wire-observations.jsonl": "75c671eed36d8dd06a6cb7d369ed3b6c3f3048ddb84141569100a7d1dc5bf320",
+    "k2-normal-intopp_ahead/wire-observations.jsonl": "23e5776c59ae9690779ff0e4ff3a42a7c07309c796c47db8550a594de6ec8948",
+    "k2-normal-tt/wire-observations.jsonl": "c489b1964326d448f3e8704e0447f03d1a672225ecd586baee9f84815ac8a64e"
+  }
+}
