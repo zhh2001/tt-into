@@ -1,0 +1,1255 @@
+{
+  "run_id": "admission-margin-ordinary-01",
+  "start_utc": "2026-10-10T06:34:41.626585+00:00",
+  "status": "passed",
+  "scope": "软件执行、实际年龄与成本核对，非随机性能试验",
+  "random_seed": null,
+  "diagnostics": false,
+  "source_sha256": {
+    "experiments/run_fork_validation.py": "24c3ada67ddc41cc266802ff78cf27f11b80c3ca37cb9e1e03179b55a856462a",
+    "experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "experiments/run_admission_validation.py": "d857e26f452fc8ef994cf15913e4f95215cf31d1d590692479be50f2c9af1c38",
+    "experiments/admission_io.py": "3a5b8a933f826c80fe440a2b66c276088ca264dfbbd0c7788fc2575f6cce491c",
+    "experiments/analyze_fork_validation.py": "fe4386837191923c23469ee1ce27d8f64fc4e4eed33935464fd2355cc4df6f41",
+    "src/orchestration/deployment.py": "bb45175ab83c6103be941e93ff9349418e97d66136ec3892b8929097a7587689"
+  },
+  "p4_json_sha256": "b78c33dc8a625234f71768304a5e9990291e6b995699b31caef3b3ad476b6991",
+  "steady_binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+  "candidate_sha256": "59d5eff48053bf95abe8b79ba4d0613bf28fc0674cab918d3947fdd71719fa72",
+  "software": {
+    "bmv2": "1.15.0-2bdd0b7b-steady-unknown",
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "mininet": "2.3.0"
+  },
+  "host": {
+    "cpu_count": 16,
+    "load_start": [
+      0.07421875,
+      0.19287109375,
+      0.09521484375
+    ],
+    "load_end": [
+      0.13623046875,
+      0.20263671875,
+      0.09912109375
+    ]
+  },
+  "cases": [
+    {
+      "name": "point-10",
+      "dynamic": true,
+      "capacity": 1,
+      "candidate": {
+        "point_index": 10,
+        "threshold_margin_us": 50000,
+        "capacity": 1,
+        "budget": {
+          "inband_per_link_bytes": [
+            1024,
+            1024,
+            960
+          ],
+          "export_bytes": 3600,
+          "control_per_link_bytes": [
+            0
+          ]
+        },
+        "native_best": {
+          "accepted_nodes": [
+            1,
+            2,
+            3
+          ],
+          "admitted_weight": 5,
+          "inband_per_link_bytes": [
+            308,
+            308,
+            908
+          ],
+          "export_bytes": 2940,
+          "data_total_byte_hops": 4464,
+          "early": [
+            {
+              "node": 1,
+              "flow": 1,
+              "threshold_us": 1
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "threshold_us": 1
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "threshold_us": 1
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "threshold_us": 1
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "threshold_us": 1
+            }
+          ],
+          "late": [
+            {
+              "node": 1,
+              "flow": 1,
+              "threshold_us": 550000
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "threshold_us": 550000
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "threshold_us": 150000
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "threshold_us": 150000
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "threshold_us": null
+            }
+          ]
+        },
+        "upper_weight": 5,
+        "admission_weight_gap": 0,
+        "original_native_best": {
+          "accepted_nodes": [
+            1,
+            2,
+            3
+          ],
+          "admitted_weight": 5,
+          "inband_per_link_bytes": [
+            308,
+            308,
+            908
+          ],
+          "export_bytes": 2940,
+          "data_total_byte_hops": 4464,
+          "early": [
+            {
+              "node": 1,
+              "flow": 1,
+              "threshold_us": 1
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "threshold_us": 1
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "threshold_us": 1
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "threshold_us": 1
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "threshold_us": 1
+            }
+          ],
+          "late": [
+            {
+              "node": 1,
+              "flow": 1,
+              "threshold_us": 500001
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "threshold_us": 500001
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "threshold_us": 100001
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "threshold_us": 100001
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "threshold_us": null
+            }
+          ]
+        }
+      },
+      "origin_monotonic_ns": 52601469924950,
+      "installation_rpc_indices": [
+        0,
+        69
+      ],
+      "updates": [
+        {
+          "offset_us": 615000,
+          "kind": "initial_activation",
+          "writes": [
+            {
+              "node": 3,
+              "flow": 3,
+              "register": "TTEgress.max_count",
+              "value": 1
+            }
+          ],
+          "drained_monotonic_ns": 52602073271712,
+          "after_monotonic_ns": 52602085283575,
+          "rpc_indices": [
+            69,
+            70
+          ]
+        },
+        {
+          "offset_us": 690000,
+          "kind": "initial_activation",
+          "writes": [
+            {
+              "node": 1,
+              "flow": 1,
+              "register": "TTEgress.max_count",
+              "value": 1
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "register": "TTEgress.max_count",
+              "value": 1
+            }
+          ],
+          "drained_monotonic_ns": 52602121060528,
+          "after_monotonic_ns": 52602160356725,
+          "rpc_indices": [
+            70,
+            72
+          ]
+        },
+        {
+          "offset_us": 740000,
+          "kind": "initial_activation",
+          "writes": [
+            {
+              "node": 2,
+              "flow": 2,
+              "register": "TTEgress.max_count",
+              "value": 1
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "register": "TTEgress.max_count",
+              "value": 1
+            }
+          ],
+          "drained_monotonic_ns": 52602171323963,
+          "after_monotonic_ns": 52602210441939,
+          "rpc_indices": [
+            72,
+            74
+          ]
+        },
+        {
+          "offset_us": 1980000,
+          "kind": "online_update",
+          "writes": [
+            {
+              "node": 1,
+              "flow": 1,
+              "register": "TTEgress.time_threshold",
+              "value": 550000
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "register": "TTEgress.time_threshold",
+              "value": 550000
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "register": "TTEgress.time_threshold",
+              "value": 150000
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "register": "TTEgress.time_threshold",
+              "value": 150000
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "register": "TTEgress.max_count",
+              "value": 0
+            }
+          ],
+          "drained_monotonic_ns": 52603421990488,
+          "after_monotonic_ns": 52603451520908,
+          "rpc_indices": [
+            74,
+            79
+          ]
+        }
+      ],
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 49,
+      "record_counts": [
+        15,
+        15,
+        19
+      ],
+      "age": {
+        "phases": [
+          {
+            "window_us": [
+              800000,
+              2020000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 96584.32863636363,
+                "p95_age_upper_us": 97818.10266666664,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 4364.753
+              },
+              {
+                "node": 2,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 94926.75633333332,
+                "p95_age_upper_us": 96285.47133333335,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3402.523
+              },
+              {
+                "node": 3,
+                "deadline_us": 250000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 189823.91516666667,
+                "p95_age_upper_us": 190432.81416666665,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3533.302
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          },
+          {
+            "window_us": [
+              2020000,
+              3200000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 572125.2745,
+                "p95_age_upper_us": 573383.863,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 4364.753
+              },
+              {
+                "node": 2,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 570867.8905,
+                "p95_age_upper_us": 572697.2814999998,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3402.523
+              },
+              {
+                "node": 3,
+                "deadline_us": 175000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 140976.375,
+                "p95_age_upper_us": 142506.2216666666,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3533.302
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          }
+        ],
+        "clock_domain": "同一宿主 CLOCK_MONOTONIC，发送前 <= 生成 <= recvmsg 完成",
+        "switch_timestamps_used_for_age": false,
+        "availability": "采集进程 recvmsg 完成",
+        "initial_sample": "使用每项实际报告前史，未人工置零年龄",
+        "local_offset_compatibility": {
+          "1": {
+            "compatible": true,
+            "intersection_width_us": 751.461,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "compatible": true,
+            "intersection_width_us": 774.059,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "compatible": true,
+            "intersection_width_us": 515.104,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "maximum_send_lateness_us": 742.792
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          908
+        ],
+        "export_bytes": 2450,
+        "export_bytes_with_minimum_ethernet_padding": 2940,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 49
+        },
+        "data_total_byte_hops_with_padding": 4464,
+        "scope": "全部业务包及预热，附加带内字节和导出帧，不含 FCS/前导码/物理间隔",
+        "within_declared_budget": true
+      },
+      "original_point_data_budget_feasible": true,
+      "all_tasks_fulfilled_by_upper_age": true,
+      "update_execution_checks": [
+        {
+          "kind": "initial_activation",
+          "offset_us": 615000,
+          "rpc_calls": 1,
+          "request_serialized_bytes": 89,
+          "reply_serialized_bytes": 30,
+          "minimum_ack_to_next_send_us": 9679.563
+        },
+        {
+          "kind": "initial_activation",
+          "offset_us": 690000,
+          "rpc_calls": 2,
+          "request_serialized_bytes": 178,
+          "reply_serialized_bytes": 60,
+          "minimum_ack_to_next_send_us": 9626.998
+        },
+        {
+          "kind": "initial_activation",
+          "offset_us": 740000,
+          "rpc_calls": 2,
+          "request_serialized_bytes": 178,
+          "reply_serialized_bytes": 60,
+          "minimum_ack_to_next_send_us": 9575.641
+        },
+        {
+          "kind": "online_update",
+          "offset_us": 1980000,
+          "rpc_calls": 5,
+          "request_serialized_bytes": 465,
+          "reply_serialized_bytes": 150,
+          "minimum_ack_to_next_send_us": 18459.881
+        }
+      ],
+      "original_point_with_actual_age_feasible": true,
+      "control_budget_for_original_point": "未声明，本次仅测费用；不将原模型 [0] 控制预算当作可部署预算"
+    },
+    {
+      "name": "point-37",
+      "dynamic": true,
+      "capacity": 2,
+      "candidate": {
+        "point_index": 37,
+        "threshold_margin_us": 50000,
+        "capacity": 2,
+        "budget": {
+          "inband_per_link_bytes": [
+            1024,
+            1024,
+            960
+          ],
+          "export_bytes": 2400,
+          "control_per_link_bytes": [
+            0
+          ]
+        },
+        "native_best": {
+          "accepted_nodes": [
+            1,
+            2,
+            3
+          ],
+          "admitted_weight": 5,
+          "inband_per_link_bytes": [
+            308,
+            308,
+            860
+          ],
+          "export_bytes": 2178,
+          "data_total_byte_hops": 3654,
+          "early": [
+            {
+              "node": 1,
+              "flow": 1,
+              "threshold_us": 1
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "threshold_us": 1
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "threshold_us": 150000
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "threshold_us": null
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "threshold_us": null
+            }
+          ],
+          "late": [
+            {
+              "node": 1,
+              "flow": 1,
+              "threshold_us": 550000
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "threshold_us": 550000
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "threshold_us": 250000
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "threshold_us": 250000
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "threshold_us": null
+            }
+          ]
+        },
+        "upper_weight": 5,
+        "admission_weight_gap": 0,
+        "original_native_best": {
+          "accepted_nodes": [
+            1,
+            2,
+            3
+          ],
+          "admitted_weight": 5,
+          "inband_per_link_bytes": [
+            308,
+            308,
+            860
+          ],
+          "export_bytes": 2178,
+          "data_total_byte_hops": 3654,
+          "early": [
+            {
+              "node": 1,
+              "flow": 1,
+              "threshold_us": 1
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "threshold_us": 1
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "threshold_us": 100001
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "threshold_us": null
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "threshold_us": null
+            }
+          ],
+          "late": [
+            {
+              "node": 1,
+              "flow": 1,
+              "threshold_us": 500001
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "threshold_us": 500001
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "threshold_us": 200001
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "threshold_us": 200001
+            },
+            {
+              "node": 3,
+              "flow": 3,
+              "threshold_us": null
+            }
+          ]
+        }
+      },
+      "origin_monotonic_ns": 52605624840531,
+      "installation_rpc_indices": [
+        79,
+        148
+      ],
+      "updates": [
+        {
+          "offset_us": 615000,
+          "kind": "initial_activation",
+          "writes": [],
+          "drained_monotonic_ns": 52606226480151,
+          "after_monotonic_ns": 52606239903308,
+          "rpc_indices": [
+            148,
+            148
+          ]
+        },
+        {
+          "offset_us": 690000,
+          "kind": "initial_activation",
+          "writes": [
+            {
+              "node": 1,
+              "flow": 1,
+              "register": "TTEgress.max_count",
+              "value": 2
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "register": "TTEgress.max_count",
+              "value": 2
+            }
+          ],
+          "drained_monotonic_ns": 52606277718455,
+          "after_monotonic_ns": 52606315712524,
+          "rpc_indices": [
+            148,
+            150
+          ]
+        },
+        {
+          "offset_us": 740000,
+          "kind": "initial_activation",
+          "writes": [
+            {
+              "node": 2,
+              "flow": 2,
+              "register": "TTEgress.max_count",
+              "value": 2
+            }
+          ],
+          "drained_monotonic_ns": 52606327136781,
+          "after_monotonic_ns": 52606365138898,
+          "rpc_indices": [
+            150,
+            151
+          ]
+        },
+        {
+          "offset_us": 1980000,
+          "kind": "online_update",
+          "writes": [
+            {
+              "node": 1,
+              "flow": 1,
+              "register": "TTEgress.time_threshold",
+              "value": 550000
+            },
+            {
+              "node": 2,
+              "flow": 2,
+              "register": "TTEgress.time_threshold",
+              "value": 550000
+            },
+            {
+              "node": 3,
+              "flow": 1,
+              "register": "TTEgress.time_threshold",
+              "value": 250000
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "register": "TTEgress.time_threshold",
+              "value": 250000
+            },
+            {
+              "node": 3,
+              "flow": 2,
+              "register": "TTEgress.max_count",
+              "value": 2
+            }
+          ],
+          "drained_monotonic_ns": 52607579500351,
+          "after_monotonic_ns": 52607606519058,
+          "rpc_indices": [
+            151,
+            156
+          ]
+        }
+      ],
+      "status": "passed",
+      "errors": [],
+      "packet_count": 80,
+      "report_count": 36,
+      "record_counts": [
+        15,
+        15,
+        15
+      ],
+      "age": {
+        "phases": [
+          {
+            "window_us": [
+              800000,
+              2020000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 96583.33333333333,
+                "p95_age_upper_us": 98519.09383333333,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3401.877
+              },
+              {
+                "node": 2,
+                "deadline_us": 150000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 95081.69616666666,
+                "p95_age_upper_us": 97157.0033333333,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3174.851
+              },
+              {
+                "node": 3,
+                "deadline_us": 250000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 189881.00766666664,
+                "p95_age_upper_us": 191822.6838333333,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3401.877
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          },
+          {
+            "window_us": [
+              2020000,
+              3200000
+            ],
+            "tasks": [
+              {
+                "node": 1,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 571230.193,
+                "p95_age_upper_us": 573515.8675,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3401.877
+              },
+              {
+                "node": 2,
+                "deadline_us": 650000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 570244.076,
+                "p95_age_upper_us": 573114.3240000001,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3174.851
+              },
+              {
+                "node": 3,
+                "deadline_us": 175000,
+                "violation_lower": 0.0,
+                "violation_upper": 0.0,
+                "p95_age_lower_us": 142807.54825,
+                "p95_age_upper_us": 144925.2118750001,
+                "unknown_fraction": 0.0,
+                "fulfilled_by_upper_age": true,
+                "maximum_generation_interval_width_us": 3401.877
+              }
+            ],
+            "fulfilled_by_upper_age": 3
+          }
+        ],
+        "clock_domain": "同一宿主 CLOCK_MONOTONIC，发送前 <= 生成 <= recvmsg 完成",
+        "switch_timestamps_used_for_age": false,
+        "availability": "采集进程 recvmsg 完成",
+        "initial_sample": "使用每项实际报告前史，未人工置零年龄",
+        "local_offset_compatibility": {
+          "1": {
+            "compatible": true,
+            "intersection_width_us": 1570.109,
+            "incompatible_gap_us": 0.0
+          },
+          "2": {
+            "compatible": true,
+            "intersection_width_us": 766.46,
+            "incompatible_gap_us": 0.0
+          },
+          "3": {
+            "compatible": true,
+            "intersection_width_us": 757.816,
+            "incompatible_gap_us": 0.0
+          }
+        },
+        "maximum_send_lateness_us": 161.945
+      },
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          308,
+          308,
+          860
+        ],
+        "export_bytes": 1908,
+        "export_bytes_with_minimum_ethernet_padding": 2178,
+        "frames_by_node_port": {
+          "1:2": 32,
+          "2:2": 32,
+          "3:2": 80,
+          "4:2": 80,
+          "4:3": 36
+        },
+        "data_total_byte_hops_with_padding": 3654,
+        "scope": "全部业务包及预热，附加带内字节和导出帧，不含 FCS/前导码/物理间隔",
+        "within_declared_budget": true
+      },
+      "original_point_data_budget_feasible": true,
+      "all_tasks_fulfilled_by_upper_age": true,
+      "update_execution_checks": [
+        {
+          "kind": "initial_activation",
+          "offset_us": 615000,
+          "rpc_calls": 0,
+          "request_serialized_bytes": 0,
+          "reply_serialized_bytes": 0,
+          "minimum_ack_to_next_send_us": 10027.313
+        },
+        {
+          "kind": "initial_activation",
+          "offset_us": 690000,
+          "rpc_calls": 2,
+          "request_serialized_bytes": 178,
+          "reply_serialized_bytes": 60,
+          "minimum_ack_to_next_send_us": 9211.885
+        },
+        {
+          "kind": "initial_activation",
+          "offset_us": 740000,
+          "rpc_calls": 1,
+          "request_serialized_bytes": 89,
+          "reply_serialized_bytes": 30,
+          "minimum_ack_to_next_send_us": 9724.653
+        },
+        {
+          "kind": "online_update",
+          "offset_us": 1980000,
+          "rpc_calls": 5,
+          "request_serialized_bytes": 465,
+          "reply_serialized_bytes": 150,
+          "minimum_ack_to_next_send_us": 18376.475
+        }
+      ],
+      "original_point_with_actual_age_feasible": true,
+      "control_budget_for_original_point": "未声明，本次仅测费用；不将原模型 [0] 控制预算当作可部署预算"
+    }
+  ],
+  "requirements_window_offset_us": [
+    [
+      800000,
+      2020000
+    ],
+    [
+      2020000,
+      3200000
+    ]
+  ],
+  "deadlines_us": [
+    [
+      150000,
+      150000,
+      250000
+    ],
+    [
+      650000,
+      650000,
+      175000
+    ]
+  ],
+  "warmup_us": [
+    0,
+    800000
+  ],
+  "format": "prefix 4+12 B, 固定任务映射，无许可版本",
+  "update": "提前 10–20 ms 的空隙排空屏障，保留成功状态，未来需求已知",
+  "declared_budget": {
+    "scope": "点的原有数据预算另行核对，控制采用宽松正确性上限",
+    "per_case_inband_per_link_bytes": [
+      1024,
+      1024,
+      960
+    ],
+    "per_case_export_bytes_with_minimum_ethernet_padding": 3600,
+    "whole_run_control_per_node_direction_bytes": 8388608
+  },
+  "budget_sha256": "19aca67554f87968921964dd4a808f45f44566f411150baca0f487d3ec718fcd",
+  "end_utc": "2026-10-10T06:34:51.772360+00:00",
+  "duration_seconds": 10.090632540006482,
+  "control_cost": {
+    "metered_rpc_by_kind": {
+      "installation": {
+        "calls": 138,
+        "request_serialized_bytes": 13377,
+        "reply_serialized_bytes": 4278,
+        "rpc_elapsed_us": [
+          445.418,
+          178.493,
+          108.582,
+          124.05,
+          111.333,
+          133.702,
+          103.416,
+          136.52,
+          120.093,
+          102.054,
+          66.492,
+          89.604,
+          147.893,
+          55.632,
+          48.082,
+          78.88,
+          96.018,
+          90.283,
+          63.182,
+          48.339,
+          64.197,
+          232.419,
+          90.673,
+          123.572,
+          143.416,
+          138.239,
+          115.609,
+          71.451,
+          75.186,
+          81.876,
+          123.72,
+          95.252,
+          53.751,
+          155.829,
+          91.718,
+          83.003,
+          81.357,
+          98.314,
+          81.622,
+          81.896,
+          79.534,
+          82.511,
+          317.201,
+          109.189,
+          137.439,
+          89.653,
+          105.618,
+          108.894,
+          94.724,
+          115.869,
+          77.112,
+          51.567,
+          86.756,
+          80.288,
+          109.843,
+          59.367,
+          57.864,
+          80.497,
+          134.297,
+          83.103,
+          79.283,
+          112.195,
+          109.204,
+          298.044,
+          129.946,
+          107.876,
+          119.625,
+          168.955,
+          157.82,
+          541.656,
+          431.516,
+          289.79,
+          186.599,
+          175.915,
+          139.465,
+          133.439,
+          111.855,
+          164.528,
+          152.372,
+          124.708,
+          88.24,
+          159.185,
+          242.28,
+          118.61,
+          106.033,
+          132.167,
+          93.058,
+          126.276,
+          120.153,
+          152.114,
+          325.927,
+          365.546,
+          215.767,
+          235.994,
+          128.55,
+          135.411,
+          144.179,
+          92.136,
+          75.905,
+          65.973,
+          62.128,
+          56.821,
+          75.95,
+          83.311,
+          77.253,
+          59.611,
+          68.604,
+          59.93,
+          59.234,
+          61.286,
+          85.729,
+          167.868,
+          135.728,
+          103.292,
+          86.571,
+          65.279,
+          72.881,
+          68.741,
+          57.195,
+          50.523,
+          52.226,
+          57.477,
+          69.367,
+          66.863,
+          48.869,
+          53.712,
+          56.444,
+          63.604,
+          85.508,
+          65.076,
+          55.42,
+          58.098,
+          123.506,
+          57.287,
+          68.158,
+          108.217,
+          94.057,
+          101.064
+        ]
+      },
+      "initial_activation": {
+        "calls": 8,
+        "request_serialized_bytes": 712,
+        "reply_serialized_bytes": 240,
+        "rpc_elapsed_us": [
+          276.09,
+          201.206,
+          146.649,
+          239.789,
+          214.006,
+          402.33,
+          298.774,
+          248.731
+        ]
+      },
+      "update": {
+        "calls": 10,
+        "request_serialized_bytes": 930,
+        "reply_serialized_bytes": 300,
+        "rpc_elapsed_us": [
+          499.127,
+          264.403,
+          284.196,
+          191.454,
+          174.61,
+          342.924,
+          293.324,
+          264.525,
+          405.326,
+          214.87
+        ]
+      }
+    },
+    "captured_control_per_node_direction_bytes": [
+      11154,
+      170232,
+      11352,
+      170232,
+      13196,
+      171192,
+      3529,
+      165870
+    ],
+    "captured_control_total_bytes": 716757,
+    "within_declared_budget": true,
+    "physical_attribution": "unattributed，含 CLI/握手/TCP/诊断/GSO，不按收包时间归因 RPC",
+    "serialization_added_to_physical": false
+  },
+  "wire_checks": {
+    "passed": true,
+    "checked_ipv4_output_frames": 533
+  },
+  "budget_check": {
+    "data": true,
+    "whole_run_control": true,
+    "scope": "预声明宽松正确性预算，不是等预算性能结论"
+  },
+  "scheduled_tt_causal_age_feasible": true,
+  "scheduled_tt_correctness_budget_feasible": true,
+  "original_point_feasible_cases": 2,
+  "fair_performance_comparison_completed": false,
+  "novelty_established": false,
+  "analysis_sha256": "a50bf432466d07dce25050622eccdc992f65d0e2973071d6097c0b17750f4300",
+  "analysis_dependencies": {
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e"
+  },
+  "artifact_sha256": {
+    "declared-budget.json": "19aca67554f87968921964dd4a808f45f44566f411150baca0f487d3ec718fcd",
+    "rpc-operations.jsonl": "6f6bdf66ccddcefd0926679d2d39dca1feb50cb41ec06d46fd93248303de07f7",
+    "candidates.json": "eb72e9354d4f3ead64cae65a2d538b71f93ef7e301ac5a76a946aef541570f25",
+    "rpc-frame-counts.jsonl": "467f4b2fc0196a4f909901504de8ab8848abe946f807c084a08a68d5aa5a96c2",
+    "point-37/collector.jsonl": "29c257625b8b2ea98f457ed8ada34d77f56311f1ce4b44ef14896010ca86abe8",
+    "point-37/packets.json": "407325d141a8daa52ed570a9bc2967ba98e2e4882a7360ef866b378f9617cf13",
+    "point-37/destination.pcap": "94f6300662de024adfb38b1750a5959c5ff31b346c73095b7b5cdb20ae467fd1",
+    "point-37/result.json": "8f4c7b56fbdd6e54ff410b30d8ac76fdee89146224340ed3482bead87eb80488",
+    "point-37/send.jsonl": "4020f73dc95bbea56f3a90783ea5c37a92345ce08e52e5c218c1f0296bdcfb2a",
+    "point-37/destination.jsonl": "5ad2c4606d4812e598acf853ab398d2957c8b4b41861c04f7f3b934905457d8f",
+    "point-37/wire-observations.jsonl": "b82a2e649799e5bd521eba40e33ec58e77f43ffa88647c0f09fc4f0e08081f87",
+    "point-37/collector.pcap": "1601c460b992b52a5fc7b11c202bfed6c2830517fe4cf97d0d34a0d9fbd31df5",
+    "point-10/collector.jsonl": "9d35bea1f9c878ffdb6e83efe83b8230e677ca4e9eaafa169644f1ba1af901d4",
+    "point-10/packets.json": "0d1103f0be91a2c885e9acfa232e97f7d2dcbc73b00e338c8089eb51b3af1e94",
+    "point-10/destination.pcap": "080162adcf44072ea42567654eda198009923c0f39748cf68c6efe4ae876feb0",
+    "point-10/result.json": "0030f8ad070a47e4479102343407ab20c603dbd187d339a9bdf3cf18ed972ff2",
+    "point-10/send.jsonl": "9c21e9977bddebba352d209b07a64922d924dcb76e8101cd8a32b224e06b2b94",
+    "point-10/destination.jsonl": "06103f3be89770f7911314811168d685a942092a0c9a79948b558a71f4489b22",
+    "point-10/wire-observations.jsonl": "f217e312f45701bec1299fabe92207d32589850adfef450d9e2387397b552900",
+    "point-10/collector.pcap": "662ce0549f48e7b9cc8be93254ded57ccd894a0390e7922adb56ae7aca7e6124",
+    "executed-source/experiments/analyze_fork_validation.py": "fe4386837191923c23469ee1ce27d8f64fc4e4eed33935464fd2355cc4df6f41",
+    "executed-source/experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "executed-source/experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "executed-source/experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "executed-source/experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "executed-source/experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "executed-source/experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "executed-source/experiments/run_fork_validation.py": "24c3ada67ddc41cc266802ff78cf27f11b80c3ca37cb9e1e03179b55a856462a",
+    "executed-source/experiments/analyze_admission_validation.py": "a50bf432466d07dce25050622eccdc992f65d0e2973071d6097c0b17750f4300",
+    "executed-source/experiments/run_admission_validation.py": "d857e26f452fc8ef994cf15913e4f95215cf31d1d590692479be50f2c9af1c38",
+    "executed-source/experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "executed-source/experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "executed-source/experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "executed-source/experiments/admission_io.py": "3a5b8a933f826c80fe440a2b66c276088ca264dfbbd0c7788fc2575f6cce491c",
+    "executed-source/experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "executed-source/src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "executed-source/src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "executed-source/src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "executed-source/src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "executed-source/src/orchestration/deployment.py": "bb45175ab83c6103be941e93ff9349418e97d66136ec3892b8929097a7587689",
+    "executed-source/src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "executed-source/src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "executed-source/src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "executed-source/src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "executed-source/src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "executed-source/src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749"
+  }
+}

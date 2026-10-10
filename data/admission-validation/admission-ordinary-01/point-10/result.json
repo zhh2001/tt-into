@@ -1,0 +1,215 @@
+{
+  "name": "point-10",
+  "dynamic": true,
+  "capacity": 1,
+  "candidate": {
+    "point_index": 10,
+    "capacity": 1,
+    "budget": {
+      "inband_per_link_bytes": [
+        1024,
+        1024,
+        960
+      ],
+      "export_bytes": 3600,
+      "control_per_link_bytes": [
+        0
+      ]
+    },
+    "native_best": {
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "admitted_weight": 5,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        908
+      ],
+      "export_bytes": 2940,
+      "data_total_byte_hops": 4464,
+      "early": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "late": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 500001
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 500001
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": 100001
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 100001
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ]
+    },
+    "upper_weight": 5,
+    "admission_weight_gap": 0
+  },
+  "origin_monotonic_ns": 52384026837305,
+  "installation_rpc_indices": [
+    0,
+    69
+  ],
+  "updates": [
+    {
+      "offset_us": 615000,
+      "kind": "initial_activation",
+      "writes": [
+        {
+          "node": 3,
+          "flow": 3,
+          "register": "TTEgress.max_count",
+          "value": 1
+        }
+      ],
+      "drained_monotonic_ns": 52384628508851,
+      "after_monotonic_ns": 52384642105002,
+      "rpc_indices": [
+        69,
+        70
+      ]
+    },
+    {
+      "offset_us": 690000,
+      "kind": "initial_activation",
+      "writes": [
+        {
+          "node": 1,
+          "flow": 1,
+          "register": "TTEgress.max_count",
+          "value": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "register": "TTEgress.max_count",
+          "value": 1
+        }
+      ],
+      "drained_monotonic_ns": 52384678367846,
+      "after_monotonic_ns": 52384717196602,
+      "rpc_indices": [
+        70,
+        72
+      ]
+    },
+    {
+      "offset_us": 740000,
+      "kind": "initial_activation",
+      "writes": [
+        {
+          "node": 2,
+          "flow": 2,
+          "register": "TTEgress.max_count",
+          "value": 1
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "register": "TTEgress.max_count",
+          "value": 1
+        }
+      ],
+      "drained_monotonic_ns": 52384728180199,
+      "after_monotonic_ns": 52384767247334,
+      "rpc_indices": [
+        72,
+        74
+      ]
+    },
+    {
+      "offset_us": 1980000,
+      "kind": "online_update",
+      "writes": [
+        {
+          "node": 1,
+          "flow": 1,
+          "register": "TTEgress.time_threshold",
+          "value": 500001
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "register": "TTEgress.time_threshold",
+          "value": 500001
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "register": "TTEgress.time_threshold",
+          "value": 100001
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "register": "TTEgress.time_threshold",
+          "value": 100001
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "register": "TTEgress.max_count",
+          "value": 0
+        }
+      ],
+      "drained_monotonic_ns": 52385981629448,
+      "after_monotonic_ns": 52386007545272,
+      "rpc_indices": [
+        74,
+        79
+      ]
+    }
+  ],
+  "status": "passed",
+  "errors": [],
+  "packet_count": 80,
+  "report_count": 53,
+  "record_counts": [
+    15,
+    15,
+    23
+  ]
+}

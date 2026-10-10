@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-10T06:40:31.050470+00:00",
+  "scope": "独立来源、更新参数、保留成功状态及费用核对，不是新增性能试验",
+  "input_sha256": {
+    "data/admission-validation/admission-diag-01/summary.json": "db8ffb5979f617af6c9cee42263d2a36642bd989622a0be62b708b333f24c968",
+    "data/admission-validation/admission-ordinary-01/summary.json": "ddcb6e26e7e052ec2024cccc4f8e1ba750a8232be7aba97ceba10a310d1f62e3",
+    "data/admission-validation/admission-margin-diag-01/summary.json": "56bb326a2fb9d6d52319c4ca1e7c3106db01efd9cb9e6bdc095e0adb33943fcd",
+    "data/admission-validation/admission-margin-ordinary-01/summary.json": "f53d5aa93d193755ab14b9fa7f6d5592d10122e3d7ad5f4f284a0a620132de2e"
+  },
+  "audit_source_sha256": "c693dbe31209e0fcc8fd3c086e1a3cabc469b2b2ca24e70acfcecf3d70ceeec2",
+  "cases": [
+    {
+      "run_id": "admission-diag-01",
+      "point": 10,
+      "capacity": 1,
+      "diagnostics": true,
+      "threshold_margin_us": 0,
+      "business_packets": 80,
+      "report_packets": 49,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        908
+      ],
+      "export_bytes": 2940,
+      "data_budget_feasible": true,
+      "age_fulfilled": true,
+      "runtime_rpc_calls": 10,
+      "runtime_serialized_request_reply_bytes": 1210
+    },
+    {
+      "run_id": "admission-diag-01",
+      "point": 37,
+      "capacity": 2,
+      "diagnostics": true,
+      "threshold_margin_us": 0,
+      "business_packets": 80,
+      "report_packets": 38,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        884
+      ],
+      "export_bytes": 2298,
+      "data_budget_feasible": true,
+      "age_fulfilled": false,
+      "runtime_rpc_calls": 8,
+      "runtime_serialized_request_reply_bytes": 972
+    },
+    {
+      "run_id": "admission-ordinary-01",
+      "point": 10,
+      "capacity": 1,
+      "diagnostics": false,
+      "threshold_margin_us": 0,
+      "business_packets": 80,
+      "report_packets": 53,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        956
+      ],
+      "export_bytes": 3180,
+      "data_budget_feasible": true,
+      "age_fulfilled": true,
+      "runtime_rpc_calls": 10,
+      "runtime_serialized_request_reply_bytes": 1210
+    },
+    {
+      "run_id": "admission-ordinary-01",
+      "point": 37,
+      "capacity": 2,
+      "diagnostics": false,
+      "threshold_margin_us": 0,
+      "business_packets": 80,
+      "report_packets": 38,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        884
+      ],
+      "export_bytes": 2298,
+      "data_budget_feasible": true,
+      "age_fulfilled": true,
+      "runtime_rpc_calls": 8,
+      "runtime_serialized_request_reply_bytes": 972
+    },
+    {
+      "run_id": "admission-margin-diag-01",
+      "point": 10,
+      "capacity": 1,
+      "diagnostics": true,
+      "threshold_margin_us": 50000,
+      "business_packets": 80,
+      "report_packets": 49,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        908
+      ],
+      "export_bytes": 2940,
+      "data_budget_feasible": true,
+      "age_fulfilled": true,
+      "runtime_rpc_calls": 10,
+      "runtime_serialized_request_reply_bytes": 1210
+    },
+    {
+      "run_id": "admission-margin-diag-01",
+      "point": 37,
+      "capacity": 2,
+      "diagnostics": true,
+      "threshold_margin_us": 50000,
+      "business_packets": 80,
+      "report_packets": 36,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        860
+      ],
+      "export_bytes": 2178,
+      "data_budget_feasible": true,
+      "age_fulfilled": true,
+      "runtime_rpc_calls": 8,
+      "runtime_serialized_request_reply_bytes": 972
+    },
+    {
+      "run_id": "admission-margin-ordinary-01",
+      "point": 10,
+      "capacity": 1,
+      "diagnostics": false,
+      "threshold_margin_us": 50000,
+      "business_packets": 80,
+      "report_packets": 49,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        908
+      ],
+      "export_bytes": 2940,
+      "data_budget_feasible": true,
+      "age_fulfilled": true,
+      "runtime_rpc_calls": 10,
+      "runtime_serialized_request_reply_bytes": 1210
+    },
+    {
+      "run_id": "admission-margin-ordinary-01",
+      "point": 37,
+      "capacity": 2,
+      "diagnostics": false,
+      "threshold_margin_us": 50000,
+      "business_packets": 80,
+      "report_packets": 36,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        860
+      ],
+      "export_bytes": 2178,
+      "data_budget_feasible": true,
+      "age_fulfilled": true,
+      "runtime_rpc_calls": 8,
+      "runtime_serialized_request_reply_bytes": 972
+    }
+  ],
+  "execution_cases": 8,
+  "business_packets": 640,
+  "within_data_budget_cases": 8,
+  "all_task_age_fulfilled_cases": 7
+}

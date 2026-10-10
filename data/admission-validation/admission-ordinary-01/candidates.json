@@ -1,0 +1,174 @@
+[
+  {
+    "point_index": 10,
+    "capacity": 1,
+    "budget": {
+      "inband_per_link_bytes": [
+        1024,
+        1024,
+        960
+      ],
+      "export_bytes": 3600,
+      "control_per_link_bytes": [
+        0
+      ]
+    },
+    "native_best": {
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "admitted_weight": 5,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        908
+      ],
+      "export_bytes": 2940,
+      "data_total_byte_hops": 4464,
+      "early": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": 1
+        }
+      ],
+      "late": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 500001
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 500001
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": 100001
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 100001
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ]
+    },
+    "upper_weight": 5,
+    "admission_weight_gap": 0
+  },
+  {
+    "point_index": 37,
+    "capacity": 2,
+    "budget": {
+      "inband_per_link_bytes": [
+        1024,
+        1024,
+        960
+      ],
+      "export_bytes": 2400,
+      "control_per_link_bytes": [
+        0
+      ]
+    },
+    "native_best": {
+      "accepted_nodes": [
+        1,
+        2,
+        3
+      ],
+      "admitted_weight": 5,
+      "inband_per_link_bytes": [
+        308,
+        308,
+        860
+      ],
+      "export_bytes": 2178,
+      "data_total_byte_hops": 3654,
+      "early": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 1
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 1
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": 100001
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": null
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ],
+      "late": [
+        {
+          "node": 1,
+          "flow": 1,
+          "threshold_us": 500001
+        },
+        {
+          "node": 2,
+          "flow": 2,
+          "threshold_us": 500001
+        },
+        {
+          "node": 3,
+          "flow": 1,
+          "threshold_us": 200001
+        },
+        {
+          "node": 3,
+          "flow": 2,
+          "threshold_us": 200001
+        },
+        {
+          "node": 3,
+          "flow": 3,
+          "threshold_us": null
+        }
+      ]
+    },
+    "upper_weight": 5,
+    "admission_weight_gap": 0
+  }
+]
