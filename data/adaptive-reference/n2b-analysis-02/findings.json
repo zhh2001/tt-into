@@ -1,0 +1,270 @@
+{
+  "all_runs": 576,
+  "actual_feasible_runs": 523,
+  "actual_feasible_by_method": {
+    "static": 68,
+    "feedback": 61,
+    "local": 62,
+    "joint": 65,
+    "phase_joint": 64,
+    "uniform_guard": 67,
+    "phase_guard": 68,
+    "phase_local_guard": 68
+  },
+  "primary_scope": "九场景、两预算、四个新种子的有限合成模型比较；不是网络性能结论",
+  "scope_of_dense_challenge": "两个事后子集，未对动态方法使用相同密网格，不作一般优劣或最终论文结论",
+  "forecast_diagnostics": [
+    {
+      "scenario": "stable",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.020852290303567708,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "stable",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.004573888603177069,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "stable",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.033636953565104155,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "stable",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.005143782420989579,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "bursty",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.39354893936609375,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "bursty",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.0046660946208332554,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "bursty",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.3823633070332813,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 1125
+    },
+    {
+      "scenario": "bursty",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.0046660946208332554,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "shared_priority",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.03162142248438023,
+      "predicted_feasible_actual_effective_overrun_epochs": 4,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "shared_priority",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.00799368707672915,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 3.75
+    },
+    {
+      "scenario": "shared_priority",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.03273306627734377,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "shared_priority",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.008889474534020838,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "switch",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.16389458627514322,
+      "predicted_feasible_actual_effective_overrun_epochs": 29,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "switch",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.09505524356334635,
+      "predicted_feasible_actual_effective_overrun_epochs": 16,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "switch",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.19344562815356336,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 13.125
+    },
+    {
+      "scenario": "switch",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.08708711149427081,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "sparse_stop",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.34715049547039056,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "sparse_stop",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.2172656979797525,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 105
+    },
+    {
+      "scenario": "sparse_stop",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.34465929487572916,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 127.5
+    },
+    {
+      "scenario": "sparse_stop",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.21720930671803382,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 105
+    },
+    {
+      "scenario": "report_impairment",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.35000721894973963,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "report_impairment",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.36806210821893875,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 3.75
+    },
+    {
+      "scenario": "report_impairment",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.3263957937126107,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "report_impairment",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.32744214528335286,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "budget_floor",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.0032034712742447964,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "budget_floor",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.002360435499609367,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "budget_floor",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.01598813453578124,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "budget_floor",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.0029303293174218767,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "bursty_jitter",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.47263681301350907,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "bursty_jitter",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.07693573042119788,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 33.75
+    },
+    {
+      "scenario": "bursty_jitter",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.4726164926038216,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 1180.3125
+    },
+    {
+      "scenario": "bursty_jitter",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.07693573042119788,
+      "predicted_feasible_actual_effective_overrun_epochs": 0,
+      "past_export_estimate_mean_absolute_error_bytes": 33.75
+    },
+    {
+      "scenario": "unannounced_switch",
+      "method": "joint",
+      "receipt_proxy_mean_absolute_error": 0.21639569428574218,
+      "predicted_feasible_actual_effective_overrun_epochs": 23,
+      "past_export_estimate_mean_absolute_error_bytes": null
+    },
+    {
+      "scenario": "unannounced_switch",
+      "method": "phase_joint",
+      "receipt_proxy_mean_absolute_error": 0.08893915082835935,
+      "predicted_feasible_actual_effective_overrun_epochs": 16,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "unannounced_switch",
+      "method": "uniform_guard",
+      "receipt_proxy_mean_absolute_error": 0.16858018779333334,
+      "predicted_feasible_actual_effective_overrun_epochs": 10,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    },
+    {
+      "scenario": "unannounced_switch",
+      "method": "phase_guard",
+      "receipt_proxy_mean_absolute_error": 0.07396169568394528,
+      "predicted_feasible_actual_effective_overrun_epochs": 8,
+      "past_export_estimate_mean_absolute_error_bytes": 0
+    }
+  ]
+}

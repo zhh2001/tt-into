@@ -1,0 +1,179 @@
+{
+  "experiment_id": "n2b-density-01",
+  "status": "passed",
+  "started_utc": "2026-10-10T12:00:05.817596+00:00",
+  "kind": "posthoc_static_grid_density",
+  "settings": {
+    "grid_us": [
+      50000,
+      100000,
+      150000,
+      200000,
+      400000,
+      600000,
+      800000,
+      1000000
+    ],
+    "epoch_us": 1000000,
+    "horizon_us": 1000000,
+    "alpha": 0.5,
+    "clip": 4.0,
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "capacity": 1,
+    "nominal_ip_bytes": 120,
+    "nominal_hop_us": 20,
+    "nominal_egress_us": 5,
+    "nominal_report_delay_us": 1000,
+    "maximum_rate_pps": 100.0
+  },
+  "scenarios": [
+    "stable",
+    "shared_priority"
+  ],
+  "train_seeds": [
+    11,
+    29
+  ],
+  "test_seeds": [
+    503,
+    607,
+    709,
+    809
+  ],
+  "budgets": [
+    "high"
+  ],
+  "methods": [
+    "static"
+  ],
+  "topology": {
+    "nodes": [
+      {
+        "node": 1,
+        "offset_us": 1000,
+        "clock_bits": 48,
+        "instance": "fixed"
+      },
+      {
+        "node": 2,
+        "offset_us": -2000,
+        "clock_bits": 48,
+        "instance": "fixed"
+      },
+      {
+        "node": 3,
+        "offset_us": 5000,
+        "clock_bits": 48,
+        "instance": "fixed"
+      }
+    ],
+    "routes": [
+      {
+        "flow": {
+          "session": 20,
+          "tag": 1001
+        },
+        "objects": [
+          {
+            "node": 1,
+            "port": 2,
+            "queue": 0
+          },
+          {
+            "node": 3,
+            "port": 2,
+            "queue": 0
+          }
+        ]
+      },
+      {
+        "flow": {
+          "session": 20,
+          "tag": 2002
+        },
+        "objects": [
+          {
+            "node": 2,
+            "port": 2,
+            "queue": 0
+          },
+          {
+            "node": 3,
+            "port": 2,
+            "queue": 0
+          }
+        ]
+      }
+    ]
+  },
+  "budget_definition": {
+    "stable": {
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    },
+    "shared_priority": {
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    }
+  },
+  "primary_manifest_sha256": "2eb42a30d44a1cff224c58ee0f8eafdc9559e30f59585c74e3d5693dda23b799",
+  "scope": "事后两个子集的密网格静态挑战，测试种子已消费；不是共同密网格盲测或一般最优",
+  "configuration_space_asymmetry": "静态为八阈值加禁用，主实验动态仍为三阈值加禁用",
+  "source_sha256": {
+    "src/collector/tagged_codec.py": "6d93a62de8d5e66d340b53d840957991d4d151fda47dc47d53f694a2a0c497b8",
+    "src/orchestration/event_schema.py": "e61acbe8af0cf8d2e568c73c5a52001123472e3a6a271a3b407832fa6d605c61",
+    "src/orchestration/event_engine.py": "cf78c518a9dd48f3b1476ab293fa303d5969c630595ca0fa77f15971cdf32104",
+    "src/orchestration/event_metrics.py": "8f1c90b69dde957ae78433baecfb34f5c8f5c2fc9c272eec705dc5d629df6bbd",
+    "src/orchestration/event_observation.py": "190412d0d1665f717b1d18dc1ef6857947a6812bc0f0b708695d7fbff86639de",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/rolling.py": "785965ef3c1b5ea576997f0c56ba0d61460f3a2b8ae6770e8794015559e76a6e",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "experiments/rolling_workloads.py": "9111ff1b916321d79712400bc584eb623a8e7957d27e097b42a64155f5c80757",
+    "experiments/rolling_rpc_cost.py": "2be45422d7c5b22fc73baf59325b8dc01273b3334746f85d7cfa462c70a980a2",
+    "experiments/run_rolling_reference.py": "957753373e10b5af230abf87e1dee8c75d96dbd40045f93f448b81b5d03e6684",
+    "tests/test_rolling.py": "c1195547d015e2c037ff65fc370fbf6001da2a9064a932fc90973f0d02f96618",
+    "experiments/run_density_diagnostic.py": "ebd31336e5441f14e065bf1dd71e0d81ed11fc5cd5edc75292875966dbc40e7b",
+    "experiments/adaptive_workloads.py": "1c166574e5c9fb9d870997d2b61a2d271f33d79551b8c4b7d2d3be5b274725e5",
+    "experiments/check_rolling_reference.py": "494b6f4ee929f3e9c4fb48f868229ef423e16c5fdf2ee0159960e1f48cbc33d6"
+  },
+  "heldout_runs": 8,
+  "training_runs": 26244,
+  "finished_utc": "2026-10-10T12:02:33.154182+00:00",
+  "artifact_sha256": {
+    "rpc-calibration.json": "67bc55c9c4470c8dbc244720a74d9cd5cdc3fa3b34dd8dd4ccbea99263ff54a2",
+    "runs/shared_priority-high-503-static.json.gz": "3dd5d520dd08717677ade6f5bb45ba96b44a2b919f8413e80b5e274095a6855a",
+    "runs/shared_priority-high-607-static.json.gz": "fddd0484c5e7651aec1ce0e846c4294ec52dbe8cc1b2b793e85ecba8b7eb7853",
+    "runs/shared_priority-high-709-static.json.gz": "3e666b167c0951e1a0d560bb64cbdd40e3ee1025c1303659b37767367f230533",
+    "runs/shared_priority-high-809-static.json.gz": "edfdb53f539a19bce65a4e0002a20f701dedb9877a69f7f81d0a3538f360b903",
+    "runs/stable-high-503-static.json.gz": "6619cbc7cba539d77fc41cf01826704968b118a7afa2989c8dd23a6c95009bbd",
+    "runs/stable-high-607-static.json.gz": "a78afde8ec1db60762d9a6e6b253cb1ed62987221b5ca407f6785e7fffd7e035",
+    "runs/stable-high-709-static.json.gz": "744f5ed4837ed5ff12eb89c3cf3718dd331da6fdc4aa1ea74737cb8b7368289a",
+    "runs/stable-high-809-static.json.gz": "1f812d5a8592a8d0a4f2f963a8373a1622c82894210a9c0469108aa04056e199",
+    "summary.json": "afe0583deef7ede270c41381e675b095c4f8dab9de239acce74bdc8cd0c3322f",
+    "training-selections.json": "086c10cad4681f519a712b27a4d90334e71817841d54a1de49119416cd6c270e",
+    "training.jsonl.gz": "5c48ec76b3e0b9273d5b4a3fddf1bc87a6494a074e9fc89cb674286a9b5d8d1b",
+    "workloads/shared_priority-503.json.gz": "1d3abbdac533cb46544c553bfa4e7f676bdb9c17b7b74661c69bd4c58da5b285",
+    "workloads/shared_priority-607.json.gz": "ee009b2c9b7e0f0fe999e36284bef96939442f81e0a54724ced45fd6bac9e427",
+    "workloads/shared_priority-709.json.gz": "edbd5f9420861819318f8c11ec9f3ede24f0e47a64027b2d05fadd469722f15d",
+    "workloads/shared_priority-809.json.gz": "8ebef54c193dfd12a6c3af49e0e8a493fd2ccb905525d058265ce11089d2593c",
+    "workloads/stable-503.json.gz": "ac01587f7cc3cbe92e5f93e8d424909f0dbb1dc45e183b0b8e27c6e4ec8d393f",
+    "workloads/stable-607.json.gz": "9fa7e2695c86a1278d5c767962d99fc1078144eb34d511bdcce9073d247fcb78",
+    "workloads/stable-709.json.gz": "2ad58e61c74994b7488961d876c6347d7e21b58075788313d858657e2ce4ec1c",
+    "workloads/stable-809.json.gz": "47130497ffa52d34b8baf03492aa50f4054c906c4abc14d078685173a41cf093"
+  }
+}

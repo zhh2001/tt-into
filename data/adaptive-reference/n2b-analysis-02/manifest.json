@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "input_manifest_sha256": {
+    "primary": "2eb42a30d44a1cff224c58ee0f8eafdc9559e30f59585c74e3d5693dda23b799",
+    "density": "e6304d0d78c90d24d2d038c4d1ad2177b116bafcec8ffd5c71d50f3535a3f907"
+  },
+  "source_sha256": {
+    "experiments/analyze_adaptive_reference.py": "589a47273fa57d7924db50db599e06960038d750129a2ff856bfbecf64913b94",
+    "experiments/analyze_rolling_reference.py": "d11983b635118d0e4593fe658e4789cbeb75b3b36e17af3797adeaee41f88225",
+    "experiments/check_adaptive_reference.py": "058aa742e55610b930caff41068fd3c96dd4a5fecdfc4f453f2085ab82c606a8",
+    "experiments/check_rolling_reference.py": "494b6f4ee929f3e9c4fb48f868229ef423e16c5fdf2ee0159960e1f48cbc33d6",
+    "tests/test_adaptive.py": "020208243e8131d755d0ed5811db1dcdb02f7fadc8f44357cea542421be4b526"
+  },
+  "artifacts_sha256": {
+    "forecast-errors.json": "667e3ddb71534dc9682bf264eb44484c52e3ea313be46b84600d0cc5b0e284df",
+    "aggregate.csv": "563b4dee5cf770cd5d43dc2ed216c27d2ebddc76f67dfe1a6390f43c13112bdc",
+    "checks.json": "3868548fb210411a3bfdf522c1ba377899c05b5c1025d2b541fca04860621cff",
+    "findings.json": "c24f0e2b2e38c430293a5b30cc6a0a562e3d396d6a7cf8ec828ec096fbd9d84c",
+    "paired-comparisons.json": "9ffc32d085b3075e37b9122413429925c60b6628a17176b17eb8124a9a8d1960",
+    "density-checks.json": "cc4f533cb17550d020a6c27aea509aa2e050d0453cc87f0e9a3c9c0ed29926ab",
+    "unit-tests.txt": "9f40f40f54da3c9bd2b03e33e771ff2ec455a1628c8bcaf2270379f328cee847",
+    "density-diagnostic.json": "937d5ffbad503dff2885d405a0dbc6c530c2245fa92804e3c3c7aab3c9a6eeef"
+  },
+  "unit_regression": {
+    "exit_code": 0,
+    "log": "unit-tests.txt"
+  },
+  "bootstrap": {
+    "seed": 731,
+    "repeats": 2000
+  },
+  "scope": "九场景、两预算、四个新种子的有限合成模型比较；不是网络性能结论"
+}

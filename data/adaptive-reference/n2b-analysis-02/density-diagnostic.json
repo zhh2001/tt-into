@@ -1,0 +1,150 @@
+[
+  {
+    "scenario": "stable",
+    "scope": "事后挑战，配置空间不对称，种子已消费",
+    "dense_mean_loss": 0.5856363858451041,
+    "dense_mean_export_bytes_per_s": 840.0,
+    "dense_feasible_seeds": 4,
+    "comparison": {
+      "scenario": "stable",
+      "budget_level": "high",
+      "method": "phase_guard",
+      "reference": "dense_static",
+      "pairs": [
+        {
+          "seed": 503,
+          "loss_delta": 0.002857721504999855,
+          "both_actual_feasible": true,
+          "export_bytes_per_s_delta": -60.0,
+          "control_bytes_per_s_delta": 242.0,
+          "method_dominated_by_reference": false,
+          "reference_dominated_by_method": false
+        },
+        {
+          "seed": 607,
+          "loss_delta": -0.03209227918125013,
+          "both_actual_feasible": true,
+          "export_bytes_per_s_delta": 52.5,
+          "control_bytes_per_s_delta": 257.5,
+          "method_dominated_by_reference": false,
+          "reference_dominated_by_method": false
+        },
+        {
+          "seed": 709,
+          "loss_delta": 0.012778834153333474,
+          "both_actual_feasible": true,
+          "export_bytes_per_s_delta": -60.0,
+          "control_bytes_per_s_delta": 242.0,
+          "method_dominated_by_reference": false,
+          "reference_dominated_by_method": false
+        },
+        {
+          "seed": 809,
+          "loss_delta": -0.02126132560750016,
+          "both_actual_feasible": true,
+          "export_bytes_per_s_delta": 52.5,
+          "control_bytes_per_s_delta": 257.5,
+          "method_dominated_by_reference": false,
+          "reference_dominated_by_method": false
+        }
+      ],
+      "all_seed_diagnostic": {
+        "mean": -0.00942926228260424,
+        "percentile_95": [
+          -0.026676802394375143,
+          0.007818277829166664
+        ],
+        "paired_seeds": 4,
+        "bootstrap_repeats": 2000,
+        "bootstrap_seed": 731,
+        "scope": "四种子有限诊断，非显著性证明；可行子集不能替代全部种子"
+      },
+      "both_feasible_subset": {
+        "mean": -0.00942926228260424,
+        "percentile_95": [
+          -0.026676802394375143,
+          0.007818277829166664
+        ],
+        "paired_seeds": 4,
+        "bootstrap_repeats": 2000,
+        "bootstrap_seed": 731,
+        "scope": "四种子有限诊断，非显著性证明；可行子集不能替代全部种子"
+      },
+      "ranking_valid_for_all_seeds": true
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "scope": "事后挑战，配置空间不对称，种子已消费",
+    "dense_mean_loss": 0.6284968413722501,
+    "dense_mean_export_bytes_per_s": 840.0,
+    "dense_feasible_seeds": 4,
+    "comparison": {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "method": "phase_guard",
+      "reference": "dense_static",
+      "pairs": [
+        {
+          "seed": 503,
+          "loss_delta": 0.05338231390833337,
+          "both_actual_feasible": true,
+          "export_bytes_per_s_delta": -60.0,
+          "control_bytes_per_s_delta": 242.0,
+          "method_dominated_by_reference": false,
+          "reference_dominated_by_method": false
+        },
+        {
+          "seed": 607,
+          "loss_delta": 0.04415642324500013,
+          "both_actual_feasible": true,
+          "export_bytes_per_s_delta": 52.5,
+          "control_bytes_per_s_delta": 288.5,
+          "method_dominated_by_reference": true,
+          "reference_dominated_by_method": false
+        },
+        {
+          "seed": 709,
+          "loss_delta": -0.026266340784999898,
+          "both_actual_feasible": true,
+          "export_bytes_per_s_delta": 52.5,
+          "control_bytes_per_s_delta": 304.0,
+          "method_dominated_by_reference": false,
+          "reference_dominated_by_method": false
+        },
+        {
+          "seed": 809,
+          "loss_delta": 0.028364913130000002,
+          "both_actual_feasible": true,
+          "export_bytes_per_s_delta": 52.5,
+          "control_bytes_per_s_delta": 257.5,
+          "method_dominated_by_reference": false,
+          "reference_dominated_by_method": false
+        }
+      ],
+      "all_seed_diagnostic": {
+        "mean": 0.0249093273745834,
+        "percentile_95": [
+          -0.00866064977749989,
+          0.04876936857666675
+        ],
+        "paired_seeds": 4,
+        "bootstrap_repeats": 2000,
+        "bootstrap_seed": 731,
+        "scope": "四种子有限诊断，非显著性证明；可行子集不能替代全部种子"
+      },
+      "both_feasible_subset": {
+        "mean": 0.0249093273745834,
+        "percentile_95": [
+          -0.00866064977749989,
+          0.04876936857666675
+        ],
+        "paired_seeds": 4,
+        "bootstrap_repeats": 2000,
+        "bootstrap_seed": 731,
+        "scope": "四种子有限诊断，非显著性证明；可行子集不能替代全部种子"
+      },
+      "ranking_valid_for_all_seeds": true
+    }
+  }
+]
