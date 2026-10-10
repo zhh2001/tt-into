@@ -1,0 +1,27 @@
+{
+  "input_manifest_sha256": "6468eb2270e5ea4ead0e4c0dabd80460b13747c8e664b111e38755796e261d26",
+  "input_summary_sha256": "ea2b8aac6331275c176508d9298eb5b0b494b6537f7582f9c8f10fb0e07a3946",
+  "source_sha256": {
+    "experiments/plot_rolling_reference.py": "308c6e25fbc5d3074c04da9e78fab7a15834e4d1175d87b8b404cd5edb6b6978",
+    "experiments/check_rolling_reference.py": "494b6f4ee929f3e9c4fb48f868229ef423e16c5fdf2ee0159960e1f48cbc33d6"
+  },
+  "font_name": "Times New Roman",
+  "font_file": "/usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf",
+  "font_sha256": "4e98adeff8ccc8ef4e3ece8d4547e288ff85fdc9c7ca711a4599c234874bbe86",
+  "dpi": 300,
+  "pdf_font_type": 42,
+  "scope": "均值及观察范围，不是置信区间。预算率逐运行取实际资源最大值再求均值。",
+  "artifact_sha256": {
+    "rolling-loss-and-budget.pdf": "af43362b85ba681e319dde6ea1450295bf9448386768d1d778d38ba11ddc82dd",
+    "rolling-loss-and-budget.csv": "08cf4608ebe513c23a09d98eeffca0c675cb2a567a1252b27c8c7c578a1e398f",
+    "pdf-fonts.txt": "b898318370bf43e0c0e2908a270bf3c0932876c1c8309febc14e5b33233117b9",
+    "rolling-loss-and-budget.png": "ed7be2f94822252aac7b76e94ea2f44c210f78121073435c9a3a31864177cdaa"
+  },
+  "postprocessing": {
+    "kind": "csv_crlf_to_lf",
+    "file": "rolling-loss-and-budget.csv",
+    "original_sha256": "b6940da9cd937d5008890691a5a23a23b86cc537bfe52a7a126468b1044a4233",
+    "operation": "bytes.replace(CRLF, LF)",
+    "scope": "仅规范 CSV 行尾，数字及执行源码快照不变；写入器后续使用 LF"
+  }
+}

@@ -1,0 +1,555 @@
+{
+  "experiment_id": "n2-rolling-01",
+  "status": "passed",
+  "started_utc": "2026-10-10T11:21:36.163155+00:00",
+  "kind": "causal_rolling_event_model",
+  "settings": {
+    "grid_us": [
+      50000,
+      200000,
+      1000000
+    ],
+    "epoch_us": 1000000,
+    "horizon_us": 1000000,
+    "alpha": 0.5,
+    "clip": 4.0,
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "capacity": 1,
+    "nominal_ip_bytes": 120,
+    "nominal_hop_us": 20,
+    "nominal_egress_us": 5,
+    "nominal_report_delay_us": 1000,
+    "maximum_rate_pps": 100.0
+  },
+  "methods": [
+    "static",
+    "feedback",
+    "local",
+    "joint"
+  ],
+  "scenarios": [
+    "stable",
+    "bursty",
+    "shared_priority",
+    "switch",
+    "sparse_stop",
+    "report_impairment",
+    "budget_floor"
+  ],
+  "budgets": [
+    "low",
+    "high"
+  ],
+  "train_seeds": [
+    11,
+    29
+  ],
+  "test_seeds": [
+    101,
+    211,
+    307,
+    401
+  ],
+  "measurement_window_us": [
+    2000000,
+    10000000
+  ],
+  "topology": {
+    "nodes": [
+      {
+        "node": 1,
+        "offset_us": 1000,
+        "clock_bits": 48,
+        "instance": "fixed"
+      },
+      {
+        "node": 2,
+        "offset_us": -2000,
+        "clock_bits": 48,
+        "instance": "fixed"
+      },
+      {
+        "node": 3,
+        "offset_us": 5000,
+        "clock_bits": 48,
+        "instance": "fixed"
+      }
+    ],
+    "routes": [
+      {
+        "flow": {
+          "session": 20,
+          "tag": 1001
+        },
+        "objects": [
+          {
+            "node": 1,
+            "port": 2,
+            "queue": 0
+          },
+          {
+            "node": 3,
+            "port": 2,
+            "queue": 0
+          }
+        ]
+      },
+      {
+        "flow": {
+          "session": 20,
+          "tag": 2002
+        },
+        "objects": [
+          {
+            "node": 2,
+            "port": 2,
+            "queue": 0
+          },
+          {
+            "node": 3,
+            "port": 2,
+            "queue": 0
+          }
+        ]
+      }
+    ]
+  },
+  "budget_definition": {
+    "stable": {
+      "low": {
+        "link_bytes_per_s": {
+          "e1": 180,
+          "e2": 180,
+          "e3": 300
+        },
+        "export_bytes_per_s": 540,
+        "control_bytes_per_s": 1200
+      },
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    },
+    "bursty": {
+      "low": {
+        "link_bytes_per_s": {
+          "e1": 180,
+          "e2": 180,
+          "e3": 300
+        },
+        "export_bytes_per_s": 540,
+        "control_bytes_per_s": 1200
+      },
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    },
+    "shared_priority": {
+      "low": {
+        "link_bytes_per_s": {
+          "e1": 180,
+          "e2": 180,
+          "e3": 300
+        },
+        "export_bytes_per_s": 540,
+        "control_bytes_per_s": 1200
+      },
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    },
+    "switch": {
+      "low": {
+        "link_bytes_per_s": {
+          "e1": 180,
+          "e2": 180,
+          "e3": 300
+        },
+        "export_bytes_per_s": 540,
+        "control_bytes_per_s": 1200
+      },
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    },
+    "sparse_stop": {
+      "low": {
+        "link_bytes_per_s": {
+          "e1": 180,
+          "e2": 180,
+          "e3": 300
+        },
+        "export_bytes_per_s": 540,
+        "control_bytes_per_s": 1200
+      },
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    },
+    "report_impairment": {
+      "low": {
+        "link_bytes_per_s": {
+          "e1": 180,
+          "e2": 180,
+          "e3": 300
+        },
+        "export_bytes_per_s": 540,
+        "control_bytes_per_s": 1200
+      },
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    },
+    "budget_floor": {
+      "low": {
+        "link_bytes_per_s": {
+          "e1": 100,
+          "e2": 100,
+          "e3": 150
+        },
+        "export_bytes_per_s": 360,
+        "control_bytes_per_s": 1200
+      },
+      "high": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.3",
+    "cpu_count": 16,
+    "load_average_at_start": [
+      0.22705078125,
+      0.10400390625,
+      0.05908203125
+    ]
+  },
+  "scope": "合成事件模型；无 BMv2 闭环或真实排队服务；四种子有限诊断",
+  "forecast_scope": "计数 EWMA 均匀机会、新近度与估计门控；不读取未来到包或损伤标签",
+  "training_selection": "最大训练预算超限、平均时效损失、启用键数、配置编码的字典序",
+  "solver_diagnostic_subset": "stable/shared_priority，高预算，seed=101，joint在2s的代理网格",
+  "offline_static_oracle_subset": "stable/shared_priority，高预算，seed=101，256配置，仅事后诊断",
+  "source_sha256": {
+    "src/collector/tagged_codec.py": "6d93a62de8d5e66d340b53d840957991d4d151fda47dc47d53f694a2a0c497b8",
+    "src/orchestration/event_schema.py": "e61acbe8af0cf8d2e568c73c5a52001123472e3a6a271a3b407832fa6d605c61",
+    "src/orchestration/event_engine.py": "cf78c518a9dd48f3b1476ab293fa303d5969c630595ca0fa77f15971cdf32104",
+    "src/orchestration/event_metrics.py": "8f1c90b69dde957ae78433baecfb34f5c8f5c2fc9c272eec705dc5d629df6bbd",
+    "src/orchestration/event_observation.py": "190412d0d1665f717b1d18dc1ef6857947a6812bc0f0b708695d7fbff86639de",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/rolling.py": "785965ef3c1b5ea576997f0c56ba0d61460f3a2b8ae6770e8794015559e76a6e",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "experiments/rolling_workloads.py": "9111ff1b916321d79712400bc584eb623a8e7957d27e097b42a64155f5c80757",
+    "experiments/rolling_rpc_cost.py": "2be45422d7c5b22fc73baf59325b8dc01273b3334746f85d7cfa462c70a980a2",
+    "experiments/run_rolling_reference.py": "957753373e10b5af230abf87e1dee8c75d96dbd40045f93f448b81b5d03e6684",
+    "tests/test_rolling.py": "99124d1ef56301ccaf1128c16f03c99af2486f64caba3c8b9490594395fbf3bf"
+  },
+  "unit_regression": {
+    "exit_code": 0,
+    "log": "unit-tests.txt"
+  },
+  "heldout_runs": 224,
+  "training_runs": 7168,
+  "finished_utc": "2026-10-10T11:22:32.706339+00:00",
+  "artifact_sha256": {
+    "offline-static-oracles.json": "a39096f7c2922ee862f47c7b7d4ed1f0012b3ceb5e52dac9575a16dc503471e3",
+    "rpc-calibration.json": "67bc55c9c4470c8dbc244720a74d9cd5cdc3fa3b34dd8dd4ccbea99263ff54a2",
+    "runs/budget_floor-high-101-feedback.json.gz": "25e053f922e22d2fc504b74d713de902f85ffe2dd1f112b777767df1d6004826",
+    "runs/budget_floor-high-101-joint.json.gz": "02e16d77272b02b82af0a2183aeafd7cc4a2bd982e57d160deb1a9fe32e46add",
+    "runs/budget_floor-high-101-local.json.gz": "846f537448620075f6fdb1048d4d6b878fe54d2088b29bdc251d5d3fb2fc081c",
+    "runs/budget_floor-high-101-static.json.gz": "70e6f6faeb1b7da9658f340f7882adf9c2ae21f471724cedd7c2bc6549686429",
+    "runs/budget_floor-high-211-feedback.json.gz": "52926e214789d4116cf1922d40a8077fffac363fb33f6fef40ef93557aab351a",
+    "runs/budget_floor-high-211-joint.json.gz": "f7defeb3d089334ae192afee5202b68d3de2acf01f2a2dbe3f500ee7f144973c",
+    "runs/budget_floor-high-211-local.json.gz": "59d318a67b2dae4faa833d6e986298db41c738e3e9894740f244e707a8b0f8d4",
+    "runs/budget_floor-high-211-static.json.gz": "c52d83ae942f6f36344d71e85d889cf07740af614fe76582b04d59245d8bbed2",
+    "runs/budget_floor-high-307-feedback.json.gz": "a37f256138c0607456bb953e8af2379fd4e2bab4b45d68dad1957d01eac0e8e2",
+    "runs/budget_floor-high-307-joint.json.gz": "84a2b4d196ce0d9f74a54a1b2dfb67887218c57415eee0cf30d33ef2a07b0f28",
+    "runs/budget_floor-high-307-local.json.gz": "e4ddd5610764539b726613306e26cb288931f5d5134b9c6fcc5b74a3eb134a26",
+    "runs/budget_floor-high-307-static.json.gz": "6c4e932d19d2528453174d63d3017c797b1df6a97849b9976e13883a9e2b01b2",
+    "runs/budget_floor-high-401-feedback.json.gz": "7c05cd78c2a70959226fc9460e3cd9eea2c4e6c2e5a3e397898fa3ba99753531",
+    "runs/budget_floor-high-401-joint.json.gz": "62a73e33a7439a544de65f27d3d91e792bd9b607a5cb2750f84ed85f3f6635ce",
+    "runs/budget_floor-high-401-local.json.gz": "02cd809fd9288135f86988ec513f72b9faf449deb150282475188ed98c5c6b84",
+    "runs/budget_floor-high-401-static.json.gz": "388ac4d16a5a3a9d2ba23724b9fd293709a744b110d6cf943f95e9a0157808ef",
+    "runs/budget_floor-low-101-feedback.json.gz": "fd06aed72ad5da43a4e84ba3f596d28588cd450fb6b3a6bc3b280142b502a029",
+    "runs/budget_floor-low-101-joint.json.gz": "de26d95c62a0bcfa14ba5c6af59438f9ed5efb84c806729a0512e739c61cde63",
+    "runs/budget_floor-low-101-local.json.gz": "364bef55b4cd925ff37b903da1a9f61ef25780f1a787022ac314889a20a80ec6",
+    "runs/budget_floor-low-101-static.json.gz": "994b9e9bd7b781f18e5bf46faf24d1c1e129e1f9c6341ce919200b97b7be8a09",
+    "runs/budget_floor-low-211-feedback.json.gz": "3647d32c8b37e1cef49db915b56383ce6e440d9d349b0e396767005466310243",
+    "runs/budget_floor-low-211-joint.json.gz": "51116edd2b8d6c8f96f2d0c4d51d3e72b5f85738782d9df9e5d4b5d21dc8bbfe",
+    "runs/budget_floor-low-211-local.json.gz": "fb3b05311ad45978bf3df85d2421ca328c5c57134cad6250ea6e4064d6e5cdd8",
+    "runs/budget_floor-low-211-static.json.gz": "1152d9abaf93ac9446cd1a7f739803b9eae6b3f6643a53a6a5d3d6cf5211c487",
+    "runs/budget_floor-low-307-feedback.json.gz": "18518bbb7858c9a47617b91b3355688993b1d918efece7ab559b6ad92b60083d",
+    "runs/budget_floor-low-307-joint.json.gz": "aff9745fdae1aff7d0ac35784a503cd09b024355ff6771d6d38a9fba7abff9ec",
+    "runs/budget_floor-low-307-local.json.gz": "1731f6cb3fdab59c416ff8c5621f0030ef2ed9c6681fe0966ee05de64c3872e5",
+    "runs/budget_floor-low-307-static.json.gz": "1c92d926873b5c56eafbec8cf7396a37796b43dd06698a2141273983a3f27144",
+    "runs/budget_floor-low-401-feedback.json.gz": "bc047b44669473fc5250ecfeb4015c3a8c5a9da0b08df1acd2e47d6f5fb6cb9a",
+    "runs/budget_floor-low-401-joint.json.gz": "66b605d0e4e5773a9d747c4305d86ad777827ad0a44f96a06878feb6ef703346",
+    "runs/budget_floor-low-401-local.json.gz": "901b7240451b3a07ab7d6f100923f371258a14a9e1064029702a0382eebd67a4",
+    "runs/budget_floor-low-401-static.json.gz": "14e9b99a7014e10db4f2f7878aac1c0bde3da94f3efc81cf568ddf809056f031",
+    "runs/bursty-high-101-feedback.json.gz": "e389b391de1bed082c936a84607920290900e8e0d8eb16d75619da822d120c1e",
+    "runs/bursty-high-101-joint.json.gz": "70533eb4e56a8d72457bc8e41df82934bb33619ad6bf0f8d2af552a34acf9bdf",
+    "runs/bursty-high-101-local.json.gz": "4b326bed4e5e614597fd21d69ec43f20f760d0ca3bf04256d157ee57dbb7f880",
+    "runs/bursty-high-101-static.json.gz": "ed391a56ac766467f6f2020a144a49550ad2fa91243dd3f00c97a9345cb8aca4",
+    "runs/bursty-high-211-feedback.json.gz": "f93907579197a1570a32dccb9f5c442fec974ee028291e094548c1de2925bd14",
+    "runs/bursty-high-211-joint.json.gz": "6e367248f670b6bc6a4245cdc552f550ad2f8aad34cf7a1e6236f5e7021fc269",
+    "runs/bursty-high-211-local.json.gz": "85f8d5eee4bfbac23c0f166f01ac2e5391aed7144f66be5089356949eb89ba41",
+    "runs/bursty-high-211-static.json.gz": "9c48f6b951a702616055e4fda5d4ecc22287d8d273153b1ea0a454468826afd0",
+    "runs/bursty-high-307-feedback.json.gz": "8c2d3791b715b464a88c059c958c3d213899be02fc300b7f6df34df67096d292",
+    "runs/bursty-high-307-joint.json.gz": "1846f3c359ce30111b0d9c5581a9c417497b30a3863e1eb105354712b8da7558",
+    "runs/bursty-high-307-local.json.gz": "fcf0f0408f446a7c2f24631a1337addcf047e26da88b93b472775bdd3dbfd467",
+    "runs/bursty-high-307-static.json.gz": "53768393e3b268411ed0cc94d8fe5dd69778997b648df8e12e4a37b3094f42de",
+    "runs/bursty-high-401-feedback.json.gz": "78272c4cc032d265c3ea35e7a413d7579e110c8da276e788b59b5f81dc755a06",
+    "runs/bursty-high-401-joint.json.gz": "3a1b7eb200f4babc360fabd556cec0d7ff32d08e58513921fe46b7981be937dc",
+    "runs/bursty-high-401-local.json.gz": "a5cd508684c0eedd75f651c4b142b82b945819cc21dad0c3f5d600ef1a741a1b",
+    "runs/bursty-high-401-static.json.gz": "a11ee55dee71000c90e366d1b4b13d0ce528b804592884fbeb593fda5c967f79",
+    "runs/bursty-low-101-feedback.json.gz": "db0ffa1e86cbc410bf4515ad78d212eb3b001a793d3795d8e0292633465d2b65",
+    "runs/bursty-low-101-joint.json.gz": "4507d98e01e21fa25c804ad69d62b24ac1736d08f69305d8bf0ab3d33049e90d",
+    "runs/bursty-low-101-local.json.gz": "1b492e755cbc82f5179cb865193e48b6c1168891d9e5fac1f4f1b84ad2220329",
+    "runs/bursty-low-101-static.json.gz": "28bf30b1a263e2bcf4d88b95f66719f7075a36d50a11d3049306006e33e4fab9",
+    "runs/bursty-low-211-feedback.json.gz": "1ac4991da9cb8acef0e50e06f8006aa0c4f4c29c86c61fb7b2e1ad98d87985aa",
+    "runs/bursty-low-211-joint.json.gz": "d5b545bd24c7b5bb58d446b68170e4dfeba8711a1e00407df2a54358525e6add",
+    "runs/bursty-low-211-local.json.gz": "1e50463f6d736f0b9e8e76d7afd2afa3533ca04b38a0217dd5469baf8d25990a",
+    "runs/bursty-low-211-static.json.gz": "00265ddacef56852ed020f62322371e10a54aad363f5d89e674889d843b651b6",
+    "runs/bursty-low-307-feedback.json.gz": "4a05be2413cc0af6df6daf6736e74f17dc6e4c23f32317f1b53a08e0efb75b4b",
+    "runs/bursty-low-307-joint.json.gz": "79c65b24a07bfd11e2d9fef0dc87bc2f19a5257fa7b4168a5c29733371a516c6",
+    "runs/bursty-low-307-local.json.gz": "f07f982658083e6b7b41278c3bb89035295ce14a1c1efc15fd300f172ce9f3ec",
+    "runs/bursty-low-307-static.json.gz": "0c43771c83f9a9ee1a5c77b9d129b483bccbde2390fd575ac58c11abb02caa54",
+    "runs/bursty-low-401-feedback.json.gz": "f3b9871971ca490a45ab33b8970ca041fcf2327a9cd97fa97206f7503f5abf1e",
+    "runs/bursty-low-401-joint.json.gz": "a8de17f9f162c8bdcfcf93795debfb56c2be485e3000d655a3158b5547ad7a23",
+    "runs/bursty-low-401-local.json.gz": "48b38df3046f29906d5aea4bbfb9899dae8364978f50864b543e1e780c049ec5",
+    "runs/bursty-low-401-static.json.gz": "5c22d269a51670f835f88148d47c7e17874c6f7881ad17b2d5fb589a712d9ce4",
+    "runs/report_impairment-high-101-feedback.json.gz": "7c7558db27431a7860c9a9bc3a3e85c2b2dda6612700dcd69a060f2f3b6a664d",
+    "runs/report_impairment-high-101-joint.json.gz": "a161f232f60d31509c68b399a829ea5b1d207673b884a78b5ebf6897a30db463",
+    "runs/report_impairment-high-101-local.json.gz": "78f75f9c0123a2d0d8fe5fcba172db39c0e365f253b1fe9e82f7cc2bad0ad307",
+    "runs/report_impairment-high-101-static.json.gz": "5adf5c96f2a1642e18ecda566796de1b35501c32806015bc110e114c9bb3ef28",
+    "runs/report_impairment-high-211-feedback.json.gz": "62c40f3c6fa9c35f0eb5319a27e2be1fba40eee85908e9385c90af710f095135",
+    "runs/report_impairment-high-211-joint.json.gz": "3aae131b92998037e5b3617ccf2a335a324a1071c41b71307a6b4b4b35ae7be0",
+    "runs/report_impairment-high-211-local.json.gz": "88321fd2deb70a916339fb090e0e52f8fb424f1b9e25665036c05431bd185edf",
+    "runs/report_impairment-high-211-static.json.gz": "b135c8ce28f6dbad17d215f42d69d4d57764ec7ff12e9e8e686e49f27b6186cf",
+    "runs/report_impairment-high-307-feedback.json.gz": "8123a78ca5f0cb8f6319bd271ebdb191741f5956a11e905adcb2b5b66e42918a",
+    "runs/report_impairment-high-307-joint.json.gz": "e53cb73000a835803b910e70b90710def5d7d1ac694d71dad1f25c7d4f3777b4",
+    "runs/report_impairment-high-307-local.json.gz": "895d26ca8d3285472a378ac9c30606489f9a21b99df2eff169e1d1e9c9552076",
+    "runs/report_impairment-high-307-static.json.gz": "44d812c4025797d03df6205002a50c26d02e480dda0090bb3e07ab6cdfbf7004",
+    "runs/report_impairment-high-401-feedback.json.gz": "411c09cd497c8171de434e7d18f7db0b2f7f43adf67223c5ea601c34eb2e5ec7",
+    "runs/report_impairment-high-401-joint.json.gz": "30853412725fbb0b277ddffe0f02f228c74fc55e80c994b4d763bfd8774f9536",
+    "runs/report_impairment-high-401-local.json.gz": "9fe0bc9c960381752daa325b14005180ec3164f7a7074d1504788daeef8a1622",
+    "runs/report_impairment-high-401-static.json.gz": "2daeedc1ae15318de10db13715226db0a59feef0a979453bb11875e5bc8e4048",
+    "runs/report_impairment-low-101-feedback.json.gz": "6c33e504978c309691551dc95c932c483f4e7f13d93047f415232932f60eb1e0",
+    "runs/report_impairment-low-101-joint.json.gz": "b4af34ce4aaa257606f085613ffee56364d244eadfe0141e51d3b19ecd8263e0",
+    "runs/report_impairment-low-101-local.json.gz": "ae69d2948394f16882aa0aec92b77c176cf7cf5b2ebca57035088b4e6e8eda81",
+    "runs/report_impairment-low-101-static.json.gz": "25dcc6c78db7bc12b961f8096521aebdafef76522196744b81996f1c38bbdba9",
+    "runs/report_impairment-low-211-feedback.json.gz": "eaa528aabb437037cdab80c0ff89522917bb108fc5ed9997e3b45fb8f373a110",
+    "runs/report_impairment-low-211-joint.json.gz": "e7d609ffbc11ef893fcdbf5f0a3708f77ff5edf6e1679617a42f9c166d1e1f51",
+    "runs/report_impairment-low-211-local.json.gz": "8c2b5c96968e1070edd47919652d86729f8db9af76d899dccdcdfa8478da34fb",
+    "runs/report_impairment-low-211-static.json.gz": "b2f600f2476bbf39460aabedc3b3869600e95e4d735ee11f81b73ee519e37c04",
+    "runs/report_impairment-low-307-feedback.json.gz": "8a23bb7bb07932134f54e184c8b137552c911061ab9d00d627fb87f93191d8fc",
+    "runs/report_impairment-low-307-joint.json.gz": "9149e90a0a41f4377355205060ca3e714eb179fa18f2cd733b4823b5e96ff4a4",
+    "runs/report_impairment-low-307-local.json.gz": "f288fb00cad1212943c628bd0809213697bd96dcebc3a87d61181cb934c38265",
+    "runs/report_impairment-low-307-static.json.gz": "25cde727d75a021d992b2c2dc85731a0df1dd4531b95cc4297cc15eabaa99909",
+    "runs/report_impairment-low-401-feedback.json.gz": "38135ef2976b9a3706e61a081b72c7b9a24d10a6f552948b9b6ce4e3e01586df",
+    "runs/report_impairment-low-401-joint.json.gz": "06e44406d51bed48f446a2327ceb12484f63159324104358cde2680e8c3be3f6",
+    "runs/report_impairment-low-401-local.json.gz": "86c6c5a934583c12ea03d3207da530fb7fd76e28b45e5d4f42a95f1f7c4bcd15",
+    "runs/report_impairment-low-401-static.json.gz": "ccb29dbf7d8b39ad977a19b764a8ff2f493cd083ef59fb62499d9ef281daba9a",
+    "runs/shared_priority-high-101-feedback.json.gz": "2c4e736b5fafa9d477786be2843cb0e45f5bbabe59ea705cc5f07a922f8d7053",
+    "runs/shared_priority-high-101-joint.json.gz": "62372b5010633c0d5b7ef3875b251e7cb54d36a2cecacbca8456e12672c7039c",
+    "runs/shared_priority-high-101-local.json.gz": "7461c3a2991495bcd8bf212d404631cd7d0170a2d2a2a24db7a2b12b4eccaf4b",
+    "runs/shared_priority-high-101-static.json.gz": "54a7bc8fd21f08593a41057535f1b864d7835746f6b5e9bae5b355e8f46623b1",
+    "runs/shared_priority-high-211-feedback.json.gz": "a5325d9a9d95e240248a32f4e2943599446ce14db4cee26e7431a113cc320ec2",
+    "runs/shared_priority-high-211-joint.json.gz": "194ff975a350ce8f48b226df4973f65cd883f40bc4933d594d9d10b7c71d83c6",
+    "runs/shared_priority-high-211-local.json.gz": "0f65fc30a13dc4db6150fac538358a50fbec19475edf4f3b60c5eff429240f1e",
+    "runs/shared_priority-high-211-static.json.gz": "9688ce345a8477ea0228a7cb2ba4b5200e6bb54637de45dcea841389c8b39d8a",
+    "runs/shared_priority-high-307-feedback.json.gz": "08d912c22b00b8d13df882d668df3706522acf88ddff6dfffdc89f58a8368833",
+    "runs/shared_priority-high-307-joint.json.gz": "510290bae0ce02bef7b807c33db9399da2f7250417eae2ef512a8a30275955a9",
+    "runs/shared_priority-high-307-local.json.gz": "04a05a5cbfed61e5308553675cb84ffa4c7ec55509aa468498456aaf3e58e123",
+    "runs/shared_priority-high-307-static.json.gz": "c9f3c492214e4e72c86f3a1eeefeeb143852e9d4e8a5b2ec2de6b804de1b7aab",
+    "runs/shared_priority-high-401-feedback.json.gz": "57980365d9d0431b726f09a181f6f0726ce3657a234d84ab7f051fd98a3df94e",
+    "runs/shared_priority-high-401-joint.json.gz": "691bce4b2a5e0e4f6ebc630c5edf2fc0848008b5f9cc4069d544cf3ce9133acb",
+    "runs/shared_priority-high-401-local.json.gz": "2320777e7eef432f660567c7f59188bff1182606fa4f3cfc8fae36cefe7c85a2",
+    "runs/shared_priority-high-401-static.json.gz": "22691478418fea33d793002de0de6f99d81a7db2f66abfe724a3200eb138814d",
+    "runs/shared_priority-low-101-feedback.json.gz": "7b506efd27cf72121e055ac38fd287b3626f0dccdc033e904c1c3a1f10f1985d",
+    "runs/shared_priority-low-101-joint.json.gz": "7ea379b8e547b4d61583cbdf77a71ee1d68b6ca897a41d91418f40ec4ef7487c",
+    "runs/shared_priority-low-101-local.json.gz": "23eb302c427e6eabeb1efa12ce8b8b4a6111567798e101afb997899d373b24d4",
+    "runs/shared_priority-low-101-static.json.gz": "b41bd8ca8f838a3397d60c1ef548f9fc29c21cae32cd360aff313ed53017bc3f",
+    "runs/shared_priority-low-211-feedback.json.gz": "0e74bf969d20f89d82211d38ea5690f1d90f3b9e7de056d89a272368262238fa",
+    "runs/shared_priority-low-211-joint.json.gz": "9efe2fe4f1d77ef5598537b81f5fec3b1e55d4e5a6f94afdd76804a20e8933cf",
+    "runs/shared_priority-low-211-local.json.gz": "b4df53cf90e7af806616acd5a93a9b3e62f8e04faf6605f7e41ba1863522af5b",
+    "runs/shared_priority-low-211-static.json.gz": "7028ce99e931c05b6d47927b839acd5d84784cf5688211bdf9bc261b7437b269",
+    "runs/shared_priority-low-307-feedback.json.gz": "fc744e3b2ec499d1da5c124b1acac0914a4c972a1c8ea25993156cbf9857ca98",
+    "runs/shared_priority-low-307-joint.json.gz": "ba3823147c2975a02f043e2ecbd8e02e09ce2df8e4a9139c373cc6198e2a1187",
+    "runs/shared_priority-low-307-local.json.gz": "da2cbd06879ec9d8835f8ac5c61a4a9f0cb148348f8f7e6e631c31453b343a05",
+    "runs/shared_priority-low-307-static.json.gz": "169a6af66c9f36ac7723b2ae2cbf09072c6456c35d894e5ab1a6d5eb0f40bd35",
+    "runs/shared_priority-low-401-feedback.json.gz": "68e10e79cb8f27636ffd9909b706b6cd906534257941449cc1746237cf84a206",
+    "runs/shared_priority-low-401-joint.json.gz": "94862b300f4876c810298966274adb042d20706ca1b52ceb6dfd645147e70e3a",
+    "runs/shared_priority-low-401-local.json.gz": "5f77c02a2571dc30819bc52e80c7aafb5370736be33b87f72fac7b3940b6b45c",
+    "runs/shared_priority-low-401-static.json.gz": "c2ddb37300fe772968dec10403b3ad25c37f87aa3f5c4478309cddb0ad4c98c4",
+    "runs/sparse_stop-high-101-feedback.json.gz": "6440267029f6e1bea9e3525ad4785352deb6885dde2a5cda281e0cd88318c5ec",
+    "runs/sparse_stop-high-101-joint.json.gz": "d1a2a47183382891b1fbfca489e626e3c8df6bf494de0ed29c7f97cbc588f77c",
+    "runs/sparse_stop-high-101-local.json.gz": "2b578c3bf01d58615c0402367d5e4eb12f0c4ba3e5db7f219b7848209cf9cf63",
+    "runs/sparse_stop-high-101-static.json.gz": "f786aa064a2d1ea378e8c2b4548629020402f4fa3183fa5f0bb0ce8aba163083",
+    "runs/sparse_stop-high-211-feedback.json.gz": "704a0d7ccac1a007ac71ee8f3289e61a7063be46992c43040a312a4542d7a6aa",
+    "runs/sparse_stop-high-211-joint.json.gz": "31301e47046140b1df875ada35cb6adec4fae68991301412e4f72d732c1524c0",
+    "runs/sparse_stop-high-211-local.json.gz": "fa21299429636a9f4ae3654c4852b073068ff4f406279f2690a8c6adf7da16e8",
+    "runs/sparse_stop-high-211-static.json.gz": "241d9f0fd948c070466267190fd0367fac5c9c189bcb4fb7d25dc5f61c1d5751",
+    "runs/sparse_stop-high-307-feedback.json.gz": "8135ee35bcaf7a57bd4c651c1f81175d2767dd7d07bc9434a49aee56fd9721f7",
+    "runs/sparse_stop-high-307-joint.json.gz": "0205bc8b71e6b189ecc602054c110bca3346792a25ca240091f31529e6082272",
+    "runs/sparse_stop-high-307-local.json.gz": "75b896fd039a4b9df8692e4b4a885b4e1f72575e2aa8d804d31d61aa2f8e208f",
+    "runs/sparse_stop-high-307-static.json.gz": "91e7fdc1fc59339f1e0d48ddeeb528d04b8c9c34a6231cd7a19c32ac0feee898",
+    "runs/sparse_stop-high-401-feedback.json.gz": "ac5dd509c64460a9123debe0d2f4c2a72675764687c6f46d925025d213a816de",
+    "runs/sparse_stop-high-401-joint.json.gz": "e0edf0cd552aaabcc00a2fa301c6b9402af716e78f451c0b94a0ce9860814cd0",
+    "runs/sparse_stop-high-401-local.json.gz": "2614bd54712f5cd131f95fa9d03dac6dac578d71f2129122d80e7eb726eae830",
+    "runs/sparse_stop-high-401-static.json.gz": "d3ea631e03784bac59913bbdd921d234b114378ac019048108cfb8394756967a",
+    "runs/sparse_stop-low-101-feedback.json.gz": "83e76272c236eca8542208a9360f61055a479c970ca4fc5c9f365409f2f2a2d0",
+    "runs/sparse_stop-low-101-joint.json.gz": "b3fe455b92f0c883b72565154997e7af77b27c2b789282ae85eda95e782b3793",
+    "runs/sparse_stop-low-101-local.json.gz": "a2df1c187f24a71f78dedb836650df820cf61bbdd52eefb9d6ca3d5423a93555",
+    "runs/sparse_stop-low-101-static.json.gz": "a8f5651218195e9995e419e061c3c8593b962021702f329caa4e3055ac98ac1b",
+    "runs/sparse_stop-low-211-feedback.json.gz": "b77b8867ed6a4fc13781411d55cecf40c74e370ff6a44841a6a98d4f627a62d4",
+    "runs/sparse_stop-low-211-joint.json.gz": "9768ad1e45b129a3b5bc721006701eb52e13021c8bcca5c1c3a7c36e39516594",
+    "runs/sparse_stop-low-211-local.json.gz": "2ff17a165e15d386f17f66b85616a656cf328eb469dc181c3e8b52244cd35d86",
+    "runs/sparse_stop-low-211-static.json.gz": "0acd0eb94f824b46cf01439bcfb9aa94e8f8c36ab5a9d089ad363c83918b5930",
+    "runs/sparse_stop-low-307-feedback.json.gz": "ad39e2d7eb19675bd37fec381a1fa8d045ec4b21eed399ff659d37258f73962e",
+    "runs/sparse_stop-low-307-joint.json.gz": "ce6a5a6183bced90f212ad37b414ca97ebb7950f554f1186086b87e5b317a6a5",
+    "runs/sparse_stop-low-307-local.json.gz": "828049c92a2b1cd1ff364f23f5e1022f06d95f069819ce73a535143543390ef1",
+    "runs/sparse_stop-low-307-static.json.gz": "8f769d2fc396baf80b112dbbdfb117c19cc1631082dd56dccfc1cbe209c4b799",
+    "runs/sparse_stop-low-401-feedback.json.gz": "8c1418d731809bffc28fd115118addf07dfd138c1190c7fad2b61bb063ee5895",
+    "runs/sparse_stop-low-401-joint.json.gz": "5dadc24b65575d9289fe8cbe484d37806bf3027c7a72009e740f5b54268ae627",
+    "runs/sparse_stop-low-401-local.json.gz": "e1340823a6c6ef74a6368d03faaa972e7f19c35761af8cd8cc0807e9c0398d7c",
+    "runs/sparse_stop-low-401-static.json.gz": "0042ab0d172fbccb11599733b023d39c93b7b9aeec22f0f22449a6aff0bbf02d",
+    "runs/stable-high-101-feedback.json.gz": "6b9fbf5e71867edaeadd808d6be8dc49820f6e5aaa08806f0423843492a990b1",
+    "runs/stable-high-101-joint.json.gz": "3c21e3012640978c28eaa56aeac6db95301f1f22518bbded6881f2e7d274cc8a",
+    "runs/stable-high-101-local.json.gz": "6e6200d84524ab618648e1e260922cf7f2ca779a80eb6f8879c97db81f29c8b0",
+    "runs/stable-high-101-static.json.gz": "6773f0d525ab32c0edc0b27cae55e261dd5f2e0c22040109834a630825128cf4",
+    "runs/stable-high-211-feedback.json.gz": "b44db67a93cc9eb98e6fcedb8d895e2818524b6bbe1d639f202eb75a04109b95",
+    "runs/stable-high-211-joint.json.gz": "491dcbc65949ff964c8ab89eccdda1aafd03a50d12562883790dab33bf90f12b",
+    "runs/stable-high-211-local.json.gz": "acf590cef22c080afd5fee9f099abf68dc1e47996a509476a58258bbb7f08d8d",
+    "runs/stable-high-211-static.json.gz": "f1ad033212bb4013d2d7be92ccdab4d4c8af631ba0b42a7da190d22a590d399c",
+    "runs/stable-high-307-feedback.json.gz": "00730db980e9da5e521667033fb2013c75f5c78750dff1f58779edb55a202637",
+    "runs/stable-high-307-joint.json.gz": "4290bd126a3d88de5d82de13308ebcc2f2c4c2c1fa763aacf6bb66e0f88c5e23",
+    "runs/stable-high-307-local.json.gz": "520f99efe0723b55c0e62142608645d95b014265e395a585442cca4922e6a733",
+    "runs/stable-high-307-static.json.gz": "63996770d0eb2d75250fabd0e516ca1162b989dd3bde2900de0e2692e66d1e21",
+    "runs/stable-high-401-feedback.json.gz": "901ff4f8135af83a716ed469eaabf296d1dc4a1d9a08186b85e8605565ce58b3",
+    "runs/stable-high-401-joint.json.gz": "4d8689ed80e8c1222a6b42a750bd61c27337e8782df232caf8b9d9f857fe114f",
+    "runs/stable-high-401-local.json.gz": "08d5c65d7c72220e8dc57f539d8bf049e50e2161d7ac7712a9279e70f18b3fab",
+    "runs/stable-high-401-static.json.gz": "002431fdea8b150ffae386e893294e17036b4fe6629bb507af78434f559a275e",
+    "runs/stable-low-101-feedback.json.gz": "ffd14837e2384211105d0f4bb5842ef0a70fa3855199cedb42dcbd2f43be9e27",
+    "runs/stable-low-101-joint.json.gz": "21ecc9bf32317c3ee000bda1e00b73024a0ca6d989fc834e15cd06b5491e0eb2",
+    "runs/stable-low-101-local.json.gz": "66912a8a8598c197003e1386267a34b370f2db20ee4eefd3bd2088eb01bf6525",
+    "runs/stable-low-101-static.json.gz": "02466551a2af65073ae8120cc1dd5ca40216e5ba54e064c3c2ca2b1d3c71a7cf",
+    "runs/stable-low-211-feedback.json.gz": "c9511ee0b72413749766eb8504c670a1d684d5be6152743ac111c81fa09f6553",
+    "runs/stable-low-211-joint.json.gz": "fbd0fad44ae0b930d4fbe4c17ffc9204fc8ee7b368b48feeedf3d6aa1e42b79b",
+    "runs/stable-low-211-local.json.gz": "6cdb7872fce67970d40a6e2e4a524a9939624e1c7cb0bb4aff5dd8fa5678245c",
+    "runs/stable-low-211-static.json.gz": "64717e8b7e18349c35b7333a9c3c621a9a31391cfcb583fe77f8064a8f3108a2",
+    "runs/stable-low-307-feedback.json.gz": "1e742c44ca95b156cb2eef5b55e525ce5a4b7f501687f274443d2c7eb7f73fb4",
+    "runs/stable-low-307-joint.json.gz": "60a9510ec3d3fb316ee0ea2a83a4146b57cf61f68aa483edcc54f291082cc8c8",
+    "runs/stable-low-307-local.json.gz": "45b5a928d0bd84141f144101df5dff8aaa399fbb0de356a2ae9e052b4c0b6453",
+    "runs/stable-low-307-static.json.gz": "fed44105a4356edb91495a225b0cde869c8b642d5ba422983f83e57ebcb197bf",
+    "runs/stable-low-401-feedback.json.gz": "beb7a7168d465d09cea733d589c6aa3eac27b43c2216f07b754283e1fc611f2f",
+    "runs/stable-low-401-joint.json.gz": "db84301a1cc3d00d506204358de2c983744f2496c0eb65f4beee8995946c5ef7",
+    "runs/stable-low-401-local.json.gz": "a21e666c028879fb0d63fc8a00c68b931a3826f172458299e0693f911499e05e",
+    "runs/stable-low-401-static.json.gz": "b5be86ed9c83707f3462dd339df4f9af790ece6e840ce008531a56f035ee5976",
+    "runs/switch-high-101-feedback.json.gz": "a0548e36d8d584a2fb3f858e717fbac5957e8610d284306468b25c323949a9d4",
+    "runs/switch-high-101-joint.json.gz": "854d0c7d13d34fcdbf1be0a3d0238beb10a444244263e4aced102ffbbb9bd351",
+    "runs/switch-high-101-local.json.gz": "5589224dc0448a4352ee88bfb8df17f27b87e02c5077d3c65e4e7f629c48f194",
+    "runs/switch-high-101-static.json.gz": "515f3117316b99365e6ab5efc969422325f8de84a75b785ce72cd95012aba096",
+    "runs/switch-high-211-feedback.json.gz": "669746fa087ce9183d8d5c0fb80b91c586a4afc75f2dab710836dc262d4e1e35",
+    "runs/switch-high-211-joint.json.gz": "63d32a7b2299f16d016969bb6b3203587bc65f814c6c9d1c23787bc4c20de6bb",
+    "runs/switch-high-211-local.json.gz": "71f52eccbcc7a286796c029d285745aa53a1ee84ec3c083db24ee3f793712a05",
+    "runs/switch-high-211-static.json.gz": "8d8e864ee279fbc6d6a39c383f1925cd6cd8f152744d7a73176fa10aa1e7e732",
+    "runs/switch-high-307-feedback.json.gz": "8f53ac5cbe0b7ef47501b9a8be1a33614d30382066e43588c4b4f985edd46ba7",
+    "runs/switch-high-307-joint.json.gz": "fde24dfe1bfcf195f3de8a1d392d82366b06e364b7802dd1d1d5a957c3a93ea5",
+    "runs/switch-high-307-local.json.gz": "611ed9fe49454586cceb25148a8d4d163cb684b2a45a68d89af316dd9897add2",
+    "runs/switch-high-307-static.json.gz": "67f37bd2a9b61a7697754828ade2bb826bd17bcd5b5a0983fbb4ea5d65d84446",
+    "runs/switch-high-401-feedback.json.gz": "5baca31bf81762905ebede93a79185ae44d40fcbc889161de70b87926b1a6096",
+    "runs/switch-high-401-joint.json.gz": "f0e85b13be5cceb3bbceb39e311790b0b53727a73e958b7679ab1d4c1d9ee08a",
+    "runs/switch-high-401-local.json.gz": "202bed7bb6dc8cf39aba711529eca4d422ae71a70fac44a6c5abe65707cec56f",
+    "runs/switch-high-401-static.json.gz": "6c9b6adf9ba988e816989d2a43b4e93a020f393174778eecaa9d1d67e81a6b30",
+    "runs/switch-low-101-feedback.json.gz": "63ba3d880afcbe79fe060c3edcb159ea4e71033171a958123f7016041052af0f",
+    "runs/switch-low-101-joint.json.gz": "bebf2cffe10b3c96da7a721292758321bcb20ed2f701b4d6ea25b10886d0302e",
+    "runs/switch-low-101-local.json.gz": "4ccf77bba9bbfacf21557a4e062d4a716e3e0fad22fbe427f21e74f84130b295",
+    "runs/switch-low-101-static.json.gz": "4f3f026363ab94dbf0c527d0ddf5c3f4e78f6f6d36e053c8e956f9591f59d800",
+    "runs/switch-low-211-feedback.json.gz": "ba5f6562ec6a82475f6d4ce370c6a5727cc3cafef3ecee52ffd6522ffe4e6c27",
+    "runs/switch-low-211-joint.json.gz": "6431ec1c3d79979de8cf55e893f8c06f71fd6e248da75f22f712c16313169611",
+    "runs/switch-low-211-local.json.gz": "92af63e372b82c3befdea390491b96f23acf0376910949375aaac998b3ac8015",
+    "runs/switch-low-211-static.json.gz": "5f427c9917bb8af8727478243b5f653e5dce5a7b84a33a99969e19195950b8f9",
+    "runs/switch-low-307-feedback.json.gz": "32c7b3e19f7946c8e580f9742bab132ee1d1e38325a817929638fc9ada3635ac",
+    "runs/switch-low-307-joint.json.gz": "6130762a23274288055bdde7955539fabb63a515e8473020468944e1d4c5433b",
+    "runs/switch-low-307-local.json.gz": "eceb033ca17eddb98db5710560671f50edff1975419c5df40569214cb0fd96c5",
+    "runs/switch-low-307-static.json.gz": "fd440cc277b1eb7de393264c04e05081e0463d2f119d8cc4573e35001305431f",
+    "runs/switch-low-401-feedback.json.gz": "03b5c9d469bb06997cf2699afd3f581a37fa1f4d5ae4d2009c154202c78937fd",
+    "runs/switch-low-401-joint.json.gz": "01fdc9f8e333a523aa30093c2eff5e906a4024caf2b8ee1c654e59c0c31aaf72",
+    "runs/switch-low-401-local.json.gz": "0b66fe64917fb693a1c55b37bf8b3c9d9de76092ff2d535428fa66936d76d4af",
+    "runs/switch-low-401-static.json.gz": "8686557d2eed43b3e8388c8995ed783f0915336646e5aeb243b9a8459470e2d5",
+    "summary.json": "ea2b8aac6331275c176508d9298eb5b0b494b6537f7582f9c8f10fb0e07a3946",
+    "training-selections.json": "a0f981cff39117e85f59c6002a6580f8cc20efec5ce5d27fea29418f73229274",
+    "training.jsonl": "a2cb7a5a34ffe512c75d2e9c61744bfdd165a17f13afeb4202483a5306ffa996",
+    "unit-tests.txt": "30ec40f8add1ee22814e285f554b384dbfd545ca7661eac3e0090371dcac06fe",
+    "workloads/budget_floor-101.json.gz": "30fa42719f9f3274d047947e21e4b424e17bf3f4ab3f6f2448be4a3c860cf0b9",
+    "workloads/budget_floor-211.json.gz": "ca1d3054d59e9e9ed05c59de9fba481d76aa1ae2083fb7f428ab8e0e6f6ac9f8",
+    "workloads/budget_floor-307.json.gz": "a63b4a73c1397fea594d31beefcd6f07b5f99a672beb1d3cbab0add363e017cc",
+    "workloads/budget_floor-401.json.gz": "30ff2f06cd6f2b44626b55451e9d7791be12023fd8ed195f2ec5c3cd7cb6817b",
+    "workloads/bursty-101.json.gz": "4a222146bf442b03d5ffa8afc1668bfb90012a627bf81b94d66bfa98702ba127",
+    "workloads/bursty-211.json.gz": "567983684cfd4353b5a1ae92653d1a2836b1cc55b1d8f553ced84fc260c8fbac",
+    "workloads/bursty-307.json.gz": "88f2c72b7dca28a6c08bc49a2d1ce99179f4a9d8f666095fb07ffd3d04c942cd",
+    "workloads/bursty-401.json.gz": "9ad77acd9c48b4f892e4ad82273c66acaaaef8c1dd7bb7c3b4399dc9748e6615",
+    "workloads/report_impairment-101.json.gz": "4a505882734d464a7c11fbf5b4d1f70b500b36b44650a18af8635399a085790a",
+    "workloads/report_impairment-211.json.gz": "8d70a00667f36475a5cade64835c92bc1b0c264bd79d3a9b5f3ed4881b99bc7b",
+    "workloads/report_impairment-307.json.gz": "0617535103745418c67e18c20201b5adb0bf5894750f074d3fa32fda5c7e378f",
+    "workloads/report_impairment-401.json.gz": "b1225e38fc72ebd57e3e29c82d6de1a6f00a13f4a63e70342d51b83ee2aaea88",
+    "workloads/shared_priority-101.json.gz": "45b0c8ede5b323598cceb76d5bfbd2c3a84986c6ebf94599a24e1a433fbf3f67",
+    "workloads/shared_priority-211.json.gz": "dd63532845ae18f4a2257e2fb1dabfe742a6c83f9c3535ee0971b6cee0f2998b",
+    "workloads/shared_priority-307.json.gz": "8db033fa0fc2e150ac2d3e274bd547e1422deeefb6bfb9a8b708a51085279e93",
+    "workloads/shared_priority-401.json.gz": "463b58758266021285d40f0d092c6dd333193f6f244a4c34ff6e2b060a08458a",
+    "workloads/sparse_stop-101.json.gz": "b45e8d34d2dc306b7c0335a5cc2fa6d167e1bac88147fd4ee42f1cc7d1f4e47d",
+    "workloads/sparse_stop-211.json.gz": "605f9bb15a98006536007ebafc18e81d4ffe03fcd8f02a04402025ec572fe90a",
+    "workloads/sparse_stop-307.json.gz": "a295c8dd07f36916383e7628430087a8931064dc1b6e4d784ffd866720283b53",
+    "workloads/sparse_stop-401.json.gz": "1f1c457d5823a3cf3214407657fbeb4288e5c9c319a314715722fa0353d46ec5",
+    "workloads/stable-101.json.gz": "18ceb5e41f90e7e95ce9266ac04c9820f75d19bb9b0c979d12ce11dfed5dc838",
+    "workloads/stable-211.json.gz": "d41dd8532467bff766d2b8487af27061dc9fd1fc4ae14944765c80ac3d00229d",
+    "workloads/stable-307.json.gz": "1295997eac7194adb41e1b389995b495ac760e5f4be9eadc7349d0ce4fc634e9",
+    "workloads/stable-401.json.gz": "b9d0cb541f67f9af1aab87f64fb3405f352a9b6548c2478300f033d70f3645d5",
+    "workloads/switch-101.json.gz": "b0522c39d81692b7f1fc6942455873220ba33ee6844fe03d37cda2c600658030",
+    "workloads/switch-211.json.gz": "dc2da85a7e5e983f00f471706df8b2aed8fb7b804bbbb7985830e4f6180fa9b0",
+    "workloads/switch-307.json.gz": "17dda759637835bb1410803f3f611c2e793ff31648d01ec5256e21d7dca99855",
+    "workloads/switch-401.json.gz": "d37b9e5225971ba488ee69c32a2f64fb35f82bcef0e088ed007dbb3725eea321"
+  }
+}

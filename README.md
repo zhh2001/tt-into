@@ -123,4 +123,10 @@ python3 experiments/analyze_validation.py \
 
 独立事件层按 ingress、egress、逐字段配置生效和报告可用时刻执行固定路径 TT-INT。它支持多流、多跳、在途更新、容量/MTU 阻挡、报告重复与条件时钟回绕，提供共享对象的连续时效损失和分层费用。候选报告格式增加 FlowTag 与 Session，已有 P4 和协议版本保持独立。
 
-当前全部 146 项单元检查通过，10 个确定性案例通过 227 项独立核对。这些结果是事件模型正确性证据，尚无新编排策略或网络性能比较。运行、字段、预算及观察限制见[复现说明](experiments/README-event-validation.md)，完整记录见[运行清单](data/event-validation/n1-contract-02/manifest.json)。
+该阶段全部 146 项单元检查通过，10 个确定性案例通过 227 项独立核对。这些结果是事件模型正确性证据。运行、字段、预算及观察限制见[复现说明](experiments/README-event-validation.md)，完整记录见[运行清单](data/event-validation/n1-contract-02/manifest.json)。
+
+## 首个闭环编排模型
+
+动态读写、因果需求通知、充分调参静态 TT-INT、统一反馈、局部及联合策略已接入独立事件层。7 个场景、两档预算采用训练与保留种子隔离，共保存 7168 个静态训练结果和 224 次保留执行。最终全部 171 项单元检查通过，独立核对 31680 个包执行实例、2240 次决策和 94020 项费用条目。
+
+首轮没有显示联合策略稳定优于充分调参静态 TT-INT。突发机会失配和切换预算超限完整保留，不能把预测达标解释为实际履约。该模型尚无 BMv2 闭环性能结果。方法、费用、复现及分析入口见[闭环模型说明](experiments/README-rolling-reference.md)，图提供 [PNG](figures/rolling-reference/n2-rolling-01/rolling-loss-and-budget.png) 和 [PDF](figures/rolling-reference/n2-rolling-01/rolling-loss-and-budget.pdf)。

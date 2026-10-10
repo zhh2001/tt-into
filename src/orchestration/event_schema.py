@@ -191,3 +191,33 @@ class Read:
             raise ValueError('读取标识或因果关系错误')
         if type(self.success) is not bool:
             raise ValueError('读取结果必须为布尔值')
+
+
+@dataclass(frozen=True)
+class Demand:
+    object_id: ObjectId
+    target_us: int
+    weight: float = 1.0
+    active: bool = True
+
+    def __post_init__(self):
+        integer(self.target_us, '需求目标间隔', 1)
+        if not isinstance(self.weight, (int, float)) or isinstance(self.weight, bool) or not math.isfinite(self.weight) or self.weight <= 0:
+            raise ValueError('需求权重须有限且为正')
+        if type(self.active) is not bool:
+            raise ValueError('需求活跃标识须为布尔值')
+
+
+@dataclass(frozen=True)
+class Notice:
+    notice_id: str
+    available_us: int
+    version: int
+    demands: tuple[Demand, ...]
+    cost: RpcCost
+
+    def __post_init__(self):
+        integer(self.available_us, '通知到达时间')
+        integer(self.version, '需求版本', 0)
+        if not self.notice_id or not self.demands or len({d.object_id for d in self.demands}) != len(self.demands):
+            raise ValueError('通知或对象重复')

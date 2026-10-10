@@ -2,7 +2,7 @@
 from dataclasses import dataclass
 
 from collector.tagged_codec import WireRecord
-from orchestration.event_schema import FlowId, ObjectId, integer
+from orchestration.event_schema import Demand, FlowId, ObjectId, integer
 
 
 @dataclass(frozen=True)
@@ -42,12 +42,20 @@ class CacheState:
 
 
 @dataclass(frozen=True)
+class DemandNotification:
+    received_us: int
+    version: int
+    demands: tuple[Demand, ...]
+
+
+@dataclass(frozen=True)
 class OnlineView:
     now_us: int
     reports: tuple[ReceivedReport, ...]
     counts: tuple[CountObservation, ...]
     confirmations: tuple[Confirmation, ...]
     cache: tuple[CacheState, ...]
+    notifications: tuple[DemandNotification, ...] = ()
 
     def effective_recency_us(self, object_id):
         found = next((entry for entry in self.cache if entry.object_id == object_id), None)

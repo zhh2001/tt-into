@@ -1,0 +1,148 @@
+{
+  "all_runs": 224,
+  "actual_feasible_runs": 196,
+  "actual_feasible_by_method": {
+    "static": 52,
+    "feedback": 45,
+    "local": 48,
+    "joint": 51
+  },
+  "joint_vs_static": [
+    {
+      "scenario": "stable",
+      "budget_level": "low",
+      "mean_loss_delta": 0.0,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": 0.0
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "mean_loss_delta": -9.965267812497847e-05,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": -9.965267812497847e-05
+    },
+    {
+      "scenario": "bursty",
+      "budget_level": "low",
+      "mean_loss_delta": 0.41003806052666675,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": 0.41003806052666675
+    },
+    {
+      "scenario": "bursty",
+      "budget_level": "high",
+      "mean_loss_delta": 0.10110199675583331,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": 0.10110199675583331
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "low",
+      "mean_loss_delta": -0.004440942734791675,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": -0.004440942734791675
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "mean_loss_delta": 0.0011534307952083267,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": 0.0011534307952083267
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "mean_loss_delta": 0.10619968770191471,
+      "all_seed_actual_feasible": false,
+      "mean_delta_both_feasible_subset": 0.1380586739227645
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "high",
+      "mean_loss_delta": 0.02679132854819441,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": 0.02679132854819441
+    },
+    {
+      "scenario": "sparse_stop",
+      "budget_level": "low",
+      "mean_loss_delta": -0.0008486455154942396,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": -0.0008486455154942396
+    },
+    {
+      "scenario": "sparse_stop",
+      "budget_level": "high",
+      "mean_loss_delta": -0.0008486455154942396,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": -0.0008486455154942396
+    },
+    {
+      "scenario": "report_impairment",
+      "budget_level": "low",
+      "mean_loss_delta": 0.0,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": 0.0
+    },
+    {
+      "scenario": "report_impairment",
+      "budget_level": "high",
+      "mean_loss_delta": 0.0,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": 0.0
+    },
+    {
+      "scenario": "budget_floor",
+      "budget_level": "low",
+      "mean_loss_delta": 0.0,
+      "all_seed_actual_feasible": false,
+      "mean_delta_both_feasible_subset": null
+    },
+    {
+      "scenario": "budget_floor",
+      "budget_level": "high",
+      "mean_loss_delta": -9.965267812497847e-05,
+      "all_seed_actual_feasible": true,
+      "mean_delta_both_feasible_subset": -9.965267812497847e-05
+    }
+  ],
+  "joint_forecast_by_scenario": [
+    {
+      "scenario": "stable",
+      "receipt_proxy_mean_absolute_error": 0.015978614882343763,
+      "predicted_feasible_actual_overrun_epochs": 0
+    },
+    {
+      "scenario": "bursty",
+      "receipt_proxy_mean_absolute_error": 0.42712640109812505,
+      "predicted_feasible_actual_overrun_epochs": 0
+    },
+    {
+      "scenario": "shared_priority",
+      "receipt_proxy_mean_absolute_error": 0.016504055690364595,
+      "predicted_feasible_actual_overrun_epochs": 0
+    },
+    {
+      "scenario": "switch",
+      "receipt_proxy_mean_absolute_error": 0.13636600913571614,
+      "predicted_feasible_actual_overrun_epochs": 26
+    },
+    {
+      "scenario": "sparse_stop",
+      "receipt_proxy_mean_absolute_error": 0.35853637464652344,
+      "predicted_feasible_actual_overrun_epochs": 0
+    },
+    {
+      "scenario": "report_impairment",
+      "receipt_proxy_mean_absolute_error": 0.3464698208543815,
+      "predicted_feasible_actual_overrun_epochs": 0
+    },
+    {
+      "scenario": "budget_floor",
+      "receipt_proxy_mean_absolute_error": 0.006297470440807305,
+      "predicted_feasible_actual_overrun_epochs": 0
+    }
+  ],
+  "scope": "合成事件模型的全部保留结果。配对区间仅作诊断，不对超预算点声称同预算收益。"
+}

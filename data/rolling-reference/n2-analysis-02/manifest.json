@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "input_manifest_sha256": "6468eb2270e5ea4ead0e4c0dabd80460b13747c8e664b111e38755796e261d26",
+  "input_summary_sha256": "ea2b8aac6331275c176508d9298eb5b0b494b6537f7582f9c8f10fb0e07a3946",
+  "source_sha256": {
+    "experiments/check_rolling_reference.py": "494b6f4ee929f3e9c4fb48f868229ef423e16c5fdf2ee0159960e1f48cbc33d6",
+    "experiments/analyze_rolling_reference.py": "5c3acad70862869608ad50792b34530b4502aa2d35dd100297dfbd5dedbba9e5",
+    "tests/test_rolling.py": "c1195547d015e2c037ff65fc370fbf6001da2a9064a932fc90973f0d02f96618"
+  },
+  "artifacts_sha256": {
+    "actual-cost-frontier.json": "d0b283c361f010f33c8fc707fa235b213a062ab23cf87b76ece10a44b5cc5b2a",
+    "aggregate.csv": "dcf1a4901dd3caad1e16516a45a7423398044e1c6e9c240b919971a90d409510",
+    "checks.json": "916faff52c8ef01f330c33fc28cd259ff37b45a9a4af42431610129eb75c1ef9",
+    "findings.json": "452bf9a2d0cdb60e8a1e7a270afa3a86fde009748c680bed791db072a3e60cf7",
+    "forecast-errors.json": "2cbbc061e606f5ebf89ab0ffaae158becdcd2d1986adefdc3fe1ef943a0ed7b0",
+    "paired-comparisons.json": "bc6e7bf144ad507eb5dbd839df21731f57d0dc6c8c84c98d21d155c35610bb31",
+    "unit-tests.txt": "d7309682ebcb906979b126464c83311fd64f890912a781e113c849440988bd46"
+  },
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 731,
+    "paired_within_seed": true
+  },
+  "unit_regression": {
+    "exit_code": 0,
+    "log": "unit-tests.txt",
+    "command": "python3 -m unittest discover -s tests -v"
+  },
+  "scope": "合成事件模型的全部保留结果。配对区间仅作诊断，不对超预算点声称同预算收益。",
+  "postprocessing": {
+    "kind": "csv_crlf_to_lf",
+    "file": "aggregate.csv",
+    "original_sha256": "51a60f8a7a869b6144625b927a8af8d86333c8617fea530655e413b26fadae55",
+    "operation": "bytes.replace(CRLF, LF)",
+    "scope": "仅规范 CSV 行尾，数字及执行源码快照不变；写入器后续使用 LF"
+  }
+}

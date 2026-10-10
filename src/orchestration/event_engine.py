@@ -4,13 +4,13 @@ import heapq
 import itertools
 
 from collector.tagged_codec import HEADER_BYTES, RECORD_BYTES, STACK_SLOTS, WireRecord, decode, encode
-from orchestration.event_observation import CacheState, Confirmation, CountObservation, OnlineView, ReceivedReport
+from orchestration.event_observation import CacheState, Confirmation, CountObservation, DemandNotification, OnlineView, ReceivedReport
 from orchestration.event_schema import integer
 
 
 # 同时刻先处理输入控制和读取快照，再处理业务；后续跳由前跳动态生成。
 PRIORITY = {'request': 0, 'apply': 1, 'read_snapshot': 2, 'ingress': 3,
-            'egress': 4, 'sink': 5, 'report': 6, 'ack': 7, 'read_available': 8}
+            'egress': 4, 'sink': 5, 'report': 6, 'ack': 7, 'read_available': 8, 'notice': 9}
 
 
 @dataclass
@@ -25,7 +25,7 @@ class Gate:
 class EventEngine:
     """预声明外部事件的执行层。在线视图不暴露这些事件或仿真真值。"""
 
-    def __init__(self, nodes, routes, packets, writes=(), reads=(), capacity=1):
+    def __init__(self, nodes, routes, packets, writes=(), reads=(), capacity=1, notices=()):
         integer(capacity, '共同 K', 1, STACK_SLOTS)
         self.capacity = capacity
         self.nodes = {n.node: n for n in nodes}
@@ -45,6 +45,7 @@ class EventEngine:
         self.now_us = None
         self.events, self.cost_events, self.receipts, self.exports = [], [], [], []
         self.reports, self.counts, self.confirmations = [], [], []
+        self.notifications = []
         self.cache, self.read_values = {}, {}
         self.inband = dict.fromkeys(sorted({h.link for p in packets for h in p.hops}), 0)
         self.insertions = dict.fromkeys(sorted(self.nodes), 0)
@@ -58,6 +59,41 @@ class EventEngine:
             self._schedule(r.issued_us, 'request', ('read', r))
             self._schedule(r.snapshot_us, 'read_snapshot', r)
             self._schedule(r.available_us, 'read_available', r)
+        seen_notices = set()
+        objects = {o for route in self.routes.values() for o in route}
+        for notice in notices:
+            if notice.notice_id in seen_notices or any(d.object_id not in objects for d in notice.demands):
+                raise ValueError('管理通知重复或对象未声明')
+            seen_notices.add(notice.notice_id)
+            self._schedule(notice.available_us, 'notice', notice)
+
+    def submit_write(self, write):
+        self._check_submission(write, 'write')
+        self.writes += (write,)
+        self._schedule(write.issued_us, 'request', ('write', write))
+        self._schedule(write.effective_us, 'apply', write)
+        self._schedule(write.ack_us, 'ack', write)
+
+    def submit_read(self, read):
+        self._check_submission(read, 'read')
+        self.reads += (read,)
+        self._schedule(read.issued_us, 'request', ('read', read))
+        self._schedule(read.snapshot_us, 'read_snapshot', read)
+        self._schedule(read.available_us, 'read_available', read)
+
+    def _check_submission(self, operation, category):
+        if self.now_us is None or operation.issued_us <= self.now_us:
+            raise ValueError('动态调用只能在当前时刻之后发出')
+        if (operation.node, operation.flow) not in self.gates:
+            raise ValueError('动态调用对象未注册')
+        if category == 'write':
+            if any(w.write_id == operation.write_id for w in self.writes):
+                raise ValueError('写入标识重复')
+            if operation.field == 'threshold_us' and operation.value >= (1 << (self.nodes[operation.node].clock_bits - 1)):
+                raise ValueError('阈值超过时钟半周期')
+        else:
+            if any(r.read_id == operation.read_id for r in self.reads) or operation.node != self.routes[operation.flow][0].node:
+                raise ValueError('读取重复或不是源节点')
 
     def _validate(self):
         if not self.routes:
@@ -147,6 +183,15 @@ class EventEngine:
                 self.counts.append(CountObservation(r.read_id, r.flow, r.issued_us,
                                                     self.now_us, self.read_values[r.read_id]))
             self._log(kind, read_id=r.read_id, success=r.success)
+        elif kind == 'notice':
+            notice = payload
+            self.notifications.append(DemandNotification(self.now_us, notice.version, notice.demands))
+            for part, value in [('request', notice.cost.request_bytes), ('reply', notice.cost.reply_bytes)]:
+                self.cost_events.append({'time_us': self.now_us, 'resource': 'control', 'kind': 'observation',
+                                         'operation_id': notice.notice_id, 'part': part, 'bytes': value,
+                                         'basis': 'serialized_rpc', 'node': None, 'flow': None,
+                                         'provenance': notice.cost.provenance, 'subkind': 'management_notice'})
+            self._log(kind, notice_id=notice.notice_id, version=notice.version)
         elif kind == 'ingress':
             self._ingress(*payload)
         elif kind == 'egress':
@@ -249,7 +294,7 @@ class EventEngine:
         if self.now_us is None:
             raise ValueError('先执行到一个明确时刻')
         return OnlineView(self.now_us, tuple(self.reports), tuple(self.counts), tuple(self.confirmations),
-                          tuple(self.cache[o] for o in sorted(self.cache)))
+                          tuple(self.cache[o] for o in sorted(self.cache)), tuple(self.notifications))
 
     def result(self):
         control = {kind: sum(e['bytes'] for e in self.cost_events if e['resource'] == 'control' and e['kind'] == kind)
