@@ -1,0 +1,450 @@
+{
+  "run_id": "reference-02",
+  "start_utc": "2026-10-09T18:38:26.588718+00:00",
+  "status": "passed",
+  "kind": "synthetic_event_reference",
+  "source_sha256": {
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/replay.py": "88fb2e3ef90eef659ec4ba89126c475979392c99d1b8bdc54220195c7c2d14b4",
+    "src/orchestration/oracle.py": "d6969d3f0a2e7d4e2d6e9abf0e90e583a0b058c0bbcecf863c75eb62691f8401",
+    "experiments/run_orchestration_reference.py": "6ebfbc4f042110859a6e4bc80d0bae605e2969540164e2482fa32654dad796b9"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4"
+  },
+  "start_load_average": [
+    0.17138671875,
+    0.078125,
+    0.01220703125
+  ],
+  "threshold_grid_us": [
+    1,
+    50000,
+    100000,
+    200000,
+    400000
+  ],
+  "per_node_threshold_grid_us": [
+    1,
+    200000,
+    400000,
+    600000
+  ],
+  "reservoir_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "format": {
+    "header_bytes": 8,
+    "record_bytes": 20,
+    "export_fixed_bytes": 42
+  },
+  "prehistory": "共同给定初始已收样本，生成于 -1000 us；窗口门控初始无成功状态，这是输入假设而非实测预热",
+  "budget_window": "整个输入轨迹及其报告总量，年龄窗口单独给出，含窗口后到达报告费用",
+  "control_scope": "静态规则窗口内不更新，控制为零；初始安装及探针成本未包含，不能推断部署总成本",
+  "tuning": "所有对照在同一已知轨迹枚举统一及逐节点阈值，静态流授权另枚举非空节点子集，属于乐观对照参照",
+  "reservoir_scope": "理想实数随机优先级，只实现事件参考，尚未移植为 P4 有限精度随机选择",
+  "scenarios": {
+    "aligned": {
+      "input_packets": 12,
+      "baseline_trials": 6348,
+      "best_reference_configurations": {
+        "tt_prefix": {
+          "threshold_us": 400000,
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.2647986111111111,
+          "min_weighted_violation": 0.2647986111111111,
+          "max_weighted_violation": 0.2647986111111111,
+          "mean_fulfilled_tasks": 1.0,
+          "mean_total_byte_hops": 1632.0,
+          "all_within_budget": true
+        },
+        "shared_prefix": {
+          "threshold_us": {
+            "1": 1,
+            "2": 400000,
+            "3": 1
+          },
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.0,
+          "min_weighted_violation": 0.0,
+          "max_weighted_violation": 0.0,
+          "mean_fulfilled_tasks": 3.0,
+          "mean_total_byte_hops": 1572.0,
+          "all_within_budget": true
+        },
+        "uniform_reservoir": {
+          "threshold_us": {
+            "1": 1,
+            "2": 400000,
+            "3": 600000
+          },
+          "static_assignment": null,
+          "seed_count": 20,
+          "mean_weighted_violation": 0.13353020833333334,
+          "min_weighted_violation": 0.020937499999999998,
+          "max_weighted_violation": 0.24349305555555553,
+          "mean_fulfilled_tasks": 1.3,
+          "mean_total_byte_hops": 1752.0,
+          "all_within_budget": true
+        },
+        "weighted_reservoir": {
+          "threshold_us": {
+            "1": 1,
+            "2": 600000,
+            "3": 400000
+          },
+          "static_assignment": null,
+          "seed_count": 20,
+          "mean_weighted_violation": 0.11910243055555556,
+          "min_weighted_violation": 0.0,
+          "max_weighted_violation": 0.1811527777777778,
+          "mean_fulfilled_tasks": 1.0,
+          "mean_total_byte_hops": 1752.0,
+          "all_within_budget": true
+        },
+        "rotation": {
+          "threshold_us": 1,
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.125375,
+          "min_weighted_violation": 0.125375,
+          "max_weighted_violation": 0.125375,
+          "mean_fulfilled_tasks": 2.0,
+          "mean_total_byte_hops": 1512.0,
+          "all_within_budget": true
+        },
+        "static_flow": {
+          "threshold_us": {
+            "1": 1,
+            "2": 400000,
+            "3": 1
+          },
+          "static_assignment": {
+            "1": [
+              1
+            ],
+            "2": [
+              2,
+              3
+            ]
+          },
+          "seed_count": 1,
+          "mean_weighted_violation": 0.0,
+          "min_weighted_violation": 0.0,
+          "max_weighted_violation": 0.0,
+          "mean_fulfilled_tasks": 3.0,
+          "mean_total_byte_hops": 1572.0,
+          "all_within_budget": true
+        }
+      },
+      "oracle_statuses": [
+        "optimal",
+        "optimal",
+        "optimal",
+        "optimal",
+        "optimal"
+      ],
+      "oracle_admitted_weights": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    "staggered": {
+      "input_packets": 12,
+      "baseline_trials": 6348,
+      "best_reference_configurations": {
+        "tt_prefix": {
+          "threshold_us": {
+            "1": 400000,
+            "2": 600000,
+            "3": 1
+          },
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.13295138888888888,
+          "min_weighted_violation": 0.13295138888888888,
+          "max_weighted_violation": 0.13295138888888888,
+          "mean_fulfilled_tasks": 1.0,
+          "mean_total_byte_hops": 1592.0,
+          "all_within_budget": true
+        },
+        "shared_prefix": {
+          "threshold_us": {
+            "1": 200000,
+            "2": 400000,
+            "3": 1
+          },
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.0,
+          "min_weighted_violation": 0.0,
+          "max_weighted_violation": 0.0,
+          "mean_fulfilled_tasks": 3.0,
+          "mean_total_byte_hops": 1572.0,
+          "all_within_budget": true
+        },
+        "uniform_reservoir": {
+          "threshold_us": {
+            "1": 1,
+            "2": 600000,
+            "3": 600000
+          },
+          "static_assignment": null,
+          "seed_count": 20,
+          "mean_weighted_violation": 0.11578402777777778,
+          "min_weighted_violation": 0.035354166666666666,
+          "max_weighted_violation": 0.2368888888888889,
+          "mean_fulfilled_tasks": 0.75,
+          "mean_total_byte_hops": 1752.0,
+          "all_within_budget": true
+        },
+        "weighted_reservoir": {
+          "threshold_us": {
+            "1": 1,
+            "2": 400000,
+            "3": 400000
+          },
+          "static_assignment": null,
+          "seed_count": 20,
+          "mean_weighted_violation": 0.0943951388888889,
+          "min_weighted_violation": 0.04198611111111111,
+          "max_weighted_violation": 0.26393055555555556,
+          "mean_fulfilled_tasks": 1.1,
+          "mean_total_byte_hops": 1752.0,
+          "all_within_budget": true
+        },
+        "rotation": {
+          "threshold_us": 1,
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.0845,
+          "min_weighted_violation": 0.0845,
+          "max_weighted_violation": 0.0845,
+          "mean_fulfilled_tasks": 2.0,
+          "mean_total_byte_hops": 1512.0,
+          "all_within_budget": true
+        },
+        "static_flow": {
+          "threshold_us": {
+            "1": 1,
+            "2": 400000,
+            "3": 1
+          },
+          "static_assignment": {
+            "1": [
+              1
+            ],
+            "2": [
+              2,
+              3
+            ]
+          },
+          "seed_count": 1,
+          "mean_weighted_violation": 0.0,
+          "min_weighted_violation": 0.0,
+          "max_weighted_violation": 0.0,
+          "mean_fulfilled_tasks": 3.0,
+          "mean_total_byte_hops": 1572.0,
+          "all_within_budget": true
+        }
+      },
+      "oracle_statuses": [
+        "optimal",
+        "optimal",
+        "optimal",
+        "optimal",
+        "optimal"
+      ],
+      "oracle_admitted_weights": [
+        6,
+        6,
+        6,
+        6,
+        3
+      ]
+    },
+    "slow_export": {
+      "input_packets": 12,
+      "baseline_trials": 6348,
+      "best_reference_configurations": {
+        "tt_prefix": {
+          "threshold_us": {
+            "1": 600000,
+            "2": 400000,
+            "3": 1
+          },
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.5215902777777778,
+          "min_weighted_violation": 0.5215902777777778,
+          "max_weighted_violation": 0.5215902777777778,
+          "mean_fulfilled_tasks": 0.0,
+          "mean_total_byte_hops": 1512.0,
+          "all_within_budget": true
+        },
+        "shared_prefix": {
+          "threshold_us": {
+            "1": 600000,
+            "2": 200000,
+            "3": 1
+          },
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.45854861111111106,
+          "min_weighted_violation": 0.45854861111111106,
+          "max_weighted_violation": 0.45854861111111106,
+          "mean_fulfilled_tasks": 0.0,
+          "mean_total_byte_hops": 1472.0,
+          "all_within_budget": true
+        },
+        "uniform_reservoir": {
+          "threshold_us": {
+            "1": 600000,
+            "2": 1,
+            "3": 600000
+          },
+          "static_assignment": null,
+          "seed_count": 20,
+          "mean_weighted_violation": 0.4674090277777777,
+          "min_weighted_violation": 0.4308541666666667,
+          "max_weighted_violation": 0.5280763888888889,
+          "mean_fulfilled_tasks": 0.05,
+          "mean_total_byte_hops": 1592.0,
+          "all_within_budget": true
+        },
+        "weighted_reservoir": {
+          "threshold_us": {
+            "1": 600000,
+            "2": 1,
+            "3": 400000
+          },
+          "static_assignment": null,
+          "seed_count": 20,
+          "mean_weighted_violation": 0.4903868055555556,
+          "min_weighted_violation": 0.45863194444444444,
+          "max_weighted_violation": 0.5422847222222222,
+          "mean_fulfilled_tasks": 0.2,
+          "mean_total_byte_hops": 1592.0,
+          "all_within_budget": true
+        },
+        "rotation": {
+          "threshold_us": 1,
+          "static_assignment": null,
+          "seed_count": 1,
+          "mean_weighted_violation": 0.4933472222222222,
+          "min_weighted_violation": 0.4933472222222222,
+          "max_weighted_violation": 0.4933472222222222,
+          "mean_fulfilled_tasks": 1.0,
+          "mean_total_byte_hops": 1512.0,
+          "all_within_budget": true
+        },
+        "static_flow": {
+          "threshold_us": 1,
+          "static_assignment": {
+            "1": [
+              2
+            ],
+            "2": [
+              3
+            ]
+          },
+          "seed_count": 1,
+          "mean_weighted_violation": 0.45163888888888887,
+          "min_weighted_violation": 0.45163888888888887,
+          "max_weighted_violation": 0.45163888888888887,
+          "mean_fulfilled_tasks": 1.0,
+          "mean_total_byte_hops": 1392.0,
+          "all_within_budget": true
+        }
+      },
+      "oracle_statuses": [
+        "optimal",
+        "optimal",
+        "optimal",
+        "optimal",
+        "optimal"
+      ],
+      "oracle_admitted_weights": [
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "header_budget_shortfall": {
+      "input_packets": 12,
+      "baseline_trials": 6348,
+      "best_reference_configurations": {
+        "tt_prefix": null,
+        "shared_prefix": null,
+        "uniform_reservoir": null,
+        "weighted_reservoir": null,
+        "rotation": null,
+        "static_flow": null
+      },
+      "oracle_statuses": [
+        "infeasible",
+        "infeasible",
+        "infeasible",
+        "infeasible",
+        "infeasible"
+      ],
+      "oracle_admitted_weights": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "finish_utc": "2026-10-09T18:38:40.811416+00:00",
+  "wall_seconds": 10.892565215999639,
+  "finish_load_average": [
+    0.29931640625,
+    0.10888671875,
+    0.02294921875
+  ],
+  "artifact_sha256": {
+    "header_budget_shortfall/baseline-trials.jsonl": "9ae411e27b3aabde9af10e20d635e25b23c4740b27a172055638baaf19b45834",
+    "header_budget_shortfall/input.json": "bd26369ce95757ac5eaad8c7d82a52ee232f45752b1cbabfcd761d0a4035db55",
+    "header_budget_shortfall/oracles.json": "bdb00134be51fc22a4a2d438c807a62874d38628495067eb9a33b037bc186858",
+    "slow_export/baseline-trials.jsonl": "db6bad71ca38583d9b0e1a912bfa23fa50f7eb1bcd632c4dbbfc5882a04f5edc",
+    "slow_export/input.json": "902b882387c2301c3674e24c31b5b76fe033d55b76653590d2aac9022a8f797e",
+    "slow_export/oracles.json": "5cca25fbc4e2fd3ac0aa8979c026691523febdfcece316002cd9149fbb2963da",
+    "staggered/baseline-trials.jsonl": "1c1c96969c34e5689a5e4d84c5efccb3b0fcf20fb5f8a593f08ada81fef633d8",
+    "staggered/input.json": "54fa8d741b2593a8d132c1bba2dd7af1235bf8fbe81b046c47fe4307ccefeff2",
+    "staggered/oracles.json": "982a4133078a66b57181216ca52c3ecfcb6198de3276d00cbd0bff68c8f21431",
+    "aligned/baseline-trials.jsonl": "0f33c5f53e7703c9d95ac725fed9673b846687998c4ec4795fa3dd56024fdef8",
+    "aligned/input.json": "df64a9f1bf98d3ca29f9346abad10cafdba31037eef85333d4ed21c7f0147468",
+    "aligned/oracles.json": "4e8b591cb65f1771a8d383a1454b1639ac360af973ac87ac199009c635827f3b"
+  }
+}

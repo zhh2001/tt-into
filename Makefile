@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: build diagnostics test validate validate3
+.PHONY: build diagnostics test validate validate3 state state-diagnostics
 
 build:
 	$(PYTHON) experiments/build.py
@@ -16,3 +16,9 @@ validate:
 
 validate3:
 	sudo $(PYTHON) experiments/run_validation.py --hops 3
+
+state:
+	$(PYTHON) experiments/build_state.py
+
+state-diagnostics:
+	$(PYTHON) experiments/build_state.py --diagnostics

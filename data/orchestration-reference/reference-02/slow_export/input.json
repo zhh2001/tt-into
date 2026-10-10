@@ -1,0 +1,301 @@
+{
+  "tasks": [
+    {
+      "node": 1,
+      "deadline_us": 250000,
+      "weight": 3,
+      "epsilon": 0.0,
+      "initial_generated_us": -1000
+    },
+    {
+      "node": 2,
+      "deadline_us": 450000,
+      "weight": 2,
+      "epsilon": 0.0,
+      "initial_generated_us": -1000
+    },
+    {
+      "node": 3,
+      "deadline_us": 650000,
+      "weight": 1,
+      "epsilon": 0.0,
+      "initial_generated_us": -1000
+    }
+  ],
+  "packets": [
+    {
+      "packet_id": 1,
+      "flow": 1,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        0,
+        100,
+        200
+      ],
+      "generated_us": [
+        50,
+        150,
+        250
+      ],
+      "arrival_us": 300000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 2,
+      "flow": 2,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        100000,
+        100100,
+        100200
+      ],
+      "generated_us": [
+        100050,
+        100150,
+        100250
+      ],
+      "arrival_us": 400000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 3,
+      "flow": 1,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        200000,
+        200100,
+        200200
+      ],
+      "generated_us": [
+        200050,
+        200150,
+        200250
+      ],
+      "arrival_us": 500000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 4,
+      "flow": 2,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        300000,
+        300100,
+        300200
+      ],
+      "generated_us": [
+        300050,
+        300150,
+        300250
+      ],
+      "arrival_us": 600000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 5,
+      "flow": 1,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        400000,
+        400100,
+        400200
+      ],
+      "generated_us": [
+        400050,
+        400150,
+        400250
+      ],
+      "arrival_us": 700000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 6,
+      "flow": 2,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        500000,
+        500100,
+        500200
+      ],
+      "generated_us": [
+        500050,
+        500150,
+        500250
+      ],
+      "arrival_us": 800000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 7,
+      "flow": 1,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        600000,
+        600100,
+        600200
+      ],
+      "generated_us": [
+        600050,
+        600150,
+        600250
+      ],
+      "arrival_us": 900000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 8,
+      "flow": 2,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        700000,
+        700100,
+        700200
+      ],
+      "generated_us": [
+        700050,
+        700150,
+        700250
+      ],
+      "arrival_us": 1000000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 9,
+      "flow": 1,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        800000,
+        800100,
+        800200
+      ],
+      "generated_us": [
+        800050,
+        800150,
+        800250
+      ],
+      "arrival_us": 1100000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 10,
+      "flow": 2,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        900000,
+        900100,
+        900200
+      ],
+      "generated_us": [
+        900050,
+        900150,
+        900250
+      ],
+      "arrival_us": 1200000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 11,
+      "flow": 1,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        1000000,
+        1000100,
+        1000200
+      ],
+      "generated_us": [
+        1000050,
+        1000150,
+        1000250
+      ],
+      "arrival_us": 1300000,
+      "ip_bytes": 120,
+      "capacity": 1
+    },
+    {
+      "packet_id": 12,
+      "flow": 2,
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "gate_us": [
+        1100000,
+        1100100,
+        1100200
+      ],
+      "generated_us": [
+        1100050,
+        1100150,
+        1100250
+      ],
+      "arrival_us": 1400000,
+      "ip_bytes": 120,
+      "capacity": 1
+    }
+  ],
+  "age_window_us": [
+    0,
+    1200000
+  ],
+  "budgets_per_link_bytes": [
+    336,
+    336,
+    336,
+    744
+  ]
+}

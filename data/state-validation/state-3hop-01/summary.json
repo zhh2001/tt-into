@@ -1,0 +1,1368 @@
+{
+  "run_id": "state-3hop-01",
+  "start_utc": "2026-10-09T18:28:01.491894+00:00",
+  "source_sha256": {
+    "src/p4/state_int.p4": "99d0492edabc1316315e26330c0171eca482c3bb61d8577ac8b01906cbaae465",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/collector/state_codec.py": "a5698a1364685c635a41a1ae6875eced3132b7b43f12d7b6629ed604d514dd16",
+    "experiments/build_state.py": "21e3899a8c20e461c2af1aa388cbc9f71b4c626f4122d5281fba6796cace76d2",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/state_io.py": "e6841e839c7ef6c391600198c7013466a6459b249347cdd262e41455a2273d34",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/run_state_validation.py": "f6a7484dfe87f6de80d89bca79b0b72fbae68f44f27b159fac258442cb9f3626"
+  },
+  "status": "passed",
+  "seed": 0,
+  "hops": 3,
+  "sink_nodes": 1,
+  "diagnostics_enabled": true,
+  "header_bytes": 8,
+  "record_bytes": 20,
+  "threshold_us": 1,
+  "capacity": 3,
+  "warmup": "不排除首包，训练探针不计入回放测量窗口",
+  "scope": "共同状态格式与时钟条件检查，非编排性能实验",
+  "versions": {
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "bmv2": "1.15.0-2bdd0b7b",
+    "mininet": "2.3.0",
+    "python": "3.12.3"
+  },
+  "start_load_average": [
+    0.220703125,
+    0.091796875,
+    0.0224609375
+  ],
+  "errors": [],
+  "input_packets": 90,
+  "received_packets": 90,
+  "report_packets": 86,
+  "maximum_queue_packets": 18,
+  "finish_utc": "2026-10-09T18:28:07.269327+00:00",
+  "finish_load_average": [
+    0.20263671875,
+    0.08984375,
+    0.02197265625
+  ],
+  "wire_checks": {
+    "ipv4_frames": 446,
+    "maximum_ip_length": 1500,
+    "passed": true
+  },
+  "analysis_sha256": "f263705d80158f23629a9c2cde196bc9fa4942a0a8771fcfa141252725646b51",
+  "metric_sources_sha256": {
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d"
+  },
+  "calibration": {
+    "training_packet_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "heldout_packet_ids": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56
+    ],
+    "heldout_checks": 144,
+    "host_wall_monotonic_variation_ns": 756,
+    "host_clock_pair_error_ns": 1298,
+    "predeclared_clock_slack_ns": 101000,
+    "constant_offset_assumption": true,
+    "hardware_synchronization_claim": false,
+    "origin_ns": 1791570483286773457,
+    "nodes": [
+      {
+        "node": 1,
+        "offset_lower_ns": 1791570482058516330,
+        "offset_upper_ns": 1791570482060120729,
+        "interval_width_us": 1604.399
+      },
+      {
+        "node": 2,
+        "offset_lower_ns": 1791570482164716330,
+        "offset_upper_ns": 1791570482166330729,
+        "interval_width_us": 1614.399
+      },
+      {
+        "node": 3,
+        "offset_lower_ns": 1791570482314177330,
+        "offset_upper_ns": 1791570482315816729,
+        "interval_width_us": 1639.399
+      }
+    ],
+    "samples": [
+      {
+        "packet_id": 9,
+        "node": 1,
+        "generation_lower_us": 0.0,
+        "generation_upper_us": 1408.3,
+        "arrival_us": 1408.3,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 10,
+        "node": 1,
+        "generation_lower_us": 40319.873,
+        "generation_upper_us": 41924.272,
+        "arrival_us": 43721.215,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 11,
+        "node": 1,
+        "generation_lower_us": 80489.873,
+        "generation_upper_us": 82094.272,
+        "arrival_us": 85234.369,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 12,
+        "node": 1,
+        "generation_lower_us": 120523.873,
+        "generation_upper_us": 122128.272,
+        "arrival_us": 125192.528,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 13,
+        "node": 1,
+        "generation_lower_us": 160459.873,
+        "generation_upper_us": 162064.272,
+        "arrival_us": 164649.032,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 14,
+        "node": 1,
+        "generation_lower_us": 200538.873,
+        "generation_upper_us": 202143.272,
+        "arrival_us": 204434.74,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 15,
+        "node": 1,
+        "generation_lower_us": 240233.873,
+        "generation_upper_us": 241838.272,
+        "arrival_us": 242821.57,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 16,
+        "node": 1,
+        "generation_lower_us": 280482.873,
+        "generation_upper_us": 282087.272,
+        "arrival_us": 284225.881,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 17,
+        "node": 1,
+        "generation_lower_us": 320931.873,
+        "generation_upper_us": 322536.272,
+        "arrival_us": 326172.22,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 18,
+        "node": 1,
+        "generation_lower_us": 360627.873,
+        "generation_upper_us": 362232.272,
+        "arrival_us": 364744.652,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 19,
+        "node": 1,
+        "generation_lower_us": 400495.873,
+        "generation_upper_us": 402100.272,
+        "arrival_us": 404036.142,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 20,
+        "node": 1,
+        "generation_lower_us": 440401.873,
+        "generation_upper_us": 442006.272,
+        "arrival_us": 444168.912,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 21,
+        "node": 1,
+        "generation_lower_us": 480820.873,
+        "generation_upper_us": 482425.272,
+        "arrival_us": 485410.701,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 22,
+        "node": 1,
+        "generation_lower_us": 520429.873,
+        "generation_upper_us": 522034.272,
+        "arrival_us": 523974.165,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 23,
+        "node": 1,
+        "generation_lower_us": 559989.462,
+        "generation_upper_us": 561373.207,
+        "arrival_us": 561373.207,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 24,
+        "node": 1,
+        "generation_lower_us": 600038.873,
+        "generation_upper_us": 601643.272,
+        "arrival_us": 602414.804,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 25,
+        "node": 1,
+        "generation_lower_us": 640803.873,
+        "generation_upper_us": 642408.272,
+        "arrival_us": 645376.575,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 26,
+        "node": 1,
+        "generation_lower_us": 680218.873,
+        "generation_upper_us": 681823.272,
+        "arrival_us": 683503.504,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 27,
+        "node": 1,
+        "generation_lower_us": 720580.873,
+        "generation_upper_us": 722185.272,
+        "arrival_us": 725652.694,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 28,
+        "node": 1,
+        "generation_lower_us": 760692.873,
+        "generation_upper_us": 762297.272,
+        "arrival_us": 764660.062,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 29,
+        "node": 1,
+        "generation_lower_us": 801003.873,
+        "generation_upper_us": 802608.272,
+        "arrival_us": 805785.95,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 30,
+        "node": 1,
+        "generation_lower_us": 840621.873,
+        "generation_upper_us": 842226.272,
+        "arrival_us": 844787.628,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 31,
+        "node": 1,
+        "generation_lower_us": 880967.873,
+        "generation_upper_us": 882572.272,
+        "arrival_us": 886376.348,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 32,
+        "node": 1,
+        "generation_lower_us": 920700.873,
+        "generation_upper_us": 922305.272,
+        "arrival_us": 924950.574,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 33,
+        "node": 1,
+        "generation_lower_us": 960293.873,
+        "generation_upper_us": 961898.272,
+        "arrival_us": 963654.269,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 34,
+        "node": 1,
+        "generation_lower_us": 1000829.873,
+        "generation_upper_us": 1002434.272,
+        "arrival_us": 1005548.082,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 35,
+        "node": 1,
+        "generation_lower_us": 1040343.873,
+        "generation_upper_us": 1041948.272,
+        "arrival_us": 1044075.359,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 36,
+        "node": 1,
+        "generation_lower_us": 1080921.873,
+        "generation_upper_us": 1082526.272,
+        "arrival_us": 1085903.93,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 37,
+        "node": 1,
+        "generation_lower_us": 1120469.873,
+        "generation_upper_us": 1122074.272,
+        "arrival_us": 1124072.82,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 38,
+        "node": 1,
+        "generation_lower_us": 1161035.873,
+        "generation_upper_us": 1162640.272,
+        "arrival_us": 1166712.934,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 39,
+        "node": 1,
+        "generation_lower_us": 1200246.873,
+        "generation_upper_us": 1201851.272,
+        "arrival_us": 1203389.718,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 40,
+        "node": 1,
+        "generation_lower_us": 1240476.873,
+        "generation_upper_us": 1242081.272,
+        "arrival_us": 1244528.018,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 41,
+        "node": 1,
+        "generation_lower_us": 1280795.873,
+        "generation_upper_us": 1282400.272,
+        "arrival_us": 1285976.371,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 42,
+        "node": 1,
+        "generation_lower_us": 1320907.873,
+        "generation_upper_us": 1322512.272,
+        "arrival_us": 1325836.401,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 43,
+        "node": 1,
+        "generation_lower_us": 1360945.873,
+        "generation_upper_us": 1362550.272,
+        "arrival_us": 1365722.75,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 44,
+        "node": 1,
+        "generation_lower_us": 1400700.873,
+        "generation_upper_us": 1402305.272,
+        "arrival_us": 1404844.635,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 45,
+        "node": 1,
+        "generation_lower_us": 1440324.873,
+        "generation_upper_us": 1441929.272,
+        "arrival_us": 1443632.854,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 46,
+        "node": 1,
+        "generation_lower_us": 1480914.873,
+        "generation_upper_us": 1482519.272,
+        "arrival_us": 1486049.277,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 47,
+        "node": 1,
+        "generation_lower_us": 1520334.873,
+        "generation_upper_us": 1521939.272,
+        "arrival_us": 1524045.881,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 48,
+        "node": 1,
+        "generation_lower_us": 1560354.873,
+        "generation_upper_us": 1561959.272,
+        "arrival_us": 1564130.379,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 49,
+        "node": 1,
+        "generation_lower_us": 1601051.873,
+        "generation_upper_us": 1602656.272,
+        "arrival_us": 1605751.239,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 50,
+        "node": 1,
+        "generation_lower_us": 1640441.873,
+        "generation_upper_us": 1642046.272,
+        "arrival_us": 1644198.974,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 51,
+        "node": 1,
+        "generation_lower_us": 1680938.873,
+        "generation_upper_us": 1682543.272,
+        "arrival_us": 1685379.807,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 52,
+        "node": 1,
+        "generation_lower_us": 1721003.873,
+        "generation_upper_us": 1722608.272,
+        "arrival_us": 1726411.287,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 53,
+        "node": 1,
+        "generation_lower_us": 1760891.873,
+        "generation_upper_us": 1762496.272,
+        "arrival_us": 1765826.363,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 54,
+        "node": 1,
+        "generation_lower_us": 1799944.612,
+        "generation_upper_us": 1801455.948,
+        "arrival_us": 1801455.948,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 55,
+        "node": 1,
+        "generation_lower_us": 1840241.873,
+        "generation_upper_us": 1841846.272,
+        "arrival_us": 1843923.85,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 56,
+        "node": 1,
+        "generation_lower_us": 1880204.873,
+        "generation_upper_us": 1881809.272,
+        "arrival_us": 1883053.66,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 9,
+        "node": 2,
+        "generation_lower_us": 0.0,
+        "generation_upper_us": 1408.3,
+        "arrival_us": 1408.3,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 10,
+        "node": 2,
+        "generation_lower_us": 40676.873,
+        "generation_upper_us": 42291.272,
+        "arrival_us": 43721.215,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 11,
+        "node": 2,
+        "generation_lower_us": 81935.873,
+        "generation_upper_us": 83550.272,
+        "arrival_us": 85234.369,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 12,
+        "node": 2,
+        "generation_lower_us": 121680.873,
+        "generation_upper_us": 123295.272,
+        "arrival_us": 125192.528,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 13,
+        "node": 2,
+        "generation_lower_us": 161202.873,
+        "generation_upper_us": 162817.272,
+        "arrival_us": 164649.032,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 14,
+        "node": 2,
+        "generation_lower_us": 201411.873,
+        "generation_upper_us": 203026.272,
+        "arrival_us": 204434.74,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 15,
+        "node": 2,
+        "generation_lower_us": 240563.873,
+        "generation_upper_us": 242178.272,
+        "arrival_us": 242821.57,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 16,
+        "node": 2,
+        "generation_lower_us": 281246.873,
+        "generation_upper_us": 282861.272,
+        "arrival_us": 284225.881,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 17,
+        "node": 2,
+        "generation_lower_us": 322815.873,
+        "generation_upper_us": 324430.272,
+        "arrival_us": 326172.22,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 18,
+        "node": 2,
+        "generation_lower_us": 361591.873,
+        "generation_upper_us": 363206.272,
+        "arrival_us": 364744.652,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 19,
+        "node": 2,
+        "generation_lower_us": 401094.873,
+        "generation_upper_us": 402709.272,
+        "arrival_us": 404036.142,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 20,
+        "node": 2,
+        "generation_lower_us": 441190.873,
+        "generation_upper_us": 442805.272,
+        "arrival_us": 444168.912,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 21,
+        "node": 2,
+        "generation_lower_us": 481881.873,
+        "generation_upper_us": 483496.272,
+        "arrival_us": 485410.701,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 22,
+        "node": 2,
+        "generation_lower_us": 521107.873,
+        "generation_upper_us": 522722.272,
+        "arrival_us": 523974.165,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 23,
+        "node": 2,
+        "generation_lower_us": 559989.462,
+        "generation_upper_us": 561373.207,
+        "arrival_us": 561373.207,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 24,
+        "node": 2,
+        "generation_lower_us": 600286.873,
+        "generation_upper_us": 601901.272,
+        "arrival_us": 602414.804,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 25,
+        "node": 2,
+        "generation_lower_us": 641865.873,
+        "generation_upper_us": 643480.272,
+        "arrival_us": 645376.575,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 26,
+        "node": 2,
+        "generation_lower_us": 680791.873,
+        "generation_upper_us": 682406.272,
+        "arrival_us": 683503.504,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 27,
+        "node": 2,
+        "generation_lower_us": 721872.873,
+        "generation_upper_us": 723487.272,
+        "arrival_us": 725652.694,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 28,
+        "node": 2,
+        "generation_lower_us": 761633.873,
+        "generation_upper_us": 763248.272,
+        "arrival_us": 764660.062,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 29,
+        "node": 2,
+        "generation_lower_us": 802151.873,
+        "generation_upper_us": 803766.272,
+        "arrival_us": 805785.95,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 30,
+        "node": 2,
+        "generation_lower_us": 841647.873,
+        "generation_upper_us": 843262.272,
+        "arrival_us": 844787.628,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 31,
+        "node": 2,
+        "generation_lower_us": 882259.873,
+        "generation_upper_us": 883874.272,
+        "arrival_us": 886376.348,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 32,
+        "node": 2,
+        "generation_lower_us": 921872.873,
+        "generation_upper_us": 923487.272,
+        "arrival_us": 924950.574,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 33,
+        "node": 2,
+        "generation_lower_us": 960967.873,
+        "generation_upper_us": 962582.272,
+        "arrival_us": 963654.269,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 34,
+        "node": 2,
+        "generation_lower_us": 1002060.873,
+        "generation_upper_us": 1003675.272,
+        "arrival_us": 1005548.082,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 35,
+        "node": 2,
+        "generation_lower_us": 1040997.873,
+        "generation_upper_us": 1042612.272,
+        "arrival_us": 1044075.359,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 36,
+        "node": 2,
+        "generation_lower_us": 1082156.873,
+        "generation_upper_us": 1083771.272,
+        "arrival_us": 1085903.93,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 37,
+        "node": 2,
+        "generation_lower_us": 1121188.873,
+        "generation_upper_us": 1122803.272,
+        "arrival_us": 1124072.82,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 38,
+        "node": 2,
+        "generation_lower_us": 1162532.873,
+        "generation_upper_us": 1164147.272,
+        "arrival_us": 1166712.934,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 39,
+        "node": 2,
+        "generation_lower_us": 1200791.873,
+        "generation_upper_us": 1202406.272,
+        "arrival_us": 1203389.718,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 40,
+        "node": 2,
+        "generation_lower_us": 1241662.873,
+        "generation_upper_us": 1243277.272,
+        "arrival_us": 1244528.018,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 41,
+        "node": 2,
+        "generation_lower_us": 1282208.873,
+        "generation_upper_us": 1283823.272,
+        "arrival_us": 1285976.371,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 42,
+        "node": 2,
+        "generation_lower_us": 1322217.873,
+        "generation_upper_us": 1323832.272,
+        "arrival_us": 1325836.401,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 43,
+        "node": 2,
+        "generation_lower_us": 1362251.873,
+        "generation_upper_us": 1363866.272,
+        "arrival_us": 1365722.75,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 44,
+        "node": 2,
+        "generation_lower_us": 1401632.873,
+        "generation_upper_us": 1403247.272,
+        "arrival_us": 1404844.635,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 45,
+        "node": 2,
+        "generation_lower_us": 1440937.873,
+        "generation_upper_us": 1442552.272,
+        "arrival_us": 1443632.854,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 46,
+        "node": 2,
+        "generation_lower_us": 1482364.873,
+        "generation_upper_us": 1483979.272,
+        "arrival_us": 1486049.277,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 47,
+        "node": 2,
+        "generation_lower_us": 1521019.873,
+        "generation_upper_us": 1522634.272,
+        "arrival_us": 1524045.881,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 48,
+        "node": 2,
+        "generation_lower_us": 1561224.873,
+        "generation_upper_us": 1562839.272,
+        "arrival_us": 1564130.379,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 49,
+        "node": 2,
+        "generation_lower_us": 1602327.873,
+        "generation_upper_us": 1603942.272,
+        "arrival_us": 1605751.239,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 50,
+        "node": 2,
+        "generation_lower_us": 1641282.873,
+        "generation_upper_us": 1642897.272,
+        "arrival_us": 1644198.974,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 51,
+        "node": 2,
+        "generation_lower_us": 1682030.873,
+        "generation_upper_us": 1683645.272,
+        "arrival_us": 1685379.807,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 52,
+        "node": 2,
+        "generation_lower_us": 1722487.873,
+        "generation_upper_us": 1724102.272,
+        "arrival_us": 1726411.287,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 53,
+        "node": 2,
+        "generation_lower_us": 1762043.873,
+        "generation_upper_us": 1763658.272,
+        "arrival_us": 1765826.363,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 54,
+        "node": 2,
+        "generation_lower_us": 1799944.612,
+        "generation_upper_us": 1801455.948,
+        "arrival_us": 1801455.948,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 55,
+        "node": 2,
+        "generation_lower_us": 1840899.873,
+        "generation_upper_us": 1842514.272,
+        "arrival_us": 1843923.85,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 56,
+        "node": 2,
+        "generation_lower_us": 1880574.873,
+        "generation_upper_us": 1882189.272,
+        "arrival_us": 1883053.66,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 9,
+        "node": 3,
+        "generation_lower_us": 0.0,
+        "generation_upper_us": 1408.3,
+        "arrival_us": 1408.3,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 10,
+        "node": 3,
+        "generation_lower_us": 41556.873,
+        "generation_upper_us": 43196.272,
+        "arrival_us": 43721.215,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 11,
+        "node": 3,
+        "generation_lower_us": 82954.873,
+        "generation_upper_us": 84594.272,
+        "arrival_us": 85234.369,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 12,
+        "node": 3,
+        "generation_lower_us": 122531.873,
+        "generation_upper_us": 124171.272,
+        "arrival_us": 125192.528,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 13,
+        "node": 3,
+        "generation_lower_us": 161950.873,
+        "generation_upper_us": 163590.272,
+        "arrival_us": 164649.032,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 14,
+        "node": 3,
+        "generation_lower_us": 202071.873,
+        "generation_upper_us": 203711.272,
+        "arrival_us": 204434.74,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 15,
+        "node": 3,
+        "generation_lower_us": 240890.873,
+        "generation_upper_us": 242530.272,
+        "arrival_us": 242821.57,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 16,
+        "node": 3,
+        "generation_lower_us": 281894.873,
+        "generation_upper_us": 283534.272,
+        "arrival_us": 284225.881,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 17,
+        "node": 3,
+        "generation_lower_us": 323613.873,
+        "generation_upper_us": 325253.272,
+        "arrival_us": 326172.22,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 18,
+        "node": 3,
+        "generation_lower_us": 362308.873,
+        "generation_upper_us": 363948.272,
+        "arrival_us": 364744.652,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 19,
+        "node": 3,
+        "generation_lower_us": 401756.873,
+        "generation_upper_us": 403396.272,
+        "arrival_us": 404036.142,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 20,
+        "node": 3,
+        "generation_lower_us": 441877.873,
+        "generation_upper_us": 443517.272,
+        "arrival_us": 444168.912,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 21,
+        "node": 3,
+        "generation_lower_us": 482822.873,
+        "generation_upper_us": 484462.272,
+        "arrival_us": 485410.701,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 22,
+        "node": 3,
+        "generation_lower_us": 521726.873,
+        "generation_upper_us": 523366.272,
+        "arrival_us": 523974.165,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 23,
+        "node": 3,
+        "generation_lower_us": 559989.462,
+        "generation_upper_us": 561373.207,
+        "arrival_us": 561373.207,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 24,
+        "node": 3,
+        "generation_lower_us": 600480.873,
+        "generation_upper_us": 602120.272,
+        "arrival_us": 602414.804,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 25,
+        "node": 3,
+        "generation_lower_us": 642831.873,
+        "generation_upper_us": 644471.272,
+        "arrival_us": 645376.575,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 26,
+        "node": 3,
+        "generation_lower_us": 681359.873,
+        "generation_upper_us": 682999.272,
+        "arrival_us": 683503.504,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 27,
+        "node": 3,
+        "generation_lower_us": 722755.873,
+        "generation_upper_us": 724395.272,
+        "arrival_us": 725652.694,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 28,
+        "node": 3,
+        "generation_lower_us": 762260.873,
+        "generation_upper_us": 763900.272,
+        "arrival_us": 764660.062,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 29,
+        "node": 3,
+        "generation_lower_us": 803091.873,
+        "generation_upper_us": 804731.272,
+        "arrival_us": 805785.95,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 30,
+        "node": 3,
+        "generation_lower_us": 842456.873,
+        "generation_upper_us": 844096.272,
+        "arrival_us": 844787.628,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 31,
+        "node": 3,
+        "generation_lower_us": 883504.873,
+        "generation_upper_us": 885144.272,
+        "arrival_us": 886376.348,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 32,
+        "node": 3,
+        "generation_lower_us": 922522.873,
+        "generation_upper_us": 924162.272,
+        "arrival_us": 924950.574,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 33,
+        "node": 3,
+        "generation_lower_us": 961579.873,
+        "generation_upper_us": 963219.272,
+        "arrival_us": 963654.269,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 34,
+        "node": 3,
+        "generation_lower_us": 1002989.873,
+        "generation_upper_us": 1004629.272,
+        "arrival_us": 1005548.082,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 35,
+        "node": 3,
+        "generation_lower_us": 1041508.873,
+        "generation_upper_us": 1043148.272,
+        "arrival_us": 1044075.359,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 36,
+        "node": 3,
+        "generation_lower_us": 1083243.873,
+        "generation_upper_us": 1084883.272,
+        "arrival_us": 1085903.93,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 37,
+        "node": 3,
+        "generation_lower_us": 1121846.873,
+        "generation_upper_us": 1123486.272,
+        "arrival_us": 1124072.82,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 38,
+        "node": 3,
+        "generation_lower_us": 1163867.873,
+        "generation_upper_us": 1165507.272,
+        "arrival_us": 1166712.934,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 39,
+        "node": 3,
+        "generation_lower_us": 1201285.873,
+        "generation_upper_us": 1202925.272,
+        "arrival_us": 1203389.718,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 40,
+        "node": 3,
+        "generation_lower_us": 1242219.873,
+        "generation_upper_us": 1243859.272,
+        "arrival_us": 1244528.018,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 41,
+        "node": 3,
+        "generation_lower_us": 1283527.873,
+        "generation_upper_us": 1285167.272,
+        "arrival_us": 1285976.371,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 42,
+        "node": 3,
+        "generation_lower_us": 1323303.873,
+        "generation_upper_us": 1324943.272,
+        "arrival_us": 1325836.401,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 43,
+        "node": 3,
+        "generation_lower_us": 1363238.873,
+        "generation_upper_us": 1364878.272,
+        "arrival_us": 1365722.75,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 44,
+        "node": 3,
+        "generation_lower_us": 1402417.873,
+        "generation_upper_us": 1404057.272,
+        "arrival_us": 1404844.635,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 45,
+        "node": 3,
+        "generation_lower_us": 1441469.873,
+        "generation_upper_us": 1443109.272,
+        "arrival_us": 1443632.854,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 46,
+        "node": 3,
+        "generation_lower_us": 1483344.873,
+        "generation_upper_us": 1484984.272,
+        "arrival_us": 1486049.277,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 47,
+        "node": 3,
+        "generation_lower_us": 1521699.873,
+        "generation_upper_us": 1523339.272,
+        "arrival_us": 1524045.881,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 48,
+        "node": 3,
+        "generation_lower_us": 1562006.873,
+        "generation_upper_us": 1563646.272,
+        "arrival_us": 1564130.379,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 49,
+        "node": 3,
+        "generation_lower_us": 1603158.873,
+        "generation_upper_us": 1604798.272,
+        "arrival_us": 1605751.239,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 50,
+        "node": 3,
+        "generation_lower_us": 1641955.873,
+        "generation_upper_us": 1643595.272,
+        "arrival_us": 1644198.974,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 51,
+        "node": 3,
+        "generation_lower_us": 1682788.873,
+        "generation_upper_us": 1684428.272,
+        "arrival_us": 1685379.807,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 52,
+        "node": 3,
+        "generation_lower_us": 1723591.873,
+        "generation_upper_us": 1725231.272,
+        "arrival_us": 1726411.287,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 53,
+        "node": 3,
+        "generation_lower_us": 1762918.873,
+        "generation_upper_us": 1764558.272,
+        "arrival_us": 1765826.363,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 54,
+        "node": 3,
+        "generation_lower_us": 1799944.612,
+        "generation_upper_us": 1801455.948,
+        "arrival_us": 1801455.948,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 55,
+        "node": 3,
+        "generation_lower_us": 1841516.873,
+        "generation_upper_us": 1843156.272,
+        "arrival_us": 1843923.85,
+        "queue_packets": 0
+      },
+      {
+        "packet_id": 56,
+        "node": 3,
+        "generation_lower_us": 1880969.873,
+        "generation_upper_us": 1882609.272,
+        "arrival_us": 1883053.66,
+        "queue_packets": 0
+      }
+    ],
+    "age_window_us": [
+      0,
+      1923053.66
+    ],
+    "deadline_us": 100000,
+    "age_bounds": [
+      {
+        "node": 1,
+        "violation_lower": 0.0,
+        "violation_upper": 0.0,
+        "p95_age_lower_us": 40528.39673913038,
+        "p95_age_upper_us": 42121.71278260872,
+        "unknown_fraction": 0.0,
+        "initial_packet_id": 8,
+        "initial_generation_lower_us": -46981.127,
+        "initial_generation_upper_us": -45376.728
+      },
+      {
+        "node": 2,
+        "violation_lower": 0.0,
+        "violation_upper": 0.0,
+        "p95_age_lower_us": 39619.37342222217,
+        "p95_age_upper_us": 41221.77651111114,
+        "unknown_fraction": 0.0,
+        "initial_packet_id": 8,
+        "initial_generation_lower_us": -46391.127,
+        "initial_generation_upper_us": -44776.728
+      },
+      {
+        "node": 3,
+        "violation_lower": 0.0,
+        "violation_upper": 0.0,
+        "p95_age_lower_us": 38880.55119999994,
+        "p95_age_upper_us": 40506.28762222225,
+        "unknown_fraction": 0.0,
+        "initial_packet_id": 8,
+        "initial_generation_lower_us": -45937.127,
+        "initial_generation_upper_us": -44297.728
+      }
+    ],
+    "interpretation": "软件进程恒定时钟偏移与有界宿主时钟变化条件下的区间，探针不属于在线策略的免费观测"
+  },
+  "public_artifact_sha256": {
+    "packets-mtu.json": "9f8bf4c65ebe002862cb544f89d9acf4a2649ce5f3a1c02d38bc0cbb28039840",
+    "packets-workload.json": "4f91831054ebdc7ea44bd285fb2e9671019e6b12499a73efd7256755f4f6c4f6",
+    "packets-calibration-end.json": "bb0ef0f6719113c43bfa0307cc3fad6289b25f410a8f1e476a52ca9b2f67d389",
+    "packets-queue-burst.json": "e4cc62dba5e527ff119d97697aed14412455a62a21a1a0d0e978d732bf2ca84a",
+    "packets-calibration-start.json": "e2e40c927c150f4237093911515068c4cc77be58f87fcd5407c791ff87717861",
+    "send-calibration-end.jsonl": "9c49732f6b1008b8bdb6cb4dac753c15c9cdb6a121a92b4da7177280f90f12bc",
+    "send-calibration-start.jsonl": "11df88d2892ae999cfc8c5833dafffec445a0da3a133f5dac379f27909e6c515",
+    "send-queue-burst.jsonl": "8af2f9be75c85752b5e85e4e4062fd8f595943451b6580acceb5a47329f47694",
+    "send-mtu.jsonl": "13d47c6dccf3ea3ec0576cac8a85f61309d70a859baac08b01b79c13dc7b2d87",
+    "send-workload.jsonl": "1d8e97ceda7dc6cf927bb42671aae0a587fd73a935d7a4a92e9430b281be61cb",
+    "observations.jsonl": "18acf9b9d90d6f8acd0bf1a731090a621e2d4782344db39ba5dfd8953d172ec5",
+    "destination.jsonl": "a43e8974396da5edfb367eef426899426496d16d6dd51b71111ccb279e310dd8",
+    "collector.jsonl": "13f18f43283b06f7d9199ae1fefdf9cf0bd364137a57f8f9439cc4b86994fef2",
+    "destination.pcap": "7e5bd57d43bb4139bcb2c7056f5da98b96e8a633da88b89088014cd608a33aeb",
+    "collector.pcap": "00e3b8b5f005d4bcfee346e9002dbd3842656a2f8a791650eed80c0e015664e5"
+  }
+}

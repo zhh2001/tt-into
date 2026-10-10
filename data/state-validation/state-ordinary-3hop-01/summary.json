@@ -1,0 +1,73 @@
+{
+  "run_id": "state-ordinary-3hop-01",
+  "start_utc": "2026-10-09T18:33:20.730121+00:00",
+  "source_sha256": {
+    "src/p4/state_int.p4": "99d0492edabc1316315e26330c0171eca482c3bb61d8577ac8b01906cbaae465",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/collector/state_codec.py": "a5698a1364685c635a41a1ae6875eced3132b7b43f12d7b6629ed604d514dd16",
+    "experiments/build_state.py": "21e3899a8c20e461c2af1aa388cbc9f71b4c626f4122d5281fba6796cace76d2",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/state_io.py": "e6841e839c7ef6c391600198c7013466a6459b249347cdd262e41455a2273d34",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/run_state_validation.py": "f6a7484dfe87f6de80d89bca79b0b72fbae68f44f27b159fac258442cb9f3626"
+  },
+  "status": "passed",
+  "seed": 0,
+  "hops": 3,
+  "sink_nodes": 1,
+  "diagnostics_enabled": false,
+  "header_bytes": 8,
+  "record_bytes": 20,
+  "threshold_us": 1,
+  "capacity": 3,
+  "warmup": "不排除首包，训练探针不计入回放测量窗口",
+  "scope": "共同状态格式与时钟条件检查，非编排性能实验",
+  "versions": {
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "bmv2": "1.15.0-2bdd0b7b",
+    "mininet": "2.3.0",
+    "python": "3.12.3"
+  },
+  "start_load_average": [
+    0.16015625,
+    0.06005859375,
+    0.0107421875
+  ],
+  "input_packets": 90,
+  "received_packets": 90,
+  "report_packets": 86,
+  "finish_utc": "2026-10-09T18:33:26.102128+00:00",
+  "finish_load_average": [
+    0.14697265625,
+    0.05859375,
+    0.01025390625
+  ],
+  "wire_checks": {
+    "ipv4_frames": 446,
+    "maximum_ip_length": 1500,
+    "passed": true
+  },
+  "analysis_sha256": "f263705d80158f23629a9c2cde196bc9fa4942a0a8771fcfa141252725646b51",
+  "metric_sources_sha256": {
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d"
+  },
+  "public_artifact_sha256": {
+    "packets-mtu.json": "9f8bf4c65ebe002862cb544f89d9acf4a2649ce5f3a1c02d38bc0cbb28039840",
+    "packets-workload.json": "4f91831054ebdc7ea44bd285fb2e9671019e6b12499a73efd7256755f4f6c4f6",
+    "packets-calibration-end.json": "bb0ef0f6719113c43bfa0307cc3fad6289b25f410a8f1e476a52ca9b2f67d389",
+    "packets-queue-burst.json": "e4cc62dba5e527ff119d97697aed14412455a62a21a1a0d0e978d732bf2ca84a",
+    "packets-calibration-start.json": "e2e40c927c150f4237093911515068c4cc77be58f87fcd5407c791ff87717861",
+    "send-calibration-end.jsonl": "63fd3ec209c8893a6af2cede135bb56fc37dab49c10c23601b736f0f14da3b7f",
+    "send-calibration-start.jsonl": "5500b5c3719d8c7702e46ab362941c68ddd9c73931dc4eb6c01ccf73d7cad95a",
+    "send-queue-burst.jsonl": "7e0dc91d5209f5bd977016c854541904c2462fea47ace472f3d6bf0c76c5a976",
+    "send-mtu.jsonl": "c97669a17e0fedef9501f5297967cea32cdcb264b9aba1fe3f5eab99155365f0",
+    "send-workload.jsonl": "68446ef88e9ed0947cee4c5e2e0f4eace4adc74f11321d64426f3b0490c1d53a",
+    "destination.jsonl": "781a6b5aa95d5d6c42db60778322da966f3e772728c8e2b31702e2eaa0672743",
+    "collector.jsonl": "d128c13e306db61cfed3ef13a556c20c066d6624e27891d32338c87a4cb69ec0",
+    "destination.pcap": "7ac2a7fa075e9562ed59834a03ff72989e2e014759a462ad6039630057bb323a",
+    "collector.pcap": "4b4200ac5068bdf1cc7a309889b1e38e496ea62d32e40f36e8341eb4ce4ec6be"
+  }
+}
