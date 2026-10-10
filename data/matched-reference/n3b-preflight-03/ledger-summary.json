@@ -1,0 +1,226 @@
+[
+  {
+    "variant": "ordinary",
+    "case": "identity",
+    "decision_prefixes": 20,
+    "final_usage": {
+      "window_ns": [
+        0,
+        2000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 968,
+        "local_notice_payload": 0
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 968
+        },
+        "local_notice_payload": {}
+      }
+    }
+  },
+  {
+    "variant": "ordinary",
+    "case": "continuous",
+    "decision_prefixes": 40,
+    "final_usage": {
+      "window_ns": [
+        0,
+        4000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 2422,
+        "local_notice_payload": 0
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 1936,
+          "update": 486
+        },
+        "local_notice_payload": {}
+      }
+    }
+  },
+  {
+    "variant": "ordinary",
+    "case": "partial_failure",
+    "decision_prefixes": 40,
+    "final_usage": {
+      "window_ns": [
+        0,
+        4000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 2803,
+        "local_notice_payload": 0
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 1936,
+          "update": 624,
+          "reconciliation": 117,
+          "controlled_failed_read": 126
+        },
+        "local_notice_payload": {}
+      }
+    }
+  },
+  {
+    "variant": "ordinary",
+    "case": "counter_wrap",
+    "decision_prefixes": 20,
+    "final_usage": {
+      "window_ns": [
+        0,
+        2000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 968,
+        "local_notice_payload": 0
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 968
+        },
+        "local_notice_payload": {}
+      }
+    }
+  },
+  {
+    "variant": "ordinary",
+    "case": "causal_loop",
+    "decision_prefixes": 10,
+    "final_usage": {
+      "window_ns": [
+        2000000000,
+        10000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 2293,
+        "local_notice_payload": 192
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 1936,
+          "update": 357
+        },
+        "local_notice_payload": {
+          "management_notice": 192
+        }
+      }
+    }
+  },
+  {
+    "variant": "diagnostics",
+    "case": "identity",
+    "decision_prefixes": 20,
+    "final_usage": {
+      "window_ns": [
+        0,
+        2000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 968,
+        "local_notice_payload": 0
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 968
+        },
+        "local_notice_payload": {}
+      }
+    }
+  },
+  {
+    "variant": "diagnostics",
+    "case": "continuous",
+    "decision_prefixes": 40,
+    "final_usage": {
+      "window_ns": [
+        0,
+        4000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 2422,
+        "local_notice_payload": 0
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 1936,
+          "update": 486
+        },
+        "local_notice_payload": {}
+      }
+    }
+  },
+  {
+    "variant": "diagnostics",
+    "case": "partial_failure",
+    "decision_prefixes": 40,
+    "final_usage": {
+      "window_ns": [
+        0,
+        4000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 2803,
+        "local_notice_payload": 0
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 1936,
+          "update": 624,
+          "reconciliation": 117,
+          "controlled_failed_read": 126
+        },
+        "local_notice_payload": {}
+      }
+    }
+  },
+  {
+    "variant": "diagnostics",
+    "case": "counter_wrap",
+    "decision_prefixes": 20,
+    "final_usage": {
+      "window_ns": [
+        0,
+        2000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 968,
+        "local_notice_payload": 0
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 968
+        },
+        "local_notice_payload": {}
+      }
+    }
+  },
+  {
+    "variant": "diagnostics",
+    "case": "causal_loop",
+    "decision_prefixes": 10,
+    "final_usage": {
+      "window_ns": [
+        2000000000,
+        10000000000
+      ],
+      "bytes_by_layer": {
+        "api_serialized": 2293,
+        "local_notice_payload": 192
+      },
+      "bytes_by_layer_and_kind": {
+        "api_serialized": {
+          "online_observation": 1936,
+          "update": 357
+        },
+        "local_notice_payload": {
+          "management_notice": 192
+        }
+      }
+    }
+  }
+]

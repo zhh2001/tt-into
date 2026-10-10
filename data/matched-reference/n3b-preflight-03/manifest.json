@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-10T13:58:54.542169+00:00",
+  "kind": "matched_grid_preflight",
+  "scope": "已消费 N3 合法视图与费用核对，未开展新训练/校准/保留性能矩阵",
+  "n3_path": "data/into-validation/n3-validation-01",
+  "n3_manifest_sha256": "0986857f1ef8254344862a14a3c0d4ee176e4f4d8dafb7987f4ab2920a2d6245",
+  "settings": {
+    "grid_us": [
+      50000,
+      100000,
+      150000,
+      200000,
+      400000,
+      600000,
+      800000,
+      1000000
+    ],
+    "epoch_us": 1000000,
+    "horizon_us": 1000000,
+    "alpha": 0.5,
+    "clip": 4.0,
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "capacity": 1,
+    "nominal_ip_bytes": 120,
+    "nominal_hop_us": 20,
+    "nominal_egress_us": 5,
+    "nominal_report_delay_us": 1000,
+    "maximum_rate_pps": 100.0
+  },
+  "methods": [
+    "static",
+    "feedback",
+    "local",
+    "joint",
+    "phase_joint",
+    "uniform_guard",
+    "phase_guard",
+    "phase_local_guard"
+  ],
+  "configuration_count": 6561,
+  "control_caps": {
+    "api_bytes_per_s": 1200,
+    "notice_payload_bytes_per_s": 128
+  },
+  "measurement_window_us": [
+    2000000,
+    10000000
+  ],
+  "reserved_calibration_seeds": [
+    1301,
+    1423
+  ],
+  "reserved_heldout_seeds": [
+    1601,
+    1723,
+    1871,
+    1999
+  ],
+  "reserved_workloads_generated": false,
+  "source_sha256": {
+    "src/orchestration/control_ledger.py": "39c5a79418edf032355a6fa7a93b9110ddd72ee2369b8588825edabcd1884549",
+    "src/orchestration/matched_grid.py": "6d3ed5a7f69c5a8b45e5d2ab0914a547134aa8f3c1b40e078ce59551bc54db09",
+    "src/orchestration/adaptive.py": "51304a82e96929764e402928494095a402d7cb8b7248f4222c3b33bbb7dc70e0",
+    "src/orchestration/rolling.py": "785965ef3c1b5ea576997f0c56ba0d61460f3a2b8ae6770e8794015559e76a6e",
+    "src/orchestration/event_engine.py": "cf78c518a9dd48f3b1476ab293fa303d5969c630595ca0fa77f15971cdf32104",
+    "src/orchestration/event_schema.py": "e61acbe8af0cf8d2e568c73c5a52001123472e3a6a271a3b407832fa6d605c61",
+    "src/orchestration/event_metrics.py": "8f1c90b69dde957ae78433baecfb34f5c8f5c2fc9c272eec705dc5d629df6bbd",
+    "src/orchestration/event_observation.py": "190412d0d1665f717b1d18dc1ef6857947a6812bc0f0b708695d7fbff86639de",
+    "src/collector/tagged_codec.py": "6d93a62de8d5e66d340b53d840957991d4d151fda47dc47d53f694a2a0c497b8",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "experiments/run_matched_preflight.py": "b9b220c76f2e94dd9194c2be85d3d7597ecbfbb1597ac7518340acaf66a538a9",
+    "experiments/check_matched_preflight.py": "b500d4dec82a0e1f02272d47330c98e6647279918d62a27dc615bd7d42e51ee2",
+    "experiments/run_rolling_reference.py": "957753373e10b5af230abf87e1dee8c75d96dbd40045f93f448b81b5d03e6684",
+    "experiments/rolling_workloads.py": "9111ff1b916321d79712400bc584eb623a8e7957d27e097b42a64155f5c80757",
+    "experiments/rolling_rpc_cost.py": "2be45422d7c5b22fc73baf59325b8dc01273b3334746f85d7cfa462c70a980a2",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "tests/test_matched_grid.py": "1e8d67498b359878a8a0b245303c8b5a7a75f4d5ae64c52664708feea1a4c17c",
+    "tests/test_adaptive.py": "020208243e8131d755d0ed5811db1dcdb02f7fadc8f44357cea542421be4b526"
+  },
+  "cases": 10,
+  "decision_prefixes": 260,
+  "interface_smoke_decisions": 80,
+  "exact_candidates": 6561,
+  "unit_exit_code": 0,
+  "finished_utc": "2026-10-10T13:59:03.120259+00:00",
+  "artifact_sha256": {
+    "ledger-cases.json.gz": "6e77b50d7ebf248e4aa99adc6d7ee489044af7f570627f37040903974f27c0ec",
+    "ledger-summary.json": "221e26abf39e0865dba07345eb7673d13898359df8eb339e6fe46bdbd3fed8e4",
+    "interface-smoke.json.gz": "ffcdc2a4be73f5bab1dce525b1cd7843f7c00a26acbdf051372214347ecc1aeb",
+    "rpc-reference.json": "d5be3d0a69fe7c9b6ee2f9ae70abda38f99e1b3c80b4ae4a6d1b8d6ef044dd4d",
+    "solver-diagnostic.json": "3f7d1d29834de491d0191cd9b881a3e228c90c8b74038c6e29cab5e5258665c9",
+    "unit-tests.txt": "b9057aa790ed2968def3350bc829813b89de34aba333e52ea281ca3b7260f194",
+    "exact-candidates.json.gz": "2f88740311a121824558577e5f1dc4e5935cec1f16bb5d44f5bbbdd3d30e23f8"
+  }
+}
