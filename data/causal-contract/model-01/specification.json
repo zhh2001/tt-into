@@ -1,0 +1,120 @@
+{
+  "tasks": [
+    1,
+    2
+  ],
+  "initial_generated_us": [
+    -100000,
+    -100000
+  ],
+  "first": {
+    "generated_us": 0,
+    "eligible": [
+      1,
+      2
+    ]
+  },
+  "futures": [
+    {
+      "generated_us": 100000,
+      "eligible": [
+        1
+      ]
+    },
+    {
+      "generated_us": 100000,
+      "eligible": [
+        2
+      ]
+    }
+  ],
+  "start_us": 0,
+  "end_us": 200000,
+  "capacities": [
+    1,
+    2
+  ],
+  "record_budgets": [
+    1,
+    2,
+    3
+  ],
+  "deadlines_us": [
+    150000,
+    200000,
+    250000,
+    300000
+  ],
+  "report_delays_us": [
+    0,
+    20000,
+    60000
+  ],
+  "branch_hints": [
+    false,
+    true
+  ],
+  "heterogeneous_deadlines_us": [
+    [
+      200000,
+      250000
+    ],
+    [
+      250000,
+      200000
+    ]
+  ],
+  "hint_cost": "单独的信息假设；未给出获取机制及物理字节费用",
+  "lead_grid": {
+    "advance_us": [
+      0,
+      20000,
+      40000,
+      60000,
+      100000
+    ],
+    "install_delays_us": [
+      0,
+      20000,
+      60000,
+      100000
+    ],
+    "report_delays_us": [
+      0,
+      20000,
+      60000
+    ],
+    "packet_times_us": [
+      100000,
+      120000,
+      140000,
+      160000,
+      180000,
+      200000,
+      220000,
+      240000,
+      260000,
+      280000
+    ],
+    "initial_generated_us": 0,
+    "deadline_us": 150000,
+    "change_us": 100000,
+    "end_us": 300000
+  },
+  "assumptions": [
+    "fixed_eligibility",
+    "two_opportunities",
+    "uniform_task_weight",
+    "fixed_known_report_delay",
+    "no_loss",
+    "ideal_clock",
+    "arbitrary_current_packet_selection",
+    "no_network_execution"
+  ],
+  "budget_exclusions": [
+    "bytes",
+    "fixed_headers",
+    "control_rpc",
+    "hint_transport"
+  ]
+}
