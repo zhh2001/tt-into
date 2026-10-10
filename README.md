@@ -1,4 +1,4 @@
-# TT-INT 最小软件原型
+# TT-INT 软件原型与基线执行验证
 
 基于 [TT-INT 论文](https://doi.org/10.1109/TNSM.2026.3688086)描述独立实现时间阈值核心，用于 BMv2、Mininet 环境下的机制验证。当前包含固定路径转发、五元组到寄存器索引的映射、逐流时间门控、包容量检查，以及独立 sink 的克隆导出和原包恢复。
 
@@ -87,6 +87,14 @@ python3 experiments/analyze_validation.py \
 
 ## 共同状态扩展与离线参照
 
-新增的 `state_int.p4` 使用独立的版本 1 格式，输出队列快照和 egress 生成时间。普通版和诊断版各完成 90 个业务包检查。另实现连续年龄积分、六种事件参考策略和固定阈值 MILP，详见[扩展复现说明](experiments/README-reference.md)。这些参考策略尚未部署到 BMv2，原始最小核心的实现和数据保持独立。
+新增的 `state_int.p4` 使用独立的版本 1 格式，输出队列快照和 egress 生成时间。普通版和诊断版各完成 90 个业务包检查。另实现连续年龄积分、六种事件参考策略和固定阈值 MILP，详见[扩展复现说明](experiments/README-reference.md)。其中部分机制随后在下述独立执行器中验证，六种事件策略尚未全部部署到 BMv2。原始最小核心的实现和数据保持独立。
 
 同相和错相两个合成场景中，逐节点调参后的共享门控与静态流授权均可满足全部三个任务。因此这些构造场景不提供新增算法优于强对照的证据。新增图为事件预实验结果，不能与真实网络测量混用。
+
+## 简单基线的真实执行
+
+`baseline_int.p4` 在共同状态格式上启用共享端口门控、源端静态许可和版本更新，并加入 TT-INT 原有逐流阈值与容量参数的调参对照。诊断版完成 9 项、普通版完成 5 项网络检查，共交付 506 个业务与标定包，核查 2522 个输出 IPv4 帧。全部单元检查现为 27 项。
+
+有效年龄测量中，共享门控、静态许可和 TT-INT 逐流调参均能满足简单场景的三个任务。TT-INT 调参使用节点上的逐流容量 0 禁止采样，无须源端掩码实现同样分配。这些结果用于排除简单解释，不构成新算法的性能结论。两项运行的宿主时钟变化超过预设条件，保留其转发与成本数据，年龄指标标为不可评估。
+
+实现、参数、时钟条件及成本口径见[基线执行复现说明](experiments/README-baselines.md)。公开测量见[诊断版摘要](data/baseline-validation/baseline-core-02/summary.json)和[普通版摘要](data/baseline-validation/baseline-ordinary-02/summary.json)。实测图提供 [PNG](figures/baseline-validation/baseline-execution.png) 和 [PDF](figures/baseline-validation/baseline-execution.pdf)。

@@ -8,7 +8,7 @@
 
 Version=1、Metric=1 表示前向出口端口 2、默认单队列的出队深度快照。`deq_qdepth` 的单位是包数，不是字节数。生成时间采用 `egress_global_timestamp`，表示进入 egress 处理的时刻。队列值对应此前的出队事件，不表示任意时刻直接读取到的当前队列长度。门控继续使用 `ingress_global_timestamp`，两种时间不能混为一个变量。字段语义依据 [BMv2 官方说明](https://github.com/p4lang/behavioral-model/blob/main/docs/simple_switch.md)。
 
-当前 P4 只执行前序的时间门控和前缀插入。AllowMask=255、Seen=0、Epoch=0、SelectionKey=0 是预留字段，尚未实现权限选择或随机替换。编译栈上限 8，实际检查使用三个采样节点和一个独立 sink。将记录中 SwitchID 映射为任务，只在该固定单出口实验域内有效。
+本说明中的 `state_int.p4` 只执行前序的时间门控和前缀插入。AllowMask=255、Seen=0、Epoch=0、SelectionKey=0 是预留字段，尚未实现权限选择或随机替换。编译栈上限 8，实际检查使用三个采样节点和一个独立 sink。将记录中 SwitchID 映射为任务，只在该固定单出口实验域内有效。后续启用源端许可和共享门控的独立执行器见[基线执行说明](README-baselines.md)，本组源码与数据保持原版本。
 
 所有事件对照承担同一 8 B 头和 20 B 项，以隔离算法行为与格式差别。这个格式不是每种对照的最小开销，特别是无需随机键的方法也承担预留字节。正式性能比较还需补各方法原生格式及取消预留字段的消融，不能用共同格式推断最佳部署成本。
 

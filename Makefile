@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: build diagnostics test validate validate3 state state-diagnostics
+.PHONY: build diagnostics test validate validate3 state state-diagnostics baseline baseline-diagnostics
 
 build:
 	$(PYTHON) experiments/build.py
@@ -22,3 +22,9 @@ state:
 
 state-diagnostics:
 	$(PYTHON) experiments/build_state.py --diagnostics
+
+baseline:
+	$(PYTHON) experiments/build_baseline.py
+
+baseline-diagnostics:
+	$(PYTHON) experiments/build_baseline.py --diagnostics

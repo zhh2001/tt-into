@@ -1,0 +1,4138 @@
+{
+  "run_id": "baseline-core-02",
+  "status": "passed",
+  "start_utc": "2026-10-10T01:21:03.744989+00:00",
+  "source_sha256": {
+    "src/p4/baseline_int.p4": "e1bf72cc115a721c7ed1a8884277910b40878fef70d2c14e503d9b527c239e77",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/collector/state_codec.py": "a5698a1364685c635a41a1ae6875eced3132b7b43f12d7b6629ed604d514dd16",
+    "src/orchestration/baseline_check.py": "c4d03828bda260bfc0262ab716db40305f83d43e88743b597250a848755587ca",
+    "experiments/build_baseline.py": "87e4c57535a33e5c44074b92a09439ec162ff5921a73b36da9c565ca7c6296f4",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/state_io.py": "e6841e839c7ef6c391600198c7013466a6459b249347cdd262e41455a2273d34",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/run_state_validation.py": "f6a7484dfe87f6de80d89bca79b0b72fbae68f44f27b159fac258442cb9f3626",
+    "experiments/build_state.py": "21e3899a8c20e461c2af1aa388cbc9f71b4c626f4122d5281fba6796cace76d2",
+    "experiments/run_baseline_validation.py": "952f5ce2ccdf51d0747d8ee32bab24a717a63837d62bd281091c28f433339648",
+    "experiments/capture_rpc.py": "f31848a80b60ec868519801c9a955531572256378b2cb69d020f06afbb1e792b"
+  },
+  "diagnostics_enabled": true,
+  "seed": 0,
+  "hops": 3,
+  "sink_nodes": 1,
+  "header_bytes": 8,
+  "record_bytes": 20,
+  "warmup": "年龄检查保留实际前史，规则正确性不排除首包",
+  "scope": "单次确定性基线执行验证，非统计性能或硬件评价",
+  "versions": {
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "bmv2": "1.15.0-2bdd0b7b",
+    "python": "3.12.3",
+    "mininet": "2.3.0"
+  },
+  "start_load_average": [
+    0.32763671875,
+    0.29345703125,
+    0.15087890625
+  ],
+  "cases": [
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 40,
+      "received_packets": 40,
+      "workload_samples_per_node": [
+        24,
+        0,
+        0
+      ],
+      "report_packets_including_probes": 40,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          1120,
+          1440,
+          1760
+        ],
+        "export_bytes": 3120,
+        "total_byte_hops": 7440,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "tt_flow_prefix",
+      "configuration": {
+        "scope": "flow",
+        "thresholds": [
+          {
+            "1": 100000,
+            "2": 100000,
+            "3": 100000
+          },
+          {
+            "1": 100000,
+            "2": 100000,
+            "3": 100000
+          },
+          {
+            "1": 100000,
+            "2": 100000,
+            "3": 100000
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "masks": {
+          "1": 255,
+          "2": 255,
+          "3": 255
+        },
+        "epochs": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "wall_seconds": 4.502463989992975,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          1120,
+          1440,
+          1760
+        ],
+        "export_bytes": 3120,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 7440,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "age_evaluated": true,
+        "training_packet_ids": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015
+        ],
+        "age_origin_packet_id": 9,
+        "age_window_us": [
+          0,
+          1599884.783
+        ],
+        "origin_ns": 1791595266969992122,
+        "offset_intervals": [
+          {
+            "node": 1,
+            "lower_ns": 1791595264301983166,
+            "upper_ns": 1791595264303749018,
+            "width_us": 1765.852
+          },
+          {
+            "node": 2,
+            "lower_ns": 1791595264409617166,
+            "upper_ns": 1791595264411383018,
+            "width_us": 1765.852
+          },
+          {
+            "node": 3,
+            "lower_ns": 1791595264561981166,
+            "upper_ns": 1791595264563747018,
+            "width_us": 1765.852
+          }
+        ],
+        "host_wall_monotonic_variation_ns": 645,
+        "host_clock_pair_error_ns": 1421,
+        "predeclared_slack_ns": 101000,
+        "constant_offset_assumption": true,
+        "samples": [
+          {
+            "packet_id": 3000,
+            "node": 1,
+            "generation_lower_us": -1253208.901,
+            "generation_upper_us": -1251532.104,
+            "arrival_us": -1251357.417
+          },
+          {
+            "packet_id": 3001,
+            "node": 1,
+            "generation_lower_us": -1233206.956,
+            "generation_upper_us": -1231441.104,
+            "arrival_us": -1230717.129
+          },
+          {
+            "packet_id": 3002,
+            "node": 1,
+            "generation_lower_us": -1212814.956,
+            "generation_upper_us": -1211049.104,
+            "arrival_us": -1208631.712
+          },
+          {
+            "packet_id": 3003,
+            "node": 1,
+            "generation_lower_us": -1192647.956,
+            "generation_upper_us": -1190882.104,
+            "arrival_us": -1188156.978
+          },
+          {
+            "packet_id": 3004,
+            "node": 1,
+            "generation_lower_us": -1172715.956,
+            "generation_upper_us": -1170950.104,
+            "arrival_us": -1169425.388
+          },
+          {
+            "packet_id": 3005,
+            "node": 1,
+            "generation_lower_us": -1152462.956,
+            "generation_upper_us": -1150697.104,
+            "arrival_us": -1148629.127
+          },
+          {
+            "packet_id": 3006,
+            "node": 1,
+            "generation_lower_us": -1133202.488,
+            "generation_upper_us": -1131498.104,
+            "arrival_us": -1131396.938
+          },
+          {
+            "packet_id": 3007,
+            "node": 1,
+            "generation_lower_us": -1112970.956,
+            "generation_upper_us": -1111205.104,
+            "arrival_us": -1109963.778
+          },
+          {
+            "packet_id": 1,
+            "node": 1,
+            "generation_lower_us": -800123.168,
+            "generation_upper_us": -798509.429,
+            "arrival_us": -798509.429
+          },
+          {
+            "packet_id": 2,
+            "node": 1,
+            "generation_lower_us": -795118.467,
+            "generation_upper_us": -793930.206,
+            "arrival_us": -793930.206
+          },
+          {
+            "packet_id": 3,
+            "node": 1,
+            "generation_lower_us": -598902.956,
+            "generation_upper_us": -597137.104,
+            "arrival_us": -593968.66
+          },
+          {
+            "packet_id": 4,
+            "node": 1,
+            "generation_lower_us": -594694.956,
+            "generation_upper_us": -592929.104,
+            "arrival_us": -590902.603
+          },
+          {
+            "packet_id": 5,
+            "node": 1,
+            "generation_lower_us": -399594.956,
+            "generation_upper_us": -397829.104,
+            "arrival_us": -395611.317
+          },
+          {
+            "packet_id": 6,
+            "node": 1,
+            "generation_lower_us": -394853.956,
+            "generation_upper_us": -393088.104,
+            "arrival_us": -391990.294
+          },
+          {
+            "packet_id": 7,
+            "node": 1,
+            "generation_lower_us": -200105.688,
+            "generation_upper_us": -198351.104,
+            "arrival_us": -198281.591
+          },
+          {
+            "packet_id": 8,
+            "node": 1,
+            "generation_lower_us": -195157.891,
+            "generation_upper_us": -193456.867,
+            "arrival_us": -193456.867
+          },
+          {
+            "packet_id": 9,
+            "node": 1,
+            "generation_lower_us": 897.044,
+            "generation_upper_us": 2662.896,
+            "arrival_us": 5367.609
+          },
+          {
+            "packet_id": 10,
+            "node": 1,
+            "generation_lower_us": 5300.044,
+            "generation_upper_us": 7065.896,
+            "arrival_us": 8544.424
+          },
+          {
+            "packet_id": 11,
+            "node": 1,
+            "generation_lower_us": 200538.044,
+            "generation_upper_us": 202303.896,
+            "arrival_us": 204701.868
+          },
+          {
+            "packet_id": 12,
+            "node": 1,
+            "generation_lower_us": 204975.044,
+            "generation_upper_us": 206740.896,
+            "arrival_us": 208452.698
+          },
+          {
+            "packet_id": 13,
+            "node": 1,
+            "generation_lower_us": 400669.044,
+            "generation_upper_us": 402434.896,
+            "arrival_us": 405105.045
+          },
+          {
+            "packet_id": 14,
+            "node": 1,
+            "generation_lower_us": 405160.044,
+            "generation_upper_us": 406925.896,
+            "arrival_us": 408374.548
+          },
+          {
+            "packet_id": 15,
+            "node": 1,
+            "generation_lower_us": 600916.044,
+            "generation_upper_us": 602681.896,
+            "arrival_us": 606374.279
+          },
+          {
+            "packet_id": 16,
+            "node": 1,
+            "generation_lower_us": 605191.044,
+            "generation_upper_us": 606956.896,
+            "arrival_us": 608895.164
+          },
+          {
+            "packet_id": 17,
+            "node": 1,
+            "generation_lower_us": 800777.044,
+            "generation_upper_us": 802542.896,
+            "arrival_us": 805655.759
+          },
+          {
+            "packet_id": 18,
+            "node": 1,
+            "generation_lower_us": 805449.044,
+            "generation_upper_us": 807214.896,
+            "arrival_us": 808928.844
+          },
+          {
+            "packet_id": 19,
+            "node": 1,
+            "generation_lower_us": 999837.194,
+            "generation_upper_us": 1001338.844,
+            "arrival_us": 1001338.844
+          },
+          {
+            "packet_id": 20,
+            "node": 1,
+            "generation_lower_us": 1004842.159,
+            "generation_upper_us": 1006047.462,
+            "arrival_us": 1006047.462
+          },
+          {
+            "packet_id": 21,
+            "node": 1,
+            "generation_lower_us": 1200214.044,
+            "generation_upper_us": 1201979.896,
+            "arrival_us": 1204110.656
+          },
+          {
+            "packet_id": 22,
+            "node": 1,
+            "generation_lower_us": 1204951.044,
+            "generation_upper_us": 1206716.896,
+            "arrival_us": 1207791.199
+          },
+          {
+            "packet_id": 23,
+            "node": 1,
+            "generation_lower_us": 1400314.044,
+            "generation_upper_us": 1402079.896,
+            "arrival_us": 1403986.228
+          },
+          {
+            "packet_id": 24,
+            "node": 1,
+            "generation_lower_us": 1405067.044,
+            "generation_upper_us": 1406832.896,
+            "arrival_us": 1408326.86
+          },
+          {
+            "packet_id": 3000,
+            "node": 2,
+            "generation_lower_us": -1253130.956,
+            "generation_upper_us": -1251365.104,
+            "arrival_us": -1251357.417
+          },
+          {
+            "packet_id": 3001,
+            "node": 2,
+            "generation_lower_us": -1232976.956,
+            "generation_upper_us": -1231211.104,
+            "arrival_us": -1230717.129
+          },
+          {
+            "packet_id": 3002,
+            "node": 2,
+            "generation_lower_us": -1212001.956,
+            "generation_upper_us": -1210236.104,
+            "arrival_us": -1208631.712
+          },
+          {
+            "packet_id": 3003,
+            "node": 2,
+            "generation_lower_us": -1191640.956,
+            "generation_upper_us": -1189875.104,
+            "arrival_us": -1188156.978
+          },
+          {
+            "packet_id": 3004,
+            "node": 2,
+            "generation_lower_us": -1172190.956,
+            "generation_upper_us": -1170425.104,
+            "arrival_us": -1169425.388
+          },
+          {
+            "packet_id": 3005,
+            "node": 2,
+            "generation_lower_us": -1151694.956,
+            "generation_upper_us": -1149929.104,
+            "arrival_us": -1148629.127
+          },
+          {
+            "packet_id": 3006,
+            "node": 2,
+            "generation_lower_us": -1133202.488,
+            "generation_upper_us": -1131440.104,
+            "arrival_us": -1131396.938
+          },
+          {
+            "packet_id": 3007,
+            "node": 2,
+            "generation_lower_us": -1112550.956,
+            "generation_upper_us": -1110785.104,
+            "arrival_us": -1109963.778
+          },
+          {
+            "packet_id": 3000,
+            "node": 3,
+            "generation_lower_us": -1253085.956,
+            "generation_upper_us": -1251357.417,
+            "arrival_us": -1251357.417
+          },
+          {
+            "packet_id": 3001,
+            "node": 3,
+            "generation_lower_us": -1232732.956,
+            "generation_upper_us": -1230967.104,
+            "arrival_us": -1230717.129
+          },
+          {
+            "packet_id": 3002,
+            "node": 3,
+            "generation_lower_us": -1211274.956,
+            "generation_upper_us": -1209509.104,
+            "arrival_us": -1208631.712
+          },
+          {
+            "packet_id": 3003,
+            "node": 3,
+            "generation_lower_us": -1190711.956,
+            "generation_upper_us": -1188946.104,
+            "arrival_us": -1188156.978
+          },
+          {
+            "packet_id": 3004,
+            "node": 3,
+            "generation_lower_us": -1171807.956,
+            "generation_upper_us": -1170042.104,
+            "arrival_us": -1169425.388
+          },
+          {
+            "packet_id": 3005,
+            "node": 3,
+            "generation_lower_us": -1151119.956,
+            "generation_upper_us": -1149354.104,
+            "arrival_us": -1148629.127
+          },
+          {
+            "packet_id": 3006,
+            "node": 3,
+            "generation_lower_us": -1133121.956,
+            "generation_upper_us": -1131396.938,
+            "arrival_us": -1131396.938
+          },
+          {
+            "packet_id": 3007,
+            "node": 3,
+            "generation_lower_us": -1112066.956,
+            "generation_upper_us": -1110301.104,
+            "arrival_us": -1109963.778
+          }
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 187753.63723125,
+            "p95_age_upper_us": 189449.42060624997,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 8,
+            "initial_generation_lower_us": -195157.891,
+            "initial_generation_upper_us": -193456.867,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 1.0,
+            "violation_upper": 1.0,
+            "p95_age_lower_us": 2630675.6478500003,
+            "p95_age_upper_us": 2632441.4998500003,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 3007,
+            "initial_generation_lower_us": -1112550.956,
+            "initial_generation_upper_us": -1110785.104,
+            "guaranteed_fulfilled_under_clock_conditions": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 1.0,
+            "violation_upper": 1.0,
+            "p95_age_lower_us": 2630191.6478500003,
+            "p95_age_upper_us": 2631957.4998500003,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 3007,
+            "initial_generation_lower_us": -1112066.956,
+            "initial_generation_upper_us": -1110301.104,
+            "guaranteed_fulfilled_under_clock_conditions": false
+          }
+        ],
+        "fulfilled_tasks_upper_age_bound": 1,
+        "interpretation": "保留实际已收前史，不用校准区间中点冒充真值；末端探针不参与年龄更新"
+      }
+    },
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 40,
+      "received_packets": 40,
+      "workload_samples_per_node": [
+        12,
+        6,
+        6
+      ],
+      "report_packets_including_probes": 40,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "total_byte_hops": 7080,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "shared_aligned",
+      "configuration": {
+        "scope": "port",
+        "thresholds": [
+          {
+            "1": 100000,
+            "2": 100000,
+            "3": 100000
+          },
+          {
+            "1": 300000,
+            "2": 300000,
+            "3": 300000
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "masks": {
+          "1": 255,
+          "2": 255,
+          "3": 255
+        },
+        "epochs": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "wall_seconds": 4.425228142004926,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 7080,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "age_evaluated": true,
+        "training_packet_ids": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015
+        ],
+        "age_origin_packet_id": 9,
+        "age_window_us": [
+          0,
+          1600031.68
+        ],
+        "origin_ns": 1791595271446956587,
+        "offset_intervals": [
+          {
+            "node": 1,
+            "lower_ns": 1791595264301996239,
+            "upper_ns": 1791595264303729339,
+            "width_us": 1733.1
+          },
+          {
+            "node": 2,
+            "lower_ns": 1791595264409627603,
+            "upper_ns": 1791595264411359433,
+            "width_us": 1731.83
+          },
+          {
+            "node": 3,
+            "lower_ns": 1791595264561996239,
+            "upper_ns": 1791595264563728339,
+            "width_us": 1732.1
+          }
+        ],
+        "host_wall_monotonic_variation_ns": 19359,
+        "host_clock_pair_error_ns": 20034,
+        "predeclared_slack_ns": 101000,
+        "constant_offset_assumption": true,
+        "samples": [
+          {
+            "packet_id": 3000,
+            "node": 1,
+            "generation_lower_us": -1250833.984,
+            "generation_upper_us": -1249301.248,
+            "arrival_us": -1249301.248
+          },
+          {
+            "packet_id": 3001,
+            "node": 1,
+            "generation_lower_us": -1230857.348,
+            "generation_upper_us": -1229124.248,
+            "arrival_us": -1228581.852
+          },
+          {
+            "packet_id": 3002,
+            "node": 1,
+            "generation_lower_us": -1210269.348,
+            "generation_upper_us": -1208536.248,
+            "arrival_us": -1207129.47
+          },
+          {
+            "packet_id": 3003,
+            "node": 1,
+            "generation_lower_us": -1190268.348,
+            "generation_upper_us": -1188535.248,
+            "arrival_us": -1185306.761
+          },
+          {
+            "packet_id": 3004,
+            "node": 1,
+            "generation_lower_us": -1170893.003,
+            "generation_upper_us": -1169244.248,
+            "arrival_us": -1167350.248
+          },
+          {
+            "packet_id": 3005,
+            "node": 1,
+            "generation_lower_us": -1150187.348,
+            "generation_upper_us": -1148454.248,
+            "arrival_us": -1144951.559
+          },
+          {
+            "packet_id": 3006,
+            "node": 1,
+            "generation_lower_us": -1130297.348,
+            "generation_upper_us": -1128564.248,
+            "arrival_us": -1125707.398
+          },
+          {
+            "packet_id": 3007,
+            "node": 1,
+            "generation_lower_us": -1110765.348,
+            "generation_upper_us": -1109032.248,
+            "arrival_us": -1108159.778
+          },
+          {
+            "packet_id": 1,
+            "node": 1,
+            "generation_lower_us": -799793.348,
+            "generation_upper_us": -798060.248,
+            "arrival_us": -798056.908
+          },
+          {
+            "packet_id": 3,
+            "node": 1,
+            "generation_lower_us": -599299.348,
+            "generation_upper_us": -597566.248,
+            "arrival_us": -595040.176
+          },
+          {
+            "packet_id": 5,
+            "node": 1,
+            "generation_lower_us": -398821.348,
+            "generation_upper_us": -397088.248,
+            "arrival_us": -393527.226
+          },
+          {
+            "packet_id": 7,
+            "node": 1,
+            "generation_lower_us": -199265.348,
+            "generation_upper_us": -197532.248,
+            "arrival_us": -196127.632
+          },
+          {
+            "packet_id": 9,
+            "node": 1,
+            "generation_lower_us": 1173.652,
+            "generation_upper_us": 2906.752,
+            "arrival_us": 6316.774
+          },
+          {
+            "packet_id": 11,
+            "node": 1,
+            "generation_lower_us": 201019.652,
+            "generation_upper_us": 202752.752,
+            "arrival_us": 206196.855
+          },
+          {
+            "packet_id": 13,
+            "node": 1,
+            "generation_lower_us": 400630.652,
+            "generation_upper_us": 402363.752,
+            "arrival_us": 404466.859
+          },
+          {
+            "packet_id": 15,
+            "node": 1,
+            "generation_lower_us": 600006.336,
+            "generation_upper_us": 601483.912,
+            "arrival_us": 601483.912
+          },
+          {
+            "packet_id": 17,
+            "node": 1,
+            "generation_lower_us": 801236.652,
+            "generation_upper_us": 802969.752,
+            "arrival_us": 806809.079
+          },
+          {
+            "packet_id": 19,
+            "node": 1,
+            "generation_lower_us": 1000343.652,
+            "generation_upper_us": 1002076.752,
+            "arrival_us": 1003758.308
+          },
+          {
+            "packet_id": 21,
+            "node": 1,
+            "generation_lower_us": 1201019.652,
+            "generation_upper_us": 1202752.752,
+            "arrival_us": 1206335.621
+          },
+          {
+            "packet_id": 23,
+            "node": 1,
+            "generation_lower_us": 1400341.652,
+            "generation_upper_us": 1402074.752,
+            "arrival_us": 1404007.916
+          },
+          {
+            "packet_id": 3000,
+            "node": 2,
+            "generation_lower_us": -1250833.984,
+            "generation_upper_us": -1249301.248,
+            "arrival_us": -1249301.248
+          },
+          {
+            "packet_id": 3001,
+            "node": 2,
+            "generation_lower_us": -1230576.984,
+            "generation_upper_us": -1228845.154,
+            "arrival_us": -1228581.852
+          },
+          {
+            "packet_id": 3002,
+            "node": 2,
+            "generation_lower_us": -1209744.984,
+            "generation_upper_us": -1208013.154,
+            "arrival_us": -1207129.47
+          },
+          {
+            "packet_id": 3003,
+            "node": 2,
+            "generation_lower_us": -1189297.984,
+            "generation_upper_us": -1187566.154,
+            "arrival_us": -1185306.761
+          },
+          {
+            "packet_id": 3004,
+            "node": 2,
+            "generation_lower_us": -1170401.984,
+            "generation_upper_us": -1168670.154,
+            "arrival_us": -1167350.248
+          },
+          {
+            "packet_id": 3005,
+            "node": 2,
+            "generation_lower_us": -1148980.984,
+            "generation_upper_us": -1147249.154,
+            "arrival_us": -1144951.559
+          },
+          {
+            "packet_id": 3006,
+            "node": 2,
+            "generation_lower_us": -1129431.984,
+            "generation_upper_us": -1127700.154,
+            "arrival_us": -1125707.398
+          },
+          {
+            "packet_id": 3007,
+            "node": 2,
+            "generation_lower_us": -1110418.984,
+            "generation_upper_us": -1108687.154,
+            "arrival_us": -1108159.778
+          },
+          {
+            "packet_id": 2,
+            "node": 2,
+            "generation_lower_us": -795004.044,
+            "generation_upper_us": -793801.149,
+            "arrival_us": -793801.149
+          },
+          {
+            "packet_id": 6,
+            "node": 2,
+            "generation_lower_us": -393827.984,
+            "generation_upper_us": -392096.154,
+            "arrival_us": -390996.018
+          },
+          {
+            "packet_id": 10,
+            "node": 2,
+            "generation_lower_us": 6559.016,
+            "generation_upper_us": 8290.846,
+            "arrival_us": 9746.935
+          },
+          {
+            "packet_id": 14,
+            "node": 2,
+            "generation_lower_us": 405976.016,
+            "generation_upper_us": 407707.846,
+            "arrival_us": 408811.846
+          },
+          {
+            "packet_id": 18,
+            "node": 2,
+            "generation_lower_us": 806025.016,
+            "generation_upper_us": 807756.846,
+            "arrival_us": 808849.825
+          },
+          {
+            "packet_id": 22,
+            "node": 2,
+            "generation_lower_us": 1206138.016,
+            "generation_upper_us": 1207869.846,
+            "arrival_us": 1209102.212
+          },
+          {
+            "packet_id": 3000,
+            "node": 3,
+            "generation_lower_us": -1250833.984,
+            "generation_upper_us": -1249301.248,
+            "arrival_us": -1249301.248
+          },
+          {
+            "packet_id": 3001,
+            "node": 3,
+            "generation_lower_us": -1230438.348,
+            "generation_upper_us": -1228706.248,
+            "arrival_us": -1228581.852
+          },
+          {
+            "packet_id": 3002,
+            "node": 3,
+            "generation_lower_us": -1209249.348,
+            "generation_upper_us": -1207517.248,
+            "arrival_us": -1207129.47
+          },
+          {
+            "packet_id": 3003,
+            "node": 3,
+            "generation_lower_us": -1188377.348,
+            "generation_upper_us": -1186645.248,
+            "arrival_us": -1185306.761
+          },
+          {
+            "packet_id": 3004,
+            "node": 3,
+            "generation_lower_us": -1169841.348,
+            "generation_upper_us": -1168109.248,
+            "arrival_us": -1167350.248
+          },
+          {
+            "packet_id": 3005,
+            "node": 3,
+            "generation_lower_us": -1147751.348,
+            "generation_upper_us": -1146019.248,
+            "arrival_us": -1144951.559
+          },
+          {
+            "packet_id": 3006,
+            "node": 3,
+            "generation_lower_us": -1128347.348,
+            "generation_upper_us": -1126615.248,
+            "arrival_us": -1125707.398
+          },
+          {
+            "packet_id": 3007,
+            "node": 3,
+            "generation_lower_us": -1110173.348,
+            "generation_upper_us": -1108441.248,
+            "arrival_us": -1108159.778
+          },
+          {
+            "packet_id": 4,
+            "node": 3,
+            "generation_lower_us": -593621.348,
+            "generation_upper_us": -591889.248,
+            "arrival_us": -591312.087
+          },
+          {
+            "packet_id": 8,
+            "node": 3,
+            "generation_lower_us": -194302.348,
+            "generation_upper_us": -192570.248,
+            "arrival_us": -192329.447
+          },
+          {
+            "packet_id": 12,
+            "node": 3,
+            "generation_lower_us": 206589.652,
+            "generation_upper_us": 208321.752,
+            "arrival_us": 209003.829
+          },
+          {
+            "packet_id": 16,
+            "node": 3,
+            "generation_lower_us": 604986.53,
+            "generation_upper_us": 606303.891,
+            "arrival_us": 606303.891
+          },
+          {
+            "packet_id": 20,
+            "node": 3,
+            "generation_lower_us": 1005800.652,
+            "generation_upper_us": 1007532.752,
+            "arrival_us": 1007901.572
+          },
+          {
+            "packet_id": 24,
+            "node": 3,
+            "generation_lower_us": 1406303.652,
+            "generation_upper_us": 1408035.752,
+            "arrival_us": 1408648.722
+          }
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 192503.03049999996,
+            "p95_age_upper_us": 194204.18999999997,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 7,
+            "initial_generation_lower_us": -199265.348,
+            "initial_generation_upper_us": -197532.248,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 381228.8825,
+            "p95_age_upper_us": 382960.71249999997,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 6,
+            "initial_generation_lower_us": -393827.984,
+            "initial_generation_upper_us": -392096.154,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 380567.07075,
+            "p95_age_upper_us": 382195.486,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 8,
+            "initial_generation_lower_us": -194302.348,
+            "initial_generation_upper_us": -192570.248,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          }
+        ],
+        "fulfilled_tasks_upper_age_bound": 3,
+        "interpretation": "保留实际已收前史，不用校准区间中点冒充真值；末端探针不参与年龄更新"
+      }
+    },
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 40,
+      "received_packets": 40,
+      "workload_samples_per_node": [
+        12,
+        6,
+        6
+      ],
+      "report_packets_including_probes": 40,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "total_byte_hops": 7080,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "shared_staggered",
+      "configuration": {
+        "scope": "port",
+        "thresholds": [
+          {
+            "1": 180000,
+            "2": 180000,
+            "3": 180000
+          },
+          {
+            "1": 300000,
+            "2": 300000,
+            "3": 300000
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "masks": {
+          "1": 255,
+          "2": 255,
+          "3": 255
+        },
+        "epochs": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "wall_seconds": 4.539393687002303,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 7080,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "age_evaluated": true,
+        "training_packet_ids": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015
+        ],
+        "age_origin_packet_id": 9,
+        "age_window_us": [
+          0,
+          1599909.985
+        ],
+        "origin_ns": 1791595275866344498,
+        "offset_intervals": [
+          {
+            "node": 1,
+            "lower_ns": 1791595264301992481,
+            "upper_ns": 1791595264303902093,
+            "width_us": 1909.612
+          },
+          {
+            "node": 2,
+            "lower_ns": 1791595264409596481,
+            "upper_ns": 1791595264411423093,
+            "width_us": 1826.612
+          },
+          {
+            "node": 3,
+            "lower_ns": 1791595264561918481,
+            "upper_ns": 1791595264563743093,
+            "width_us": 1824.612
+          }
+        ],
+        "host_wall_monotonic_variation_ns": 717,
+        "host_clock_pair_error_ns": 1366,
+        "predeclared_slack_ns": 101000,
+        "constant_offset_assumption": true,
+        "samples": [
+          {
+            "packet_id": 3000,
+            "node": 1,
+            "generation_lower_us": -1250822.137,
+            "generation_upper_us": -1249114.405,
+            "arrival_us": -1249114.405
+          },
+          {
+            "packet_id": 3001,
+            "node": 1,
+            "generation_lower_us": -1230752.017,
+            "generation_upper_us": -1228842.405,
+            "arrival_us": -1228144.429
+          },
+          {
+            "packet_id": 3002,
+            "node": 1,
+            "generation_lower_us": -1210431.017,
+            "generation_upper_us": -1208521.405,
+            "arrival_us": -1206998.526
+          },
+          {
+            "packet_id": 3003,
+            "node": 1,
+            "generation_lower_us": -1190291.017,
+            "generation_upper_us": -1188381.405,
+            "arrival_us": -1186534.468
+          },
+          {
+            "packet_id": 3004,
+            "node": 1,
+            "generation_lower_us": -1169901.017,
+            "generation_upper_us": -1167991.405,
+            "arrival_us": -1164394.414
+          },
+          {
+            "packet_id": 3005,
+            "node": 1,
+            "generation_lower_us": -1150434.017,
+            "generation_upper_us": -1148524.405,
+            "arrival_us": -1146942.844
+          },
+          {
+            "packet_id": 3006,
+            "node": 1,
+            "generation_lower_us": -1130107.017,
+            "generation_upper_us": -1128197.405,
+            "arrival_us": -1125196.276
+          },
+          {
+            "packet_id": 3007,
+            "node": 1,
+            "generation_lower_us": -1109950.017,
+            "generation_upper_us": -1108040.405,
+            "arrival_us": -1104688.048
+          },
+          {
+            "packet_id": 1,
+            "node": 1,
+            "generation_lower_us": -800046.091,
+            "generation_upper_us": -798557.95,
+            "arrival_us": -798557.95
+          },
+          {
+            "packet_id": 3,
+            "node": 1,
+            "generation_lower_us": -599274.017,
+            "generation_upper_us": -597364.405,
+            "arrival_us": -594464.481
+          },
+          {
+            "packet_id": 5,
+            "node": 1,
+            "generation_lower_us": -399523.017,
+            "generation_upper_us": -397613.405,
+            "arrival_us": -395721.163
+          },
+          {
+            "packet_id": 7,
+            "node": 1,
+            "generation_lower_us": -198593.017,
+            "generation_upper_us": -196683.405,
+            "arrival_us": -191899.623
+          },
+          {
+            "packet_id": 9,
+            "node": 1,
+            "generation_lower_us": 977.983,
+            "generation_upper_us": 2887.595,
+            "arrival_us": 6640.157
+          },
+          {
+            "packet_id": 11,
+            "node": 1,
+            "generation_lower_us": 201126.983,
+            "generation_upper_us": 203036.595,
+            "arrival_us": 206288.464
+          },
+          {
+            "packet_id": 13,
+            "node": 1,
+            "generation_lower_us": 400947.983,
+            "generation_upper_us": 402857.595,
+            "arrival_us": 406374.637
+          },
+          {
+            "packet_id": 15,
+            "node": 1,
+            "generation_lower_us": 600637.983,
+            "generation_upper_us": 602547.595,
+            "arrival_us": 605043.754
+          },
+          {
+            "packet_id": 17,
+            "node": 1,
+            "generation_lower_us": 801060.983,
+            "generation_upper_us": 802970.595,
+            "arrival_us": 807085.393
+          },
+          {
+            "packet_id": 19,
+            "node": 1,
+            "generation_lower_us": 1001086.983,
+            "generation_upper_us": 1002996.595,
+            "arrival_us": 1006632.524
+          },
+          {
+            "packet_id": 21,
+            "node": 1,
+            "generation_lower_us": 1200893.983,
+            "generation_upper_us": 1202803.595,
+            "arrival_us": 1205938.184
+          },
+          {
+            "packet_id": 23,
+            "node": 1,
+            "generation_lower_us": 1399909.985,
+            "generation_upper_us": 1401574.965,
+            "arrival_us": 1401574.965
+          },
+          {
+            "packet_id": 3000,
+            "node": 2,
+            "generation_lower_us": -1250822.137,
+            "generation_upper_us": -1249114.405,
+            "arrival_us": -1249114.405
+          },
+          {
+            "packet_id": 3001,
+            "node": 2,
+            "generation_lower_us": -1230466.017,
+            "generation_upper_us": -1228639.405,
+            "arrival_us": -1228144.429
+          },
+          {
+            "packet_id": 3002,
+            "node": 2,
+            "generation_lower_us": -1209886.017,
+            "generation_upper_us": -1208059.405,
+            "arrival_us": -1206998.526
+          },
+          {
+            "packet_id": 3003,
+            "node": 2,
+            "generation_lower_us": -1189692.017,
+            "generation_upper_us": -1187865.405,
+            "arrival_us": -1186534.468
+          },
+          {
+            "packet_id": 3004,
+            "node": 2,
+            "generation_lower_us": -1168578.017,
+            "generation_upper_us": -1166751.405,
+            "arrival_us": -1164394.414
+          },
+          {
+            "packet_id": 3005,
+            "node": 2,
+            "generation_lower_us": -1149947.017,
+            "generation_upper_us": -1148120.405,
+            "arrival_us": -1146942.844
+          },
+          {
+            "packet_id": 3006,
+            "node": 2,
+            "generation_lower_us": -1129068.017,
+            "generation_upper_us": -1127241.405,
+            "arrival_us": -1125196.276
+          },
+          {
+            "packet_id": 3007,
+            "node": 2,
+            "generation_lower_us": -1108682.017,
+            "generation_upper_us": -1106855.405,
+            "arrival_us": -1104688.048
+          },
+          {
+            "packet_id": 2,
+            "node": 2,
+            "generation_lower_us": -698835.017,
+            "generation_upper_us": -697008.405,
+            "arrival_us": -695755.855
+          },
+          {
+            "packet_id": 6,
+            "node": 2,
+            "generation_lower_us": -297524.017,
+            "generation_upper_us": -295697.405,
+            "arrival_us": -294379.099
+          },
+          {
+            "packet_id": 10,
+            "node": 2,
+            "generation_lower_us": 102395.983,
+            "generation_upper_us": 104222.595,
+            "arrival_us": 106206.346
+          },
+          {
+            "packet_id": 14,
+            "node": 2,
+            "generation_lower_us": 500947.983,
+            "generation_upper_us": 502774.595,
+            "arrival_us": 503949.908
+          },
+          {
+            "packet_id": 18,
+            "node": 2,
+            "generation_lower_us": 902784.983,
+            "generation_upper_us": 904611.595,
+            "arrival_us": 906530.341
+          },
+          {
+            "packet_id": 22,
+            "node": 2,
+            "generation_lower_us": 1301482.983,
+            "generation_upper_us": 1303309.595,
+            "arrival_us": 1304974.913
+          },
+          {
+            "packet_id": 3000,
+            "node": 3,
+            "generation_lower_us": -1250822.137,
+            "generation_upper_us": -1249114.405,
+            "arrival_us": -1249114.405
+          },
+          {
+            "packet_id": 3001,
+            "node": 3,
+            "generation_lower_us": -1230251.017,
+            "generation_upper_us": -1228426.405,
+            "arrival_us": -1228144.429
+          },
+          {
+            "packet_id": 3002,
+            "node": 3,
+            "generation_lower_us": -1209383.017,
+            "generation_upper_us": -1207558.405,
+            "arrival_us": -1206998.526
+          },
+          {
+            "packet_id": 3003,
+            "node": 3,
+            "generation_lower_us": -1188942.017,
+            "generation_upper_us": -1187117.405,
+            "arrival_us": -1186534.468
+          },
+          {
+            "packet_id": 3004,
+            "node": 3,
+            "generation_lower_us": -1167422.017,
+            "generation_upper_us": -1165597.405,
+            "arrival_us": -1164394.414
+          },
+          {
+            "packet_id": 3005,
+            "node": 3,
+            "generation_lower_us": -1149406.017,
+            "generation_upper_us": -1147581.405,
+            "arrival_us": -1146942.844
+          },
+          {
+            "packet_id": 3006,
+            "node": 3,
+            "generation_lower_us": -1128121.017,
+            "generation_upper_us": -1126296.405,
+            "arrival_us": -1125196.276
+          },
+          {
+            "packet_id": 3007,
+            "node": 3,
+            "generation_lower_us": -1107634.017,
+            "generation_upper_us": -1105809.405,
+            "arrival_us": -1104688.048
+          },
+          {
+            "packet_id": 4,
+            "node": 3,
+            "generation_lower_us": -497873.017,
+            "generation_upper_us": -496048.405,
+            "arrival_us": -495450.751
+          },
+          {
+            "packet_id": 8,
+            "node": 3,
+            "generation_lower_us": -96448.017,
+            "generation_upper_us": -94623.405,
+            "arrival_us": -93538.699
+          },
+          {
+            "packet_id": 12,
+            "node": 3,
+            "generation_lower_us": 299959.629,
+            "generation_upper_us": 301688.274,
+            "arrival_us": 301688.274
+          },
+          {
+            "packet_id": 16,
+            "node": 3,
+            "generation_lower_us": 703847.983,
+            "generation_upper_us": 705672.595,
+            "arrival_us": 706916.574
+          },
+          {
+            "packet_id": 20,
+            "node": 3,
+            "generation_lower_us": 1102776.983,
+            "generation_upper_us": 1104601.595,
+            "arrival_us": 1105547.405
+          },
+          {
+            "packet_id": 24,
+            "node": 3,
+            "generation_lower_us": 1502728.983,
+            "generation_upper_us": 1504553.595,
+            "arrival_us": 1505286.72
+          }
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 192977.17921875,
+            "p95_age_upper_us": 194856.21221874998,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 7,
+            "initial_generation_lower_us": -198593.017,
+            "initial_generation_upper_us": -196683.405,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 381438.6571875,
+            "p95_age_upper_us": 383265.26918749994,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 6,
+            "initial_generation_lower_us": -297524.017,
+            "initial_generation_upper_us": -295697.405,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 380526.1036875,
+            "p95_age_upper_us": 382326.7239375,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 8,
+            "initial_generation_lower_us": -96448.017,
+            "initial_generation_upper_us": -94623.405,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          }
+        ],
+        "fulfilled_tasks_upper_age_bound": 3,
+        "interpretation": "保留实际已收前史，不用校准区间中点冒充真值；末端探针不参与年龄更新"
+      }
+    },
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 40,
+      "received_packets": 40,
+      "workload_samples_per_node": [
+        12,
+        6,
+        6
+      ],
+      "report_packets_including_probes": 40,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "total_byte_hops": 7080,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "static_aligned",
+      "configuration": {
+        "scope": "flow",
+        "thresholds": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 300000,
+            "2": 300000,
+            "3": 300000
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "masks": {
+          "1": 1,
+          "2": 6,
+          "3": 255
+        },
+        "epochs": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "wall_seconds": 4.481289679999463,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 7080,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "age_evaluated": true,
+        "training_packet_ids": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015
+        ],
+        "age_origin_packet_id": 9,
+        "age_window_us": [
+          0,
+          1600009.333
+        ],
+        "origin_ns": 1791595280416312139,
+        "offset_intervals": [
+          {
+            "node": 1,
+            "lower_ns": 1791595264301977108,
+            "upper_ns": 1791595264303813880,
+            "width_us": 1836.772
+          },
+          {
+            "node": 2,
+            "lower_ns": 1791595264409591108,
+            "upper_ns": 1791595264411391438,
+            "width_us": 1800.33
+          },
+          {
+            "node": 3,
+            "lower_ns": 1791595264561957108,
+            "upper_ns": 1791595264563737438,
+            "width_us": 1780.33
+          }
+        ],
+        "host_wall_monotonic_variation_ns": 631,
+        "host_clock_pair_error_ns": 1747,
+        "predeclared_slack_ns": 101000,
+        "constant_offset_assumption": true,
+        "samples": [
+          {
+            "packet_id": 3000,
+            "node": 1,
+            "generation_lower_us": -1242519.031,
+            "generation_upper_us": -1240884.259,
+            "arrival_us": -1240884.259
+          },
+          {
+            "packet_id": 3001,
+            "node": 1,
+            "generation_lower_us": -1222340.031,
+            "generation_upper_us": -1220503.259,
+            "arrival_us": -1218561.213
+          },
+          {
+            "packet_id": 3002,
+            "node": 1,
+            "generation_lower_us": -1201966.031,
+            "generation_upper_us": -1200129.259,
+            "arrival_us": -1196031.653
+          },
+          {
+            "packet_id": 3003,
+            "node": 1,
+            "generation_lower_us": -1182180.031,
+            "generation_upper_us": -1180343.259,
+            "arrival_us": -1177892.238
+          },
+          {
+            "packet_id": 3004,
+            "node": 1,
+            "generation_lower_us": -1161535.031,
+            "generation_upper_us": -1159698.259,
+            "arrival_us": -1155608.576
+          },
+          {
+            "packet_id": 3005,
+            "node": 1,
+            "generation_lower_us": -1142003.031,
+            "generation_upper_us": -1140166.259,
+            "arrival_us": -1136905.61
+          },
+          {
+            "packet_id": 3006,
+            "node": 1,
+            "generation_lower_us": -1121759.031,
+            "generation_upper_us": -1119922.259,
+            "arrival_us": -1115933.421
+          },
+          {
+            "packet_id": 3007,
+            "node": 1,
+            "generation_lower_us": -1101623.031,
+            "generation_upper_us": -1099786.259,
+            "arrival_us": -1096249.027
+          },
+          {
+            "packet_id": 1,
+            "node": 1,
+            "generation_lower_us": -800006.417,
+            "generation_upper_us": -798449.882,
+            "arrival_us": -798449.882
+          },
+          {
+            "packet_id": 3,
+            "node": 1,
+            "generation_lower_us": -599599.031,
+            "generation_upper_us": -597762.259,
+            "arrival_us": -596005.962
+          },
+          {
+            "packet_id": 5,
+            "node": 1,
+            "generation_lower_us": -399766.031,
+            "generation_upper_us": -397929.259,
+            "arrival_us": -396298.081
+          },
+          {
+            "packet_id": 7,
+            "node": 1,
+            "generation_lower_us": -200024.232,
+            "generation_upper_us": -198494.902,
+            "arrival_us": -198494.902
+          },
+          {
+            "packet_id": 9,
+            "node": 1,
+            "generation_lower_us": 970.969,
+            "generation_upper_us": 2807.741,
+            "arrival_us": 5937.413
+          },
+          {
+            "packet_id": 11,
+            "node": 1,
+            "generation_lower_us": 200512.969,
+            "generation_upper_us": 202349.741,
+            "arrival_us": 204395.684
+          },
+          {
+            "packet_id": 13,
+            "node": 1,
+            "generation_lower_us": 400367.969,
+            "generation_upper_us": 402204.741,
+            "arrival_us": 404400.548
+          },
+          {
+            "packet_id": 15,
+            "node": 1,
+            "generation_lower_us": 600487.969,
+            "generation_upper_us": 602324.741,
+            "arrival_us": 604489.393
+          },
+          {
+            "packet_id": 17,
+            "node": 1,
+            "generation_lower_us": 800909.969,
+            "generation_upper_us": 802746.741,
+            "arrival_us": 805942.655
+          },
+          {
+            "packet_id": 19,
+            "node": 1,
+            "generation_lower_us": 1001033.969,
+            "generation_upper_us": 1002870.741,
+            "arrival_us": 1006083.564
+          },
+          {
+            "packet_id": 21,
+            "node": 1,
+            "generation_lower_us": 1200297.969,
+            "generation_upper_us": 1202134.741,
+            "arrival_us": 1204062.566
+          },
+          {
+            "packet_id": 23,
+            "node": 1,
+            "generation_lower_us": 1400910.969,
+            "generation_upper_us": 1402747.741,
+            "arrival_us": 1406909.902
+          },
+          {
+            "packet_id": 3000,
+            "node": 2,
+            "generation_lower_us": -1242519.031,
+            "generation_upper_us": -1240884.259,
+            "arrival_us": -1240884.259
+          },
+          {
+            "packet_id": 3001,
+            "node": 2,
+            "generation_lower_us": -1221521.031,
+            "generation_upper_us": -1219720.701,
+            "arrival_us": -1218561.213
+          },
+          {
+            "packet_id": 3002,
+            "node": 2,
+            "generation_lower_us": -1200349.031,
+            "generation_upper_us": -1198548.701,
+            "arrival_us": -1196031.653
+          },
+          {
+            "packet_id": 3003,
+            "node": 2,
+            "generation_lower_us": -1181313.031,
+            "generation_upper_us": -1179512.701,
+            "arrival_us": -1177892.238
+          },
+          {
+            "packet_id": 3004,
+            "node": 2,
+            "generation_lower_us": -1160074.031,
+            "generation_upper_us": -1158273.701,
+            "arrival_us": -1155608.576
+          },
+          {
+            "packet_id": 3005,
+            "node": 2,
+            "generation_lower_us": -1140782.031,
+            "generation_upper_us": -1138981.701,
+            "arrival_us": -1136905.61
+          },
+          {
+            "packet_id": 3006,
+            "node": 2,
+            "generation_lower_us": -1120277.031,
+            "generation_upper_us": -1118476.701,
+            "arrival_us": -1115933.421
+          },
+          {
+            "packet_id": 3007,
+            "node": 2,
+            "generation_lower_us": -1100035.031,
+            "generation_upper_us": -1098234.701,
+            "arrival_us": -1096249.027
+          },
+          {
+            "packet_id": 2,
+            "node": 2,
+            "generation_lower_us": -795073.736,
+            "generation_upper_us": -793810.234,
+            "arrival_us": -793810.234
+          },
+          {
+            "packet_id": 6,
+            "node": 2,
+            "generation_lower_us": -394743.031,
+            "generation_upper_us": -392942.701,
+            "arrival_us": -392314.375
+          },
+          {
+            "packet_id": 10,
+            "node": 2,
+            "generation_lower_us": 6016.969,
+            "generation_upper_us": 7817.299,
+            "arrival_us": 8985.608
+          },
+          {
+            "packet_id": 14,
+            "node": 2,
+            "generation_lower_us": 405388.969,
+            "generation_upper_us": 407189.299,
+            "arrival_us": 407851.047
+          },
+          {
+            "packet_id": 18,
+            "node": 2,
+            "generation_lower_us": 805947.969,
+            "generation_upper_us": 807748.299,
+            "arrival_us": 808954.971
+          },
+          {
+            "packet_id": 22,
+            "node": 2,
+            "generation_lower_us": 1205787.969,
+            "generation_upper_us": 1207588.299,
+            "arrival_us": 1208775.814
+          },
+          {
+            "packet_id": 3000,
+            "node": 3,
+            "generation_lower_us": -1242519.031,
+            "generation_upper_us": -1240884.259,
+            "arrival_us": -1240884.259
+          },
+          {
+            "packet_id": 3001,
+            "node": 3,
+            "generation_lower_us": -1221066.031,
+            "generation_upper_us": -1219285.701,
+            "arrival_us": -1218561.213
+          },
+          {
+            "packet_id": 3002,
+            "node": 3,
+            "generation_lower_us": -1199141.031,
+            "generation_upper_us": -1197360.701,
+            "arrival_us": -1196031.653
+          },
+          {
+            "packet_id": 3003,
+            "node": 3,
+            "generation_lower_us": -1180455.031,
+            "generation_upper_us": -1178674.701,
+            "arrival_us": -1177892.238
+          },
+          {
+            "packet_id": 3004,
+            "node": 3,
+            "generation_lower_us": -1158757.031,
+            "generation_upper_us": -1156976.701,
+            "arrival_us": -1155608.576
+          },
+          {
+            "packet_id": 3005,
+            "node": 3,
+            "generation_lower_us": -1139755.031,
+            "generation_upper_us": -1137974.701,
+            "arrival_us": -1136905.61
+          },
+          {
+            "packet_id": 3006,
+            "node": 3,
+            "generation_lower_us": -1118879.031,
+            "generation_upper_us": -1117098.701,
+            "arrival_us": -1115933.421
+          },
+          {
+            "packet_id": 3007,
+            "node": 3,
+            "generation_lower_us": -1098957.031,
+            "generation_upper_us": -1097176.701,
+            "arrival_us": -1096249.027
+          },
+          {
+            "packet_id": 4,
+            "node": 3,
+            "generation_lower_us": -593633.031,
+            "generation_upper_us": -591852.701,
+            "arrival_us": -591010.67
+          },
+          {
+            "packet_id": 8,
+            "node": 3,
+            "generation_lower_us": -195072.855,
+            "generation_upper_us": -193825.192,
+            "arrival_us": -193825.192
+          },
+          {
+            "packet_id": 12,
+            "node": 3,
+            "generation_lower_us": 205040.832,
+            "generation_upper_us": 206754.299,
+            "arrival_us": 206882.093
+          },
+          {
+            "packet_id": 16,
+            "node": 3,
+            "generation_lower_us": 605989.969,
+            "generation_upper_us": 607770.299,
+            "arrival_us": 608786.929
+          },
+          {
+            "packet_id": 20,
+            "node": 3,
+            "generation_lower_us": 1007000.969,
+            "generation_upper_us": 1008781.299,
+            "arrival_us": 1009285.619
+          },
+          {
+            "packet_id": 24,
+            "node": 3,
+            "generation_lower_us": 1407431.969,
+            "generation_upper_us": 1409212.299,
+            "arrival_us": 1409968.748
+          }
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 192755.45791875003,
+            "p95_age_upper_us": 194592.22991875,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 7,
+            "initial_generation_lower_us": -200024.232,
+            "initial_generation_upper_us": -198494.902,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 381058.2775875,
+            "p95_age_upper_us": 382858.6075875,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 6,
+            "initial_generation_lower_us": -394743.031,
+            "initial_generation_upper_us": -392942.701,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 381360.55433749995,
+            "p95_age_upper_us": 382991.0018374999,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 8,
+            "initial_generation_lower_us": -195072.855,
+            "initial_generation_upper_us": -193825.192,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          }
+        ],
+        "fulfilled_tasks_upper_age_bound": 3,
+        "interpretation": "保留实际已收前史，不用校准区间中点冒充真值；末端探针不参与年龄更新"
+      }
+    },
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 40,
+      "received_packets": 40,
+      "workload_samples_per_node": [
+        12,
+        6,
+        6
+      ],
+      "report_packets_including_probes": 40,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "total_byte_hops": 7080,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "static_staggered",
+      "configuration": {
+        "scope": "flow",
+        "thresholds": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 300000,
+            "2": 300000,
+            "3": 300000
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "masks": {
+          "1": 1,
+          "2": 6,
+          "3": 255
+        },
+        "epochs": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "wall_seconds": 4.60063139799604,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 7080,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "age_evaluated": false,
+        "reason": "宿主 wall/monotonic 变化超出预设 100 us 条件",
+        "host_wall_monotonic_variation_ns": 2172158686,
+        "host_clock_pair_error_ns": 1568,
+        "age_excluded_due_to_clock_conditions": true,
+        "interpretation": "保留运行和成本，不放宽条件，不输出不可靠年龄指标"
+      }
+    },
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 40,
+      "received_packets": 40,
+      "workload_samples_per_node": [
+        12,
+        6,
+        6
+      ],
+      "report_packets_including_probes": 40,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "total_byte_hops": 7080,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "tt_flow_tuned",
+      "configuration": {
+        "scope": "flow",
+        "thresholds": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 300000,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 0,
+            "3": 3
+          },
+          {
+            "1": 0,
+            "2": 1,
+            "3": 3
+          },
+          {
+            "1": 0,
+            "2": 1,
+            "3": 3
+          }
+        ],
+        "masks": {
+          "1": 255,
+          "2": 255,
+          "3": 255
+        },
+        "epochs": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "wall_seconds": 4.506941264997295,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          880,
+          1320,
+          1760
+        ],
+        "export_bytes": 3120,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 7080,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "age_evaluated": true,
+        "training_packet_ids": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015
+        ],
+        "age_origin_packet_id": 9,
+        "age_window_us": [
+          0,
+          1599965.434
+        ],
+        "origin_ns": 1791595291679254831,
+        "offset_intervals": [
+          {
+            "node": 1,
+            "lower_ns": 1791595264301995311,
+            "upper_ns": 1791595264303786880,
+            "width_us": 1791.569
+          },
+          {
+            "node": 2,
+            "lower_ns": 1791595264409623311,
+            "upper_ns": 1791595264411337880,
+            "width_us": 1714.569
+          },
+          {
+            "node": 3,
+            "lower_ns": 1791595264561938311,
+            "upper_ns": 1791595264563703880,
+            "width_us": 1765.569
+          }
+        ],
+        "host_wall_monotonic_variation_ns": 3003,
+        "host_clock_pair_error_ns": 3342,
+        "predeclared_slack_ns": 101000,
+        "constant_offset_assumption": true,
+        "samples": [
+          {
+            "packet_id": 3000,
+            "node": 1,
+            "generation_lower_us": -1235315.52,
+            "generation_upper_us": -1233624.951,
+            "arrival_us": -1233613.809
+          },
+          {
+            "packet_id": 3001,
+            "node": 1,
+            "generation_lower_us": -1215099.52,
+            "generation_upper_us": -1213307.951,
+            "arrival_us": -1212174.724
+          },
+          {
+            "packet_id": 3002,
+            "node": 1,
+            "generation_lower_us": -1194814.52,
+            "generation_upper_us": -1193022.951,
+            "arrival_us": -1189850.465
+          },
+          {
+            "packet_id": 3003,
+            "node": 1,
+            "generation_lower_us": -1174860.52,
+            "generation_upper_us": -1173068.951,
+            "arrival_us": -1170860.747
+          },
+          {
+            "packet_id": 3004,
+            "node": 1,
+            "generation_lower_us": -1155020.52,
+            "generation_upper_us": -1153228.951,
+            "arrival_us": -1151732.943
+          },
+          {
+            "packet_id": 3005,
+            "node": 1,
+            "generation_lower_us": -1134269.52,
+            "generation_upper_us": -1132477.951,
+            "arrival_us": -1128813.42
+          },
+          {
+            "packet_id": 3006,
+            "node": 1,
+            "generation_lower_us": -1114865.52,
+            "generation_upper_us": -1113073.951,
+            "arrival_us": -1110748.242
+          },
+          {
+            "packet_id": 3007,
+            "node": 1,
+            "generation_lower_us": -1094985.52,
+            "generation_upper_us": -1093193.951,
+            "arrival_us": -1090937.517
+          },
+          {
+            "packet_id": 1,
+            "node": 1,
+            "generation_lower_us": -800084.686,
+            "generation_upper_us": -798344.951,
+            "arrival_us": -798338.053
+          },
+          {
+            "packet_id": 3,
+            "node": 1,
+            "generation_lower_us": -599587.52,
+            "generation_upper_us": -597795.951,
+            "arrival_us": -595614.679
+          },
+          {
+            "packet_id": 5,
+            "node": 1,
+            "generation_lower_us": -399265.52,
+            "generation_upper_us": -397473.951,
+            "arrival_us": -395232.039
+          },
+          {
+            "packet_id": 7,
+            "node": 1,
+            "generation_lower_us": -199723.52,
+            "generation_upper_us": -197931.951,
+            "arrival_us": -195651.789
+          },
+          {
+            "packet_id": 9,
+            "node": 1,
+            "generation_lower_us": 1271.48,
+            "generation_upper_us": 3063.049,
+            "arrival_us": 6986.095
+          },
+          {
+            "packet_id": 11,
+            "node": 1,
+            "generation_lower_us": 200606.48,
+            "generation_upper_us": 202398.049,
+            "arrival_us": 204735.25
+          },
+          {
+            "packet_id": 13,
+            "node": 1,
+            "generation_lower_us": 401224.48,
+            "generation_upper_us": 403016.049,
+            "arrival_us": 406644.071
+          },
+          {
+            "packet_id": 15,
+            "node": 1,
+            "generation_lower_us": 600993.48,
+            "generation_upper_us": 602785.049,
+            "arrival_us": 605560.63
+          },
+          {
+            "packet_id": 17,
+            "node": 1,
+            "generation_lower_us": 800501.48,
+            "generation_upper_us": 802293.049,
+            "arrival_us": 804761.309
+          },
+          {
+            "packet_id": 19,
+            "node": 1,
+            "generation_lower_us": 999944.319,
+            "generation_upper_us": 1001717.049,
+            "arrival_us": 1001723.868
+          },
+          {
+            "packet_id": 21,
+            "node": 1,
+            "generation_lower_us": 1201356.48,
+            "generation_upper_us": 1203148.049,
+            "arrival_us": 1207583.748
+          },
+          {
+            "packet_id": 23,
+            "node": 1,
+            "generation_lower_us": 1401003.48,
+            "generation_upper_us": 1402795.049,
+            "arrival_us": 1406145.518
+          },
+          {
+            "packet_id": 3000,
+            "node": 2,
+            "generation_lower_us": -1235315.52,
+            "generation_upper_us": -1233701.951,
+            "arrival_us": -1233613.809
+          },
+          {
+            "packet_id": 3001,
+            "node": 2,
+            "generation_lower_us": -1214702.52,
+            "generation_upper_us": -1212987.951,
+            "arrival_us": -1212174.724
+          },
+          {
+            "packet_id": 3002,
+            "node": 2,
+            "generation_lower_us": -1193920.52,
+            "generation_upper_us": -1192205.951,
+            "arrival_us": -1189850.465
+          },
+          {
+            "packet_id": 3003,
+            "node": 2,
+            "generation_lower_us": -1173893.52,
+            "generation_upper_us": -1172178.951,
+            "arrival_us": -1170860.747
+          },
+          {
+            "packet_id": 3004,
+            "node": 2,
+            "generation_lower_us": -1154508.52,
+            "generation_upper_us": -1152793.951,
+            "arrival_us": -1151732.943
+          },
+          {
+            "packet_id": 3005,
+            "node": 2,
+            "generation_lower_us": -1133021.52,
+            "generation_upper_us": -1131306.951,
+            "arrival_us": -1128813.42
+          },
+          {
+            "packet_id": 3006,
+            "node": 2,
+            "generation_lower_us": -1114084.52,
+            "generation_upper_us": -1112369.951,
+            "arrival_us": -1110748.242
+          },
+          {
+            "packet_id": 3007,
+            "node": 2,
+            "generation_lower_us": -1094333.52,
+            "generation_upper_us": -1092618.951,
+            "arrival_us": -1090937.517
+          },
+          {
+            "packet_id": 2,
+            "node": 2,
+            "generation_lower_us": -795112.247,
+            "generation_upper_us": -793633.789,
+            "arrival_us": -793633.789
+          },
+          {
+            "packet_id": 6,
+            "node": 2,
+            "generation_lower_us": -393768.52,
+            "generation_upper_us": -392053.951,
+            "arrival_us": -391113.826
+          },
+          {
+            "packet_id": 10,
+            "node": 2,
+            "generation_lower_us": 6380.48,
+            "generation_upper_us": 8095.049,
+            "arrival_us": 9718.868
+          },
+          {
+            "packet_id": 14,
+            "node": 2,
+            "generation_lower_us": 406154.48,
+            "generation_upper_us": 407869.049,
+            "arrival_us": 409278.078
+          },
+          {
+            "packet_id": 18,
+            "node": 2,
+            "generation_lower_us": 806077.48,
+            "generation_upper_us": 807792.049,
+            "arrival_us": 809126.419
+          },
+          {
+            "packet_id": 22,
+            "node": 2,
+            "generation_lower_us": 1207668.48,
+            "generation_upper_us": 1209383.049,
+            "arrival_us": 1212113.905
+          },
+          {
+            "packet_id": 3000,
+            "node": 3,
+            "generation_lower_us": -1235315.52,
+            "generation_upper_us": -1233650.951,
+            "arrival_us": -1233613.809
+          },
+          {
+            "packet_id": 3001,
+            "node": 3,
+            "generation_lower_us": -1214325.52,
+            "generation_upper_us": -1212559.951,
+            "arrival_us": -1212174.724
+          },
+          {
+            "packet_id": 3002,
+            "node": 3,
+            "generation_lower_us": -1192989.52,
+            "generation_upper_us": -1191223.951,
+            "arrival_us": -1189850.465
+          },
+          {
+            "packet_id": 3003,
+            "node": 3,
+            "generation_lower_us": -1173363.52,
+            "generation_upper_us": -1171597.951,
+            "arrival_us": -1170860.747
+          },
+          {
+            "packet_id": 3004,
+            "node": 3,
+            "generation_lower_us": -1154072.52,
+            "generation_upper_us": -1152306.951,
+            "arrival_us": -1151732.943
+          },
+          {
+            "packet_id": 3005,
+            "node": 3,
+            "generation_lower_us": -1131786.52,
+            "generation_upper_us": -1130020.951,
+            "arrival_us": -1128813.42
+          },
+          {
+            "packet_id": 3006,
+            "node": 3,
+            "generation_lower_us": -1113461.52,
+            "generation_upper_us": -1111695.951,
+            "arrival_us": -1110748.242
+          },
+          {
+            "packet_id": 3007,
+            "node": 3,
+            "generation_lower_us": -1093824.52,
+            "generation_upper_us": -1092058.951,
+            "arrival_us": -1090937.517
+          },
+          {
+            "packet_id": 4,
+            "node": 3,
+            "generation_lower_us": -594017.52,
+            "generation_upper_us": -592251.951,
+            "arrival_us": -591618.154
+          },
+          {
+            "packet_id": 8,
+            "node": 3,
+            "generation_lower_us": -193942.52,
+            "generation_upper_us": -192176.951,
+            "arrival_us": -191843.356
+          },
+          {
+            "packet_id": 12,
+            "node": 3,
+            "generation_lower_us": 206190.48,
+            "generation_upper_us": 207956.049,
+            "arrival_us": 208762.37
+          },
+          {
+            "packet_id": 16,
+            "node": 3,
+            "generation_lower_us": 606119.48,
+            "generation_upper_us": 607885.049,
+            "arrival_us": 608782.247
+          },
+          {
+            "packet_id": 20,
+            "node": 3,
+            "generation_lower_us": 1004970.957,
+            "generation_upper_us": 1006357.635,
+            "arrival_us": 1006357.635
+          },
+          {
+            "packet_id": 24,
+            "node": 3,
+            "generation_lower_us": 1406255.48,
+            "generation_upper_us": 1408021.049,
+            "arrival_us": 1408551.75
+          }
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 192861.53241249992,
+            "p95_age_upper_us": 194650.74653749994,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 7,
+            "initial_generation_lower_us": -199723.52,
+            "initial_generation_upper_us": -197931.951,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 381766.30907499994,
+            "p95_age_upper_us": 383480.87807499996,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 6,
+            "initial_generation_lower_us": -393768.52,
+            "initial_generation_upper_us": -392053.951,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.0,
+            "violation_upper": 0.0,
+            "p95_age_lower_us": 380608.48707499995,
+            "p95_age_upper_us": 382279.33332499996,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 8,
+            "initial_generation_lower_us": -193942.52,
+            "initial_generation_upper_us": -192176.951,
+            "guaranteed_fulfilled_under_clock_conditions": true
+          }
+        ],
+        "fulfilled_tasks_upper_age_bound": 3,
+        "interpretation": "保留实际已收前史，不用校准区间中点冒充真值；末端探针不参与年龄更新"
+      }
+    },
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 52,
+      "received_packets": 52,
+      "workload_samples_per_node": [
+        23,
+        6,
+        7
+      ],
+      "report_packets_including_probes": 52,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          1196,
+          1636,
+          2096
+        ],
+        "export_bytes": 3864,
+        "total_byte_hops": 8792,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "flow_stop_shared",
+      "configuration": {
+        "scope": "port",
+        "thresholds": [
+          {
+            "1": 100000,
+            "2": 100000,
+            "3": 100000
+          },
+          {
+            "1": 300000,
+            "2": 300000,
+            "3": 300000
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "masks": {
+          "1": 255,
+          "2": 255,
+          "3": 255
+        },
+        "epochs": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "stopped_flow": 2,
+      "wall_seconds": 6.793108901998494,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          1196,
+          1636,
+          2096
+        ],
+        "export_bytes": 3864,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 8792,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "age_evaluated": true,
+        "training_packet_ids": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015
+        ],
+        "age_origin_packet_id": 25,
+        "age_window_us": [
+          0,
+          2400149.033
+        ],
+        "origin_ns": 1791595297658565353,
+        "offset_intervals": [
+          {
+            "node": 1,
+            "lower_ns": 1791595264301997189,
+            "upper_ns": 1791595264303741915,
+            "width_us": 1744.726
+          },
+          {
+            "node": 2,
+            "lower_ns": 1791595264409612189,
+            "upper_ns": 1791595264411358915,
+            "width_us": 1746.726
+          },
+          {
+            "node": 3,
+            "lower_ns": 1791595264561962341,
+            "upper_ns": 1791595264563712781,
+            "width_us": 1750.44
+          }
+        ],
+        "host_wall_monotonic_variation_ns": 692,
+        "host_clock_pair_error_ns": 2108,
+        "predeclared_slack_ns": 101000,
+        "constant_offset_assumption": true,
+        "samples": [
+          {
+            "packet_id": 3000,
+            "node": 1,
+            "generation_lower_us": -2704253.164,
+            "generation_upper_us": -2702671.572,
+            "arrival_us": -2702671.572
+          },
+          {
+            "packet_id": 3001,
+            "node": 1,
+            "generation_lower_us": -2684299.436,
+            "generation_upper_us": -2682627.438,
+            "arrival_us": -2682097.06
+          },
+          {
+            "packet_id": 3002,
+            "node": 1,
+            "generation_lower_us": -2663820.164,
+            "generation_upper_us": -2662075.438,
+            "arrival_us": -2660010.388
+          },
+          {
+            "packet_id": 3003,
+            "node": 1,
+            "generation_lower_us": -2643564.164,
+            "generation_upper_us": -2641819.438,
+            "arrival_us": -2638114.464
+          },
+          {
+            "packet_id": 3004,
+            "node": 1,
+            "generation_lower_us": -2623920.164,
+            "generation_upper_us": -2622175.438,
+            "arrival_us": -2620468.919
+          },
+          {
+            "packet_id": 3005,
+            "node": 1,
+            "generation_lower_us": -2603610.164,
+            "generation_upper_us": -2601865.438,
+            "arrival_us": -2598553.978
+          },
+          {
+            "packet_id": 3006,
+            "node": 1,
+            "generation_lower_us": -2583839.164,
+            "generation_upper_us": -2582094.438,
+            "arrival_us": -2579599.824
+          },
+          {
+            "packet_id": 3007,
+            "node": 1,
+            "generation_lower_us": -2563968.164,
+            "generation_upper_us": -2562223.438,
+            "arrival_us": -2560155.6
+          },
+          {
+            "packet_id": 1,
+            "node": 1,
+            "generation_lower_us": -2256285.294,
+            "generation_upper_us": -2254780.357,
+            "arrival_us": -2254780.357
+          },
+          {
+            "packet_id": 3,
+            "node": 1,
+            "generation_lower_us": -2055163.164,
+            "generation_upper_us": -2053418.438,
+            "arrival_us": -2049926.858
+          },
+          {
+            "packet_id": 5,
+            "node": 1,
+            "generation_lower_us": -1855313.164,
+            "generation_upper_us": -1853568.438,
+            "arrival_us": -1850077.049
+          },
+          {
+            "packet_id": 7,
+            "node": 1,
+            "generation_lower_us": -1655938.164,
+            "generation_upper_us": -1654193.438,
+            "arrival_us": -1653062.016
+          },
+          {
+            "packet_id": 9,
+            "node": 1,
+            "generation_lower_us": -1455804.164,
+            "generation_upper_us": -1454059.438,
+            "arrival_us": -1451433.0
+          },
+          {
+            "packet_id": 11,
+            "node": 1,
+            "generation_lower_us": -1255160.164,
+            "generation_upper_us": -1253415.438,
+            "arrival_us": -1247384.505
+          },
+          {
+            "packet_id": 13,
+            "node": 1,
+            "generation_lower_us": -1055164.164,
+            "generation_upper_us": -1053419.438,
+            "arrival_us": -1049447.496
+          },
+          {
+            "packet_id": 15,
+            "node": 1,
+            "generation_lower_us": -856110.164,
+            "generation_upper_us": -854365.438,
+            "arrival_us": -852902.363
+          },
+          {
+            "packet_id": 17,
+            "node": 1,
+            "generation_lower_us": -655384.164,
+            "generation_upper_us": -653639.438,
+            "arrival_us": -649961.643
+          },
+          {
+            "packet_id": 19,
+            "node": 1,
+            "generation_lower_us": -455705.164,
+            "generation_upper_us": -453960.438,
+            "arrival_us": -451643.143
+          },
+          {
+            "packet_id": 21,
+            "node": 1,
+            "generation_lower_us": -255627.164,
+            "generation_upper_us": -253882.438,
+            "arrival_us": -251418.462
+          },
+          {
+            "packet_id": 23,
+            "node": 1,
+            "generation_lower_us": -55838.164,
+            "generation_upper_us": -54093.438,
+            "arrival_us": -52306.83
+          },
+          {
+            "packet_id": 26,
+            "node": 1,
+            "generation_lower_us": 201245.836,
+            "generation_upper_us": 202990.562,
+            "arrival_us": 207041.533
+          },
+          {
+            "packet_id": 27,
+            "node": 1,
+            "generation_lower_us": 401033.836,
+            "generation_upper_us": 402778.562,
+            "arrival_us": 406012.611
+          },
+          {
+            "packet_id": 28,
+            "node": 1,
+            "generation_lower_us": 600479.836,
+            "generation_upper_us": 602224.562,
+            "arrival_us": 604707.264
+          },
+          {
+            "packet_id": 29,
+            "node": 1,
+            "generation_lower_us": 801528.836,
+            "generation_upper_us": 803273.562,
+            "arrival_us": 806551.683
+          },
+          {
+            "packet_id": 30,
+            "node": 1,
+            "generation_lower_us": 1000825.836,
+            "generation_upper_us": 1002570.562,
+            "arrival_us": 1005711.069
+          },
+          {
+            "packet_id": 31,
+            "node": 1,
+            "generation_lower_us": 1200422.836,
+            "generation_upper_us": 1202167.562,
+            "arrival_us": 1204431.497
+          },
+          {
+            "packet_id": 32,
+            "node": 1,
+            "generation_lower_us": 1401174.836,
+            "generation_upper_us": 1402919.562,
+            "arrival_us": 1406838.958
+          },
+          {
+            "packet_id": 33,
+            "node": 1,
+            "generation_lower_us": 1601128.836,
+            "generation_upper_us": 1602873.562,
+            "arrival_us": 1606407.412
+          },
+          {
+            "packet_id": 34,
+            "node": 1,
+            "generation_lower_us": 1801030.836,
+            "generation_upper_us": 1802775.562,
+            "arrival_us": 1805758.595
+          },
+          {
+            "packet_id": 35,
+            "node": 1,
+            "generation_lower_us": 2000704.836,
+            "generation_upper_us": 2002449.562,
+            "arrival_us": 2004572.834
+          },
+          {
+            "packet_id": 36,
+            "node": 1,
+            "generation_lower_us": 2201299.836,
+            "generation_upper_us": 2203044.562,
+            "arrival_us": 2206886.313
+          },
+          {
+            "packet_id": 3000,
+            "node": 2,
+            "generation_lower_us": -2704253.164,
+            "generation_upper_us": -2702671.572,
+            "arrival_us": -2702671.572
+          },
+          {
+            "packet_id": 3001,
+            "node": 2,
+            "generation_lower_us": -2684272.164,
+            "generation_upper_us": -2682525.438,
+            "arrival_us": -2682097.06
+          },
+          {
+            "packet_id": 3002,
+            "node": 2,
+            "generation_lower_us": -2663079.164,
+            "generation_upper_us": -2661332.438,
+            "arrival_us": -2660010.388
+          },
+          {
+            "packet_id": 3003,
+            "node": 2,
+            "generation_lower_us": -2642046.164,
+            "generation_upper_us": -2640299.438,
+            "arrival_us": -2638114.464
+          },
+          {
+            "packet_id": 3004,
+            "node": 2,
+            "generation_lower_us": -2623354.164,
+            "generation_upper_us": -2621607.438,
+            "arrival_us": -2620468.919
+          },
+          {
+            "packet_id": 3005,
+            "node": 2,
+            "generation_lower_us": -2602490.164,
+            "generation_upper_us": -2600743.438,
+            "arrival_us": -2598553.978
+          },
+          {
+            "packet_id": 3006,
+            "node": 2,
+            "generation_lower_us": -2582885.164,
+            "generation_upper_us": -2581138.438,
+            "arrival_us": -2579599.824
+          },
+          {
+            "packet_id": 3007,
+            "node": 2,
+            "generation_lower_us": -2563349.164,
+            "generation_upper_us": -2561602.438,
+            "arrival_us": -2560155.6
+          },
+          {
+            "packet_id": 2,
+            "node": 2,
+            "generation_lower_us": -2251302.241,
+            "generation_upper_us": -2249752.757,
+            "arrival_us": -2249752.757
+          },
+          {
+            "packet_id": 6,
+            "node": 2,
+            "generation_lower_us": -1850056.164,
+            "generation_upper_us": -1848309.438,
+            "arrival_us": -1846917.732
+          },
+          {
+            "packet_id": 10,
+            "node": 2,
+            "generation_lower_us": -1450568.164,
+            "generation_upper_us": -1448821.438,
+            "arrival_us": -1448119.598
+          },
+          {
+            "packet_id": 14,
+            "node": 2,
+            "generation_lower_us": -1050020.164,
+            "generation_upper_us": -1048273.438,
+            "arrival_us": -1047006.013
+          },
+          {
+            "packet_id": 18,
+            "node": 2,
+            "generation_lower_us": -649732.164,
+            "generation_upper_us": -647985.438,
+            "arrival_us": -647104.839
+          },
+          {
+            "packet_id": 22,
+            "node": 2,
+            "generation_lower_us": -250619.164,
+            "generation_upper_us": -248872.438,
+            "arrival_us": -247807.188
+          },
+          {
+            "packet_id": 3000,
+            "node": 3,
+            "generation_lower_us": -2704253.164,
+            "generation_upper_us": -2702671.572,
+            "arrival_us": -2702671.572
+          },
+          {
+            "packet_id": 3001,
+            "node": 3,
+            "generation_lower_us": -2684196.012,
+            "generation_upper_us": -2682445.572,
+            "arrival_us": -2682097.06
+          },
+          {
+            "packet_id": 3002,
+            "node": 3,
+            "generation_lower_us": -2662321.012,
+            "generation_upper_us": -2660570.572,
+            "arrival_us": -2660010.388
+          },
+          {
+            "packet_id": 3003,
+            "node": 3,
+            "generation_lower_us": -2641038.012,
+            "generation_upper_us": -2639287.572,
+            "arrival_us": -2638114.464
+          },
+          {
+            "packet_id": 3004,
+            "node": 3,
+            "generation_lower_us": -2622846.012,
+            "generation_upper_us": -2621095.572,
+            "arrival_us": -2620468.919
+          },
+          {
+            "packet_id": 3005,
+            "node": 3,
+            "generation_lower_us": -2601521.012,
+            "generation_upper_us": -2599770.572,
+            "arrival_us": -2598553.978
+          },
+          {
+            "packet_id": 3006,
+            "node": 3,
+            "generation_lower_us": -2582084.012,
+            "generation_upper_us": -2580333.572,
+            "arrival_us": -2579599.824
+          },
+          {
+            "packet_id": 3007,
+            "node": 3,
+            "generation_lower_us": -2562692.012,
+            "generation_upper_us": -2560941.572,
+            "arrival_us": -2560155.6
+          },
+          {
+            "packet_id": 4,
+            "node": 3,
+            "generation_lower_us": -2049825.012,
+            "generation_upper_us": -2048074.572,
+            "arrival_us": -2047493.184
+          },
+          {
+            "packet_id": 8,
+            "node": 3,
+            "generation_lower_us": -1650796.012,
+            "generation_upper_us": -1649045.572,
+            "arrival_us": -1648739.523
+          },
+          {
+            "packet_id": 12,
+            "node": 3,
+            "generation_lower_us": -1248909.012,
+            "generation_upper_us": -1247158.572,
+            "arrival_us": -1246790.468
+          },
+          {
+            "packet_id": 16,
+            "node": 3,
+            "generation_lower_us": -850934.012,
+            "generation_upper_us": -849183.572,
+            "arrival_us": -849035.62
+          },
+          {
+            "packet_id": 20,
+            "node": 3,
+            "generation_lower_us": -450230.012,
+            "generation_upper_us": -448479.572,
+            "arrival_us": -447953.578
+          },
+          {
+            "packet_id": 24,
+            "node": 3,
+            "generation_lower_us": -49808.012,
+            "generation_upper_us": -48057.572,
+            "arrival_us": -47642.352
+          },
+          {
+            "packet_id": 25,
+            "node": 3,
+            "generation_lower_us": 0.0,
+            "generation_upper_us": 1495.551,
+            "arrival_us": 1495.551
+          }
+        ],
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 250000,
+            "violation_lower": 0.004639283164046752,
+            "violation_upper": 0.005366207190851547,
+            "p95_age_lower_us": 197452.92139545456,
+            "p95_age_upper_us": 199197.64739545458,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 23,
+            "initial_generation_lower_us": -55838.164,
+            "initial_generation_upper_us": -54093.438,
+            "guaranteed_fulfilled_under_clock_conditions": false
+          },
+          {
+            "node": 2,
+            "deadline_us": 450000,
+            "violation_lower": 0.9162020527747787,
+            "violation_upper": 0.9169298100831724,
+            "p95_age_lower_us": 2529014.0193499997,
+            "p95_age_upper_us": 2530760.7453499995,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 22,
+            "initial_generation_lower_us": -250619.164,
+            "initial_generation_upper_us": -248872.438,
+            "guaranteed_fulfilled_under_clock_conditions": false
+          },
+          {
+            "node": 3,
+            "deadline_us": 650000,
+            "violation_lower": 0.7285603760256165,
+            "violation_upper": 0.7291834835824547,
+            "p95_age_lower_us": 2278646.0303499997,
+            "p95_age_upper_us": 2280141.5813499996,
+            "unknown_fraction": 0.0,
+            "initial_packet_id": 24,
+            "initial_generation_lower_us": -49808.012,
+            "initial_generation_upper_us": -48057.572,
+            "guaranteed_fulfilled_under_clock_conditions": false
+          }
+        ],
+        "fulfilled_tasks_upper_age_bound": 0,
+        "interpretation": "保留实际已收前史，不用校准区间中点冒充真值；末端探针不参与年龄更新"
+      },
+      "favorable_reference": {
+        "kind": "favorable_fixed_trace_reference",
+        "threshold_us": 0,
+        "initial_state": "在参考中放宽为窗口起点全部刚更新，不作为真实年龄评价",
+        "delay_relaxation": "报告零延迟，并将期限增加实测发送至业务接收上界，消除生成时刻提前的劣势",
+        "observed_delay_bound_us": 6956.35,
+        "conditional_bound": "只针对给定包轨迹及生成滞后不超过该实测上界的执行，不保证其他策略的排队变化仍在此界内",
+        "tasks": [
+          {
+            "node": 1,
+            "deadline_us": 256957,
+            "weight": 3,
+            "epsilon": 0.0,
+            "initial_generated_us": 0
+          },
+          {
+            "node": 2,
+            "deadline_us": 456957,
+            "weight": 2,
+            "epsilon": 0.0,
+            "initial_generated_us": 0
+          },
+          {
+            "node": 3,
+            "deadline_us": 656957,
+            "weight": 1,
+            "epsilon": 0.0,
+            "initial_generated_us": 0
+          }
+        ],
+        "packets": [
+          {
+            "packet_id": 25,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "generated_us": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "arrival_us": 0.0,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 26,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              200150.446,
+              200150.446,
+              200150.446
+            ],
+            "generated_us": [
+              200150.446,
+              200150.446,
+              200150.446
+            ],
+            "arrival_us": 200150.446,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 27,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              399990.015,
+              399990.015,
+              399990.015
+            ],
+            "generated_us": [
+              399990.015,
+              399990.015,
+              399990.015
+            ],
+            "arrival_us": 399990.015,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 28,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              599986.048,
+              599986.048,
+              599986.048
+            ],
+            "generated_us": [
+              599986.048,
+              599986.048,
+              599986.048
+            ],
+            "arrival_us": 599986.048,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 29,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              800338.534,
+              800338.534,
+              800338.534
+            ],
+            "generated_us": [
+              800338.534,
+              800338.534,
+              800338.534
+            ],
+            "arrival_us": 800338.534,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 30,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              1000017.369,
+              1000017.369,
+              1000017.369
+            ],
+            "generated_us": [
+              1000017.369,
+              1000017.369,
+              1000017.369
+            ],
+            "arrival_us": 1000017.369,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 31,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              1200044.244,
+              1200044.244,
+              1200044.244
+            ],
+            "generated_us": [
+              1200044.244,
+              1200044.244,
+              1200044.244
+            ],
+            "arrival_us": 1200044.244,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 32,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              1400027.564,
+              1400027.564,
+              1400027.564
+            ],
+            "generated_us": [
+              1400027.564,
+              1400027.564,
+              1400027.564
+            ],
+            "arrival_us": 1400027.564,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 33,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              1600029.037,
+              1600029.037,
+              1600029.037
+            ],
+            "generated_us": [
+              1600029.037,
+              1600029.037,
+              1600029.037
+            ],
+            "arrival_us": 1600029.037,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 34,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              1800014.157,
+              1800014.157,
+              1800014.157
+            ],
+            "generated_us": [
+              1800014.157,
+              1800014.157,
+              1800014.157
+            ],
+            "arrival_us": 1800014.157,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 35,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              2000062.357,
+              2000062.357,
+              2000062.357
+            ],
+            "generated_us": [
+              2000062.357,
+              2000062.357,
+              2000062.357
+            ],
+            "arrival_us": 2000062.357,
+            "ip_bytes": 120,
+            "capacity": 1
+          },
+          {
+            "packet_id": 36,
+            "flow": 1,
+            "path": [
+              1,
+              2,
+              3
+            ],
+            "gate_us": [
+              2200149.033,
+              2200149.033,
+              2200149.033
+            ],
+            "generated_us": [
+              2200149.033,
+              2200149.033,
+              2200149.033
+            ],
+            "arrival_us": 2200149.033,
+            "ip_bytes": 120,
+            "capacity": 1
+          }
+        ],
+        "age_window_us": [
+          0,
+          2400149.033
+        ],
+        "all_tasks_result": {
+          "status": "infeasible",
+          "solver_status": 2,
+          "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+          "threshold_us": 0,
+          "gate_scope": "flow",
+          "future_packets_known": true,
+          "scope": "固定延迟、无丢失、固定阈值及单一预算窗口的离线权限参照"
+        },
+        "admission_result": {
+          "status": "optimal",
+          "solver_status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "threshold_us": 0,
+          "gate_scope": "flow",
+          "future_packets_known": true,
+          "scope": "固定延迟、无丢失、固定阈值及单一预算窗口的离线权限参照",
+          "cost_solver_status": 0,
+          "admitted_weight": 3,
+          "accepted_nodes": [
+            2,
+            3
+          ],
+          "selected": {
+            "25": [],
+            "26": [],
+            "27": [
+              2
+            ],
+            "28": [
+              3
+            ],
+            "29": [
+              2
+            ],
+            "30": [
+              3
+            ],
+            "31": [
+              2
+            ],
+            "32": [
+              3
+            ],
+            "33": [
+              2
+            ],
+            "34": [
+              3
+            ],
+            "35": [
+              2
+            ],
+            "36": []
+          },
+          "cost": {
+            "inband_per_link_bytes": [
+              96,
+              196,
+              276
+            ],
+            "export_bytes": 558,
+            "control_bytes_in_window": 0,
+            "total_byte_hops": 1126
+          },
+          "metrics": {
+            "tasks": [
+              {
+                "node": 1,
+                "violation_fraction": 0.8929412313706104,
+                "unknown_fraction": 0.0,
+                "mean_age_us": 1200074.5165,
+                "mean_known_age_us": 1200074.5165,
+                "p95_age_us": 2280141.5813499996,
+                "p99_age_us": 2376147.54267,
+                "longest_no_effective_update_us": 2400149.033,
+                "first_report_wait_us": null,
+                "fulfilled": false
+              },
+              {
+                "node": 2,
+                "violation_fraction": 0.0,
+                "unknown_fraction": 0.0,
+                "mean_age_us": 200012.4638564479,
+                "mean_known_age_us": 200012.4638564479,
+                "p95_age_us": 380023.5968916666,
+                "p99_age_us": 396024.590445,
+                "longest_no_effective_update_us": 400348.519,
+                "first_report_wait_us": 399990.015,
+                "fulfilled": true
+              },
+              {
+                "node": 3,
+                "violation_fraction": 0.0,
+                "unknown_fraction": 0.0,
+                "mean_age_us": 250019.39445209532,
+                "mean_known_age_us": 250019.39445209532,
+                "p95_age_us": 540056.7361749997,
+                "p99_age_us": 588059.716835,
+                "longest_no_effective_update_us": 600134.8759999999,
+                "first_report_wait_us": 599986.048,
+                "fulfilled": true
+              }
+            ],
+            "weighted_violation_fraction": 0.44647061568530527,
+            "fulfilled_task_count": 2,
+            "task_count": 3
+          },
+          "cost_optimal": true,
+          "mip_gap": 0.0
+        }
+      }
+    },
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 25,
+      "received_packets": 25,
+      "workload_samples_per_node": [
+        5,
+        4,
+        0
+      ],
+      "report_packets_including_probes": 25,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          620,
+          1020,
+          1340
+        ],
+        "export_bytes": 2190,
+        "total_byte_hops": 5170,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "online_authorization",
+      "configuration": {
+        "scope": "flow",
+        "thresholds": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "masks": {
+          "1": 1,
+          "2": 255,
+          "3": 255
+        },
+        "epochs": {
+          "1": 10,
+          "2": 10,
+          "3": 10
+        }
+      },
+      "state_preserved_on_authorization_update": true,
+      "source_gate_unchanged_while_unauthorized": true,
+      "wall_seconds": 4.079614401998697,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          620,
+          1020,
+          1340
+        ],
+        "export_bytes": 2190,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 5170,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "training_packet_ids": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015
+        ],
+        "offset_intervals": [
+          {
+            "node": 1,
+            "lower_ns": 1791595264302003744,
+            "upper_ns": 1791595264303692995,
+            "width_us": 1689.251
+          },
+          {
+            "node": 2,
+            "lower_ns": 1791595264409645007,
+            "upper_ns": 1791595264411319995,
+            "width_us": 1674.988
+          },
+          {
+            "node": 3,
+            "lower_ns": 1791595264562023744,
+            "upper_ns": 1791595264563712995,
+            "width_us": 1689.251
+          }
+        ],
+        "age_evaluated": false
+      }
+    },
+    {
+      "status": "passed",
+      "errors": [],
+      "input_packets_including_probes": 22,
+      "received_packets": 22,
+      "workload_samples_per_node": [
+        0,
+        0,
+        2
+      ],
+      "report_packets_including_probes": 18,
+      "predicted_cost": {
+        "inband_per_link_bytes": [
+          480,
+          800,
+          1160
+        ],
+        "export_bytes": 1756,
+        "total_byte_hops": 4196,
+        "control_scope": "数据包测量段不含安装，在线控制另列逻辑命令与本机 RPC 抓包"
+      },
+      "name": "permission_mtu",
+      "configuration": {
+        "scope": "flow",
+        "thresholds": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "capacities": [
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          },
+          {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "masks": {
+          "1": 4,
+          "2": 255,
+          "3": 255
+        },
+        "epochs": {
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      "wall_seconds": 2.4384927169958246,
+      "measured_cost": {
+        "inband_per_link_bytes": [
+          480,
+          800,
+          1160
+        ],
+        "export_bytes": 1756,
+        "destination_metadata_bytes": 0,
+        "total_byte_hops": 4196,
+        "byte_convention": "带内附加字节和 Ethernet 导出帧字节，不含 FCS、前导码及物理间隔",
+        "budget_scope": "当前抓包全过程，包括校准与预热；年龄窗口单独给出"
+      },
+      "age": {
+        "training_packet_ids": [
+          3000,
+          3001,
+          3002,
+          3003,
+          3004,
+          3005,
+          3006,
+          3007,
+          3008,
+          3009,
+          3010,
+          3011,
+          3012,
+          3013,
+          3014,
+          3015
+        ],
+        "offset_intervals": [
+          {
+            "node": 1,
+            "lower_ns": 1791595264302013375,
+            "upper_ns": 1791595264303695910,
+            "width_us": 1682.535
+          },
+          {
+            "node": 2,
+            "lower_ns": 1791595264409657375,
+            "upper_ns": 1791595264411332910,
+            "width_us": 1675.535
+          },
+          {
+            "node": 3,
+            "lower_ns": 1791595264562042375,
+            "upper_ns": 1791595264563700460,
+            "width_us": 1658.085
+          }
+        ],
+        "age_evaluated": false
+      }
+    }
+  ],
+  "finish_utc": "2026-10-10T01:21:48.629841+00:00",
+  "finish_load_average": [
+    0.86181640625,
+    0.443359375,
+    0.20751953125
+  ],
+  "wire_checks": {
+    "checked_frames": 1691,
+    "maximum_ip_length": 1500,
+    "passed": true
+  },
+  "analysis_sha256": "3900fb061c9d2d5cbbb7ba8148ab0013625aae92952d355868eb49d2f00ca366",
+  "analysis_dependency_sha256": {
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/oracle.py": "d6969d3f0a2e7d4e2d6e9abf0e90e583a0b058c0bbcecf863c75eb62691f8401"
+  },
+  "control_capture": {
+    "direction": "Linux PACKET_OUTGOING，仅计每帧一次",
+    "socket_drop_counter": 0,
+    "capture_complete_under_socket_counter": true,
+    "total_captured_frame_bytes": 54402090,
+    "by_kind": {
+      "unclassified_startup_or_connection_tail": {
+        "frame_count": 270,
+        "loopback_captured_frame_bytes": 1237011
+      },
+      "cold_start_reset": {
+        "frame_count": 1215,
+        "loopback_captured_frame_bytes": 4788909
+      },
+      "calibration_installation": {
+        "frame_count": 3543,
+        "loopback_captured_frame_bytes": 19011744
+      },
+      "installation": {
+        "frame_count": 1775,
+        "loopback_captured_frame_bytes": 9506049
+      },
+      "diagnostic_read": {
+        "frame_count": 15644,
+        "loopback_captured_frame_bytes": 19507803
+      },
+      "online_update": {
+        "frame_count": 54,
+        "loopback_captured_frame_bytes": 350574
+      }
+    },
+    "interpretation": "本机 Thrift、TCP、CLI 初始化及读取流量，含 loopback/GSO 语义，不能当作部署链路控制成本"
+  },
+  "public_artifact_sha256": {
+    "tt_flow_prefix/packets-workload.json": "8237aa11bec2003f0b09b0f7e569e885a66489b68c327f43c3ab1f90e988afe0",
+    "tt_flow_prefix/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "tt_flow_prefix/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "tt_flow_prefix/send-calibration-end.jsonl": "1040eecc63a577e8c44c52426ebb0fdde8dc1cbe51ae719edb40483d76b6e69d",
+    "tt_flow_prefix/send-calibration-start.jsonl": "f5dc90edab718ed0d638628f7a85f360bff8d921b4f8893e07ad8819371f387f",
+    "tt_flow_prefix/send-workload.jsonl": "71a6d9b45c831f4cb306a12e70b9d696591f6d3235da7ecfb22d628994fc8db5",
+    "tt_flow_prefix/observations.jsonl": "2c58c6e7da6c51e1e40b82b795720560d6773477d9bfb6233d74ac1c934fbfe0",
+    "tt_flow_prefix/destination.jsonl": "7197c36566f9248d638846755900b1ae4038c007a3a0651f0cd94acd0cfc46c4",
+    "tt_flow_prefix/collector.jsonl": "793257db9fafdfb6f8a839c4b0eecd5f4fad40be3b2a8681db314b6b59ac616e",
+    "tt_flow_prefix/destination.pcap": "52267bbe3fa9bf4d6dda37edb5430448e600c00ec60974393b17a16653b8e4d9",
+    "tt_flow_prefix/collector.pcap": "06d4bad3264bc22981f8ce871202cae03e3176b6dd721ce71217a3c2aa094c76",
+    "tt_flow_prefix/wire-observations.jsonl": "d8d95008b779d012a6c44a7667ca6169f36199b8c40b1e486867826ccd3e7eee",
+    "shared_aligned/packets-workload.json": "3eb4b80a96dfcc0a078208939c6386ad829ea0ffe9238b691c81fbb9e85975a3",
+    "shared_aligned/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "shared_aligned/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "shared_aligned/send-calibration-end.jsonl": "a9c4c4ed59dfae8e4011f729652ccda7a164afbbb6b8a8a0d70e6b846e29960f",
+    "shared_aligned/send-calibration-start.jsonl": "74c1b5ac695a25a56fb80f5cd2f633ffb075fd6fb676dd14f652aa913f4a18db",
+    "shared_aligned/send-workload.jsonl": "caa792a3ae9d0332ec6ca50f00fe179a5378a2d23ac96e06e3f8539f5de8539a",
+    "shared_aligned/observations.jsonl": "844461c5243bb866cbf6aad9c13e65cf5ee0e4a669182436b3d9352b485d042f",
+    "shared_aligned/destination.jsonl": "d1562c72282c1d571cdbf77601af4d5b19ea28efeef7eeb494ddf4f5075c6513",
+    "shared_aligned/collector.jsonl": "8e89549aca385bbf357afb5c010745d1ecf80d339c9beb8c71ffd0c7a5c5c0f6",
+    "shared_aligned/destination.pcap": "08a01cde3cc20c1f3c68c2dfd4ae06f2eff631e0782f8c623a46e8f0cef82e8e",
+    "shared_aligned/collector.pcap": "18e8f8a30fafb44dc7379a487e73e4de5c285404ade934378f86f344dc7198d0",
+    "shared_aligned/wire-observations.jsonl": "466f9e5308a1402c7d74a0c3a60e17b1bf2248f84eea37f5277bda043f329f70",
+    "shared_staggered/packets-workload.json": "0690d05c41f6076875e50c8ffef06120bb971142913f16f568edd4ac54c41f93",
+    "shared_staggered/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "shared_staggered/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "shared_staggered/send-calibration-end.jsonl": "39d93e10f9ebbcd47f1f1e40f00529d8a2078cba385aa5faeb97e0af17ea9c1b",
+    "shared_staggered/send-calibration-start.jsonl": "a6fb5c7f0a12ef373efeaa4a98ebd209308a62eb9ff9771eeee32170ad7c0607",
+    "shared_staggered/send-workload.jsonl": "662ccc5a5fc323b43fb4bc959e01b0e6d649fc3868faeaa6a9b1129aecd28954",
+    "shared_staggered/observations.jsonl": "3ce186342f9c72dce68b96492ec50d960cbdbd114b6b2a8f5d1ca716fb378650",
+    "shared_staggered/destination.jsonl": "2496e576c56b3096e7d30d01962ea365211857510f1a04844d67cb8c2f5033e4",
+    "shared_staggered/collector.jsonl": "2ab3dde5049d9070babcf662dc5a7d192bd4b39e72d1f221a9b7b54763314e9d",
+    "shared_staggered/destination.pcap": "6ca6186c6e4f120f9d73011785bf23e50a517ab97bd949877c0d32145d7cc915",
+    "shared_staggered/collector.pcap": "8d7cbfaaea4d4273818592f16120bc4d3233f217faade86813e18dad8c0689da",
+    "shared_staggered/wire-observations.jsonl": "41321504c430f8bcd2eff4b090db463590c7384ab30eb7aedd4082c19e90c432",
+    "static_aligned/packets-workload.json": "d45b7e2fd2a3ad456111fba0194291eb8d1007a8b87ff8b46fa7542672b6c6db",
+    "static_aligned/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "static_aligned/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "static_aligned/send-calibration-end.jsonl": "f3327e71cfb453d826678110acd5b713fc448cf768c59f6b4a0cbb926ddd52f6",
+    "static_aligned/send-calibration-start.jsonl": "1892d6f50b681f118eb06741305dabe1045452143e2d3cba6e8129cd01896712",
+    "static_aligned/send-workload.jsonl": "ef42bfe29997717e71118f60cae09d84989e53015a0857930e11cd2655725dbd",
+    "static_aligned/observations.jsonl": "40094971a744ec40073b99bc4eca4f65e664b5ab89e4c2010b0c5c111c23ad3c",
+    "static_aligned/destination.jsonl": "c1320b56a51add2e067ca130958abcb580c91a6ab8843d02484119231794e7f1",
+    "static_aligned/collector.jsonl": "c8bfcccb9b8a585ce34e3a41a3850ec6782469e4f9111d5e9edb083915aca364",
+    "static_aligned/destination.pcap": "25f6e8bc21e6f5df2a99dc119aab22646f28f9aa55be1755d296b0f426772d24",
+    "static_aligned/collector.pcap": "59f05e340540c1e22ae58f35ad504fabb98f5c9cf7fdf5fc11396c0261712d08",
+    "static_aligned/wire-observations.jsonl": "a2e71f41596b6512800732ad4a60a893c74d065c38b4a11de42a072a25d9c8f4",
+    "static_staggered/packets-workload.json": "dc84739f4481a20160f18b9dad6fc931623a043bba100f6d951f6c51ffc57832",
+    "static_staggered/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "static_staggered/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "static_staggered/send-calibration-end.jsonl": "f2e029e5702ba5a2b972de3b308f097ef877856c67d36d7f762df54ec7879147",
+    "static_staggered/send-calibration-start.jsonl": "7eacfee054d81712d1f9aea2c4da2ecc3822ca730e6295f206c798026e58c50c",
+    "static_staggered/send-workload.jsonl": "f704f6f1b11908de3b8d96b1cc49ea912c839c07f3826eb8acc9abf56eb3ada4",
+    "static_staggered/observations.jsonl": "5c0d379bdc2f649d4a1b9917b883244f1b291ab68184bf8081032d47cc3da32b",
+    "static_staggered/destination.jsonl": "42b5a5a77ececa82eae2558d9b7e05fc8c9d5cc1742d79e888b7379d53d4a9d8",
+    "static_staggered/collector.jsonl": "c1b20be373843a9b11702a8fb2426499c111fd48bbc6fca355c82e5e170ceb2d",
+    "static_staggered/destination.pcap": "ec700c1c9d2bb1bd7fd22a14b7b252d5f34e16500bce006f2c946fdf3d1f7a40",
+    "static_staggered/collector.pcap": "17075dc9ad4bf42b1e3418d580b2c472702aaa1406b1458b753490ebae9d85dc",
+    "static_staggered/wire-observations.jsonl": "88e8c3fe5c5e96b45527862ca9be3576d574299a4281e4f5f553c8091afbf50f",
+    "tt_flow_tuned/packets-workload.json": "69005a17626b752ca6bda74d0f69e6e29262ec5d99e87b3f3e147b0e37fa40f2",
+    "tt_flow_tuned/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "tt_flow_tuned/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "tt_flow_tuned/send-calibration-end.jsonl": "35aa32d159e39c37740726118c97c204e962974608eec113789cdfdfa56895be",
+    "tt_flow_tuned/send-calibration-start.jsonl": "c828024bde40f1e000054f5b974d52495919b7d3975c6a61c4c15ba75d677521",
+    "tt_flow_tuned/send-workload.jsonl": "ce516550b8ef49f21c88c7f85ad4067a6d645be0e3652514c56080b69ed79524",
+    "tt_flow_tuned/observations.jsonl": "a7d17b3c362297bbd37f54481d33e03df6a2513821108e940e2a86a4c491b200",
+    "tt_flow_tuned/destination.jsonl": "a4580037f111d0aaa9353fb6b0836def4966f383ee60e9a5d9efb36768fa1fd7",
+    "tt_flow_tuned/collector.jsonl": "47e232b6ebcad207add0f56a9e57e1f60f541d8ac489e5d5af06ad796443b619",
+    "tt_flow_tuned/destination.pcap": "a0d76893a795f10f1691c7b2c8677e2acb373a3e764363374a5c343a55a73ddd",
+    "tt_flow_tuned/collector.pcap": "d2fabcbf4a13018dd1d62e4433e877e9939887265bc228675b35ad1dd8c59cb8",
+    "tt_flow_tuned/wire-observations.jsonl": "c292b8b8e7800fe29a32a5d158b2b3228e93bd412dc0d3423c1e0d0c21df0fe1",
+    "flow_stop_shared/packets-after-stop.json": "81613e7c7e03f1f1c890dae7b12fd6c22098e33e48918af267991905a332b0cd",
+    "flow_stop_shared/packets-workload.json": "3eb4b80a96dfcc0a078208939c6386ad829ea0ffe9238b691c81fbb9e85975a3",
+    "flow_stop_shared/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "flow_stop_shared/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "flow_stop_shared/send-calibration-end.jsonl": "b6ad91d044ca9f397f1b9ae6cbe070c59b6351c915713a7cdc5b0577c518c3a9",
+    "flow_stop_shared/send-calibration-start.jsonl": "003d92759ee3460cbf42ccf4cea4a1496b1eedd391edc68dbe25eb84af8750ed",
+    "flow_stop_shared/send-after-stop.jsonl": "cd4661f819eb26322feb2fb689daf1a7277c0454eab8c5526e639f5ade838d90",
+    "flow_stop_shared/send-workload.jsonl": "e294dfdb466f93e18c8685c7776ebe6f706a6607c593d7ecb030eb2e6b13d04d",
+    "flow_stop_shared/observations.jsonl": "fc0241f49d2f963e4927e6882a2c36f451a7e1dde58269fc967694ca6211b943",
+    "flow_stop_shared/destination.jsonl": "39354953405637e4835569a60650ebe5b1a83bf102bbea9a0caabccfc3f809ef",
+    "flow_stop_shared/collector.jsonl": "572f9d2e41bfe2d0161a735e13e0a71d2b2d463163bff73bb710b3167c1940a9",
+    "flow_stop_shared/destination.pcap": "c4aacaaeab6919d45036e398ddd22a8381f81ac73cb25116f67e02cc942ecd64",
+    "flow_stop_shared/collector.pcap": "f302676cc8b765b1c1b810ff106d3f4eb2d9672aea7cf2d664afa6cf9cf12622",
+    "flow_stop_shared/wire-observations.jsonl": "06e9b58134bcb1369ddc58290265fe9fe8d70d008db86f79fec6e6031e112c9d",
+    "online_authorization/packets-after-restore.json": "ffc5011f6d7888b7bacd325f6508e9d632c61c4530cf7b81901662832bda1325",
+    "online_authorization/packets-workload.json": "e2025501b13bd256b1d4c42aad1e41be3ff69e5696c8fe5aeecc890c93f26e6f",
+    "online_authorization/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "online_authorization/packets-after-update.json": "e678e38b9a95036c0052fdcd3d914e2c863cad2621c13ccf7216a4892f7eb1cf",
+    "online_authorization/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "online_authorization/send-after-restore.jsonl": "4aa0dfa9e4d3e09d102d853b8c0b2bfe3d828c4d015745b42b91da4528362a39",
+    "online_authorization/send-calibration-end.jsonl": "f7345e4bc2625eaf8807294fd2133cf5595864bdca3509548cf767e7636c412b",
+    "online_authorization/send-calibration-start.jsonl": "5a5e2deeaa473632ae6dce5c0fb8a24f3e6e59ae3489dcc644b985bce40bc40c",
+    "online_authorization/send-after-update.jsonl": "08eaf0b32a7af0099868b5bec9dd276d3b9c1ade241a793686414a3b97e27327",
+    "online_authorization/send-workload.jsonl": "8ed72700f9c84457be836ea587b46b98f23a7f6c9a70661eb85360219ac1e849",
+    "online_authorization/observations.jsonl": "1798f077683470524e5225e3d847096a3e51db7108bcd694e044a2b6d17986bd",
+    "online_authorization/destination.jsonl": "2090f7934277d29555962d134c82b5ff240f66ce0265b7d341baf940e994d414",
+    "online_authorization/collector.jsonl": "75192d496b654b13ac195cc573d33b884df50ee4e9266b0214157cc6af6e7b95",
+    "online_authorization/destination.pcap": "d48f79c194934fbc875b8a47678e7c73ef59a67b921435c9cdaea6d928eefcb2",
+    "online_authorization/collector.pcap": "ca39481ef4c026e914e63be9c2e24306fbad57fdc7ac63ce3cd40f3f41a2b1f3",
+    "online_authorization/wire-observations.jsonl": "7912ca9d57613ca8eff54bc9f98939ccda2eb3e69ac91947bbdea78f796026c4",
+    "permission_mtu/packets-workload.json": "14ec6f48c7ad379e2a7a1d9a12c4164597b75f53bdc3130d8e211c72c73744f6",
+    "permission_mtu/packets-calibration-end.json": "b9bbc3ddbd0b0046b52833680275ab7f113254b7a6aa688cf13c304c20d16647",
+    "permission_mtu/packets-calibration-start.json": "3b848f13d5f6e1ad6b8b1947d7f2ef1f6521aab4a6f0afc8f8284694898fdf7b",
+    "permission_mtu/send-calibration-end.jsonl": "386102348c44f3a4db545f20b9de9c3dad1e3169b280418f7413d97faebd19a3",
+    "permission_mtu/send-calibration-start.jsonl": "7175b8172ebedc02d855b742ed64445653ee31c31045b7f9a09258154ac6a902",
+    "permission_mtu/send-workload.jsonl": "e256b7e5ceed831e7421244879fca615f913276881d81c9331d7b763f812eb50",
+    "permission_mtu/observations.jsonl": "f72e4036f07bf8402e21ebd2a057a3278b332e6b6b483d1f80479d8f3b6ce21e",
+    "permission_mtu/destination.jsonl": "e1a0202014db25a5ecf2fb343f3457368035d796d4d409b7ace341210a7ca881",
+    "permission_mtu/collector.jsonl": "8e3d6181b909bdaa66dfaa8fa255a19dc22ba71d9f7c0f475a2c8dbecdc2a80d",
+    "permission_mtu/destination.pcap": "ad1fa18c66a5ba54ca157da3d462b084c01eca6d932243b297be14645b00b3a8",
+    "permission_mtu/collector.pcap": "b081c76b2e03d9bfd8539a62e1d9ff064b8ee0904021e24dd243078e366de83a",
+    "permission_mtu/wire-observations.jsonl": "4aa917326280b75adf707166c61887f0ba08f3d922ac3052023386187ff82992",
+    "control-events.jsonl": "d49c236db4116b6649d94487a4fb6f039b1df336ddc15ecb12d911d5bae49dcb",
+    "rpc-frame-counts.jsonl": "b6032f53815c2dc71d7f7fc8ea03aff04103ae974adb9c8fbd123b15320ed28a"
+  }
+}
