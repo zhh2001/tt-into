@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "grid_us": [
+      50000,
+      200000,
+      1000000
+    ],
+    "epoch_us": 1000000,
+    "horizon_us": 1000000,
+    "alpha": 0.5,
+    "clip": 4.0,
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "capacity": 1,
+    "nominal_ip_bytes": 120,
+    "nominal_hop_us": 20,
+    "nominal_egress_us": 5,
+    "nominal_report_delay_us": 1000,
+    "maximum_rate_pps": 100.0
+  },
+  "adaptive": {
+    "gain_margin": 0.05,
+    "reserve_fraction": 0.0,
+    "lookback_us": 3000000,
+    "cluster_fraction": 0.25,
+    "period_relative_mad": 0.2,
+    "measurement_start_us": 2000000,
+    "measurement_end_us": 10000000
+  },
+  "budget": {
+    "link_bytes_per_s": {
+      "e1": 3000,
+      "e2": 3000,
+      "e3": 4000
+    },
+    "export_bytes_per_s": 6000,
+    "control_bytes_per_s": 1200
+  },
+  "scope": "宽松正确性预算与固定初态，不含本轮静态训练或公平性能比较"
+}
