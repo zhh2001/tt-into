@@ -28,7 +28,7 @@ python3 experiments/plot_static_confirmation.py --analysis data/network-static-v
 
 重复图提供 [PNG](../figures/network-static/n3f-confirmation-02/static-confirmation-repeats.png) 和 [PDF](../figures/network-static/n3f-confirmation-02/static-confirmation-repeats.pdf)，配对条件差值图提供 [PNG](../figures/network-static/n3f-confirmation-02/static-confirmation-paired-differences.png) 和 [PDF](../figures/network-static/n3f-confirmation-02/static-confirmation-paired-differences.pdf)。图源、脚本及字体核查随图留档。
 
-[动态网络校准清单](../data/network-dynamic-plan/n3g-calibration-01/calibration-plan.json) 已 prepared，184 例尚未执行。1301/1423 已用于模型校准，与静态网络训练分开。全部方法使用最终共同初始化和相同字段、K、预算、合法信息接口。三种修复方法各六组预设，四种固定动态方法和静态参照完整保留。每修复方法选一个跨四场景的全局参数，有限排序和停止规则在清单内冻结，不扩大调参或提前生成正式测试。
+[动态网络校准清单](../data/network-dynamic-plan/n3g-calibration-01/calibration-plan.json) 保持首例前 prepared 快照。184 例已执行，结果和三种修复方法的全局参数见 [动态校准说明](README-dynamic-network-calibration.md)。1301/1423 已用于模型校准，与静态网络训练分开。全部方法使用最终共同初始化和相同字段、K、预算、合法信息接口。三种修复方法各六组预设，四种固定动态方法和静态参照完整保留。每修复方法选一个跨四场景的全局参数，有限排序和停止规则在清单内冻结，不扩大调参或提前生成正式测试。静态训练达标不保证迁移到校准业务仍达标，本轮切换的两个静态超限点完整保留。
 
 ```bash
 python3 experiments/prepare_dynamic_network_calibration.py --analysis data/network-static-validation/n3f-confirmation-02 --output data/network-dynamic-plan/<new-plan-id>

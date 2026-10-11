@@ -1,0 +1,232 @@
+{
+  "status": "methods_frozen",
+  "execution_ready": false,
+  "calibration_manifest_sha256": "97b3d82b8b9c8d3c0874d4463d759bfc652e4c711244a3bd7d15748fca305d53",
+  "calibration_plan_sha256": "945791b3d148d497b06cb9acbe7c21699bd16df0d7a458892575fe1f7416fc0f",
+  "frozen_parameters_sha256": "0275deb699949e6ed3ae9d5ba51aac5eaf06f6f0f784a319e108784bde6d33d6",
+  "methods": {
+    "static": {
+      "parameter_index": null,
+      "status": "fixed_reference",
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "feedback": {
+      "parameter_index": null,
+      "status": "fixed_reference",
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "local": {
+      "parameter_index": null,
+      "status": "fixed_reference",
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "joint": {
+      "parameter_index": null,
+      "status": "fixed_reference",
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "phase_joint": {
+      "parameter_index": null,
+      "status": "fixed_reference",
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "uniform_guard": {
+      "parameter_index": 3,
+      "status": "frozen",
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.1,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "phase_guard": {
+      "parameter_index": 2,
+      "status": "frozen",
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "phase_local_guard": {
+      "parameter_index": 4,
+      "status": "frozen",
+      "adaptive": {
+        "gain_margin": 0.15,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    }
+  },
+  "profiles": [
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        50000
+      ]
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ]
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        150000,
+        400000
+      ]
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        50000,
+        50000,
+        50000,
+        400000
+      ]
+    }
+  ],
+  "settings": {
+    "grid_us": [
+      50000,
+      100000,
+      150000,
+      200000,
+      400000,
+      600000,
+      800000,
+      1000000
+    ],
+    "epoch_us": 1000000,
+    "horizon_us": 1000000,
+    "alpha": 0.5,
+    "clip": 4.0,
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "capacity": 1,
+    "nominal_ip_bytes": 120,
+    "nominal_hop_us": 20,
+    "nominal_egress_us": 5,
+    "nominal_report_delay_us": 1000,
+    "maximum_rate_pps": 100.0
+  },
+  "fresh_business_count": 4,
+  "deployment_blocks": 2,
+  "expected_cases": 256,
+  "fresh_business_seeds": null,
+  "order_seed": 42426407,
+  "duration_s": 10,
+  "measurement_s": [
+    2,
+    10
+  ],
+  "notice_schedule_s": [
+    0,
+    5
+  ],
+  "budget": {
+    "high": {
+      "e1": 240,
+      "e2": 240,
+      "e3": 390,
+      "export": 900,
+      "api": 1200,
+      "local_notice": 128
+    },
+    "low": {
+      "e1": 180,
+      "e2": 180,
+      "e3": 300,
+      "export": 540,
+      "api": 1200,
+      "local_notice": 128
+    }
+  },
+  "primary_observer": "collector",
+  "primary_metric": "task_weighted_clipped_normalized_generation_age_loss",
+  "pairing_unit": "same_full_business_plan_and_deployment_block",
+  "independent_business_units": 4,
+  "reporting": [
+    "all_cases_and_failures",
+    "both_within_eligibility",
+    "conditional_paired_differences",
+    "separate_controller_age",
+    "six_separate_cost_layers",
+    "deployment_repeat_variation"
+  ],
+  "hypothesis_scope": "重点监测局部收益的迁移与四场景边界；有限方向检查，不提供一般显著性或普遍优越",
+  "execution_preconditions": [
+    "independent_runner_and_checker",
+    "historical_consumption_audit",
+    "fresh_seed_list_and_complete_order",
+    "pre_business_source_snapshot"
+  ],
+  "seed_generation_policy": "入口与检查准备后审计历史实际生成/执行业务；由3001起递增选择最小四个未消费整数，先冻结清单再生成业务",
+  "scope": "方法与评价合同已冻结，业务和执行源码清单尚待准备，未生成或消费新测试业务"
+}

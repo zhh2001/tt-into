@@ -1,0 +1,48 @@
+{
+  "settings": {
+    "grid_us": [
+      50000,
+      100000,
+      150000,
+      200000,
+      400000,
+      600000,
+      800000,
+      1000000
+    ],
+    "epoch_us": 1000000,
+    "horizon_us": 1000000,
+    "alpha": 0.5,
+    "clip": 4.0,
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "capacity": 1,
+    "nominal_ip_bytes": 120,
+    "nominal_hop_us": 20,
+    "nominal_egress_us": 5,
+    "nominal_report_delay_us": 1000,
+    "maximum_rate_pps": 100.0
+  },
+  "adaptive": {
+    "gain_margin": 0.05,
+    "reserve_fraction": 0.0,
+    "lookback_us": 3000000,
+    "cluster_fraction": 0.25,
+    "period_relative_mad": 0.2,
+    "measurement_start_us": 2000000,
+    "measurement_end_us": 10000000
+  },
+  "budget": {
+    "link_bytes_per_s": {
+      "e1": 180,
+      "e2": 180,
+      "e3": 300
+    },
+    "export_bytes_per_s": 540,
+    "control_bytes_per_s": 1200
+  },
+  "notice_budget_bytes_per_s": 128,
+  "model_parameters_frozen": false,
+  "network_parameter_candidate": 2,
+  "parameter_origin": "清单预设，本轮全局网络校准，不按场景选择"
+}
