@@ -1,0 +1,108 @@
+{
+  "start": {
+    "monotonic_ns": 77425286431435,
+    "cpu_count": 16,
+    "load": [
+      0.5693359375,
+      0.36181640625,
+      0.2392578125
+    ],
+    "clock_ticks_per_s": 100,
+    "memory": {
+      "MemTotal_bytes": 12541165568,
+      "MemAvailable_bytes": 8978223104
+    },
+    "processes": {
+      "controller": {
+        "cpu_ticks": 3369,
+        "rss_bytes": 109559808
+      },
+      "switch_1": {
+        "cpu_ticks": 46,
+        "rss_bytes": 22937600
+      },
+      "switch_2": {
+        "cpu_ticks": 51,
+        "rss_bytes": 22937600
+      },
+      "switch_3": {
+        "cpu_ticks": 77,
+        "rss_bytes": 28442624
+      },
+      "switch_4": {
+        "cpu_ticks": 85,
+        "rss_bytes": 25952256
+      }
+    }
+  },
+  "end": {
+    "monotonic_ns": 77436684112819,
+    "cpu_count": 16,
+    "load": [
+      0.55517578125,
+      0.3662109375,
+      0.2421875
+    ],
+    "clock_ticks_per_s": 100,
+    "memory": {
+      "MemTotal_bytes": 12541165568,
+      "MemAvailable_bytes": 8982618112
+    },
+    "processes": {
+      "controller": {
+        "cpu_ticks": 3463,
+        "rss_bytes": 109477888
+      },
+      "switch_1": {
+        "cpu_ticks": 53,
+        "rss_bytes": 22937600
+      },
+      "switch_2": {
+        "cpu_ticks": 57,
+        "rss_bytes": 22937600
+      },
+      "switch_3": {
+        "cpu_ticks": 88,
+        "rss_bytes": 28442624
+      },
+      "switch_4": {
+        "cpu_ticks": 98,
+        "rss_bytes": 25952256
+      }
+    }
+  },
+  "elapsed_s": 11.397681384,
+  "usage": {
+    "controller": {
+      "cpu_seconds": 0.94,
+      "mean_cpu_cores": 0.08247291429988265,
+      "rss_start_bytes": 109559808,
+      "rss_end_bytes": 109477888
+    },
+    "switch_1": {
+      "cpu_seconds": 0.07,
+      "mean_cpu_cores": 0.006141600001055092,
+      "rss_start_bytes": 22937600,
+      "rss_end_bytes": 22937600
+    },
+    "switch_2": {
+      "cpu_seconds": 0.06,
+      "mean_cpu_cores": 0.0052642285723329355,
+      "rss_start_bytes": 22937600,
+      "rss_end_bytes": 22937600
+    },
+    "switch_3": {
+      "cpu_seconds": 0.11,
+      "mean_cpu_cores": 0.009651085715943716,
+      "rss_start_bytes": 28442624,
+      "rss_end_bytes": 28442624
+    },
+    "switch_4": {
+      "cpu_seconds": 0.13,
+      "mean_cpu_cores": 0.011405828573388028,
+      "rss_start_bytes": 25952256,
+      "rss_end_bytes": 25952256
+    }
+  },
+  "scope": "案例安装至核对完成，控制器及四个 BMv2 进程；RSS 端点非峰值，不包括采集/发包子进程 CPU"
+}

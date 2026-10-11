@@ -1,0 +1,121 @@
+{
+  "status": "development_protocol_frozen",
+  "execution_ready": false,
+  "methods": [
+    "static",
+    "feedback",
+    "local",
+    "joint",
+    "phase_joint",
+    "uniform_guard",
+    "phase_guard",
+    "phase_local_guard"
+  ],
+  "primary_observer": "controller",
+  "secondary_observer": "collector",
+  "primary_metric": "task_weighted_clipped_normalized_generation_age_loss",
+  "clip": 4,
+  "fixed_packet_record_limit": 1,
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "duration_us": 10000000,
+  "warmup_us": [
+    0,
+    2000000
+  ],
+  "measurement_window_us": [
+    2000000,
+    10000000
+  ],
+  "grid_us": [
+    null,
+    50000,
+    100000,
+    150000,
+    200000,
+    400000,
+    600000,
+    800000,
+    1000000
+  ],
+  "configuration_count": 6561,
+  "max_candidates": 48,
+  "max_update_rpcs": 6,
+  "training_seeds": [
+    11,
+    29
+  ],
+  "calibration_seeds": [
+    1301,
+    1423
+  ],
+  "calibration_expected_cases": 184,
+  "guarded_parameter_count": 6,
+  "parameter_selection_pending": true,
+  "static_selection_pending": true,
+  "fresh_business_seeds": null,
+  "fresh_inputs_generated": false,
+  "test_business_count": 4,
+  "test_deployment_blocks": 2,
+  "test_expected_cases": 256,
+  "cost_layers": [
+    "e1",
+    "e2",
+    "e3",
+    "export",
+    "api_serialized",
+    "local_notice_payload"
+  ],
+  "budget": {
+    "high": {
+      "e1": 240,
+      "e2": 240,
+      "e3": 390,
+      "export": 900,
+      "api": 1200,
+      "local_notice": 128
+    },
+    "low": {
+      "e1": 180,
+      "e2": 180,
+      "e3": 300,
+      "export": 540,
+      "api": 1200,
+      "local_notice": 128
+    }
+  },
+  "training_selection": [
+    "both_businesses_within",
+    "minimax_controller_loss_upper",
+    "mean_controller_loss_upper",
+    "enabled_count",
+    "configuration_code"
+  ],
+  "calibration_selection": [
+    "non_within_case_count",
+    "sum_normalized_excess_upper",
+    "mean_controller_loss_upper",
+    "successful_updates",
+    "parameter_index"
+  ],
+  "frontier": "finite_subset_six_layer_worst_business_rates_and_worst_controller_loss_upper",
+  "test_reporting": [
+    "all_cases_and_failures",
+    "both_within_pairs",
+    "conditional_paired_differences",
+    "collector_and_controller_separately",
+    "six_separate_cost_layers",
+    "deployment_repeat_variation"
+  ],
+  "scope": "开发协议已冻结，静态与全局参数待训练/校准；四个新测试业务待最终审计，不生成新业务",
+  "confirmation_selection": [
+    "all_six_deployments_within",
+    "worst_controller_loss_upper",
+    "mean_controller_loss_upper",
+    "enabled_count",
+    "configuration_code"
+  ],
+  "confirmation_blocks": 3,
+  "confirmation_expected_cases": 72,
+  "network_restart_per_block": true
+}

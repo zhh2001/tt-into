@@ -1,0 +1,286 @@
+{
+  "groups": [
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "candidates": [
+        {
+          "role": "previous_common_initialization",
+          "candidate_index": 2,
+          "config": [
+            150000,
+            400000,
+            200000,
+            50000
+          ],
+          "training_rank": [
+            0.8152385522631614,
+            0.7704544717952737,
+            4,
+            [
+              150000,
+              400000,
+              200000,
+              50000
+            ]
+          ]
+        },
+        {
+          "role": "training_selected",
+          "candidate_index": 7,
+          "config": [
+            200000,
+            400000,
+            200000,
+            100000
+          ],
+          "training_rank": [
+            0.8126382163646428,
+            0.7721213955445996,
+            4,
+            [
+              200000,
+              400000,
+              200000,
+              100000
+            ]
+          ]
+        },
+        {
+          "role": "best_other_feasible",
+          "candidate_index": 6,
+          "config": [
+            150000,
+            400000,
+            200000,
+            200000
+          ],
+          "training_rank": [
+            0.8129129872571381,
+            0.7705761862698692,
+            4,
+            [
+              150000,
+              400000,
+              200000,
+              200000
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidates": [
+        {
+          "role": "previous_common_initialization",
+          "candidate_index": 3,
+          "config": [
+            600000,
+            100000,
+            400000,
+            150000
+          ],
+          "training_rank": [
+            1.0039834978187905,
+            0.9945603456962706,
+            4,
+            [
+              600000,
+              100000,
+              400000,
+              150000
+            ]
+          ]
+        },
+        {
+          "role": "training_selected",
+          "candidate_index": 2,
+          "config": [
+            600000,
+            50000,
+            400000,
+            150000
+          ],
+          "training_rank": [
+            0.9858968101707324,
+            0.9812634724462193,
+            4,
+            [
+              600000,
+              50000,
+              400000,
+              150000
+            ]
+          ]
+        },
+        {
+          "role": "best_other_feasible",
+          "candidate_index": 4,
+          "config": [
+            600000,
+            50000,
+            400000,
+            200000
+          ],
+          "training_rank": [
+            0.9876182054968026,
+            0.9837685109642261,
+            4,
+            [
+              600000,
+              50000,
+              400000,
+              200000
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "candidates": [
+        {
+          "role": "previous_common_initialization",
+          "candidate_index": 2,
+          "config": [
+            400000,
+            150000,
+            150000,
+            400000
+          ],
+          "training_rank": [
+            1.0562899522591827,
+            1.0323518585984397,
+            4,
+            [
+              400000,
+              150000,
+              150000,
+              400000
+            ]
+          ]
+        },
+        {
+          "role": "training_selected",
+          "candidate_index": 5,
+          "config": [
+            400000,
+            200000,
+            200000,
+            400000
+          ],
+          "training_rank": [
+            1.037081236065523,
+            1.0222116440236988,
+            4,
+            [
+              400000,
+              200000,
+              200000,
+              400000
+            ]
+          ]
+        },
+        {
+          "role": "best_other_feasible",
+          "candidate_index": 4,
+          "config": [
+            400000,
+            150000,
+            200000,
+            400000
+          ],
+          "training_rank": [
+            1.038428728114908,
+            1.0223020753326597,
+            4,
+            [
+              400000,
+              150000,
+              200000,
+              400000
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidates": [
+        {
+          "role": "previous_common_initialization",
+          "candidate_index": 5,
+          "config": [
+            50000,
+            50000,
+            50000,
+            400000
+          ],
+          "training_rank": [
+            1.4323422695652093,
+            1.408416469399706,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              400000
+            ]
+          ]
+        },
+        {
+          "role": "training_selected",
+          "candidate_index": 11,
+          "config": [
+            100000,
+            50000,
+            50000,
+            50000
+          ],
+          "training_rank": [
+            1.4288070449949173,
+            1.405597581798349,
+            4,
+            [
+              100000,
+              50000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "role": "best_other_feasible",
+          "candidate_index": 1,
+          "config": [
+            50000,
+            50000,
+            50000,
+            50000
+          ],
+          "training_rank": [
+            1.4314318685544294,
+            1.4078934855861673,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              50000
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "data/observer-training-validation/n4c-static-01/manifest.json": "6b20e311f35ef1fd13ac33239ac1d62b4831fa4fecba4818887b6d32e7431fbc",
+    "data/observer-training-validation/n4c-static-01/candidate-scores.json": "aaa691a1941d831f077a29e284eddbb2bdc110692661ea29591cba2a9592a4c5",
+    "data/observer-training-validation/n4c-static-01/training-selections.json": "16c8bc67138c15edbdbfb373411340ee2f37a3e3879254a57ee58446fe7539d9",
+    "data/observer-training-audit/n4c-static-01/independent-checks.json": "5ca6c0b7c51c5ffbe1a76f2ea1ee41770aba2174cc48ec53d34de6129084f264"
+  }
+}
