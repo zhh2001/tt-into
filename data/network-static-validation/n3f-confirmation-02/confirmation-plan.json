@@ -1,0 +1,778 @@
+{
+  "status": "prepared",
+  "scope": "事后有限重复确认，未执行，不是新业务盲测或新增网格搜索",
+  "analysis_manifest_sha256": "4d0500ee937e89b8346846aa33c9bd91e26a372cd7a119e6339df7fa1d2e6745",
+  "diagnostic_manifest_sha256": "d7cd90d0b872ac55b8c1550797ec5181cc7a4ca29e4ebc0029bc4ccb193f42c5",
+  "input_sha256": {
+    "network-selections.json": "4a6adcae9aba3f0880defd9939ded07a5afa00b06f19a01e79efc3ab2458a4fa",
+    "candidate-plan.json": "8af74004869e0b644b422a077503ae96403c52fef1b0e3d9ecf1083ac3292237",
+    "summary-checks.json": "e271a6095ba728bd97b164756497339b4bfca779e652000c3a25139f8378ca34"
+  },
+  "source_sha256": {
+    "experiments/prepare_static_confirmation.py": "e0199f1f7e83233e16442306f7905df8931fc654564965a8126c4a28a073f143"
+  },
+  "business_seeds": [
+    11,
+    29
+  ],
+  "blocks": 3,
+  "order_seeds": [
+    17320508,
+    26457513,
+    31622777
+  ],
+  "expected_cases": 36,
+  "unique_config_cells": [
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        150000,
+        400000,
+        200000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ]
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        600000,
+        50000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ]
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 3,
+      "config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "network_selected"
+      ]
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "candidate_index": 2,
+      "config": [
+        400000,
+        150000,
+        150000,
+        400000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ]
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 1,
+      "config": [
+        50000,
+        50000,
+        50000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ]
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 5,
+      "config": [
+        50000,
+        50000,
+        50000,
+        400000
+      ],
+      "roles": [
+        "network_selected"
+      ]
+    }
+  ],
+  "execution_order": [
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "candidate_index": 2,
+      "config": [
+        400000,
+        150000,
+        150000,
+        400000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-switch-low-s11-c02"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 1,
+      "config": [
+        50000,
+        50000,
+        50000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 29,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-bursty_jitter-low-s29-c01"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 3,
+      "config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-shared_priority-high-s11-c03"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 3,
+      "config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-shared_priority-high-s29-c03"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 1,
+      "config": [
+        50000,
+        50000,
+        50000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 11,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-bursty_jitter-low-s11-c01"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        600000,
+        50000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 11,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-shared_priority-high-s11-c02"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 5,
+      "config": [
+        50000,
+        50000,
+        50000,
+        400000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-bursty_jitter-low-s11-c05"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        150000,
+        400000,
+        200000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-stable-high-s29-c02"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        150000,
+        400000,
+        200000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-stable-high-s11-c02"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 5,
+      "config": [
+        50000,
+        50000,
+        50000,
+        400000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-bursty_jitter-low-s29-c05"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "candidate_index": 2,
+      "config": [
+        400000,
+        150000,
+        150000,
+        400000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-switch-low-s29-c02"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        600000,
+        50000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 29,
+      "block": 1,
+      "order_seed": 17320508,
+      "name": "b01-shared_priority-high-s29-c02"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "candidate_index": 2,
+      "config": [
+        400000,
+        150000,
+        150000,
+        400000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-switch-low-s29-c02"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 5,
+      "config": [
+        50000,
+        50000,
+        50000,
+        400000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-bursty_jitter-low-s11-c05"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 1,
+      "config": [
+        50000,
+        50000,
+        50000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 29,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-bursty_jitter-low-s29-c01"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 3,
+      "config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-shared_priority-high-s11-c03"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        600000,
+        50000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 29,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-shared_priority-high-s29-c02"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 3,
+      "config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-shared_priority-high-s29-c03"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 1,
+      "config": [
+        50000,
+        50000,
+        50000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 11,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-bursty_jitter-low-s11-c01"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        150000,
+        400000,
+        200000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-stable-high-s29-c02"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "candidate_index": 2,
+      "config": [
+        400000,
+        150000,
+        150000,
+        400000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-switch-low-s11-c02"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        150000,
+        400000,
+        200000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-stable-high-s11-c02"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 5,
+      "config": [
+        50000,
+        50000,
+        50000,
+        400000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-bursty_jitter-low-s29-c05"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        600000,
+        50000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 11,
+      "block": 2,
+      "order_seed": 26457513,
+      "name": "b02-shared_priority-high-s11-c02"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "candidate_index": 2,
+      "config": [
+        400000,
+        150000,
+        150000,
+        400000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-switch-low-s11-c02"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 3,
+      "config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-shared_priority-high-s11-c03"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        600000,
+        50000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 29,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-shared_priority-high-s29-c02"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 3,
+      "config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-shared_priority-high-s29-c03"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 5,
+      "config": [
+        50000,
+        50000,
+        50000,
+        400000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-bursty_jitter-low-s11-c05"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        150000,
+        400000,
+        200000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-stable-high-s29-c02"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "candidate_index": 2,
+      "config": [
+        400000,
+        150000,
+        150000,
+        400000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-switch-low-s29-c02"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 5,
+      "config": [
+        50000,
+        50000,
+        50000,
+        400000
+      ],
+      "roles": [
+        "network_selected"
+      ],
+      "seed": 29,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-bursty_jitter-low-s29-c05"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 1,
+      "config": [
+        50000,
+        50000,
+        50000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 11,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-bursty_jitter-low-s11-c01"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        150000,
+        400000,
+        200000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference",
+        "network_selected"
+      ],
+      "seed": 11,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-stable-high-s11-c02"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "candidate_index": 2,
+      "config": [
+        600000,
+        50000,
+        400000,
+        150000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 11,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-shared_priority-high-s11-c02"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "candidate_index": 1,
+      "config": [
+        50000,
+        50000,
+        50000,
+        50000
+      ],
+      "roles": [
+        "frozen_model_reference"
+      ],
+      "seed": 29,
+      "block": 3,
+      "order_seed": 31622777,
+      "name": "b03-bursty_jitter-low-s29-c01"
+    }
+  ],
+  "selection_rule": "候选全部六个完整案例费用上界达标且年龄可评价，再按最坏损失上界、平均上界、启用项数、配置编码排序",
+  "evaluation": "两业务每候选三个部署重复，均为已消费训练；采集端主选择、控制器视图诊断，保留所有失败与区间",
+  "stopping_rule": "不凭微小重叠差距扩展网格；完成后冻结静态对照并准备动态校准，工程错误及来源破坏另处理"
+}

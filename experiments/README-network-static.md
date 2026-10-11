@@ -45,7 +45,7 @@ python3 -m unittest discover -s tests -p test_static_transfer.py -v
 
 全部候选及排除点图为 [PNG](../figures/network-static/n3e-static-01/static-candidates-age-budget.png) 和 [PDF](../figures/network-static/n3e-static-01/static-candidates-age-budget.pdf)，两处年龄图为 [PNG](../figures/network-static/n3e-static-01/static-model-network-observers.png) 和 [PDF](../figures/network-static/n3e-static-01/static-model-network-observers.pdf)。两种子均值条件区间不是置信区间，不能从报告数推导统计独立性。
 
-[36 例确认清单](../data/network-static-plan/n3f-confirmation-01/confirmation-plan.json) 已 prepared，尚未执行。它只包含四单元的模型参照与网络选择去重后的六个配置，两个训练业务各三个部署重复，不追加网格搜索或消费新测试业务。
+[36 例确认清单](../data/network-static-plan/n3f-confirmation-01/confirmation-plan.json) 保持首例前 prepared 输入，实际确认已完成，见 [重复确认及冻结结果](README-static-confirmation.md)。它只包含四单元的模型参照与网络选择去重后的六个配置，两个训练业务各三个部署重复，不追加网格搜索或消费新测试业务。
 
 ```bash
 python3 experiments/prepare_static_confirmation.py --analysis data/network-static-validation/n3e-static-01 --diagnostic data/network-static-diagnostics/n3e-transfer-01 --output data/network-static-plan/<new-confirmation-plan-id>
