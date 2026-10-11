@@ -1,0 +1,5250 @@
+[
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "feedback",
+    "cases": [
+      "bursty_jitter-low-s3005-b1-feedback",
+      "bursty_jitter-low-s3005-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.3214767793425484,
+        1.3271187971842802
+      ],
+      [
+        1.3223050970019186,
+        1.32785749631077
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0007835083929301767,
+    "collector_loss_bounds": [
+      [
+        1.0961306309711412,
+        1.0993186529521908
+      ],
+      [
+        1.096426870555935,
+        1.0994028503018436
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00019021846722333535
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "joint",
+    "cases": [
+      "bursty_jitter-low-s3005-b1-joint",
+      "bursty_jitter-low-s3005-b2-joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.9904867088998757,
+        1.9965669906740224
+      ],
+      [
+        1.9905332381520313,
+        1.9966504883609755
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 6.501346955456455e-05,
+    "collector_loss_bounds": [
+      [
+        1.621809964961897,
+        1.6256534430720326
+      ],
+      [
+        1.6230521469836194,
+        1.6267777903715808
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0011832646606351194
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "local",
+    "cases": [
+      "bursty_jitter-low-s3005-b1-local",
+      "bursty_jitter-low-s3005-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 12,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.6749094143355885,
+        1.67997608017559
+      ],
+      [
+        1.5591886516711253,
+        1.5648841553799657
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.11540634373004388,
+    "collector_loss_bounds": [
+      [
+        1.4695744954084633,
+        1.4729466249479248
+      ],
+      [
+        1.3621022614705312,
+        1.3657496990898186
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.1073345798980192
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_guard",
+    "cases": [
+      "bursty_jitter-low-s3005-b1-phase_guard",
+      "bursty_jitter-low-s3005-b2-phase_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.321832950451362,
+        1.328623798757818
+      ],
+      [
+        1.3216244081844026,
+        1.3279728913139952
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.000429724855391278,
+    "collector_loss_bounds": [
+      [
+        1.0942238792096288,
+        1.0985909664092364
+      ],
+      [
+        1.0949282489780938,
+        1.098614023584984
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00036371347210639726
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_joint",
+    "cases": [
+      "bursty_jitter-low-s3005-b1-phase_joint",
+      "bursty_jitter-low-s3005-b2-phase_joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.320797780932942,
+        1.326458505714007
+      ],
+      [
+        1.3220240396969862,
+        1.3275956532953122
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0011817031726746308,
+    "collector_loss_bounds": [
+      [
+        1.094134045630469,
+        1.0975287042485071
+      ],
+      [
+        1.0944485037118117,
+        1.0974490963927426
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00011742511278933776
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_local_guard",
+    "cases": [
+      "bursty_jitter-low-s3005-b1-phase_local_guard",
+      "bursty_jitter-low-s3005-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 20,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.4246014514389582,
+        1.429672461093347
+      ],
+      [
+        1.5228407757603637,
+        1.5280283391513048
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.09829760118968167,
+    "collector_loss_bounds": [
+      [
+        1.2100181046051712,
+        1.2130381422652794
+      ],
+      [
+        1.3049511286574198,
+        1.3080570156924953
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.09497594873973214
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "static",
+    "cases": [
+      "bursty_jitter-low-s3005-b1-static",
+      "bursty_jitter-low-s3005-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.321239409048185,
+        1.3273188493439463
+      ],
+      [
+        1.3215838559962518,
+        1.327666966149238
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00034628187667928856,
+    "collector_loss_bounds": [
+      [
+        1.095471082660693,
+        1.0990159549986316
+      ],
+      [
+        1.0957808364149872,
+        1.09936807739802
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0003309380768412584
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "uniform_guard",
+    "cases": [
+      "bursty_jitter-low-s3005-b1-uniform_guard",
+      "bursty_jitter-low-s3005-b2-uniform_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 11,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.960776455444235,
+        1.9657618692013334
+      ],
+      [
+        2.0925876399517596,
+        2.0975698786499914
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.13180959697809125,
+    "collector_loss_bounds": [
+      [
+        1.62748773918859,
+        1.630457617165091
+      ],
+      [
+        1.736750338847314,
+        1.7398246303914213
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.10931480644252711
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "feedback",
+    "cases": [
+      "bursty_jitter-low-s3006-b1-feedback",
+      "bursty_jitter-low-s3006-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.2275642950744619,
+        1.2356549295836226
+      ],
+      [
+        1.228507328624653,
+        1.234589559033561
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 6.116849993542672e-05,
+    "collector_loss_bounds": [
+      [
+        0.9801605465130591,
+        0.9858484959592967
+      ],
+      [
+        0.9809956668574907,
+        0.9844967528018141
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0002583114065254355
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "joint",
+    "cases": [
+      "bursty_jitter-low-s3006-b1-joint",
+      "bursty_jitter-low-s3006-b2-joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.8022853301995072,
+        1.8096240800120857
+      ],
+      [
+        1.783073226308085,
+        1.788811695278823
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.020012244312342498,
+    "collector_loss_bounds": [
+      [
+        1.5877108917441545,
+        1.5933983919763197
+      ],
+      [
+        1.5883133594259586,
+        1.592092996891475
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00035146370152006057
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "local",
+    "cases": [
+      "bursty_jitter-low-s3006-b1-local",
+      "bursty_jitter-low-s3006-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 40,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.6424250445775574,
+        1.6475403565103584
+      ],
+      [
+        1.587825005904655,
+        1.5931435403304655
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.054498427426397766,
+    "collector_loss_bounds": [
+      [
+        1.3760051998530296,
+        1.3794814564189566
+      ],
+      [
+        1.3693204465810045,
+        1.37274456995785
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.006710819866565965
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_guard",
+    "cases": [
+      "bursty_jitter-low-s3006-b1-phase_guard",
+      "bursty_jitter-low-s3006-b2-phase_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.227618697911108,
+        1.2331666163912707
+      ],
+      [
+        1.2277933872888507,
+        1.2341985734823755
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0006033232344240247,
+    "collector_loss_bounds": [
+      [
+        0.979896064035893,
+        0.9833506996393006
+      ],
+      [
+        0.980697362387785,
+        0.9846964234824658
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0010735110975286233
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_joint",
+    "cases": [
+      "bursty_jitter-low-s3006-b1-phase_joint",
+      "bursty_jitter-low-s3006-b2-phase_joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.2178283019618432,
+        1.2233807534488723
+      ],
+      [
+        1.1942052213643652,
+        1.200534152448405
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.023234840798972645,
+    "collector_loss_bounds": [
+      [
+        0.9799340647331574,
+        0.9830734711865278
+      ],
+      [
+        0.9797359307135539,
+        0.98379848352759
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0002634391607293507
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_local_guard",
+    "cases": [
+      "bursty_jitter-low-s3006-b1-phase_local_guard",
+      "bursty_jitter-low-s3006-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.3870862470307106,
+        1.392607961506151
+      ],
+      [
+        1.3818718833523624,
+        1.3879155744519667
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.004953375366266277,
+    "collector_loss_bounds": [
+      [
+        1.143504454507478,
+        1.1468031707258348
+      ],
+      [
+        1.1429631397754219,
+        1.1465798916221488
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0003822969178708391
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "static",
+    "cases": [
+      "bursty_jitter-low-s3006-b1-static",
+      "bursty_jitter-low-s3006-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.222038250002931,
+        1.22968182602169
+      ],
+      [
+        1.2176738235247726,
+        1.2239252280844268
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0050605122077107545,
+    "collector_loss_bounds": [
+      [
+        0.9796200415277602,
+        0.9849026959356232
+      ],
+      [
+        0.9804272538430848,
+        0.9842290010946874
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 6.675873719441672e-05
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "uniform_guard",
+    "cases": [
+      "bursty_jitter-low-s3006-b1-uniform_guard",
+      "bursty_jitter-low-s3006-b2-uniform_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.9106993407879276,
+        1.9168790703635696
+      ],
+      [
+        1.9106195693812558,
+        1.9155189850990673
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0007199283355869834,
+    "collector_loss_bounds": [
+      [
+        1.707880715740834,
+        1.7122310253221253
+      ],
+      [
+        1.7072710832980975,
+        1.710733564136106
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0010535468143777482
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "feedback",
+    "cases": [
+      "bursty_jitter-low-s3007-b1-feedback",
+      "bursty_jitter-low-s3007-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.5449304498058958,
+        1.553115705561396
+      ],
+      [
+        1.5221463603880336,
+        1.5282431231706042
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.02382833590432698,
+    "collector_loss_bounds": [
+      [
+        1.1926780479651744,
+        1.1978677169856544
+      ],
+      [
+        1.1938976947816666,
+        1.1971459929063357
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0002489613685867642
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "joint",
+    "cases": [
+      "bursty_jitter-low-s3007-b1-joint",
+      "bursty_jitter-low-s3007-b2-joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 12,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.971667920389847,
+        1.977203750113906
+      ],
+      [
+        1.9910688891618007,
+        1.99726801249874
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.019732615578393897,
+    "collector_loss_bounds": [
+      [
+        1.6274017005486257,
+        1.6310021006987925
+      ],
+      [
+        1.6718614079896603,
+        1.6757264403373928
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.044592023539817394
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "local",
+    "cases": [
+      "bursty_jitter-low-s3007-b1-local",
+      "bursty_jitter-low-s3007-b2-local"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.7125389868023224,
+        1.71870071840853
+      ],
+      [
+        1.713425502101158,
+        1.7193082266781432
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0007470117842245383,
+    "collector_loss_bounds": [
+      [
+        1.402353216718908,
+        1.4065019893450823
+      ],
+      [
+        1.4028402925247558,
+        1.406433794863062
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00020944066191397326
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_guard",
+    "cases": [
+      "bursty_jitter-low-s3007-b1-phase_guard",
+      "bursty_jitter-low-s3007-b2-phase_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.5439871581470586,
+        1.5517062590586834
+      ],
+      [
+        1.5196903452727863,
+        1.5263683557937275
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.02481735806961405,
+    "collector_loss_bounds": [
+      [
+        1.1926025429002312,
+        1.1976068905378408
+      ],
+      [
+        1.19329831930716,
+        1.1973729474076167
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00023091663835250742
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_joint",
+    "cases": [
+      "bursty_jitter-low-s3007-b1-phase_joint",
+      "bursty_jitter-low-s3007-b2-phase_joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.5402036894054927,
+        1.5459868176493892
+      ],
+      [
+        1.5196849612384207,
+        1.5251615424274625
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.020672001694499453,
+    "collector_loss_bounds": [
+      [
+        1.193933803304197,
+        1.1969186199192186
+      ],
+      [
+        1.1931178067020731,
+        1.1961443278208528
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0007951443502449695
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_local_guard",
+    "cases": [
+      "bursty_jitter-low-s3007-b1-phase_local_guard",
+      "bursty_jitter-low-s3007-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.5928218261069265,
+        1.6010336027490604
+      ],
+      [
+        1.5929099717141741,
+        1.5984388637689002
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00125329668645624,
+    "collector_loss_bounds": [
+      [
+        1.2450524683611635,
+        1.2504530703153942
+      ],
+      [
+        1.2465637889005987,
+        1.249645061400599
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0003516558123199953
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "static",
+    "cases": [
+      "bursty_jitter-low-s3007-b1-static",
+      "bursty_jitter-low-s3007-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.5468819845083552,
+        1.552722564550009
+      ],
+      [
+        1.546010230768666,
+        1.553339429224175
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0001274445327617002,
+    "collector_loss_bounds": [
+      [
+        1.1920589021081123,
+        1.1948389848843948
+      ],
+      [
+        1.1938196103491117,
+        1.1976969432020248
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.002309333279314707
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "uniform_guard",
+    "cases": [
+      "bursty_jitter-low-s3007-b1-uniform_guard",
+      "bursty_jitter-low-s3007-b2-uniform_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        2.0588019411664082,
+        2.0641241673508866
+      ],
+      [
+        2.0834155173663267,
+        2.0890410481184847
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.024765228483758506,
+    "collector_loss_bounds": [
+      [
+        1.7427818988151667,
+        1.7461207079474474
+      ],
+      [
+        1.7451120323827878,
+        1.7483177399435752
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0022635827818744403
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "feedback",
+    "cases": [
+      "bursty_jitter-low-s3008-b1-feedback",
+      "bursty_jitter-low-s3008-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.312192528676088,
+        1.318692722110948
+      ],
+      [
+        1.315814069466185,
+        1.323433460829718
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.004181139754433794,
+    "collector_loss_bounds": [
+      [
+        1.1179777812689533,
+        1.1218125012403115
+      ],
+      [
+        1.1158233467818657,
+        1.1211417444404579
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0014125956434707376
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "joint",
+    "cases": [
+      "bursty_jitter-low-s3008-b1-joint",
+      "bursty_jitter-low-s3008-b2-joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 15,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.766016431095472,
+        1.77213569436677
+      ],
+      [
+        1.7620153248268586,
+        1.7686522282406523
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0037422861973654964,
+    "collector_loss_bounds": [
+      [
+        1.5967397553856975,
+        1.6006879171017856
+      ],
+      [
+        1.5631026228401603,
+        1.5679079339283706
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.03320855785947607
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "local",
+    "cases": [
+      "bursty_jitter-low-s3008-b1-local",
+      "bursty_jitter-low-s3008-b2-local"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.6556575330407368,
+        1.6614659496936337
+      ],
+      [
+        1.6463307589363372,
+        1.652901117762446
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.008945803017793574,
+    "collector_loss_bounds": [
+      [
+        1.3915969694204438,
+        1.3954413015039093
+      ],
+      [
+        1.3914113116999904,
+        1.3960439970533183
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00020851891447781767
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_guard",
+    "cases": [
+      "bursty_jitter-low-s3008-b1-phase_guard",
+      "bursty_jitter-low-s3008-b2-phase_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.4252853379532742,
+        1.4306897161133696
+      ],
+      [
+        1.4296309727088548,
+        1.4352598450294458
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.004457881835828514,
+    "collector_loss_bounds": [
+      [
+        1.212927057001943,
+        1.2160124954444365
+      ],
+      [
+        1.212943344579531,
+        1.216231231338547
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.000117511735849396
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_joint",
+    "cases": [
+      "bursty_jitter-low-s3008-b1-phase_joint",
+      "bursty_jitter-low-s3008-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 6,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.402093181307047,
+        1.4067231427330533
+      ],
+      [
+        1.4614759612452028,
+        1.466177679940332
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.05941865857271744,
+    "collector_loss_bounds": [
+      [
+        1.2128705320823416,
+        1.2155807862802197
+      ],
+      [
+        1.2441360287222358,
+        1.2469883988970645
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.031336554628369484
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_local_guard",
+    "cases": [
+      "bursty_jitter-low-s3008-b1-phase_local_guard",
+      "bursty_jitter-low-s3008-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 5,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.5761642880162905,
+        1.5813785871045314
+      ],
+      [
+        1.4987137255473764,
+        1.5038864989666727
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.0774713253033863,
+    "collector_loss_bounds": [
+      [
+        1.3764424367646584,
+        1.379692661035509
+      ],
+      [
+        1.3001927363865815,
+        1.303273702224668
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.07633432959445896
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "static",
+    "cases": [
+      "bursty_jitter-low-s3008-b1-static",
+      "bursty_jitter-low-s3008-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.308518562289461,
+        1.3142740319261756
+      ],
+      [
+        1.3231247143634004,
+        1.329276070579479
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.014804095363621483,
+    "collector_loss_bounds": [
+      [
+        1.116787222912844,
+        1.1200259644132629
+      ],
+      [
+        1.1177093060253507,
+        1.1212620824054036
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0010791005523238528
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "uniform_guard",
+    "cases": [
+      "bursty_jitter-low-s3008-b1-uniform_guard",
+      "bursty_jitter-low-s3008-b2-uniform_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.9306117169667953,
+        1.936447904321767
+      ],
+      [
+        1.9077015585584263,
+        1.9123075511179828
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.02352525580607656,
+    "collector_loss_bounds": [
+      [
+        1.7146949181638436,
+        1.7184162438111166
+      ],
+      [
+        1.713894241344368,
+        1.7168068252607878
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0012050476849019276
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "feedback",
+    "cases": [
+      "shared_priority-high-s3005-b1-feedback",
+      "shared_priority-high-s3005-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9478015153485366,
+        0.9589479522468414
+      ],
+      [
+        0.9471390728273222,
+        0.9580065125255596
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0008019411212480954,
+    "collector_loss_bounds": [
+      [
+        0.5948255783755567,
+        0.6007929792055822
+      ],
+      [
+        0.5946122557318488,
+        0.6001997143229345
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0004032937631778255
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "joint",
+    "cases": [
+      "shared_priority-high-s3005-b1-joint",
+      "shared_priority-high-s3005-b2-joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 75,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0888121559080413,
+        1.099897110292978
+      ],
+      [
+        1.0662664344343977,
+        1.0759388962220002
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.023251967772310644,
+    "collector_loss_bounds": [
+      [
+        0.642408741239624,
+        0.6481549651734909
+      ],
+      [
+        0.6856524865098587,
+        0.6911045027438241
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.04309664142028402
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "local",
+    "cases": [
+      "shared_priority-high-s3005-b1-local",
+      "shared_priority-high-s3005-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 18,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.556601491641321,
+        1.5654409375751575
+      ],
+      [
+        1.555894603065172,
+        1.5648675162991261
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0006401549260901529,
+    "collector_loss_bounds": [
+      [
+        1.1232802831917534,
+        1.1284619052082379
+      ],
+      [
+        1.1183459992701763,
+        1.1233057131444129
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.005045237992701068
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_guard",
+    "cases": [
+      "shared_priority-high-s3005-b1-phase_guard",
+      "shared_priority-high-s3005-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 47,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.891287629055557,
+        0.9020105176004449
+      ],
+      [
+        1.4357911681067208,
+        1.442634419718415
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.542563720584567,
+    "collector_loss_bounds": [
+      [
+        0.5590661332733391,
+        0.5647515133027511
+      ],
+      [
+        0.6482514688850521,
+        0.6537941833491707
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.08911400282906623
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_joint",
+    "cases": [
+      "shared_priority-high-s3005-b1-phase_joint",
+      "shared_priority-high-s3005-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 30,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9506640496186547,
+        0.9615995019191812
+      ],
+      [
+        0.9273200037926377,
+        0.9380540543130913
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.023444746716053455,
+    "collector_loss_bounds": [
+      [
+        0.5880274484660312,
+        0.5938125810405098
+      ],
+      [
+        0.5786367357041774,
+        0.5840270384363168
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.009588127683023417
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_local_guard",
+    "cases": [
+      "shared_priority-high-s3005-b1-phase_local_guard",
+      "shared_priority-high-s3005-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 32,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.1029424537076076,
+        1.1135773051686462
+      ],
+      [
+        1.4616700396187992,
+        1.469778271903855
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.3574642763232003,
+    "collector_loss_bounds": [
+      [
+        0.7470540930836075,
+        0.752629853290791
+      ],
+      [
+        1.1308061576560622,
+        1.1356716376445761
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.3833969244631199
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "static",
+    "cases": [
+      "shared_priority-high-s3005-b1-static",
+      "shared_priority-high-s3005-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9462653919503291,
+        0.9568829287457709
+      ],
+      [
+        1.1836204783300386,
+        1.193893341716878
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.2371827496754083,
+    "collector_loss_bounds": [
+      [
+        0.5946665326251748,
+        0.6004205522456301
+      ],
+      [
+        0.5938204785436888,
+        0.5995323433796677
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.000867131473724192
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "uniform_guard",
+    "cases": [
+      "shared_priority-high-s3005-b1-uniform_guard",
+      "shared_priority-high-s3005-b2-uniform_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0171656305792875,
+        1.0281071587141657
+      ],
+      [
+        1.0143834230655968,
+        1.0248110429262398
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0030391616508085306,
+    "collector_loss_bounds": [
+      [
+        0.6005777594143596,
+        0.6059486709455788
+      ],
+      [
+        0.6002249769732871,
+        0.6060560487817134
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00012270230246902436
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "feedback",
+    "cases": [
+      "shared_priority-high-s3006-b1-feedback",
+      "shared_priority-high-s3006-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0400210280408335,
+        1.0518290858035382
+      ],
+      [
+        1.0392243556101937,
+        1.0508558561639463
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0008849510351158774,
+    "collector_loss_bounds": [
+      [
+        0.639617215387876,
+        0.6458979943174669
+      ],
+      [
+        0.6407266601615225,
+        0.6468216682669348
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.001016559361557201
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "joint",
+    "cases": [
+      "shared_priority-high-s3006-b1-joint",
+      "shared_priority-high-s3006-b2-joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "exceeds",
+      "exceeds"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9854620955468717,
+        0.9964318561868433
+      ],
+      [
+        0.9835524493546988,
+        0.9945999910788235
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0018707556500963118,
+    "collector_loss_bounds": [
+      [
+        0.5940571648270123,
+        0.5995050264056537
+      ],
+      [
+        0.5943633403584736,
+        0.6003050753277529
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.000553112226780117
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "local",
+    "cases": [
+      "shared_priority-high-s3006-b1-local",
+      "shared_priority-high-s3006-b2-local"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.3037789501735337,
+        1.314768681772601
+      ],
+      [
+        1.3075487896543356,
+        1.3178494520251125
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0034253048666565977,
+    "collector_loss_bounds": [
+      [
+        0.94651949929539,
+        0.9526655085048744
+      ],
+      [
+        0.9462131549819652,
+        0.9511996434729678
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0008861046726658106
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_guard",
+    "cases": [
+      "shared_priority-high-s3006-b1-phase_guard",
+      "shared_priority-high-s3006-b2-phase_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8995351405865447,
+        0.9098104144259426
+      ],
+      [
+        0.9006613018704849,
+        0.9126564884290425
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.001986117643519969,
+    "collector_loss_bounds": [
+      [
+        0.5591577225387363,
+        0.564648470717239
+      ],
+      [
+        0.558975803382059,
+        0.5653120822403583
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0002408461832210662
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_joint",
+    "cases": [
+      "shared_priority-high-s3006-b1-phase_joint",
+      "shared_priority-high-s3006-b2-phase_joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.889377536980828,
+        0.8990366018420459
+      ],
+      [
+        0.8888279457648487,
+        0.8993717567925844
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00010721813272041025,
+    "collector_loss_bounds": [
+      [
+        0.5556036371629767,
+        0.5604607488158418
+      ],
+      [
+        0.5551707075326445,
+        0.5607092214278585
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 9.222850915768799e-05
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_local_guard",
+    "cases": [
+      "shared_priority-high-s3006-b1-phase_local_guard",
+      "shared_priority-high-s3006-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        2.1919020218058485,
+        2.2005510414194505
+      ],
+      [
+        2.1926904412132178,
+        2.1985782451367686
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0005921884376558495,
+    "collector_loss_bounds": [
+      [
+        1.9783576170762862,
+        1.98490728678332
+      ],
+      [
+        1.9799164829924871,
+        1.9831954335813606
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 7.649364287942717e-05
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "static",
+    "cases": [
+      "shared_priority-high-s3006-b1-static",
+      "shared_priority-high-s3006-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0370484589727424,
+        1.0459694264065784
+      ],
+      [
+        1.0383054752409746,
+        1.0488801563149075
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.002083873088280619,
+    "collector_loss_bounds": [
+      [
+        0.640507914122621,
+        0.6449785572681205
+      ],
+      [
+        0.6404001351215177,
+        0.6458637989951561
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00038873136296613264
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "uniform_guard",
+    "cases": [
+      "shared_priority-high-s3006-b1-uniform_guard",
+      "shared_priority-high-s3006-b2-uniform_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9885465671848389,
+        0.9994346663061432
+      ],
+      [
+        0.9892842463567875,
+        0.999020445088461
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0001617289771331798,
+    "collector_loss_bounds": [
+      [
+        0.6009337854634945,
+        0.6063389948903796
+      ],
+      [
+        0.5994748217365493,
+        0.6048106352273722
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0014936616949763337
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "feedback",
+    "cases": [
+      "shared_priority-high-s3007-b1-feedback",
+      "shared_priority-high-s3007-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0690405983796527,
+        1.078601553656327
+      ],
+      [
+        1.0680487809006025,
+        1.0789660324133374
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00031366936101973053,
+    "collector_loss_bounds": [
+      [
+        0.6540286877476592,
+        0.6585043739727189
+      ],
+      [
+        0.6537404536143037,
+        0.6595511036400087
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00037924776696718343
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "joint",
+    "cases": [
+      "shared_priority-high-s3007-b1-joint",
+      "shared_priority-high-s3007-b2-joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0010936428989452,
+        1.01155985835548
+      ],
+      [
+        1.0029937603626342,
+        1.0136739332175433
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0020070961628761985,
+    "collector_loss_bounds": [
+      [
+        0.5830091882827864,
+        0.5881484680622936
+      ],
+      [
+        0.583098263254665,
+        0.587704437040072
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0001774780251715402
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "local",
+    "cases": [
+      "shared_priority-high-s3007-b1-local",
+      "shared_priority-high-s3007-b2-local"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.2498235957407493,
+        1.2623210999300354
+      ],
+      [
+        1.2744095248385994,
+        1.283886751877939
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.023075790522876893,
+    "collector_loss_bounds": [
+      [
+        0.9343504863257951,
+        0.9421243121547995
+      ],
+      [
+        0.9347893015161183,
+        0.9391043112968703
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0012905928338029504
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_guard",
+    "cases": [
+      "shared_priority-high-s3007-b1-phase_guard",
+      "shared_priority-high-s3007-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 14,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0194585216977048,
+        1.029757474545224
+      ],
+      [
+        1.038621338176953,
+        1.048836540766998
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.019120941350511123,
+    "collector_loss_bounds": [
+      [
+        0.6020969968094197,
+        0.6074323713993088
+      ],
+      [
+        0.6193486804773831,
+        0.6240156347125791
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.016917473490616786
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_joint",
+    "cases": [
+      "shared_priority-high-s3007-b1-phase_joint",
+      "shared_priority-high-s3007-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 57,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0614657024427416,
+        1.0715521222908757
+      ],
+      [
+        0.9467070484100293,
+        0.9575924933480064
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.1143591414877907,
+    "collector_loss_bounds": [
+      [
+        0.6308025236178627,
+        0.6353608997749804
+      ],
+      [
+        0.5482930270719852,
+        0.5536815341716913
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.08209443107458325
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_local_guard",
+    "cases": [
+      "shared_priority-high-s3007-b1-phase_local_guard",
+      "shared_priority-high-s3007-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        2.203379306374012,
+        2.209694618880676
+      ],
+      [
+        2.203011511448245,
+        2.208522248008427
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0007700828990078179,
+    "collector_loss_bounds": [
+      [
+        1.9774766973471951,
+        1.9815178606355486
+      ],
+      [
+        1.9782734532428408,
+        1.9817734798836495
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0005261875718731712
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "static",
+    "cases": [
+      "shared_priority-high-s3007-b1-static",
+      "shared_priority-high-s3007-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0686735131152492,
+        1.0795686470150974
+      ],
+      [
+        1.0675429313451945,
+        1.0776457321388373
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0015267483231573564,
+    "collector_loss_bounds": [
+      [
+        0.6533884714512109,
+        0.6591580949451371
+      ],
+      [
+        0.6536244745894273,
+        0.6589565435817145
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 1.7225887396832285e-05
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "uniform_guard",
+    "cases": [
+      "shared_priority-high-s3007-b1-uniform_guard",
+      "shared_priority-high-s3007-b2-uniform_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 2,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9990402477615506,
+        1.009498812482002
+      ],
+      [
+        1.0009324996993996,
+        1.010803709250987
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0015985743534170371,
+    "collector_loss_bounds": [
+      [
+        0.5797974183882574,
+        0.5849505623234529
+      ],
+      [
+        0.5819614008775533,
+        0.5868568948535734
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0020351575097081742
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "feedback",
+    "cases": [
+      "shared_priority-high-s3008-b1-feedback",
+      "shared_priority-high-s3008-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.999080500492848,
+        1.00979056961135
+      ],
+      [
+        0.9986872161229546,
+        1.0096746057147032
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00025462413327015376,
+    "collector_loss_bounds": [
+      [
+        0.6601046744818772,
+        0.6654010360184927
+      ],
+      [
+        0.6601956693787826,
+        0.6658448119583995
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0002673854184060964
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "joint",
+    "cases": [
+      "shared_priority-high-s3008-b1-joint",
+      "shared_priority-high-s3008-b2-joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 60,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9969659414339953,
+        1.0068058167794494
+      ],
+      [
+        1.0306092936375115,
+        1.040816480761001
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.03382700809253403,
+    "collector_loss_bounds": [
+      [
+        0.6580016770203218,
+        0.6627391832107062
+      ],
+      [
+        0.6778734935046875,
+        0.6829257582402616
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.020029195756960494
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "local",
+    "cases": [
+      "shared_priority-high-s3008-b1-local",
+      "shared_priority-high-s3008-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 12,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.3447400403215783,
+        1.353941432193909
+      ],
+      [
+        1.473657343650175,
+        1.4837894322191685
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.12938265167692808,
+    "collector_loss_bounds": [
+      [
+        1.1150035094230888,
+        1.119499667732688
+      ],
+      [
+        1.210215745875959,
+        1.2157525169197432
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.09573254281996268
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_guard",
+    "cases": [
+      "shared_priority-high-s3008-b1-phase_guard",
+      "shared_priority-high-s3008-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 48,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "unavailable",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9610963223495617,
+        0.9705026839196176
+      ],
+      [
+        0.9938301678081791,
+        1.0051694738307453
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.03370031768487258,
+    "collector_loss_bounds": [
+      [
+        0.5933312107576421,
+        0.5978195031374712
+      ],
+      [
+        0.6524253379513869,
+        0.6581493600844063
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.05971199207033995
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_joint",
+    "cases": [
+      "shared_priority-high-s3008-b1-phase_joint",
+      "shared_priority-high-s3008-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 34,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9781869852919709,
+        0.9890429975973362
+      ],
+      [
+        0.9612459839274609,
+        0.9707362144949148
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.01762389223346572,
+    "collector_loss_bounds": [
+      [
+        0.63908878910742,
+        0.6444382970133182
+      ],
+      [
+        0.6145381600712301,
+        0.6192971569516994
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.02484588454890435
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_local_guard",
+    "cases": [
+      "shared_priority-high-s3008-b1-phase_local_guard",
+      "shared_priority-high-s3008-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        2.128139469782334,
+        2.1343118944195254
+      ],
+      [
+        2.1291148057685607,
+        2.135265856999194
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0009646492829475939,
+    "collector_loss_bounds": [
+      [
+        1.9642529709727283,
+        1.9681625185578109
+      ],
+      [
+        1.964318207945872,
+        1.9678675839207311
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00011484883196821727
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "static",
+    "cases": [
+      "shared_priority-high-s3008-b1-static",
+      "shared_priority-high-s3008-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0004578931902166,
+        1.0108559763279175
+      ],
+      [
+        0.9976017764888775,
+        1.0070147327448458
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0033486801422055734,
+    "collector_loss_bounds": [
+      [
+        0.6595871017351688,
+        0.6649320335922779
+      ],
+      [
+        0.659505029509437,
+        0.664090529418197
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00046178819990627673
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "uniform_guard",
+    "cases": [
+      "shared_priority-high-s3008-b1-uniform_guard",
+      "shared_priority-high-s3008-b2-uniform_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 16,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.008069601087745,
+        1.0181180490220438
+      ],
+      [
+        1.0060598070533815,
+        1.015833772340594
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0021470353579067236,
+    "collector_loss_bounds": [
+      [
+        0.6658919636750137,
+        0.670345562683511
+      ],
+      [
+        0.6717812797833893,
+        0.6762416257956417
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.005892689610253243
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "feedback",
+    "cases": [
+      "stable-high-s3005-b1-feedback",
+      "stable-high-s3005-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8196402743451215,
+        0.827201885357649
+      ],
+      [
+        0.8201510531922842,
+        0.8276161239248665
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0004625087071901124,
+    "collector_loss_bounds": [
+      [
+        0.5625511835591078,
+        0.56667179769164
+      ],
+      [
+        0.562109491169745,
+        0.5659010940473728
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0006061980168150516
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "joint",
+    "cases": [
+      "stable-high-s3005-b1-joint",
+      "stable-high-s3005-b2-joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 13,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8372449008608335,
+        0.8450044994054795
+      ],
+      [
+        0.8319969569281641,
+        0.8391775409076507
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.005537451215249067,
+    "collector_loss_bounds": [
+      [
+        0.6016350537233083,
+        0.6060860878930682
+      ],
+      [
+        0.59340015497546,
+        0.5973314860484324
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.008494750296242026
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "local",
+    "cases": [
+      "stable-high-s3005-b1-local",
+      "stable-high-s3005-b2-local"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.2486291097470381,
+        1.2559602135575307
+      ],
+      [
+        1.2499552688625293,
+        1.2577183715263045
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0015421585421324657,
+    "collector_loss_bounds": [
+      [
+        0.9240693517520825,
+        0.9281074696281634
+      ],
+      [
+        0.9242161730382746,
+        0.9283812182768714
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00021028496745001402
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_guard",
+    "cases": [
+      "stable-high-s3005-b1-phase_guard",
+      "stable-high-s3005-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 18,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.797859601086519,
+        0.8053957147246709
+      ],
+      [
+        0.8203470702551352,
+        0.8277499342955306
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.022420844369737902,
+    "collector_loss_bounds": [
+      [
+        0.5414424951476488,
+        0.5454914378810242
+      ],
+      [
+        0.5617365828013392,
+        0.5657770176997828
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.020289833736224616
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_joint",
+    "cases": [
+      "stable-high-s3005-b1-phase_joint",
+      "stable-high-s3005-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 28,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8187655949199708,
+        0.8253845652754035
+      ],
+      [
+        0.825198367417933,
+        0.8317893637214862
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.006418785472022459,
+    "collector_loss_bounds": [
+      [
+        0.568840095945347,
+        0.572511538089227
+      ],
+      [
+        0.5504504512740171,
+        0.5542932384402818
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.01830397216013746
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_local_guard",
+    "cases": [
+      "stable-high-s3005-b1-phase_local_guard",
+      "stable-high-s3005-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 8,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8861537018752331,
+        0.8933198408159567
+      ],
+      [
+        0.8503606838732796,
+        0.8575286168891023
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.035792120964403984,
+    "collector_loss_bounds": [
+      [
+        0.6252271965727882,
+        0.6290473098057457
+      ],
+      [
+        0.5913555180744803,
+        0.5952561694319424
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.03383140943605567
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "static",
+    "cases": [
+      "stable-high-s3005-b1-static",
+      "stable-high-s3005-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8205368504664629,
+        0.8281319442746763
+      ],
+      [
+        0.8226468441668979,
+        0.8308036230400697
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0023908362329142507,
+    "collector_loss_bounds": [
+      [
+        0.5623234350961439,
+        0.5661257249002732
+      ],
+      [
+        0.5620598470987147,
+        0.5664602459426715
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 3.546652248442861e-05
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "uniform_guard",
+    "cases": [
+      "stable-high-s3005-b1-uniform_guard",
+      "stable-high-s3005-b2-uniform_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 16,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.7987786267064501,
+        0.8059598885149387
+      ],
+      [
+        0.8060555439127537,
+        0.8136347217858236
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.007475875238594165,
+    "collector_loss_bounds": [
+      [
+        0.5363984178364307,
+        0.5404767823089152
+      ],
+      [
+        0.5386888406162457,
+        0.5426822293948247
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.002247934932862239
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "feedback",
+    "cases": [
+      "stable-high-s3006-b1-feedback",
+      "stable-high-s3006-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8702015173979876,
+        0.8797239642319344
+      ],
+      [
+        0.8713626631159412,
+        0.8793210554274907
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0003791184567549788,
+    "collector_loss_bounds": [
+      [
+        0.6020763504232606,
+        0.6078929197811508
+      ],
+      [
+        0.6020144405518428,
+        0.6061208728073294
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0009169784226195077
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "joint",
+    "cases": [
+      "stable-high-s3006-b1-joint",
+      "stable-high-s3006-b2-joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 24,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8725776987934546,
+        0.8796735849120383
+      ],
+      [
+        0.8754212817653785,
+        0.8819063636089449
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00253818083441526,
+    "collector_loss_bounds": [
+      [
+        0.6038946145457872,
+        0.6077107126350948
+      ],
+      [
+        0.6032538185936408,
+        0.6066171303503586
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0008671891184413028
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "local",
+    "cases": [
+      "stable-high-s3006-b1-local",
+      "stable-high-s3006-b2-local"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.2846507155862685,
+        1.2915782702387504
+      ],
+      [
+        1.2844325118816053,
+        1.2925523790816824
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00037795256913430997,
+    "collector_loss_bounds": [
+      [
+        0.9243816509387114,
+        0.9277852026659357
+      ],
+      [
+        0.9246477101634094,
+        0.9292984257033657
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0008896411310641561
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_guard",
+    "cases": [
+      "stable-high-s3006-b1-phase_guard",
+      "stable-high-s3006-b2-phase_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "unavailable"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8713306879900878,
+        0.8791267591086401
+      ],
+      [
+        0.8680306586120572,
+        0.873284578753885
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.004571104866392894,
+    "collector_loss_bounds": [
+      [
+        0.6021742532055389,
+        0.6061537205304245
+      ],
+      [
+        0.600739597938963,
+        0.6039502966206484
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0018190395881759747
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_joint",
+    "cases": [
+      "stable-high-s3006-b1-phase_joint",
+      "stable-high-s3006-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 112,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8232095649384983,
+        0.8301926752371521
+      ],
+      [
+        0.8783115947905895,
+        0.8861730290138619
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.05554119181440054,
+    "collector_loss_bounds": [
+      [
+        0.5462395071637806,
+        0.5500653729078941
+      ],
+      [
+        0.6093780697733574,
+        0.6132548436616634
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.06316401668167315
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_local_guard",
+    "cases": [
+      "stable-high-s3006-b1-phase_local_guard",
+      "stable-high-s3006-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8717483511742229,
+        0.8791730680139884
+      ],
+      [
+        0.8649342128827305,
+        0.8715968748902257
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.00719516570762746,
+    "collector_loss_bounds": [
+      [
+        0.6118500007330461,
+        0.6156293207692166
+      ],
+      [
+        0.6118680493093467,
+        0.6152272129881191
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00019202960239850242
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "static",
+    "cases": [
+      "stable-high-s3006-b1-static",
+      "stable-high-s3006-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8711806829686016,
+        0.8789860245999601
+      ],
+      [
+        0.8702958146016511,
+        0.87751387054377
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00117851121157031,
+    "collector_loss_bounds": [
+      [
+        0.6032069200428126,
+        0.6073294837968565
+      ],
+      [
+        0.6024760889656099,
+        0.6063322461128441
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.000864034380607559
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "uniform_guard",
+    "cases": [
+      "stable-high-s3006-b1-uniform_guard",
+      "stable-high-s3006-b2-uniform_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8703893555681694,
+        0.8787049422409315
+      ],
+      [
+        0.8725099681297522,
+        0.8798211553569527
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0016184128388020413,
+    "collector_loss_bounds": [
+      [
+        0.5838330508351294,
+        0.588595578277034
+      ],
+      [
+        0.5851843696040142,
+        0.5886213179476103
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0006885292197306159
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "feedback",
+    "cases": [
+      "stable-high-s3007-b1-feedback",
+      "stable-high-s3007-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8131275185405729,
+        0.8202670644499094
+      ],
+      [
+        0.8130391022830543,
+        0.8205370784115157
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 9.079885204399396e-05,
+    "collector_loss_bounds": [
+      [
+        0.547402776854558,
+        0.5511562935842166
+      ],
+      [
+        0.5474865334758428,
+        0.5512396784131567
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 8.357072511233632e-05
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "joint",
+    "cases": [
+      "stable-high-s3007-b1-joint",
+      "stable-high-s3007-b2-joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 28,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8136188780341684,
+        0.8204629827110134
+      ],
+      [
+        0.8420917278954745,
+        0.8487359750177953
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.02837292108404399,
+    "collector_loss_bounds": [
+      [
+        0.5466570481916956,
+        0.549962665223221
+      ],
+      [
+        0.5538326008667049,
+        0.5575952409251079
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.0074040641884481895
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "local",
+    "cases": [
+      "stable-high-s3007-b1-local",
+      "stable-high-s3007-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 9,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.293925378450627,
+        1.3013273509242669
+      ],
+      [
+        1.2403795436041933,
+        1.2475376726878895
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.05366775654140565,
+    "collector_loss_bounds": [
+      [
+        1.0404600357055331,
+        1.0449110856730146
+      ],
+      [
+        0.9864575598330809,
+        0.9903496412011618
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.05428196017215248
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_guard",
+    "cases": [
+      "stable-high-s3007-b1-phase_guard",
+      "stable-high-s3007-b2-phase_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.7794255796638029,
+        0.7868956440989762
+      ],
+      [
+        0.7776726964042612,
+        0.7847890963347985
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0019297155118597198,
+    "collector_loss_bounds": [
+      [
+        0.4985184281380043,
+        0.5017641983980917
+      ],
+      [
+        0.49818786086599204,
+        0.5015925343171606
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00025111567647173594
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_joint",
+    "cases": [
+      "stable-high-s3007-b1-phase_joint",
+      "stable-high-s3007-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 85,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8478078310569052,
+        0.8552962317886208
+      ],
+      [
+        0.8903528859765255,
+        0.8972478094054221
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.042248316268210906,
+    "collector_loss_bounds": [
+      [
+        0.549366887175698,
+        0.5529308185637433
+      ],
+      [
+        0.603041093449863,
+        0.6063930626670296
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.05356822518872573
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_local_guard",
+    "cases": [
+      "stable-high-s3007-b1-phase_local_guard",
+      "stable-high-s3007-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.864788823816901,
+        0.8713598471067568
+      ],
+      [
+        0.8663752540486328,
+        0.8733261633073797
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.001776373216177296,
+    "collector_loss_bounds": [
+      [
+        0.5719521668223648,
+        0.5754079356815529
+      ],
+      [
+        0.5725778924320379,
+        0.5758194778900579
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0005186339090890169
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "static",
+    "cases": [
+      "stable-high-s3007-b1-static",
+      "stable-high-s3007-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8114409831898052,
+        0.8195819267432687
+      ],
+      [
+        0.8131992813119444,
+        0.8217634720668854
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00196992172287791,
+    "collector_loss_bounds": [
+      [
+        0.5471648387528908,
+        0.5517547404667165
+      ],
+      [
+        0.5474285361376794,
+        0.5519688568265778
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0002389068723249732
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "uniform_guard",
+    "cases": [
+      "stable-high-s3007-b1-uniform_guard",
+      "stable-high-s3007-b2-uniform_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 16,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.7989639327273685,
+        0.8058014430706643
+      ],
+      [
+        0.7784474563650514,
+        0.7853700056441851
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.020473956894398126,
+    "collector_loss_bounds": [
+      [
+        0.5029978165082224,
+        0.5064308908123291
+      ],
+      [
+        0.4983791480368222,
+        0.5017377849875746
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.004655887148077298
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "feedback",
+    "cases": [
+      "stable-high-s3008-b1-feedback",
+      "stable-high-s3008-b2-feedback"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8374111492316861,
+        0.8478049695318063
+      ],
+      [
+        0.8384731496151003,
+        0.8457647255074672
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.000489121820462457,
+    "collector_loss_bounds": [
+      [
+        0.6131097297737147,
+        0.6197490985141727
+      ],
+      [
+        0.6140774270221951,
+        0.6174919162526514
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0006447425065203571
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "joint",
+    "cases": [
+      "stable-high-s3008-b1-joint",
+      "stable-high-s3008-b2-joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 8,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.9096398840735525,
+        0.9171105936225746
+      ],
+      [
+        0.8916103811368986,
+        0.8989792214382474
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.018080437560490603,
+    "collector_loss_bounds": [
+      [
+        0.6622523829447963,
+        0.6666093237198308
+      ],
+      [
+        0.6499888895336415,
+        0.65366364503148
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.012604586049752786
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "local",
+    "cases": [
+      "stable-high-s3008-b1-local",
+      "stable-high-s3008-b2-local"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.1983370270068532,
+        1.205240347471396
+      ],
+      [
+        1.1979184325906087,
+        1.2044324943631004
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.000613223762270021,
+    "collector_loss_bounds": [
+      [
+        1.0297891078971593,
+        1.0333415915613262
+      ],
+      [
+        1.0302898596112258,
+        1.033831073894804
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0004951170237721403
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_guard",
+    "cases": [
+      "stable-high-s3008-b1-phase_guard",
+      "stable-high-s3008-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 16,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8374706183953851,
+        0.844193132480847
+      ],
+      [
+        0.8418490344418267,
+        0.8487134514667171
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.004449367516155767,
+    "collector_loss_bounds": [
+      [
+        0.6134485159547856,
+        0.6167193255952659
+      ],
+      [
+        0.6137817977516797,
+        0.6171607859739264
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0003873710877774217
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_joint",
+    "cases": [
+      "stable-high-s3008-b1-phase_joint",
+      "stable-high-s3008-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 14,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8457213536365368,
+        0.8528158380613149
+      ],
+      [
+        0.8420719186102381,
+        0.8491368477699662
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0036642126588237733,
+    "collector_loss_bounds": [
+      [
+        0.6136487956950011,
+        0.6173054318766312
+      ],
+      [
+        0.6140241260080906,
+        0.6174887857336294
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0002793420850438766
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_local_guard",
+    "cases": [
+      "stable-high-s3008-b1-phase_local_guard",
+      "stable-high-s3008-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8294166235872054,
+        0.836662577864339
+      ],
+      [
+        0.8309129405758027,
+        0.8380413649294653
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0014375520268619102,
+    "collector_loss_bounds": [
+      [
+        0.6021640636993276,
+        0.6059763202162837
+      ],
+      [
+        0.6030730673296917,
+        0.6068069940968887
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0008698387554845199
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "static",
+    "cases": [
+      "stable-high-s3008-b1-static",
+      "stable-high-s3008-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8390160085867007,
+        0.8459211425739925
+      ],
+      [
+        0.8385812325452621,
+        0.8459593029980682
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0001983078086814638,
+    "collector_loss_bounds": [
+      [
+        0.6139690639227505,
+        0.6172593199480286
+      ],
+      [
+        0.6141028559254158,
+        0.6175211409818349
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00019780651823575468
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "uniform_guard",
+    "cases": [
+      "stable-high-s3008-b1-uniform_guard",
+      "stable-high-s3008-b2-uniform_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        0.8626026232751502,
+        0.8695345320230388
+      ],
+      [
+        0.8619197918179275,
+        0.8694020269474045
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00040766826642846254,
+    "collector_loss_bounds": [
+      [
+        0.6238565745824778,
+        0.6271028711004171
+      ],
+      [
+        0.6237976610053296,
+        0.6276133851018811
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00022580021215790058
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "feedback",
+    "cases": [
+      "switch-low-s3005-b1-feedback",
+      "switch-low-s3005-b2-feedback"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 33,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.78056418181659,
+        1.7861937616437036
+      ],
+      [
+        1.8773783724122595,
+        1.8829295658845693
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.09677499741826745,
+    "collector_loss_bounds": [
+      [
+        1.5388483563603819,
+        1.542524287733377
+      ],
+      [
+        1.6605982963274768,
+        1.6645927254873591
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.12190918886053859
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "joint",
+    "cases": [
+      "switch-low-s3005-b1-joint",
+      "switch-low-s3005-b2-joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.3500454308964893,
+        1.356847395123892
+      ],
+      [
+        1.348842433750535,
+        1.3548612208907036
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0015945856895713817,
+    "collector_loss_bounds": [
+      [
+        1.1077643327622766,
+        1.1119951775927501
+      ],
+      [
+        1.1067517279017267,
+        1.1105385534501877
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0012346145015560417
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "local",
+    "cases": [
+      "switch-low-s3005-b1-local",
+      "switch-low-s3005-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 33,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "exceeds"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.232149054462479,
+        1.238422598077106
+      ],
+      [
+        1.0794997391493304,
+        1.0870525839507024
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.15200966471977595,
+    "collector_loss_bounds": [
+      [
+        0.991140794215467,
+        0.9948067905271343
+      ],
+      [
+        0.8119652981317352,
+        0.8164316659770814
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.1787753103168923
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_guard",
+    "cases": [
+      "switch-low-s3005-b1-phase_guard",
+      "switch-low-s3005-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 26,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.241612601330851,
+        1.2487014854297789
+      ],
+      [
+        1.0874825494993858,
+        1.0939625340120167
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.1544345016246138,
+    "collector_loss_bounds": [
+      [
+        0.9882502801171096,
+        0.9924204918816909
+      ],
+      [
+        0.8072037371619919,
+        0.8112552466493128
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.18110589409374778
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_joint",
+    "cases": [
+      "switch-low-s3005-b1-phase_joint",
+      "switch-low-s3005-b2-phase_joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.3904608071866589,
+        1.3960326776961631
+      ],
+      [
+        1.3905307342826694,
+        1.3957406502316083
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00011105018427226554,
+    "collector_loss_bounds": [
+      [
+        1.1626327639946308,
+        1.1663364062623827
+      ],
+      [
+        1.161644376973449,
+        1.1651819209900085
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0010714361467780709
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_local_guard",
+    "cases": [
+      "switch-low-s3005-b1-phase_local_guard",
+      "switch-low-s3005-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.4341306412288188,
+        1.4403317556349797
+      ],
+      [
+        1.4353645600275975,
+        1.4417846827021128
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0013434229329558622,
+    "collector_loss_bounds": [
+      [
+        1.2006581796534885,
+        1.2045894272144972
+      ],
+      [
+        1.1999806851499624,
+        1.203975077735423
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0006459219913002023
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "static",
+    "cases": [
+      "switch-low-s3005-b1-static",
+      "switch-low-s3005-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "exceeds",
+      "exceeds"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0383532642583686,
+        1.0451155050196548
+      ],
+      [
+        1.0381533222750376,
+        1.0455193561051097
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.00010195455106210005,
+    "collector_loss_bounds": [
+      [
+        0.7734125337016806,
+        0.7773418659454863
+      ],
+      [
+        0.7733992003259577,
+        0.7778533291602266
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00024906491950871246
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "uniform_guard",
+    "cases": [
+      "switch-low-s3005-b1-uniform_guard",
+      "switch-low-s3005-b2-uniform_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 22,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.2617414427396418,
+        1.267879882527596
+      ],
+      [
+        1.2231987868567908,
+        1.2300481624021091
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.03818718800416887,
+    "collector_loss_bounds": [
+      [
+        1.0247613856395144,
+        1.0283837356118273
+      ],
+      [
+        0.9771652759932794,
+        0.9813438458462543
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.04731799970590389
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "feedback",
+    "cases": [
+      "switch-low-s3006-b1-feedback",
+      "switch-low-s3006-b2-feedback"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 36,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.6869293648854813,
+        1.6931581583092592
+      ],
+      [
+        1.8742503075802341,
+        1.8799848170611595
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.18707380072332658,
+    "collector_loss_bounds": [
+      [
+        1.462724927998604,
+        1.4668626427236333
+      ],
+      [
+        1.6262105689215505,
+        1.630032296008244
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.16332764710377878
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "joint",
+    "cases": [
+      "switch-low-s3006-b1-joint",
+      "switch-low-s3006-b2-joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.1801579846792039,
+        1.186235426547871
+      ],
+      [
+        1.1819080577210452,
+        1.1889528980881698
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.002233772291070135,
+    "collector_loss_bounds": [
+      [
+        0.9235331165032912,
+        0.9271721945699253
+      ],
+      [
+        0.9227303831114081,
+        0.9267227795324224
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0006260742146930731
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "local",
+    "cases": [
+      "switch-low-s3006-b1-local",
+      "switch-low-s3006-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 7,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "exceeds",
+      "exceeds"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0963077262067682,
+        1.1025717988126718
+      ],
+      [
+        1.084742899516695,
+        1.0912252179435868
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.011455703779579274,
+    "collector_loss_bounds": [
+      [
+        0.8301346522230962,
+        0.8340959657812005
+      ],
+      [
+        0.8185743892337018,
+        0.8224282028606915
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.01161401295495168
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_guard",
+    "cases": [
+      "switch-low-s3006-b1-phase_guard",
+      "switch-low-s3006-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 9,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.2291598418449343,
+        1.2354795228459923
+      ],
+      [
+        1.2402590118843977,
+        1.2467782720469318
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.011198959620201565,
+    "collector_loss_bounds": [
+      [
+        0.9636194580153248,
+        0.9675153113970758
+      ],
+      [
+        0.9788605949569118,
+        0.9826132906996927
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.015169558122101967
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_joint",
+    "cases": [
+      "switch-low-s3006-b1-phase_joint",
+      "switch-low-s3006-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 17,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.4462493565533008,
+        1.4518292173935923
+      ],
+      [
+        1.4390278166793615,
+        1.4448325505385864
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.007109103364472569,
+    "collector_loss_bounds": [
+      [
+        1.2047904682567299,
+        1.2083835242311909
+      ],
+      [
+        1.2068347630584544,
+        1.2105808900223247
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.002120830296429066
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_local_guard",
+    "cases": [
+      "switch-low-s3006-b1-phase_local_guard",
+      "switch-low-s3006-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 23,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.406871419261465,
+        1.4130453031683576
+      ],
+      [
+        1.482664095382055,
+        1.4891100349543827
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.07592870395330742,
+    "collector_loss_bounds": [
+      [
+        1.1582646690346914,
+        1.1620678986877273
+      ],
+      [
+        1.2258930228547544,
+        1.2297896745544525
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.06767506484339414
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "static",
+    "cases": [
+      "switch-low-s3006-b1-static",
+      "switch-low-s3006-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.039784167644929,
+        1.0464322652577003
+      ],
+      [
+        1.0401756487342126,
+        1.048628865868066
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0012940408498245404,
+    "collector_loss_bounds": [
+      [
+        0.7756849566142676,
+        0.7796944324079185
+      ],
+      [
+        0.7754370734395223,
+        0.7806940121345927
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00037584827596448545
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "uniform_guard",
+    "cases": [
+      "switch-low-s3006-b1-uniform_guard",
+      "switch-low-s3006-b2-uniform_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 29,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.140194238471723,
+        1.1469728222978437
+      ],
+      [
+        1.1321000069154208,
+        1.138826388379499
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.008120332737323377,
+    "collector_loss_bounds": [
+      [
+        0.8673260682088352,
+        0.8714511105331165
+      ],
+      [
+        0.8670727471273697,
+        0.8710413675411208
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0003315320367305308
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "feedback",
+    "cases": [
+      "switch-low-s3007-b1-feedback",
+      "switch-low-s3007-b2-feedback"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 59,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.8758100297477114,
+        1.8827409319568476
+      ],
+      [
+        1.8465330713965218,
+        1.8526016457100292
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.029708122299004103,
+    "collector_loss_bounds": [
+      [
+        1.5975678586099928,
+        1.6021672816509172
+      ],
+      [
+        1.5815464551034761,
+        1.5857542049032496
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.016217240127092136
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "joint",
+    "cases": [
+      "switch-low-s3007-b1-joint",
+      "switch-low-s3007-b2-joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.2049767431823486,
+        1.2121404754138871
+      ],
+      [
+        1.204955313965621,
+        1.2121201268144826
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 2.088890806595245e-05,
+    "collector_loss_bounds": [
+      [
+        0.9109499703106848,
+        0.9153124568391148
+      ],
+      [
+        0.9111762014025966,
+        0.9154924756461656
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.00020312494948127036
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "local",
+    "cases": [
+      "switch-low-s3007-b1-local",
+      "switch-low-s3007-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 39,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "exceeds",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0324769686813178,
+        1.0398129704779928
+      ],
+      [
+        1.4588122603605533,
+        1.464729143068897
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.4256257321350696,
+    "collector_loss_bounds": [
+      [
+        0.7501845749939005,
+        0.7544426619921311
+      ],
+      [
+        1.2131603496178793,
+        1.2168115047852195
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.4626723087085336
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_guard",
+    "cases": [
+      "switch-low-s3007-b1-phase_guard",
+      "switch-low-s3007-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 24,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.1064691767511339,
+        1.113738191048035
+      ],
+      [
+        1.2429220685608309,
+        1.2498889777327515
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.13630183924720662,
+    "collector_loss_bounds": [
+      [
+        0.8122815172358496,
+        0.8165591172695401
+      ],
+      [
+        0.9551997801954336,
+        0.9591449322806184
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.14275203898533106
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_joint",
+    "cases": [
+      "switch-low-s3007-b1-phase_joint",
+      "switch-low-s3007-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 4,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.4364479693423937,
+        1.4424702126577293
+      ],
+      [
+        1.441733502342767,
+        1.4481459254908742
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.005480622916758993,
+    "collector_loss_bounds": [
+      [
+        1.183329894821979,
+        1.1869804778139212
+      ],
+      [
+        1.184357155638907,
+        1.1881861611500615
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0011164720765342029
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_local_guard",
+    "cases": [
+      "switch-low-s3007-b1-phase_local_guard",
+      "switch-low-s3007-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 6,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.4911025966310834,
+        1.4977242372752047
+      ],
+      [
+        1.4007722288105688,
+        1.406899092416192
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.09057775633976362,
+    "collector_loss_bounds": [
+      [
+        1.2274461401221997,
+        1.2314869068763257
+      ],
+      [
+        1.1351116310251603,
+        1.1388118359482797
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.09250479001254241
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "static",
+    "cases": [
+      "switch-low-s3007-b1-static",
+      "switch-low-s3007-b2-static"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 44,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0433973067604598,
+        1.0509223637987928
+      ],
+      [
+        1.0667728679006996,
+        1.0732098803065866
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.022831538824016784,
+    "collector_loss_bounds": [
+      [
+        0.7719622297338635,
+        0.7767275037908254
+      ],
+      [
+        0.7819942199913709,
+        0.7858565745530627
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.009580530509872287
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "uniform_guard",
+    "cases": [
+      "switch-low-s3007-b1-uniform_guard",
+      "switch-low-s3007-b2-uniform_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 7,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.214106639940917,
+        1.220657698959207
+      ],
+      [
+        1.2270493949322077,
+        1.233597616633808
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.012941336332945585,
+    "collector_loss_bounds": [
+      [
+        0.9262874357285871,
+        0.9300600018316131
+      ],
+      [
+        0.9431369703156721,
+        0.9474636236463375
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.017126578200904796
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "feedback",
+    "cases": [
+      "switch-low-s3008-b1-feedback",
+      "switch-low-s3008-b2-feedback"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 13,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.87037960200015,
+        1.8776114309885623
+      ],
+      [
+        1.8541773837534419,
+        1.8598800891189533
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.016966780058158548,
+    "collector_loss_bounds": [
+      [
+        1.6234924869843252,
+        1.6287395533965128
+      ],
+      [
+        1.6114887815998937,
+        1.6158761611195827
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.012433548830680818
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "joint",
+    "cases": [
+      "switch-low-s3008-b1-joint",
+      "switch-low-s3008-b2-joint"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.1465482480693672,
+        1.1528135387358467
+      ],
+      [
+        1.14674419031559,
+        1.1536215481379932
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 0.0005019758241844308,
+    "collector_loss_bounds": [
+      [
+        0.8946261057786565,
+        0.8985198363601634
+      ],
+      [
+        0.8946065451229182,
+        0.898715377384217
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 8.799018415772686e-05
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "local",
+    "cases": [
+      "switch-low-s3008-b1-local",
+      "switch-low-s3008-b2-local"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 10,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "exceeds",
+      "exceeds"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0766044292126982,
+        1.0828536767310588
+      ],
+      [
+        1.0290613536831714,
+        1.0360679894055473
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.04716438142751889,
+    "collector_loss_bounds": [
+      [
+        0.8115842607369281,
+        0.8156067687132245
+      ],
+      [
+        0.7606225084339119,
+        0.7648746737746734
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.05084692362078369
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_guard",
+    "cases": [
+      "switch-low-s3008-b1-phase_guard",
+      "switch-low-s3008-b2-phase_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 8,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.1982528323901895,
+        1.204722305131857
+      ],
+      [
+        1.1247516667596955,
+        1.131149712120217
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.07353687932106712,
+    "collector_loss_bounds": [
+      [
+        0.9236721447437422,
+        0.9275317135688721
+      ],
+      [
+        0.855567599622967,
+        0.8596447695012196
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.06799574459421387
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_joint",
+    "cases": [
+      "switch-low-s3008-b1-phase_joint",
+      "switch-low-s3008-b2-phase_joint"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 8,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.4237577779671777,
+        1.4296689306357115
+      ],
+      [
+        1.4408535480391806,
+        1.4467663183391406
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.017096578887715985,
+    "collector_loss_bounds": [
+      [
+        1.2015484567811827,
+        1.2053996272906649
+      ],
+      [
+        1.2248946336727076,
+        1.2285020696045885
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.023224309602724258
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_local_guard",
+    "cases": [
+      "switch-low-s3008-b1-phase_local_guard",
+      "switch-low-s3008-b2-phase_local_guard"
+    ],
+    "same_sampling_positions": false,
+    "position_symmetric_difference": 14,
+    "same_decision_sequence": false,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.5025064211152632,
+        1.5082329781114998
+      ],
+      [
+        1.4121038282911982,
+        1.418328528991372
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.09015352097209628,
+    "collector_loss_bounds": [
+      [
+        1.2636395151287176,
+        1.2673225496119322
+      ],
+      [
+        1.1643136483809622,
+        1.1681945683900414
+      ]
+    ],
+    "collector_intervals_overlap": false,
+    "collector_midpoint_range": 0.09922692398482313
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "static",
+    "cases": [
+      "switch-low-s3008-b1-static",
+      "switch-low-s3008-b2-static"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "exceeds",
+      "exceeds"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.0462840189290556,
+        1.052781148047065
+      ],
+      [
+        1.0462049296862352,
+        1.0529676295402048
+      ]
+    ],
+    "controller_intervals_overlap": true,
+    "controller_midpoint_range": 5.369612515981892e-05,
+    "collector_loss_bounds": [
+      [
+        0.7755869087873071,
+        0.7796047611467202
+      ],
+      [
+        0.7755015741833794,
+        0.7796295455540575
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 3.027509829511832e-05
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "uniform_guard",
+    "cases": [
+      "switch-low-s3008-b1-uniform_guard",
+      "switch-low-s3008-b2-uniform_guard"
+    ],
+    "same_sampling_positions": true,
+    "position_symmetric_difference": 0,
+    "same_decision_sequence": true,
+    "window_statuses": [
+      "within",
+      "within"
+    ],
+    "controller_loss_bounds": [
+      [
+        1.287627710936701,
+        1.2940928564119405
+      ],
+      [
+        1.3014944063285478,
+        1.3078200636661084
+      ]
+    ],
+    "controller_intervals_overlap": false,
+    "controller_midpoint_range": 0.013796951323007178,
+    "collector_loss_bounds": [
+      [
+        1.0252982671408457,
+        1.0292669449748773
+      ],
+      [
+        1.0260820724393795,
+        1.030162040970854
+      ]
+    ],
+    "collector_intervals_overlap": true,
+    "collector_midpoint_range": 0.0008394506472553243
+  }
+]

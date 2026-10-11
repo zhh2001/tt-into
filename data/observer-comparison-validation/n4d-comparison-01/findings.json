@@ -1,0 +1,51 @@
+{
+  "cases": 256,
+  "business_seed_count": 4,
+  "packets": 40960,
+  "reports": 27672,
+  "output_frames": 150552,
+  "decisions": 2560,
+  "observation_slots": 25600,
+  "completed_observations": 25530,
+  "skipped_observations": 70,
+  "visible_reports": 27471,
+  "shared_cache_advances": 27471,
+  "successful_updates": 1285,
+  "paid_counter_calls": 4480,
+  "window_feasibility": {
+    "within": 242,
+    "exceeds": 12,
+    "unavailable": 2
+  },
+  "report_receipt_to_entry_upper_max_ms": 1629.080492,
+  "read_max_ms": 10.216622,
+  "ingest_max_ms": 2.856863,
+  "observer_max_lateness_ms": 994.890225,
+  "solver_max_ms": 109.271541,
+  "rpc_max_ms": 4.229508,
+  "sender_max_lateness_ms": 77.447239,
+  "initial_notice_first_cycle_cases": 248,
+  "scope": "256例四条新业务两部署块共同控制器目标独立比较",
+  "paired_diagnostics": {
+    "paired_cases": 224,
+    "business_pair_groups": 112,
+    "deployment_repeat_groups": 128,
+    "scenario_method_groups": 28,
+    "both_within_pairs": 189,
+    "same_sample_position_pairs": 41,
+    "same_sampling_repeat_groups": 71,
+    "same_decision_repeat_groups": 73,
+    "controller_all_businesses_both_blocks_eligible_lower_groups": [],
+    "collector_all_businesses_both_blocks_eligible_lower_groups": [
+      {
+        "scenario": "shared_priority",
+        "budget_level": "high",
+        "method": "phase_joint"
+      }
+    ],
+    "max_controller_within_business_midpoint_range": 0.542563720584567,
+    "max_collector_within_business_midpoint_range": 0.4626723087085336
+  },
+  "deployment_repeats_per_setting_business": 2,
+  "parameters_frozen_before_business_generation": true
+}

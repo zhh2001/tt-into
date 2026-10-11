@@ -1,0 +1,235 @@
+{
+  "status": "methods_frozen",
+  "execution_ready": false,
+  "calibration_manifest_sha256": "a24ef9e54eeb0c73b483149f0e7ad1352ba8901f971e69363d6bb6e006390f64",
+  "calibration_checks_sha256": "acc78fa43ecec31aec2b7acbc61448f077bcd17647455c8f87ba91b4ffa4bb46",
+  "calibration_plan_sha256": "ec280deb4962aa46e75a96753512e0c4b5965a35b35917404340f66714a8da50",
+  "frozen_parameters_sha256": "4c239a80cfcdc6246ec4b301474e16818b646b50878deeeea1ca3dd89675cd61",
+  "methods": {
+    "static": {
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "status": "fixed_reference"
+    },
+    "feedback": {
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "status": "fixed_reference"
+    },
+    "local": {
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "status": "fixed_reference"
+    },
+    "joint": {
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "status": "fixed_reference"
+    },
+    "phase_joint": {
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "status": "fixed_reference"
+    },
+    "uniform_guard": {
+      "parameter_index": 0,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "status": "frozen"
+    },
+    "phase_guard": {
+      "parameter_index": 2,
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "status": "frozen"
+    },
+    "phase_local_guard": {
+      "parameter_index": 5,
+      "adaptive": {
+        "gain_margin": 0.15,
+        "reserve_fraction": 0.1,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "status": "frozen"
+    }
+  },
+  "profiles": [
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ]
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ]
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ]
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ]
+    }
+  ],
+  "settings": {
+    "grid_us": [
+      50000,
+      100000,
+      150000,
+      200000,
+      400000,
+      600000,
+      800000,
+      1000000
+    ],
+    "epoch_us": 1000000,
+    "horizon_us": 1000000,
+    "alpha": 0.5,
+    "clip": 4.0,
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "capacity": 1,
+    "nominal_ip_bytes": 120,
+    "nominal_hop_us": 20,
+    "nominal_egress_us": 5,
+    "nominal_report_delay_us": 1000,
+    "maximum_rate_pps": 100.0
+  },
+  "budget": {
+    "high": {
+      "e1": 240,
+      "e2": 240,
+      "e3": 390,
+      "export": 900,
+      "api": 1200,
+      "local_notice": 128
+    },
+    "low": {
+      "e1": 180,
+      "e2": 180,
+      "e3": 300,
+      "export": 540,
+      "api": 1200,
+      "local_notice": 128
+    }
+  },
+  "primary_observer": "controller",
+  "secondary_observer": "collector",
+  "primary_metric": "task_weighted_clipped_normalized_generation_age_loss",
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "duration_s": 10,
+  "measurement_s": [
+    2,
+    10
+  ],
+  "notice_schedule_s": [
+    0,
+    5
+  ],
+  "fresh_business_seeds": null,
+  "fresh_inputs_generated": false,
+  "fresh_business_count": 4,
+  "deployment_blocks": 2,
+  "expected_cases": 256,
+  "order_seed": 42426414,
+  "pairing_unit": "same_full_business_plan_and_deployment_block",
+  "independent_business_units": 4,
+  "reporting": [
+    "all_cases_and_failures",
+    "both_within_pairs",
+    "conditional_paired_differences",
+    "controller_and_collector_separately",
+    "six_separate_cost_layers",
+    "deployment_repeat_variation"
+  ],
+  "seed_generation_policy": "在执行入口完成后重新审计实际消费，从3001起取最小四个未消费整数；冻结后生成业务",
+  "execution_preconditions": [
+    "independent_256_case_runner_and_checker",
+    "fresh_seed_consumption_audit",
+    "complete_order_and_pre_business_source_snapshot"
+  ],
+  "scope": "八方法及控制器目标已冻结，四条独立业务和执行清单待下一阶段准备"
+}

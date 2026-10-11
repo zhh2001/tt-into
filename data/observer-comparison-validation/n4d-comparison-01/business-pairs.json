@@ -1,0 +1,5629 @@
+[
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3005-b1-feedback",
+      "bursty_jitter-low-s3005-b2-feedback"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3005-b1-static",
+      "bursty_jitter-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.3218909381722335,
+      1.327488146747525
+    ],
+    "controller_mean_static_bounds": [
+      1.3214116325222185,
+      1.327492907746592
+    ],
+    "controller_mean_difference_bounds": [
+      -0.005601969574358656,
+      0.0060765142253067506
+    ],
+    "controller_midpoint_relative_reduction": -0.00017914750936997775,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.096278750763538,
+      1.0993607516270172
+    ],
+    "collector_mean_static_bounds": [
+      1.0956259595378401,
+      1.0991920161983257
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0029132654347876485,
+      0.0037347920891770414
+    ],
+    "collector_midpoint_relative_reduction": -0.0003743028640512304,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3005-b1-joint",
+      "bursty_jitter-low-s3005-b2-joint"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3005-b1-static",
+      "bursty_jitter-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.9905099735259535,
+      1.996608739517499
+    ],
+    "controller_mean_static_bounds": [
+      1.3214116325222185,
+      1.327492907746592
+    ],
+    "controller_mean_difference_bounds": [
+      0.6630170657793614,
+      0.6751971069952806
+    ],
+    "controller_midpoint_relative_reduction": -0.5051953184537333,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.6224310559727582,
+      1.6262156167218067
+    ],
+    "collector_mean_static_bounds": [
+      1.0956259595378401,
+      1.0991920161983257
+    ],
+    "collector_mean_difference_bounds": [
+      0.5232390397744325,
+      0.5305896571839666
+    ],
+    "collector_midpoint_relative_reduction": -0.48014400675068875,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3005-b1-local",
+      "bursty_jitter-low-s3005-b2-local"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3005-b1-static",
+      "bursty_jitter-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.617049033003357,
+      1.6224301177777778
+    ],
+    "controller_mean_static_bounds": [
+      1.3214116325222185,
+      1.327492907746592
+    ],
+    "controller_mean_difference_bounds": [
+      0.2895561252567648,
+      0.3010184852555595
+    ],
+    "controller_midpoint_relative_reduction": -0.22295050709996236,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.4158383784394972,
+      1.4193481620188717
+    ],
+    "collector_mean_static_bounds": [
+      1.0956259595378401,
+      1.0991920161983257
+    ],
+    "collector_mean_difference_bounds": [
+      0.3166463622411715,
+      0.32372220248103156
+    ],
+    "collector_midpoint_relative_reduction": -0.2917638600565116,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3005-b1-phase_guard",
+      "bursty_jitter-low-s3005-b2-phase_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3005-b1-static",
+      "bursty_jitter-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.3217286793178822,
+      1.3282983450359067
+    ],
+    "controller_mean_static_bounds": [
+      1.3214116325222185,
+      1.327492907746592
+    ],
+    "controller_mean_difference_bounds": [
+      -0.005764228428709828,
+      0.00688671251368822
+    ],
+    "controller_midpoint_relative_reduction": -0.0004237540718868196,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.0945760640938613,
+      1.09860249499711
+    ],
+    "collector_mean_static_bounds": [
+      1.0956259595378401,
+      1.0991920161983257
+    ],
+    "collector_mean_difference_bounds": [
+      -0.004615952104464416,
+      0.0029765354592700133
+    ],
+    "collector_midpoint_relative_reduction": 0.0007469487963551316,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3005-b1-phase_joint",
+      "bursty_jitter-low-s3005-b2-phase_joint"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3005-b1-static",
+      "bursty_jitter-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.321410910314964,
+      1.3270270795046595
+    ],
+    "controller_mean_static_bounds": [
+      1.3214116325222185,
+      1.327492907746592
+    ],
+    "controller_mean_difference_bounds": [
+      -0.006081997431627961,
+      0.005615446982441208
+    ],
+    "controller_midpoint_relative_reduction": 0.00017612958190619808,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.0942912746711402,
+      1.097488900320625
+    ],
+    "collector_mean_static_bounds": [
+      1.0956259595378401,
+      1.0991920161983257
+    ],
+    "collector_mean_difference_bounds": [
+      -0.004900741527185448,
+      0.0018629407827847055
+    ],
+    "collector_midpoint_relative_reduction": 0.0013840786698414264,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3005-b1-phase_local_guard",
+      "bursty_jitter-low-s3005-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3005-b1-static",
+      "bursty_jitter-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.473721113599661,
+      1.478850400122326
+    ],
+    "controller_mean_static_bounds": [
+      1.3214116325222185,
+      1.327492907746592
+    ],
+    "controller_mean_difference_bounds": [
+      0.14622820585306884,
+      0.15743876760010744
+    ],
+    "controller_midpoint_relative_reduction": -0.11463870020108781,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.2574846166312956,
+      1.2605475789788874
+    ],
+    "collector_mean_static_bounds": [
+      1.0956259595378401,
+      1.0991920161983257
+    ],
+    "collector_mean_difference_bounds": [
+      0.15829260043296978,
+      0.16492161944104722
+    ],
+    "collector_midpoint_relative_reduction": -0.14726242606319428,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3005-b1-uniform_guard",
+      "bursty_jitter-low-s3005-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3005-b1-static",
+      "bursty_jitter-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      2.026682047697997,
+      2.0316658739256623
+    ],
+    "controller_mean_static_bounds": [
+      1.3214116325222185,
+      1.327492907746592
+    ],
+    "controller_mean_difference_bounds": [
+      0.6991891399514052,
+      0.7102542414034441
+    ],
+    "controller_midpoint_relative_reduction": -0.532085380929514,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.6821190390179521,
+      1.6851411237782563
+    ],
+    "collector_mean_static_bounds": [
+      1.0956259595378401,
+      1.0991920161983257
+    ],
+    "collector_mean_difference_bounds": [
+      0.5829270228196263,
+      0.5895151642404161
+    ],
+    "collector_midpoint_relative_reduction": -0.5341865248150213,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3006-b1-feedback",
+      "bursty_jitter-low-s3006-b2-feedback"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3006-b1-static",
+      "bursty_jitter-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2280358118495576,
+      1.2351222443085916
+    ],
+    "controller_mean_static_bounds": [
+      1.2198560367638518,
+      1.2268035270530584
+    ],
+    "controller_mean_difference_bounds": [
+      0.0012322847964990613,
+      0.015266207544739951
+    ],
+    "controller_midpoint_relative_reduction": -0.006743272576713031,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "higher": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9805781066852749,
+      0.9851726243805554
+    ],
+    "collector_mean_static_bounds": [
+      0.9800236476854225,
+      0.9845658485151553
+    ],
+    "collector_mean_difference_bounds": [
+      -0.003987741829880376,
+      0.005148976695132923
+    ],
+    "collector_midpoint_relative_reduction": -0.0005910827007364857,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3006-b1-joint",
+      "bursty_jitter-low-s3006-b2-joint"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3006-b1-static",
+      "bursty_jitter-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.7926792782537961,
+      1.7992178876454545
+    ],
+    "controller_mean_static_bounds": [
+      1.2198560367638518,
+      1.2268035270530584
+    ],
+    "controller_mean_difference_bounds": [
+      0.5658757512007377,
+      0.5793618508816026
+    ],
+    "controller_midpoint_relative_reduction": -0.46808212267002663,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.5880121255850566,
+      1.5927456944338974
+    ],
+    "collector_mean_static_bounds": [
+      0.9800236476854225,
+      0.9845658485151553
+    ],
+    "collector_mean_difference_bounds": [
+      0.6034462770699013,
+      0.6127220467484749
+    ],
+    "collector_midpoint_relative_reduction": -0.6190445007317752,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3006-b1-local",
+      "bursty_jitter-low-s3006-b2-local"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3006-b1-static",
+      "bursty_jitter-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.6151250252411062,
+      1.6203419484204118
+    ],
+    "controller_mean_static_bounds": [
+      1.2198560367638518,
+      1.2268035270530584
+    ],
+    "controller_mean_difference_bounds": [
+      0.38832149818804784,
+      0.4004859116565601
+    ],
+    "controller_midpoint_relative_reduction": -0.32240178466595887,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.372662823217017,
+      1.3761130131884034
+    ],
+    "collector_mean_static_bounds": [
+      0.9800236476854225,
+      0.9845658485151553
+    ],
+    "collector_mean_difference_bounds": [
+      0.3880969747018618,
+      0.3960893655029808
+    ],
+    "collector_midpoint_relative_reduction": -0.39916040563253646,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3006-b1-phase_guard",
+      "bursty_jitter-low-s3006-b2-phase_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3006-b1-static",
+      "bursty_jitter-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2277060425999793,
+      1.233682594936823
+    ],
+    "controller_mean_static_bounds": [
+      1.2198560367638518,
+      1.2268035270530584
+    ],
+    "controller_mean_difference_bounds": [
+      0.0009025155469208901,
+      0.013826558172971293
+    ],
+    "controller_midpoint_relative_reduction": -0.006020074855414017,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "higher": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.980296713211839,
+      0.9840235615608832
+    ],
+    "collector_mean_static_bounds": [
+      0.9800236476854225,
+      0.9845658485151553
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0042691353033162405,
+      0.00399991387546067
+    ],
+    "collector_midpoint_relative_reduction": 0.00013703698832561248,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3006-b1-phase_joint",
+      "bursty_jitter-low-s3006-b2-phase_joint"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3006-b1-static",
+      "bursty_jitter-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2060167616631041,
+      1.2119574529486385
+    ],
+    "controller_mean_static_bounds": [
+      1.2198560367638518,
+      1.2268035270530584
+    ],
+    "controller_mean_difference_bounds": [
+      -0.020786765389954165,
+      -0.007898583815213134
+    ],
+    "controller_midpoint_relative_reduction": 0.011724291204787287,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9798349977233556,
+      0.9834359773570589
+    ],
+    "collector_mean_static_bounds": [
+      0.9800236476854225,
+      0.9845658485151553
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0047308507917996345,
+      0.003412329671636405
+    ],
+    "collector_midpoint_relative_reduction": 0.000671143321652249,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3006-b1-phase_local_guard",
+      "bursty_jitter-low-s3006-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3006-b1-static",
+      "bursty_jitter-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.3844790651915364,
+      1.3902617679790588
+    ],
+    "controller_mean_static_bounds": [
+      1.2198560367638518,
+      1.2268035270530584
+    ],
+    "controller_mean_difference_bounds": [
+      0.15767553813847812,
+      0.17040573121520708
+    ],
+    "controller_midpoint_relative_reduction": -0.1340935511444274,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.14323379714145,
+      1.1466915311739918
+    ],
+    "collector_mean_static_bounds": [
+      0.9800236476854225,
+      0.9845658485151553
+    ],
+    "collector_mean_difference_bounds": [
+      0.15866794862629463,
+      0.1666678834885693
+    ],
+    "collector_midpoint_relative_reduction": -0.16559990407362354,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3006-b1-uniform_guard",
+      "bursty_jitter-low-s3006-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3006-b1-static",
+      "bursty_jitter-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.9106594550845917,
+      1.9161990277313183
+    ],
+    "controller_mean_static_bounds": [
+      1.2198560367638518,
+      1.2268035270530584
+    ],
+    "controller_mean_difference_bounds": [
+      0.6838559280315333,
+      0.6963429909674667
+    ],
+    "controller_midpoint_relative_reduction": -0.564115637259244,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.7075758995194659,
+      1.7114822947291157
+    ],
+    "collector_mean_static_bounds": [
+      0.9800236476854225,
+      0.9845658485151553
+    ],
+    "collector_mean_difference_bounds": [
+      0.7230100510043105,
+      0.7314586470436932
+    ],
+    "collector_midpoint_relative_reduction": -0.7403422958642896,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3007-b1-feedback",
+      "bursty_jitter-low-s3007-b2-feedback"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3007-b1-static",
+      "bursty_jitter-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.5335384050969647,
+      1.540679414366
+    ],
+    "controller_mean_static_bounds": [
+      1.5464461076385105,
+      1.553030996887092
+    ],
+    "controller_mean_difference_bounds": [
+      -0.01949259179012719,
+      -0.005766693272510559
+    ],
+    "controller_midpoint_relative_reduction": 0.008149531101796524,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1932878713734205,
+      1.197506854945995
+    ],
+    "collector_mean_static_bounds": [
+      1.192939256228612,
+      1.19626796404321
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0029800926697892693,
+      0.004567598717383103
+    ],
+    "collector_midpoint_relative_reduction": -0.0006644488741387707,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3007-b1-joint",
+      "bursty_jitter-low-s3007-b2-joint"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3007-b1-static",
+      "bursty_jitter-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.9813684047758238,
+      1.9872358813063231
+    ],
+    "controller_mean_static_bounds": [
+      1.5464461076385105,
+      1.553030996887092
+    ],
+    "controller_mean_difference_bounds": [
+      0.428337407888732,
+      0.44078977366781236
+    ],
+    "controller_midpoint_relative_reduction": -0.2804109055322641,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.6496315542691429,
+      1.6533642705180926
+    ],
+    "collector_mean_static_bounds": [
+      1.192939256228612,
+      1.19626796404321
+    ],
+    "collector_mean_difference_bounds": [
+      0.4533635902259332,
+      0.4604250142894807
+    ],
+    "collector_midpoint_relative_reduction": -0.382465194631151,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3007-b1-local",
+      "bursty_jitter-low-s3007-b2-local"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3007-b1-static",
+      "bursty_jitter-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.7129822444517402,
+      1.7190044725433364
+    ],
+    "controller_mean_static_bounds": [
+      1.5464461076385105,
+      1.553030996887092
+    ],
+    "controller_mean_difference_bounds": [
+      0.1599512475646483,
+      0.1725583649048259
+    ],
+    "controller_midpoint_relative_reduction": -0.10727926074497239,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.4025967546218319,
+      1.406467892104072
+    ],
+    "collector_mean_static_bounds": [
+      1.192939256228612,
+      1.19626796404321
+    ],
+    "collector_mean_difference_bounds": [
+      0.20632879057862208,
+      0.21352863587546023
+    ],
+    "collector_midpoint_relative_reduction": -0.1757308545243366,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3007-b1-phase_guard",
+      "bursty_jitter-low-s3007-b2-phase_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3007-b1-static",
+      "bursty_jitter-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.5318387517099223,
+      1.5390373074262054
+    ],
+    "controller_mean_static_bounds": [
+      1.5464461076385105,
+      1.553030996887092
+    ],
+    "controller_mean_difference_bounds": [
+      -0.021192245177169444,
+      -0.007408800212305167
+    ],
+    "controller_midpoint_relative_reduction": 0.009227700165203363,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1929504311036956,
+      1.1974899189727286
+    ],
+    "collector_mean_static_bounds": [
+      1.192939256228612,
+      1.19626796404321
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0033175329395142006,
+      0.004550662744116751
+    ],
+    "collector_midpoint_relative_reduction": -0.0005161250954456448,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3007-b1-phase_joint",
+      "bursty_jitter-low-s3007-b2-phase_joint"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3007-b1-static",
+      "bursty_jitter-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.5299443253219567,
+      1.535574180038426
+    ],
+    "controller_mean_static_bounds": [
+      1.5464461076385105,
+      1.553030996887092
+    ],
+    "controller_mean_difference_bounds": [
+      -0.02308667156513522,
+      -0.010871927600084819
+    ],
+    "controller_midpoint_relative_reduction": 0.010956234880921125,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.193525805003135,
+      1.1965314738700357
+    ],
+    "collector_mean_static_bounds": [
+      1.192939256228612,
+      1.19626796404321
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0027421590400746876,
+      0.0035922176414237006
+    ],
+    "collector_midpoint_relative_reduction": -0.0003557910733468092,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3007-b1-phase_local_guard",
+      "bursty_jitter-low-s3007-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3007-b1-static",
+      "bursty_jitter-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.5928658989105502,
+      1.5997362332589802
+    ],
+    "controller_mean_static_bounds": [
+      1.5464461076385105,
+      1.553030996887092
+    ],
+    "controller_mean_difference_bounds": [
+      0.03983490202345841,
+      0.05329012562046964
+    ],
+    "controller_midpoint_relative_reduction": -0.030045399434618883,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.245808128630881,
+      1.2500490658579966
+    ],
+    "collector_mean_static_bounds": [
+      1.192939256228612,
+      1.19626796404321
+    ],
+    "collector_mean_difference_bounds": [
+      0.0495401645876713,
+      0.05710980962938461
+    ],
+    "collector_midpoint_relative_reduction": -0.044638226986825284,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3007-b1-uniform_guard",
+      "bursty_jitter-low-s3007-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3007-b1-static",
+      "bursty_jitter-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      2.0711087292663675,
+      2.076582607734686
+    ],
+    "controller_mean_static_bounds": [
+      1.5464461076385105,
+      1.553030996887092
+    ],
+    "controller_mean_difference_bounds": [
+      0.5180777323792756,
+      0.530136500096175
+    ],
+    "controller_midpoint_relative_reduction": -0.338190668014593,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.7439469655989772,
+      1.7472192239455113
+    ],
+    "collector_mean_static_bounds": [
+      1.192939256228612,
+      1.19626796404321
+    ],
+    "collector_mean_difference_bounds": [
+      0.5476790015557674,
+      0.5542799677168994
+    ],
+    "collector_midpoint_relative_reduction": -0.46122368956648957,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3008-b1-feedback",
+      "bursty_jitter-low-s3008-b2-feedback"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3008-b1-static",
+      "bursty_jitter-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.3140032990711366,
+      1.321063091470333
+    ],
+    "controller_mean_static_bounds": [
+      1.3158216383264307,
+      1.3217750512528275
+    ],
+    "controller_mean_difference_bounds": [
+      -0.007771752181690794,
+      0.0052414531439022305
+    ],
+    "controller_midpoint_relative_reduction": 0.0009593199171750852,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1169005640254095,
+      1.1214771228403846
+    ],
+    "collector_mean_static_bounds": [
+      1.1172482644690973,
+      1.1206440234093331
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0037434593839237307,
+      0.004228858371287392
+    ],
+    "collector_midpoint_relative_reduction": -0.00021690006708234008,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3008-b1-joint",
+      "bursty_jitter-low-s3008-b2-joint"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3008-b1-static",
+      "bursty_jitter-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.7640158779611652,
+      1.7703939613037112
+    ],
+    "controller_mean_static_bounds": [
+      1.3158216383264307,
+      1.3217750512528275
+    ],
+    "controller_mean_difference_bounds": [
+      0.442240826708338,
+      0.45457232297728045
+    ],
+    "controller_midpoint_relative_reduction": -0.3400114783388948,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.579921189112929,
+      1.5842979255150782
+    ],
+    "collector_mean_static_bounds": [
+      1.1172482644690973,
+      1.1206440234093331
+    ],
+    "collector_mean_difference_bounds": [
+      0.45927716570359567,
+      0.4670496610459808
+    ],
+    "collector_midpoint_relative_reduction": -0.41392824478954454,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3008-b1-local",
+      "bursty_jitter-low-s3008-b2-local"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3008-b1-static",
+      "bursty_jitter-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.650994145988537,
+      1.6571835337280398
+    ],
+    "controller_mean_static_bounds": [
+      1.3158216383264307,
+      1.3217750512528275
+    ],
+    "controller_mean_difference_bounds": [
+      0.32921909473570965,
+      0.3413618954016091
+    ],
+    "controller_midpoint_relative_reduction": -0.2542393963363247,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.391504140560217,
+      1.3957426492786138
+    ],
+    "collector_mean_static_bounds": [
+      1.1172482644690973,
+      1.1206440234093331
+    ],
+    "collector_mean_difference_bounds": [
+      0.2708601171508839,
+      0.2784943848095165
+    ],
+    "collector_midpoint_relative_reduction": -0.24547852679773086,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3008-b1-phase_guard",
+      "bursty_jitter-low-s3008-b2-phase_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3008-b1-static",
+      "bursty_jitter-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.4274581553310646,
+      1.4329747805714077
+    ],
+    "controller_mean_static_bounds": [
+      1.3158216383264307,
+      1.3217750512528275
+    ],
+    "controller_mean_difference_bounds": [
+      0.10568310407823711,
+      0.11715314224497697
+    ],
+    "controller_midpoint_relative_reduction": -0.08448457916390566,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.212935200790737,
+      1.2161218633914919
+    ],
+    "collector_mean_static_bounds": [
+      1.1172482644690973,
+      1.1206440234093331
+    ],
+    "collector_mean_difference_bounds": [
+      0.0922911773814038,
+      0.09887359892239445
+    ],
+    "collector_midpoint_relative_reduction": -0.08542179502527646,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3008-b1-phase_joint",
+      "bursty_jitter-low-s3008-b2-phase_joint"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3008-b1-static",
+      "bursty_jitter-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.431784571276125,
+      1.4364504113366927
+    ],
+    "controller_mean_static_bounds": [
+      1.3158216383264307,
+      1.3217750512528275
+    ],
+    "controller_mean_difference_bounds": [
+      0.11000952002329756,
+      0.12062877301026198
+    ],
+    "controller_midpoint_relative_reduction": -0.08744259269992895,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.2285032804022888,
+      1.2312845925886422
+    ],
+    "collector_mean_static_bounds": [
+      1.1172482644690973,
+      1.1206440234093331
+    ],
+    "collector_mean_difference_bounds": [
+      0.10785925699295551,
+      0.11403632811954478
+    ],
+    "collector_midpoint_relative_reduction": -0.09915382715888546,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3008-b1-phase_local_guard",
+      "bursty_jitter-low-s3008-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3008-b1-static",
+      "bursty_jitter-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.5374390067818333,
+      1.542632543035602
+    ],
+    "controller_mean_static_bounds": [
+      1.3158216383264307,
+      1.3217750512528275
+    ],
+    "controller_mean_difference_bounds": [
+      0.21566395552900608,
+      0.2268109047091713
+    ],
+    "controller_midpoint_relative_reduction": -0.1677568302941568,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.33831758657562,
+      1.3414831816300885
+    ],
+    "collector_mean_static_bounds": [
+      1.1172482644690973,
+      1.1206440234093331
+    ],
+    "collector_mean_difference_bounds": [
+      0.21767356316628672,
+      0.2242349171609912
+    ],
+    "collector_midpoint_relative_reduction": -0.19746637616156978,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "bursty_jitter-low-s3008-b1-uniform_guard",
+      "bursty_jitter-low-s3008-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "bursty_jitter-low-s3008-b1-static",
+      "bursty_jitter-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.9191566377626108,
+      1.9243777277198748
+    ],
+    "controller_mean_static_bounds": [
+      1.3158216383264307,
+      1.3217750512528275
+    ],
+    "controller_mean_difference_bounds": [
+      0.5973815865097835,
+      0.6085560893934442
+    ],
+    "controller_midpoint_relative_reduction": -0.45721079370007683,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.7142945797541058,
+      1.7176115345359522
+    ],
+    "collector_mean_static_bounds": [
+      1.1172482644690973,
+      1.1206440234093331
+    ],
+    "collector_mean_difference_bounds": [
+      0.5936505563447726,
+      0.6003632700668549
+    ],
+    "collector_midpoint_relative_reduction": -0.5335439211614506,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3005-b1-feedback",
+      "shared_priority-high-s3005-b2-feedback"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3005-b1-static",
+      "shared_priority-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9474702940879294,
+      0.9584772323862005
+    ],
+    "controller_mean_static_bounds": [
+      1.0649429351401838,
+      1.0753881352313244
+    ],
+    "controller_mean_difference_bounds": [
+      -0.127917841143395,
+      -0.10646570275398337
+    ],
+    "controller_midpoint_relative_reduction": 0.10950807897990067,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5947189170537028,
+      0.6004963467642583
+    ],
+    "collector_mean_static_bounds": [
+      0.5942435055844317,
+      0.5999764478126488
+    ],
+    "collector_mean_difference_bounds": [
+      -0.005257530758946083,
+      0.0062528411798265515
+    ],
+    "collector_midpoint_relative_reduction": -0.0008334397847309226,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3005-b1-joint",
+      "shared_priority-high-s3005-b2-joint"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3005-b1-static",
+      "shared_priority-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0775392951712195,
+      1.087918003257489
+    ],
+    "controller_mean_static_bounds": [
+      1.0649429351401838,
+      1.0753881352313244
+    ],
+    "controller_mean_difference_bounds": [
+      0.0021511599398950643,
+      0.022975068117305264
+    ],
+    "controller_midpoint_relative_reduction": -0.011739411909223327,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6640306138747414,
+      0.6696297339586574
+    ],
+    "collector_mean_static_bounds": [
+      0.5942435055844317,
+      0.5999764478126488
+    ],
+    "collector_mean_difference_bounds": [
+      0.06405416606209247,
+      0.0753862283742257
+    ],
+    "collector_midpoint_relative_reduction": -0.11676274043124622,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3005-b1-local",
+      "shared_priority-high-s3005-b2-local"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3005-b1-static",
+      "shared_priority-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.5562480473532463,
+      1.5651542269371417
+    ],
+    "controller_mean_static_bounds": [
+      1.0649429351401838,
+      1.0753881352313244
+    ],
+    "controller_mean_difference_bounds": [
+      0.480859912121922,
+      0.5002112917969579
+    ],
+    "controller_midpoint_relative_reduction": -0.4583735747706498,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1208131412309648,
+      1.1258838091763255
+    ],
+    "collector_mean_static_bounds": [
+      0.5942435055844317,
+      0.5999764478126488
+    ],
+    "collector_mean_difference_bounds": [
+      0.520836693418316,
+      0.5316403035918935
+    ],
+    "collector_midpoint_relative_reduction": -0.8813091709080321,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3005-b1-phase_guard",
+      "shared_priority-high-s3005-b2-phase_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3005-b1-static",
+      "shared_priority-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.1635393985811389,
+      1.17232246865943
+    ],
+    "controller_mean_static_bounds": [
+      1.0649429351401838,
+      1.0753881352313244
+    ],
+    "controller_mean_difference_bounds": [
+      0.08815126334981449,
+      0.10737953351924617
+    ],
+    "controller_midpoint_relative_reduction": -0.09135539803901505,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "higher": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6036588010791957,
+      0.6092728483259608
+    ],
+    "collector_mean_static_bounds": [
+      0.5942435055844317,
+      0.5999764478126488
+    ],
+    "collector_mean_difference_bounds": [
+      0.003682353266546756,
+      0.015029342741529117
+    ],
+    "collector_midpoint_relative_reduction": -0.01566855080159116,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "lower": 1,
+      "higher": 1
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3005-b1-phase_joint",
+      "shared_priority-high-s3005-b2-phase_joint"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3005-b1-static",
+      "shared_priority-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9389920267056462,
+      0.9498267781161362
+    ],
+    "controller_mean_static_bounds": [
+      1.0649429351401838,
+      1.0753881352313244
+    ],
+    "controller_mean_difference_bounds": [
+      -0.13639610852567824,
+      -0.1151161570240476
+    ],
+    "controller_midpoint_relative_reduction": 0.11751091643316174,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5833320920851043,
+      0.5889198097384133
+    ],
+    "collector_mean_static_bounds": [
+      0.5942435055844317,
+      0.5999764478126488
+    ],
+    "collector_mean_difference_bounds": [
+      -0.01664435572754458,
+      -0.005323695846018495
+    ],
+    "collector_midpoint_relative_reduction": 0.018395314456999816,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3005-b1-phase_local_guard",
+      "shared_priority-high-s3005-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3005-b1-static",
+      "shared_priority-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2823062466632034,
+      1.2916777885362505
+    ],
+    "controller_mean_static_bounds": [
+      1.0649429351401838,
+      1.0753881352313244
+    ],
+    "controller_mean_difference_bounds": [
+      0.20691811143187894,
+      0.22673485339606675
+    ],
+    "controller_midpoint_relative_reduction": -0.2026102273760265,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9389301253698348,
+      0.9441507454676836
+    ],
+    "collector_mean_static_bounds": [
+      0.5942435055844317,
+      0.5999764478126488
+    ],
+    "collector_mean_difference_bounds": [
+      0.338953677557186,
+      0.3499072398832518
+    ],
+    "collector_midpoint_relative_reduction": -0.5768291808229319,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3005-b1-uniform_guard",
+      "shared_priority-high-s3005-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3005-b1-static",
+      "shared_priority-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.015774526822442,
+      1.0264591008202029
+    ],
+    "controller_mean_static_bounds": [
+      1.0649429351401838,
+      1.0753881352313244
+    ],
+    "controller_mean_difference_bounds": [
+      -0.059613608408882246,
+      -0.03848383431998109
+    ],
+    "controller_midpoint_relative_reduction": 0.045832835904137094,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6004013681938234,
+      0.6060023598636461
+    ],
+    "collector_mean_static_bounds": [
+      0.5942435055844317,
+      0.5999764478126488
+    ],
+    "collector_mean_difference_bounds": [
+      0.0004249203811745317,
+      0.011758854279214304
+    ],
+    "collector_midpoint_relative_reduction": -0.010202286962071778,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3006-b1-feedback",
+      "shared_priority-high-s3006-b2-feedback"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3006-b1-static",
+      "shared_priority-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0396226918255136,
+      1.0513424709837422
+    ],
+    "controller_mean_static_bounds": [
+      1.0376769671068584,
+      1.047424791360743
+    ],
+    "controller_mean_difference_bounds": [
+      -0.007802099535229368,
+      0.0136655038768837
+    ],
+    "controller_midpoint_relative_reduction": -0.002812047094508849,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6401719377746993,
+      0.6463598312922008
+    ],
+    "collector_mean_static_bounds": [
+      0.6404540246220694,
+      0.6454211781316384
+    ],
+    "collector_mean_difference_bounds": [
+      -0.005249240356939078,
+      0.005905806670131464
+    ],
+    "collector_midpoint_relative_reduction": -0.0005105987826705817,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "shared_priority-high-s3006-b1-joint",
+      "shared_priority-high-s3006-b2-joint"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3006-b1-static",
+      "shared_priority-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9845072724507853,
+      0.9955159236328334
+    ],
+    "controller_mean_static_bounds": [
+      1.0376769671068584,
+      1.047424791360743
+    ],
+    "controller_mean_difference_bounds": [
+      -0.06291751890995773,
+      -0.04216104347402516
+    ],
+    "controller_midpoint_relative_reduction": 0.050394932504976564,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.594210252592743,
+      0.5999050508667033
+    ],
+    "collector_mean_static_bounds": [
+      0.6404540246220694,
+      0.6454211781316384
+    ],
+    "collector_mean_difference_bounds": [
+      -0.051210925538895335,
+      -0.040548973755366036
+    ],
+    "collector_midpoint_relative_reduction": 0.07135987932402552,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3006-b1-local",
+      "shared_priority-high-s3006-b2-local"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3006-b1-static",
+      "shared_priority-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.3056638699139347,
+      1.3163090668988566
+    ],
+    "controller_mean_static_bounds": [
+      1.0376769671068584,
+      1.047424791360743
+    ],
+    "controller_mean_difference_bounds": [
+      0.2582390785531917,
+      0.2786320997919982
+    ],
+    "controller_midpoint_relative_reduction": -0.25747960557078575,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9463663271386776,
+      0.9519325759889211
+    ],
+    "collector_mean_static_bounds": [
+      0.6404540246220694,
+      0.6454211781316384
+    ],
+    "collector_mean_difference_bounds": [
+      0.30094514900703934,
+      0.31147855136685176
+    ],
+    "collector_midpoint_relative_reduction": -0.47626993588676636,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3006-b1-phase_guard",
+      "shared_priority-high-s3006-b2-phase_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3006-b1-static",
+      "shared_priority-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9000982212285148,
+      0.9112334514274925
+    ],
+    "controller_mean_static_bounds": [
+      1.0376769671068584,
+      1.047424791360743
+    ],
+    "controller_mean_difference_bounds": [
+      -0.14732657013222816,
+      -0.12644351567936601
+    ],
+    "controller_midpoint_relative_reduction": 0.13129818950073463,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5590667629603976,
+      0.5649802764787987
+    ],
+    "collector_mean_static_bounds": [
+      0.6404540246220694,
+      0.6454211781316384
+    ],
+    "collector_mean_difference_bounds": [
+      -0.08635441517124065,
+      -0.07547374814327068
+    ],
+    "collector_midpoint_relative_reduction": 0.12585059807355767,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3006-b1-phase_joint",
+      "shared_priority-high-s3006-b2-phase_joint"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3006-b1-static",
+      "shared_priority-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8891027413728383,
+      0.8992041793173151
+    ],
+    "controller_mean_static_bounds": [
+      1.0376769671068584,
+      1.047424791360743
+    ],
+    "controller_mean_difference_bounds": [
+      -0.1583220499879046,
+      -0.13847278778954336
+    ],
+    "controller_midpoint_relative_reduction": 0.1423406970773315,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5553871723478105,
+      0.5605849851218502
+    ],
+    "collector_mean_static_bounds": [
+      0.6404540246220694,
+      0.6454211781316384
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0900340057838277,
+      -0.07986903950021917
+    ],
+    "collector_midpoint_relative_reduction": 0.1321302758776271,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3006-b1-phase_local_guard",
+      "shared_priority-high-s3006-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3006-b1-static",
+      "shared_priority-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      2.192296231509533,
+      2.1995646432781095
+    ],
+    "controller_mean_static_bounds": [
+      1.0376769671068584,
+      1.047424791360743
+    ],
+    "controller_mean_difference_bounds": [
+      1.14487144014879,
+      1.161887676171251
+    ],
+    "controller_midpoint_relative_reduction": -1.1063052951503631,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.9791370500343866,
+      1.9840513601823404
+    ],
+    "collector_mean_static_bounds": [
+      0.6404540246220694,
+      0.6454211781316384
+    ],
+    "collector_mean_difference_bounds": [
+      1.3337158719027484,
+      1.3435973355602708
+    ],
+    "collector_midpoint_relative_reduction": -2.0820941268091495,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3006-b1-uniform_guard",
+      "shared_priority-high-s3006-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3006-b1-static",
+      "shared_priority-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9889154067708132,
+      0.999227555697302
+    ],
+    "controller_mean_static_bounds": [
+      1.0376769671068584,
+      1.047424791360743
+    ],
+    "controller_mean_difference_bounds": [
+      -0.05850938458992977,
+      -0.03844941140955643
+    ],
+    "controller_midpoint_relative_reduction": 0.04650075019395882,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.600204303600022,
+      0.6055748150588759
+    ],
+    "collector_mean_static_bounds": [
+      0.6404540246220694,
+      0.6454211781316384
+    ],
+    "collector_mean_difference_bounds": [
+      -0.04521687453161638,
+      -0.03487920956319346
+    ],
+    "collector_midpoint_relative_reduction": 0.062289158328338236,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3007-b1-feedback",
+      "shared_priority-high-s3007-b2-feedback"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3007-b1-static",
+      "shared_priority-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0685446896401276,
+      1.078783793034832
+    ],
+    "controller_mean_static_bounds": [
+      1.0681082222302218,
+      1.0786071895769673
+    ],
+    "controller_mean_difference_bounds": [
+      -0.01006249993683972,
+      0.010675570804610346
+    ],
+    "controller_midpoint_relative_reduction": -0.00028558553425308777,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6538845706809815,
+      0.6590277388063638
+    ],
+    "collector_mean_static_bounds": [
+      0.6535064730203191,
+      0.6590573192634258
+    ],
+    "collector_mean_difference_bounds": [
+      -0.005172748582444375,
+      0.005521265786044671
+    ],
+    "collector_midpoint_relative_reduction": -0.00026552401159431644,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3007-b1-joint",
+      "shared_priority-high-s3007-b2-joint"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3007-b1-static",
+      "shared_priority-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0020437016307897,
+      1.0126168957865116
+    ],
+    "controller_mean_static_bounds": [
+      1.0681082222302218,
+      1.0786071895769673
+    ],
+    "controller_mean_difference_bounds": [
+      -0.07656348794617762,
+      -0.05549132644371024
+    ],
+    "controller_midpoint_relative_reduction": 0.06151482104407995,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5830537257687256,
+      0.5879264525511828
+    ],
+    "collector_mean_static_bounds": [
+      0.6535064730203191,
+      0.6590573192634258
+    ],
+    "collector_mean_difference_bounds": [
+      -0.07600359349470015,
+      -0.0655800204691363
+    ],
+    "collector_midpoint_relative_reduction": 0.10786798690941604,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3007-b1-local",
+      "shared_priority-high-s3007-b2-local"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3007-b1-static",
+      "shared_priority-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2621165602896744,
+      1.2731039259039871
+    ],
+    "controller_mean_static_bounds": [
+      1.0681082222302218,
+      1.0786071895769673
+    ],
+    "controller_mean_difference_bounds": [
+      0.183509370712707,
+      0.2049957036737654
+    ],
+    "controller_midpoint_relative_reduction": -0.18097651521466165,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9345698939209567,
+      0.940614311725835
+    ],
+    "collector_mean_static_bounds": [
+      0.6535064730203191,
+      0.6590573192634258
+    ],
+    "collector_mean_difference_bounds": [
+      0.2755125746575309,
+      0.2871078387055158
+    ],
+    "collector_midpoint_relative_reduction": -0.42864233850618194,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3007-b1-phase_guard",
+      "shared_priority-high-s3007-b2-phase_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3007-b1-static",
+      "shared_priority-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.029039929937329,
+      1.039297007656111
+    ],
+    "controller_mean_static_bounds": [
+      1.0681082222302218,
+      1.0786071895769673
+    ],
+    "controller_mean_difference_bounds": [
+      -0.049567259639638483,
+      -0.028811214574110844
+    ],
+    "controller_midpoint_relative_reduction": 0.03651088252437121,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6107228386434014,
+      0.615724003055944
+    ],
+    "collector_mean_static_bounds": [
+      0.6535064730203191,
+      0.6590573192634258
+    ],
+    "collector_mean_difference_bounds": [
+      -0.04833448062002438,
+      -0.03778246996437512
+    ],
+    "collector_midpoint_relative_reduction": 0.06560972585916255,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3007-b1-phase_joint",
+      "shared_priority-high-s3007-b2-phase_joint"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3007-b1-static",
+      "shared_priority-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0040863754263856,
+      1.014572307819441
+    ],
+    "controller_mean_static_bounds": [
+      1.0681082222302218,
+      1.0786071895769673
+    ],
+    "controller_mean_difference_bounds": [
+      -0.07452081415058187,
+      -0.05353591441078076
+    ],
+    "controller_midpoint_relative_reduction": 0.059652400992248694,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.589547775344924,
+      0.5945212169733358
+    ],
+    "collector_mean_static_bounds": [
+      0.6535064730203191,
+      0.6590573192634258
+    ],
+    "collector_mean_difference_bounds": [
+      -0.06950954391850184,
+      -0.05898525604698324
+    ],
+    "collector_midpoint_relative_reduction": 0.09789604186926053,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3007-b1-phase_local_guard",
+      "shared_priority-high-s3007-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3007-b1-static",
+      "shared_priority-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      2.2031954089111285,
+      2.2091084334445514
+    ],
+    "controller_mean_static_bounds": [
+      1.0681082222302218,
+      1.0786071895769673
+    ],
+    "controller_mean_difference_bounds": [
+      1.1245882193341612,
+      1.1410002112143296
+    ],
+    "controller_midpoint_relative_reduction": -1.0553743724424234,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.9778750752950178,
+      1.981645670259599
+    ],
+    "collector_mean_static_bounds": [
+      0.6535064730203191,
+      0.6590573192634258
+    ],
+    "collector_mean_difference_bounds": [
+      1.3188177560315921,
+      1.32813919723928
+    ],
+    "collector_midpoint_relative_reduction": -2.0166310916328123,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3007-b1-uniform_guard",
+      "shared_priority-high-s3007-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3007-b1-static",
+      "shared_priority-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.999986373730475,
+      1.0101512608664944
+    ],
+    "controller_mean_static_bounds": [
+      1.0681082222302218,
+      1.0786071895769673
+    ],
+    "controller_mean_difference_bounds": [
+      -0.07862081584649222,
+      -0.05795696136372741
+    ],
+    "controller_midpoint_relative_reduction": 0.06362174345934525,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5808794096329053,
+      0.5859037285885131
+    ],
+    "collector_mean_static_bounds": [
+      0.6535064730203191,
+      0.6590573192634258
+    ],
+    "collector_mean_difference_bounds": [
+      -0.07817790963052046,
+      -0.06760274443180597
+    ],
+    "collector_midpoint_relative_reduction": 0.11106557633186033,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3008-b1-feedback",
+      "shared_priority-high-s3008-b2-feedback"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3008-b1-static",
+      "shared_priority-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9988838583079014,
+      1.0097325876630268
+    ],
+    "controller_mean_static_bounds": [
+      0.999029834839547,
+      1.0089353545363817
+    ],
+    "controller_mean_difference_bounds": [
+      -0.010051496228480283,
+      0.0107027528234796
+    ],
+    "controller_midpoint_relative_reduction": -0.00032433659629420004,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6601501719303299,
+      0.6656229239884461
+    ],
+    "collector_mean_static_bounds": [
+      0.6595460656223029,
+      0.6645112815052374
+    ],
+    "collector_mean_difference_bounds": [
+      -0.004361109574907596,
+      0.00607685836614319
+    ],
+    "collector_midpoint_relative_reduction": -0.001295826645996719,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3008-b1-joint",
+      "shared_priority-high-s3008-b2-joint"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3008-b1-static",
+      "shared_priority-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0137876175357534,
+      1.0238111487702253
+    ],
+    "controller_mean_static_bounds": [
+      0.999029834839547,
+      1.0089353545363817
+    ],
+    "controller_mean_difference_bounds": [
+      0.004852262999371804,
+      0.024781313930678117
+    ],
+    "controller_midpoint_relative_reduction": -0.014758013279732219,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "higher": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6679375852625047,
+      0.6728324707254839
+    ],
+    "collector_mean_static_bounds": [
+      0.6595460656223029,
+      0.6645112815052374
+    ],
+    "collector_mean_difference_bounds": [
+      0.0034263037572671573,
+      0.01328640510318102
+    ],
+    "collector_midpoint_relative_reduction": -0.012622345170098075,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 1,
+      "higher": 1
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3008-b1-local",
+      "shared_priority-high-s3008-b2-local"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3008-b1-static",
+      "shared_priority-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.4091986919858766,
+      1.4188654322065388
+    ],
+    "controller_mean_static_bounds": [
+      0.999029834839547,
+      1.0089353545363817
+    ],
+    "controller_mean_difference_bounds": [
+      0.40026333744949505,
+      0.41983559736699166
+    ],
+    "controller_midpoint_relative_reduction": -0.40842288459760184,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.162609627649524,
+      1.1676260923262156
+    ],
+    "collector_mean_static_bounds": [
+      0.6595460656223029,
+      0.6645112815052374
+    ],
+    "collector_mean_difference_bounds": [
+      0.49809834614428644,
+      0.5080800267039127
+    ],
+    "collector_midpoint_relative_reduction": -0.759920538963845,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 1,
+    "dynamic_cases": [
+      "shared_priority-high-s3008-b1-phase_guard",
+      "shared_priority-high-s3008-b2-phase_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3008-b1-static",
+      "shared_priority-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9774632450788704,
+      0.9878360788751814
+    ],
+    "controller_mean_static_bounds": [
+      0.999029834839547,
+      1.0089353545363817
+    ],
+    "controller_mean_difference_bounds": [
+      -0.03147210945751122,
+      -0.011193755964365615
+    ],
+    "controller_midpoint_relative_reduction": 0.021248309307163458,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "overlap": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6228782743545145,
+      0.6279844316109388
+    ],
+    "collector_mean_static_bounds": [
+      0.6595460656223029,
+      0.6645112815052374
+    ],
+    "collector_mean_difference_bounds": [
+      -0.04163300715072299,
+      -0.03156163401136414
+    ],
+    "collector_midpoint_relative_reduction": 0.0552805672057016,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3008-b1-phase_joint",
+      "shared_priority-high-s3008-b2-phase_joint"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3008-b1-static",
+      "shared_priority-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9697164846097159,
+      0.9798896060461255
+    ],
+    "controller_mean_static_bounds": [
+      0.999029834839547,
+      1.0089353545363817
+    ],
+    "controller_mean_difference_bounds": [
+      -0.039218869926665734,
+      -0.019140228793421588
+    ],
+    "controller_midpoint_relative_reduction": 0.029063800024454182,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.626813474589325,
+      0.6318677269825088
+    ],
+    "collector_mean_static_bounds": [
+      0.6595460656223029,
+      0.6645112815052374
+    ],
+    "collector_mean_difference_bounds": [
+      -0.03769780691591246,
+      -0.027678338639794076
+    ],
+    "collector_midpoint_relative_reduction": 0.04937561480817726,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3008-b1-phase_local_guard",
+      "shared_priority-high-s3008-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3008-b1-static",
+      "shared_priority-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      2.1286271377754473,
+      2.1347888757093596
+    ],
+    "controller_mean_static_bounds": [
+      0.999029834839547,
+      1.0089353545363817
+    ],
+    "controller_mean_difference_bounds": [
+      1.1196917832390656,
+      1.1357590408698126
+    ],
+    "controller_midpoint_relative_reduction": -1.1232519547860629,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.9642855894593003,
+      1.968015051239271
+    ],
+    "collector_mean_static_bounds": [
+      0.6595460656223029,
+      0.6645112815052374
+    ],
+    "collector_mean_difference_bounds": [
+      1.2997743079540627,
+      1.308468985616968
+    ],
+    "collector_midpoint_relative_reduction": -1.9698869533328385,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "shared_priority-high-s3008-b1-uniform_guard",
+      "shared_priority-high-s3008-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "shared_priority-high-s3008-b1-static",
+      "shared_priority-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0070647040705634,
+      1.0169759106813188
+    ],
+    "controller_mean_static_bounds": [
+      0.999029834839547,
+      1.0089353545363817
+    ],
+    "controller_mean_difference_bounds": [
+      -0.0018706504658183576,
+      0.017946075841771825
+    ],
+    "controller_midpoint_relative_reduction": -0.008005828717055408,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6688366217292014,
+      0.6732935942395764
+    ],
+    "collector_mean_static_bounds": [
+      0.6595460656223029,
+      0.6645112815052374
+    ],
+    "collector_mean_difference_bounds": [
+      0.004325340223964025,
+      0.013747528617273463
+    ],
+    "collector_midpoint_relative_reduction": -0.013649611839279808,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3005-b1-feedback",
+      "stable-high-s3005-b2-feedback"
+    ],
+    "static_cases": [
+      "stable-high-s3005-b1-static",
+      "stable-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8198956637687029,
+      0.8274090046412578
+    ],
+    "controller_mean_static_bounds": [
+      0.8215918473166803,
+      0.829467783657373
+    ],
+    "controller_mean_difference_bounds": [
+      -0.009572119888670128,
+      0.005817157324577382
+    ],
+    "controller_midpoint_relative_reduction": 0.00227427434700054,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5623303373644264,
+      0.5662864458695064
+    ],
+    "collector_mean_static_bounds": [
+      0.5621916410974293,
+      0.5662929854214724
+    ],
+    "collector_mean_difference_bounds": [
+      -0.003962648057045992,
+      0.004094804772077076
+    ],
+    "collector_midpoint_relative_reduction": -0.00011710989403450392,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3005-b1-joint",
+      "stable-high-s3005-b2-joint"
+    ],
+    "static_cases": [
+      "stable-high-s3005-b1-static",
+      "stable-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8346209288944988,
+      0.8420910201565651
+    ],
+    "controller_mean_static_bounds": [
+      0.8215918473166803,
+      0.829467783657373
+    ],
+    "controller_mean_difference_bounds": [
+      0.005153145237125789,
+      0.020499172839884727
+    ],
+    "controller_midpoint_relative_reduction": -0.015536881646047508,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5975176043493842,
+      0.6017087869707503
+    ],
+    "collector_mean_static_bounds": [
+      0.5621916410974293,
+      0.5662929854214724
+    ],
+    "collector_mean_difference_bounds": [
+      0.03122461892791173,
+      0.039517145873321
+    ],
+    "collector_midpoint_relative_reduction": -0.06268739789522319,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3005-b1-local",
+      "stable-high-s3005-b2-local"
+    ],
+    "static_cases": [
+      "stable-high-s3005-b1-static",
+      "stable-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2492921893047837,
+      1.2568392925419176
+    ],
+    "controller_mean_static_bounds": [
+      0.8215918473166803,
+      0.829467783657373
+    ],
+    "controller_mean_difference_bounds": [
+      0.4198244056474107,
+      0.43524744522523723
+    ],
+    "controller_midpoint_relative_reduction": -0.5178927731206127,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9241427623951786,
+      0.9282443439525174
+    ],
+    "collector_mean_static_bounds": [
+      0.5621916410974293,
+      0.5662929854214724
+    ],
+    "collector_mean_difference_bounds": [
+      0.3578497769737062,
+      0.36605270285508806
+    ],
+    "collector_midpoint_relative_reduction": -0.6414819154974719,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3005-b1-phase_guard",
+      "stable-high-s3005-b2-phase_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3005-b1-static",
+      "stable-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.809103335670827,
+      0.8165728245101007
+    ],
+    "controller_mean_static_bounds": [
+      0.8215918473166803,
+      0.829467783657373
+    ],
+    "controller_mean_difference_bounds": [
+      -0.020364447986545908,
+      -0.005019022806579676
+    ],
+    "controller_midpoint_relative_reduction": 0.015374048469800202,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "overlap": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.551589538974494,
+      0.5556342277904035
+    ],
+    "collector_mean_static_bounds": [
+      0.5621916410974293,
+      0.5662929854214724
+    ],
+    "collector_mean_difference_bounds": [
+      -0.014703446446978408,
+      -0.006557413307025806
+    ],
+    "collector_midpoint_relative_reduction": 0.018840185550058033,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "lower": 1,
+      "overlap": 1
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3005-b1-phase_joint",
+      "stable-high-s3005-b2-phase_joint"
+    ],
+    "static_cases": [
+      "stable-high-s3005-b1-static",
+      "stable-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8219819811689519,
+      0.8285869644984448
+    ],
+    "controller_mean_static_bounds": [
+      0.8215918473166803,
+      0.829467783657373
+    ],
+    "controller_mean_difference_bounds": [
+      -0.007485802488421123,
+      0.006995117181764432
+    ],
+    "controller_midpoint_relative_reduction": 0.00029719417606204344,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5596452736096821,
+      0.5634023882647543
+    ],
+    "collector_mean_static_bounds": [
+      0.5621916410974293,
+      0.5662929854214724
+    ],
+    "collector_mean_difference_bounds": [
+      -0.006647711811790302,
+      0.0012107471673250547
+    ],
+    "collector_midpoint_relative_reduction": 0.004817934171808008,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 1,
+      "lower": 1
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3005-b1-phase_local_guard",
+      "stable-high-s3005-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3005-b1-static",
+      "stable-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8682571928742564,
+      0.8754242288525296
+    ],
+    "controller_mean_static_bounds": [
+      0.8215918473166803,
+      0.829467783657373
+    ],
+    "controller_mean_difference_bounds": [
+      0.03878940921688334,
+      0.05383238153584913
+    ],
+    "controller_midpoint_relative_reduction": -0.056098392217420925,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6082913573236343,
+      0.6121517396188441
+    ],
+    "collector_mean_static_bounds": [
+      0.5621916410974293,
+      0.5662929854214724
+    ],
+    "collector_mean_difference_bounds": [
+      0.04199837190216188,
+      0.04996009852141475
+    ],
+    "collector_midpoint_relative_reduction": -0.08148845652177475,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3005,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3005-b1-uniform_guard",
+      "stable-high-s3005-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3005-b1-static",
+      "stable-high-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8024170853096019,
+      0.8097973051503812
+    ],
+    "controller_mean_static_bounds": [
+      0.8215918473166803,
+      0.829467783657373
+    ],
+    "controller_mean_difference_bounds": [
+      -0.02705069834777113,
+      -0.011794542166299216
+    ],
+    "controller_midpoint_relative_reduction": 0.023527460659402855,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5375436292263382,
+      0.54157950585187
+    ],
+    "collector_mean_static_bounds": [
+      0.5621916410974293,
+      0.5662929854214724
+    ],
+    "collector_mean_difference_bounds": [
+      -0.02874935619513419,
+      -0.020612135245559382
+    ],
+    "collector_midpoint_relative_reduction": 0.04374139468161082,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3006-b1-feedback",
+      "stable-high-s3006-b2-feedback"
+    ],
+    "static_cases": [
+      "stable-high-s3006-b1-static",
+      "stable-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8707820902569644,
+      0.8795225098297126
+    ],
+    "controller_mean_static_bounds": [
+      0.8707382487851263,
+      0.878249947571865
+    ],
+    "controller_mean_difference_bounds": [
+      -0.007467857314900628,
+      0.008784261044586239
+    ],
+    "controller_midpoint_relative_reduction": -0.0007526658741481196,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6020453954875518,
+      0.6070068962942401
+    ],
+    "collector_mean_static_bounds": [
+      0.6028415045042113,
+      0.6068308649548503
+    ],
+    "collector_mean_difference_bounds": [
+      -0.004785469467298575,
+      0.004165391790028838
+    ],
+    "collector_midpoint_relative_reduction": 0.0005125996864315049,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3006-b1-joint",
+      "stable-high-s3006-b2-joint"
+    ],
+    "static_cases": [
+      "stable-high-s3006-b1-static",
+      "stable-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8739994902794166,
+      0.8807899742604917
+    ],
+    "controller_mean_static_bounds": [
+      0.8707382487851263,
+      0.878249947571865
+    ],
+    "controller_mean_difference_bounds": [
+      -0.004250457292448495,
+      0.010051725475365259
+    ],
+    "controller_midpoint_relative_reduction": -0.0033169281502302464,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.603574216569714,
+      0.6071639214927267
+    ],
+    "collector_mean_static_bounds": [
+      0.6028415045042113,
+      0.6068308649548503
+    ],
+    "collector_mean_difference_bounds": [
+      -0.003256648385136285,
+      0.004322416988515432
+    ],
+    "collector_midpoint_relative_reduction": -0.0008810390567619941,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3006-b1-local",
+      "stable-high-s3006-b2-local"
+    ],
+    "static_cases": [
+      "stable-high-s3006-b1-static",
+      "stable-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.284541613733937,
+      1.2920653246602165
+    ],
+    "controller_mean_static_bounds": [
+      0.8707382487851263,
+      0.878249947571865
+    ],
+    "controller_mean_difference_bounds": [
+      0.4062916661620719,
+      0.42132707587509005
+    ],
+    "controller_midpoint_relative_reduction": -0.4731985863375343,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9245146805510605,
+      0.9285418141846506
+    ],
+    "collector_mean_static_bounds": [
+      0.6028415045042113,
+      0.6068308649548503
+    ],
+    "collector_mean_difference_bounds": [
+      0.3176838155962101,
+      0.32570030968043945
+    ],
+    "collector_midpoint_relative_reduction": -0.5318664305479316,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 1,
+    "dynamic_cases": [
+      "stable-high-s3006-b1-phase_guard",
+      "stable-high-s3006-b2-phase_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3006-b1-static",
+      "stable-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8696806733010725,
+      0.8762056689312625
+    ],
+    "controller_mean_static_bounds": [
+      0.8707382487851263,
+      0.878249947571865
+    ],
+    "controller_mean_difference_bounds": [
+      -0.008569274270792515,
+      0.005467420146136215
+    ],
+    "controller_midpoint_relative_reduction": 0.001773513469740551,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6014569255722509,
+      0.6050520085755364
+    ],
+    "collector_mean_static_bounds": [
+      0.6028415045042113,
+      0.6068308649548503
+    ],
+    "collector_mean_difference_bounds": [
+      -0.005373939382599335,
+      0.00221050407132517
+    ],
+    "collector_midpoint_relative_reduction": 0.0026151174410047585,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3006-b1-phase_joint",
+      "stable-high-s3006-b2-phase_joint"
+    ],
+    "static_cases": [
+      "stable-high-s3006-b1-static",
+      "stable-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8507605798645439,
+      0.858182852125507
+    ],
+    "controller_mean_static_bounds": [
+      0.8707382487851263,
+      0.878249947571865
+    ],
+    "controller_mean_difference_bounds": [
+      -0.027489367707321133,
+      -0.012555396659619356
+    ],
+    "controller_midpoint_relative_reduction": 0.022895960333151794,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "higher": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.577808788468569,
+      0.5816601082847788
+    ],
+    "collector_mean_static_bounds": [
+      0.6028415045042113,
+      0.6068308649548503
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0290220764862813,
+      -0.02118139621943249
+    ],
+    "collector_midpoint_relative_reduction": 0.04150171068895585,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "lower": 1,
+      "higher": 1
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3006-b1-phase_local_guard",
+      "stable-high-s3006-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3006-b1-static",
+      "stable-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8683412820284767,
+      0.8753849714521071
+    ],
+    "controller_mean_static_bounds": [
+      0.8707382487851263,
+      0.878249947571865
+    ],
+    "controller_mean_difference_bounds": [
+      -0.009908665543388318,
+      0.0046467226669807404
+    ],
+    "controller_midpoint_relative_reduction": 0.003008563972797416,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6118590250211964,
+      0.6154282668786679
+    ],
+    "collector_mean_static_bounds": [
+      0.6028415045042113,
+      0.6068308649548503
+    ],
+    "collector_mean_difference_bounds": [
+      0.005028160066346099,
+      0.012586762374456606
+    ],
+    "collector_midpoint_relative_reduction": -0.014561730006844641,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3006,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3006-b1-uniform_guard",
+      "stable-high-s3006-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3006-b1-static",
+      "stable-high-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8714496618489609,
+      0.8792630487989421
+    ],
+    "controller_mean_static_bounds": [
+      0.8707382487851263,
+      0.878249947571865
+    ],
+    "controller_mean_difference_bounds": [
+      -0.006800285722904198,
+      0.008524800013815781
+    ],
+    "controller_midpoint_relative_reduction": -0.0009860068206885132,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5845087102195718,
+      0.5886084481123222
+    ],
+    "collector_mean_static_bounds": [
+      0.6028415045042113,
+      0.6068308649548503
+    ],
+    "collector_mean_difference_bounds": [
+      -0.022322154735278488,
+      -0.014233056391889098
+    ],
+    "collector_midpoint_relative_reduction": 0.030219100683860453,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3007-b1-feedback",
+      "stable-high-s3007-b2-feedback"
+    ],
+    "static_cases": [
+      "stable-high-s3007-b1-static",
+      "stable-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8130833104118136,
+      0.8204020714307125
+    ],
+    "controller_mean_static_bounds": [
+      0.8123201322508748,
+      0.820672699405077
+    ],
+    "controller_mean_difference_bounds": [
+      -0.007589388993263446,
+      0.008081939179837738
+    ],
+    "controller_midpoint_relative_reduction": -0.0003016242184448301,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5474446551652004,
+      0.5511979859986866
+    ],
+    "collector_mean_static_bounds": [
+      0.5472966874452851,
+      0.5518617986466472
+    ],
+    "collector_mean_difference_bounds": [
+      -0.004417143481446784,
+      0.0039012985534015443
+    ],
+    "collector_midpoint_relative_reduction": 0.0004693089618763182,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3007-b1-joint",
+      "stable-high-s3007-b2-joint"
+    ],
+    "static_cases": [
+      "stable-high-s3007-b1-static",
+      "stable-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8278553029648215,
+      0.8345994788644043
+    ],
+    "controller_mean_static_bounds": [
+      0.8123201322508748,
+      0.820672699405077
+    ],
+    "controller_mean_difference_bounds": [
+      0.007182603559744427,
+      0.022279346613529538
+    ],
+    "controller_midpoint_relative_reduction": -0.018041689836077006,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "higher": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5502448245292002,
+      0.5537789530741645
+    ],
+    "collector_mean_static_bounds": [
+      0.5472966874452851,
+      0.5518617986466472
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0016169741174468788,
+      0.00648226562887938
+    ],
+    "collector_midpoint_relative_reduction": -0.004426378518652766,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 1,
+      "higher": 1
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3007-b1-local",
+      "stable-high-s3007-b2-local"
+    ],
+    "static_cases": [
+      "stable-high-s3007-b1-static",
+      "stable-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2671524610274103,
+      1.2744325118060782
+    ],
+    "controller_mean_static_bounds": [
+      0.8123201322508748,
+      0.820672699405077
+    ],
+    "controller_mean_difference_bounds": [
+      0.44647976162233316,
+      0.4621123795552034
+    ],
+    "controller_midpoint_relative_reduction": -0.5563968950532198,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.013458797769307,
+      1.0176303634370882
+    ],
+    "collector_mean_static_bounds": [
+      0.5472966874452851,
+      0.5518617986466472
+    ],
+    "collector_mean_difference_bounds": [
+      0.4615969991226599,
+      0.4703336759918031
+    ],
+    "collector_midpoint_relative_reduction": -0.8478583269897236,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3007-b1-phase_guard",
+      "stable-high-s3007-b2-phase_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3007-b1-static",
+      "stable-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.778549138034032,
+      0.7858423702168873
+    ],
+    "controller_mean_static_bounds": [
+      0.8123201322508748,
+      0.820672699405077
+    ],
+    "controller_mean_difference_bounds": [
+      -0.042123561371045004,
+      -0.02647776203398744
+    ],
+    "controller_midpoint_relative_reduction": 0.0420095680000425,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.4983531445019982,
+      0.5016783663576261
+    ],
+    "collector_mean_static_bounds": [
+      0.5472966874452851,
+      0.5518617986466472
+    ],
+    "collector_mean_difference_bounds": [
+      -0.053508654144648976,
+      -0.04561832108765895
+    ],
+    "collector_midpoint_relative_reduction": 0.09018442425419004,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3007-b1-phase_joint",
+      "stable-high-s3007-b2-phase_joint"
+    ],
+    "static_cases": [
+      "stable-high-s3007-b1-static",
+      "stable-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8690803585167153,
+      0.8762720205970215
+    ],
+    "controller_mean_static_bounds": [
+      0.8123201322508748,
+      0.820672699405077
+    ],
+    "controller_mean_difference_bounds": [
+      0.0484076591116383,
+      0.06395188834614668
+    ],
+    "controller_midpoint_relative_reduction": -0.06880590366330372,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5762039903127805,
+      0.5796619406153865
+    ],
+    "collector_mean_static_bounds": [
+      0.5472966874452851,
+      0.5518617986466472
+    ],
+    "collector_mean_difference_bounds": [
+      0.024342191666133384,
+      0.03236525317010136
+    ],
+    "collector_midpoint_relative_reduction": -0.051591690874223606,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 1,
+      "higher": 1
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3007-b1-phase_local_guard",
+      "stable-high-s3007-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3007-b1-static",
+      "stable-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8655820389327669,
+      0.8723430052070682
+    ],
+    "controller_mean_static_bounds": [
+      0.8123201322508748,
+      0.820672699405077
+    ],
+    "controller_mean_difference_bounds": [
+      0.044909339527689884,
+      0.06002287295619346
+    ],
+    "controller_midpoint_relative_reduction": -0.06425760753491837,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5722650296272014,
+      0.5756137067858054
+    ],
+    "collector_mean_static_bounds": [
+      0.5472966874452851,
+      0.5518617986466472
+    ],
+    "collector_mean_difference_bounds": [
+      0.020403230980554243,
+      0.028317019340520333
+    ],
+    "collector_midpoint_relative_reduction": -0.04432504587604986,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3007,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3007-b1-uniform_guard",
+      "stable-high-s3007-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3007-b1-static",
+      "stable-high-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.78870569454621,
+      0.7955857243574247
+    ],
+    "controller_mean_static_bounds": [
+      0.8123201322508748,
+      0.820672699405077
+    ],
+    "controller_mean_difference_bounds": [
+      -0.031967004858867054,
+      -0.0167344078934501
+    ],
+    "controller_midpoint_relative_reduction": 0.029823408779407173,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5006884822725223,
+      0.5040843378999518
+    ],
+    "collector_mean_static_bounds": [
+      0.5472966874452851,
+      0.5518617986466472
+    ],
+    "collector_mean_difference_bounds": [
+      -0.05117331637412484,
+      -0.04321234954533326
+    ],
+    "collector_midpoint_relative_reduction": 0.08587084311658046,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3008-b1-feedback",
+      "stable-high-s3008-b2-feedback"
+    ],
+    "static_cases": [
+      "stable-high-s3008-b1-static",
+      "stable-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8379421494233932,
+      0.8467848475196367
+    ],
+    "controller_mean_static_bounds": [
+      0.8387986205659814,
+      0.8459402227860304
+    ],
+    "controller_mean_difference_bounds": [
+      -0.007998073362637137,
+      0.007986226953655362
+    ],
+    "controller_midpoint_relative_reduction": 7.0315996029550514e-06,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6135935783979549,
+      0.6186205073834121
+    ],
+    "collector_mean_static_bounds": [
+      0.6140359599240832,
+      0.6173902304649317
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0037966520669768244,
+      0.004584547459328903
+    ],
+    "collector_midpoint_relative_reduction": -0.0006398234815058082,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3008-b1-joint",
+      "stable-high-s3008-b2-joint"
+    ],
+    "static_cases": [
+      "stable-high-s3008-b1-static",
+      "stable-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.9006251326052255,
+      0.908044907530411
+    ],
+    "controller_mean_static_bounds": [
+      0.8387986205659814,
+      0.8459402227860304
+    ],
+    "controller_mean_difference_bounds": [
+      0.05468490981919516,
+      0.06924628696442964
+    ],
+    "controller_midpoint_relative_reduction": -0.07356107284678433,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6561206362392189,
+      0.6601364843756554
+    ],
+    "collector_mean_static_bounds": [
+      0.6140359599240832,
+      0.6173902304649317
+    ],
+    "collector_mean_difference_bounds": [
+      0.03873040577428716,
+      0.046100524451572256
+    ],
+    "collector_midpoint_relative_reduction": -0.06888835960120421,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3008-b1-local",
+      "stable-high-s3008-b2-local"
+    ],
+    "static_cases": [
+      "stable-high-s3008-b1-static",
+      "stable-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.198127729798731,
+      1.2048364209172482
+    ],
+    "controller_mean_static_bounds": [
+      0.8387986205659814,
+      0.8459402227860304
+    ],
+    "controller_mean_difference_bounds": [
+      0.3521875070127006,
+      0.3660378003512668
+    ],
+    "controller_midpoint_relative_reduction": -0.426312547014683,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.0300394837541926,
+      1.0335863327280652
+    ],
+    "collector_mean_static_bounds": [
+      0.6140359599240832,
+      0.6173902304649317
+    ],
+    "collector_mean_difference_bounds": [
+      0.4126492532892608,
+      0.41955037280398194
+    ],
+    "collector_midpoint_relative_reduction": -0.6758014671024222,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3008-b1-phase_guard",
+      "stable-high-s3008-b2-phase_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3008-b1-static",
+      "stable-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8396598264186059,
+      0.846453291973782
+    ],
+    "controller_mean_static_bounds": [
+      0.8387986205659814,
+      0.8459402227860304
+    ],
+    "controller_mean_difference_bounds": [
+      -0.006280396367424501,
+      0.007654671407800684
+    ],
+    "controller_midpoint_relative_reduction": -0.0008157199234760537,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6136151568532326,
+      0.6169400557845961
+    ],
+    "collector_mean_static_bounds": [
+      0.6140359599240832,
+      0.6173902304649317
+    ],
+    "collector_mean_difference_bounds": [
+      -0.003775073611699098,
+      0.0029040958605129896
+    ],
+    "collector_midpoint_relative_reduction": 0.0007072918847949927,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3008-b1-phase_joint",
+      "stable-high-s3008-b2-phase_joint"
+    ],
+    "static_cases": [
+      "stable-high-s3008-b1-static",
+      "stable-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8438966361233875,
+      0.8509763429156405
+    ],
+    "controller_mean_static_bounds": [
+      0.8387986205659814,
+      0.8459402227860304
+    ],
+    "controller_mean_difference_bounds": [
+      -0.0020435866626429267,
+      0.012177722349659192
+    ],
+    "controller_midpoint_relative_reduction": -0.006015256149049751,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6138364608515459,
+      0.6173971088051303
+    ],
+    "collector_mean_static_bounds": [
+      0.6140359599240832,
+      0.6173902304649317
+    ],
+    "collector_mean_difference_bounds": [
+      -0.003553769613385882,
+      0.00336114888104716
+    ],
+    "collector_midpoint_relative_reduction": 0.00015642085075190978,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3008-b1-phase_local_guard",
+      "stable-high-s3008-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3008-b1-static",
+      "stable-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.830164782081504,
+      0.8373519713969022
+    ],
+    "controller_mean_static_bounds": [
+      0.8387986205659814,
+      0.8459402227860304
+    ],
+    "controller_mean_difference_bounds": [
+      -0.015775440704526356,
+      -0.0014466491690792171
+    ],
+    "controller_midpoint_relative_reduction": 0.010222409212896095,
+    "controller_both_blocks_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6026185655145097,
+      0.6063916571565862
+    ],
+    "collector_mean_static_bounds": [
+      0.6140359599240832,
+      0.6173902304649317
+    ],
+    "collector_mean_difference_bounds": [
+      -0.014771664950422092,
+      -0.007644302767497002
+    ],
+    "collector_midpoint_relative_reduction": 0.018203257241782105,
+    "collector_both_blocks_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "seed": 3008,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "stable-high-s3008-b1-uniform_guard",
+      "stable-high-s3008-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "stable-high-s3008-b1-static",
+      "stable-high-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      0.8622612075465389,
+      0.8694682794852217
+    ],
+    "controller_mean_static_bounds": [
+      0.8387986205659814,
+      0.8459402227860304
+    ],
+    "controller_mean_difference_bounds": [
+      0.016320984760508528,
+      0.030669658919240284
+    ],
+    "controller_midpoint_relative_reduction": -0.027891945309609274,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6238271177939037,
+      0.6273581281011491
+    ],
+    "collector_mean_static_bounds": [
+      0.6140359599240832,
+      0.6173902304649317
+    ],
+    "collector_mean_difference_bounds": [
+      0.006436887328971963,
+      0.01332216817706594
+    ],
+    "collector_midpoint_relative_reduction": -0.016045667747082628,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3005-b1-feedback",
+      "switch-low-s3005-b2-feedback"
+    ],
+    "static_cases": [
+      "switch-low-s3005-b1-static",
+      "switch-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.8289712771144249,
+      1.8345616637641364
+    ],
+    "controller_mean_static_bounds": [
+      1.038253293266703,
+      1.0453174305623822
+    ],
+    "controller_mean_difference_bounds": [
+      0.7836538465520425,
+      0.7963083704974333
+    ],
+    "controller_midpoint_relative_reduction": -0.7582954583590509,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.5997233263439292,
+      1.603558506610368
+    ],
+    "collector_mean_static_bounds": [
+      0.7734058670138191,
+      0.7775975975528564
+    ],
+    "collector_mean_difference_bounds": [
+      0.8221257287910728,
+      0.8301526395965488
+    ],
+    "collector_midpoint_relative_reduction": -1.0652963749821414,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3005-b1-joint",
+      "switch-low-s3005-b2-joint"
+    ],
+    "static_cases": [
+      "switch-low-s3005-b1-static",
+      "switch-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.3494439323235121,
+      1.3558543080072978
+    ],
+    "controller_mean_static_bounds": [
+      1.038253293266703,
+      1.0453174305623822
+    ],
+    "controller_mean_difference_bounds": [
+      0.3041265017611299,
+      0.31760101474059466
+    ],
+    "controller_midpoint_relative_reduction": -0.29839520655154134,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1072580303320017,
+      1.1112668655214688
+    ],
+    "collector_mean_static_bounds": [
+      0.7734058670138191,
+      0.7775975975528564
+    ],
+    "collector_mean_difference_bounds": [
+      0.3296604327791452,
+      0.3378609985076498
+    ],
+    "collector_midpoint_relative_reduction": -0.4303803611897729,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3005-b1-local",
+      "switch-low-s3005-b2-local"
+    ],
+    "static_cases": [
+      "switch-low-s3005-b1-static",
+      "switch-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.1558243968059045,
+      1.1627375910139042
+    ],
+    "controller_mean_static_bounds": [
+      1.038253293266703,
+      1.0453174305623822
+    ],
+    "controller_mean_difference_bounds": [
+      0.11050696624352241,
+      0.12448429774720104
+    ],
+    "controller_midpoint_relative_reduction": -0.11278295538673526,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9015530461736011,
+      0.9056192282521078
+    ],
+    "collector_mean_static_bounds": [
+      0.7734058670138191,
+      0.7775975975528564
+    ],
+    "collector_mean_difference_bounds": [
+      0.12395544862074465,
+      0.1322133612382887
+    ],
+    "collector_midpoint_relative_reduction": -0.16516327378456414,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3005-b1-phase_guard",
+      "switch-low-s3005-b2-phase_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3005-b1-static",
+      "switch-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.1645475754151184,
+      1.171332009720898
+    ],
+    "controller_mean_static_bounds": [
+      1.038253293266703,
+      1.0453174305623822
+    ],
+    "controller_mean_difference_bounds": [
+      0.1192301448527362,
+      0.13307871645419467
+    ],
+    "controller_midpoint_relative_reduction": -0.12109445502442549,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.8977270086395508,
+      0.9018378692655018
+    ],
+    "collector_mean_static_bounds": [
+      0.7734058670138191,
+      0.7775975975528564
+    ],
+    "collector_mean_difference_bounds": [
+      0.12012941108669428,
+      0.12843200225168272
+    ],
+    "collector_midpoint_relative_reduction": -0.1602584513941244,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3005-b1-phase_joint",
+      "switch-low-s3005-b2-phase_joint"
+    ],
+    "static_cases": [
+      "switch-low-s3005-b1-static",
+      "switch-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.3904957707346641,
+      1.3958866639638856
+    ],
+    "controller_mean_static_bounds": [
+      1.038253293266703,
+      1.0453174305623822
+    ],
+    "controller_mean_difference_bounds": [
+      0.3451783401722819,
+      0.3576333706971826
+    ],
+    "controller_midpoint_relative_reduction": -0.3373111854719627,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.16213857048404,
+      1.1657591636261957
+    ],
+    "collector_mean_static_bounds": [
+      0.7734058670138191,
+      0.7775975975528564
+    ],
+    "collector_mean_difference_bounds": [
+      0.38454097293118344,
+      0.39235329661237645
+    ],
+    "collector_midpoint_relative_reduction": -0.500897829883708,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3005-b1-phase_local_guard",
+      "switch-low-s3005-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3005-b1-static",
+      "switch-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.4347476006282083,
+      1.4410582191685464
+    ],
+    "controller_mean_static_bounds": [
+      1.038253293266703,
+      1.0453174305623822
+    ],
+    "controller_mean_difference_bounds": [
+      0.3894301700658259,
+      0.40280492590184314
+    ],
+    "controller_midpoint_relative_reduction": -0.38022951988485315,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.2003194324017255,
+      1.2042822524749601
+    ],
+    "collector_mean_static_bounds": [
+      0.7734058670138191,
+      0.7775975975528564
+    ],
+    "collector_mean_difference_bounds": [
+      0.422721834848869,
+      0.430876385461141
+    ],
+    "collector_midpoint_relative_reduction": -0.5503522331257276,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3005,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3005-b1-uniform_guard",
+      "switch-low-s3005-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3005-b1-static",
+      "switch-low-s3005-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2424701147982162,
+      1.2489640224648526
+    ],
+    "controller_mean_static_bounds": [
+      1.038253293266703,
+      1.0453174305623822
+    ],
+    "controller_mean_difference_bounds": [
+      0.1971526842358341,
+      0.21071072919814948
+    ],
+    "controller_midpoint_relative_reduction": -0.1957521329942819,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.000963330816397,
+      1.0048637907290408
+    ],
+    "collector_mean_static_bounds": [
+      0.7734058670138191,
+      0.7775975975528564
+    ],
+    "collector_mean_difference_bounds": [
+      0.22336573326354042,
+      0.23145792371522167
+    ],
+    "collector_midpoint_relative_reduction": -0.29324477176834185,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3006-b1-feedback",
+      "switch-low-s3006-b2-feedback"
+    ],
+    "static_cases": [
+      "switch-low-s3006-b1-static",
+      "switch-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.7805898362328576,
+      1.7865714876852095
+    ],
+    "controller_mean_static_bounds": [
+      1.0399799081895709,
+      1.0475305655628833
+    ],
+    "controller_mean_difference_bounds": [
+      0.7330592706699746,
+      0.7465915794956385
+    ],
+    "controller_midpoint_relative_reduction": -0.7088112221568074,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.5444677484600773,
+      1.5484474693659387
+    ],
+    "collector_mean_static_bounds": [
+      0.775561015026895,
+      0.7801942222712556
+    ],
+    "collector_mean_difference_bounds": [
+      0.7642735261888217,
+      0.7728864543390437
+    ],
+    "collector_midpoint_relative_reduction": -0.9880474406741648,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3006-b1-joint",
+      "switch-low-s3006-b2-joint"
+    ],
+    "static_cases": [
+      "switch-low-s3006-b1-static",
+      "switch-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.1810330212001245,
+      1.1875941623180204
+    ],
+    "controller_mean_static_bounds": [
+      1.0399799081895709,
+      1.0475305655628833
+    ],
+    "controller_mean_difference_bounds": [
+      0.1335024556372414,
+      0.14761425412844953
+    ],
+    "controller_midpoint_relative_reduction": -0.13466601164417755,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9231317498073497,
+      0.9269474870511738
+    ],
+    "collector_mean_static_bounds": [
+      0.775561015026895,
+      0.7801942222712556
+    ],
+    "collector_mean_difference_bounds": [
+      0.14293752753609407,
+      0.1513864720242789
+    ],
+    "collector_midpoint_relative_reduction": -0.18918400048038386,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3006-b1-local",
+      "switch-low-s3006-b2-local"
+    ],
+    "static_cases": [
+      "switch-low-s3006-b1-static",
+      "switch-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0905253128617316,
+      1.0968985083781293
+    ],
+    "controller_mean_static_bounds": [
+      1.0399799081895709,
+      1.0475305655628833
+    ],
+    "controller_mean_difference_bounds": [
+      0.042994747298848446,
+      0.05691860018855843
+    ],
+    "controller_midpoint_relative_reduction": -0.047862441287686165,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.8243545207283991,
+      0.8282620843209461
+    ],
+    "collector_mean_static_bounds": [
+      0.775561015026895,
+      0.7801942222712556
+    ],
+    "collector_mean_difference_bounds": [
+      0.044160298457143476,
+      0.05270106929405105
+    ],
+    "collector_midpoint_relative_reduction": -0.06226003000279911,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3006-b1-phase_guard",
+      "switch-low-s3006-b2-phase_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3006-b1-static",
+      "switch-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.234709426864666,
+      1.241128897446462
+    ],
+    "controller_mean_static_bounds": [
+      1.0399799081895709,
+      1.0475305655628833
+    ],
+    "controller_mean_difference_bounds": [
+      0.18717886130178285,
+      0.20114898925689118
+    ],
+    "controller_midpoint_relative_reduction": -0.18602438428039386,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9712400264861183,
+      0.9750643010483843
+    ],
+    "collector_mean_static_bounds": [
+      0.775561015026895,
+      0.7801942222712556
+    ],
+    "collector_mean_difference_bounds": [
+      0.19104580421486272,
+      0.1995032860214893
+    ],
+    "collector_midpoint_relative_reduction": -0.25103504772036705,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3006-b1-phase_joint",
+      "switch-low-s3006-b2-phase_joint"
+    ],
+    "static_cases": [
+      "switch-low-s3006-b1-static",
+      "switch-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.4426385866163312,
+      1.4483308839660893
+    ],
+    "controller_mean_static_bounds": [
+      1.0399799081895709,
+      1.0475305655628833
+    ],
+    "controller_mean_difference_bounds": [
+      0.395108021053448,
+      0.40835097577651847
+    ],
+    "controller_midpoint_relative_reduction": -0.38488860627639837,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.2058126156575921,
+      1.209482207126758
+    ],
+    "collector_mean_static_bounds": [
+      0.775561015026895,
+      0.7801942222712556
+    ],
+    "collector_mean_difference_bounds": [
+      0.42561839338633656,
+      0.43392119209986285
+    ],
+    "collector_midpoint_relative_reduction": -0.5524902406749698,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3006-b1-phase_local_guard",
+      "switch-low-s3006-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3006-b1-static",
+      "switch-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.44476775732176,
+      1.45107766906137
+    ],
+    "controller_mean_static_bounds": [
+      1.0399799081895709,
+      1.0475305655628833
+    ],
+    "controller_mean_difference_bounds": [
+      0.39723719175887684,
+      0.4110977608717993
+    ],
+    "controller_midpoint_relative_reduction": -0.3872243817668777,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.192078845944723,
+      1.19592878662109
+    ],
+    "collector_mean_static_bounds": [
+      0.775561015026895,
+      0.7801942222712556
+    ],
+    "collector_mean_difference_bounds": [
+      0.41188462367346734,
+      0.42036777159419497
+    ],
+    "collector_midpoint_relative_reduction": -0.5349507270263277,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3006,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3006-b1-uniform_guard",
+      "switch-low-s3006-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3006-b1-static",
+      "switch-low-s3006-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.136147122693572,
+      1.1428996053386713
+    ],
+    "controller_mean_static_bounds": [
+      1.0399799081895709,
+      1.0475305655628833
+    ],
+    "controller_mean_difference_bounds": [
+      0.08861655713068872,
+      0.10291969714910043
+    ],
+    "controller_midpoint_relative_reduction": -0.09175343390516687,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.8671994076681024,
+      0.8712462390371187
+    ],
+    "collector_mean_static_bounds": [
+      0.775561015026895,
+      0.7801942222712556
+    ],
+    "collector_mean_difference_bounds": [
+      0.08700518539684687,
+      0.09568522401022372
+    ],
+    "collector_midpoint_relative_reduction": -0.11742876066054295,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3007-b1-feedback",
+      "switch-low-s3007-b2-feedback"
+    ],
+    "static_cases": [
+      "switch-low-s3007-b1-static",
+      "switch-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.8611715505721165,
+      1.8676712888334384
+    ],
+    "controller_mean_static_bounds": [
+      1.0550850873305797,
+      1.0620661220526897
+    ],
+    "controller_mean_difference_bounds": [
+      0.7991054285194269,
+      0.8125862015028587
+    ],
+    "controller_midpoint_relative_reduction": -0.7612548517456976,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.5895571568567344,
+      1.5939607432770835
+    ],
+    "collector_mean_static_bounds": [
+      0.7769782248626171,
+      0.781292039171944
+    ],
+    "collector_mean_difference_bounds": [
+      0.8082651176847904,
+      0.8169825184144661
+    ],
+    "collector_midpoint_relative_reduction": -1.0429818713804386,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3007-b1-joint",
+      "switch-low-s3007-b2-joint"
+    ],
+    "static_cases": [
+      "switch-low-s3007-b1-static",
+      "switch-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2049660285739847,
+      1.2121303011141848
+    ],
+    "controller_mean_static_bounds": [
+      1.0550850873305797,
+      1.0620661220526897
+    ],
+    "controller_mean_difference_bounds": [
+      0.14289990652129514,
+      0.15704521378360514
+    ],
+    "controller_midpoint_relative_reduction": -0.14167392436380327,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9110630858566406,
+      0.9154024662426402
+    ],
+    "collector_mean_static_bounds": [
+      0.7769782248626171,
+      0.781292039171944
+    ],
+    "collector_mean_difference_bounds": [
+      0.12977104668469663,
+      0.13842424138002302
+    ],
+    "collector_midpoint_relative_reduction": -0.17211089388969514,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 1,
+    "dynamic_cases": [
+      "switch-low-s3007-b1-local",
+      "switch-low-s3007-b2-local"
+    ],
+    "static_cases": [
+      "switch-low-s3007-b1-static",
+      "switch-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2456446145209354,
+      1.252271056773445
+    ],
+    "controller_mean_static_bounds": [
+      1.0550850873305797,
+      1.0620661220526897
+    ],
+    "controller_mean_difference_bounds": [
+      0.18357849246824587,
+      0.19718596944286515
+    ],
+    "controller_midpoint_relative_reduction": -0.17984755185343057,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "higher": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9816724623058899,
+      0.9856270833886753
+    ],
+    "collector_mean_static_bounds": [
+      0.7769782248626171,
+      0.781292039171944
+    ],
+    "collector_mean_difference_bounds": [
+      0.20038042313394583,
+      0.20864885852605808
+    ],
+    "collector_midpoint_relative_reduction": -0.2624893069582005,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "lower": 1,
+      "higher": 1
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3007-b1-phase_guard",
+      "switch-low-s3007-b2-phase_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3007-b1-static",
+      "switch-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.1746956226559824,
+      1.1818135843903934
+    ],
+    "controller_mean_static_bounds": [
+      1.0550850873305797,
+      1.0620661220526897
+    ],
+    "controller_mean_difference_bounds": [
+      0.11262950060329269,
+      0.1267284970598136
+    ],
+    "controller_midpoint_relative_reduction": -0.1130566379020379,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.8837406487156416,
+      0.8878520247750792
+    ],
+    "collector_mean_static_bounds": [
+      0.7769782248626171,
+      0.781292039171944
+    ],
+    "collector_mean_difference_bounds": [
+      0.10244860954369756,
+      0.11087379991246205
+    ],
+    "collector_midpoint_relative_reduction": -0.13689692627762828,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3007-b1-phase_joint",
+      "switch-low-s3007-b2-phase_joint"
+    ],
+    "static_cases": [
+      "switch-low-s3007-b1-static",
+      "switch-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.4390907358425804,
+      1.4453080690743016
+    ],
+    "controller_mean_static_bounds": [
+      1.0550850873305797,
+      1.0620661220526897
+    ],
+    "controller_mean_difference_bounds": [
+      0.3770246137898907,
+      0.39022298174372205
+    ],
+    "controller_midpoint_relative_reduction": -0.36239622004000044,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1838435252304431,
+      1.1875833194819914
+    ],
+    "collector_mean_static_bounds": [
+      0.7769782248626171,
+      0.781292039171944
+    ],
+    "collector_mean_difference_bounds": [
+      0.40255148605849894,
+      0.41060509461937417
+    ],
+    "collector_midpoint_relative_reduction": -0.5218328292888725,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3007-b1-phase_local_guard",
+      "switch-low-s3007-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3007-b1-static",
+      "switch-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.4459374127208262,
+      1.4523116648456984
+    ],
+    "controller_mean_static_bounds": [
+      1.0550850873305797,
+      1.0620661220526897
+    ],
+    "controller_mean_difference_bounds": [
+      0.3838712906681364,
+      0.3972265775151186
+    ],
+    "controller_midpoint_relative_reduction": -0.3689381583712154,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.18127888557368,
+      1.1851493714123027
+    ],
+    "collector_mean_static_bounds": [
+      0.7769782248626171,
+      0.781292039171944
+    ],
+    "collector_mean_difference_bounds": [
+      0.39998684640173593,
+      0.4081711465496855
+    ],
+    "collector_midpoint_relative_reduction": -0.5186250495847858,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3007,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 2,
+    "dynamic_cases": [
+      "switch-low-s3007-b1-uniform_guard",
+      "switch-low-s3007-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3007-b1-static",
+      "switch-low-s3007-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2205780174365624,
+      1.2271276577965076
+    ],
+    "controller_mean_static_bounds": [
+      1.0550850873305797,
+      1.0620661220526897
+    ],
+    "controller_mean_difference_bounds": [
+      0.15851189538387267,
+      0.17204257046592786
+    ],
+    "controller_midpoint_relative_reduction": -0.15613172284755772,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.9347122030221295,
+      0.9387618127389753
+    ],
+    "collector_mean_static_bounds": [
+      0.7769782248626171,
+      0.781292039171944
+    ],
+    "collector_mean_difference_bounds": [
+      0.15342016385018553,
+      0.1617835878763581
+    ],
+    "collector_midpoint_relative_reduction": -0.20227797385444596,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "feedback",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3008-b1-feedback",
+      "switch-low-s3008-b2-feedback"
+    ],
+    "static_cases": [
+      "switch-low-s3008-b1-static",
+      "switch-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.862278492876796,
+      1.8687457600537578
+    ],
+    "controller_mean_static_bounds": [
+      1.0462444743076453,
+      1.052874388793635
+    ],
+    "controller_mean_difference_bounds": [
+      0.809404104083161,
+      0.8225012857461124
+    ],
+    "controller_midpoint_relative_reduction": -0.7774240032402281,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.6174906342921096,
+      1.6223078572580478
+    ],
+    "collector_mean_static_bounds": [
+      0.7755442414853433,
+      0.7796171533503888
+    ],
+    "collector_mean_difference_bounds": [
+      0.8378734809417206,
+      0.8467636157727045
+    ],
+    "collector_midpoint_relative_reduction": -1.0832554758037634,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3008-b1-joint",
+      "switch-low-s3008-b2-joint"
+    ],
+    "static_cases": [
+      "switch-low-s3008-b1-static",
+      "switch-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.1466462191924784,
+      1.15321754343692
+    ],
+    "controller_mean_static_bounds": [
+      1.0462444743076453,
+      1.052874388793635
+    ],
+    "controller_mean_difference_bounds": [
+      0.09377183039884363,
+      0.10697306912927451
+    ],
+    "controller_midpoint_relative_reduction": -0.09563293582695644,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.8946163254507873,
+      0.8986176068721903
+    ],
+    "collector_mean_static_bounds": [
+      0.7755442414853433,
+      0.7796171533503888
+    ],
+    "collector_mean_difference_bounds": [
+      0.1149991721003985,
+      0.12307336538684699
+    ],
+    "collector_midpoint_relative_reduction": -0.1530854214088773,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "local",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3008-b1-local",
+      "switch-low-s3008-b2-local"
+    ],
+    "static_cases": [
+      "switch-low-s3008-b1-static",
+      "switch-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.0528328914479348,
+      1.059460833068303
+    ],
+    "controller_mean_static_bounds": [
+      1.0462444743076453,
+      1.052874388793635
+    ],
+    "controller_mean_difference_bounds": [
+      -4.1497345700136634e-05,
+      0.013216358760657632
+    ],
+    "controller_midpoint_relative_reduction": -0.006276377029689984,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.78610338458542,
+      0.790240721243949
+    ],
+    "collector_mean_static_bounds": [
+      0.7755442414853433,
+      0.7796171533503888
+    ],
+    "collector_mean_difference_bounds": [
+      0.00648623123503117,
+      0.014696479758605718
+    ],
+    "collector_midpoint_relative_reduction": -0.013620908456176258,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 1,
+      "lower": 1
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3008-b1-phase_guard",
+      "switch-low-s3008-b2-phase_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3008-b1-static",
+      "switch-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.1615022495749425,
+      1.1679360086260369
+    ],
+    "controller_mean_static_bounds": [
+      1.0462444743076453,
+      1.052874388793635
+    ],
+    "controller_mean_difference_bounds": [
+      0.1086278607813076,
+      0.12169153431839153
+    ],
+    "controller_midpoint_relative_reduction": -0.10972194054767384,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.8896198721833546,
+      0.8935882415350458
+    ],
+    "collector_mean_static_bounds": [
+      0.7755442414853433,
+      0.7796171533503888
+    ],
+    "collector_mean_difference_bounds": [
+      0.11000271883296575,
+      0.11804400004970261
+    ],
+    "collector_midpoint_relative_reduction": -0.1466386187568373,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_joint",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3008-b1-phase_joint",
+      "switch-low-s3008-b2-phase_joint"
+    ],
+    "static_cases": [
+      "switch-low-s3008-b1-static",
+      "switch-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.4323056630031792,
+      1.438217624487426
+    ],
+    "controller_mean_static_bounds": [
+      1.0462444743076453,
+      1.052874388793635
+    ],
+    "controller_mean_difference_bounds": [
+      0.37943127420954426,
+      0.3919731501797806
+    ],
+    "controller_midpoint_relative_reduction": -0.36748963479354224,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.2132215452269453,
+      1.2169508484476266
+    ],
+    "collector_mean_static_bounds": [
+      0.7755442414853433,
+      0.7796171533503888
+    ],
+    "collector_mean_difference_bounds": [
+      0.4336043918765563,
+      0.44140660696228345
+    ],
+    "collector_midpoint_relative_reduction": -0.5626496399309506,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "phase_local_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3008-b1-phase_local_guard",
+      "switch-low-s3008-b2-phase_local_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3008-b1-static",
+      "switch-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.4573051247032307,
+      1.463280753551436
+    ],
+    "controller_mean_static_bounds": [
+      1.0462444743076453,
+      1.052874388793635
+    ],
+    "controller_mean_difference_bounds": [
+      0.4044307359095958,
+      0.4170362792437905
+    ],
+    "controller_midpoint_relative_reduction": -0.39133897064777695,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.21397658175484,
+      1.2177585590009867
+    ],
+    "collector_mean_static_bounds": [
+      0.7755442414853433,
+      0.7796171533503888
+    ],
+    "collector_mean_difference_bounds": [
+      0.4343594284044511,
+      0.4422143175156436
+    ],
+    "collector_midpoint_relative_reduction": -0.5636545176796167,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "seed": 3008,
+    "method": "uniform_guard",
+    "deployment_pairs": 2,
+    "both_within_pairs": 0,
+    "dynamic_cases": [
+      "switch-low-s3008-b1-uniform_guard",
+      "switch-low-s3008-b2-uniform_guard"
+    ],
+    "static_cases": [
+      "switch-low-s3008-b1-static",
+      "switch-low-s3008-b2-static"
+    ],
+    "controller_mean_dynamic_bounds": [
+      1.2945610586326244,
+      1.3009564600390244
+    ],
+    "controller_mean_static_bounds": [
+      1.0462444743076453,
+      1.052874388793635
+    ],
+    "controller_mean_difference_bounds": [
+      0.24168666983898945,
+      0.254711985731379
+    ],
+    "controller_midpoint_relative_reduction": -0.23647953638841562,
+    "controller_both_blocks_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.0256901697901126,
+      1.0297144929728657
+    ],
+    "collector_mean_static_bounds": [
+      0.7755442414853433,
+      0.7796171533503888
+    ],
+    "collector_mean_difference_bounds": [
+      0.2460730164397238,
+      0.2541702514875224
+    ],
+    "collector_midpoint_relative_reduction": -0.3216664647080475,
+    "collector_both_blocks_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    }
+  }
+]

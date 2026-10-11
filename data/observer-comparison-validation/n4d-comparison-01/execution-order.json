@@ -1,0 +1,6658 @@
+[
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b1-joint",
+    "order_seed": 42426414,
+    "position": 0
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 2
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 4
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 6
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 8
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b1-local",
+    "order_seed": 42426414,
+    "position": 10
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 12
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 14
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 16
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 18
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 20
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b1-joint",
+    "order_seed": 42426414,
+    "position": 22
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 24
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 26
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b1-feedback",
+    "order_seed": 42426414,
+    "position": 28
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 30
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 32
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b1-static",
+    "order_seed": 42426414,
+    "position": 34
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 36
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 38
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 40
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b1-static",
+    "order_seed": 42426414,
+    "position": 42
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 44
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b1-local",
+    "order_seed": 42426414,
+    "position": 46
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 48
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 50
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 52
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b1-static",
+    "order_seed": 42426414,
+    "position": 54
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b1-joint",
+    "order_seed": 42426414,
+    "position": 56
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b1-static",
+    "order_seed": 42426414,
+    "position": 58
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b1-local",
+    "order_seed": 42426414,
+    "position": 60
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b1-local",
+    "order_seed": 42426414,
+    "position": 62
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 64
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b1-feedback",
+    "order_seed": 42426414,
+    "position": 66
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b1-feedback",
+    "order_seed": 42426414,
+    "position": 68
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b1-static",
+    "order_seed": 42426414,
+    "position": 70
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b1-local",
+    "order_seed": 42426414,
+    "position": 72
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b1-joint",
+    "order_seed": 42426414,
+    "position": 74
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b1-joint",
+    "order_seed": 42426414,
+    "position": 76
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 78
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b1-static",
+    "order_seed": 42426414,
+    "position": 80
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b1-joint",
+    "order_seed": 42426414,
+    "position": 82
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b1-static",
+    "order_seed": 42426414,
+    "position": 84
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b1-local",
+    "order_seed": 42426414,
+    "position": 86
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b1-joint",
+    "order_seed": 42426414,
+    "position": 88
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 90
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b1-local",
+    "order_seed": 42426414,
+    "position": 92
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b1-joint",
+    "order_seed": 42426414,
+    "position": 94
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b1-local",
+    "order_seed": 42426414,
+    "position": 96
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b1-feedback",
+    "order_seed": 42426414,
+    "position": 98
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 100
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b1-feedback",
+    "order_seed": 42426414,
+    "position": 102
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b1-joint",
+    "order_seed": 42426414,
+    "position": 104
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 106
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 108
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b1-feedback",
+    "order_seed": 42426414,
+    "position": 110
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b1-feedback",
+    "order_seed": 42426414,
+    "position": 112
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b1-feedback",
+    "order_seed": 42426414,
+    "position": 114
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 116
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 118
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b1-joint",
+    "order_seed": 42426414,
+    "position": 120
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 122
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 124
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b1-static",
+    "order_seed": 42426414,
+    "position": 126
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 128
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b1-static",
+    "order_seed": 42426414,
+    "position": 130
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 132
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 134
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 136
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 138
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 140
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b1-feedback",
+    "order_seed": 42426414,
+    "position": 142
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b1-feedback",
+    "order_seed": 42426414,
+    "position": 144
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 146
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 148
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 150
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 152
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 154
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 156
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b1-joint",
+    "order_seed": 42426414,
+    "position": 158
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 160
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b1-static",
+    "order_seed": 42426414,
+    "position": 162
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b1-local",
+    "order_seed": 42426414,
+    "position": 164
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b1-joint",
+    "order_seed": 42426414,
+    "position": 166
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 168
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b1-local",
+    "order_seed": 42426414,
+    "position": 170
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 172
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b1-feedback",
+    "order_seed": 42426414,
+    "position": 174
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 176
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 178
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 180
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b1-feedback",
+    "order_seed": 42426414,
+    "position": 182
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b1-local",
+    "order_seed": 42426414,
+    "position": 184
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 186
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 188
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b1-local",
+    "order_seed": 42426414,
+    "position": 190
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b1-static",
+    "order_seed": 42426414,
+    "position": 192
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b1-static",
+    "order_seed": 42426414,
+    "position": 194
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b1-feedback",
+    "order_seed": 42426414,
+    "position": 196
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b1-feedback",
+    "order_seed": 42426414,
+    "position": 198
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 200
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b1-local",
+    "order_seed": 42426414,
+    "position": 202
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b1-joint",
+    "order_seed": 42426414,
+    "position": 204
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 206
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b1-phase_local_guard",
+    "order_seed": 42426414,
+    "position": 208
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b1-joint",
+    "order_seed": 42426414,
+    "position": 210
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 212
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 214
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 216
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b1-static",
+    "order_seed": 42426414,
+    "position": 218
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b1-phase_joint",
+    "order_seed": 42426414,
+    "position": 220
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 222
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b1-local",
+    "order_seed": 42426414,
+    "position": 224
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 226
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b1-local",
+    "order_seed": 42426414,
+    "position": 228
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b1-uniform_guard",
+    "order_seed": 42426414,
+    "position": 230
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b1-local",
+    "order_seed": 42426414,
+    "position": 232
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b1-joint",
+    "order_seed": 42426414,
+    "position": 234
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b1-feedback",
+    "order_seed": 42426414,
+    "position": 236
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b1-joint",
+    "order_seed": 42426414,
+    "position": 238
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 240
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 242
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b1-static",
+    "order_seed": 42426414,
+    "position": 244
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b1-static",
+    "order_seed": 42426414,
+    "position": 246
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 248
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 1,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b1-phase_guard",
+    "order_seed": 42426414,
+    "position": 250
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 1,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b1-static",
+    "order_seed": 42426414,
+    "position": 252
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 1,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b1-feedback",
+    "order_seed": 42426414,
+    "position": 254
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b2-feedback",
+    "order_seed": 42426415,
+    "position": 128
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b2-joint",
+    "order_seed": 42426415,
+    "position": 130
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 132
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 134
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 136
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 138
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b2-static",
+    "order_seed": 42426415,
+    "position": 140
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b2-local",
+    "order_seed": 42426415,
+    "position": 142
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b2-static",
+    "order_seed": 42426415,
+    "position": 144
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b2-local",
+    "order_seed": 42426415,
+    "position": 146
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b2-static",
+    "order_seed": 42426415,
+    "position": 148
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b2-static",
+    "order_seed": 42426415,
+    "position": 150
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 152
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b2-static",
+    "order_seed": 42426415,
+    "position": 154
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 156
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 158
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 160
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 162
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b2-feedback",
+    "order_seed": 42426415,
+    "position": 164
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b2-static",
+    "order_seed": 42426415,
+    "position": 166
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 168
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b2-joint",
+    "order_seed": 42426415,
+    "position": 170
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 172
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b2-static",
+    "order_seed": 42426415,
+    "position": 174
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 176
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b2-joint",
+    "order_seed": 42426415,
+    "position": 178
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 180
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b2-feedback",
+    "order_seed": 42426415,
+    "position": 182
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b2-feedback",
+    "order_seed": 42426415,
+    "position": 184
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 186
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b2-joint",
+    "order_seed": 42426415,
+    "position": 188
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 190
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b2-joint",
+    "order_seed": 42426415,
+    "position": 192
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b2-local",
+    "order_seed": 42426415,
+    "position": 194
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b2-static",
+    "order_seed": 42426415,
+    "position": 196
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 198
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b2-feedback",
+    "order_seed": 42426415,
+    "position": 200
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b2-joint",
+    "order_seed": 42426415,
+    "position": 202
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 204
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b2-local",
+    "order_seed": 42426415,
+    "position": 206
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 208
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b2-local",
+    "order_seed": 42426415,
+    "position": 210
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b2-local",
+    "order_seed": 42426415,
+    "position": 212
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 214
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 216
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 218
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 220
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 222
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 224
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 226
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b2-joint",
+    "order_seed": 42426415,
+    "position": 228
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b2-static",
+    "order_seed": 42426415,
+    "position": 230
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b2-local",
+    "order_seed": 42426415,
+    "position": 232
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 234
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 236
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b2-joint",
+    "order_seed": 42426415,
+    "position": 238
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b2-feedback",
+    "order_seed": 42426415,
+    "position": 240
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 242
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b2-local",
+    "order_seed": 42426415,
+    "position": 244
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b2-local",
+    "order_seed": 42426415,
+    "position": 246
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 248
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b2-feedback",
+    "order_seed": 42426415,
+    "position": 250
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 252
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 254
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 256
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b2-joint",
+    "order_seed": 42426415,
+    "position": 258
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 260
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 262
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 264
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b2-local",
+    "order_seed": 42426415,
+    "position": 266
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b2-static",
+    "order_seed": 42426415,
+    "position": 268
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 270
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b2-joint",
+    "order_seed": 42426415,
+    "position": 272
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 274
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 276
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b2-feedback",
+    "order_seed": 42426415,
+    "position": 278
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b2-local",
+    "order_seed": 42426415,
+    "position": 280
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 282
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 284
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 286
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 288
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b2-static",
+    "order_seed": 42426415,
+    "position": 290
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b2-static",
+    "order_seed": 42426415,
+    "position": 292
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b2-local",
+    "order_seed": 42426415,
+    "position": 294
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3006-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 296
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 298
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b2-static",
+    "order_seed": 42426415,
+    "position": 300
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 302
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 304
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3006-b2-joint",
+    "order_seed": 42426415,
+    "position": 306
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 308
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b2-feedback",
+    "order_seed": 42426415,
+    "position": 310
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b2-static",
+    "order_seed": 42426415,
+    "position": 312
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 314
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b2-joint",
+    "order_seed": 42426415,
+    "position": 316
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 318
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b2-static",
+    "order_seed": 42426415,
+    "position": 320
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 322
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b2-local",
+    "order_seed": 42426415,
+    "position": 324
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 326
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b2-feedback",
+    "order_seed": 42426415,
+    "position": 328
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b2-feedback",
+    "order_seed": 42426415,
+    "position": 330
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3008-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 332
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b2-joint",
+    "order_seed": 42426415,
+    "position": 334
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "static",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b2-static",
+    "order_seed": 42426415,
+    "position": 336
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3008-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 338
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 340
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 342
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b2-joint",
+    "order_seed": 42426415,
+    "position": 344
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 346
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b2-feedback",
+    "order_seed": 42426415,
+    "position": 348
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3005-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 350
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b2-joint",
+    "order_seed": 42426415,
+    "position": 352
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "uniform_guard",
+    "parameter_index": 0,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b2-uniform_guard",
+    "order_seed": 42426415,
+    "position": 354
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_guard",
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b2-phase_guard",
+    "order_seed": 42426415,
+    "position": 356
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3007-b2-feedback",
+    "order_seed": 42426415,
+    "position": 358
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3005-b2-feedback",
+    "order_seed": 42426415,
+    "position": 360
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b2-feedback",
+    "order_seed": 42426415,
+    "position": 362
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3005-b2-local",
+    "order_seed": 42426415,
+    "position": 364
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "feedback",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3008-b2-feedback",
+    "order_seed": 42426415,
+    "position": 366
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3006-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 368
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s3007-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 370
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b2-joint",
+    "order_seed": 42426415,
+    "position": 372
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3006,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3006-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 374
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3005,
+    "block": 2,
+    "method": "phase_joint",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3005-b2-phase_joint",
+    "order_seed": 42426415,
+    "position": 376
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "seed": 3008,
+    "block": 2,
+    "method": "phase_local_guard",
+    "parameter_index": 5,
+    "adaptive": {
+      "gain_margin": 0.15,
+      "reserve_fraction": 0.1,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s3008-b2-phase_local_guard",
+    "order_seed": 42426415,
+    "position": 378
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s3007-b2-local",
+    "order_seed": 42426415,
+    "position": 380
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "seed": 3007,
+    "block": 2,
+    "method": "local",
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s3007-b2-local",
+    "order_seed": 42426415,
+    "position": 382
+  }
+]
