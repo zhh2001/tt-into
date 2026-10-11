@@ -1,0 +1,258 @@
+[
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "method": "intopp_due",
+    "seed": 11,
+    "block": 1,
+    "candidate_index": null,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "name": "shared_priority-high-s11-intopp_due",
+    "position": 0
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "method": "d_into_tt",
+    "seed": 11,
+    "block": 1,
+    "candidate_index": null,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "name": "shared_priority-high-s11-d_into_tt",
+    "position": 1
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "method": "d_into_tt",
+    "seed": 11,
+    "block": 1,
+    "candidate_index": null,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "name": "bursty_jitter-low-s11-d_into_tt",
+    "position": 2
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "method": "d_into_tt",
+    "seed": 11,
+    "block": 1,
+    "candidate_index": null,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "name": "switch-low-s11-d_into_tt",
+    "position": 3
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "method": "intopp_due",
+    "seed": 11,
+    "block": 1,
+    "candidate_index": null,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "name": "stable-high-s11-intopp_due",
+    "position": 4
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      100000,
+      50000,
+      50000,
+      50000
+    ],
+    "method": "intopp_due",
+    "seed": 11,
+    "block": 1,
+    "candidate_index": null,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "name": "bursty_jitter-low-s11-intopp_due",
+    "position": 5
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      200000,
+      400000
+    ],
+    "method": "intopp_due",
+    "seed": 11,
+    "block": 1,
+    "candidate_index": null,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "name": "switch-low-s11-intopp_due",
+    "position": 6
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      200000
+    ],
+    "method": "d_into_tt",
+    "seed": 11,
+    "block": 1,
+    "candidate_index": null,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "name": "stable-high-s11-d_into_tt",
+    "position": 7
+  }
+]

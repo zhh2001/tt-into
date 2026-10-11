@@ -1,0 +1,443 @@
+{
+  "status": "prepared",
+  "stage": "literature_tt_correctness",
+  "business_seed": 11,
+  "independent_test": false,
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "duration_us": 10000000,
+  "warmup_us": [
+    0,
+    2000000
+  ],
+  "measurement_window_us": [
+    2000000,
+    10000000
+  ],
+  "order_seed": 42426416,
+  "expected_cases": 8,
+  "expected_observation_slots": 100,
+  "expected_decision_slots": 10,
+  "method_contract": {
+    "status": "correctness_parameters_frozen",
+    "profiles": [
+      {
+        "scenario": "stable",
+        "budget_level": "high",
+        "initial_config": [
+          150000,
+          400000,
+          200000,
+          200000
+        ]
+      },
+      {
+        "scenario": "shared_priority",
+        "budget_level": "high",
+        "initial_config": [
+          600000,
+          100000,
+          400000,
+          150000
+        ]
+      },
+      {
+        "scenario": "switch",
+        "budget_level": "low",
+        "initial_config": [
+          400000,
+          150000,
+          200000,
+          400000
+        ]
+      },
+      {
+        "scenario": "bursty_jitter",
+        "budget_level": "low",
+        "initial_config": [
+          100000,
+          50000,
+          50000,
+          50000
+        ]
+      }
+    ],
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "literature": {
+      "value_scale": 144.0,
+      "average_change_bytes": 12.0,
+      "early_fraction": 0.0,
+      "weighted_dependencies": false
+    },
+    "methods": [
+      "intopp_due",
+      "d_into_tt"
+    ],
+    "reference_contract_sha256": "a5fc4c8c08b460d2a7291e44c8b5a2869ea1f7bcecd6c2c901a26363212a2b9c",
+    "sources": {
+      "intopp_due": {
+        "doi": "10.1109/LCOMM.2019.2946562",
+        "equations": [
+          1,
+          3,
+          5,
+          6,
+          7
+        ],
+        "mapping": "单条目期限依赖，接收新近度，共同TT逐包容量；不含聚类"
+      },
+      "d_into_tt": {
+        "doi": "10.1109/TNSM.2025.3530432",
+        "equations": [
+          3,
+          4,
+          6,
+          10,
+          25,
+          26
+        ],
+        "mapping": "管理权重的频率达成收益、已确认许可虚拟队列、共同TT逐包容量"
+      }
+    },
+    "observation_period_us": 100000,
+    "decision_period_us": 1000000,
+    "independent_test": false
+  },
+  "method_contract_sha256": "be1649a99c9dad814addf4f5bdebdd0661b8b15ee437bca1304d690bc73d82f8",
+  "execution_order": [
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "candidate_index": null,
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-intopp_due",
+      "position": 0
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "candidate_index": null,
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-d_into_tt",
+      "position": 1
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "candidate_index": null,
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-d_into_tt",
+      "position": 2
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "candidate_index": null,
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-d_into_tt",
+      "position": 3
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "candidate_index": null,
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-intopp_due",
+      "position": 4
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "candidate_index": null,
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-intopp_due",
+      "position": 5
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "candidate_index": null,
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-intopp_due",
+      "position": 6
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "candidate_index": null,
+      "parameter_index": null,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-d_into_tt",
+      "position": 7
+    }
+  ],
+  "source_sha256": {
+    "experiments/run_into_validation.py": "ad7b835e293931c52300f190de38cd3acf2c53441e753f88dbd39181f8a053b8",
+    "experiments/build_into.py": "cfa529737b2e31cf636d6201838f74f22656fe19c4aebd638cabbc8b3e0e5abb",
+    "experiments/into_io.py": "f1effe5dd169dacea7a4a92d4627aed9d1a0b1d8514eef1b5366d68cf392a05c",
+    "experiments/into_notice.py": "6f76ccb343710f31e9dab5b91a6103d449dbe962e8667a9eafe86b251e7da3e9",
+    "experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/check_into_validation.py": "7760350125cac2e1d063195e522aaa63d52cda7b063ab5a3a74d053a2a4678c9",
+    "experiments/check_adaptive_reference.py": "058aa742e55610b930caff41068fd3c96dd4a5fecdfc4f453f2085ab82c606a8",
+    "experiments/check_rolling_reference.py": "494b6f4ee929f3e9c4fb48f868229ef423e16c5fdf2ee0159960e1f48cbc33d6",
+    "src/p4/into_int.p4": "8fe5a093ecadeadca27a24bcf736ec08539613e617bae7c3766cfe659b208402",
+    "src/control/into.py": "2d9dd7b68e3c455f19f187284f0edc231fa9a323da8edb7975e92d9d97555431",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/collector/into_state.py": "04be8c11757595931796f7759d39f80c956a20925d93fcf56ec0ca685882f928",
+    "src/collector/tagged_frame.py": "7903086504836b6e19cdda9e1d2cc9abeb614fdfc258eb255d848e5203abebf1",
+    "src/collector/tagged_codec.py": "6d93a62de8d5e66d340b53d840957991d4d151fda47dc47d53f694a2a0c497b8",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/adaptive.py": "51304a82e96929764e402928494095a402d7cb8b7248f4222c3b33bbb7dc70e0",
+    "src/orchestration/rolling.py": "785965ef3c1b5ea576997f0c56ba0d61460f3a2b8ae6770e8794015559e76a6e",
+    "src/orchestration/event_schema.py": "e61acbe8af0cf8d2e568c73c5a52001123472e3a6a271a3b407832fa6d605c61",
+    "src/orchestration/event_engine.py": "cf78c518a9dd48f3b1476ab293fa303d5969c630595ca0fa77f15971cdf32104",
+    "src/orchestration/event_metrics.py": "8f1c90b69dde957ae78433baecfb34f5c8f5c2fc9c272eec705dc5d629df6bbd",
+    "src/orchestration/event_observation.py": "190412d0d1665f717b1d18dc1ef6857947a6812bc0f0b708695d7fbff86639de",
+    "tests/test_into_live.py": "6aa0f4e38c06ae7008c0e6efb0f9933576efa71a654b6145a2ab7ad4fe73345f",
+    "src/control/matched_live.py": "48efa7b75dd618397de3fd293f3173c6aee3b05f398438c1ea244d735f229675",
+    "src/orchestration/control_ledger.py": "541292bb2487053c7a63fb0f01aaefab2565099105b08e0acab13ec442804853",
+    "src/orchestration/matched_grid.py": "6d3ed5a7f69c5a8b45e5d2ab0914a547134aa8f3c1b40e078ce59551bc54db09",
+    "src/orchestration/accounted_engine.py": "7bf2ffe342d4b77f4641a3109d63800cb923b14f9ff4dcd46702486aaf1d9bdb",
+    "experiments/run_matched_network.py": "fa0ece9049eef7fcaf08c27ed60ca2ee9c5cbaee4422a85ba964b4a365c0a6c5",
+    "experiments/check_matched_network.py": "ed9a2d01a164eb002caa5338640e73a45244576fe97068691a633020231ab463",
+    "experiments/run_matched_reference.py": "b4a7389cf3336eec799a9b3ea5202e4fc54c1e043172129615e5341cd3c3b9d0",
+    "experiments/run_matched_preflight.py": "b9b220c76f2e94dd9194c2be85d3d7597ecbfbb1597ac7518340acaf66a538a9",
+    "experiments/run_rolling_reference.py": "957753373e10b5af230abf87e1dee8c75d96dbd40045f93f448b81b5d03e6684",
+    "experiments/rolling_workloads.py": "9111ff1b916321d79712400bc584eb623a8e7957d27e097b42a64155f5c80757",
+    "experiments/adaptive_workloads.py": "1c166574e5c9fb9d870997d2b61a2d271f33d79551b8c4b7d2d3be5b274725e5",
+    "experiments/rolling_rpc_cost.py": "2be45422d7c5b22fc73baf59325b8dc01273b3334746f85d7cfa462c70a980a2",
+    "tests/test_matched_live.py": "e91610111f4901d20b0fe6f55f0c984f0341824300227da6ebba9380dba49e89",
+    "src/collector/available_prefix.py": "f77b969566e0dc382f2988a1ed8d5c80507ff60d63463be3b566cae6b6990709",
+    "experiments/run_network_calibration.py": "d16206ee3663cbea5d230b129c3133da3854d521a7544ef6f0c62da86a3e5303",
+    "experiments/check_network_calibration.py": "a1ee2340b57cb332e0f80a7943b97945b21849d75417f221dd760c7c7f3466eb",
+    "tests/test_available_prefix.py": "6ffd6cf926ff6cf39fe888e11c5346cc2078c551dcb905c8c9e4dbe0eba883ff",
+    "tests/test_network_calibration.py": "17522d2e84e9d1338c4da8d4f4cfb36fcf46a342957bddeec34ec1ae3b5843d9",
+    "experiments/run_network_static.py": "1a64e1aa866e171faded896a9531268db1c10812b94247b04458e53f2af6de5b",
+    "experiments/check_network_static.py": "5ad3cc088bd1df4a02221a08b168e6264a0f3df7ae073968f1eb1568d9bd4730",
+    "experiments/network_static_contract.py": "2c738465a1b941f42f6c24f6de34daf07bf9d43cd7ecc50e63705ff72512e7a7",
+    "experiments/network_host.py": "ba974a8146b979e2d224d1394698d4232fd230957d0851aabcfbe32daa6e9faf",
+    "tests/test_network_static.py": "10b30aaa5033ee444ae0c8913747d75878f473a976a5c3824816b8b82d92f78d",
+    "experiments/analyze_network_static.py": "e832ad7cc99637c1eebd66345210af2b018d3489fc8723eca4fad91581112749",
+    "experiments/static_summary.py": "c1070b78f6f63624ce4309f0682825716f0c1797fe3cc9a0e359a4be5c9141d3",
+    "experiments/check_static_analysis.py": "7c9a6835108a56e0a77e41e8419941f2170473d5f3dd5d811089fa9977209b75",
+    "experiments/network_entry_bounds.py": "fb9cdbb75ffee7aea0647d0691b1848077a47cc4d902748a3678ef98bcf94e1d",
+    "src/collector/observer_schedule.py": "3a3c25a2cc2adc8897bb40bbce20f55df51a03d9426cb5876c3c387ecae0f778",
+    "experiments/literature_contract.py": "3b1ddd4e559d9e5c9ea35201ae34a0aec6540678087ca32aaa9f4c9cb903cb46",
+    "experiments/prepare_literature_pilot.py": "5c9e311bd1b6caca2dc0bc8518bed5f0f44542ae36a18ea8d1d92d6bef8561ca",
+    "experiments/literature_case.py": "fbcd9e24be0bafcb9d3c487c836685d5cdb93f8899202545c2df5004e23e48d4",
+    "experiments/run_literature_pilot.py": "bc1aedc702c04b8bf27679a6f740980c05435a76496389889e8714c6c496b072",
+    "experiments/check_literature_observer.py": "5505facdb052394c49b99df3915ff079772c57fdc0ca961eee6c27de5c9a6c58",
+    "experiments/check_literature_network.py": "da62a5c8a6a768bae3c1fd36f38793d45dd126c012cb20e1811101b08b7b6d2a",
+    "experiments/check_literature_decisions.py": "781ed1235f0b28986d78e96cb973ca02da0a2036f072ebe2517bfd0f83be0819",
+    "tests/test_literature.py": "671ac8406220b29d7fb446860a8519d2027b236c74b0c280f69f5e500a797051",
+    "tests/test_literature_checks.py": "ce4eb7accc8a23666116397262e0c64a7693edde600274f9152c6e68d74195dd",
+    "src/control/literature_live.py": "e917128c1eee1bdb0497f27626513883680164162d9a46788677b86ba2a0dc5e",
+    "src/orchestration/literature.py": "d3cca4de10f4905b331acb35866c2faa6c16ce9088dfadcfe86a4b4cba63e09a"
+  }
+}
