@@ -45,3 +45,5 @@ python3 experiments/plot_network_comparison.py --analysis data/network-compariso
 正式图保留全部数据，提供 [采集端配对PNG](../figures/network-comparison/n3h-comparison-02/comparison-paired-age.png)、[PDF](../figures/network-comparison/n3h-comparison-02/comparison-paired-age.pdf)，[双观察位置PNG](../figures/network-comparison/n3h-comparison-02/comparison-observers.png)、[PDF](../figures/network-comparison/n3h-comparison-02/comparison-observers.pdf)，[重点观察边界PNG](../figures/network-comparison/n3h-comparison-02/comparison-priority-observation-boundary.png)、[PDF](../figures/network-comparison/n3h-comparison-02/comparison-priority-observation-boundary.pdf)，[六层费用PNG](../figures/network-comparison/n3h-comparison-02/comparison-cost-layers.png)、[PDF](../figures/network-comparison/n3h-comparison-02/comparison-cost-layers.pdf)。均为真实TNR、300dpi PNG与嵌入字体PDF，源摘要随图保留。
 
 下一项先用完整日志核对报告生成、实收、首次进入状态和决策生效之间的可用性链条，保留原参数和原数据。若新增观察周期或策略，另立合同并计入真实增加费用，重新隔离训练、校准和测试，不将已消费3001–3004再称未见业务。
+
+完整观察链诊断已完成，复现方法和边界见[报告观察链说明](README-network-observation.md)。新增诊断保持原年龄、预算和全部案例，下一项进入共同报告观察入口的实际正确性试点。
