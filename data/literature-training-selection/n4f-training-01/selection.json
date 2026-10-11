@@ -1,0 +1,241 @@
+{
+  "status": "training_candidates_frozen",
+  "stage": "training",
+  "scores": [
+    {
+      "method": "intopp_due",
+      "preset_index": 0,
+      "parameters": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.9706388631883522,
+        1.4992874470213546,
+        318.78125,
+        0
+      ]
+    },
+    {
+      "method": "intopp_due",
+      "preset_index": 1,
+      "parameters": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.8043486877796429,
+        1.4517516247305515,
+        316.84375,
+        1
+      ]
+    },
+    {
+      "method": "intopp_due",
+      "preset_index": 2,
+      "parameters": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.8962759365999027,
+        1.5095710867626293,
+        306.0,
+        2
+      ]
+    },
+    {
+      "method": "intopp_due",
+      "preset_index": 3,
+      "parameters": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.8965464328568638,
+        1.508953448718066,
+        306.0,
+        3
+      ]
+    },
+    {
+      "method": "intopp_due",
+      "preset_index": 4,
+      "parameters": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.8933367471264373,
+        1.5102881198547122,
+        306.0,
+        4
+      ]
+    },
+    {
+      "method": "intopp_due",
+      "preset_index": 5,
+      "parameters": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.9166520864299375,
+        1.5156984765037784,
+        307.9375,
+        5
+      ]
+    },
+    {
+      "method": "d_into_tt",
+      "preset_index": 0,
+      "parameters": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        2.0839234420336568,
+        1.6485915622127065,
+        335.0625,
+        0
+      ]
+    },
+    {
+      "method": "d_into_tt",
+      "preset_index": 1,
+      "parameters": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.9983832999861741,
+        1.513584604087424,
+        333.125,
+        1
+      ]
+    },
+    {
+      "method": "d_into_tt",
+      "preset_index": 2,
+      "parameters": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        2.136614893143877,
+        1.6363479157177294,
+        337.0,
+        2
+      ]
+    },
+    {
+      "method": "d_into_tt",
+      "preset_index": 3,
+      "parameters": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.889064063896981,
+        1.4421820480009129,
+        338.78125,
+        3
+      ]
+    },
+    {
+      "method": "d_into_tt",
+      "preset_index": 4,
+      "parameters": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.890831177766377,
+        1.4377236435555079,
+        340.71875,
+        4
+      ]
+    },
+    {
+      "method": "d_into_tt",
+      "preset_index": 5,
+      "parameters": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "runs": 8,
+      "score": [
+        0,
+        1.8037708811247266,
+        1.4020606854461595,
+        331.1875,
+        5
+      ]
+    }
+  ],
+  "selected_indices": {
+    "intopp_due": [
+      1,
+      4
+    ],
+    "d_into_tt": [
+      5,
+      3
+    ]
+  },
+  "global_parameters": true,
+  "selection_key": [
+    "infeasible_or_unavailable_count",
+    "maximum_profile_mean_controller_loss_upper",
+    "pooled_mean_controller_loss_upper",
+    "mean_api_bytes_per_s",
+    "preset_index"
+  ],
+  "row_count": 96
+}

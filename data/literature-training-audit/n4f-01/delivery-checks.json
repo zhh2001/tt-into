@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "delivery_checks": 4282,
+  "stages": [
+    {
+      "stage": "training",
+      "findings": {
+        "cases": 96,
+        "business_seed_count": 2,
+        "packets": 15360,
+        "reports": 7951,
+        "output_frames": 54031,
+        "decisions": 960,
+        "observation_slots": 9600,
+        "completed_observations": 9589,
+        "skipped_observations": 11,
+        "visible_reports": 7903,
+        "shared_cache_advances": 7903,
+        "successful_updates": 515,
+        "paid_counter_calls": 1920,
+        "window_feasibility": {
+          "within": 96
+        },
+        "report_receipt_to_entry_upper_max_ms": 351.332399,
+        "read_max_ms": 3.915365,
+        "ingest_max_ms": 1.806238,
+        "observer_max_lateness_ms": 336.83291,
+        "solver_max_ms": 81.219254,
+        "rpc_max_ms": 2.208764,
+        "sender_max_lateness_ms": 4.839189,
+        "initial_notice_first_cycle_cases": 94,
+        "scope": "已消费训练/校准业务的全局参数筛选；所有预设、实际费用与失败完整保留"
+      },
+      "selected_indices": {
+        "intopp_due": [
+          1,
+          4
+        ],
+        "d_into_tt": [
+          5,
+          3
+        ]
+      },
+      "embedded_fonts": [
+        {
+          "file": "01-global-parameter-scores.pdf",
+          "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nDFKAVT+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes     19  0\n"
+        },
+        {
+          "file": "02-six-layer-costs.pdf",
+          "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nDFKAVT+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes     27  0\n"
+        }
+      ]
+    },
+    {
+      "stage": "calibration",
+      "findings": {
+        "cases": 32,
+        "business_seed_count": 2,
+        "packets": 5120,
+        "reports": 2671,
+        "output_frames": 18031,
+        "decisions": 320,
+        "observation_slots": 3200,
+        "completed_observations": 3199,
+        "skipped_observations": 1,
+        "visible_reports": 2653,
+        "shared_cache_advances": 2653,
+        "successful_updates": 174,
+        "paid_counter_calls": 640,
+        "window_feasibility": {
+          "within": 32
+        },
+        "report_receipt_to_entry_upper_max_ms": 102.247632,
+        "read_max_ms": 3.578373,
+        "ingest_max_ms": 1.578026,
+        "observer_max_lateness_ms": 115.155879,
+        "solver_max_ms": 83.863012,
+        "rpc_max_ms": 1.805376,
+        "sender_max_lateness_ms": 4.474712,
+        "initial_notice_first_cycle_cases": 30,
+        "scope": "已消费训练/校准业务的全局参数筛选；所有预设、实际费用与失败完整保留"
+      },
+      "selected_indices": {
+        "intopp_due": [
+          4
+        ],
+        "d_into_tt": [
+          5
+        ]
+      },
+      "embedded_fonts": [
+        {
+          "file": "01-global-parameter-scores.pdf",
+          "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nDFKAVT+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes     19  0\n"
+        },
+        {
+          "file": "02-six-layer-costs.pdf",
+          "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nDFKAVT+TimesNewRomanPSMT             CID TrueType      Identity-H       yes yes yes     27  0\n"
+        }
+      ]
+    }
+  ],
+  "comparison_plan_sha256": "7cc9cf9eb9a8f643e204d5bfc4536a50137819f47d22a89ca3d3f589034ff68e",
+  "fresh_business_seeds": [
+    3009,
+    3010,
+    3011,
+    3012
+  ],
+  "fresh_inputs_generated": false,
+  "final_unit_tests_sha256": "b9a6f7996e82f748e7028a42c61c808e17cedf99d974b11dcb12df1418c964e3",
+  "checker_sha256": "ea296a69144684fb1cea5973d7280d83b09c043358d93f5c8a1287ad4d304d96"
+}

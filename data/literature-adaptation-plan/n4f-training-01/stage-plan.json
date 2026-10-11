@@ -1,0 +1,3619 @@
+{
+  "status": "prepared",
+  "execution_ready": true,
+  "stage": "training",
+  "protocol": {
+    "status": "matrix_prepared_pending_training",
+    "execution_ready": false,
+    "profiles": [
+      {
+        "scenario": "stable",
+        "budget_level": "high",
+        "initial_config": [
+          150000,
+          400000,
+          200000,
+          200000
+        ]
+      },
+      {
+        "scenario": "shared_priority",
+        "budget_level": "high",
+        "initial_config": [
+          600000,
+          100000,
+          400000,
+          150000
+        ]
+      },
+      {
+        "scenario": "switch",
+        "budget_level": "low",
+        "initial_config": [
+          400000,
+          150000,
+          200000,
+          400000
+        ]
+      },
+      {
+        "scenario": "bursty_jitter",
+        "budget_level": "low",
+        "initial_config": [
+          100000,
+          50000,
+          50000,
+          50000
+        ]
+      }
+    ],
+    "common_initialization": "保持N4c冻结四配置",
+    "reference_contract_sha256": "a5fc4c8c08b460d2a7291e44c8b5a2869ea1f7bcecd6c2c901a26363212a2b9c",
+    "literature_methods": [
+      "intopp_due",
+      "d_into_tt"
+    ],
+    "parameter_grids": {
+      "intopp_due": [
+        {
+          "value_scale": 144.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 0.0,
+          "weighted_dependencies": false
+        },
+        {
+          "value_scale": 144.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 0.0,
+          "weighted_dependencies": true
+        },
+        {
+          "value_scale": 144.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 0.5,
+          "weighted_dependencies": false
+        },
+        {
+          "value_scale": 144.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 0.5,
+          "weighted_dependencies": true
+        },
+        {
+          "value_scale": 144.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 1.0,
+          "weighted_dependencies": false
+        },
+        {
+          "value_scale": 144.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 1.0,
+          "weighted_dependencies": true
+        }
+      ],
+      "d_into_tt": [
+        {
+          "value_scale": 48.0,
+          "average_change_bytes": 6.0,
+          "early_fraction": 0.0,
+          "weighted_dependencies": false
+        },
+        {
+          "value_scale": 48.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 0.0,
+          "weighted_dependencies": false
+        },
+        {
+          "value_scale": 144.0,
+          "average_change_bytes": 6.0,
+          "early_fraction": 0.0,
+          "weighted_dependencies": false
+        },
+        {
+          "value_scale": 144.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 0.0,
+          "weighted_dependencies": false
+        },
+        {
+          "value_scale": 432.0,
+          "average_change_bytes": 6.0,
+          "early_fraction": 0.0,
+          "weighted_dependencies": false
+        },
+        {
+          "value_scale": 432.0,
+          "average_change_bytes": 12.0,
+          "early_fraction": 0.0,
+          "weighted_dependencies": false
+        }
+      ]
+    },
+    "observation_period_us": 100000,
+    "decision_period_us": 1000000,
+    "capacity": 1,
+    "grid_us": [
+      50000,
+      100000,
+      150000,
+      200000,
+      400000,
+      600000,
+      800000,
+      1000000
+    ],
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "candidate_universe_size": 6561,
+    "native_unique_assignment": true,
+    "native_flow_sum_capacity_used_online": false,
+    "training": {
+      "seeds": [
+        11,
+        29
+      ],
+      "presets_per_method": 6,
+      "cases": 96,
+      "deployment_blocks": 1,
+      "selected_global_presets_per_method": 2
+    },
+    "calibration": {
+      "seeds": [
+        1301,
+        1423
+      ],
+      "presets_per_method": 2,
+      "cases": 32,
+      "deployment_blocks": 1,
+      "selected_global_presets_per_method": 1
+    },
+    "selection_key": [
+      "infeasible_or_unavailable_count",
+      "maximum_profile_mean_controller_loss_upper",
+      "pooled_mean_controller_loss_upper",
+      "mean_api_bytes_per_s",
+      "preset_index"
+    ],
+    "performance": {
+      "methods": [
+        "static",
+        "feedback",
+        "local",
+        "joint",
+        "phase_joint",
+        "uniform_guard",
+        "phase_guard",
+        "phase_local_guard",
+        "intopp_due",
+        "d_into_tt"
+      ],
+      "business_count": 4,
+      "deployment_blocks": 2,
+      "cases": 320,
+      "independent_business_units": 4,
+      "fresh_business_seeds": [],
+      "consumed_test_seeds": [
+        3001,
+        3002,
+        3003,
+        3004,
+        3005,
+        3006,
+        3007,
+        3008
+      ],
+      "fresh_seed_rule": "入口完成和参数冻结后重新审计，取3001起最小四个未消费整数，再冻结后生成",
+      "existing_eight_methods_retuned": false,
+      "static_candidates_expanded": false,
+      "primary_observer": "controller",
+      "secondary_observer": "collector"
+    },
+    "cost_layers": [
+      "e1_inband_frame_bytes",
+      "e2_inband_frame_bytes",
+      "e3_inband_frame_bytes",
+      "export_attempt_frame_bytes",
+      "api_serialized_bytes",
+      "local_notice_payload_bytes"
+    ],
+    "retention": "全部活跃任务、运行、超限与不可评价点；同业务配对，部署块不扩充独立业务分母",
+    "budget_scope": "逐链路、导出、API和本地通知分别评价；平均测量窗口，不混加不同层字节",
+    "prepared_scope": "参数候选与矩阵准备，尚未冻结性能参数或未见业务，未运行训练或比较"
+  },
+  "business_seeds": [
+    11,
+    29
+  ],
+  "fresh_business_seeds": [],
+  "independent_test": false,
+  "fresh_inputs_generated": false,
+  "expected_cases": 96,
+  "deployment_blocks": 1,
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "selection": null,
+  "seed_audit": null,
+  "reference_contract_sha256": "a5fc4c8c08b460d2a7291e44c8b5a2869ea1f7bcecd6c2c901a26363212a2b9c",
+  "execution_order": [
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "name": "switch-low-s29-intopp_due-p5",
+      "position": 0,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-d_into_tt-p1",
+      "position": 1,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-d_into_tt-p4",
+      "position": 2,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "name": "shared_priority-high-s29-intopp_due-p1",
+      "position": 3,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-intopp_due-p4",
+      "position": 4,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-d_into_tt-p1",
+      "position": 5,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-d_into_tt-p0",
+      "position": 6,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-d_into_tt-p4",
+      "position": 7,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-intopp_due-p4",
+      "position": 8,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "name": "shared_priority-high-s11-intopp_due-p3",
+      "position": 9,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-d_into_tt-p0",
+      "position": 10,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "name": "stable-high-s29-intopp_due-p3",
+      "position": 11,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-d_into_tt-p2",
+      "position": 12,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "name": "shared_priority-high-s11-intopp_due-p5",
+      "position": 13,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-d_into_tt-p1",
+      "position": 14,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-d_into_tt-p2",
+      "position": 15,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-d_into_tt-p5",
+      "position": 16,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-d_into_tt-p5",
+      "position": 17,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-intopp_due-p2",
+      "position": 18,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-d_into_tt-p1",
+      "position": 19,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-d_into_tt-p3",
+      "position": 20,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-d_into_tt-p3",
+      "position": 21,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-d_into_tt-p4",
+      "position": 22,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-intopp_due-p4",
+      "position": 23,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-intopp_due-p0",
+      "position": 24,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-intopp_due-p2",
+      "position": 25,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-intopp_due-p0",
+      "position": 26,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-d_into_tt-p4",
+      "position": 27,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-d_into_tt-p3",
+      "position": 28,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-intopp_due-p2",
+      "position": 29,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-d_into_tt-p2",
+      "position": 30,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-d_into_tt-p4",
+      "position": 31,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "name": "stable-high-s29-intopp_due-p1",
+      "position": 32,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "name": "stable-high-s11-intopp_due-p5",
+      "position": 33,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-intopp_due-p2",
+      "position": 34,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-d_into_tt-p1",
+      "position": 35,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "name": "bursty_jitter-low-s29-intopp_due-p5",
+      "position": 36,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-intopp_due-p4",
+      "position": 37,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "name": "bursty_jitter-low-s11-intopp_due-p1",
+      "position": 38,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "name": "switch-low-s29-intopp_due-p3",
+      "position": 39,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-d_into_tt-p0",
+      "position": 40,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-intopp_due-p2",
+      "position": 41,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "name": "stable-high-s29-intopp_due-p5",
+      "position": 42,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-d_into_tt-p5",
+      "position": 43,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "name": "shared_priority-high-s29-intopp_due-p5",
+      "position": 44,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-intopp_due-p4",
+      "position": 45,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-d_into_tt-p2",
+      "position": 46,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "name": "bursty_jitter-low-s11-intopp_due-p5",
+      "position": 47,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-d_into_tt-p5",
+      "position": 48,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-d_into_tt-p3",
+      "position": 49,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "name": "bursty_jitter-low-s29-intopp_due-p3",
+      "position": 50,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "name": "switch-low-s11-intopp_due-p3",
+      "position": 51,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-intopp_due-p0",
+      "position": 52,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-d_into_tt-p3",
+      "position": 53,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "name": "stable-high-s11-intopp_due-p1",
+      "position": 54,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-d_into_tt-p5",
+      "position": 55,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-d_into_tt-p2",
+      "position": 56,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-intopp_due-p0",
+      "position": 57,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-d_into_tt-p0",
+      "position": 58,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-d_into_tt-p1",
+      "position": 59,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s11-d_into_tt-p3",
+      "position": 60,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-d_into_tt-p3",
+      "position": 61,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "name": "shared_priority-high-s11-intopp_due-p1",
+      "position": 62,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "name": "bursty_jitter-low-s29-intopp_due-p1",
+      "position": 63,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-d_into_tt-p5",
+      "position": 64,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-d_into_tt-p1",
+      "position": 65,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-d_into_tt-p2",
+      "position": 66,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-intopp_due-p2",
+      "position": 67,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-d_into_tt-p5",
+      "position": 68,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-intopp_due-p0",
+      "position": 69,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "name": "shared_priority-high-s29-intopp_due-p3",
+      "position": 70,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-intopp_due-p0",
+      "position": 71,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-d_into_tt-p4",
+      "position": 72,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-d_into_tt-p4",
+      "position": 73,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-d_into_tt-p0",
+      "position": 74,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "name": "switch-low-s11-intopp_due-p1",
+      "position": 75,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-intopp_due-p4",
+      "position": 76,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-intopp_due-p0",
+      "position": 77,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-intopp_due-p4",
+      "position": 78,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-d_into_tt-p0",
+      "position": 79,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-d_into_tt-p4",
+      "position": 80,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-d_into_tt-p0",
+      "position": 81,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s29-d_into_tt-p0",
+      "position": 82,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-d_into_tt-p1",
+      "position": 83,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "name": "stable-high-s11-intopp_due-p3",
+      "position": 84,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s11-d_into_tt-p3",
+      "position": 85,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "d_into_tt",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-d_into_tt-p2",
+      "position": 86,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 0,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-intopp_due-p0",
+      "position": 87,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 0,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 4,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s29-intopp_due-p4",
+      "position": 88,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 4,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 1,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      "name": "switch-low-s29-intopp_due-p1",
+      "position": 89,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 1,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "bursty_jitter-low-s11-d_into_tt-p5",
+      "position": 90,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "d_into_tt",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "name": "switch-low-s11-d_into_tt-p2",
+      "position": 91,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 5,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      },
+      "name": "switch-low-s11-intopp_due-p5",
+      "position": 92,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 5,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ],
+      "method": "intopp_due",
+      "seed": 11,
+      "block": 1,
+      "preset_index": 3,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      "name": "bursty_jitter-low-s11-intopp_due-p3",
+      "position": 93,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 3,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "name": "stable-high-s29-intopp_due-p2",
+      "position": 94,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ],
+      "method": "intopp_due",
+      "seed": 29,
+      "block": 1,
+      "preset_index": 2,
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      "name": "shared_priority-high-s29-intopp_due-p2",
+      "position": 95,
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "parameter_index": 2,
+      "candidate_index": null,
+      "scope": "文献适配全局参数训练"
+    }
+  ],
+  "source_sha256": {
+    "experiments/run_into_validation.py": "ad7b835e293931c52300f190de38cd3acf2c53441e753f88dbd39181f8a053b8",
+    "experiments/build_into.py": "cfa529737b2e31cf636d6201838f74f22656fe19c4aebd638cabbc8b3e0e5abb",
+    "experiments/into_io.py": "f1effe5dd169dacea7a4a92d4627aed9d1a0b1d8514eef1b5366d68cf392a05c",
+    "experiments/into_notice.py": "6f76ccb343710f31e9dab5b91a6103d449dbe962e8667a9eafe86b251e7da3e9",
+    "experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/check_into_validation.py": "7760350125cac2e1d063195e522aaa63d52cda7b063ab5a3a74d053a2a4678c9",
+    "experiments/check_adaptive_reference.py": "058aa742e55610b930caff41068fd3c96dd4a5fecdfc4f453f2085ab82c606a8",
+    "experiments/check_rolling_reference.py": "494b6f4ee929f3e9c4fb48f868229ef423e16c5fdf2ee0159960e1f48cbc33d6",
+    "src/p4/into_int.p4": "8fe5a093ecadeadca27a24bcf736ec08539613e617bae7c3766cfe659b208402",
+    "src/control/into.py": "2d9dd7b68e3c455f19f187284f0edc231fa9a323da8edb7975e92d9d97555431",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/collector/into_state.py": "04be8c11757595931796f7759d39f80c956a20925d93fcf56ec0ca685882f928",
+    "src/collector/tagged_frame.py": "7903086504836b6e19cdda9e1d2cc9abeb614fdfc258eb255d848e5203abebf1",
+    "src/collector/tagged_codec.py": "6d93a62de8d5e66d340b53d840957991d4d151fda47dc47d53f694a2a0c497b8",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/orchestration/adaptive.py": "51304a82e96929764e402928494095a402d7cb8b7248f4222c3b33bbb7dc70e0",
+    "src/orchestration/rolling.py": "785965ef3c1b5ea576997f0c56ba0d61460f3a2b8ae6770e8794015559e76a6e",
+    "src/orchestration/event_schema.py": "e61acbe8af0cf8d2e568c73c5a52001123472e3a6a271a3b407832fa6d605c61",
+    "src/orchestration/event_engine.py": "cf78c518a9dd48f3b1476ab293fa303d5969c630595ca0fa77f15971cdf32104",
+    "src/orchestration/event_metrics.py": "8f1c90b69dde957ae78433baecfb34f5c8f5c2fc9c272eec705dc5d629df6bbd",
+    "src/orchestration/event_observation.py": "190412d0d1665f717b1d18dc1ef6857947a6812bc0f0b708695d7fbff86639de",
+    "tests/test_into_live.py": "6aa0f4e38c06ae7008c0e6efb0f9933576efa71a654b6145a2ab7ad4fe73345f",
+    "src/control/matched_live.py": "48efa7b75dd618397de3fd293f3173c6aee3b05f398438c1ea244d735f229675",
+    "src/orchestration/control_ledger.py": "541292bb2487053c7a63fb0f01aaefab2565099105b08e0acab13ec442804853",
+    "src/orchestration/matched_grid.py": "6d3ed5a7f69c5a8b45e5d2ab0914a547134aa8f3c1b40e078ce59551bc54db09",
+    "src/orchestration/accounted_engine.py": "7bf2ffe342d4b77f4641a3109d63800cb923b14f9ff4dcd46702486aaf1d9bdb",
+    "experiments/run_matched_network.py": "fa0ece9049eef7fcaf08c27ed60ca2ee9c5cbaee4422a85ba964b4a365c0a6c5",
+    "experiments/check_matched_network.py": "ed9a2d01a164eb002caa5338640e73a45244576fe97068691a633020231ab463",
+    "experiments/run_matched_reference.py": "b4a7389cf3336eec799a9b3ea5202e4fc54c1e043172129615e5341cd3c3b9d0",
+    "experiments/run_matched_preflight.py": "b9b220c76f2e94dd9194c2be85d3d7597ecbfbb1597ac7518340acaf66a538a9",
+    "experiments/run_rolling_reference.py": "957753373e10b5af230abf87e1dee8c75d96dbd40045f93f448b81b5d03e6684",
+    "experiments/rolling_workloads.py": "9111ff1b916321d79712400bc584eb623a8e7957d27e097b42a64155f5c80757",
+    "experiments/adaptive_workloads.py": "1c166574e5c9fb9d870997d2b61a2d271f33d79551b8c4b7d2d3be5b274725e5",
+    "experiments/rolling_rpc_cost.py": "2be45422d7c5b22fc73baf59325b8dc01273b3334746f85d7cfa462c70a980a2",
+    "tests/test_matched_live.py": "e91610111f4901d20b0fe6f55f0c984f0341824300227da6ebba9380dba49e89",
+    "src/collector/available_prefix.py": "f77b969566e0dc382f2988a1ed8d5c80507ff60d63463be3b566cae6b6990709",
+    "experiments/run_network_calibration.py": "d16206ee3663cbea5d230b129c3133da3854d521a7544ef6f0c62da86a3e5303",
+    "experiments/check_network_calibration.py": "a1ee2340b57cb332e0f80a7943b97945b21849d75417f221dd760c7c7f3466eb",
+    "tests/test_available_prefix.py": "6ffd6cf926ff6cf39fe888e11c5346cc2078c551dcb905c8c9e4dbe0eba883ff",
+    "tests/test_network_calibration.py": "17522d2e84e9d1338c4da8d4f4cfb36fcf46a342957bddeec34ec1ae3b5843d9",
+    "experiments/run_network_static.py": "1a64e1aa866e171faded896a9531268db1c10812b94247b04458e53f2af6de5b",
+    "experiments/check_network_static.py": "5ad3cc088bd1df4a02221a08b168e6264a0f3df7ae073968f1eb1568d9bd4730",
+    "experiments/network_static_contract.py": "2c738465a1b941f42f6c24f6de34daf07bf9d43cd7ecc50e63705ff72512e7a7",
+    "experiments/network_host.py": "ba974a8146b979e2d224d1394698d4232fd230957d0851aabcfbe32daa6e9faf",
+    "tests/test_network_static.py": "10b30aaa5033ee444ae0c8913747d75878f473a976a5c3824816b8b82d92f78d",
+    "experiments/analyze_network_static.py": "e832ad7cc99637c1eebd66345210af2b018d3489fc8723eca4fad91581112749",
+    "experiments/static_summary.py": "c1070b78f6f63624ce4309f0682825716f0c1797fe3cc9a0e359a4be5c9141d3",
+    "experiments/check_static_analysis.py": "7c9a6835108a56e0a77e41e8419941f2170473d5f3dd5d811089fa9977209b75",
+    "experiments/network_entry_bounds.py": "fb9cdbb75ffee7aea0647d0691b1848077a47cc4d902748a3678ef98bcf94e1d",
+    "src/collector/observer_schedule.py": "3a3c25a2cc2adc8897bb40bbce20f55df51a03d9426cb5876c3c387ecae0f778",
+    "experiments/report_observer_contract.py": "7a9ae7c0dff1bb11b68c9d4466c98a36e744b25f6f72ce34535eef2f58f7c929",
+    "experiments/prepare_report_observer.py": "de9db1f9f42d362d2488e9cae767afa1198d167e5e364bfbe078852187df5628",
+    "experiments/report_observer_case.py": "5e40c76cd7ade015b1a719d1d230a109063de60b861d831d2ecce2513fbcc527",
+    "experiments/run_report_observer.py": "ad502e24bbfb6a30db989a652741a1b0ce46d213c6a46118513b38ce7555e234",
+    "experiments/check_report_observer.py": "3db4ae72bbb7f6ded9134d1a1a5ea389f970606ef685f9043b2eac425ef80e45",
+    "tests/test_report_observer.py": "8ba0485a0c6fb8a21ea1d3a12d6088ec264d9b3f152052867b3c4a0b124e4fb1",
+    "experiments/observer_training_contract.py": "6329ef7ba83d969059afd1721fc48bc2f3e1d2fc60f25dc2fbd47dd691455a97",
+    "experiments/prepare_observer_training.py": "bffdbc5f730e97f94ab2dc99690f448a24df1a2431332e8edb82c35936ce38a4",
+    "experiments/observer_training_case.py": "b1836c76123ebe7f48969ebe6f88e89b52c1a035182c7e17229a835d82e35146",
+    "experiments/run_observer_training.py": "4683556c82cb36394c23fe85f958da52ed2a00a72667371be7771d0fbf1bbdbe",
+    "experiments/check_observer_training.py": "40df3fc419f118676da0eee70eafff9f90cd07c77d9f672618f6d0f171d2446b",
+    "experiments/network_comparison_contract.py": "f7637fbbdd697b0bee6ab19d40919e29c65263c03fb9d08cb3ed36dd00bf46e3",
+    "experiments/prepare_network_comparison.py": "d86fed45b9a9755e67f5aed88c30112676c6633aaf9b5a870c675e65e5c8d3f3",
+    "experiments/dynamic_calibration_contract.py": "17628f7d2358bfb6460554d6abfd32be98f5d4f944ef669d7e0e9040848776e7",
+    "experiments/confirmation_contract.py": "e33c290e3b738ccb0afc86ac91d8c62cfd14341d52aa39dd67ec88ae2659be48",
+    "tests/test_observer_training.py": "715551a5bb4967cd4c54e9e00b82265ea23f040c5acfb99a498cd9c675819f79",
+    "experiments/observer_confirmation_contract.py": "19785e273136675100d5d57ddc33750d05d4a2ff0f0838aa48c68df7482abe47",
+    "experiments/prepare_observer_confirmation.py": "068b74ee4e500b97bb6f0a389275c32fecf9a3bca6cf188f0000cee470c91566",
+    "experiments/observer_confirmation_case.py": "0bd099e549d30bba6e711cff63f4808d19ddc0cd062bc13b77e8bd209238236b",
+    "experiments/run_observer_confirmation.py": "40f51f16fbe6ae24ebe791872aa39392682db4fb30bb4ddb12ae98b71152a5d0",
+    "experiments/check_observer_confirmation.py": "bb184e7d25d5b5539931f60a76959e8c4ff03493a7a97b669c2aec9687520822",
+    "tests/test_observer_confirmation.py": "2f4fe30e01af235da5003adb910ab3b55c1b43b6533576b4a68bf3d4881c5358",
+    "experiments/observer_calibration_contract.py": "700fb3fbddd52f2429365bd6e5702d7f0b1c219d6acb0fcbb5c5ff4b95025b13",
+    "experiments/prepare_observer_calibration.py": "8b769c787eaa6cb4c60a6f6c2dcd3b7e07869fc42ae619e63a76a23a77819817",
+    "experiments/observer_calibration_case.py": "72b6b4ae32662da3d0c8e52e5d68e5cd6b7e43644b05139bc29f66e6a5c0becd",
+    "experiments/run_observer_calibration.py": "9239aa6b6e1b011a4c8f174d41a8a97debed76f664a82b2f85b824ce771741c8",
+    "experiments/check_observer_calibration.py": "0645759561c0a86db8325a8bf4f0335bfc87412d40f5efdc5672beb1d660713a",
+    "tests/test_observer_calibration.py": "a0cfd1345f73bae5158314261f7e9d95827c71919431add90a3b67c82ee66a1a",
+    "experiments/observer_comparison_contract.py": "b0885276f7f0f03a4703ba1d57d5075402b4d3c9f1646cdb1c36c6073cd8f0d1",
+    "experiments/prepare_observer_comparison_execution.py": "4b66f106b17106f7c58598d3af8a371f91674d6bacc41595cb80d5b40553c27f",
+    "experiments/observer_comparison_case.py": "5c4553c19048d2a4c4089a6bc48d6443c15ae0020e218a0a27c75d387de6aa8b",
+    "experiments/run_observer_comparison.py": "85b5616038f7377a217c866012d58d3e8e3b4df9d76fd191b309f416f95b9211",
+    "experiments/check_observer_comparison.py": "a29828240cc20e206788b79d3af59e4d1ab11edebb49ea6ae4e63938544f4b8d",
+    "tests/test_observer_comparison.py": "f99c88a72a9009752c8548722c45b0e157319b656d02a0cac820b0c8750a79f2",
+    "experiments/literature_contract.py": "3b1ddd4e559d9e5c9ea35201ae34a0aec6540678087ca32aaa9f4c9cb903cb46",
+    "experiments/prepare_literature_pilot.py": "5c9e311bd1b6caca2dc0bc8518bed5f0f44542ae36a18ea8d1d92d6bef8561ca",
+    "experiments/literature_case.py": "fbcd9e24be0bafcb9d3c487c836685d5cdb93f8899202545c2df5004e23e48d4",
+    "experiments/run_literature_pilot.py": "bc1aedc702c04b8bf27679a6f740980c05435a76496389889e8714c6c496b072",
+    "experiments/check_literature_observer.py": "5505facdb052394c49b99df3915ff079772c57fdc0ca961eee6c27de5c9a6c58",
+    "experiments/check_literature_network.py": "da62a5c8a6a768bae3c1fd36f38793d45dd126c012cb20e1811101b08b7b6d2a",
+    "experiments/check_literature_decisions.py": "781ed1235f0b28986d78e96cb973ca02da0a2036f072ebe2517bfd0f83be0819",
+    "tests/test_literature.py": "671ac8406220b29d7fb446860a8519d2027b236c74b0c280f69f5e500a797051",
+    "tests/test_literature_checks.py": "ce4eb7accc8a23666116397262e0c64a7693edde600274f9152c6e68d74195dd",
+    "src/control/literature_live.py": "e917128c1eee1bdb0497f27626513883680164162d9a46788677b86ba2a0dc5e",
+    "src/orchestration/literature.py": "d3cca4de10f4905b331acb35866c2faa6c16ce9088dfadcfe86a4b4cba63e09a",
+    "experiments/literature_stage_contract.py": "d479c1d05b982294262b80a7c53f3d7f69843572d8a72890ac6c64dc41a79df6",
+    "experiments/literature_selection.py": "382d3c3222e6b688686af1ef764c09990fb9be21f01da2b6fbf9fff4fb832f6d",
+    "experiments/literature_matrix_case.py": "95bf59862fb0129cb165b56852e2f41c1e6c8ab3f78095493fe292184efb59bf",
+    "experiments/run_literature_matrix.py": "c0ad50487729267dcb01a4bef9cc83535b7f92221a99a8bb449127a46d8eebb7",
+    "experiments/prepare_literature_stage.py": "dea9a4673271e0a6e432215a4cb1d6c4e07ec9b7bb8e4ffd908f19f2d2161e9e",
+    "experiments/check_literature_matrix.py": "7a5555b29338a955f20bf366455ad36e179fa2c41df87575f1cbbba2e715359c",
+    "experiments/prepare_literature_comparison.py": "009e57e2ab691edab33c24d3844c56783b1b80467e7f764e3fb2ebb1ed4cbac9",
+    "tests/test_literature_stages.py": "381ce8fc28bafea8b8afc43a981f34fac207ad046ed623339999e7300ba14583"
+  },
+  "method_contract_sha256": "1cbeae1331399bfef49eafc5e8a2b3d2518f158b6483fd52e5c3e972866fdb3a",
+  "selection_source_sha256": null
+}
