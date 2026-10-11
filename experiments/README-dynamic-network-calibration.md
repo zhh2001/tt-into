@@ -47,3 +47,5 @@ python3 experiments/plot_dynamic_network_calibration.py --analysis data/network-
 ```bash
 python3 experiments/prepare_network_comparison.py --analysis data/network-dynamic-validation/n3g-calibration-01 --output data/network-comparison-plan/<new-method-contract-id>
 ```
+
+状态补记：独立入口、历史消费审计和256例新业务比较已完成，完整结果见 [独立业务比较说明](README-network-comparison.md)。方法合同保留生成业务前的快照含义，实际执行与消费以新的完整清单和运行记录为准。

@@ -1,0 +1,38 @@
+{
+  "cases": 256,
+  "packets": 40960,
+  "reports": 28055,
+  "output_frames": 150935,
+  "decisions": 2560,
+  "successful_updates": 1318,
+  "skipped_epochs": 0,
+  "window_feasibility": {
+    "within": 243,
+    "exceeds": 13
+  },
+  "wall_clock_compatible_cases": 256,
+  "generation_clock_compatible_cases": 256,
+  "control_captured_frames": 45956,
+  "control_captured_bytes": 5273435,
+  "scope": "256例独立业务迁移比较，四业务两部署块；条件区间不是置信区间",
+  "deployment_repeats_per_setting_business": 2,
+  "availability_batches": 2560,
+  "visible_fresh_reports": 25240,
+  "initial_notice_first_cycle_cases": 16,
+  "read_max_ms": 108.437601,
+  "report_receipt_to_entry_upper_max_ms": 991.409352,
+  "largest_loss_midpoint_case_range": 0.47212774582675876,
+  "availability_scope": "recvmsg 完成至本批状态更新结束的观察上界，非内核/线上物理接收到达精度；按完整案例评价变异",
+  "paired_cases": 224,
+  "business_pair_groups": 112,
+  "deployment_repeat_groups": 128,
+  "both_within_pairs": 166,
+  "all_businesses_both_blocks_eligible_lower_groups": [
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "method": "phase_guard"
+    }
+  ],
+  "max_within_business_midpoint_range": 0.43252919230798703
+}

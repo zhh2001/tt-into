@@ -1,0 +1,51 @@
+{
+  "settings": {
+    "grid_us": [
+      50000,
+      100000,
+      150000,
+      200000,
+      400000,
+      600000,
+      800000,
+      1000000
+    ],
+    "epoch_us": 1000000,
+    "horizon_us": 1000000,
+    "alpha": 0.5,
+    "clip": 4.0,
+    "max_candidates": 48,
+    "max_update_rpcs": 6,
+    "capacity": 1,
+    "nominal_ip_bytes": 120,
+    "nominal_hop_us": 20,
+    "nominal_egress_us": 5,
+    "nominal_report_delay_us": 1000,
+    "maximum_rate_pps": 100.0
+  },
+  "adaptive": {
+    "gain_margin": 0.05,
+    "reserve_fraction": 0.0,
+    "lookback_us": 3000000,
+    "cluster_fraction": 0.25,
+    "period_relative_mad": 0.2,
+    "measurement_start_us": 2000000,
+    "measurement_end_us": 10000000
+  },
+  "budget": {
+    "link_bytes_per_s": {
+      "e1": 240,
+      "e2": 240,
+      "e3": 390
+    },
+    "export_bytes_per_s": 900,
+    "control_bytes_per_s": 1200
+  },
+  "notice_budget_bytes_per_s": 128,
+  "model_parameters_frozen": false,
+  "network_parameters_frozen": true,
+  "final_frozen": true,
+  "network_parameter_index": 2,
+  "method_contract_sha256": "9999635fcabf01f802e8c088a476e60960153ee4abf567b79b9e8c467c45e24e",
+  "parameter_origin": "N3g全局参数与N3h方法合同冻结，无测试调参"
+}
