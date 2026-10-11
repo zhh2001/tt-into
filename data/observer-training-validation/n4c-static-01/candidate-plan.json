@@ -1,0 +1,2111 @@
+{
+  "status": "prepared",
+  "scope": "仅模型训练输入的有限网络静态候选，尚无新网络评分或性能结果",
+  "reference_manifest_sha256": "e023f8ac87c94bce9a04e6d68d369c9f24c589575d945770a0c14ebb12333517",
+  "input_sha256": {
+    "training/stable-11.jsonl.gz": "f9e47c7b808d25b86634d44d48d64c3635023be83e8ff0e5653771ce56390c66",
+    "training/stable-29.jsonl.gz": "28dab3417493ed232cd714ecdecb701aa377ea108f69374c0e23b1a613bf4169",
+    "training/shared_priority-11.jsonl.gz": "4a1a4ad8cb054408b871ff6a0adf387b7dfe189c9bff91445084ae67ebbafb7b",
+    "training/shared_priority-29.jsonl.gz": "7de65bf0274d7c0ddee64dd239eb596e0c9b20a7a4a7746b0627a03516164a62",
+    "training/switch-11.jsonl.gz": "2c7a54647de1edaa8acf4c9e5b5d74369007b4d91bafa3fcdf3e6f420e9bede7",
+    "training/switch-29.jsonl.gz": "db61e58fe14853a11bf344aac5cac088766765b08835f708284d7448401af24d",
+    "training/bursty_jitter-11.jsonl.gz": "39c6c1fe46a90e617f5454d43764e3db1f28adf338f3c09db1c57193eef39ba9",
+    "training/bursty_jitter-29.jsonl.gz": "679dc10dc85f40bc2ca00b34f8191f80a11525cf16b9c0a03f596031ee9185a4"
+  },
+  "training_selection_sha256": "00d69e12d73d243d885adec70a8dadc410f365c9648847bdb9aabea71eea6daf",
+  "source_sha256": {
+    "experiments/prepare_network_static.py": "3873bcd73018f906fb9822aa27531a3c7afa7a435fd24e206a496b14ef280086"
+  },
+  "training_seeds": [
+    11,
+    29
+  ],
+  "grid_us": [
+    null,
+    50000,
+    100000,
+    150000,
+    200000,
+    400000,
+    600000,
+    800000,
+    1000000
+  ],
+  "configuration_count": 6561,
+  "candidates_per_cell": 24,
+  "expected_network_cases": 192,
+  "network_repetitions_per_candidate_seed": 1,
+  "groups": [
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "sampling_seed": 41421356,
+      "frozen_static": [
+        150000,
+        400000,
+        200000,
+        50000
+      ],
+      "candidates": [
+        {
+          "candidate_index": 0,
+          "config": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "reason": "all_disabled_reference",
+          "model_score": [
+            0.0,
+            4.0,
+            0,
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "candidate_index": 1,
+          "config": [
+            50000,
+            50000,
+            50000,
+            50000
+          ],
+          "reason": "all_minimum_threshold_reference",
+          "model_score": [
+            0.06666666666666665,
+            2.1055968556553126,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 2,
+          "config": [
+            150000,
+            400000,
+            200000,
+            50000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.5698085385528124,
+            4,
+            [
+              150000,
+              400000,
+              200000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 3,
+          "config": [
+            200000,
+            400000,
+            200000,
+            50000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.5698085385528124,
+            4,
+            [
+              200000,
+              400000,
+              200000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 4,
+          "config": [
+            150000,
+            400000,
+            200000,
+            100000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.5716978816311458,
+            4,
+            [
+              150000,
+              400000,
+              200000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 5,
+          "config": [
+            150000,
+            400000,
+            200000,
+            150000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.5716978816311458,
+            4,
+            [
+              150000,
+              400000,
+              200000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 6,
+          "config": [
+            150000,
+            400000,
+            200000,
+            200000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.5716978816311458,
+            4,
+            [
+              150000,
+              400000,
+              200000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 7,
+          "config": [
+            200000,
+            400000,
+            200000,
+            100000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.5716978816311458,
+            4,
+            [
+              200000,
+              400000,
+              200000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 8,
+          "config": [
+            200000,
+            400000,
+            200000,
+            150000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.5716978816311458,
+            4,
+            [
+              200000,
+              400000,
+              200000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 9,
+          "config": [
+            200000,
+            400000,
+            200000,
+            200000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.5716978816311458,
+            4,
+            [
+              200000,
+              400000,
+              200000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 10,
+          "config": [
+            150000,
+            600000,
+            200000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            0.5891978243344791,
+            4,
+            [
+              150000,
+              600000,
+              200000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 11,
+          "config": [
+            150000,
+            400000,
+            150000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            0.5983070346465624,
+            4,
+            [
+              150000,
+              400000,
+              150000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 12,
+          "config": [
+            150000,
+            400000,
+            400000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            0.6022487013132292,
+            4,
+            [
+              150000,
+              400000,
+              400000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 13,
+          "config": [
+            150000,
+            400000,
+            200000,
+            null
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            1.0468801617315628,
+            3,
+            [
+              150000,
+              400000,
+              200000,
+              0
+            ]
+          ]
+        },
+        {
+          "candidate_index": 14,
+          "config": [
+            150000,
+            200000,
+            200000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.06666666666666665,
+            0.5139900239211458,
+            4,
+            [
+              150000,
+              200000,
+              200000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 15,
+          "config": [
+            100000,
+            400000,
+            200000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.06666666666666665,
+            0.5750610893878124,
+            4,
+            [
+              100000,
+              400000,
+              200000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 16,
+          "config": [
+            100000,
+            50000,
+            1000000,
+            1000000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.8738226332178125,
+            4,
+            [
+              100000,
+              50000,
+              1000000,
+              1000000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 17,
+          "config": [
+            150000,
+            800000,
+            1000000,
+            200000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            0.9017927501898957,
+            4,
+            [
+              150000,
+              800000,
+              1000000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 18,
+          "config": [
+            150000,
+            50000,
+            150000,
+            1000000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            0.6156033459494791,
+            4,
+            [
+              150000,
+              50000,
+              150000,
+              1000000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 19,
+          "config": [
+            null,
+            200000,
+            50000,
+            50000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.472640596605729,
+            3,
+            [
+              0,
+              200000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 20,
+          "config": [
+            400000,
+            400000,
+            50000,
+            null
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.0982358713669793,
+            3,
+            [
+              400000,
+              400000,
+              50000,
+              0
+            ]
+          ]
+        },
+        {
+          "candidate_index": 21,
+          "config": [
+            150000,
+            600000,
+            1000000,
+            800000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.435287177925729,
+            4,
+            [
+              150000,
+              600000,
+              1000000,
+              800000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 22,
+          "config": [
+            150000,
+            100000,
+            400000,
+            150000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            0.6752712023065625,
+            4,
+            [
+              150000,
+              100000,
+              400000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 23,
+          "config": [
+            800000,
+            150000,
+            400000,
+            200000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            0.8855966344532291,
+            4,
+            [
+              800000,
+              150000,
+              400000,
+              200000
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "sampling_seed": 41421357,
+      "frozen_static": [
+        600000,
+        50000,
+        400000,
+        150000
+      ],
+      "candidates": [
+        {
+          "candidate_index": 0,
+          "config": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "reason": "all_disabled_reference",
+          "model_score": [
+            0.0,
+            4.0,
+            0,
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "candidate_index": 1,
+          "config": [
+            50000,
+            50000,
+            50000,
+            50000
+          ],
+          "reason": "all_minimum_threshold_reference",
+          "model_score": [
+            0.06666666666666665,
+            2.708905408928792,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 2,
+          "config": [
+            600000,
+            50000,
+            400000,
+            150000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.6359933938979585,
+            4,
+            [
+              600000,
+              50000,
+              400000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 3,
+          "config": [
+            600000,
+            100000,
+            400000,
+            150000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.6359933938979585,
+            4,
+            [
+              600000,
+              100000,
+              400000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 4,
+          "config": [
+            600000,
+            50000,
+            400000,
+            200000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.6364569758879585,
+            4,
+            [
+              600000,
+              50000,
+              400000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 5,
+          "config": [
+            600000,
+            100000,
+            400000,
+            200000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.6364569758879585,
+            4,
+            [
+              600000,
+              100000,
+              400000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 6,
+          "config": [
+            150000,
+            400000,
+            1000000,
+            50000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.6381615012862918,
+            4,
+            [
+              150000,
+              400000,
+              1000000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 7,
+          "config": [
+            200000,
+            400000,
+            1000000,
+            50000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.6381615012862918,
+            4,
+            [
+              200000,
+              400000,
+              1000000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 8,
+          "config": [
+            600000,
+            150000,
+            600000,
+            50000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.6400594196396252,
+            4,
+            [
+              600000,
+              150000,
+              600000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 9,
+          "config": [
+            600000,
+            200000,
+            600000,
+            50000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.6400594196396252,
+            4,
+            [
+              600000,
+              200000,
+              600000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 10,
+          "config": [
+            800000,
+            50000,
+            400000,
+            150000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            0.6587977376579583,
+            4,
+            [
+              800000,
+              50000,
+              400000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 11,
+          "config": [
+            400000,
+            50000,
+            400000,
+            150000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            0.7134888938979584,
+            4,
+            [
+              400000,
+              50000,
+              400000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 12,
+          "config": [
+            600000,
+            50000,
+            600000,
+            150000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            0.7430035747904584,
+            4,
+            [
+              600000,
+              50000,
+              600000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 13,
+          "config": [
+            600000,
+            null,
+            400000,
+            150000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            1.0206672435812916,
+            3,
+            [
+              600000,
+              0,
+              400000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 14,
+          "config": [
+            600000,
+            50000,
+            400000,
+            100000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.06666666666666665,
+            0.5816703122512917,
+            4,
+            [
+              600000,
+              50000,
+              400000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 15,
+          "config": [
+            600000,
+            50000,
+            200000,
+            150000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.06666666666666665,
+            0.6009955253671251,
+            4,
+            [
+              600000,
+              50000,
+              200000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 16,
+          "config": [
+            400000,
+            150000,
+            400000,
+            800000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            0.978924514597125,
+            4,
+            [
+              400000,
+              150000,
+              400000,
+              800000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 17,
+          "config": [
+            800000,
+            600000,
+            100000,
+            100000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.9515000174696255,
+            4,
+            [
+              800000,
+              600000,
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 18,
+          "config": [
+            400000,
+            100000,
+            null,
+            200000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.2163475630678333,
+            3,
+            [
+              400000,
+              100000,
+              0,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 19,
+          "config": [
+            400000,
+            800000,
+            200000,
+            600000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.7818024915279584,
+            4,
+            [
+              400000,
+              800000,
+              200000,
+              600000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 20,
+          "config": [
+            150000,
+            200000,
+            150000,
+            400000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            0.8678261304287918,
+            4,
+            [
+              150000,
+              200000,
+              150000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 21,
+          "config": [
+            150000,
+            1000000,
+            1000000,
+            50000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            0.6810372812879584,
+            4,
+            [
+              150000,
+              1000000,
+              1000000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 22,
+          "config": [
+            800000,
+            null,
+            800000,
+            1000000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            2.4249285161371255,
+            3,
+            [
+              800000,
+              0,
+              800000,
+              1000000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 23,
+          "config": [
+            null,
+            800000,
+            600000,
+            200000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.7290910722974169,
+            3,
+            [
+              0,
+              800000,
+              600000,
+              200000
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "sampling_seed": 41421358,
+      "frozen_static": [
+        400000,
+        150000,
+        150000,
+        400000
+      ],
+      "candidates": [
+        {
+          "candidate_index": 0,
+          "config": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "reason": "all_disabled_reference",
+          "model_score": [
+            0.0,
+            4.0,
+            0,
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "candidate_index": 1,
+          "config": [
+            50000,
+            50000,
+            50000,
+            50000
+          ],
+          "reason": "all_minimum_threshold_reference",
+          "model_score": [
+            1.3244444444444443,
+            1.7282655254475,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 2,
+          "config": [
+            400000,
+            150000,
+            150000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.7727027030701588,
+            4,
+            [
+              400000,
+              150000,
+              150000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 3,
+          "config": [
+            400000,
+            200000,
+            150000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.7727027030701588,
+            4,
+            [
+              400000,
+              200000,
+              150000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 4,
+          "config": [
+            400000,
+            150000,
+            200000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.7740193674846825,
+            4,
+            [
+              400000,
+              150000,
+              200000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 5,
+          "config": [
+            400000,
+            200000,
+            200000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.7740193674846825,
+            4,
+            [
+              400000,
+              200000,
+              200000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 6,
+          "config": [
+            600000,
+            150000,
+            150000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.8078704400557539,
+            4,
+            [
+              600000,
+              150000,
+              150000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 7,
+          "config": [
+            600000,
+            200000,
+            150000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.8078704400557539,
+            4,
+            [
+              600000,
+              200000,
+              150000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 8,
+          "config": [
+            600000,
+            150000,
+            200000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.8091871044702779,
+            4,
+            [
+              600000,
+              150000,
+              200000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 9,
+          "config": [
+            600000,
+            200000,
+            200000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            0.8091871044702779,
+            4,
+            [
+              600000,
+              200000,
+              200000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 10,
+          "config": [
+            400000,
+            150000,
+            150000,
+            600000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            0.8950929627305159,
+            4,
+            [
+              400000,
+              150000,
+              150000,
+              600000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 11,
+          "config": [
+            400000,
+            100000,
+            150000,
+            400000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.13222222222222224,
+            0.7376781292511507,
+            4,
+            [
+              400000,
+              100000,
+              150000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 12,
+          "config": [
+            200000,
+            150000,
+            150000,
+            400000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.13222222222222224,
+            0.745218431730635,
+            4,
+            [
+              200000,
+              150000,
+              150000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 13,
+          "config": [
+            400000,
+            150000,
+            150000,
+            200000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.2266666666666668,
+            0.6503124422053969,
+            4,
+            [
+              400000,
+              150000,
+              150000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 14,
+          "config": [
+            400000,
+            150000,
+            100000,
+            400000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.2266666666666668,
+            0.6872473929701588,
+            4,
+            [
+              400000,
+              150000,
+              100000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 15,
+          "config": [
+            1000000,
+            200000,
+            600000,
+            400000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.405301409189762,
+            4,
+            [
+              1000000,
+              200000,
+              600000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 16,
+          "config": [
+            null,
+            100000,
+            1000000,
+            800000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            2.1938762049422618,
+            3,
+            [
+              0,
+              100000,
+              1000000,
+              800000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 17,
+          "config": [
+            600000,
+            200000,
+            600000,
+            600000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.4392095021611109,
+            4,
+            [
+              600000,
+              200000,
+              600000,
+              600000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 18,
+          "config": [
+            1000000,
+            150000,
+            800000,
+            null
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.90633928699875,
+            3,
+            [
+              1000000,
+              150000,
+              800000,
+              0
+            ]
+          ]
+        },
+        {
+          "candidate_index": 19,
+          "config": [
+            800000,
+            150000,
+            null,
+            1000000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            2.363693127386944,
+            3,
+            [
+              800000,
+              150000,
+              0,
+              1000000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 20,
+          "config": [
+            1000000,
+            200000,
+            800000,
+            200000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.4732580836652382,
+            4,
+            [
+              1000000,
+              200000,
+              800000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 21,
+          "config": [
+            600000,
+            200000,
+            null,
+            800000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            2.3480474775280156,
+            3,
+            [
+              600000,
+              200000,
+              0,
+              800000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 22,
+          "config": [
+            400000,
+            100000,
+            200000,
+            800000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.018888888888888733,
+            0.9817626938501984,
+            4,
+            [
+              400000,
+              100000,
+              200000,
+              800000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 23,
+          "config": [
+            null,
+            null,
+            150000,
+            100000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.7822398068386311,
+            2,
+            [
+              0,
+              0,
+              150000,
+              100000
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "sampling_seed": 41421359,
+      "frozen_static": [
+        50000,
+        50000,
+        50000,
+        50000
+      ],
+      "candidates": [
+        {
+          "candidate_index": 0,
+          "config": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "reason": "all_disabled_reference",
+          "model_score": [
+            0.0,
+            4.0,
+            0,
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "candidate_index": 1,
+          "config": [
+            50000,
+            50000,
+            50000,
+            50000
+          ],
+          "reason": "all_minimum_threshold_reference",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 2,
+          "config": [
+            50000,
+            50000,
+            50000,
+            100000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 3,
+          "config": [
+            50000,
+            50000,
+            50000,
+            150000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 4,
+          "config": [
+            50000,
+            50000,
+            50000,
+            200000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 5,
+          "config": [
+            50000,
+            50000,
+            50000,
+            400000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              50000,
+              400000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 6,
+          "config": [
+            50000,
+            50000,
+            100000,
+            50000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              100000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 7,
+          "config": [
+            50000,
+            50000,
+            100000,
+            100000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              100000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 8,
+          "config": [
+            50000,
+            50000,
+            100000,
+            150000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              100000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 9,
+          "config": [
+            50000,
+            50000,
+            100000,
+            200000
+          ],
+          "reason": "model_top_eight_remaining",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              50000,
+              100000,
+              200000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 10,
+          "config": [
+            50000,
+            100000,
+            50000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              100000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 11,
+          "config": [
+            100000,
+            50000,
+            50000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              100000,
+              50000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 12,
+          "config": [
+            50000,
+            50000,
+            50000,
+            null
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            1.2564902103059374,
+            3,
+            [
+              50000,
+              50000,
+              50000,
+              0
+            ]
+          ]
+        },
+        {
+          "candidate_index": 13,
+          "config": [
+            50000,
+            null,
+            50000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            1.2571723313617709,
+            3,
+            [
+              50000,
+              0,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 14,
+          "config": [
+            50000,
+            50000,
+            null,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            1.9474493549233853,
+            3,
+            [
+              50000,
+              50000,
+              0,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 15,
+          "config": [
+            null,
+            50000,
+            50000,
+            50000
+          ],
+          "reason": "adjacent_to_frozen_static",
+          "model_score": [
+            0.0,
+            1.952544314776927,
+            3,
+            [
+              0,
+              50000,
+              50000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 16,
+          "config": [
+            1000000,
+            100000,
+            1000000,
+            100000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.762805758848177,
+            4,
+            [
+              1000000,
+              100000,
+              1000000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 17,
+          "config": [
+            50000,
+            800000,
+            50000,
+            100000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.2084772380569793,
+            4,
+            [
+              50000,
+              800000,
+              50000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 18,
+          "config": [
+            150000,
+            50000,
+            150000,
+            100000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              150000,
+              50000,
+              150000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 19,
+          "config": [
+            1000000,
+            600000,
+            50000,
+            150000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.5183538931474219,
+            4,
+            [
+              1000000,
+              600000,
+              50000,
+              150000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 20,
+          "config": [
+            null,
+            200000,
+            150000,
+            50000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.952544314776927,
+            3,
+            [
+              0,
+              200000,
+              150000,
+              50000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 21,
+          "config": [
+            100000,
+            null,
+            null,
+            800000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            2.611402425116094,
+            2,
+            [
+              100000,
+              0,
+              0,
+              800000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 22,
+          "config": [
+            50000,
+            400000,
+            150000,
+            100000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.1594114836898959,
+            4,
+            [
+              50000,
+              400000,
+              150000,
+              100000
+            ]
+          ]
+        },
+        {
+          "candidate_index": 23,
+          "config": [
+            200000,
+            150000,
+            800000,
+            1000000
+          ],
+          "reason": "uniform_grid_sample",
+          "model_score": [
+            0.0,
+            1.425632185121875,
+            4,
+            [
+              200000,
+              150000,
+              800000,
+              1000000
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "selection_rule": "所有训练案例费用上界达标后，最小化两训练种子中最坏年龄损失上界；并列按均值、启用项数、配置编码",
+  "failure_rule": "预算失败、不确定窗口和不可评价年龄全部保留；没有共同达标候选则报告不可行而不选失败配置",
+  "limits": "有限网格子集，不是全网格最优或已完成网络充分调参；新测试种子未参与"
+}
