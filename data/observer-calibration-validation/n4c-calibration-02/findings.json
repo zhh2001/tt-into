@@ -1,0 +1,72 @@
+{
+  "cases": 184,
+  "business_seed_count": 2,
+  "packets": 29440,
+  "reports": 20011,
+  "output_frames": 108331,
+  "decisions": 1840,
+  "observation_slots": 18400,
+  "completed_observations": 18384,
+  "skipped_observations": 16,
+  "visible_reports": 19810,
+  "shared_cache_advances": 19810,
+  "successful_updates": 1049,
+  "paid_counter_calls": 3520,
+  "window_feasibility": {
+    "within": 181,
+    "unavailable": 1,
+    "exceeds": 2
+  },
+  "report_receipt_to_entry_upper_max_ms": 421.075031,
+  "read_max_ms": 16.824741,
+  "ingest_max_ms": 2.824697,
+  "observer_max_lateness_ms": 341.4824,
+  "solver_max_ms": 84.324138,
+  "rpc_max_ms": 3.0025,
+  "sender_max_lateness_ms": 4.064554,
+  "initial_notice_first_cycle_cases": 181,
+  "scope": "184例已消费1301/1423共同控制器目标动态校准",
+  "feasible_parameters": {
+    "uniform_guard": 6,
+    "phase_guard": 6,
+    "phase_local_guard": 5
+  },
+  "selected_parameters": {
+    "uniform_guard": 0,
+    "phase_guard": 2,
+    "phase_local_guard": 5
+  },
+  "paired_diagnostics": {
+    "selected_cases": 64,
+    "pairs": 56,
+    "groups": 28,
+    "both_within_pairs": 42,
+    "same_sample_position_pairs": 12,
+    "eligible_controller_lower_groups": [
+      {
+        "scenario": "shared_priority",
+        "budget_level": "high",
+        "method": "phase_guard"
+      }
+    ],
+    "eligible_collector_lower_groups": [
+      {
+        "scenario": "shared_priority",
+        "budget_level": "high",
+        "method": "phase_guard"
+      },
+      {
+        "scenario": "shared_priority",
+        "budget_level": "high",
+        "method": "phase_joint"
+      },
+      {
+        "scenario": "stable",
+        "budget_level": "high",
+        "method": "uniform_guard"
+      }
+    ]
+  },
+  "deployment_repeats_per_setting_business": 1,
+  "parameters_frozen": true
+}

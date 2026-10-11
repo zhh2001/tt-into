@@ -1,0 +1,2585 @@
+[
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "method": "feedback",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 2,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.0423394969256008,
+      1.0453666823540546
+    ],
+    "collector_mean_static_bounds": [
+      1.042347041992617,
+      1.045778822607188
+    ],
+    "collector_mean_difference_bounds": [
+      -0.003439325681587113,
+      0.0030196403614374256
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "overlap": 1
+    },
+    "controller_mean_dynamic_bounds": [
+      1.252102573519759,
+      1.2576258603139734
+    ],
+    "controller_mean_static_bounds": [
+      1.2624277978572678,
+      1.267917132499465
+    ],
+    "controller_mean_difference_bounds": [
+      -0.01581455897970585,
+      -0.004801937543294388
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        242.0,
+        242.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "method": "joint",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.5931405016575462,
+      1.598410993296706
+    ],
+    "collector_mean_static_bounds": [
+      1.042347041992617,
+      1.045778822607188
+    ],
+    "collector_mean_difference_bounds": [
+      0.547361679050358,
+      0.556063951304089
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.8155440070339148,
+      1.8229583119752082
+    ],
+    "controller_mean_static_bounds": [
+      1.2624277978572678,
+      1.267917132499465
+    ],
+    "controller_mean_difference_bounds": [
+      0.5476268745344499,
+      0.5605305141179404
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        109.5,
+        109.5
+      ],
+      "e2": [
+        111.0,
+        111.0
+      ],
+      "e3": [
+        244.5,
+        244.5
+      ],
+      "export": [
+        262.5,
+        262.5
+      ],
+      "api_serialized": [
+        349.875,
+        349.875
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "method": "local",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.3877374420032216,
+      1.3921260732493268
+    ],
+    "collector_mean_static_bounds": [
+      1.042347041992617,
+      1.045778822607188
+    ],
+    "collector_mean_difference_bounds": [
+      0.34195861939603345,
+      0.34977903125670984
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.538629334729462,
+      1.545339845166152
+    ],
+    "controller_mean_static_bounds": [
+      1.2624277978572678,
+      1.267917132499465
+    ],
+    "controller_mean_difference_bounds": [
+      0.2707122022299969,
+      0.2829120473088842
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        111.0,
+        111.0
+      ],
+      "e3": [
+        258.0,
+        258.0
+      ],
+      "export": [
+        330.0,
+        330.0
+      ],
+      "api_serialized": [
+        303.375,
+        303.375
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "method": "phase_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 2,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.042793902838482,
+      1.0460954145226589
+    ],
+    "collector_mean_static_bounds": [
+      1.042347041992617,
+      1.045778822607188
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0029849197687059625,
+      0.003748372530041788
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.261171320914182,
+      1.2669686033571121
+    ],
+    "controller_mean_static_bounds": [
+      1.2624277978572678,
+      1.267917132499465
+    ],
+    "controller_mean_difference_bounds": [
+      -0.00674581158528309,
+      0.00454080549984448
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        242.0,
+        242.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "method": "phase_joint",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 2,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.042884893003925,
+      1.0461036897580351
+    ],
+    "collector_mean_static_bounds": [
+      1.042347041992617,
+      1.045778822607188
+    ],
+    "collector_mean_difference_bounds": [
+      -0.002893929603263179,
+      0.003756647765418175
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "overlap": 1
+    },
+    "controller_mean_dynamic_bounds": [
+      1.2521427214152845,
+      1.258104105246309
+    ],
+    "controller_mean_static_bounds": [
+      1.2624277978572678,
+      1.267917132499465
+    ],
+    "controller_mean_difference_bounds": [
+      -0.01577441108418043,
+      -0.004323692610958996
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        242.0,
+        242.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "method": "phase_local_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.2344905006242892,
+      1.239436389674715
+    ],
+    "collector_mean_static_bounds": [
+      1.042347041992617,
+      1.045778822607188
+    ],
+    "collector_mean_difference_bounds": [
+      0.1887116780171012,
+      0.19708934768209785
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.4308673446344353,
+      1.4382503253610386
+    ],
+    "controller_mean_static_bounds": [
+      1.2624277978572678,
+      1.267917132499465
+    ],
+    "controller_mean_difference_bounds": [
+      0.1629502121349703,
+      0.1758225275037708
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        266.25,
+        266.25
+      ],
+      "export": [
+        371.25,
+        371.25
+      ],
+      "api_serialized": [
+        310.1875,
+        310.1875
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "method": "uniform_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.5556693376929105,
+      1.559279261358433
+    ],
+    "collector_mean_static_bounds": [
+      1.042347041992617,
+      1.045778822607188
+    ],
+    "collector_mean_difference_bounds": [
+      0.5098905150857224,
+      0.5169322193658159
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.7641073950128534,
+      1.7698042454743699
+    ],
+    "controller_mean_static_bounds": [
+      1.2624277978572678,
+      1.267917132499465
+    ],
+    "controller_mean_difference_bounds": [
+      0.4961902625133884,
+      0.5073764476171022
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        110.25,
+        110.25
+      ],
+      "e2": [
+        112.5,
+        112.5
+      ],
+      "e3": [
+        249.75,
+        249.75
+      ],
+      "export": [
+        288.75,
+        288.75
+      ],
+      "api_serialized": [
+        379.625,
+        379.625
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        120.0,
+        120.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        288.0,
+        288.0
+      ],
+      "export": [
+        480.0,
+        480.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "method": "feedback",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 2,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6124479213897537,
+      0.6181544124982931
+    ],
+    "collector_mean_static_bounds": [
+      0.6124121944542503,
+      0.6178889881468681
+    ],
+    "collector_mean_difference_bounds": [
+      -0.005441066757114421,
+      0.005742218044042735
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.0064445228632513,
+      1.01722990503726
+    ],
+    "controller_mean_static_bounds": [
+      1.0052476307823144,
+      1.0160952342893925
+    ],
+    "controller_mean_difference_bounds": [
+      -0.009650711426141212,
+      0.01198227425494558
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        114.0,
+        114.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        242.0,
+        242.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        114.0,
+        114.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "method": "joint",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6497862966280474,
+      0.6551899544694901
+    ],
+    "collector_mean_static_bounds": [
+      0.6124121944542503,
+      0.6178889881468681
+    ],
+    "collector_mean_difference_bounds": [
+      0.03189730848117939,
+      0.04277776001523986
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.0632390894118617,
+      1.074082977822561
+    ],
+    "controller_mean_static_bounds": [
+      1.0052476307823144,
+      1.0160952342893925
+    ],
+    "controller_mean_difference_bounds": [
+      0.0471438551224691,
+      0.06883534704024663
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        120.75,
+        120.75
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        363.0,
+        363.0
+      ],
+      "export": [
+        855.0,
+        855.0
+      ],
+      "api_serialized": [
+        358.25,
+        358.25
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        114.0,
+        114.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "method": "local",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1819584940173717,
+      1.1875045161709523
+    ],
+    "collector_mean_static_bounds": [
+      0.6124121944542503,
+      0.6178889881468681
+    ],
+    "collector_mean_difference_bounds": [
+      0.5640695058705036,
+      0.575092321716702
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.584263543260077,
+      1.5942401180907835
+    ],
+    "controller_mean_static_bounds": [
+      1.0052476307823144,
+      1.0160952342893925
+    ],
+    "controller_mean_difference_bounds": [
+      0.5681683089706843,
+      0.5889924873084692
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        192.0,
+        192.0
+      ],
+      "e2": [
+        127.5,
+        127.5
+      ],
+      "e3": [
+        359.25,
+        359.25
+      ],
+      "export": [
+        836.25,
+        836.25
+      ],
+      "api_serialized": [
+        366.0,
+        366.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        114.0,
+        114.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "method": "phase_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5600590441264066,
+      0.5655720775724151
+    ],
+    "collector_mean_static_bounds": [
+      0.6124121944542503,
+      0.6178889881468681
+    ],
+    "collector_mean_difference_bounds": [
+      -0.05782994402046149,
+      -0.0468401168818352
+    ],
+    "controller_both_eligible_lower": true,
+    "controller_directions": {
+      "lower": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      0.9095678577482946,
+      0.9204308368360007
+    ],
+    "controller_mean_static_bounds": [
+      1.0052476307823144,
+      1.0160952342893925
+    ],
+    "controller_mean_difference_bounds": [
+      -0.1065273765410979,
+      -0.0848167939463137
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        117.0,
+        117.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        369.0,
+        369.0
+      ],
+      "export": [
+        885.0,
+        885.0
+      ],
+      "api_serialized": [
+        319.5,
+        319.5
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        114.0,
+        114.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "method": "phase_joint",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5892087051214822,
+      0.5947121452665574
+    ],
+    "collector_mean_static_bounds": [
+      0.6124121944542503,
+      0.6178889881468681
+    ],
+    "collector_mean_difference_bounds": [
+      -0.028680283025385944,
+      -0.017700049187692968
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "overlap": 1
+    },
+    "controller_mean_dynamic_bounds": [
+      0.9851126500651195,
+      0.9956726085935724
+    ],
+    "controller_mean_static_bounds": [
+      1.0052476307823144,
+      1.0160952342893925
+    ],
+    "controller_mean_difference_bounds": [
+      -0.030982584224273024,
+      -0.009575022188741955
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        116.25,
+        116.25
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        360.75,
+        360.75
+      ],
+      "export": [
+        843.75,
+        843.75
+      ],
+      "api_serialized": [
+        381.5,
+        381.5
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        114.0,
+        114.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "method": "phase_local_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.7389293295314194,
+      0.7443442740032147
+    ],
+    "collector_mean_static_bounds": [
+      0.6124121944542503,
+      0.6178889881468681
+    ],
+    "collector_mean_difference_bounds": [
+      0.12104034138455133,
+      0.1319320795489643
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.1291170161899913,
+      1.139650667039028
+    ],
+    "controller_mean_static_bounds": [
+      1.0052476307823144,
+      1.0160952342893925
+    ],
+    "controller_mean_difference_bounds": [
+      0.11302178190059875,
+      0.1344030362567138
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        142.5,
+        142.5
+      ],
+      "e2": [
+        129.0,
+        129.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        335.0,
+        335.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        114.0,
+        114.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "method": "uniform_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.6368772538398068,
+      0.6420953229273072
+    ],
+    "collector_mean_static_bounds": [
+      0.6124121944542503,
+      0.6178889881468681
+    ],
+    "collector_mean_difference_bounds": [
+      0.018988265692938655,
+      0.02968312847305693
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.0511616888006055,
+      1.0614656518234604
+    ],
+    "controller_mean_static_bounds": [
+      1.0052476307823144,
+      1.0160952342893925
+    ],
+    "controller_mean_difference_bounds": [
+      0.03506645451121282,
+      0.05621802104114604
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        121.5,
+        121.5
+      ],
+      "e2": [
+        119.25,
+        119.25
+      ],
+      "e3": [
+        367.5,
+        367.5
+      ],
+      "export": [
+        877.5,
+        877.5
+      ],
+      "api_serialized": [
+        381.5,
+        381.5
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        114.0,
+        114.0
+      ],
+      "e2": [
+        120.0,
+        120.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "method": "feedback",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 2,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5756102937463897,
+      0.5794501807479744
+    ],
+    "collector_mean_static_bounds": [
+      0.5753840427364867,
+      0.5794681198316504
+    ],
+    "collector_mean_difference_bounds": [
+      -0.0038578260852606405,
+      0.004066138011487808
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      0.8482459608040795,
+      0.8556653878288416
+    ],
+    "controller_mean_static_bounds": [
+      0.8479897666500233,
+      0.8554137783660544
+    ],
+    "controller_mean_difference_bounds": [
+      -0.007167817561974821,
+      0.007675621178818204
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        242.0,
+        242.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "method": "joint",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5840909511611725,
+      0.5877916249338337
+    ],
+    "collector_mean_static_bounds": [
+      0.5753840427364867,
+      0.5794681198316504
+    ],
+    "collector_mean_difference_bounds": [
+      0.004622831329522126,
+      0.012407582197347056
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "higher": 1
+    },
+    "controller_mean_dynamic_bounds": [
+      0.8522672826784843,
+      0.8593847229688978
+    ],
+    "controller_mean_static_bounds": [
+      0.8479897666500233,
+      0.8554137783660544
+    ],
+    "controller_mean_difference_bounds": [
+      -0.003146495687570139,
+      0.011394956318874438
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        133.5,
+        133.5
+      ],
+      "e2": [
+        141.0,
+        141.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        428.0,
+        428.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "method": "local",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.988566992282133,
+      0.9924128560243707
+    ],
+    "collector_mean_static_bounds": [
+      0.5753840427364867,
+      0.5794681198316504
+    ],
+    "collector_mean_difference_bounds": [
+      0.4090988724504826,
+      0.41702881328788405
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.1861532780716715,
+      1.193494299543986
+    ],
+    "controller_mean_static_bounds": [
+      0.8479897666500233,
+      0.8554137783660544
+    ],
+    "controller_mean_difference_bounds": [
+      0.3307394997056172,
+      0.34550453289396255
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        186.0,
+        186.0
+      ],
+      "e3": [
+        358.5,
+        358.5
+      ],
+      "export": [
+        832.5,
+        832.5
+      ],
+      "api_serialized": [
+        304.0,
+        304.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "method": "phase_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 2,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5760492193349949,
+      0.5800687729505283
+    ],
+    "collector_mean_static_bounds": [
+      0.5753840427364867,
+      0.5794681198316504
+    ],
+    "collector_mean_difference_bounds": [
+      -0.003418900496655497,
+      0.004684730214041588
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      0.8489509470920675,
+      0.8564426513093644
+    ],
+    "controller_mean_static_bounds": [
+      0.8479897666500233,
+      0.8554137783660544
+    ],
+    "controller_mean_difference_bounds": [
+      -0.006462831273986891,
+      0.008452884659341076
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        242.0,
+        242.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "method": "phase_joint",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "overlap": 1,
+      "lower": 1
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5688513956304657,
+      0.5725550536768038
+    ],
+    "collector_mean_static_bounds": [
+      0.5753840427364867,
+      0.5794681198316504
+    ],
+    "collector_mean_difference_bounds": [
+      -0.010616724201184702,
+      -0.0028289890596828182
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "overlap": 1,
+      "lower": 1
+    },
+    "controller_mean_dynamic_bounds": [
+      0.8300281543144563,
+      0.8373688180167608
+    ],
+    "controller_mean_static_bounds": [
+      0.8479897666500233,
+      0.8554137783660544
+    ],
+    "controller_mean_difference_bounds": [
+      -0.025385624051598,
+      -0.010620948633262572
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        140.25,
+        140.25
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        364.5,
+        364.5
+      ],
+      "export": [
+        862.5,
+        862.5
+      ],
+      "api_serialized": [
+        366.0,
+        366.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "method": "phase_local_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5993779841117892,
+      0.6037790920150305
+    ],
+    "collector_mean_static_bounds": [
+      0.5753840427364867,
+      0.5794681198316504
+    ],
+    "collector_mean_difference_bounds": [
+      0.01990986428013891,
+      0.02839504927854397
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      0.8844137537510256,
+      0.8922248068804575
+    ],
+    "controller_mean_static_bounds": [
+      0.8479897666500233,
+      0.8554137783660544
+    ],
+    "controller_mean_difference_bounds": [
+      0.028999975384971233,
+      0.044235040230434064
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        349.5,
+        349.5
+      ],
+      "export": [
+        787.5,
+        787.5
+      ],
+      "api_serialized": [
+        288.5,
+        288.5
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "method": "uniform_guard",
+    "case_count": 2,
+    "both_within_pairs": 2,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": true,
+    "collector_directions": {
+      "lower": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.5449048139006012,
+      0.5486750903070963
+    ],
+    "collector_mean_static_bounds": [
+      0.5753840427364867,
+      0.5794681198316504
+    ],
+    "collector_mean_difference_bounds": [
+      -0.03456330593104917,
+      -0.02670895242939031
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "lower": 1,
+      "higher": 1
+    },
+    "controller_mean_dynamic_bounds": [
+      0.8094396914049289,
+      0.8168860278529194
+    ],
+    "controller_mean_static_bounds": [
+      0.8479897666500233,
+      0.8554137783660544
+    ],
+    "controller_mean_difference_bounds": [
+      -0.04597408696112548,
+      -0.03110373879710393
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        139.5,
+        139.5
+      ],
+      "e3": [
+        370.5,
+        370.5
+      ],
+      "export": [
+        892.5,
+        892.5
+      ],
+      "api_serialized": [
+        381.5,
+        381.5
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        144.0,
+        144.0
+      ],
+      "e2": [
+        144.0,
+        144.0
+      ],
+      "e3": [
+        360.0,
+        360.0
+      ],
+      "export": [
+        840.0,
+        840.0
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "method": "feedback",
+    "case_count": 2,
+    "both_within_pairs": 0,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.3988961760976157,
+      1.4035968040697142
+    ],
+    "collector_mean_static_bounds": [
+      0.771362010482431,
+      0.7753366002072835
+    ],
+    "collector_mean_difference_bounds": [
+      0.6235595758903321,
+      0.6322347935872832
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.6517416800227258,
+      1.658544673262746
+    ],
+    "controller_mean_static_bounds": [
+      1.0655321543996719,
+      1.072379319651641
+    ],
+    "controller_mean_difference_bounds": [
+      0.5793623603710849,
+      0.5930125188630742
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        91.5,
+        91.5
+      ],
+      "e2": [
+        134.25,
+        134.25
+      ],
+      "e3": [
+        263.25,
+        263.25
+      ],
+      "export": [
+        356.25,
+        356.25
+      ],
+      "api_serialized": [
+        459.0,
+        459.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        103.5,
+        103.5
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        301.5,
+        301.5
+      ],
+      "export": [
+        547.5,
+        547.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "method": "joint",
+    "case_count": 2,
+    "both_within_pairs": 0,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.076282727588998,
+      1.080674873586735
+    ],
+    "collector_mean_static_bounds": [
+      0.771362010482431,
+      0.7753366002072835
+    ],
+    "collector_mean_difference_bounds": [
+      0.3009461273817143,
+      0.3093128631043042
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.3468222860022125,
+      1.353670054164874
+    ],
+    "controller_mean_static_bounds": [
+      1.0655321543996719,
+      1.072379319651641
+    ],
+    "controller_mean_difference_bounds": [
+      0.2744429663505715,
+      0.2881378997652022
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        89.25,
+        89.25
+      ],
+      "e2": [
+        154.5,
+        154.5
+      ],
+      "e3": [
+        280.5,
+        280.5
+      ],
+      "export": [
+        442.5,
+        442.5
+      ],
+      "api_serialized": [
+        388.3125,
+        388.3125
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        103.5,
+        103.5
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        301.5,
+        301.5
+      ],
+      "export": [
+        547.5,
+        547.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "method": "local",
+    "case_count": 2,
+    "both_within_pairs": 0,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1332139750247772,
+      1.1369548565038583
+    ],
+    "collector_mean_static_bounds": [
+      0.771362010482431,
+      0.7753366002072835
+    ],
+    "collector_mean_difference_bounds": [
+      0.35787737481749365,
+      0.36559284602142733
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.3888605101929614,
+      1.3949697375547074
+    ],
+    "controller_mean_static_bounds": [
+      1.0655321543996719,
+      1.072379319651641
+    ],
+    "controller_mean_difference_bounds": [
+      0.3164811905413204,
+      0.3294375831550356
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        93.0,
+        93.0
+      ],
+      "e2": [
+        154.5,
+        154.5
+      ],
+      "e3": [
+        285.0,
+        285.0
+      ],
+      "export": [
+        465.0,
+        465.0
+      ],
+      "api_serialized": [
+        427.375,
+        427.375
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        103.5,
+        103.5
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        301.5,
+        301.5
+      ],
+      "export": [
+        547.5,
+        547.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "method": "phase_guard",
+    "case_count": 2,
+    "both_within_pairs": 0,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.8787915214248654,
+      0.8830843369318085
+    ],
+    "collector_mean_static_bounds": [
+      0.771362010482431,
+      0.7753366002072835
+    ],
+    "collector_mean_difference_bounds": [
+      0.10345492121758187,
+      0.11172232644937757
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.1593983426661971,
+      1.1663819497314756
+    ],
+    "controller_mean_static_bounds": [
+      1.0655321543996719,
+      1.072379319651641
+    ],
+    "controller_mean_difference_bounds": [
+      0.08701902301455622,
+      0.10084979533180383
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        91.5,
+        91.5
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        298.5,
+        298.5
+      ],
+      "export": [
+        532.5,
+        532.5
+      ],
+      "api_serialized": [
+        318.5625,
+        318.5625
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        103.5,
+        103.5
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        301.5,
+        301.5
+      ],
+      "export": [
+        547.5,
+        547.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "method": "phase_joint",
+    "case_count": 2,
+    "both_within_pairs": 0,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.2243078899642805,
+      1.227714961324963
+    ],
+    "collector_mean_static_bounds": [
+      0.771362010482431,
+      0.7753366002072835
+    ],
+    "collector_mean_difference_bounds": [
+      0.4489712897569969,
+      0.45635295084253186
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.4586174235494502,
+      1.4643666999918352
+    ],
+    "controller_mean_static_bounds": [
+      1.0655321543996719,
+      1.072379319651641
+    ],
+    "controller_mean_difference_bounds": [
+      0.3862381038978093,
+      0.39883454559216325
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        91.5,
+        91.5
+      ],
+      "e2": [
+        141.75,
+        141.75
+      ],
+      "e3": [
+        284.25,
+        284.25
+      ],
+      "export": [
+        461.25,
+        461.25
+      ],
+      "api_serialized": [
+        402.875,
+        402.875
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        103.5,
+        103.5
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        301.5,
+        301.5
+      ],
+      "export": [
+        547.5,
+        547.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "method": "phase_local_guard",
+    "case_count": 2,
+    "both_within_pairs": 0,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      1.1975807702403656,
+      1.2015645210358752
+    ],
+    "collector_mean_static_bounds": [
+      0.771362010482431,
+      0.7753366002072835
+    ],
+    "collector_mean_difference_bounds": [
+      0.4222441700330822,
+      0.4302025105534441
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.4589407641045469,
+      1.465424143124825
+    ],
+    "controller_mean_static_bounds": [
+      1.0655321543996719,
+      1.072379319651641
+    ],
+    "controller_mean_difference_bounds": [
+      0.3865614444529061,
+      0.3998919887251532
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        87.0,
+        87.0
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        286.5,
+        286.5
+      ],
+      "export": [
+        472.5,
+        472.5
+      ],
+      "api_serialized": [
+        302.75,
+        302.75
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        103.5,
+        103.5
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        301.5,
+        301.5
+      ],
+      "export": [
+        547.5,
+        547.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    }
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "method": "uniform_guard",
+    "case_count": 2,
+    "both_within_pairs": 0,
+    "same_sample_position_pairs": 0,
+    "collector_both_eligible_lower": false,
+    "collector_directions": {
+      "higher": 2
+    },
+    "collector_mean_dynamic_bounds": [
+      0.8322186333628783,
+      0.8365188216934986
+    ],
+    "collector_mean_static_bounds": [
+      0.771362010482431,
+      0.7753366002072835
+    ],
+    "collector_mean_difference_bounds": [
+      0.05688203315559481,
+      0.06515681121106759
+    ],
+    "controller_both_eligible_lower": false,
+    "controller_directions": {
+      "higher": 2
+    },
+    "controller_mean_dynamic_bounds": [
+      1.1186216469149208,
+      1.1257219752863001
+    ],
+    "controller_mean_static_bounds": [
+      1.0655321543996719,
+      1.072379319651641
+    ],
+    "controller_mean_difference_bounds": [
+      0.046242327263279814,
+      0.060189820886628165
+    ],
+    "dynamic_mean_fee_rates": {
+      "e1": [
+        90.0,
+        90.0
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        298.5,
+        298.5
+      ],
+      "export": [
+        532.5,
+        532.5
+      ],
+      "api_serialized": [
+        366.0,
+        366.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    },
+    "static_mean_fee_rates": {
+      "e1": [
+        103.5,
+        103.5
+      ],
+      "e2": [
+        159.0,
+        159.0
+      ],
+      "e3": [
+        301.5,
+        301.5
+      ],
+      "export": [
+        547.5,
+        547.5
+      ],
+      "api_serialized": [
+        0.0,
+        0.0
+      ],
+      "local_notice_payload": [
+        23.75,
+        23.75
+      ]
+    }
+  }
+]
