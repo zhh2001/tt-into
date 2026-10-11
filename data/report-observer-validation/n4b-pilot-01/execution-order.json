@@ -1,0 +1,194 @@
+[
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      50000
+    ],
+    "method": "phase_guard",
+    "seed": 11,
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s11-phase_guard",
+    "position": 0
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "method": "phase_guard",
+    "seed": 11,
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s11-phase_guard",
+    "position": 1
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      150000,
+      400000
+    ],
+    "method": "static",
+    "seed": 11,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s11-static",
+    "position": 2
+  },
+  {
+    "scenario": "stable",
+    "budget_level": "high",
+    "initial_config": [
+      150000,
+      400000,
+      200000,
+      50000
+    ],
+    "method": "static",
+    "seed": 11,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "stable-high-s11-static",
+    "position": 3
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      50000,
+      50000,
+      50000,
+      400000
+    ],
+    "method": "phase_guard",
+    "seed": 11,
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s11-phase_guard",
+    "position": 4
+  },
+  {
+    "scenario": "bursty_jitter",
+    "budget_level": "low",
+    "initial_config": [
+      50000,
+      50000,
+      50000,
+      400000
+    ],
+    "method": "static",
+    "seed": 11,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "bursty_jitter-low-s11-static",
+    "position": 5
+  },
+  {
+    "scenario": "switch",
+    "budget_level": "low",
+    "initial_config": [
+      400000,
+      150000,
+      150000,
+      400000
+    ],
+    "method": "phase_guard",
+    "seed": 11,
+    "parameter_index": 2,
+    "adaptive": {
+      "gain_margin": 0.05,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "switch-low-s11-phase_guard",
+    "position": 6
+  },
+  {
+    "scenario": "shared_priority",
+    "budget_level": "high",
+    "initial_config": [
+      600000,
+      100000,
+      400000,
+      150000
+    ],
+    "method": "static",
+    "seed": 11,
+    "parameter_index": null,
+    "adaptive": {
+      "gain_margin": 0.0,
+      "reserve_fraction": 0.0,
+      "lookback_us": 3000000,
+      "cluster_fraction": 0.25,
+      "period_relative_mad": 0.2,
+      "measurement_start_us": 2000000,
+      "measurement_end_us": 10000000
+    },
+    "name": "shared_priority-high-s11-static",
+    "position": 7
+  }
+]
