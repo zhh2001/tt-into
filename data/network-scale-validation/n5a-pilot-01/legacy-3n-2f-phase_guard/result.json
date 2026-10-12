@@ -1,0 +1,117 @@
+{
+  "name": "legacy-3n-2f-phase_guard",
+  "network_id": "legacy-3n-2f",
+  "method": "phase_guard",
+  "position": 2,
+  "initial_config": [
+    150000,
+    400000,
+    200000,
+    200000
+  ],
+  "adaptive": {
+    "gain_margin": 0.05,
+    "reserve_fraction": 0.0,
+    "lookback_us": 3000000,
+    "cluster_fraction": 0.25,
+    "period_relative_mad": 0.2,
+    "measurement_start_us": 2000000,
+    "measurement_end_us": 10000000
+  },
+  "budget": {
+    "link_bytes_per_s": {
+      "e1": 4096,
+      "e2": 4096,
+      "e3": 4096
+    },
+    "export_bytes_per_s": 8192,
+    "control_bytes_per_s": 4096
+  },
+  "scope": "确定性正确性业务，许可脚本独立标记，无性能排名",
+  "status": "passed",
+  "origin_monotonic_ns": 132802457508000,
+  "duration_us": 10000000,
+  "diagnostics": false,
+  "topology": {
+    "family": "two_entry_merge_chain",
+    "sampling_nodes": 3,
+    "sink": 4,
+    "flows": [
+      {
+        "identity": {
+          "session": 20,
+          "tag": 1001
+        },
+        "slot": 1,
+        "sport": 10101,
+        "entry_node": 1,
+        "source_interface_index": 0,
+        "path": [
+          1,
+          3
+        ]
+      },
+      {
+        "identity": {
+          "session": 20,
+          "tag": 2002
+        },
+        "slot": 2,
+        "sport": 10102,
+        "entry_node": 2,
+        "source_interface_index": 1,
+        "path": [
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  "initial_source_counts": [
+    {
+      "flow": {
+        "session": 20,
+        "tag": 1001
+      },
+      "node": 1,
+      "slot": 1,
+      "count": 0
+    },
+    {
+      "flow": {
+        "session": 20,
+        "tag": 2002
+      },
+      "node": 2,
+      "slot": 2,
+      "count": 0
+    }
+  ],
+  "rpc_start_index": 150,
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "warmup_us": [
+    0,
+    2000000
+  ],
+  "measurement_window_us": [
+    2000000,
+    10000000
+  ],
+  "ended_monotonic_ns": 132812843676047,
+  "rpc_stop_index": 228,
+  "errors": [],
+  "packet_count": 160,
+  "report_count": 156,
+  "checks": 2829,
+  "decision_count": 10,
+  "successful_updates": 5,
+  "paid_counts": 20,
+  "skipped_epochs": 0,
+  "observer_checks": 2196,
+  "observation_slots": 100,
+  "completed_observations": 100,
+  "skipped_observations": 0,
+  "visible_reports": 156,
+  "shared_cache_advances": 156
+}

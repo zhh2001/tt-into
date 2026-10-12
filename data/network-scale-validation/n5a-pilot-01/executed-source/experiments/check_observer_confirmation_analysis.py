@@ -1,0 +1,229 @@
+"""独立验收有限静态确认的批次、两位置积分、完整排序和六层前沿。"""
+import argparse
+import csv
+import json
+from pathlib import Path
+
+from check_observer_confirmation import audit
+from check_matched_network import load, rows, sha, charges_for
+from check_rolling_reference import same, near
+from network_entry_bounds import costs, output_frames
+from observation_diagnostics import task_integral
+
+
+def check_integrals(tasks, samples, origin, saved):
+    denominator = sum(t['weight'] * (t['end_us'] - t['start_us']) for t in tasks)
+    count = 0
+    for side, gen, at in (('lower', 'generation_upper_ns', 'entered_lower_ns'),
+                          ('upper', 'generation_lower_ns', 'entered_upper_ns')):
+        total = 0
+        for task in tasks:
+            value, _ = task_integral(task, samples, origin, gen, at)
+            total += task['weight'] * (task['end_us'] - task['start_us']) * value
+            count += 1
+        near(total / denominator, saved['loss_' + side], '独立纳秒任务积分与全部任务分母')
+    near(denominator, saved['weighted_duration_us'], '完整活跃加权时长')
+    same(len(samples), saved['sample_count'], '完整缓存推进样本')
+    return count + 4
+
+
+def check(output):
+    m = load(output / 'manifest.json')
+    verified = audit(output)
+    rpc = rows(output / 'rpc-operations.jsonl'); frames = output_frames(output, m['cases'])
+    with (output / 'summary.csv').open() as stream: table = list(csv.DictReader(stream))
+    with (output / 'report-availability.csv').open() as stream: available = list(csv.DictReader(stream))
+    same([r['case'] for r in table], [c['name'] for c in m['cases']], '完整汇总顺序')
+    count, task_count, samples_total = 0, 0, 0
+    for name, digest in m['analysis_source_sha256'].items():
+        same(sha(output / 'executed-analysis-source' / name), digest, '实际分析源码快照'); count += 1
+    for case, summary in zip(m['cases'], table):
+        directory = output / case['name']; origin = case['origin_monotonic_ns']
+        cost = costs(directory, case, frames[case['name']], charges_for(directory, rpc))
+        same(cost, load(directory / 'window-costs.json'), '独立实际分层窗口费用')
+        same(summary['window_feasibility'], cost['window_feasibility'], '全部超限状态保留')
+        near(float(summary['api_bytes_per_s']), cost['api_bytes_per_s'], 'API实际费用汇总')
+        near(float(summary['local_notice_bytes_per_s']), cost['local_notice_bytes_per_s'], '通知实际费用汇总')
+        for resource in ('e1', 'e2', 'e3', 'export'):
+            for side in ('lower', 'upper'):
+                value = cost[f'measurement_{side}_bytes']
+                if value is None: same(summary[f'{resource}_{side}_bytes_per_s'], '', '未知费用保留')
+                else: near(float(summary[f'{resource}_{side}_bytes_per_s']), value[resource] / 8, '实际帧费用条件界')
+                count += 1
+        generation, samples = load(directory / 'generation-bounds.json'), load(directory / 'controller-samples.json')
+        raw = [r for r in rows(directory / 'collector.jsonl') if r.get('ether_type') == 0x88b6]
+        sends = {r['packet_id']: r for r in rows(directory / 'send.jsonl')}
+        business = {r['packet_id']: r for r in rows(directory / 'destination.jsonl') if r.get('src') == '10.0.0.1'}
+        interval = {(r['packet_id'], r['node']): r for r in generation['intervals']}
+        for node in (1, 2, 3):
+            relevant = [(sends[r['packet_id']]['send_before_monotonic_ns'] - x['generated_us'] * 1000 - 1000,
+                         min(business[r['packet_id']]['receive_monotonic_ns'], r['receive_monotonic_ns']) - x['generated_us'] * 1000)
+                        for r in raw for x in r['records'] if x['switch_id'] == node]
+            if relevant:
+                clock = generation['local_clock_offset'][str(node)]
+                same(clock['lower_ns'], max(a for a, _ in relevant), '独立本地时间偏移下界')
+                same(clock['upper_ns'], min(b for _, b in relevant), '独立本地时间偏移上界')
+                same(clock['compatible'], clock['lower_ns'] <= clock['upper_ns'], '条件偏移相容性')
+                count += 3
+        for r in raw:
+            for record in r['records']:
+                s = interval[r['packet_id'], record['switch_id']]
+                lo, hi = sends[r['packet_id']]['send_before_monotonic_ns'], min(business[r['packet_id']]['receive_monotonic_ns'], r['receive_monotonic_ns'])
+                clock = generation['local_clock_offset'][str(record['switch_id'])]
+                if clock['compatible']:
+                    lo = max(lo, record['generated_us'] * 1000 + clock['lower_ns'])
+                    hi = min(hi, record['generated_us'] * 1000 + clock['upper_ns'] + 1000)
+                same([s['generation_lower_ns'], s['generation_upper_ns']], [lo, hi], '实际生成因果条件界')
+                count += 1
+        expected, known = [], {}
+        reports_visible = 0
+        for observed in rows(directory / 'report-observations.jsonl'):
+            if observed['skipped']: continue
+            event = observed['availability']
+            for report in observed['fresh_reports']:
+                physical = [r for r in raw if (r['session'], r['flow_tag']) == (report['flow']['session'], report['flow']['tag'])
+                            and (r['receive_monotonic_ns'] - origin) // 1000 == report['received_us']]
+                if len(physical) != 1: raise ValueError('验证来源不唯一')
+                r = physical[0]; reports_visible += 1
+                saved = [a for a in available if a['case'] == case['name'] and int(a['packet_id']) == r['packet_id']]
+                same(len(saved), 1, '每条首次取得报告只汇总一次')
+                a = saved[0]
+                for key, value in (('observation_index', observed['observation_index']), ('received_ns', r['receive_monotonic_ns']),
+                                   ('entered_lower_ns', event['ingest_started_ns']), ('entered_upper_ns', event['available_ns'])):
+                    same(int(a[key]), value, '真实首次进入观察事件'); count += 1
+                near(float(a['receipt_to_entry_upper_ms']), (event['available_ns'] - r['receive_monotonic_ns']) / 1e6, '实际观察等待上界')
+                for x in report['records']:
+                    node, generated = x['node'], x['generated_local_us']
+                    if node in known and not 0 < (generated - known[node]) % 2**48 < 2**47: continue
+                    known[node] = generated
+                    i = interval[r['packet_id'], node]
+                    expected.append({'node': node, 'packet_id': r['packet_id'], 'generated_local_us': generated,
+                        'observation_index': observed['observation_index'], 'received_ns': r['receive_monotonic_ns'],
+                        'generation_lower_ns': i['generation_lower_ns'], 'generation_upper_ns': i['generation_upper_ns'],
+                        'entered_lower_ns': event['ingest_started_ns'], 'entered_upper_ns': event['available_ns']})
+                count += 2
+        same(samples, expected, '全部实际共享缓存推进来源与首次可用区间')
+        tasks = load(directory / 'tasks.json'); visible = load(directory / 'controller-visible-bounds.json')
+        count += check_integrals(tasks, samples, origin, visible)
+        collector = [dict(r, entered_lower_ns=r['received_ns'], entered_upper_ns=r['received_ns']) for r in generation['intervals']]
+        denominator = sum(t['weight'] * (t['end_us'] - t['start_us']) for t in tasks)
+        count += check_integrals(tasks, collector, origin, dict(generation, weighted_duration_us=denominator, sample_count=len(collector)))
+        for observer, bounds in (('collector', generation), ('controller', visible)):
+            for side in ('lower', 'upper'):
+                near(float(summary[observer + '_loss_' + side]), bounds['loss_' + side], '双位置年龄条件界汇总'); count += 1
+        own = rpc[case['rpc_start_index']:case['rpc_stop_index']]
+        same(int(summary['paid_counter_calls']), sum(r['kind'] == 'online_observation' for r in own), '实际源计数频率')
+        same(int(summary['visible_reports']), reports_visible, '合法实收报告汇总')
+        same(int(summary['shared_cache_advances']), len(samples), '共享任务不重复计收益')
+        same(int(summary['unread_tail_reports']), len(raw) - reports_visible, '末段不补更新')
+        task_count += len(tasks); samples_total += len(samples); count += 8
+    findings = load(output / 'findings.json')
+    for field, source in (('packets', 'packet_count'), ('reports', 'report_count'), ('decisions', 'decision_count'),
+                          ('completed_observations', 'completed_observations'), ('successful_updates', 'successful_updates')):
+        same(findings[field], verified[source], '完整试点计数'); count += 1
+    same(findings['window_feasibility'], dict(__import__('collections').Counter(r['window_feasibility'] for r in table)), '全部费用失败分母')
+    same(findings['visible_reports'], len(available), '完整可用报告分母')
+    same(findings['shared_cache_advances'], samples_total, '完整共享缓存分母')
+    selection_checks = check_selection(output, table)
+    repeat_checks = check_repeats(output, m['cases'])
+    return {'status': 'passed', 'cases': len(table), 'tasks': task_count, 'controller_samples': samples_total,
+            'selection_checks': selection_checks, 'repeat_checks': repeat_checks,
+            'analysis_checks': count + 3, 'network_checks': sum(verified[k] for k in ('checks', 'live_control_checks', 'observer_checks', 'cache_and_budget_checks')),
+            'analysis_manifest_sha256': sha(output / 'manifest.json')}
+
+
+def check_selection(output, table):
+    import math
+    plan = load(output / 'confirmation-plan.json')
+    scores, winners = load(output / 'confirmation-scores.json'), load(output / 'frozen-static.json')
+    same(len(scores), 12, '完整十二确认评分')
+    same(len(winners), 4, '完整四单元共同初始化')
+    count = 0
+    for group in plan['shortlist']['groups']:
+        eligible = []
+        for c in group['candidates']:
+            values = [r for r in table if r['scenario'] == group['scenario'] and int(r['candidate_index']) == c['candidate_index']]
+            values.sort(key=lambda r: (int(r['seed']), int(r['block'])))
+            same(sorted((int(r['seed']), int(r['block'])) for r in values), [(s,b) for s in (11,29) for b in (1,2,3)], '每配置完整双业务三部署')
+            score = next(s for s in scores if s['scenario'] == group['scenario'] and s['candidate_index'] == c['candidate_index'])
+            same(score['config'], c['config'], '固定确认配置')
+            uppers = [float(r['controller_loss_upper']) for r in values]
+            rank = [max(uppers), sum(uppers)/6, sum(v is not None for v in c['config']), [v or 0 for v in c['config']]]
+            same(score['rank'], rank, '独立最坏控制器排序')
+            fields = ['e1_upper_bytes_per_s','e2_upper_bytes_per_s','e3_upper_bytes_per_s','export_upper_bytes_per_s','api_bytes_per_s','local_notice_bytes_per_s']
+            valid = all(r[k] != '' and math.isfinite(float(r[k])) and float(r[k]) >= 0 for r in values for k in fields)
+            feasible = valid and all(r['window_feasibility'] == 'within' for r in values)
+            same(score['feasible'], feasible, '任何部署失败不能平均成可行')
+            if valid:
+                for layer, field in zip(('e1','e2','e3','export','api_serialized','local_notice_payload'), fields):
+                    near(score['worst_rates'][layer], max(float(r[field]) for r in values), '六部署实际最坏费用')
+            else: same(score['worst_rates'], None, '未知费用不能填零')
+            same(score['case_count'], 6, '六部署完整分母')
+            if feasible: eligible.append((rank, c['candidate_index'], c['config']))
+            count += 12
+        winner = next(r for r in winners if r['scenario'] == group['scenario'])
+        chosen = min(eligible) if eligible else None
+        same(winner['selected_candidate'], chosen[1] if chosen else None, '独立共同初始化选择')
+        same(winner['selected_config'], chosen[2] if chosen else None, '独立初始化阈值')
+        same(winner['selected_rank'], chosen[0] if chosen else None, '完整排序保留')
+        same(winner['feasible_candidates'], len(eligible), '共同可行配置分母')
+        same(winner['status'], 'frozen' if chosen else 'finite_subset_infeasible', '冻结实际状态')
+        count += 5
+    same(load(output/'findings.json')['selected_candidates'], {r['scenario']: r['selected_candidate'] for r in winners}, '冻结汇总')
+    return count + 1
+
+
+def check_repeats(output, cases):
+    from diagnose_observer_training import business_packet
+    signatures, workloads = {}, {}
+    for c in cases:
+        directory = output / c['name']
+        packets = load(directory/'packets.json'); index = {p['packet_id']: i for i,p in enumerate(packets)}
+        key = c['scenario'], c['seed']
+        business = [business_packet(p) for p in packets], load(directory/'tasks.json')
+        if key in workloads: same(business, workloads[key], '完整共同业务和任务')
+        workloads[key] = business
+        signatures[c['name']] = sorted([index[r['packet_id']], x['switch_id']] for r in rows(directory/'collector.jsonl') if r.get('ether_type')==0x88b6 for x in r['records'])
+    same(load(output/'sample-signatures.json'), signatures, '全部实际采样位置')
+    groups, pairs = [], []
+    for scenario, candidate, seed in sorted({(c['scenario'],c['candidate_index'],c['seed']) for c in cases}):
+        rs = sorted([c for c in cases if (c['scenario'],c['candidate_index'],c['seed'])==(scenario,candidate,seed)], key=lambda c:c['block'])
+        same([c['block'] for c in rs], [1,2,3], '三块重复组')
+        record = dict(scenario=scenario, budget_level=rs[0]['budget_level'], candidate_index=candidate, seed=seed,
+            cases=[c['name'] for c in rs], same_sample_positions=all(signatures[c['name']]==signatures[rs[0]['name']] for c in rs),
+            sample_counts=[len(signatures[c['name']]) for c in rs])
+        for observer,name in (('collector','generation-bounds.json'),('controller','controller-visible-bounds.json')):
+            bounds = [[load(output/c['name']/name)['loss_'+k] for k in ('lower','upper')] for c in rs]
+            mids = [(lo+hi)/2 for lo,hi in bounds]
+            record[observer+'_bounds'] = bounds
+            record[observer+'_common_overlap'] = max(b[0] for b in bounds) <= min(b[1] for b in bounds)
+            record[observer+'_midpoint_range'] = max(mids)-min(mids)
+        groups.append(record)
+    for group in load(output/'shortlist.json')['groups']:
+        old = group['candidates'][0]
+        for alternative in group['candidates'][1:]:
+            for seed in (11,29):
+                for block in (1,2,3):
+                    def find(index): return next(c for c in cases if (c['scenario'],c['candidate_index'],c['seed'],c['block'])==(group['scenario'],index,seed,block))
+                    a,b = find(alternative['candidate_index']),find(old['candidate_index'])
+                    record = dict(scenario=group['scenario'],budget_level=group['budget_level'],seed=seed,block=block,
+                        previous_case=b['name'],alternative_case=a['name'],alternative_role=alternative['role'],
+                        same_sample_positions=signatures[a['name']]==signatures[b['name']],
+                        both_within=all(load(output/c['name']/'window-costs.json')['window_feasibility']=='within' for c in (a,b)))
+                    for observer,name in (('collector','generation-bounds.json'),('controller','controller-visible-bounds.json')):
+                        va,vb = load(output/a['name']/name),load(output/b['name']/name)
+                        delta = [va['loss_lower']-vb['loss_upper'],va['loss_upper']-vb['loss_lower']]
+                        record[observer+'_difference_bounds']=delta
+                        record[observer+'_direction']='lower' if delta[1]<0 else 'higher' if delta[0]>0 else 'overlap'
+                    pairs.append(record)
+    same(load(output/'seed-repeat-diagnostics.json'), groups, '完整24个配置/业务重复组')
+    same(load(output/'candidate-repeat-pairs.json'), pairs, '完整48个同业务候选配对')
+    return len(cases)+len(groups)*12+len(pairs)*10+3
+
+
+if __name__ == '__main__':
+    p = argparse.ArgumentParser(description=__doc__); p.add_argument('--analysis', type=Path, required=True)
+    p.add_argument('--output', type=Path)
+    a = p.parse_args(); result = check(a.analysis)
+    if a.output: a.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+    print(json.dumps(result, ensure_ascii=False))
