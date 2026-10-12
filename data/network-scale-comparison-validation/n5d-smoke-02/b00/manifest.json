@@ -1,0 +1,726 @@
+{
+  "batch_id": "b00",
+  "block": 0,
+  "network_id": "n5f4",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "n5f4-shared_priority-s11-d_into_tt",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "business_seed": 11,
+      "block": 0,
+      "method": "d_into_tt",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练11的规模连接烟测",
+      "position": 0,
+      "status": "passed",
+      "origin_monotonic_ns": 163293864353000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 36,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 163304322840002,
+      "rpc_stop_index": 241,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 184,
+      "checks": 23526,
+      "decision_count": 10,
+      "successful_updates": 8,
+      "paid_counts": 40,
+      "skipped_epochs": 0,
+      "literature_checks": 18504,
+      "observer_checks": 2210,
+      "observation_slots": 100,
+      "completed_observations": 99,
+      "skipped_observations": 1,
+      "visible_reports": 181,
+      "shared_cache_advances": 181
+    },
+    {
+      "name": "n5f4-shared_priority-s11-phase_joint",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "business_seed": 11,
+      "block": 0,
+      "method": "phase_joint",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练11的规模连接烟测",
+      "position": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 163305643015000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 241,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 163316083529033,
+      "rpc_stop_index": 443,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 178,
+      "checks": 4917,
+      "decision_count": 10,
+      "successful_updates": 5,
+      "paid_counts": 40,
+      "skipped_epochs": 0,
+      "literature_checks": 0,
+      "observer_checks": 2216,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 176,
+      "shared_cache_advances": 176
+    },
+    {
+      "name": "n5f4-shared_priority-s11-static",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "business_seed": 11,
+      "block": 0,
+      "method": "static",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练11的规模连接烟测",
+      "position": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 163317289693000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 443,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 163327703246903,
+      "rpc_stop_index": 600,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 148,
+      "checks": 3832,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "literature_checks": 0,
+      "observer_checks": 2187,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 147,
+      "shared_cache_advances": 147
+    }
+  ],
+  "started_monotonic_ns": 163291729684886,
+  "switch_pids": [
+    579413,
+    579427,
+    579441,
+    579455,
+    579469,
+    579483
+  ],
+  "cleaned_monotonic_ns": 163329008608429,
+  "artifact_sha256": {
+    "rpc.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "rpc.jsonl": "97c5be4698bd67165a7f09532cd0085a4275f96bc4c933d86a083891e466ad3c",
+    "rpc-operations.jsonl": "f8ea2917a1fde043534cea24af7fc66bcd8c6d114d26deab213acc99958b2520",
+    "rpc-capture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rpc.pcap": "1fc3af4526a44abd19f9310abbd0e320ca3d8ab5984a94c81a3dec524a932422",
+    "rpc.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-s11-d_into_tt/count-observations.jsonl": "22b50588799b56cfdcb15c3732d469b50b086040500ea4bb473189e4fbe0feaf",
+    "n5f4-shared_priority-s11-d_into_tt/collector.jsonl": "e8386919599de199cb19859a0e1fdf2b2259f632210baa897a85754d6be1223b",
+    "n5f4-shared_priority-s11-d_into_tt/algorithm-settings.json": "b032593abcc3a55249bd633f649fefba49ccf6b669388b36ed8cc13052792b5a",
+    "n5f4-shared_priority-s11-d_into_tt/final-state.json": "c7391abf586478f42143d6b3ba1f2e707cbc94e58e02ecf9d7dfa000a9d489d9",
+    "n5f4-shared_priority-s11-d_into_tt/packets.json": "6c593cd573f699e39b9f878070523e5af7dfb1bcf6fdd17aeddeb69db94c6aba",
+    "n5f4-shared_priority-s11-d_into_tt/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-s11-d_into_tt/host.json": "20a31d836769ff6788b24d5fc99e71a3c22f1f48e753f4aaf8af2c30ec41bf0e",
+    "n5f4-shared_priority-s11-d_into_tt/ingestion.jsonl": "6f36ba7fac26f4330e152c2b58150c2480f08f2a40ab772519d06ef32cda3b81",
+    "n5f4-shared_priority-s11-d_into_tt/destination.pcap": "128d3c1b4d7ae7d2bcd81a214db87c854fa9ca5f6fe506fdfa0a0a52d1aad3fa",
+    "n5f4-shared_priority-s11-d_into_tt/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-s11-d_into_tt/availability.jsonl": "04bb59ff5612e7cfb9beae17b9603aebdef6aa9b23d7f88d9f176209975e4070",
+    "n5f4-shared_priority-s11-d_into_tt/wall-clock-samples.json": "a452fed48357f443c3a1101f8545cd48ecb2ec2229939dd364713e89ae9c52cd",
+    "n5f4-shared_priority-s11-d_into_tt/result.json": "f68f3b0a24c6677d202ed750b04c224e72a482020ffedfef5b86ca36dbb06393",
+    "n5f4-shared_priority-s11-d_into_tt/control-ledger.json": "dd66c05ee3efe9110863e218685e53894d76d36769eac7b68b2dac7822610687",
+    "n5f4-shared_priority-s11-d_into_tt/send.jsonl": "f6e2b9e078f81e943cd9238b9c021f72be28be39c023a3ce07662c4d3ed83722",
+    "n5f4-shared_priority-s11-d_into_tt/actions.jsonl": "12acd312500f2ce7dfa655e734baf79c4b9022d9eeccbd2aa500313c8f55d231",
+    "n5f4-shared_priority-s11-d_into_tt/destination.jsonl": "f6932ef08b25a95546a215977d37f00bd22c10fa53bfaa987cb7d78a0760e0cb",
+    "n5f4-shared_priority-s11-d_into_tt/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-shared_priority-s11-d_into_tt/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-shared_priority-s11-d_into_tt/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-shared_priority-s11-d_into_tt/notice-send.jsonl": "9b4d245aa05c3b46595989ae2181feac7f6f34023fcac8c92907419b425ddfc6",
+    "n5f4-shared_priority-s11-d_into_tt/notices.jsonl": "912cc14362639492bf34c0b803e8bd28aecc178a06ee067d4772f159f72c3701",
+    "n5f4-shared_priority-s11-d_into_tt/report-observations.jsonl": "798991211a28ebc0ab4e12585bfb7917e1b6e2a45c72d68b865f852fad06c8d3",
+    "n5f4-shared_priority-s11-d_into_tt/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-s11-d_into_tt/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-s11-d_into_tt/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-s11-d_into_tt/collector.pcap": "bf19347e9acd601fce0e0f8a65e0d0b5985cc15582d40937674567228b6692e9",
+    "n5f4-shared_priority-s11-d_into_tt/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-s11-d_into_tt/decisions.jsonl": "9f55d174f83bdd86c247cf1c7e4aa0535b3387c4c65b979e41edf82c88843e60",
+    "n5f4-shared_priority-s11-phase_joint/count-observations.jsonl": "8dd7f3f70ded7b52a286f17c7f5a1f42f69ed096609af266ae1d3b03fe198cee",
+    "n5f4-shared_priority-s11-phase_joint/collector.jsonl": "1717878a121ee5001a92e82c629214e5c0d50881c2453993cd9f86f72b492b59",
+    "n5f4-shared_priority-s11-phase_joint/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-shared_priority-s11-phase_joint/final-state.json": "73009805a4acb60890065be4dff2f116c5fbba0f6875d7a1525a44c771de03ff",
+    "n5f4-shared_priority-s11-phase_joint/packets.json": "5c1480ed7f1b3a71e39c80986643084a3c8ed29b6302e7a3a133afd53fe13167",
+    "n5f4-shared_priority-s11-phase_joint/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-s11-phase_joint/host.json": "6baff51ee6d7e9c0ecb3fce76f29cffbe52e32e08a7f96f0225869f2bf10eedb",
+    "n5f4-shared_priority-s11-phase_joint/ingestion.jsonl": "4a1bbf560e4425786ef13f74ed71cffc35886a04d153ece0d9efa8667f6bc946",
+    "n5f4-shared_priority-s11-phase_joint/destination.pcap": "7655b3864e76b87e0718557e2fc9be23f0228c6c838c14b05fb7a461b058d610",
+    "n5f4-shared_priority-s11-phase_joint/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-s11-phase_joint/availability.jsonl": "ff80eaa30962212e4a765504b93cdb236059da37106cb83381807cb71a73c85e",
+    "n5f4-shared_priority-s11-phase_joint/wall-clock-samples.json": "76ffa3d16818539aa34a7f0c07c90ed78cabf146da192f6da4703c5a8539626f",
+    "n5f4-shared_priority-s11-phase_joint/result.json": "c2425a1c5ab4dc94ef42f9e5f293db7575f76d0ea71697537e1cbc078ee94152",
+    "n5f4-shared_priority-s11-phase_joint/control-ledger.json": "c1ad0b169b0c3b9d71a90c96c5fb883597c39ae0f537809c32ab4db160dde56c",
+    "n5f4-shared_priority-s11-phase_joint/send.jsonl": "419e30557005945b696e7168b0fbf6b3dcfe5e23a9bdfc2e332af1e12734da9e",
+    "n5f4-shared_priority-s11-phase_joint/actions.jsonl": "ceb67731748f582a478f0c94686f5366ee93748c2e0c74f01cf83fca5e70f43f",
+    "n5f4-shared_priority-s11-phase_joint/destination.jsonl": "182960bac52d6d01d1f1e17fee05b6c88ecee234d09fe9dc2a1b2b73f9d01380",
+    "n5f4-shared_priority-s11-phase_joint/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-shared_priority-s11-phase_joint/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-shared_priority-s11-phase_joint/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-shared_priority-s11-phase_joint/notice-send.jsonl": "ae26609b8c4ef861631004ac4c3262e4fffa71675a7b575d03e07921d8630615",
+    "n5f4-shared_priority-s11-phase_joint/notices.jsonl": "f5faf79b7f66b04eaad5ce94697249589a56c8c35b80a35822c1765ffbceff60",
+    "n5f4-shared_priority-s11-phase_joint/report-observations.jsonl": "d06ee8f33062f7dc5d2a9d0271fe1a89f07701cb39368efe4cbc87e78b3f701f",
+    "n5f4-shared_priority-s11-phase_joint/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-s11-phase_joint/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-s11-phase_joint/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-s11-phase_joint/collector.pcap": "583f35f6c383f86cbc3d2ef1017e90e214ee10d7fb42105ff8445af072f82738",
+    "n5f4-shared_priority-s11-phase_joint/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-s11-phase_joint/decisions.jsonl": "869d0174869e839bf2f8dfebd4937f5a617f0c2956f3f1680faa7975070db83a",
+    "n5f4-shared_priority-s11-static/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-s11-static/collector.jsonl": "dacb38fa7ee7131462f83bc34707858e436cb05bdae557f8540d36fee2c185be",
+    "n5f4-shared_priority-s11-static/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-shared_priority-s11-static/final-state.json": "d02d9326545facec171f58bb4c3c482e816072bb7f6d0fcbc430762bc80c8fde",
+    "n5f4-shared_priority-s11-static/packets.json": "ef5f2daf3306518fcfaa6d59cb179d2a86c2b75e76566f5d6b246a5112b2a409",
+    "n5f4-shared_priority-s11-static/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-s11-static/host.json": "c20d335870c5fd44c7547461f51bdc4256a56f76f32df3b636f6434c0a5b22ea",
+    "n5f4-shared_priority-s11-static/ingestion.jsonl": "8a6f9bc4764cc6a7b539c3a017445394b215d38d68684074a68ab443571689ab",
+    "n5f4-shared_priority-s11-static/destination.pcap": "c9dae84ab27f915174ac848e4236028ce5e151700033fcd1de2c041cfacf542f",
+    "n5f4-shared_priority-s11-static/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-s11-static/availability.jsonl": "6b63ef5738562857132dbc5aa0c59811c5a7a755af6308fa4d06b70c4cb42269",
+    "n5f4-shared_priority-s11-static/wall-clock-samples.json": "7f1df051d0a7a21c977f1ea0f69373a5d9786d27d7c9e60d50fe4e1c13d38470",
+    "n5f4-shared_priority-s11-static/result.json": "9b06bfb5996c4854750a602ac2c8b0d27248a9e0f3d8b5b1f92bca1846c7b062",
+    "n5f4-shared_priority-s11-static/control-ledger.json": "f9cee6bae66f8b87c7634e1373cee53d5975a6ade15931414ec574472aa7d1b9",
+    "n5f4-shared_priority-s11-static/send.jsonl": "16578a5cf6ba50c22d668822df6111a28e390c6b86a3cf469778dc772ae4d9e0",
+    "n5f4-shared_priority-s11-static/actions.jsonl": "4b78e64e6ad09c8c3cdc84ad85d0f18bc71bc823ce47130ab24e0e4b6c3d7f42",
+    "n5f4-shared_priority-s11-static/destination.jsonl": "b3276a2a1a1c8975769c3d4e4bb84a4684992c21bcddefac3fc002753de9edfe",
+    "n5f4-shared_priority-s11-static/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-shared_priority-s11-static/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-shared_priority-s11-static/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-shared_priority-s11-static/notice-send.jsonl": "b3150ea8c7a2d81663418900b7b9da0f13e7debee01ee4d0d76db1a6d92a0a40",
+    "n5f4-shared_priority-s11-static/notices.jsonl": "55221fe2ca4ebaae659023b5e77c7f43cb697eb8637dafb344bbf0c3b12bad05",
+    "n5f4-shared_priority-s11-static/report-observations.jsonl": "b0ea528b408025010a3f2bf7c90317731ca87174444a5ac19a506b9d0fec7ecd",
+    "n5f4-shared_priority-s11-static/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-s11-static/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-s11-static/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-s11-static/collector.pcap": "073a65476c4ec524b33b2c328df819389300b0582771e114742143fd6b4e6d9e",
+    "n5f4-shared_priority-s11-static/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-s11-static/decisions.jsonl": "f77a6fce4206b0d2268cf68d2823dc25e1861e370f69901fd140662bc725afa4",
+    "network-n5f4/node-4/sts4-eth1_in.pcap": "b145b655f9b537a4a07e0a6ba925048aeb7c98cd20512f935042eb8e75c01c1e",
+    "network-n5f4/node-4/sts4-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-4/sts4-eth2_out.pcap": "b20306191425721067029ce2ae533c8e62e05009be3ab0d4647075b0ad64a632",
+    "network-n5f4/node-4/switch.log": "69c2bed8f3806e8ee333d3ffc7fcb9b66873814a1ef066e78df61de235f66453",
+    "network-n5f4/node-4/sts4-eth2_in.pcap": "e6aa3590793ac42637d3874982376c17b1e9500a1af45805c24a76455baacd1b",
+    "network-n5f4/node-1/sts1-eth2_out.pcap": "d951ba89fd737b8972296f07f934eba052ef197b605fe6720df55a8b204a1cbb",
+    "network-n5f4/node-1/sts1-eth1_in.pcap": "22c62549507542e08fafeea0376d5f96324bc8c52228b13602637d3a748b1746",
+    "network-n5f4/node-1/sts1-eth2_in.pcap": "a71e710b570dafea1164b98be591678ca9384c870f3b17faddfafeac2b077b44",
+    "network-n5f4/node-1/switch.log": "b8b2f778d9cf20bae1500690570a3cb85462b943eb57c6ce2f92002e7189e24f",
+    "network-n5f4/node-1/sts1-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth4_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth3_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth2_out.pcap": "e741cfe5480a7435410967895fafbf58e9b1467995cc824d2b0107f8f7ac932a",
+    "network-n5f4/node-3/sts3-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth4_in.pcap": "b73240ef1972b160de08cbfe75d796a1a17dafc84c35c5ad891ea707735edd6b",
+    "network-n5f4/node-3/sts3-eth3_in.pcap": "2bf6bae60690e2d4125833d26788a9b9330eecdbebd6dab25d61ac14a740636b",
+    "network-n5f4/node-3/sts3-eth2_in.pcap": "6eefb07c73caae0c143e4c5bdbf271de62b9b7976a2dbd0525c5690c805b55c9",
+    "network-n5f4/node-3/switch.log": "8dbced90d5ad8d7b5206bb2a62a58e936fb7c88d4a496214ae3c1c4cd4163bf7",
+    "network-n5f4/node-3/sts3-eth1_in.pcap": "553c49174b59127f09d2edcc48dddf9bfc856b12403794141c05feb14b07b00d",
+    "network-n5f4/node-2/sts2-eth1_in.pcap": "989c77a88a27c9a86599f5d21a1c4b6ebae4cfaa336d79691d487602fc6b9841",
+    "network-n5f4/node-2/sts2-eth2_in.pcap": "54eb738b8c46972001528798b1a365f482ca95e76ebcb151668baeadcbf7d351",
+    "network-n5f4/node-2/sts2-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-2/switch.log": "0210d26fa40fb305f8c1e05ba4e56e9968b947295632ff479dcc7ac56d152d48",
+    "network-n5f4/node-2/sts2-eth2_out.pcap": "6a099deeeadca7bf76ff20fcc50764540d56b791af911161035570365a7a6e47",
+    "network-n5f4/node-5/sts5-eth2_in.pcap": "77c0c8a4258d6b8aae50b67fcb0c07538329e684abc93fe445fa6dae671ca577",
+    "network-n5f4/node-5/sts5-eth1_in.pcap": "6b3cd1e242dc3a3fa3089b8def87d8b923810b8d8347a124a48e48434ef2bea6",
+    "network-n5f4/node-5/sts5-eth2_out.pcap": "0b43b72783db1b627543f38491e1ac8a2b8f5ee8eedb2dab123e32b71a148098",
+    "network-n5f4/node-5/switch.log": "984babfa18b1ab015573d2ed3c769586366935d58ab36c249e0d1ddbe9e24acf",
+    "network-n5f4/node-5/sts5-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-6/sts6-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-6/sts6-eth1_in.pcap": "4f7dc4ec70f6971eece30184f4acc11fc9dbce135c300ac1973bd430e2c83fca",
+    "network-n5f4/node-6/sts6-eth3_out.pcap": "f67401a57eb0708643dd17ef7fb45723be3ff7854b0272d8a8f2cfc65808e1af",
+    "network-n5f4/node-6/control.log": "952ce10fa817674510d77686b37208ba08f15ed71a254334718a349c2d930674",
+    "network-n5f4/node-6/switch.log": "5bd0133d267d3e7251be92dcc2c62c2db8ce34450e0e040d58167ee822a7b9bd",
+    "network-n5f4/node-6/sts6-eth2_out.pcap": "33a5f48a231c558a47ac2da6a77be784a02b534ce1fd852ff29af31321b1a2be",
+    "network-n5f4/node-6/sts6-eth2_in.pcap": "61da818d3f728d75903591366014ed46313857cc6d5522779a48fb78269a4d0e",
+    "network-n5f4/node-6/sts6-eth3_in.pcap": "1fd326be5f6761f554819be2a9ec6c7e3b94e0044306eebec752b6af87809e3f"
+  }
+}

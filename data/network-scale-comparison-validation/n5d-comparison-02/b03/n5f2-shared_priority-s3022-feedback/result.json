@@ -1,0 +1,132 @@
+{
+  "name": "n5f2-shared_priority-s3022-feedback",
+  "network_id": "n5f2",
+  "scenario": "shared_priority",
+  "candidate_id": "C05",
+  "business_seed": 3022,
+  "block": 0,
+  "method": "feedback",
+  "initial_config": [
+    600000,
+    600000,
+    600000,
+    600000,
+    600000,
+    600000,
+    600000,
+    600000
+  ],
+  "adaptive": {
+    "gain_margin": 0.0,
+    "reserve_fraction": 0.0,
+    "lookback_us": 3000000,
+    "cluster_fraction": 0.25,
+    "period_relative_mad": 0.2,
+    "measurement_start_us": 2000000,
+    "measurement_end_us": 10000000
+  },
+  "budget": {
+    "link_bytes_per_s": {
+      "e1": 240,
+      "e2": 240,
+      "e3": 390,
+      "e4": 390,
+      "e5": 390
+    },
+    "export_bytes_per_s": 900,
+    "control_bytes_per_s": 1200
+  },
+  "scope": "四条独立业务的冻结六方法规模比较",
+  "position": 144,
+  "status": "passed",
+  "origin_monotonic_ns": 166242830556000,
+  "duration_us": 10000000,
+  "diagnostics": false,
+  "topology": {
+    "family": "two_entry_merge_chain",
+    "sampling_nodes": 5,
+    "sink": 6,
+    "flows": [
+      {
+        "identity": {
+          "session": 20,
+          "tag": 1001
+        },
+        "slot": 1,
+        "sport": 10101,
+        "entry_node": 1,
+        "source_interface_index": 0,
+        "path": [
+          1,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "identity": {
+          "session": 20,
+          "tag": 2002
+        },
+        "slot": 7,
+        "sport": 10107,
+        "entry_node": 2,
+        "source_interface_index": 1,
+        "path": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  "initial_source_counts": [
+    {
+      "flow": {
+        "session": 20,
+        "tag": 1001
+      },
+      "node": 1,
+      "slot": 1,
+      "count": 0
+    },
+    {
+      "flow": {
+        "session": 20,
+        "tag": 2002
+      },
+      "node": 2,
+      "slot": 7,
+      "count": 0
+    }
+  ],
+  "rpc_start_index": 24,
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "warmup_us": [
+    0,
+    2000000
+  ],
+  "measurement_window_us": [
+    2000000,
+    10000000
+  ],
+  "ended_monotonic_ns": 166253241196023,
+  "rpc_stop_index": 135,
+  "errors": [],
+  "packet_count": 160,
+  "report_count": 128,
+  "checks": 2254,
+  "decision_count": 10,
+  "successful_updates": 0,
+  "paid_counts": 20,
+  "skipped_epochs": 0,
+  "literature_checks": 0,
+  "observer_checks": 2168,
+  "observation_slots": 100,
+  "completed_observations": 100,
+  "skipped_observations": 0,
+  "visible_reports": 128,
+  "shared_cache_advances": 128
+}
