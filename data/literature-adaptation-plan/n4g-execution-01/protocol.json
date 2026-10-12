@@ -1,0 +1,220 @@
+{
+  "status": "matrix_prepared_pending_training",
+  "execution_ready": false,
+  "profiles": [
+    {
+      "scenario": "stable",
+      "budget_level": "high",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ]
+    },
+    {
+      "scenario": "shared_priority",
+      "budget_level": "high",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ]
+    },
+    {
+      "scenario": "switch",
+      "budget_level": "low",
+      "initial_config": [
+        400000,
+        150000,
+        200000,
+        400000
+      ]
+    },
+    {
+      "scenario": "bursty_jitter",
+      "budget_level": "low",
+      "initial_config": [
+        100000,
+        50000,
+        50000,
+        50000
+      ]
+    }
+  ],
+  "common_initialization": "保持N4c冻结四配置",
+  "reference_contract_sha256": "a5fc4c8c08b460d2a7291e44c8b5a2869ea1f7bcecd6c2c901a26363212a2b9c",
+  "literature_methods": [
+    "intopp_due",
+    "d_into_tt"
+  ],
+  "parameter_grids": {
+    "intopp_due": [
+      {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": true
+      },
+      {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": false
+      },
+      {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.5,
+        "weighted_dependencies": true
+      },
+      {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": true
+      }
+    ],
+    "d_into_tt": [
+      {
+        "value_scale": 48.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      {
+        "value_scale": 48.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      {
+        "value_scale": 144.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      {
+        "value_scale": 432.0,
+        "average_change_bytes": 6.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      }
+    ]
+  },
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "capacity": 1,
+  "grid_us": [
+    50000,
+    100000,
+    150000,
+    200000,
+    400000,
+    600000,
+    800000,
+    1000000
+  ],
+  "max_candidates": 48,
+  "max_update_rpcs": 6,
+  "candidate_universe_size": 6561,
+  "native_unique_assignment": true,
+  "native_flow_sum_capacity_used_online": false,
+  "training": {
+    "seeds": [
+      11,
+      29
+    ],
+    "presets_per_method": 6,
+    "cases": 96,
+    "deployment_blocks": 1,
+    "selected_global_presets_per_method": 2
+  },
+  "calibration": {
+    "seeds": [
+      1301,
+      1423
+    ],
+    "presets_per_method": 2,
+    "cases": 32,
+    "deployment_blocks": 1,
+    "selected_global_presets_per_method": 1
+  },
+  "selection_key": [
+    "infeasible_or_unavailable_count",
+    "maximum_profile_mean_controller_loss_upper",
+    "pooled_mean_controller_loss_upper",
+    "mean_api_bytes_per_s",
+    "preset_index"
+  ],
+  "performance": {
+    "methods": [
+      "static",
+      "feedback",
+      "local",
+      "joint",
+      "phase_joint",
+      "uniform_guard",
+      "phase_guard",
+      "phase_local_guard",
+      "intopp_due",
+      "d_into_tt"
+    ],
+    "business_count": 4,
+    "deployment_blocks": 2,
+    "cases": 320,
+    "independent_business_units": 4,
+    "fresh_business_seeds": [],
+    "consumed_test_seeds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007,
+      3008
+    ],
+    "fresh_seed_rule": "入口完成和参数冻结后重新审计，取3001起最小四个未消费整数，再冻结后生成",
+    "existing_eight_methods_retuned": false,
+    "static_candidates_expanded": false,
+    "primary_observer": "controller",
+    "secondary_observer": "collector"
+  },
+  "cost_layers": [
+    "e1_inband_frame_bytes",
+    "e2_inband_frame_bytes",
+    "e3_inband_frame_bytes",
+    "export_attempt_frame_bytes",
+    "api_serialized_bytes",
+    "local_notice_payload_bytes"
+  ],
+  "retention": "全部活跃任务、运行、超限与不可评价点；同业务配对，部署块不扩充独立业务分母",
+  "budget_scope": "逐链路、导出、API和本地通知分别评价；平均测量窗口，不混加不同层字节",
+  "prepared_scope": "参数候选与矩阵准备，尚未冻结性能参数或未见业务，未运行训练或比较"
+}
