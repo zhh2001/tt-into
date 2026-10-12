@@ -1,0 +1,3479 @@
+{
+  "run_id": "n5b-preflight-02",
+  "status": "passed",
+  "start_utc": "2026-10-12T02:56:03.970176+00:00",
+  "expected_cases": 6,
+  "cases": [
+    {
+      "name": "8n8f-static",
+      "network_id": "8n8f",
+      "method": "static",
+      "position": 0,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名",
+      "status": "passed",
+      "origin_monotonic_ns": 137853747378000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 8,
+        "sink": 9,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 90,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 137864183997149,
+      "rpc_stop_index": 562,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 640,
+      "checks": 11092,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2675,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 635,
+      "shared_cache_advances": 635,
+      "literature_checks": 0
+    },
+    {
+      "name": "8n8f-feedback",
+      "network_id": "8n8f",
+      "method": "feedback",
+      "position": 1,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名",
+      "status": "passed",
+      "origin_monotonic_ns": 137865672200000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 8,
+        "sink": 9,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 562,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 137876158605534,
+      "rpc_stop_index": 1114,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 640,
+      "checks": 11274,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 80,
+      "skipped_epochs": 0,
+      "observer_checks": 2675,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 635,
+      "shared_cache_advances": 635,
+      "literature_checks": 0
+    },
+    {
+      "name": "8n8f-phase_joint",
+      "network_id": "8n8f",
+      "method": "phase_joint",
+      "position": 2,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名",
+      "status": "passed",
+      "origin_monotonic_ns": 137877609691000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 8,
+        "sink": 9,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 1114,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 137888117811855,
+      "rpc_stop_index": 1674,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 640,
+      "checks": 12172,
+      "decision_count": 10,
+      "successful_updates": 8,
+      "paid_counts": 80,
+      "skipped_epochs": 0,
+      "observer_checks": 2356,
+      "observation_slots": 100,
+      "completed_observations": 71,
+      "skipped_observations": 29,
+      "visible_reports": 635,
+      "shared_cache_advances": 635,
+      "literature_checks": 0
+    },
+    {
+      "name": "8n8f-phase_guard",
+      "network_id": "8n8f",
+      "method": "phase_guard",
+      "position": 3,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名",
+      "status": "passed",
+      "origin_monotonic_ns": 137889505357000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 8,
+        "sink": 9,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 1674,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 137900013130830,
+      "rpc_stop_index": 2232,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 640,
+      "checks": 12126,
+      "decision_count": 10,
+      "successful_updates": 6,
+      "paid_counts": 80,
+      "skipped_epochs": 0,
+      "observer_checks": 2356,
+      "observation_slots": 100,
+      "completed_observations": 71,
+      "skipped_observations": 29,
+      "visible_reports": 635,
+      "shared_cache_advances": 635,
+      "literature_checks": 0
+    },
+    {
+      "name": "8n8f-intopp_due",
+      "network_id": "8n8f",
+      "method": "intopp_due",
+      "position": 4,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名",
+      "status": "passed",
+      "origin_monotonic_ns": 137901378613000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 8,
+        "sink": 9,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 2232,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 137911928086320,
+      "rpc_stop_index": 2832,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 458,
+      "checks": 44282,
+      "decision_count": 10,
+      "successful_updates": 48,
+      "paid_counts": 80,
+      "skipped_epochs": 0,
+      "observer_checks": 2179,
+      "observation_slots": 100,
+      "completed_observations": 71,
+      "skipped_observations": 29,
+      "visible_reports": 458,
+      "shared_cache_advances": 458,
+      "literature_checks": 32088
+    },
+    {
+      "name": "8n8f-d_into_tt",
+      "network_id": "8n8f",
+      "method": "d_into_tt",
+      "position": 5,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名",
+      "status": "passed",
+      "origin_monotonic_ns": 137913562642000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 8,
+        "sink": 9,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 2832,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 137924117514499,
+      "rpc_stop_index": 3432,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 460,
+      "checks": 44482,
+      "decision_count": 10,
+      "successful_updates": 48,
+      "paid_counts": 80,
+      "skipped_epochs": 0,
+      "observer_checks": 2170,
+      "observation_slots": 100,
+      "completed_observations": 70,
+      "skipped_observations": 30,
+      "visible_reports": 460,
+      "shared_cache_advances": 460,
+      "literature_checks": 32280
+    }
+  ],
+  "networks": {
+    "8n8f": {
+      "family": "two_entry_merge_chain",
+      "sampling_nodes": 8,
+      "sink": 9,
+      "flows": [
+        {
+          "identity": {
+            "session": 20,
+            "tag": 1001
+          },
+          "slot": 1,
+          "sport": 10101,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 2002
+          },
+          "slot": 7,
+          "sport": 10107,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 3003
+          },
+          "slot": 42,
+          "sport": 10142,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 4004
+          },
+          "slot": 250,
+          "sport": 10350,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 5005
+          },
+          "slot": 2,
+          "sport": 10102,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 6006
+          },
+          "slot": 3,
+          "sport": 10103,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 7007
+          },
+          "slot": 4,
+          "sport": 10104,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 8008
+          },
+          "slot": 5,
+          "sport": 10105,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    }
+  },
+  "deployments": [
+    {
+      "network_id": "8n8f",
+      "started_monotonic_ns": 137851387115723,
+      "status": "passed",
+      "switch_pids": [
+        471287,
+        471301,
+        471315,
+        471329,
+        471343,
+        471363,
+        471377,
+        471391,
+        471405
+      ],
+      "cleaned_monotonic_ns": 137926371263459,
+      "switch_returncodes": [
+        -15,
+        -15,
+        -15,
+        -15,
+        -15,
+        -15,
+        -15,
+        -15,
+        -15
+      ]
+    }
+  ],
+  "execution_order": [
+    {
+      "name": "8n8f-static",
+      "network_id": "8n8f",
+      "method": "static",
+      "position": 0,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名"
+    },
+    {
+      "name": "8n8f-feedback",
+      "network_id": "8n8f",
+      "method": "feedback",
+      "position": 1,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名"
+    },
+    {
+      "name": "8n8f-phase_joint",
+      "network_id": "8n8f",
+      "method": "phase_joint",
+      "position": 2,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名"
+    },
+    {
+      "name": "8n8f-phase_guard",
+      "network_id": "8n8f",
+      "method": "phase_guard",
+      "position": 3,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名"
+    },
+    {
+      "name": "8n8f-intopp_due",
+      "network_id": "8n8f",
+      "method": "intopp_due",
+      "position": 4,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名"
+    },
+    {
+      "name": "8n8f-d_into_tt",
+      "network_id": "8n8f",
+      "method": "d_into_tt",
+      "position": 5,
+      "initial_config": [
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 4096,
+          "e2": 4096,
+          "e3": 4096,
+          "e4": 4096,
+          "e5": 4096,
+          "e6": 4096,
+          "e7": 4096,
+          "e8": 4096
+        },
+        "export_bytes_per_s": 8192,
+        "control_bytes_per_s": 4096
+      },
+      "scope": "八节点八流确定性正确性烟测，六方法共同入口，无性能排名"
+    }
+  ],
+  "business_seeds": [],
+  "independent_test": false,
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "plan_sha256": "0f8e9286e1a004aea277b8e17be9b6a411c336dd0b590a87786e3e0da37a90fc",
+  "source_sha256": {
+    "experiments/adaptive_workloads.py": "1c166574e5c9fb9d870997d2b61a2d271f33d79551b8c4b7d2d3be5b274725e5",
+    "experiments/admission_io.py": "3a5b8a933f826c80fe440a2b66c276088ca264dfbbd0c7788fc2575f6cce491c",
+    "experiments/analyze_adaptive_reference.py": "589a47273fa57d7924db50db599e06960038d750129a2ff856bfbecf64913b94",
+    "experiments/analyze_admission_validation.py": "a50bf432466d07dce25050622eccdc992f65d0e2973071d6097c0b17750f4300",
+    "experiments/analyze_assignment_validation.py": "83c2e75e4bafe5069a327ad774e2ab93af12982bef2f09fa210ca0a267d55f17",
+    "experiments/analyze_baselines.py": "3900fb061c9d2d5cbbb7ba8148ab0013625aae92952d355868eb49d2f00ca366",
+    "experiments/analyze_clock_validation.py": "84deb9457ef95bf2ef1ad99d0f4d22a1801c024d6689563e98f190c7b9f193c5",
+    "experiments/analyze_dynamic_network_calibration.py": "28a160968e3b9680b1399a7b31154566bbfcb8ce98a11f15cabdb1c432cc37e7",
+    "experiments/analyze_fork_validation.py": "fe4386837191923c23469ee1ce27d8f64fc4e4eed33935464fd2355cc4df6f41",
+    "experiments/analyze_into_validation.py": "2df6aea2a1199ee30814fc51278d281bfce536d5d5c1ae99761effa0b4417874",
+    "experiments/analyze_literature_comparison.py": "50a0fed6a120fa2c9a4fc6701520995017e8babbd990cb7018e5d9300878e614",
+    "experiments/analyze_literature_matrix.py": "5b57f56df8a27e2c30eead659942601bd92486593a63a66e1c36c19848e5847b",
+    "experiments/analyze_literature_pilot.py": "e2b92784a4a0f862643300b4814a76ca09adef9e2639e14f711e5b9f5d11b513",
+    "experiments/analyze_matched_network.py": "c991993bdeecd6df333e9ab3409bf26493fb0a1fe0790622e9d9a7a37e9f2337",
+    "experiments/analyze_matched_reference.py": "d9ca275c92cd4a23f0e88f1e06309f7a0936237356f9846047bdbba211f9c0d3",
+    "experiments/analyze_network_calibration.py": "0f1b5fe952faf2cacda7d77740436d552f9b4ac02fd8b3f65b2d7b7d53592fb8",
+    "experiments/analyze_network_comparison.py": "fb6931ad05ccff9d6fcecc5669eebb5b7650ff5ade945632dac99c7e1bf77fd5",
+    "experiments/analyze_network_static.py": "e832ad7cc99637c1eebd66345210af2b018d3489fc8723eca4fad91581112749",
+    "experiments/analyze_observer_calibration.py": "409a9fafb52840ab9df7bd40f27db1f821d009280ff8532dce508c52f38784b8",
+    "experiments/analyze_observer_comparison.py": "bd313e298597f6c51164bb780181adf6efc7e761de3b3a616c34e8f481861191",
+    "experiments/analyze_observer_confirmation.py": "a4d909006a2ef898ccdf898a5a562a53d320154cffebb691b125f2c034d68162",
+    "experiments/analyze_observer_training.py": "ddbb4776d18e80d5d9f8c2067d96b8feb4ee0b95ec9b302899023de336aeaf14",
+    "experiments/analyze_report_observer.py": "fe11689b4fcb3ba11fd6c9e06f22aa32ac4535c9c8a94009c05d5500b5f9f486",
+    "experiments/analyze_rolling_reference.py": "d11983b635118d0e4593fe658e4789cbeb75b3b36e17af3797adeaee41f88225",
+    "experiments/analyze_scalable_network.py": "f8232d8c85456473b7e382dc98f63eb72ebe2c33f24d8c1d7c86d506f55c627b",
+    "experiments/analyze_scale_preflight.py": "6ff1baa7320048a7de4355ab5dbc60a3c549c45c08ee9f8fed5dfb53c664aa0d",
+    "experiments/analyze_state.py": "f263705d80158f23629a9c2cde196bc9fa4942a0a8771fcfa141252725646b51",
+    "experiments/analyze_static_confirmation.py": "5fef7b3207313b28ffb4c1e00e896d428a9a81ec61d70653d40429e4f781c50a",
+    "experiments/analyze_strong.py": "5b3ba09d37b916d397c5e596dfc7b770ad9e0e7cae541c96d8a7bf49b20e3821",
+    "experiments/analyze_validation.py": "af8b4ce858014e09493433075b5dfd654b0c2e855b1af8613961f953ad7a7382",
+    "experiments/build.py": "262f19f5a47d2eaac3fd747bc755eba92a4652b198a8f61fa5ba383305e0bfb6",
+    "experiments/build_baseline.py": "87e4c57535a33e5c44074b92a09439ec162ff5921a73b36da9c565ca7c6296f4",
+    "experiments/build_into.py": "cfa529737b2e31cf636d6201838f74f22656fe19c4aebd638cabbc8b3e0e5abb",
+    "experiments/build_state.py": "21e3899a8c20e461c2af1aa388cbc9f71b4c626f4122d5281fba6796cace76d2",
+    "experiments/build_steady_bmv2.py": "a22f5f15427c779f993eed5771589c9273fd88e322f76d52818fc8675e0ac95a",
+    "experiments/build_strong.py": "067f3473a71539c23e492489b8f440be19249393ff17087cba27870816e27d77",
+    "experiments/calibration_summary.py": "e540d9327d0e58ba23ba7f4a769b4fc9b8154e2f4fb63d6dd778c6006c3bc73d",
+    "experiments/capture_rpc.py": "f31848a80b60ec868519801c9a955531572256378b2cb69d020f06afbb1e792b",
+    "experiments/check_adaptive_reference.py": "058aa742e55610b930caff41068fd3c96dd4a5fecdfc4f453f2085ab82c606a8",
+    "experiments/check_admission_deployment.py": "c693dbe31209e0fcc8fd3c086e1a3cabc469b2b2ca24e70acfcecf3d70ceeec2",
+    "experiments/check_admission_flow_indices.py": "f55d7cded778de0778282866c00d3ba7116d3223192f107ac0766bcb65849812",
+    "experiments/check_admission_history.py": "aaedddab12c8d9b201193c655d072dc95b5605b2c4940318e18f86fc8a5b4e37",
+    "experiments/check_admission_initialization.py": "792a803249f1a0f6485cbdad7e1ff32581e5e67db1c6ab0fd63259d25fd8db2b",
+    "experiments/check_admission_outputs.py": "c8e0a2a3bb1bce91a28e3602a760f83e5b25f940cae1405e81c5054962bbb756",
+    "experiments/check_assignment_reference.py": "ac65b85a8f36b5722cb8643da53d2b7a10c4257a20ef12fb50227f9889b42bc8",
+    "experiments/check_budget_contract.py": "846689c2dc146edb61049f1f642ca19d92a3ad6a1da8f4b99463295c37a26e31",
+    "experiments/check_calibration_analysis.py": "dab247b842aa975c9bcb2847b98e1c75cc580447ff4157c03beb8931b1709b0d",
+    "experiments/check_causal_contract.py": "7126e141680fd73d89adb3da449ca19c75e4b4b92eb84fad380fb95d9e4e7f50",
+    "experiments/check_confirmation_analysis.py": "6521f9d7a9e5150b7e072953b9be64e933af076fd8b09b942e359bcafa0462f6",
+    "experiments/check_dynamic_calibration_analysis.py": "1f739fcddb97122af53de8bf54b0f79da1e817c4bddc984461263959ef15f22c",
+    "experiments/check_dynamic_network_calibration.py": "b3e37a0e1626cfae8a5bf2804470495bd492a919b4c752d6b497af1a7010a1a8",
+    "experiments/check_event_validation.py": "abb679f5d8e1cbbe9d845b623b777a393cc13b80dde63a5c8b7f4fb5bbd5e90f",
+    "experiments/check_into_validation.py": "7760350125cac2e1d063195e522aaa63d52cda7b063ab5a3a74d053a2a4678c9",
+    "experiments/check_literature_analysis.py": "68b59d3f338e66a5427275f648bef60681eef7ff93040f18b9124654a2021ad2",
+    "experiments/check_literature_comparison_analysis.py": "98b0e9abfaa378829d35c1bffce79b2b2f2c8962878254ce6f68c3dc3589cd7b",
+    "experiments/check_literature_comparison_delivery.py": "4d22a4fa743dce0fd98c91a7cedfafce7f75daf7733864d76c2c80d3b18de35d",
+    "experiments/check_literature_comparison_matrix.py": "5340fee88fc7fe64fee4f820e9fadf95d83a169cd0ad16c159fadba316f6ea72",
+    "experiments/check_literature_decisions.py": "781ed1235f0b28986d78e96cb973ca02da0a2036f072ebe2517bfd0f83be0819",
+    "experiments/check_literature_delivery.py": "0d1aab36b86e118f5a438e2a39186daf138ee5799ca6445fb7c6f8ef1af39604",
+    "experiments/check_literature_matrix.py": "7a5555b29338a955f20bf366455ad36e179fa2c41df87575f1cbbba2e715359c",
+    "experiments/check_literature_matrix_analysis.py": "7e5be9ddf7b2b5e7dd92eebf9ea88b44259f4de1a836706c532dc3df804557da",
+    "experiments/check_literature_network.py": "da62a5c8a6a768bae3c1fd36f38793d45dd126c012cb20e1811101b08b7b6d2a",
+    "experiments/check_literature_observer.py": "5505facdb052394c49b99df3915ff079772c57fdc0ca961eee6c27de5c9a6c58",
+    "experiments/check_literature_selection.py": "4aa119f47cdda94ebabaf35bb07febb8b594a7c31591b21a43b1e50e46695ab3",
+    "experiments/check_literature_training_delivery.py": "ea296a69144684fb1cea5973d7280d83b09c043358d93f5c8a1287ad4d304d96",
+    "experiments/check_matched_network.py": "ed9a2d01a164eb002caa5338640e73a45244576fe97068691a633020231ab463",
+    "experiments/check_matched_preflight.py": "b500d4dec82a0e1f02272d47330c98e6647279918d62a27dc615bd7d42e51ee2",
+    "experiments/check_matched_reference.py": "7801c386bf8095a1303cfffc3725e7515c87b7acd85f0f28b6ebcd176d179a44",
+    "experiments/check_network_calibration.py": "a1ee2340b57cb332e0f80a7943b97945b21849d75417f221dd760c7c7f3466eb",
+    "experiments/check_network_comparison.py": "d0d08719fc4be836a68ecd0ff0e4d087fb0aa2b6a086e792b43a372b3f46372d",
+    "experiments/check_network_comparison_analysis.py": "5e8bb1beab434836a71fc2dc37f849ac0385eec8229c813794c0bc5eeb4ceb24",
+    "experiments/check_network_observation.py": "2979416dda0ede43994e03a2781258a0ff28df23659d255b1b7c4d30d2a2c3b5",
+    "experiments/check_network_static.py": "5ad3cc088bd1df4a02221a08b168e6264a0f3df7ae073968f1eb1568d9bd4730",
+    "experiments/check_observation_literature.py": "bbe2f3d82d7cbd64a483e253c6c3da09452c2ed7d484c2228e9a4c600abd03e9",
+    "experiments/check_observation_literature_network.py": "cd5477fb023bd71860a23e4f7fade210720b1608329d9bfaaf13bd479e6f64e6",
+    "experiments/check_observation_matched.py": "a2be0d5393b6f92a9e4dbdd229c96f7c9b4cb44f3afeec57181c9e015deb426d",
+    "experiments/check_observation_reference.py": "ced381c88e9e3086435e7858a9a1b58f89f89e6c5f4f18c4971f6d4f9bbe3d5f",
+    "experiments/check_observation_wire.py": "8f6c9d9790238d1bbc0bf75cc4818e1906cf1af02e9c1df0c4b30d530f80c993",
+    "experiments/check_observer_calibration.py": "0645759561c0a86db8325a8bf4f0335bfc87412d40f5efdc5672beb1d660713a",
+    "experiments/check_observer_calibration_analysis.py": "250f0c48bdc1a723bf9477762a8535be02a28929bd3f9fa9c59ebbbca51fb437",
+    "experiments/check_observer_comparison.py": "a29828240cc20e206788b79d3af59e4d1ab11edebb49ea6ae4e63938544f4b8d",
+    "experiments/check_observer_comparison_analysis.py": "711cfd93d8d8e57a669a4e863b3dfd5f8bfaa8d9b6173da5f62f2c8799a5aec9",
+    "experiments/check_observer_confirmation.py": "bb184e7d25d5b5539931f60a76959e8c4ff03493a7a97b669c2aec9687520822",
+    "experiments/check_observer_confirmation_analysis.py": "f58fa0d95d7cf53ca00460310ca32b6717bbaae3b7ffc161efc2c177e21e0aae",
+    "experiments/check_observer_training.py": "40df3fc419f118676da0eee70eafff9f90cd07c77d9f672618f6d0f171d2446b",
+    "experiments/check_observer_training_analysis.py": "6666b8e6ce32add63ab2bfad9566dc76d491e8790e6317b9aca32de64e261047",
+    "experiments/check_report_observer.py": "3db4ae72bbb7f6ded9134d1a1a5ea389f970606ef685f9043b2eac425ef80e45",
+    "experiments/check_report_observer_analysis.py": "2f3fb0b6fee2ad38a0a3400c764134f5365a3f0968ff7d1aff216c01ff33b02a",
+    "experiments/check_rolling_reference.py": "494b6f4ee929f3e9c4fb48f868229ef423e16c5fdf2ee0159960e1f48cbc33d6",
+    "experiments/check_scalable_delivery.py": "38b64a01b49c4678801f72db32f086b6b5afa43b9e437ff2d683897870dc024c",
+    "experiments/check_scalable_network.py": "f997e869655f4c808541381e4113af1ecfe1c471c2d3e594d34e7fe9bf55b7d9",
+    "experiments/check_scale_literature_decisions.py": "5b2b153a83454313a794862b1b66e0cba4611e2f8576478576b8d12b342b4bce",
+    "experiments/check_scale_preflight.py": "215026a68ba92eab6e4cc64b612cfdfb72040f5329cde04fcfdf071b44ab8ba8",
+    "experiments/check_scale_preflight_delivery.py": "e590bf3dcd992835ca216c6f6f83379604324d8101d7cc5490c86144f1d2b39a",
+    "experiments/check_static_analysis.py": "7c9a6835108a56e0a77e41e8419941f2170473d5f3dd5d811089fa9977209b75",
+    "experiments/check_static_confirmation.py": "6a93abdbd33255f12eeb2ed3fa2f0b803623dd7434996fd76dbd7deee264e3c7",
+    "experiments/confirmation_contract.py": "e33c290e3b738ccb0afc86ac91d8c62cfd14341d52aa39dd67ec88ae2659be48",
+    "experiments/confirmation_repeats.py": "aeb0497e218713c23934f54d476e938ec25eb958b3281bd073a65c91d24acb87",
+    "experiments/diagnose_dynamic_calibration.py": "d6f5ceff19772695d6889869bb248613245db88f1c9936a55bf3adc8cf7d9489",
+    "experiments/diagnose_network_observation.py": "f5ac49abf3a49818d7d7eda1b13d87ad4e54216637b719e1e0da91492e169dc5",
+    "experiments/diagnose_observer_training.py": "a2e7b3dec4ad2ef1dea1301966ba22694aaeae0153f3c8396b567d2282dd4844",
+    "experiments/diagnose_static_transfer.py": "530d326f6161446bacdf5d4843a33943b43cd70dcbd23e3c38e14608afe8d70d",
+    "experiments/dynamic_calibration_contract.py": "17628f7d2358bfb6460554d6abfd32be98f5d4f944ef669d7e0e9040848776e7",
+    "experiments/dynamic_calibration_summary.py": "b0d4b9f2aff98f3351f53c1a473928ee6797b7acbd282de928da58df881c0047",
+    "experiments/fork_io.py": "bd8adbad77c7952f3e4facf78606c27dc521b53661289b0e722e707ee21e1ac3",
+    "experiments/fork_topology.py": "279d4e131a5a40b291b06e43308c2abd0533282b0207c87e1e7312b6d005404c",
+    "experiments/freeze_literature_parameters.py": "5eff904a497d19a05a721469fa0e1f203210bb2462053a50f5a27a6e948753c0",
+    "experiments/into_io.py": "f1effe5dd169dacea7a4a92d4627aed9d1a0b1d8514eef1b5366d68cf392a05c",
+    "experiments/into_notice.py": "6f76ccb343710f31e9dab5b91a6103d449dbe962e8667a9eafe86b251e7da3e9",
+    "experiments/literature_case.py": "fbcd9e24be0bafcb9d3c487c836685d5cdb93f8899202545c2df5004e23e48d4",
+    "experiments/literature_comparison_analysis_contract.py": "7717a280315d8610a8ea778abdefa601cef86f9a2e57e9c2e9c5349daf680cdb",
+    "experiments/literature_comparison_case.py": "db9b4b399348ff54a789f3df496ede124fbbf158a5f6153052d03e659095616d",
+    "experiments/literature_comparison_execution_contract.py": "a8188dc7fe48c7fbdf2711845dff36784c63f9ed4601960c97b612029ca3e193",
+    "experiments/literature_comparison_identity.py": "5a5e7b29561d27e50b865758333037a92eec6bd81936609bcab772151d179024",
+    "experiments/literature_comparison_pairs.py": "a173b572acc34bac11100f28e872577f859945689f778a088911c296a8293efa",
+    "experiments/literature_contract.py": "3b1ddd4e559d9e5c9ea35201ae34a0aec6540678087ca32aaa9f4c9cb903cb46",
+    "experiments/literature_matrix_case.py": "95bf59862fb0129cb165b56852e2f41c1e6c8ab3f78095493fe292184efb59bf",
+    "experiments/literature_selection.py": "382d3c3222e6b688686af1ef764c09990fb9be21f01da2b6fbf9fff4fb832f6d",
+    "experiments/literature_stage_contract.py": "d479c1d05b982294262b80a7c53f3d7f69843572d8a72890ac6c64dc41a79df6",
+    "experiments/network_comparison_contract.py": "f7637fbbdd697b0bee6ab19d40919e29c65263c03fb9d08cb3ed36dd00bf46e3",
+    "experiments/network_comparison_pairs.py": "470ed90c8322fcdd1466fb7ec139fe81bdca4f29f7a958d4c2693ae8126ca85a",
+    "experiments/network_comparison_summary.py": "7fd96860cbaa090522cc02a430328379b001d2e0b0ada1a0ed8a86b12aba9af9",
+    "experiments/network_entry_bounds.py": "fb9cdbb75ffee7aea0647d0691b1848077a47cc4d902748a3678ef98bcf94e1d",
+    "experiments/network_host.py": "ba974a8146b979e2d224d1394698d4232fd230957d0851aabcfbe32daa6e9faf",
+    "experiments/network_static_contract.py": "2c738465a1b941f42f6c24f6de34daf07bf9d43cd7ecc50e63705ff72512e7a7",
+    "experiments/observation_diagnostics.py": "9c1eccbdbd2801f34026ed03de2a3dacef4d13801648c4e9b7b8b47189275d7f",
+    "experiments/observer_calibration_case.py": "72b6b4ae32662da3d0c8e52e5d68e5cd6b7e43644b05139bc29f66e6a5c0becd",
+    "experiments/observer_calibration_contract.py": "700fb3fbddd52f2429365bd6e5702d7f0b1c219d6acb0fcbb5c5ff4b95025b13",
+    "experiments/observer_calibration_pairs.py": "ad4b799767387c10c03fb7dc0fd580d3655db0564f268a05b4fc6f268379baa8",
+    "experiments/observer_comparison_case.py": "5c4553c19048d2a4c4089a6bc48d6443c15ae0020e218a0a27c75d387de6aa8b",
+    "experiments/observer_comparison_contract.py": "b0885276f7f0f03a4703ba1d57d5075402b4d3c9f1646cdb1c36c6073cd8f0d1",
+    "experiments/observer_comparison_pairs.py": "2994909a946849283ecf98787af73dfbcf7ae7b179d76869d987446fbe15be3c",
+    "experiments/observer_confirmation_case.py": "0bd099e549d30bba6e711cff63f4808d19ddc0cd062bc13b77e8bd209238236b",
+    "experiments/observer_confirmation_contract.py": "19785e273136675100d5d57ddc33750d05d4a2ff0f0838aa48c68df7482abe47",
+    "experiments/observer_confirmation_repeats.py": "8ab10ee0af9f661bcc0a7bbdb84bca5c566b962176376a250f9e4b160748ac55",
+    "experiments/observer_training_case.py": "b1836c76123ebe7f48969ebe6f88e89b52c1a035182c7e17229a835d82e35146",
+    "experiments/observer_training_contract.py": "6329ef7ba83d969059afd1721fc48bc2f3e1d2fc60f25dc2fbd47dd691455a97",
+    "experiments/packet_io.py": "f56eb43a91ce24d2447fb20d981ae3d52c778833c4979dcadfad5ae190830ead",
+    "experiments/plot_adaptive_reference.py": "6c6470ca34fd44c2928bac9a4f3f7d6744a7fe93e29b50094cb35f21c90539a6",
+    "experiments/plot_admission_reference.py": "558886a2078fec68e114a121d0d0d2528fd362961c15a6f7dfbbe33457b76231",
+    "experiments/plot_admission_validation.py": "39847bb78b1e6f456936f3f9e670740c9dccd45bbb8f834b18bbbd08eda91772",
+    "experiments/plot_assignment_reference.py": "29969fde77defc4c1cba074f8b5991748c025462a2a42c3e63f12f85a5dab14f",
+    "experiments/plot_assignment_validation.py": "a72fd3a319c704a2310c0037c810cffc5d102056ac2bdace68d76073542a9bbf",
+    "experiments/plot_clock_validation.py": "02ea4377e6e64a306405ba541221cbd04606eea2710e7e028380fd6ef174dece",
+    "experiments/plot_dynamic_network_calibration.py": "275e8ca53905a0a8721537e1b22d76b1cdf0a1ea56c38f6c88192eafd4c49267",
+    "experiments/plot_fork_validation.py": "0c4d0835bf17a22ad28503af107251fcf1ba7629e50dd8666ebb4c272a0ae3e6",
+    "experiments/plot_into_validation.py": "3603268f6afb285a9a833b199b4cc32f5a5909bbda3cfbd6ca3c29ecbb679f1e",
+    "experiments/plot_literature_comparison.py": "0b8c384c90c70a901bbde2801cc11644285644e0be3f931d90ea2b79b76b23cc",
+    "experiments/plot_literature_pilot.py": "f9ba40b6209da8d189dbf832238532c7d0b70838a8f855eb0f757bf6c43e5dee",
+    "experiments/plot_literature_training.py": "5a68fde7718edc1e3406be2172485fb814a6502433380b76b6eb69cd14e7ba90",
+    "experiments/plot_matched_network.py": "9d9ab544969e82726b7a03d02d2e1a1a1e20ad0a524849fe7f84e5730da1873a",
+    "experiments/plot_matched_reference.py": "dc7c97c237f77d4fc2c7eaa8484c9fa40408c15373a10639c0c6b9a24c0d1aaa",
+    "experiments/plot_network_calibration.py": "bd7e2c53fca9d7301a7df01698e1a2ed5c7fe4b91a24a71aef59b80d141d91a8",
+    "experiments/plot_network_comparison.py": "1e435cac259e952b08952560110d22b985d583cab70705c13d24e5133ebd4266",
+    "experiments/plot_network_observation.py": "7b49786bfbc4f2230bc36a2b1970b30ec4a213e5bf98217aaa6ac5ace5f47265",
+    "experiments/plot_network_static.py": "ca2229631c9ef416e6541742c6ea0716ed9065e503e014b179a7525240147ea8",
+    "experiments/plot_observer_calibration.py": "56a35fb16bfeab1978c289c5d4d2d67ebfe5ea9c934ac8f6b7bcf82dbbcfd734",
+    "experiments/plot_observer_comparison.py": "2b17c5d2b0017d585badbeead2203b68bf60b6f07dc69316a4f1965440be7ead",
+    "experiments/plot_observer_confirmation.py": "7a974b615ad3df53d9a3373ad97533d942c2ecd3461ef12cd492b162fa87a9d0",
+    "experiments/plot_observer_training.py": "66eeab060dd2bfadb57fb66952ba32deb9f419362201cb1629dc98a8dc8a3600",
+    "experiments/plot_report_observer.py": "ee5a3c2f3bbfc95b133f85889aee66be53521b828f969c251463d51d85372f07",
+    "experiments/plot_rolling_reference.py": "5f296fc7f3d06c1d4e8b56febeac54a24b84f5105165e1c15e34bb10dbfc9eb1",
+    "experiments/plot_scalable_network.py": "eef0b7011802630b959df09436dece47dce8c34c9d22b51c572b2a7d43d202a0",
+    "experiments/plot_scale_preflight.py": "5c2bbc77cc56b1487d964ef44bcbd41a04bc9c3dbb89d3d04c64d8d98bc21a93",
+    "experiments/plot_static_confirmation.py": "1a6aa3a865a16512c02192bc5f1bc9001dceb43998449df2bb13682756a4dd85",
+    "experiments/plot_strong.py": "040674802ab0cc972c81602511d3d4ef0dd747f54bdde63908db742d3c6083c6",
+    "experiments/prepare_dynamic_network_calibration.py": "73510f3ac1d6298844338700841062674d77e7e13c6a7afdba978274211158af",
+    "experiments/prepare_literature_comparison.py": "009e57e2ab691edab33c24d3844c56783b1b80467e7f764e3fb2ebb1ed4cbac9",
+    "experiments/prepare_literature_comparison_execution.py": "ebab67aff517b2e78bf0efe44b668d7663d2a97f215dbd3811e73e483200d48c",
+    "experiments/prepare_literature_pilot.py": "5c9e311bd1b6caca2dc0bc8518bed5f0f44542ae36a18ea8d1d92d6bef8561ca",
+    "experiments/prepare_literature_stage.py": "dea9a4673271e0a6e432215a4cb1d6c4e07ec9b7bb8e4ffd908f19f2d2161e9e",
+    "experiments/prepare_network_comparison.py": "d86fed45b9a9755e67f5aed88c30112676c6633aaf9b5a870c675e65e5c8d3f3",
+    "experiments/prepare_network_comparison_execution.py": "f40080d146c8ea62f852584f8c2784cf2d030d2f1fb61c43179467a1c7cf8c2f",
+    "experiments/prepare_network_static.py": "3873bcd73018f906fb9822aa27531a3c7afa7a435fd24e206a496b14ef280086",
+    "experiments/prepare_observer_calibration.py": "8b769c787eaa6cb4c60a6f6c2dcd3b7e07869fc42ae619e63a76a23a77819817",
+    "experiments/prepare_observer_comparison.py": "3b228fa58b21e50214c286b07f3c313f5c8fb90fcfe1e1044857be048bacb611",
+    "experiments/prepare_observer_comparison_execution.py": "4b66f106b17106f7c58598d3af8a371f91674d6bacc41595cb80d5b40553c27f",
+    "experiments/prepare_observer_confirmation.py": "068b74ee4e500b97bb6f0a389275c32fecf9a3bca6cf188f0000cee470c91566",
+    "experiments/prepare_observer_training.py": "bffdbc5f730e97f94ab2dc99690f448a24df1a2431332e8edb82c35936ce38a4",
+    "experiments/prepare_report_observer.py": "de9db1f9f42d362d2488e9cae767afa1198d167e5e364bfbe078852187df5628",
+    "experiments/prepare_static_confirmation.py": "e0199f1f7e83233e16442306f7905df8931fc654564965a8126c4a28a073f143",
+    "experiments/record_strong_host.py": "baf2fa394ee4ff223a47ba5c4097c5bc9917b68142008d667ffe8b70e3417055",
+    "experiments/replay_matched_case.py": "1d413379bdf8944f00abae24798f1d8e9c8e26724b0862007ccc53735508ed77",
+    "experiments/report_observer_case.py": "5e40c76cd7ade015b1a719d1d230a109063de60b861d831d2ecce2513fbcc527",
+    "experiments/report_observer_contract.py": "7a9ae7c0dff1bb11b68c9d4466c98a36e744b25f6f72ce34535eef2f58f7c929",
+    "experiments/rolling_rpc_cost.py": "2be45422d7c5b22fc73baf59325b8dc01273b3334746f85d7cfa462c70a980a2",
+    "experiments/rolling_workloads.py": "9111ff1b916321d79712400bc584eb623a8e7957d27e097b42a64155f5c80757",
+    "experiments/run_adaptive_reference.py": "08f3654b96e528385afb22689c3b574ea8be16d4204caadbd6412a29ff8308f7",
+    "experiments/run_admission_reference.py": "f891f63ccfd925e9d0f5d06d667d94f347978a42fd93d442e83030d614b4efcd",
+    "experiments/run_admission_validation.py": "d857e26f452fc8ef994cf15913e4f95215cf31d1d590692479be50f2c9af1c38",
+    "experiments/run_assignment_reference.py": "c442ff0933c7a6a1665218bd12093803d5beccb4c505cc7023d3129d71550e17",
+    "experiments/run_assignment_validation.py": "12a813587d1a3564b04b38902345ee72542d6284be1b4515610b9882d65ea995",
+    "experiments/run_baseline_validation.py": "952f5ce2ccdf51d0747d8ee32bab24a717a63837d62bd281091c28f433339648",
+    "experiments/run_causal_contract.py": "7c156d7924c1a857c0837fb43baad1184640cb764c295e144bedbd1cd6336d1e",
+    "experiments/run_density_diagnostic.py": "ebd31336e5441f14e065bf1dd71e0d81ed11fc5cd5edc75292875966dbc40e7b",
+    "experiments/run_dynamic_network_calibration.py": "caa841759d632ee1c1556bf9bad090d1f7fa7133bacd8d6ceda1ba59538e13ec",
+    "experiments/run_event_validation.py": "49913422aae421de9d1d45632d9324be13de0e7513b838067c12f5b0632aaf20",
+    "experiments/run_fork_validation.py": "24c3ada67ddc41cc266802ff78cf27f11b80c3ca37cb9e1e03179b55a856462a",
+    "experiments/run_into_validation.py": "ad7b835e293931c52300f190de38cd3acf2c53441e753f88dbd39181f8a053b8",
+    "experiments/run_literature_comparison.py": "d2f4ed3ea74248904f4bb9e1c0a05a52af4af4aab53852ea0e69a200e2a12125",
+    "experiments/run_literature_matrix.py": "c0ad50487729267dcb01a4bef9cc83535b7f92221a99a8bb449127a46d8eebb7",
+    "experiments/run_literature_pilot.py": "bc1aedc702c04b8bf27679a6f740980c05435a76496389889e8714c6c496b072",
+    "experiments/run_matched_network.py": "fa0ece9049eef7fcaf08c27ed60ca2ee9c5cbaee4422a85ba964b4a365c0a6c5",
+    "experiments/run_matched_preflight.py": "b9b220c76f2e94dd9194c2be85d3d7597ecbfbb1597ac7518340acaf66a538a9",
+    "experiments/run_matched_reference.py": "b4a7389cf3336eec799a9b3ea5202e4fc54c1e043172129615e5341cd3c3b9d0",
+    "experiments/run_network_calibration.py": "d16206ee3663cbea5d230b129c3133da3854d521a7544ef6f0c62da86a3e5303",
+    "experiments/run_network_comparison.py": "23eb03c7c20a3a93c05b95130eda67d7b1e42060703e7e71459b1314ab5de6ee",
+    "experiments/run_network_static.py": "1a64e1aa866e171faded896a9531268db1c10812b94247b04458e53f2af6de5b",
+    "experiments/run_observer_calibration.py": "9239aa6b6e1b011a4c8f174d41a8a97debed76f664a82b2f85b824ce771741c8",
+    "experiments/run_observer_comparison.py": "85b5616038f7377a217c866012d58d3e8e3b4df9d76fd191b309f416f95b9211",
+    "experiments/run_observer_confirmation.py": "40f51f16fbe6ae24ebe791872aa39392682db4fb30bb4ddb12ae98b71152a5d0",
+    "experiments/run_observer_training.py": "4683556c82cb36394c23fe85f958da52ed2a00a72667371be7771d0fbf1bbdbe",
+    "experiments/run_orchestration_reference.py": "6ebfbc4f042110859a6e4bc80d0bae605e2969540164e2482fa32654dad796b9",
+    "experiments/run_path_reference.py": "90deb148d89757e49ea66b8ac206bbbec28b9fb4e6a9566d5d3c94d6f824e07c",
+    "experiments/run_report_observer.py": "ad502e24bbfb6a30db989a652741a1b0ce46d213c6a46118513b38ce7555e234",
+    "experiments/run_rolling_reference.py": "957753373e10b5af230abf87e1dee8c75d96dbd40045f93f448b81b5d03e6684",
+    "experiments/run_scalable_network.py": "c6e6640d1362d79d59f0e15d12fec0234a21d792a9fbdaf468a0ded150433e39",
+    "experiments/run_scale_preflight.py": "bae05b6bf559427fd0bd3e4206b266fbb854e52dc979c289429f9553dbe52afd",
+    "experiments/run_smoke.py": "20094bba9f4b9facdb0d76f886cc78a01a2fcb632de42aebecd001a07a28606f",
+    "experiments/run_state_validation.py": "f6a7484dfe87f6de80d89bca79b0b72fbae68f44f27b159fac258442cb9f3626",
+    "experiments/run_static_confirmation.py": "508a1af928c1bc68edb6abdad1bc833fdfc883cd3f871ca7a4f52b5a24c19364",
+    "experiments/run_steady_validation.py": "1362b3160c20dba6c52f6ddc5d65d3cbd61abccd3056d63cc69638acf04173c8",
+    "experiments/run_strong_validation.py": "2d3eec1b0e8d23d0aafa4461de5259661890a0155abddea778f12a6b264c1e55",
+    "experiments/run_validation.py": "b8a49e67477c209031e94ae306fadde06d0190367803b5ae69b8f011bb0d9128",
+    "experiments/scalable_adaptive_check.py": "670ba3becfe4df9399fb80191dff373fb53fe1c696eeab0f1ab86e78075f535e",
+    "experiments/scalable_bounds.py": "d71b17bd21234b18f1e23c050ee7da465749b7e1a0b17444106677575d4ebe74",
+    "experiments/scalable_case.py": "086a63f6f4aab78757e9510129635f78a1889ae21e8de7eb5a7e84cc5a2244fb",
+    "experiments/scalable_contract.py": "f8dec07082f7bfd6fd0f246c05b11fe29eaa863db97d84807b3aa2c90e3cb94c",
+    "experiments/scalable_gate_check.py": "0c2fb1087c6c3f429de5edd841b26be30ae72be58fb975fb294cd7a109dae121",
+    "experiments/scalable_io.py": "a305f60a7e1a672ae90f34a9edda6bfd5df7f12e32a7ac374d082a3c7be95220",
+    "experiments/scalable_observation_check.py": "c783dcc9a9da1cd2083d976871aae82ee2f8edc467833c86e9bcf845e7e82c2f",
+    "experiments/scalable_topology.py": "5db6cdc9bca85b0b102bf3a8eddda2276d34e4f4401088d8dfcd1bb2a363759d",
+    "experiments/scalable_workload.py": "80fdaaff52dff8933467c5d5fa554520f8bc0e85ea33fc12db40c7061c2ec3d7",
+    "experiments/scale_preflight_case.py": "c977b2e13a8469c9a2ef78d5e9204c6aa3565f4dd211c59f6945cb88d391f841",
+    "experiments/scale_preflight_contract.py": "58975d483803517e646450276fc5dc3d6fb31f2a61d280e1972505ea33456ee7",
+    "experiments/state_io.py": "e6841e839c7ef6c391600198c7013466a6459b249347cdd262e41455a2273d34",
+    "experiments/static_summary.py": "c1070b78f6f63624ce4309f0682825716f0c1797fe3cc9a0e359a4be5c9141d3",
+    "experiments/strong_io.py": "9f42148ff84d6a67c9968cbe513e3a8740106d3f1022f9e5ebd4086d3fdc0295",
+    "experiments/strong_rpc.py": "1cc1f2b53eb668cb9ccd130679935fb304fe4a7d6b2ceb6a0103e3d5749d25a6",
+    "experiments/topology.py": "ea0ec82a1d4ee555090f3296c788426546eb2adffc3a5b3b0b24cdc81df91736",
+    "experiments/validate_observation_delivery.py": "d1636e0cc071a1bb813dfe8fc1752d3e7cf5e57fb41bdfdea6ccf8a38f05e028",
+    "experiments/validate_observer_calibration_delivery.py": "d8bea089dae751f1bcb6af672f1270000068e7f95a5796863877daf1351c2c1b",
+    "experiments/validate_observer_comparison_delivery.py": "04027a1514f6ad71680ef28c1998ac3ea42590383198ae088779a1b23e26ae95",
+    "experiments/validate_observer_confirmation_delivery.py": "29d662c9c4cd1427b080151f48c48d3b69f1b4de46afee56fa4975793ee36f7e",
+    "experiments/validate_observer_training_delivery.py": "e194f84a462c95394277aea5b8b92904be3a7310db32d4195eaa04af8aa98597",
+    "experiments/validate_report_observer_delivery.py": "24c5dbc1f4c68773622279bed2c3687c3ad2577d6bfe95d4b3862148ece34b4c",
+    "src/collector/available_prefix.py": "f77b969566e0dc382f2988a1ed8d5c80507ff60d63463be3b566cae6b6990709",
+    "src/collector/codec.py": "9112d0acc63dccef2b8dfee64825ad5a4c65b8b198d2e68a7ee8056a889e9749",
+    "src/collector/into_state.py": "04be8c11757595931796f7759d39f80c956a20925d93fcf56ec0ca685882f928",
+    "src/collector/observer_schedule.py": "3a3c25a2cc2adc8897bb40bbce20f55df51a03d9426cb5876c3c387ecae0f778",
+    "src/collector/state_codec.py": "a5698a1364685c635a41a1ae6875eced3132b7b43f12d7b6629ed604d514dd16",
+    "src/collector/strong_codec.py": "18a7b5ec10b01487f6179485c7ebade42613d7752c9ba497d5812ee29eae368f",
+    "src/collector/tagged_codec.py": "6d93a62de8d5e66d340b53d840957991d4d151fda47dc47d53f694a2a0c497b8",
+    "src/collector/tagged_frame.py": "7903086504836b6e19cdda9e1d2cc9abeb614fdfc258eb255d848e5203abebf1",
+    "src/control/bmv2.py": "3727370e8220e8469bb3cb6e4ac51d83c59db6bad18c1d1c2725863cce946f66",
+    "src/control/into.py": "2d9dd7b68e3c455f19f187284f0edc231fa9a323da8edb7975e92d9d97555431",
+    "src/control/literature_live.py": "e917128c1eee1bdb0497f27626513883680164162d9a46788677b86ba2a0dc5e",
+    "src/control/matched_live.py": "48efa7b75dd618397de3fd293f3173c6aee3b05f398438c1ea244d735f229675",
+    "src/control/metered.py": "5b8f2cb4d1f656c295f9f8168f55ed19aba4e9ca2f4f75d867195e330c3e80e5",
+    "src/control/scalable_literature_live.py": "829910a7b1099c66313569bd2044d604013fcd86903aefdb17f8495869c7ece5",
+    "src/orchestration/accounted_engine.py": "7bf2ffe342d4b77f4641a3109d63800cb923b14f9ff4dcd46702486aaf1d9bdb",
+    "src/orchestration/adaptive.py": "51304a82e96929764e402928494095a402d7cb8b7248f4222c3b33bbb7dc70e0",
+    "src/orchestration/assignment_reference.py": "48ce29f17309537af056460f3b27ac130ec4fb6cdb87355a2b362c0a54dde3d5",
+    "src/orchestration/baseline_check.py": "c4d03828bda260bfc0262ab716db40305f83d43e88743b597250a848755587ca",
+    "src/orchestration/budget_model.py": "31e1d530cd146c4f8d4271daa8c5d7c9e3fd6abefe9fe5f2c8f09f099190a537",
+    "src/orchestration/budget_oracle.py": "57836cc45a3df8f7262c9350ac31578b65e1270cdd6127f2bf08222af91433b9",
+    "src/orchestration/causal_contract.py": "d544f2fe26f3a2cd0d243af730873cd91c109c106953d45f2e428be9c17497b6",
+    "src/orchestration/control_ledger.py": "541292bb2487053c7a63fb0f01aaefab2565099105b08e0acab13ec442804853",
+    "src/orchestration/deployment.py": "bb45175ab83c6103be941e93ff9349418e97d66136ec3892b8929097a7587689",
+    "src/orchestration/event_engine.py": "cf78c518a9dd48f3b1476ab293fa303d5969c630595ca0fa77f15971cdf32104",
+    "src/orchestration/event_metrics.py": "8f1c90b69dde957ae78433baecfb34f5c8f5c2fc9c272eec705dc5d629df6bbd",
+    "src/orchestration/event_observation.py": "190412d0d1665f717b1d18dc1ef6857947a6812bc0f0b708695d7fbff86639de",
+    "src/orchestration/event_schema.py": "e61acbe8af0cf8d2e568c73c5a52001123472e3a6a271a3b407832fa6d605c61",
+    "src/orchestration/literature.py": "d3cca4de10f4905b331acb35866c2faa6c16ce9088dfadcfe86a4b4cba63e09a",
+    "src/orchestration/live_assignment.py": "a2aabff9beaeed0307454b5e540a3491bef2b2071393ee79272523156a588968",
+    "src/orchestration/matched_grid.py": "6d3ed5a7f69c5a8b45e5d2ab0914a547134aa8f3c1b40e078ce59551bc54db09",
+    "src/orchestration/metrics.py": "fd4172831d6d0ab2c990b338d2184955fe73a2dab52507a713704463c10d308d",
+    "src/orchestration/model.py": "df9015b374a07aaea4f9e06eab2a90fab905273be2499a7542b5cb13f5e8ad3e",
+    "src/orchestration/network_spec.py": "7d4f2876606011f22c6913575a6e7c3c4e0a57c5d07e5e875cb94e69495037e1",
+    "src/orchestration/oracle.py": "d6969d3f0a2e7d4e2d6e9abf0e90e583a0b058c0bbcecf863c75eb62691f8401",
+    "src/orchestration/path_reference.py": "99aa01b79a1019f959c49f04672eab1a5eac25f041ec9b3f4fc206ad2bf8ee65",
+    "src/orchestration/replay.py": "88fb2e3ef90eef659ec4ba89126c475979392c99d1b8bdc54220195c7c2d14b4",
+    "src/orchestration/rolling.py": "785965ef3c1b5ea576997f0c56ba0d61460f3a2b8ae6770e8794015559e76a6e",
+    "src/orchestration/scalable_literature.py": "f3c663140c822d72f0eb6d9ef8e55c0f9021145fdbec06a014c7993f93999dec",
+    "src/orchestration/slot_reference.py": "5d00049b824b16778843c3ca1f923faca050e02d4bd30b8dc6a0a45e966fa6c0",
+    "src/orchestration/strong.py": "6a2ee0eafb41362788356abeb98652295a6efa097e2490fe5af890c0725a2a9e",
+    "src/orchestration/trace_admission.py": "15948f61fc3605442aec7eb64c47d080f72830dcf636a8a3d9e83a05982971aa",
+    "src/p4/baseline_int.p4": "e1bf72cc115a721c7ed1a8884277910b40878fef70d2c14e503d9b527c239e77",
+    "src/p4/into_int.p4": "8fe5a093ecadeadca27a24bcf736ec08539613e617bae7c3766cfe659b208402",
+    "src/p4/state_int.p4": "99d0492edabc1316315e26330c0171eca482c3bb61d8577ac8b01906cbaae465",
+    "src/p4/strong_int.p4": "df355d26dc58d6a8d6dbf4bf273ab6dca4b569109fb621ad0bdf2df3db8a64a8",
+    "src/p4/tt_int.p4": "34556a39f692a80a6812c28b6b49e0491c94cb88c867427d3de4a5a9a012859a",
+    "tests/test_accounted_engine.py": "231ffb3b01df6b8871afbf038525485893ce65660ec0dac4a0c09eb0e682ae54",
+    "tests/test_adaptive.py": "020208243e8131d755d0ed5811db1dcdb02f7fadc8f44357cea542421be4b526",
+    "tests/test_assignment_reference.py": "84bffca091e4a2819e986b542d83d5aaed2e3298d6f9e6e077b975f46bc53f1a",
+    "tests/test_available_prefix.py": "6ffd6cf926ff6cf39fe888e11c5346cc2078c551dcb905c8c9e4dbe0eba883ff",
+    "tests/test_baseline_check.py": "73fde39dfe023edca01ad40cbeb6a4a92ec14452f1cdf9cf7dea6bf1a729d241",
+    "tests/test_budget_oracle.py": "cc96dd274f763f3fbef0323bff3273d3ddbcf9b27f8c176bd871749fa7746665",
+    "tests/test_causal_contract.py": "49f35004a8852e53a230dcde8733ec7415e0d3a04f243fd361ffbab8fee83915",
+    "tests/test_codec.py": "606fe3e27c057751044cff7760878360f119f7090d3ca927dfa71069386ae417",
+    "tests/test_deployment.py": "470f76da86a9c864084c758facbfd7cb375b6b8f1b2d38c37b967551b5c69183",
+    "tests/test_dynamic_network_calibration.py": "e9ab95270057e0c58b613626c2e07d755b0372b2fb8ab478ca8ead3d99fedc73",
+    "tests/test_event_engine.py": "266d69f04c72355a4fa0ff7b6cc510bb3ce3d4e803b1461fd14b0cd40212fa94",
+    "tests/test_into_live.py": "6aa0f4e38c06ae7008c0e6efb0f9933576efa71a654b6145a2ab7ad4fe73345f",
+    "tests/test_literature.py": "671ac8406220b29d7fb446860a8519d2027b236c74b0c280f69f5e500a797051",
+    "tests/test_literature_checks.py": "ce4eb7accc8a23666116397262e0c64a7693edde600274f9152c6e68d74195dd",
+    "tests/test_literature_comparison_analysis.py": "ef88b4b476498749449ad167e983540532b28e1de5d4a0df273495c3c2cc6475",
+    "tests/test_literature_stages.py": "381ce8fc28bafea8b8afc43a981f34fac207ad046ed623339999e7300ba14583",
+    "tests/test_live_assignment.py": "43afa1f96634d6b740831bb0158eb3151f5835a5cb59127fe508e29031ac36b8",
+    "tests/test_matched_grid.py": "1e8d67498b359878a8a0b245303c8b5a7a75f4d5ae64c52664708feea1a4c17c",
+    "tests/test_matched_live.py": "e91610111f4901d20b0fe6f55f0c984f0341824300227da6ebba9380dba49e89",
+    "tests/test_network_calibration.py": "17522d2e84e9d1338c4da8d4f4cfb36fcf46a342957bddeec34ec1ae3b5843d9",
+    "tests/test_network_comparison.py": "09b1d67419dce67907f2d0c93c992fd9d22862ae9fac5b6c2e058b527229fa99",
+    "tests/test_network_entry_bounds.py": "6964c23c6d81bc7b259ae218f1bf177c830cbd0a111944cdc4fea268822a3798",
+    "tests/test_network_observation.py": "b09dd53040f9bb0788e99ed52e51224e8b71a14ae3646b8ddac662addc980daa",
+    "tests/test_network_static.py": "10b30aaa5033ee444ae0c8913747d75878f473a976a5c3824816b8b82d92f78d",
+    "tests/test_observer_calibration.py": "a0cfd1345f73bae5158314261f7e9d95827c71919431add90a3b67c82ee66a1a",
+    "tests/test_observer_calibration_analysis.py": "76cf6d5edc8d64a1a3906ad2a2054561ae30dca3b97de39340ea28a5b89394e7",
+    "tests/test_observer_comparison.py": "f99c88a72a9009752c8548722c45b0e157319b656d02a0cac820b0c8750a79f2",
+    "tests/test_observer_comparison_analysis.py": "716e81b7889fd83a7af8260b7d24c77aeae3756ccd47f26543c13e8cda38a996",
+    "tests/test_observer_confirmation.py": "2f4fe30e01af235da5003adb910ab3b55c1b43b6533576b4a68bf3d4881c5358",
+    "tests/test_observer_confirmation_analysis.py": "fd5a6932b2326166fe0ef0eb0a233ed20c1fa8bf50d51579d9d8b1fb007469a2",
+    "tests/test_observer_training.py": "715551a5bb4967cd4c54e9e00b82265ea23f040c5acfb99a498cd9c675819f79",
+    "tests/test_observer_training_analysis.py": "77e229821f6c04b457daa53ff8ba5f50eb223fe643ee1947a64f234f6bcc10f5",
+    "tests/test_observer_training_diagnostics.py": "79399d9ff64e679de36b0f13064639c8530c9a994d804b66db1dbe44cf96ab66",
+    "tests/test_orchestration.py": "9e52b3d3dc51a0c3a30fc3193e36ad5dead06732dda9656ddf0c3c9b59541b98",
+    "tests/test_path_reference.py": "ddc9426f6dbce4a306cd2faa52de21a8efc46819cc294d84cc5b43acc7e7bc74",
+    "tests/test_report_observer.py": "8ba0485a0c6fb8a21ea1d3a12d6088ec264d9b3f152052867b3c4a0b124e4fb1",
+    "tests/test_report_observer_analysis.py": "fea3097a81857f56d67b739e7883e17a14e5ab8a7a27851b8d7711c30d89972e",
+    "tests/test_rolling.py": "c1195547d015e2c037ff65fc370fbf6001da2a9064a932fc90973f0d02f96618",
+    "tests/test_scalable_network.py": "e6f8ef98d03349c8cf28c840981bf68a94a12a00d7b419a7c4ffb2d5ac8a95fe",
+    "tests/test_scale_preflight.py": "4401c9d78e590e562c6a7edeace451d51ee1aa29c81e9ef57ab919a63a0aa2bc",
+    "tests/test_skipped_decision_validation.py": "e911b66945f0750a1b66a199166f5b09748551f86b27448b138d50ab1598d188",
+    "tests/test_slot_reference.py": "404d51997a87c556436b6805e75bf5db2db6467292ceefd113f5b36ab75d186f",
+    "tests/test_state_codec.py": "5a4b96e6bb3c1b41214fe2aa59e9ac54960447c4eabe9affa8cdc4e4e6dcb0d9",
+    "tests/test_static_confirmation.py": "f52a9cfb6fd28592e1655ae515cf5a0580431da3d7c617e54ebf70e032dcfd57",
+    "tests/test_static_transfer.py": "b35a5c72d2581c639e7bf4f0ae2af29711cb180a5882fe8bb0a8bb11e5d9661e",
+    "tests/test_strong.py": "c37462523dc243937ac20314555e0f296bc1b4b92d3de08731d53d93268f2e03",
+    "tests/test_trace_admission.py": "be0db8fa3798e48fac11c78673910d0180c1946c19eee327cd13cf84afcebe95"
+  },
+  "steady_binary_sha256": "dad393c75681d9d043dd5a75f1e0773a0399d8b454b30bae92310e08d58420bf",
+  "p4_json_sha256": "b03ebc53a03d9467da5791bd18336484cc2c3668f31b4489e6238555ff77f318",
+  "software": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "p4c": "p4c-bm2-ss\nVersion 1.2.5.10 (SHA: 8b6de3c57 BUILD: Release)",
+    "bmv2": "1.15.0-2bdd0b7b-steady-unknown",
+    "mininet": "2.3.0"
+  },
+  "host": {
+    "cpu_count": 16,
+    "load_start": [
+      0.56591796875,
+      0.37744140625,
+      0.19775390625
+    ],
+    "load_end": [
+      0.75244140625,
+      0.6259765625,
+      0.32373046875
+    ]
+  },
+  "concurrent_activity": "主业务期间不并发同宿主回归、分析、绘图或第二网络",
+  "scope": "固定合流链通用入口正确性，不作性能排名",
+  "end_utc": "2026-10-12T02:58:23.055390+00:00",
+  "artifact_sha256": {
+    "rpc.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "rpc.jsonl": "75d8e465f5e0e7038159e63379be3ad877c57acf26dbfe76ed220c73203f211f",
+    "frozen-inputs.json": "c9800a9b5dc57736cafcb82ae3757850f2a66322ff84420ef639b3218744d306",
+    "stage-plan.json": "0f8e9286e1a004aea277b8e17be9b6a411c336dd0b590a87786e3e0da37a90fc",
+    "rpc-operations.jsonl": "849d55d5879198c97cd2b5233ab20099350cd725c7363cae316338fc8edddd99",
+    "rpc-capture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rpc.pcap": "69fcda0084105b6600bd715340688732c35f603d84fb5500ce502acd9aac904e",
+    "compiled-program.json": "b03ebc53a03d9467da5791bd18336484cc2c3668f31b4489e6238555ff77f318",
+    "rpc.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "unit-tests.txt": "9b5b9cab3adf9e2daa3089e0941cee71b2c616e7092b7f692ac46720b69e6e40",
+    "8n8f-feedback/count-observations.jsonl": "8c528a86ba2824eb7417a254590e3fdc9179453db850edd612524b2c89ca919c",
+    "8n8f-feedback/collector.jsonl": "6e7d58d4c8f2a167bb6c248f548051e05db8aee3563893cc2fe9da6c3f4aa941",
+    "8n8f-feedback/algorithm-settings.json": "cecf0b1063acbe0ebe82eb38c7f3e2f2d3f89943ecff975a4194f13bad9884c6",
+    "8n8f-feedback/final-state.json": "de6938f19aeb64564d459f75f027d9962d9d794518015becfab3f17c7ffff25d",
+    "8n8f-feedback/packets.json": "80dca4c50feb717074a3418ddcc4e3f4bdc21574ca49d077e35ec3c7e6a929bc",
+    "8n8f-feedback/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-feedback/host.json": "d6cda17b3a232240bf6290e243054ad01203b7ea7f137b285ee27ce32cdde532",
+    "8n8f-feedback/ingestion.jsonl": "920e02be8c00519316c707eb028b8f88e9ded9a57203f3c0ad4ed2db00621a85",
+    "8n8f-feedback/destination.pcap": "8430078b7a0c5e576a358215f5fd27e06d1bb45cda3450f03665133a55f6103c",
+    "8n8f-feedback/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-feedback/availability.jsonl": "894dd647358dda2d9fb28e6289f1386e165f981bfa65d8f0e2da4caae52696da",
+    "8n8f-feedback/wall-clock-samples.json": "1f79468fd7e2a6edd6beed673a6906dafdca0b5c059fc17bcb8d9a3610553be9",
+    "8n8f-feedback/result.json": "236fdc062dec7ba92d9f1ddaaac015cfc1d1c21f2571186e0bcb24517faeb992",
+    "8n8f-feedback/control-ledger.json": "770c00791e3b533bab98a393f3781140e93436598296197ca7c746fc83a1e942",
+    "8n8f-feedback/send.jsonl": "3244d0b2d661c3b6a727ab5827d618487fbc729b44fcb5d90f9e85c78e05ec35",
+    "8n8f-feedback/actions.jsonl": "84b2841c0ab3a09c58250878d54c816c806a5d6a1877e4496ab0e7476cc121a7",
+    "8n8f-feedback/destination.jsonl": "5bf71a586d026d98d34c9b425c7b78a29affb86abfb600a6ebaac2f90b458cf7",
+    "8n8f-feedback/notice-schedule.json": "12919cbe1e07b4c05385eb0a923585326f2202211591d84f048673da8b330d52",
+    "8n8f-feedback/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "8n8f-feedback/tasks.json": "91f49db03f0a8934d8783d3c7d07841b8f42be56559c4dc987bf4f504b4441f8",
+    "8n8f-feedback/notice-send.jsonl": "dc7d4a9aac2f4daf606bb1ba2cf216ba8a3d94a09f3177f41983389e20b6f78e",
+    "8n8f-feedback/notices.jsonl": "0e5cea6bc800c431c5a1487ec8b05897331249cede6f94a382cca16aa4c17cdd",
+    "8n8f-feedback/report-observations.jsonl": "480093d5233fafb4dbfb3e19f7b634aa03cf5e5f41f904b30a48d4e93ee6535e",
+    "8n8f-feedback/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-feedback/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-feedback/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-feedback/collector.pcap": "f02d58c3d9c332a5ac8bc7fc7cb2f1111e6fa4001dae37db7e29b211d08e009f",
+    "8n8f-feedback/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-feedback/decisions.jsonl": "730d2500f2075c82fdff43c6328e80b41301ef3c48630dda165b2a64c2557415",
+    "8n8f-static/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-static/collector.jsonl": "edf36868a442bb4d554f80b3c6b49fd079c0b0952195ad9f8f71daff31d5d518",
+    "8n8f-static/algorithm-settings.json": "cecf0b1063acbe0ebe82eb38c7f3e2f2d3f89943ecff975a4194f13bad9884c6",
+    "8n8f-static/final-state.json": "8b3ba2c8701e3c6c10172beb8b634e193f682594588f057bf4a8cebffdf78af6",
+    "8n8f-static/packets.json": "3e32a0b122384628fb2464c1a4066ab898ddc51141757d698369c1ae3b84f62b",
+    "8n8f-static/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-static/host.json": "64da5b02f063f41036dcd4d68fb0f25b4ee3ce0a44beec7757ca4ec7f73e6432",
+    "8n8f-static/ingestion.jsonl": "33d9420c7580af245f959ae72afac96554bb512ac348e9d01b37c843a35967bd",
+    "8n8f-static/destination.pcap": "9e4c5ebcf5b3fafdc41054bbe2027366a25cbcc657754330bbb9b1af1bf789cd",
+    "8n8f-static/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-static/availability.jsonl": "20e58fbc96a0c6a081eadd1846ce32dec252e370f03f88eb40afe7b8a74099ed",
+    "8n8f-static/wall-clock-samples.json": "bd53220607d716b2280474e49f82e8589efc554a2f6458dbef8c9be503a2cd85",
+    "8n8f-static/result.json": "92f1fdf81c89b3e54cd2193cdcc68a023bdcfffae87487c5a57145c1923052ab",
+    "8n8f-static/control-ledger.json": "2f76fde5044b97831e9a15afbd623ef5671a0ddb268d2da1517388940ba19e9e",
+    "8n8f-static/send.jsonl": "3c55f19f5480787614ff13d9ba93a8bb5cbbd97a431cb6057bcb33342ee63a79",
+    "8n8f-static/actions.jsonl": "eca26ea6bb83c7846495c75d6488f6ca98d087f7d090286e83904a3617ef5512",
+    "8n8f-static/destination.jsonl": "a706de9a41a476081eb1d4d8ad61b28d78d7b5b3e5bb92426dbdc812950792b2",
+    "8n8f-static/notice-schedule.json": "12919cbe1e07b4c05385eb0a923585326f2202211591d84f048673da8b330d52",
+    "8n8f-static/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "8n8f-static/tasks.json": "91f49db03f0a8934d8783d3c7d07841b8f42be56559c4dc987bf4f504b4441f8",
+    "8n8f-static/notice-send.jsonl": "ef0b9aebccb0646a4fc8ffbefadcb8d2df18a4720dc02ae3ae6fb70e099f58e4",
+    "8n8f-static/notices.jsonl": "f3740e1b22391d9cd3e40dc63bc06b36160f525572dc4d8a6ba181d7cf1aa584",
+    "8n8f-static/report-observations.jsonl": "352c200dc505cae3ea427f6c95c20461a47a2009cf3a9f53acc55133901e0d8e",
+    "8n8f-static/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-static/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-static/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-static/collector.pcap": "1b807016e6fba6033da033216b26748e5bb5cb9d18a2db08f310c76747dcb1de",
+    "8n8f-static/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-static/decisions.jsonl": "f147a12889cd5b307b9700b8a1a361337b6f531aac891324401c7024c5de1608",
+    "8n8f-intopp_due/count-observations.jsonl": "3775bd6012fbaac4a5c23631f11da158dcde753b9a294b1a119c2ea1c5942c83",
+    "8n8f-intopp_due/collector.jsonl": "479774b279f6f5a132a272113f25a065d8dd5c9f8beee464e69ed4a1c398c223",
+    "8n8f-intopp_due/algorithm-settings.json": "d0b32f5a721a31e5f59680575b56c7e73a3018873dd467b42021c8ac4b75e35a",
+    "8n8f-intopp_due/final-state.json": "72935610683ae7816e10a37b7348f430f170b0093128458f127da7c7af893ff2",
+    "8n8f-intopp_due/packets.json": "7253e53e6c5686e936c3e00414c41f5f17a1252810444ac327e7f7a6fe8c8c0f",
+    "8n8f-intopp_due/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-intopp_due/host.json": "7ce247bd2528c0ce6a48c51e1716df50cd8a2a3d535436548196601172cb5b2f",
+    "8n8f-intopp_due/ingestion.jsonl": "af25bb74e9d89ede4794ba7f456f3cd696462bccc171e3a417feef4b474cec85",
+    "8n8f-intopp_due/destination.pcap": "075548f241be0c1d8e5a50829a1fbf3c0fe2820017eecb249390535ba8cfbfe5",
+    "8n8f-intopp_due/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-intopp_due/availability.jsonl": "b267e4f1b1c8acfbeaa3a6d0ad8e8b26e07c4c317a74d987dbbd3df938bd69b4",
+    "8n8f-intopp_due/wall-clock-samples.json": "8bc721e3dbd0b52f3f46d52372298a42de19795bc0435d016c1585b44fd637ac",
+    "8n8f-intopp_due/result.json": "215f849ebacd2a97578b253b350fd7c8f172d87e7b5961dfc53a3882b4037e7e",
+    "8n8f-intopp_due/control-ledger.json": "4ecd26af9a7b6e428559f59014ac640839a794cb09786742cbf7aadf311fcc6b",
+    "8n8f-intopp_due/send.jsonl": "0b40631a80bf1491b8c31702d6d5efd70a8416b9dfe471eece21fa6850132a0f",
+    "8n8f-intopp_due/actions.jsonl": "b2bf63514c700073fb955c252a36c02bb64b70860fb89a5e9689913a561de168",
+    "8n8f-intopp_due/destination.jsonl": "89bbb494c5a6156ef113db6adc528885c5039944c0a897db41ffcfbce7bd52c7",
+    "8n8f-intopp_due/notice-schedule.json": "12919cbe1e07b4c05385eb0a923585326f2202211591d84f048673da8b330d52",
+    "8n8f-intopp_due/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "8n8f-intopp_due/tasks.json": "91f49db03f0a8934d8783d3c7d07841b8f42be56559c4dc987bf4f504b4441f8",
+    "8n8f-intopp_due/notice-send.jsonl": "dcd9fb940ef32a18355c29c3879da8150c8ebbdfa677c93c90b7cf1f3874a4c2",
+    "8n8f-intopp_due/notices.jsonl": "39a37aa2e0d2fd0d6ba6c5ff01b60da3ed080a17bcd145d0f3ed3cf723088979",
+    "8n8f-intopp_due/report-observations.jsonl": "f3582fd9f2aca9f921d3a6c9ab3a7efe9f72fc36685ce3a7c8d35a6eb86f0ea1",
+    "8n8f-intopp_due/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-intopp_due/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-intopp_due/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-intopp_due/collector.pcap": "ef18722e39d9c2ff4a99d2f3d30a22fcfd85f83912fecd868e9ebcf1ebd496c2",
+    "8n8f-intopp_due/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-intopp_due/decisions.jsonl": "dc734b9bdf5f1eaf6757bd7e3ab265c9b74d0a76d14ee2de4bb83b25706bb866",
+    "8n8f-d_into_tt/count-observations.jsonl": "7d570779f9af5fb68aa2e5f0aae561188ef9e89a7df338dba16300e368ef3af7",
+    "8n8f-d_into_tt/collector.jsonl": "95d63c91f5e1eb52a636cc898295fa33176f78b1abf4531badb0c1f57f7ddbd0",
+    "8n8f-d_into_tt/algorithm-settings.json": "fe8f607d4738d50fc6ab25994cbcc2857d8a64d55497c850d101ffa60c5730c7",
+    "8n8f-d_into_tt/final-state.json": "38762895a08ba03e1fd89a08ba71dfc3ac61cbade6eb76f96814d913ed60fa51",
+    "8n8f-d_into_tt/packets.json": "5ca08459bc3771d0bb21c7b40b696378995f2d03ceded8ef17bcaf4d0caa3828",
+    "8n8f-d_into_tt/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-d_into_tt/host.json": "3a82208c17857d3f9e1ecdbae1d897c250a2563bdeef0e6da30d9e3ff794fc2f",
+    "8n8f-d_into_tt/ingestion.jsonl": "c94987d465ecabcc7aeb38f5656269fb439cee5c17a5c35be3ead4fce407f8cf",
+    "8n8f-d_into_tt/destination.pcap": "5624c0c1f7cb074a268c70df756637d5c583d8c348ae730858eaf5bbbfea00f1",
+    "8n8f-d_into_tt/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-d_into_tt/availability.jsonl": "e6326ed09b9dea5c91da6b807ef7cdb7b404654ea4c8991a26749436672a10c6",
+    "8n8f-d_into_tt/wall-clock-samples.json": "051375d05dec59885177131685c7869a2912921df0fe659816e25676a8a1c3c9",
+    "8n8f-d_into_tt/result.json": "6d4347c53464d38c08a46ad59db71907d8ff0d89f033a0d35316b7395c75936a",
+    "8n8f-d_into_tt/control-ledger.json": "8df17b04a87679b3c99cc12cb274770936ad3a7627127f4b33908ccdf1bdd28e",
+    "8n8f-d_into_tt/send.jsonl": "7a1ca434ce101bdeb67ac86471dea8ac83a4245e309b699e909f9296ee6a9ddb",
+    "8n8f-d_into_tt/actions.jsonl": "ef781c2d281efb42cfb9e446bf2521fad1c9e6912264a72bc4a6cabe57db87b3",
+    "8n8f-d_into_tt/destination.jsonl": "b2e6ffe4ce2eeb760ff90e4098d1a0fdbabc03f27d4b38146bc26c2ff7c15e8d",
+    "8n8f-d_into_tt/notice-schedule.json": "12919cbe1e07b4c05385eb0a923585326f2202211591d84f048673da8b330d52",
+    "8n8f-d_into_tt/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "8n8f-d_into_tt/tasks.json": "91f49db03f0a8934d8783d3c7d07841b8f42be56559c4dc987bf4f504b4441f8",
+    "8n8f-d_into_tt/notice-send.jsonl": "e201d46dd95c920f7e31c127923314c029e24037e68d150dc3aca20b07c4a840",
+    "8n8f-d_into_tt/notices.jsonl": "2f4aa5a05b1e9971cc9c39bfa0303a96e513cb893dadfd9864d89a9f208d0900",
+    "8n8f-d_into_tt/report-observations.jsonl": "0f62d8a89ca2538f487bf58f2c7f4a8d6e6a3fe93f199a114b9dec69fcc4e26b",
+    "8n8f-d_into_tt/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-d_into_tt/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-d_into_tt/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-d_into_tt/collector.pcap": "7f2441affb66377c0dd0ee59872c5cff5b374db209b518e11d126f2c0a4d2a86",
+    "8n8f-d_into_tt/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-d_into_tt/decisions.jsonl": "83373eec8a78f530f82d22e86d994727bfc42162224a4d10b237d988519ae65c",
+    "8n8f-phase_guard/count-observations.jsonl": "60591972fa3a9619dd379cfb9e05ced0d8af3aaf6266dc5a4c6a6e64ba49d870",
+    "8n8f-phase_guard/collector.jsonl": "ceed92207e6044607c344c0f7fe18e71f1910558a93a30a705c8cfb3a2d58950",
+    "8n8f-phase_guard/algorithm-settings.json": "71c88180c0f95189ca96f7ad51de26066ec6314216e316eb2ad5951bf69831bd",
+    "8n8f-phase_guard/final-state.json": "b2ebf41b238d602f9ce334d3971ccaa7fcd8ee30e8165fc18d853764c795e514",
+    "8n8f-phase_guard/packets.json": "a06de7d1781252a7510442ef3a2dab332202e51ed3003621f5435b96e957b4ea",
+    "8n8f-phase_guard/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-phase_guard/host.json": "2ee65810dfd6c52d9c6a5424ebe137d745e20496deae159b724d19894931e1ed",
+    "8n8f-phase_guard/ingestion.jsonl": "42ed6f3c0395b5d51d0b70294e4e1818db389968128bcf5377180a6ae0cf2a3f",
+    "8n8f-phase_guard/destination.pcap": "62c545ff358142eb212a3601a23969b793e2e6ee786e824fbdbba9abd79f9ace",
+    "8n8f-phase_guard/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-phase_guard/availability.jsonl": "50bfe31404e3c522ba98865bb19c34f53df31e7c5b7ec5e2bf4fed130354c17f",
+    "8n8f-phase_guard/wall-clock-samples.json": "c5752b6dd4d7b5cc1680cb2ae48ea493989312606be425f8389ce877abd0b11f",
+    "8n8f-phase_guard/result.json": "c2289081af2f78da606393067c9088b9faebfa2e216ef3b98fafcc5e5bb25aa9",
+    "8n8f-phase_guard/control-ledger.json": "617c35c028eb4ac57acd2146447473b7c9c81c1446fb408a8a16f973255ee967",
+    "8n8f-phase_guard/send.jsonl": "4d651a10f2a0e6f62e7f950f1e4b47a1ad754e8007624e37db951411c8188ff0",
+    "8n8f-phase_guard/actions.jsonl": "b170b319ed5faad9a367142d73539c3211062fd3954ade6df68e7e153748a609",
+    "8n8f-phase_guard/destination.jsonl": "371042a62c7bc74dfe1cfe91dc485decab30fe40f9e0840c8e176e68930e7a7e",
+    "8n8f-phase_guard/notice-schedule.json": "12919cbe1e07b4c05385eb0a923585326f2202211591d84f048673da8b330d52",
+    "8n8f-phase_guard/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "8n8f-phase_guard/tasks.json": "91f49db03f0a8934d8783d3c7d07841b8f42be56559c4dc987bf4f504b4441f8",
+    "8n8f-phase_guard/notice-send.jsonl": "4fbe28d3125e129c9917f3b1dd1b269045f410d3fe9c2972215954eabb3971ca",
+    "8n8f-phase_guard/notices.jsonl": "6876971b45a516db348ddb5ff880956e2861deadecd21dfbc6e55898d01ab60e",
+    "8n8f-phase_guard/report-observations.jsonl": "6ae8386fd238228ed01309ba35f9faae2956d144359342bc7f370dab0091ef3b",
+    "8n8f-phase_guard/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-phase_guard/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-phase_guard/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-phase_guard/collector.pcap": "f37a43ce17eeff19c14f26d784461c016688dae023dd2545cd53df3a5a213a3d",
+    "8n8f-phase_guard/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-phase_guard/decisions.jsonl": "b643542eb3eafbf8d7d231e5488e5240cd1d6333ccc7a65c0a3ed01872e32a0a",
+    "8n8f-phase_joint/count-observations.jsonl": "2fecbabbf0e73e0887ff20a1899afbd4b20beb1191c31067fe690d3c7350a06f",
+    "8n8f-phase_joint/collector.jsonl": "968324b985d3b00dde46a5e7a3a15e0fd6dad8c845237ea1138f6ef8f66f8eeb",
+    "8n8f-phase_joint/algorithm-settings.json": "cecf0b1063acbe0ebe82eb38c7f3e2f2d3f89943ecff975a4194f13bad9884c6",
+    "8n8f-phase_joint/final-state.json": "6509135ad7c0500d28484c20fab1d230c6371bb36c09abf0d5af571effd85fda",
+    "8n8f-phase_joint/packets.json": "227fa626474112feb93f7662c9eab3ec3a1dad8e9ba2113f54aa3cf17a073b38",
+    "8n8f-phase_joint/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-phase_joint/host.json": "f508420b1189c70dd61a1de5bcf4d0d93f57a978758570bb5f444c4769c61eb3",
+    "8n8f-phase_joint/ingestion.jsonl": "e5c2db85f6ae69739a1d2752313a1a8072894fcd71dbc10c3f8bf88898eed2a9",
+    "8n8f-phase_joint/destination.pcap": "5c3ef2d854bd54a18dcfc30fbbd371ff4ec47b363e844e4caf2b813019393757",
+    "8n8f-phase_joint/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-phase_joint/availability.jsonl": "752215c481ef5d8dadf54bd2af185830b2fa63918d269c6d4ccd4aa3fc257ad9",
+    "8n8f-phase_joint/wall-clock-samples.json": "83d51d5658fe1f7b5bb66714dc9feec4f2a37fd5ffc93ae0a200bb68aa31395d",
+    "8n8f-phase_joint/result.json": "3aa3212e70532840b358be5e963b6021f359e0637b152d1358d9952a18f3f2e2",
+    "8n8f-phase_joint/control-ledger.json": "701bbb737e951f613dcc40a1e13fd8bb4846f9725ce928f3576f77ed5e40b2e7",
+    "8n8f-phase_joint/send.jsonl": "07dd940c883deb955b414517b28bc24966399db936ffb73100e2007186df18e5",
+    "8n8f-phase_joint/actions.jsonl": "0d8d2fcc2593556a0f35993f3b52403f9f452302a1938bddd929988aaf5d7cc0",
+    "8n8f-phase_joint/destination.jsonl": "860eb6aa9858692733bfb1164b5fd27bebc69a71cdb2037e42050c481bdc0df5",
+    "8n8f-phase_joint/notice-schedule.json": "12919cbe1e07b4c05385eb0a923585326f2202211591d84f048673da8b330d52",
+    "8n8f-phase_joint/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "8n8f-phase_joint/tasks.json": "91f49db03f0a8934d8783d3c7d07841b8f42be56559c4dc987bf4f504b4441f8",
+    "8n8f-phase_joint/notice-send.jsonl": "230ef383cef50b2bcbee2ef0e42bc9b699814b9539e575fdaa55ca44ccdcc5c1",
+    "8n8f-phase_joint/notices.jsonl": "d4caac06014632a231d73cd3b228dac02fb2d870dc7c54c306f70af2dc1f51be",
+    "8n8f-phase_joint/report-observations.jsonl": "cc06b8ee6efd57d6c53bc6b9282f9d1bbe8f78166dafa2a92edbff4756a965e7",
+    "8n8f-phase_joint/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-phase_joint/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "8n8f-phase_joint/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "8n8f-phase_joint/collector.pcap": "d05610d543fa2867c69fcef98069547501ce9eca2447a88ecf262b3669d52e91",
+    "8n8f-phase_joint/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "8n8f-phase_joint/decisions.jsonl": "87528d423eb8d2259fc5fad4ed3019eed1677b1ecdc9f990255a4ef9b20cef9a",
+    "network-8n8f/node-8/switch.log": "475100937db31566c5ed5629f261e7684b294e10b79c52bc26b04a0fe798cc44",
+    "network-8n8f/node-8/sp0s8-eth2_in.pcap": "8835c7b623dfdb8175ded5246d7518a216299f1112476049a5ee845920acdb07",
+    "network-8n8f/node-8/sp0s8-eth2_out.pcap": "8cdc6dfed37bec94a11b3b37a02a719f101395246feff1d60d1c66fb0cd4226b",
+    "network-8n8f/node-8/sp0s8-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-8/sp0s8-eth1_in.pcap": "ba2259189815baeecfb60f41e528fdeb6edda78a4a54e43c626d430e258fbd31",
+    "network-8n8f/node-4/sp0s4-eth2_in.pcap": "1f1fa4b7382a5b9ba6f06bbeeefee3078ee0953b9b571ba2df88c143a072d1ab",
+    "network-8n8f/node-4/switch.log": "1e0095ff6c78dd0dd21de7fe8d39e98e03a5db62db474ed6f94a6cd24cc62b79",
+    "network-8n8f/node-4/sp0s4-eth2_out.pcap": "f9b0400677f820eb3da23ad179226e41636d4fb9ab2a4859016f8aae2b9b1947",
+    "network-8n8f/node-4/sp0s4-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-4/sp0s4-eth1_in.pcap": "0bbc73bffd81415d02a250ccf270e5d7b25c05f16cc92586424d2571185464ee",
+    "network-8n8f/node-1/sp0s1-eth2_out.pcap": "49e8a0d9d0f879aafc241af9ca42c28dd1acc6dde61370905c1e828f78c44696",
+    "network-8n8f/node-1/sp0s1-eth1_in.pcap": "0511b14a383bc0ae75579729b0056f9f101afb57ae6418a35c4f6007a5de2135",
+    "network-8n8f/node-1/sp0s1-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-1/switch.log": "e548d03885a7c28b7a9207e1d6df198ae6b2c0b25871bfb001d3772339a402f6",
+    "network-8n8f/node-1/sp0s1-eth2_in.pcap": "d443de020824a4112a9172fd1de720f60537bed20e5de2d863132e4204e9609d",
+    "network-8n8f/node-7/sp0s7-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-7/sp0s7-eth2_in.pcap": "fdbb9b44d2fad0a9be5ad1cc934e1dd34326240f8d190639cc5caa15f12b2f61",
+    "network-8n8f/node-7/switch.log": "f77af48fe6581cc92b26f7729765a871205be53dd400623b48fe6cffd73c67d4",
+    "network-8n8f/node-7/sp0s7-eth2_out.pcap": "7b1e6bddcad4ab84ea4b014b8d4592d198f2c60411874c6b59274c6f1aae301c",
+    "network-8n8f/node-7/sp0s7-eth1_in.pcap": "fd894d171682e2ab32aa1d03facfa825f61bcfdacc6e9702e34860c070221242",
+    "network-8n8f/node-9/sp0s9-eth3_in.pcap": "8088dadff6c9bd4d1293691331caf02de0eb14eb9d6bc34853836cecb8a59c25",
+    "network-8n8f/node-9/sp0s9-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-9/control.log": "952ce10fa817674510d77686b37208ba08f15ed71a254334718a349c2d930674",
+    "network-8n8f/node-9/switch.log": "e4f9bbef5de2ca956a76ebd8771d91e28448244b8dbadcdb974dda289d3ad59c",
+    "network-8n8f/node-9/sp0s9-eth3_out.pcap": "b7887a5290d606f73bb6cf7c6884e1c36f0215b0eb5e3e1cf2684c69b5b5d8b3",
+    "network-8n8f/node-9/sp0s9-eth1_in.pcap": "ddd23e29b6fd2b528684596f2d2c5d4a70e97c3ec833ae493ad02ca56bb83dab",
+    "network-8n8f/node-9/sp0s9-eth2_out.pcap": "a21ce370319dada674a49bad98bc57fcb49d596ac9c49ec975d37c712df1534b",
+    "network-8n8f/node-9/sp0s9-eth2_in.pcap": "22f559530f36e6e36dfbaa9b2a3facb55a5b9980a95846272a97cc3ba242f54b",
+    "network-8n8f/node-3/sp0s3-eth4_in.pcap": "54359c5cfd2d78e3f788e8ffb38ae90523d0b25918ce5656d0a1f5ffef19e724",
+    "network-8n8f/node-3/sp0s3-eth3_in.pcap": "d4d7aa9369a74f0daed48b600d40f4f12c39a829045838fa203e38214a278702",
+    "network-8n8f/node-3/sp0s3-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-3/sp0s3-eth2_in.pcap": "195002f9815620bd719c977c07d92deeec7bf752bb118755b46384602309e507",
+    "network-8n8f/node-3/sp0s3-eth1_in.pcap": "0984b93e142b0b4d2160f8533604c00dd854ebd72e874edb463c732456dee7ac",
+    "network-8n8f/node-3/sp0s3-eth2_out.pcap": "7cd0934e49c1a2a94a41262605ddffaa8de6144857d89189f8d0f63ec4994b38",
+    "network-8n8f/node-3/sp0s3-eth4_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-3/switch.log": "4e9e4cdbdbc71682138c1152a28801ecfb6da8f380eec8711a67975dd5b45906",
+    "network-8n8f/node-3/sp0s3-eth3_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-2/sp0s2-eth2_out.pcap": "5cfd6d2a4e163e1c34273a6749e59997fe5a4a0671c383e39c8bb3b3c8bd98c7",
+    "network-8n8f/node-2/sp0s2-eth2_in.pcap": "b59cf913c1ecc575cc11e193d0784b59b95e174fa2653c7441c152ca125b4f9c",
+    "network-8n8f/node-2/sp0s2-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-2/switch.log": "115f0672f18ac608027202b844d06a8129aa0a7c5e20b243900581ff9ec7c3cb",
+    "network-8n8f/node-2/sp0s2-eth1_in.pcap": "9e557a5cb259956f64632f9fb72741aab6d823b7fa404ae683c97896f10d643b",
+    "network-8n8f/node-5/sp0s5-eth2_out.pcap": "afc5068b22a5360b916fa050a10ba096584a03ff62bc2b2c30a5a7d66a2a757a",
+    "network-8n8f/node-5/sp0s5-eth1_in.pcap": "b458d7a64af909026f3db8dad94c2cab65fb9735a16c7e4549bad41582d13921",
+    "network-8n8f/node-5/sp0s5-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-5/switch.log": "56b06ce05f4e67cc171d38924cda96ed3e0628afb2d781bac0a079f41be053c8",
+    "network-8n8f/node-5/sp0s5-eth2_in.pcap": "389c77bdfc82f18a285bc96ae3dca11844709d96cd3fe3eda5ba91758fbea4b8",
+    "network-8n8f/node-6/sp0s6-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-8n8f/node-6/sp0s6-eth2_in.pcap": "da7fc20dcebab5c257c2d7e5f534eb87666969502abbd67265d5dd8c283b5261",
+    "network-8n8f/node-6/sp0s6-eth2_out.pcap": "9b9d380545d110991549a615c45ddb6a5118ba4ddb8cc9acd3e48008f00c6fb8",
+    "network-8n8f/node-6/switch.log": "0662cec63103d20c2203f3056043a8812860fa029eac9fea191782f296290414",
+    "network-8n8f/node-6/sp0s6-eth1_in.pcap": "2ded5a1cb33b3ccb881a25551a8f068a722dda357b3d3d9a1d8bf97c2da77eb7"
+  }
+}
