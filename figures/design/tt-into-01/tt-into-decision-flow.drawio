@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile>
+  <diagram id="tt-into-decision-flow" name="tt-into-decision-flow">
+    <mxGraphModel page="1" pageScale="1" pageWidth="1100" pageHeight="880" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tick" value="Scheduled report tick" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3f8;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=18;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="35" width="235" height="55" />
+        </mxCell>
+        <mxCell id="prefix" value="Read completed report prefix&#10;Record actual availability" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3f8;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="125" width="235" height="75" />
+        </mxCell>
+        <mxCell id="cache" value="Advance shared cache&#10;Only newer valid samples" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3f8;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="235" width="235" height="75" />
+        </mxCell>
+        <mxCell id="due" value="1 s decision&#10;due?" style="shape=rhombus;rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="65" y="350" width="165" height="105" />
+        </mxCell>
+        <mxCell id="next" value="Next scheduled report tick" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="30" y="650" width="235" height="70" />
+        </mxCell>
+        <mxCell id="view" value="Apply field confirmations&#10;Reconcile unresolved fields&#10;Receive demands / own fees" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f8;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="350" y="125" width="285" height="95" />
+        </mxCell>
+        <mxCell id="ready" value="Rates / demands&#10;and configuration&#10;ready?" style="shape=rhombus;rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="395" y="270" width="195" height="115" />
+        </mxCell>
+        <mxCell id="prediction" value="Forecast carrier opportunities&#10;Seed gates and shared recency" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#edf3f8;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="350" y="440" width="285" height="80" />
+        </mxCell>
+        <mxCell id="candidates" value="Evaluate joint configurations&#10;Capacity K; at most 48 candidates&#10;Rank excess / age / field writes" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#f8efe9;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="350" y="570" width="285" height="90" />
+        </mxCell>
+        <mxCell id="guard" value="Post-demand counts ready?&#10;Budget repair or&#10;age gain ≥ δ?" style="shape=rhombus;rounded=0;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="555" width="315" height="150" />
+        </mxCell>
+        <mxCell id="write" value="Submit at most 6 field writes&#10;Record individual confirmations" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#f8efe9;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="410" width="315" height="75" />
+        </mxCell>
+        <mxCell id="hold" value="Keep confirmed configuration" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="730" y="755" width="315" height="65" />
+        </mxCell>
+        <mxCell id="counts" value="Query paid source counters&#10;Once per decision" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=0;fillColor=#f4f6f8;strokeColor=#24374b;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="350" y="780" width="285" height="65" />
+        </mxCell>
+        <mxCell id="tick-read" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="tick" target="prefix">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="read-cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="prefix" target="cache">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="cache-due" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="cache" target="due">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="due-no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="due" target="next">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="no-tick" value="No" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=16;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="158" y="515" width="50" height="30" />
+        </mxCell>
+        <mxCell id="due-yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="due" target="view">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="305" y="402.5" />
+              <mxPoint x="305" y="172.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yes-tick" value="Yes" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=16;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="252" y="366" width="50" height="30" />
+        </mxCell>
+        <mxCell id="view-ready" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="view" target="ready">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="ready-yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="ready" target="prediction">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="ready-yes-label" value="Yes" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=16;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="500" y="391" width="50" height="30" />
+        </mxCell>
+        <mxCell id="ready-no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="ready" target="hold">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="680" y="327.5" />
+              <mxPoint x="680" y="787.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ready-no-label" value="No" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=16;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="615" y="292" width="50" height="30" />
+        </mxCell>
+        <mxCell id="forecast-score" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="prediction" target="candidates">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="score-guard" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="candidates" target="guard">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="700" y="615" />
+              <mxPoint x="700" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="guard-yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="guard" target="write">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="guard-yes-label" value="Yes" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=16;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="913" y="505" width="50" height="30" />
+        </mxCell>
+        <mxCell id="guard-no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="guard" target="hold">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="guard-no-label" value="No" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=16;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="913" y="714" width="50" height="30" />
+        </mxCell>
+        <mxCell id="hold-counts" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="hold" target="counts">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="700" y="787.5" />
+              <mxPoint x="700" y="812.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="write-counts" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=1;exitY=0.5;entryX=1;entryY=0.5;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="write" target="counts">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1070" y="447.5" />
+              <mxPoint x="1070" y="852" />
+              <mxPoint x="660" y="852" />
+              <mxPoint x="660" y="812.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="counts-next" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0;exitY=0.5;entryX=0.5;entryY=1;strokeColor=#24374b;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="counts" target="next">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="290" y="812.5" />
+              <mxPoint x="147.5" y="812.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="return-tick" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;exitX=0;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#4c6988;strokeWidth=1.6;dashed=0;startArrow=none;endArrow=block;" edge="1" parent="1" source="next" target="tick">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="15" y="685" />
+              <mxPoint x="15" y="62.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow-note" value="Report-only ticks add no source-count RPC; all actual calls remain charged" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=0;fillColor=none;strokeColor=none;strokeWidth=1.2;fontFamily=Times New Roman;fontSize=17;fontColor=#172637;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="340" y="24" width="730" height="48" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
