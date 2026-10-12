@@ -1,0 +1,1351 @@
+{
+  "batch_id": "b10",
+  "block": 2,
+  "network_id": "n5f2",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "n5f2-stable-C12-s11",
+      "network_id": "n5f2",
+      "scenario": "stable",
+      "candidate_id": "C12",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        400000,
+        null,
+        null,
+        null,
+        400000,
+        400000,
+        400000,
+        400000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390,
+          "e4": 390,
+          "e5": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 80,
+      "block": 2,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 159176843634000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 24,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159187245380499,
+      "rpc_stop_index": 115,
+      "errors": [],
+      "packet_count": 160,
+      "report_count": 100,
+      "checks": 2096,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2139,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 99,
+      "shared_cache_advances": 99
+    },
+    {
+      "name": "n5f2-stable-C12-s29",
+      "network_id": "n5f2",
+      "scenario": "stable",
+      "candidate_id": "C12",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        400000,
+        null,
+        null,
+        null,
+        400000,
+        400000,
+        400000,
+        400000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390,
+          "e4": 390,
+          "e5": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 81,
+      "block": 2,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 159188350604000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 115,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159198723522771,
+      "rpc_stop_index": 206,
+      "errors": [],
+      "packet_count": 160,
+      "report_count": 100,
+      "checks": 2096,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2139,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 99,
+      "shared_cache_advances": 99
+    },
+    {
+      "name": "n5f2-shared_priority-C05-s11",
+      "network_id": "n5f2",
+      "scenario": "shared_priority",
+      "candidate_id": "C05",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390,
+          "e4": 390,
+          "e5": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 82,
+      "block": 2,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 159199819331000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 206,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159210194637079,
+      "rpc_stop_index": 297,
+      "errors": [],
+      "packet_count": 160,
+      "report_count": 128,
+      "checks": 2208,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2167,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 127,
+      "shared_cache_advances": 127
+    },
+    {
+      "name": "n5f2-shared_priority-C15-s29",
+      "network_id": "n5f2",
+      "scenario": "shared_priority",
+      "candidate_id": "C15",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        200000,
+        600000,
+        800000,
+        1000000,
+        600000,
+        800000,
+        1000000,
+        50000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390,
+          "e4": 390,
+          "e5": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 83,
+      "block": 2,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 159211294808000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 297,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159221702618229,
+      "rpc_stop_index": 388,
+      "errors": [],
+      "packet_count": 160,
+      "report_count": 150,
+      "checks": 2296,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2188,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 148,
+      "shared_cache_advances": 148
+    },
+    {
+      "name": "n5f2-shared_priority-C15-s11",
+      "network_id": "n5f2",
+      "scenario": "shared_priority",
+      "candidate_id": "C15",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        200000,
+        600000,
+        800000,
+        1000000,
+        600000,
+        800000,
+        1000000,
+        50000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390,
+          "e4": 390,
+          "e5": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 84,
+      "block": 2,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 159222833175000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 388,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159233212190037,
+      "rpc_stop_index": 479,
+      "errors": [],
+      "packet_count": 160,
+      "report_count": 151,
+      "checks": 2300,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2189,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 149,
+      "shared_cache_advances": 149
+    },
+    {
+      "name": "n5f2-shared_priority-C05-s29",
+      "network_id": "n5f2",
+      "scenario": "shared_priority",
+      "candidate_id": "C05",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390,
+          "e4": 390,
+          "e5": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 85,
+      "block": 2,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 159234353664000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 479,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159244757326465,
+      "rpc_stop_index": 570,
+      "errors": [],
+      "packet_count": 160,
+      "report_count": 128,
+      "checks": 2208,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2167,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 127,
+      "shared_cache_advances": 127
+    },
+    {
+      "name": "n5f2-stable-C15-s29",
+      "network_id": "n5f2",
+      "scenario": "stable",
+      "candidate_id": "C15",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        200000,
+        600000,
+        800000,
+        1000000,
+        600000,
+        800000,
+        1000000,
+        50000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390,
+          "e4": 390,
+          "e5": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 86,
+      "block": 2,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 159245882303000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 570,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159256288317872,
+      "rpc_stop_index": 661,
+      "errors": [],
+      "packet_count": 160,
+      "report_count": 151,
+      "checks": 2301,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2189,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 149,
+      "shared_cache_advances": 149
+    },
+    {
+      "name": "n5f2-stable-C15-s11",
+      "network_id": "n5f2",
+      "scenario": "stable",
+      "candidate_id": "C15",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        200000,
+        600000,
+        800000,
+        1000000,
+        600000,
+        800000,
+        1000000,
+        50000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 240,
+          "e2": 240,
+          "e3": 390,
+          "e4": 390,
+          "e5": 390
+        },
+        "export_bytes_per_s": 900,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 87,
+      "block": 2,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 159257419218000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 661,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159267791606562,
+      "rpc_stop_index": 752,
+      "errors": [],
+      "packet_count": 160,
+      "report_count": 151,
+      "checks": 2300,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2189,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 149,
+      "shared_cache_advances": 149
+    }
+  ],
+  "started_monotonic_ns": 159175014934112,
+  "switch_pids": [
+    555401,
+    555415,
+    555429,
+    555443,
+    555457,
+    555471
+  ],
+  "cleaned_monotonic_ns": 159269157492973,
+  "artifact_sha256": {
+    "rpc.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "rpc.jsonl": "565a041de06b0c69d8b811ce67866aff782498e3e46e1d363cf78ae174edc681",
+    "rpc-operations.jsonl": "00f3dd08b86f774e89284e3d8bca429aabc35168c766c056147e858555986212",
+    "rpc-capture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rpc.pcap": "fd43509d835f5f8bc585d5eed43b862b34eadf57452d11048a43e0e9f6e20001",
+    "rpc.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C12-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C12-s29/collector.jsonl": "6161f88c69d15c1d2e0034993eb5abf7514a1e4248d6a0f712b41fd30ab9b8ec",
+    "n5f2-stable-C12-s29/algorithm-settings.json": "02c2cacdb9dd9de0dfafbb6b00690b0a2956902a356ae4dab418c23e49308a69",
+    "n5f2-stable-C12-s29/final-state.json": "78effc203a6e7d3b0a6af3c16f8274d90be5409a03a396e5e93d684e5527de2f",
+    "n5f2-stable-C12-s29/packets.json": "f357eba301297aa7a8e73ba3f5b4671b0e48dcdc6ca679a1a00de7c451f137d9",
+    "n5f2-stable-C12-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-stable-C12-s29/host.json": "87f48ee92260e68536bf8e8b01c3d1e9e29147956f5d994bd00c6006652e5151",
+    "n5f2-stable-C12-s29/ingestion.jsonl": "160dfe8a363ee6f68449644ed77d2960e66d81cf979441575f7ae1453e4db6ef",
+    "n5f2-stable-C12-s29/destination.pcap": "50d86a9afafbefddd7505f25d2ab9e8c1779c1d62ff25b6fdec02af7a97ec90d",
+    "n5f2-stable-C12-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C12-s29/availability.jsonl": "557fc174a4e14aa7f172bcebd4353b505e0a575adb8e265d51979ab4cb75704a",
+    "n5f2-stable-C12-s29/wall-clock-samples.json": "1115822403dc93f0defb33d79eb27b8d550ede9b03c2db2b939020b7806653ab",
+    "n5f2-stable-C12-s29/result.json": "54af97e88ad2b8bb18bd8e7e4ca99d6a0769e2e36a963ad79e751cef2949b2e2",
+    "n5f2-stable-C12-s29/control-ledger.json": "48771c0409f58cbdd65cd4df546ff4210f44b33f373c9833099236addc4564a9",
+    "n5f2-stable-C12-s29/send.jsonl": "6c49dfa1467bca760fd47a71a75762ae09afa98805d617546ad7f83b9f81528e",
+    "n5f2-stable-C12-s29/actions.jsonl": "323e40c9057638c543737666397e10a940d6d8f51151f599e2018ee53e3cba50",
+    "n5f2-stable-C12-s29/destination.jsonl": "f89b5211576e0071016e60ee8587d5f1755b9c1ef8dd0c4d9a302e874da190cc",
+    "n5f2-stable-C12-s29/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f2-stable-C12-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f2-stable-C12-s29/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f2-stable-C12-s29/notice-send.jsonl": "5a6355429f3e021ba3f68043760d038be5c6d0159ffff3b969fe74a6aaec3454",
+    "n5f2-stable-C12-s29/notices.jsonl": "8991b18799db5114bc8f736a50315e3af1c37e66d3e3ab7cf4edbb520828d42e",
+    "n5f2-stable-C12-s29/report-observations.jsonl": "271a56f1fc9e3e9c78503b6fbc8998f8fdeb72c0d7c888b777c3052b704c9d44",
+    "n5f2-stable-C12-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C12-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C12-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-stable-C12-s29/collector.pcap": "4575b83ba616c410f0e91723f705542efd3e2e323cd8220d53dbf17d21833500",
+    "n5f2-stable-C12-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C12-s29/decisions.jsonl": "3c607d853d8e5b0c7c3259a21a07eb50b6f95a65a42a98ac4358b130cc52685b",
+    "n5f2-shared_priority-C05-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C05-s11/collector.jsonl": "0b3c49e56a86d21914ea7680f6fe31429412895ff816ccce75dc078462c0ed7b",
+    "n5f2-shared_priority-C05-s11/algorithm-settings.json": "02c2cacdb9dd9de0dfafbb6b00690b0a2956902a356ae4dab418c23e49308a69",
+    "n5f2-shared_priority-C05-s11/final-state.json": "792e2296c468d23c189370ffa543d34760ba230d54fbfa7e41cde75fd2b9dcf0",
+    "n5f2-shared_priority-C05-s11/packets.json": "3d1a3a80dc2d8ae81976e252fccda0b1ac8a551d9ffea31f5c06dc2aca161af2",
+    "n5f2-shared_priority-C05-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-shared_priority-C05-s11/host.json": "cb6d2b8278f4711277b9afeed9b76c465052b658121ef35738b1fac191388773",
+    "n5f2-shared_priority-C05-s11/ingestion.jsonl": "6a0353aed0710342823f658d6e43a9b7de543d45ee68d44a9586b609aec2dde0",
+    "n5f2-shared_priority-C05-s11/destination.pcap": "7874d17b1f1ea3cbbf626e66fdb75cdabb045b219a94f1effb4abfe3f06006c9",
+    "n5f2-shared_priority-C05-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C05-s11/availability.jsonl": "f2637fa61841924ce624b99c3cb1cd4ce0ce0da7a5cbf92ca0251e8ed8d974bf",
+    "n5f2-shared_priority-C05-s11/wall-clock-samples.json": "6bbe390f3ff8d93193d6e994e899b6af1d2771da51117482ad20ea15d8ccb860",
+    "n5f2-shared_priority-C05-s11/result.json": "73883c71763f36336eb85ce106e0ae436ece4ee39b28e501dddb0fbd9c48d96e",
+    "n5f2-shared_priority-C05-s11/control-ledger.json": "38b95c45ff2370b2d896aebf6cd5708e0747964dcc3621c9925028961699a29c",
+    "n5f2-shared_priority-C05-s11/send.jsonl": "9c5d0bc325d5990ca093a42a0ffb5e2cc606e06dcb3dc6a3cc184897cb3b39d7",
+    "n5f2-shared_priority-C05-s11/actions.jsonl": "b895a75b52325c81e9f722c9373b6f195882240485be666c9db65ac622afb4d4",
+    "n5f2-shared_priority-C05-s11/destination.jsonl": "a6bff62bbcdfa76538c948c98df517a819a90e56de4dbf4269bc7105616a99cf",
+    "n5f2-shared_priority-C05-s11/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f2-shared_priority-C05-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f2-shared_priority-C05-s11/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f2-shared_priority-C05-s11/notice-send.jsonl": "457740a06eb12100d3afdf443aac51ef3c3961bc87c51f599052484ffc928c65",
+    "n5f2-shared_priority-C05-s11/notices.jsonl": "71fe3078fd227ac3dab861252a60a165385ab239efb82b21ced7bf04a55941e0",
+    "n5f2-shared_priority-C05-s11/report-observations.jsonl": "1f2222b7bebf62cf2001cf6c03bfc35041be1ded0bda9866947785b5710151c3",
+    "n5f2-shared_priority-C05-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-shared_priority-C05-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-shared_priority-C05-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-shared_priority-C05-s11/collector.pcap": "1e49b3ae835e54e1d9e27038eff71f91dc5c7f00f192fb5975ae24241b3bbf15",
+    "n5f2-shared_priority-C05-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C05-s11/decisions.jsonl": "03184384fbcdbc39ee7098f38c767d03a43ec295e2c353d44eb64c45cac3d8a3",
+    "n5f2-shared_priority-C15-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C15-s29/collector.jsonl": "857bcbd7b127e3737a430548138fadb1c09e7be09af10b0fd2bfb89dd4fb117c",
+    "n5f2-shared_priority-C15-s29/algorithm-settings.json": "02c2cacdb9dd9de0dfafbb6b00690b0a2956902a356ae4dab418c23e49308a69",
+    "n5f2-shared_priority-C15-s29/final-state.json": "131ed4341484dbdce882098065ee3aae0c79ea59a4d811bf8846a61e59ef1062",
+    "n5f2-shared_priority-C15-s29/packets.json": "53ff1a4222239883066a842acf0aff843ff68cb700e82e0f6e3858d07fc2b61b",
+    "n5f2-shared_priority-C15-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-shared_priority-C15-s29/host.json": "de7254c55b9a6975abc934521f8656d1e9f498eeffec8a8aea5ab20dfcf87707",
+    "n5f2-shared_priority-C15-s29/ingestion.jsonl": "e1c0cfee7acb2dc00d2cb80bef6274a982e39d7f161c716d989e307ded2d8aa8",
+    "n5f2-shared_priority-C15-s29/destination.pcap": "ed4d6512b33c1eaff65595e1eef799f0e14ae005a4122e4e8ff23c3f47fd7050",
+    "n5f2-shared_priority-C15-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C15-s29/availability.jsonl": "18b4643a9c3e713f7d3f889667993217e3b55a6c067f1ab10ae18aabdbeabb9e",
+    "n5f2-shared_priority-C15-s29/wall-clock-samples.json": "cb0c7043b41b8c0744f845d736659c7f607b9afa2b7b7a75db26242c5e544b11",
+    "n5f2-shared_priority-C15-s29/result.json": "04c919863cb34f477e73044457f06912789fd1d2bcff5227abf42c3dea1e7b6b",
+    "n5f2-shared_priority-C15-s29/control-ledger.json": "e1f0ef0ba8b51eb8fe7f29aa97a34a7e9689a8b7b0d503bef5854f6736c8dfdd",
+    "n5f2-shared_priority-C15-s29/send.jsonl": "8bae560197fefd06ffa89400914634467f11038f87cb4a5f88bbbb3936287907",
+    "n5f2-shared_priority-C15-s29/actions.jsonl": "771083947aa9ff3b5ed42fbd04623deeb76eee8ee9e1cd4df3aa119708afe40a",
+    "n5f2-shared_priority-C15-s29/destination.jsonl": "3564a1f9d725b4363c9c35ed7d0260272d3c199348d67113daa6b5665b940e50",
+    "n5f2-shared_priority-C15-s29/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f2-shared_priority-C15-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f2-shared_priority-C15-s29/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f2-shared_priority-C15-s29/notice-send.jsonl": "62c6ef314be8d442b1b3938176d33cd75cd7f2b97b4ea4016e86435dda968690",
+    "n5f2-shared_priority-C15-s29/notices.jsonl": "1451730a0d2cac33b77ba465ba5f0136f33c7e2587c1df16ffd2040ff87b13b1",
+    "n5f2-shared_priority-C15-s29/report-observations.jsonl": "445f9c27bbe42da9e5b7fb677447ff37d1337b92a698dc8fdee0a52b170787e0",
+    "n5f2-shared_priority-C15-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-shared_priority-C15-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-shared_priority-C15-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-shared_priority-C15-s29/collector.pcap": "ca5d19d6f136dea584e23044788cf5b3ce49cfdd225e6cf329a06895e2bde7ef",
+    "n5f2-shared_priority-C15-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C15-s29/decisions.jsonl": "b8ffff2eda9d5f9d29d6e4b64832336f0f5ceb52e7ae81fa68f3e2c292d9a921",
+    "n5f2-stable-C15-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C15-s11/collector.jsonl": "057a22fab24eb16c64753376b2540fc71870c1a20fcafbd6d5269a6df599f45a",
+    "n5f2-stable-C15-s11/algorithm-settings.json": "02c2cacdb9dd9de0dfafbb6b00690b0a2956902a356ae4dab418c23e49308a69",
+    "n5f2-stable-C15-s11/final-state.json": "37536c12a48c874948f45e24ac33533d7b5fe095c0980a201f34174c8194b6fe",
+    "n5f2-stable-C15-s11/packets.json": "e45867b4a9baccc9adcba205dca0d8b550ab4e15544dc720e81f48025bb814e7",
+    "n5f2-stable-C15-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-stable-C15-s11/host.json": "98649942ac869bc29fcf1e3fbcfc9474fa3b52086bb8b549f04ebb5ef6cccca2",
+    "n5f2-stable-C15-s11/ingestion.jsonl": "d38348e42aa7560ebc71bfa6fe2f877c8499aa18bba0626da773f6d27471a274",
+    "n5f2-stable-C15-s11/destination.pcap": "cc11aef10b24314529ff53d1c43ea339ee08ce2ac25edf6a7f1ae3aeea1deede",
+    "n5f2-stable-C15-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C15-s11/availability.jsonl": "ac81179dcfcf0c23227b5c39015e9ec36522fab98c002ea43c0367bdd8e4b5d4",
+    "n5f2-stable-C15-s11/wall-clock-samples.json": "261ad2c7c8ff9d7943d220bd93d1e6258d24feffd5f0165d7fde368afa8dc9fc",
+    "n5f2-stable-C15-s11/result.json": "c3a16b11ff24cd620fc5c9cdab6ddc8812cde949a0b8637eecdef4ddab7382bc",
+    "n5f2-stable-C15-s11/control-ledger.json": "cccf2f4c8c6a953ed20d3aaefa30c4dbdb84a5e8ba6d0e065aa114c6131f8ede",
+    "n5f2-stable-C15-s11/send.jsonl": "1ec00815efdaf1bff64a23066fef7ad7a732b6e94c96a506fb9cd1204d0f15b8",
+    "n5f2-stable-C15-s11/actions.jsonl": "cfb14e13839a9e1da8813c6e44f3f818549c92a044fee5a100b362fd0e7a6f79",
+    "n5f2-stable-C15-s11/destination.jsonl": "1190f0f170e146acfbda6f7145bb4fe9da3af6a332c44ff65596f2dc69dd727e",
+    "n5f2-stable-C15-s11/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f2-stable-C15-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f2-stable-C15-s11/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f2-stable-C15-s11/notice-send.jsonl": "f217dd53fcc1aa1645adb443dedaac107c20ae565b13e883e9a03ce5d0f359a1",
+    "n5f2-stable-C15-s11/notices.jsonl": "43daa45b51ddd1d08eba8f175a218c88293624ef833d56d374d91208a0074d65",
+    "n5f2-stable-C15-s11/report-observations.jsonl": "b9da7f7b1b65105f611b30637b7b45ff76bcbc62ada5140cd986ea111b4008f4",
+    "n5f2-stable-C15-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C15-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C15-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-stable-C15-s11/collector.pcap": "4650cd38b9ec3deb706e04520039e000424eb34ecbbcf4a9703b5ce8850ec6ec",
+    "n5f2-stable-C15-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C15-s11/decisions.jsonl": "cd6072a627de925e09b454c25c1cd17423cfc2d2848df7ea7f7e1918ea03062d",
+    "n5f2-shared_priority-C05-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C05-s29/collector.jsonl": "232f2f340ae927e87098ea77a193756c327c79009892d38090a9e8f4f2845fce",
+    "n5f2-shared_priority-C05-s29/algorithm-settings.json": "02c2cacdb9dd9de0dfafbb6b00690b0a2956902a356ae4dab418c23e49308a69",
+    "n5f2-shared_priority-C05-s29/final-state.json": "e15623a1ec44f1d6cf002f3d55974482a6cc0146fb3478f8d397b054a81cada7",
+    "n5f2-shared_priority-C05-s29/packets.json": "67209d719bb9db343dd0007af31da46d2ddd712de3641581e0f513cffbfda3c6",
+    "n5f2-shared_priority-C05-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-shared_priority-C05-s29/host.json": "4d2f8f52b1664955ca306a8aa24a8869ebcbeb4a5f99a57f943f55463527f92b",
+    "n5f2-shared_priority-C05-s29/ingestion.jsonl": "94631be29d62ea65896536c1974263a7d43b5b62449d4bf977ea765ae946185b",
+    "n5f2-shared_priority-C05-s29/destination.pcap": "d529b0311dda4622d8ab9c55edd780f6c0328712d4b4d63b48a1dc61aad357a6",
+    "n5f2-shared_priority-C05-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C05-s29/availability.jsonl": "764a6ee5fbff1cd4aff7c11f7db8c55af4792b4598f5d3b544ff75d3f583ac29",
+    "n5f2-shared_priority-C05-s29/wall-clock-samples.json": "a4b6e0d6a74bff66f80c86f617ece25fd08530b3b5c6d911ca5fed395bcacf41",
+    "n5f2-shared_priority-C05-s29/result.json": "37169fdcd15e434a18efcfa03d50b43907b9a5d2424667a933b03f0195c29a0d",
+    "n5f2-shared_priority-C05-s29/control-ledger.json": "1a7ce67c3c05b3808c8f70a7d7c24478524fd6864f9187098a70a80899b0f2ab",
+    "n5f2-shared_priority-C05-s29/send.jsonl": "4ad03d3a4cff16ef71dab8f525ec442761e61186231b8bc0bc9d17dba88db438",
+    "n5f2-shared_priority-C05-s29/actions.jsonl": "4e72302d0e918ed6cb44affcbe94c8d8b40dd3e399caaa2a4844e89f77435baf",
+    "n5f2-shared_priority-C05-s29/destination.jsonl": "796698d83fbd74f03e24e07170ea01016617ad925582f5e2bc4b4702afe8395c",
+    "n5f2-shared_priority-C05-s29/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f2-shared_priority-C05-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f2-shared_priority-C05-s29/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f2-shared_priority-C05-s29/notice-send.jsonl": "c3670430f07220e44091b91bd6fc64ca9533fc326f3f19b7bbcc5d64fc624dd1",
+    "n5f2-shared_priority-C05-s29/notices.jsonl": "80ed60ee0468bf2c7001ff802a0fc211a829eaef3251fb0112ed02cf99e93b04",
+    "n5f2-shared_priority-C05-s29/report-observations.jsonl": "0b3e5aefcc211f3aebe511c05750abae2cc4f5ba4e669587397a38093f216a73",
+    "n5f2-shared_priority-C05-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-shared_priority-C05-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-shared_priority-C05-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-shared_priority-C05-s29/collector.pcap": "d1513013360e9ee80f4700b2f950d1046037e479604649476a1484f22f2235ce",
+    "n5f2-shared_priority-C05-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C05-s29/decisions.jsonl": "4d071eaccfbf720928645fe788146cbad0536c2534942da61fd907a2cbfa25ec",
+    "n5f2-shared_priority-C15-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C15-s11/collector.jsonl": "465baca127ddc643674bc8b0db923bbba64601e76d77e80e202baebcc20fb70a",
+    "n5f2-shared_priority-C15-s11/algorithm-settings.json": "02c2cacdb9dd9de0dfafbb6b00690b0a2956902a356ae4dab418c23e49308a69",
+    "n5f2-shared_priority-C15-s11/final-state.json": "143630bfd42de94645ef9cbdd6b4785ad3b5f11c0c03b18896b9f8dedbc72db5",
+    "n5f2-shared_priority-C15-s11/packets.json": "4ce174c1fec4410e84f3cc6dbb77edb7319d06436d33afa50b1d22a7697ce395",
+    "n5f2-shared_priority-C15-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-shared_priority-C15-s11/host.json": "ea57953752c2999e2aafa54be0f042ef5b729937da1c356d93fc084645f15bef",
+    "n5f2-shared_priority-C15-s11/ingestion.jsonl": "70f75144a7bf574609e52a74f59f41966157ff88eebd034257749a3183e87a62",
+    "n5f2-shared_priority-C15-s11/destination.pcap": "8b4c1b586874ea1af886c0fa027f431214b32873b3898d6f044695c1074bfec3",
+    "n5f2-shared_priority-C15-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C15-s11/availability.jsonl": "738ddc84e5db89dfecc5661997d19684d5f99491b73761dce96a3c65ae9e0e7f",
+    "n5f2-shared_priority-C15-s11/wall-clock-samples.json": "a39d018c0240385b1e0d10148c830a2908c44fd3854be448bd7c7fed37ed4aa9",
+    "n5f2-shared_priority-C15-s11/result.json": "365846299d3be6ad4bbb3b698011efbbc9ecf0fa22a586b9cc85d8f997f8d717",
+    "n5f2-shared_priority-C15-s11/control-ledger.json": "6cc4d55a48e332455ea9498db4d8de475e20164c78c103b36b765f8df881be2b",
+    "n5f2-shared_priority-C15-s11/send.jsonl": "8370c6647a5d4b2cb752f540b28c8d327b334fd8695d479fd4e0c312dd6af010",
+    "n5f2-shared_priority-C15-s11/actions.jsonl": "b9c599350a5901e1b3a4c6ffe400e83c9b3324063b3b253e920c0afb5dd877da",
+    "n5f2-shared_priority-C15-s11/destination.jsonl": "ca0835e820b7a0781ab38e3cf2001ab96f07783aa9b9f1efdd87ff2b7a7a253a",
+    "n5f2-shared_priority-C15-s11/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f2-shared_priority-C15-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f2-shared_priority-C15-s11/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f2-shared_priority-C15-s11/notice-send.jsonl": "d77c4e3f69fb4f0aa383c085761a7f98d6bb051559f74f122e0f94cf979b65b0",
+    "n5f2-shared_priority-C15-s11/notices.jsonl": "23d897fbd59c1d35da6c838607eeabc9427c075049564add867fa0c0be5f5793",
+    "n5f2-shared_priority-C15-s11/report-observations.jsonl": "7f52e74efd2ecc7aedcfd6d091b5a4d2a6b928502e6dd454a4eded86d0651521",
+    "n5f2-shared_priority-C15-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-shared_priority-C15-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-shared_priority-C15-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-shared_priority-C15-s11/collector.pcap": "7c65481f365dbdbef712cce716029a17b325b79e2d1b57cd2b75eea82480ddf4",
+    "n5f2-shared_priority-C15-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-shared_priority-C15-s11/decisions.jsonl": "2a211d3f9349c8c64a45d55dc674e1aa8b203d7447c9a53e86ce8b6d2708ea72",
+    "n5f2-stable-C12-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C12-s11/collector.jsonl": "2ef6d2686fe11abcfbcaad0f0d40a5a5f2af6cfcfadb4fd3091a126e44b3ee47",
+    "n5f2-stable-C12-s11/algorithm-settings.json": "02c2cacdb9dd9de0dfafbb6b00690b0a2956902a356ae4dab418c23e49308a69",
+    "n5f2-stable-C12-s11/final-state.json": "a6f6b272db80ebb70fdfc2e262240a4207f0690a6ce94d6f49a088052a0165b1",
+    "n5f2-stable-C12-s11/packets.json": "b671ef590e48094f4cf477c361cb5c80271a09a0d95046db6cc989a6ad159a8b",
+    "n5f2-stable-C12-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-stable-C12-s11/host.json": "12a908c21b7671ce62f5778290cf89f06b075ae9c6e8cc57bcf347f221346c98",
+    "n5f2-stable-C12-s11/ingestion.jsonl": "bc676cac6b5e391789c61ee651eaa65a8018bca3b056bbffae8a7578c59b3140",
+    "n5f2-stable-C12-s11/destination.pcap": "e86fd603dd10e316ef2674b68dae5451bf2d7b78078b6a4d3f2b7147872aad61",
+    "n5f2-stable-C12-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C12-s11/availability.jsonl": "eada96393ae77e224210241ae5d61bd176414dc283cb20aae03b3e437f5217f8",
+    "n5f2-stable-C12-s11/wall-clock-samples.json": "57b71c3acf5aebf1bcc6227dcb79627f257e490df0e89449809569c002aba36b",
+    "n5f2-stable-C12-s11/result.json": "79600122e67689a7421a0f524713d28db9278c993c1473a29282c2061cd29a19",
+    "n5f2-stable-C12-s11/control-ledger.json": "03d43df3923b62d6b8ed9e37cf01013c3e9ce7da4e75c17fe5d4d5e52b9aa15d",
+    "n5f2-stable-C12-s11/send.jsonl": "1e43447e371df76f220240b1e6e8e0ea4d55217939eb50955b0460aa7244a794",
+    "n5f2-stable-C12-s11/actions.jsonl": "99ebdce8aa8ba119562c18f206a13d79c9aa822940490861cf94ceb144cc5b49",
+    "n5f2-stable-C12-s11/destination.jsonl": "c43a2e5a48bd89f5c54c994fcc820f8e8e501dc133c6966bd9a1c22f5e695240",
+    "n5f2-stable-C12-s11/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f2-stable-C12-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f2-stable-C12-s11/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f2-stable-C12-s11/notice-send.jsonl": "2039d2b92e464adf54960a63272697600b5067f8c1e8ba0c3718b8fae007118c",
+    "n5f2-stable-C12-s11/notices.jsonl": "7bbb69243098a9b01941ea6df3d5f91de3da05b64f7e1a5390bf06308b7903c2",
+    "n5f2-stable-C12-s11/report-observations.jsonl": "e60488c5ded88fb830f9e51d4a86c7fd9a92c5d5cb52661864cd0c797c27a2b6",
+    "n5f2-stable-C12-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C12-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C12-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-stable-C12-s11/collector.pcap": "5f613ee117866188ddc82c6184ab04a0f259eb83fdc485c38b3a62566ee395d9",
+    "n5f2-stable-C12-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C12-s11/decisions.jsonl": "67bb5adbf28187d41d1bc272f27cbf4dd9f20d6e1da637132c7714c469ad23b0",
+    "n5f2-stable-C15-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C15-s29/collector.jsonl": "65a05e88e1c63c0fe0ecc1b1c588fb435fbd735cb861e5d39b0abb6235da1754",
+    "n5f2-stable-C15-s29/algorithm-settings.json": "02c2cacdb9dd9de0dfafbb6b00690b0a2956902a356ae4dab418c23e49308a69",
+    "n5f2-stable-C15-s29/final-state.json": "b2e9575513ca63bdbef8c91d5a518d087311c0b1aa9d1125c63831a7901cd2eb",
+    "n5f2-stable-C15-s29/packets.json": "3571c81d3bd19566287d0da3297e7d6ed0b94d19b11c5ff2815de263d7585ce4",
+    "n5f2-stable-C15-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-stable-C15-s29/host.json": "518aee17fa481d5ee047525a055a9828adcaf31246b5c072265d7afefea24269",
+    "n5f2-stable-C15-s29/ingestion.jsonl": "1bd84485179f318cc12f574934ded65f2811b84547eb588d36ad7606646b35c8",
+    "n5f2-stable-C15-s29/destination.pcap": "da793a37e86af7e2e6a51b9193e868432b68ff7f673a8731aba694fc0f7ec167",
+    "n5f2-stable-C15-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C15-s29/availability.jsonl": "a93b40244fb37b79ae732dbb73dae67f0b69c8bafd542f9b7360d4bb44746e5d",
+    "n5f2-stable-C15-s29/wall-clock-samples.json": "79182d0d840899833e40d156d85ba17562c09b2ab9182bb3535ae5108d043d3f",
+    "n5f2-stable-C15-s29/result.json": "ca4eabd2a757575f190f45400924cdaf869baf13c2f714a8f318b6b633ce4e7f",
+    "n5f2-stable-C15-s29/control-ledger.json": "b1f23728f6ab67fbe2a4f586dd4f7a37bc48ad64d10dad6b46b30b61daaa3470",
+    "n5f2-stable-C15-s29/send.jsonl": "57e242cb5b4ce773a8dc7dd63e3942107e290d1d821752b400743920213eb2dd",
+    "n5f2-stable-C15-s29/actions.jsonl": "4a2d2d0a3f9a8f7d2e4f0a97d48fc91c8b1b8cd768ee94c54b8a23f430a47647",
+    "n5f2-stable-C15-s29/destination.jsonl": "c8cd1fc9cba5ac038669912d35a7267dd5c3671bd99a8920d19086237ac1f9a6",
+    "n5f2-stable-C15-s29/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f2-stable-C15-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f2-stable-C15-s29/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f2-stable-C15-s29/notice-send.jsonl": "7c358fcfdaff0f4e2b6e310ddf83180269c259c0bd38061f0c79ca8f9241da8d",
+    "n5f2-stable-C15-s29/notices.jsonl": "01861da7965730d85b010381b07db5f70ca84306e27f470c98822e8b60a67408",
+    "n5f2-stable-C15-s29/report-observations.jsonl": "80173da9634d99503a97531412c244a9ed96b1f7eef3634dd8d8c95b42b9cc7b",
+    "n5f2-stable-C15-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C15-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f2-stable-C15-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f2-stable-C15-s29/collector.pcap": "068c3eb5a5c40cb08ff123f47002893b74c6e9cd4851ec2c59abd4758bd31b92",
+    "n5f2-stable-C15-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f2-stable-C15-s29/decisions.jsonl": "857d5e8095049a25768de6594831e8df8cd45372e5579c7d3a87e2ffcae3d867",
+    "network-n5f2/node-4/sts4-eth1_in.pcap": "51cc81c96ee9bd53078cae5476f384471a01c746cc7257595424846799c4b729",
+    "network-n5f2/node-4/sts4-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f2/node-4/sts4-eth2_out.pcap": "b1f4c5c530a4b7798dc6975b39d7ec23d038a7850840adc6cbcf83228063e83f",
+    "network-n5f2/node-4/switch.log": "81c8b80be0922a35a5b83ced89d63e87ae90c30f89eecc5cedc69edf48273017",
+    "network-n5f2/node-4/sts4-eth2_in.pcap": "173c9aad4e863a772f206529a26deedcc0045beca0fe956928c099ff107b3159",
+    "network-n5f2/node-1/sts1-eth2_out.pcap": "9afaaf0ca4f742be531f576691c3cc62047eb420f7320a6f7b29e1e0e4f2baaf",
+    "network-n5f2/node-1/sts1-eth1_in.pcap": "3fafb8e9bfa6528585e6a3c526dd8076b7a6cd1a1d8539716983646fa65f9949",
+    "network-n5f2/node-1/sts1-eth2_in.pcap": "14bcb844761ac914816dbff3bb1eff100b2c78748fde2d544f210204650562bf",
+    "network-n5f2/node-1/switch.log": "b8b2f778d9cf20bae1500690570a3cb85462b943eb57c6ce2f92002e7189e24f",
+    "network-n5f2/node-1/sts1-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f2/node-3/sts3-eth4_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f2/node-3/sts3-eth3_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f2/node-3/sts3-eth2_out.pcap": "99a8c4793148d328d3b1e5cf7965ec777b87729341cc62747b5f998ff92c5b0a",
+    "network-n5f2/node-3/sts3-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f2/node-3/sts3-eth4_in.pcap": "cae4a4b85a8f6a709f9649ede1ce2d37024c6f29722238f7d644503718fad8ef",
+    "network-n5f2/node-3/sts3-eth3_in.pcap": "9f67a45969caa55e641850efa45e788404e5bef31fba43f101be5311b76816a1",
+    "network-n5f2/node-3/sts3-eth2_in.pcap": "3b27387cb6319fb8f0e90ee5b16808c6a4fee64cdbec449afea0f1d474d7fecb",
+    "network-n5f2/node-3/switch.log": "9affdd96cd57b7e225d8652f0ca4a3aa3df1743c253a3d7b50df786a5808b165",
+    "network-n5f2/node-3/sts3-eth1_in.pcap": "209e13b71fc5d59f5b03905bbbe4a95504b1e1c5b98208197c6f78e1a09815ca",
+    "network-n5f2/node-2/sts2-eth1_in.pcap": "5dc8e876ee1e3a284a4e6a39b2bbe0cd373f4babbf4027fe384bfad7e277838f",
+    "network-n5f2/node-2/sts2-eth2_in.pcap": "8551f8617ba25d8a45cd557e5dea2d7bac79b3ed2bde55b53e92318f862fa2b6",
+    "network-n5f2/node-2/sts2-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f2/node-2/switch.log": "0210d26fa40fb305f8c1e05ba4e56e9968b947295632ff479dcc7ac56d152d48",
+    "network-n5f2/node-2/sts2-eth2_out.pcap": "281cad52c3ce67e2ff5a0b338113368ba3370f808527e93cfb34d27e939c929d",
+    "network-n5f2/node-5/sts5-eth2_in.pcap": "ac097a2bfab38ebbf6aa340bc28df6320fee4cf4a62f74291476f286dabbd2f4",
+    "network-n5f2/node-5/sts5-eth1_in.pcap": "d3624c2f0f21227ffb4650f5c8700177d7b420af31b30709a85d893b5f05c83c",
+    "network-n5f2/node-5/sts5-eth2_out.pcap": "02eb817cdcca1a3ea0cd4dc9345c4638ea0301bca4484ccbd7f7db43e0ff36b6",
+    "network-n5f2/node-5/switch.log": "1a42b901b471bb44afe8435edbd429cad390f722d85844aae745c533c29437b4",
+    "network-n5f2/node-5/sts5-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f2/node-6/sts6-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f2/node-6/sts6-eth1_in.pcap": "c2c86a00f38b2278eb6c0b061768cef96c13f3e361cb5873d375a1d68e632941",
+    "network-n5f2/node-6/sts6-eth3_out.pcap": "61822d738939abf607147ca55e5f1bf77124fedd595a99fe996187bd1ed8c0af",
+    "network-n5f2/node-6/control.log": "952ce10fa817674510d77686b37208ba08f15ed71a254334718a349c2d930674",
+    "network-n5f2/node-6/switch.log": "7cbbdad999be73c6817fbdfbf82edbd93da31f3bc2e5252afb71e4054ea4f69b",
+    "network-n5f2/node-6/sts6-eth2_out.pcap": "99c5abcc1170c64b5b2fe389ba8e0188fa4a56d1245f54470628577cd565f811",
+    "network-n5f2/node-6/sts6-eth2_in.pcap": "eaba50730154dd902824ea0e8d5d5c9ea3c36fac0dc11500071b095b7b1f6244",
+    "network-n5f2/node-6/sts6-eth3_in.pcap": "b99475f7860c55c213d9ff5f914780d49d4fec92be4b5e9eb4be3e490aa12d4d"
+  }
+}

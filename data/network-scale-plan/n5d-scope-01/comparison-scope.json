@@ -1,0 +1,670 @@
+{
+  "stage": "n5d_scale_comparison_scope",
+  "status": "methods_and_scope_frozen",
+  "execution_ready": false,
+  "source_analysis": {
+    "path": "data/network-scale-validation/n5c-confirm-01",
+    "manifest_sha256": "4633c98a4116c5cf2bee3bd4a0ab59c32465a6a87bc9bf755e1031b28de8cf1b",
+    "frozen_static_sha256": "188ea60c31076b39d69ca76a42a8ffc063928610fc2739b1ab7c0974c0c161d1"
+  },
+  "parameter_reference": {
+    "path": "data/literature-adaptation-plan/n4f-comparison-01/method-contract.json",
+    "sha256": "247a507bb891aa7f62426ea0bdb43d68c45631afc413397333ed4e5ab46c406e"
+  },
+  "methods": [
+    "static",
+    "feedback",
+    "phase_joint",
+    "phase_guard",
+    "intopp_due",
+    "d_into_tt"
+  ],
+  "method_parameters": {
+    "static": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "feedback": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "phase_joint": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "phase_guard": {
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "intopp_due": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      }
+    },
+    "d_into_tt": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      }
+    }
+  },
+  "cells": [
+    {
+      "network_id": "n3f2",
+      "scenario": "stable",
+      "candidate_id": "C21",
+      "initial_config": [
+        150000,
+        400000,
+        200000,
+        200000
+      ]
+    },
+    {
+      "network_id": "n3f2",
+      "scenario": "shared_priority",
+      "candidate_id": "C22",
+      "initial_config": [
+        600000,
+        100000,
+        400000,
+        150000
+      ]
+    },
+    {
+      "network_id": "n5f2",
+      "scenario": "shared_priority",
+      "candidate_id": "C05",
+      "initial_config": [
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000,
+        600000
+      ]
+    },
+    {
+      "network_id": "n8f2",
+      "scenario": "stable",
+      "candidate_id": "C41",
+      "initial_config": [
+        1000000,
+        null,
+        null,
+        400000,
+        null,
+        400000,
+        600000,
+        1000000,
+        1000000,
+        null,
+        null,
+        null,
+        null,
+        150000
+      ]
+    },
+    {
+      "network_id": "n8f2",
+      "scenario": "shared_priority",
+      "candidate_id": "C41",
+      "initial_config": [
+        1000000,
+        null,
+        null,
+        400000,
+        null,
+        400000,
+        600000,
+        1000000,
+        1000000,
+        null,
+        null,
+        null,
+        null,
+        150000
+      ]
+    },
+    {
+      "network_id": "n5f4",
+      "scenario": "stable",
+      "candidate_id": "C18",
+      "initial_config": [
+        150000,
+        400000,
+        600000,
+        800000,
+        400000,
+        600000,
+        800000,
+        1000000,
+        400000,
+        800000,
+        1000000,
+        50000,
+        800000,
+        1000000,
+        50000,
+        100000
+      ]
+    },
+    {
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ]
+    },
+    {
+      "network_id": "n5f8",
+      "scenario": "stable",
+      "candidate_id": "C38",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        50000,
+        200000,
+        null,
+        null,
+        150000,
+        null,
+        1000000,
+        50000,
+        400000,
+        600000,
+        null,
+        600000,
+        null,
+        null,
+        150000,
+        1000000,
+        null,
+        null,
+        200000,
+        null,
+        null,
+        400000,
+        100000,
+        null,
+        null,
+        null,
+        600000,
+        50000
+      ]
+    },
+    {
+      "network_id": "n5f8",
+      "scenario": "shared_priority",
+      "candidate_id": "C38",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        50000,
+        200000,
+        null,
+        null,
+        150000,
+        null,
+        1000000,
+        50000,
+        400000,
+        600000,
+        null,
+        600000,
+        null,
+        null,
+        150000,
+        1000000,
+        null,
+        null,
+        200000,
+        null,
+        null,
+        400000,
+        100000,
+        null,
+        null,
+        null,
+        600000,
+        50000
+      ]
+    }
+  ],
+  "excluded_cells": [
+    {
+      "network_id": "n5f2",
+      "scenario": "stable",
+      "reason": "no_common_feasible_candidate"
+    }
+  ],
+  "networks": {
+    "n3f2": {
+      "family": "two_entry_merge_chain",
+      "sampling_nodes": 3,
+      "sink": 4,
+      "flows": [
+        {
+          "identity": {
+            "session": 20,
+            "tag": 1001
+          },
+          "slot": 1,
+          "sport": 10101,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 2002
+          },
+          "slot": 7,
+          "sport": 10107,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "n5f2": {
+      "family": "two_entry_merge_chain",
+      "sampling_nodes": 5,
+      "sink": 6,
+      "flows": [
+        {
+          "identity": {
+            "session": 20,
+            "tag": 1001
+          },
+          "slot": 1,
+          "sport": 10101,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 2002
+          },
+          "slot": 7,
+          "sport": 10107,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "n8f2": {
+      "family": "two_entry_merge_chain",
+      "sampling_nodes": 8,
+      "sink": 9,
+      "flows": [
+        {
+          "identity": {
+            "session": 20,
+            "tag": 1001
+          },
+          "slot": 1,
+          "sport": 10101,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 2002
+          },
+          "slot": 7,
+          "sport": 10107,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    "n5f4": {
+      "family": "two_entry_merge_chain",
+      "sampling_nodes": 5,
+      "sink": 6,
+      "flows": [
+        {
+          "identity": {
+            "session": 20,
+            "tag": 1001
+          },
+          "slot": 1,
+          "sport": 10101,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 2002
+          },
+          "slot": 7,
+          "sport": 10107,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 3003
+          },
+          "slot": 42,
+          "sport": 10142,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 4004
+          },
+          "slot": 250,
+          "sport": 10350,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "n5f8": {
+      "family": "two_entry_merge_chain",
+      "sampling_nodes": 5,
+      "sink": 6,
+      "flows": [
+        {
+          "identity": {
+            "session": 20,
+            "tag": 1001
+          },
+          "slot": 1,
+          "sport": 10101,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 2002
+          },
+          "slot": 7,
+          "sport": 10107,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 3003
+          },
+          "slot": 42,
+          "sport": 10142,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 4004
+          },
+          "slot": 250,
+          "sport": 10350,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 5005
+          },
+          "slot": 2,
+          "sport": 10102,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 6006
+          },
+          "slot": 3,
+          "sport": 10103,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 7007
+          },
+          "slot": 4,
+          "sport": 10104,
+          "entry_node": 1,
+          "source_interface_index": 0,
+          "path": [
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "identity": {
+            "session": 20,
+            "tag": 8008
+          },
+          "slot": 5,
+          "sport": 10105,
+          "entry_node": 2,
+          "source_interface_index": 1,
+          "path": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  "expected_cases": 432,
+  "independent_business_count": 4,
+  "business_seeds": [],
+  "business_seed_audit_required": true,
+  "business_generated": false,
+  "network_started": false,
+  "blocks": [
+    0,
+    1
+  ],
+  "execution_order_frozen": false,
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "capacity": 1,
+  "duration_us": 10000000,
+  "measurement_window_us": [
+    2000000,
+    10000000
+  ],
+  "budget_rule": {
+    "entry_link_bytes_per_s_per_flow": 120,
+    "common_link_bytes_per_s_per_flow": 195,
+    "export_bytes_per_s_per_flow": 450,
+    "api_bytes_per_s": 1200,
+    "local_notice_payload_bytes_per_s": 128
+  },
+  "candidate_limit": 48,
+  "field_write_limit": 6,
+  "scope": "九个确认通过单元的六方法比较准备，未生成新业务或冻结真实执行顺序"
+}

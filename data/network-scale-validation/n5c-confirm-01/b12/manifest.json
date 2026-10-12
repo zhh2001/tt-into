@@ -1,0 +1,2743 @@
+{
+  "batch_id": "b12",
+  "block": 2,
+  "network_id": "n5f8",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "n5f8-shared_priority-C38-s11",
+      "network_id": "n5f8",
+      "scenario": "shared_priority",
+      "candidate_id": "C38",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        50000,
+        200000,
+        null,
+        null,
+        150000,
+        null,
+        1000000,
+        50000,
+        400000,
+        600000,
+        null,
+        600000,
+        null,
+        null,
+        150000,
+        1000000,
+        null,
+        null,
+        200000,
+        null,
+        null,
+        400000,
+        100000,
+        null,
+        null,
+        null,
+        600000,
+        50000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 960,
+          "e2": 960,
+          "e3": 1560,
+          "e4": 1560,
+          "e5": 1560
+        },
+        "export_bytes_per_s": 3600,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 96,
+      "block": 2,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 159364777898000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 60,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159375226460604,
+      "rpc_stop_index": 349,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 499,
+      "checks": 8324,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2536,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 496,
+      "shared_cache_advances": 496
+    },
+    {
+      "name": "n5f8-stable-C38-s29",
+      "network_id": "n5f8",
+      "scenario": "stable",
+      "candidate_id": "C38",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        50000,
+        200000,
+        null,
+        null,
+        150000,
+        null,
+        1000000,
+        50000,
+        400000,
+        600000,
+        null,
+        600000,
+        null,
+        null,
+        150000,
+        1000000,
+        null,
+        null,
+        200000,
+        null,
+        null,
+        400000,
+        100000,
+        null,
+        null,
+        null,
+        600000,
+        50000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 960,
+          "e2": 960,
+          "e3": 1560,
+          "e4": 1560,
+          "e5": 1560
+        },
+        "export_bytes_per_s": 3600,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 97,
+      "block": 2,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 159376771200000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 349,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159387225562725,
+      "rpc_stop_index": 638,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 499,
+      "checks": 8324,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2534,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 494,
+      "shared_cache_advances": 494
+    },
+    {
+      "name": "n5f8-stable-C47-s29",
+      "network_id": "n5f8",
+      "scenario": "stable",
+      "candidate_id": "C47",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        150000,
+        null,
+        100000,
+        400000,
+        150000,
+        null,
+        null,
+        200000,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        600000,
+        200000,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        100000,
+        null,
+        400000,
+        null,
+        100000,
+        null,
+        800000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 960,
+          "e2": 960,
+          "e3": 1560,
+          "e4": 1560,
+          "e5": 1560
+        },
+        "export_bytes_per_s": 3600,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 98,
+      "block": 2,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 159388753460000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 638,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159399158813250,
+      "rpc_stop_index": 927,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 367,
+      "checks": 7796,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2403,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 363,
+      "shared_cache_advances": 363
+    },
+    {
+      "name": "n5f8-shared_priority-C38-s29",
+      "network_id": "n5f8",
+      "scenario": "shared_priority",
+      "candidate_id": "C38",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        50000,
+        200000,
+        null,
+        null,
+        150000,
+        null,
+        1000000,
+        50000,
+        400000,
+        600000,
+        null,
+        600000,
+        null,
+        null,
+        150000,
+        1000000,
+        null,
+        null,
+        200000,
+        null,
+        null,
+        400000,
+        100000,
+        null,
+        null,
+        null,
+        600000,
+        50000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 960,
+          "e2": 960,
+          "e3": 1560,
+          "e4": 1560,
+          "e5": 1560
+        },
+        "export_bytes_per_s": 3600,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 99,
+      "block": 2,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 159400652180000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 927,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159411104918131,
+      "rpc_stop_index": 1216,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 499,
+      "checks": 8324,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2535,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 495,
+      "shared_cache_advances": 495
+    },
+    {
+      "name": "n5f8-stable-C47-s11",
+      "network_id": "n5f8",
+      "scenario": "stable",
+      "candidate_id": "C47",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        150000,
+        null,
+        100000,
+        400000,
+        150000,
+        null,
+        null,
+        200000,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        600000,
+        200000,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        100000,
+        null,
+        400000,
+        null,
+        100000,
+        null,
+        800000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 960,
+          "e2": 960,
+          "e3": 1560,
+          "e4": 1560,
+          "e5": 1560
+        },
+        "export_bytes_per_s": 3600,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 100,
+      "block": 2,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 159412655519000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 1216,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159423099882665,
+      "rpc_stop_index": 1505,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 368,
+      "checks": 7800,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2405,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 365,
+      "shared_cache_advances": 365
+    },
+    {
+      "name": "n5f8-shared_priority-C42-s11",
+      "network_id": "n5f8",
+      "scenario": "shared_priority",
+      "candidate_id": "C42",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        1000000,
+        null,
+        null,
+        null,
+        1000000,
+        100000,
+        null,
+        null,
+        null,
+        null,
+        400000,
+        400000,
+        150000,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        100000,
+        null,
+        100000,
+        null,
+        150000,
+        null,
+        100000,
+        null,
+        null,
+        1000000,
+        null,
+        150000,
+        null
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 960,
+          "e2": 960,
+          "e3": 1560,
+          "e4": 1560,
+          "e5": 1560
+        },
+        "export_bytes_per_s": 3600,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 101,
+      "block": 2,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 159424573631000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 1505,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159434987451755,
+      "rpc_stop_index": 1794,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 455,
+      "checks": 8148,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2491,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 451,
+      "shared_cache_advances": 451
+    },
+    {
+      "name": "n5f8-stable-C38-s11",
+      "network_id": "n5f8",
+      "scenario": "stable",
+      "candidate_id": "C38",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        50000,
+        200000,
+        null,
+        null,
+        150000,
+        null,
+        1000000,
+        50000,
+        400000,
+        600000,
+        null,
+        600000,
+        null,
+        null,
+        150000,
+        1000000,
+        null,
+        null,
+        200000,
+        null,
+        null,
+        400000,
+        100000,
+        null,
+        null,
+        null,
+        600000,
+        50000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 960,
+          "e2": 960,
+          "e3": 1560,
+          "e4": 1560,
+          "e5": 1560
+        },
+        "export_bytes_per_s": 3600,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 102,
+      "block": 2,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 159436512591000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 1794,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159446930749161,
+      "rpc_stop_index": 2083,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 500,
+      "checks": 8328,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2536,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 496,
+      "shared_cache_advances": 496
+    },
+    {
+      "name": "n5f8-shared_priority-C42-s29",
+      "network_id": "n5f8",
+      "scenario": "shared_priority",
+      "candidate_id": "C42",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        1000000,
+        null,
+        null,
+        null,
+        1000000,
+        100000,
+        null,
+        null,
+        null,
+        null,
+        400000,
+        400000,
+        150000,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        100000,
+        null,
+        100000,
+        null,
+        150000,
+        null,
+        100000,
+        null,
+        null,
+        1000000,
+        null,
+        150000,
+        null
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 960,
+          "e2": 960,
+          "e3": 1560,
+          "e4": 1560,
+          "e5": 1560
+        },
+        "export_bytes_per_s": 3600,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 103,
+      "block": 2,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 159448481125000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 5005
+            },
+            "slot": 2,
+            "sport": 10102,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 6006
+            },
+            "slot": 3,
+            "sport": 10103,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 7007
+            },
+            "slot": 4,
+            "sport": 10104,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 8008
+            },
+            "slot": 5,
+            "sport": 10105,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 5005
+          },
+          "node": 1,
+          "slot": 2,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 6006
+          },
+          "node": 2,
+          "slot": 3,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 7007
+          },
+          "node": 1,
+          "slot": 4,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 8008
+          },
+          "node": 2,
+          "slot": 5,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 2083,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 159458928354942,
+      "rpc_stop_index": 2372,
+      "errors": [],
+      "packet_count": 640,
+      "report_count": 455,
+      "checks": 8148,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2491,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 451,
+      "shared_cache_advances": 451
+    }
+  ],
+  "started_monotonic_ns": 159362805253848,
+  "switch_pids": [
+    556563,
+    556577,
+    556591,
+    556605,
+    556619,
+    556633
+  ],
+  "cleaned_monotonic_ns": 159460582390070,
+  "artifact_sha256": {
+    "rpc.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "rpc.jsonl": "9f475949030d1cf106442250f7e03034e79ddf208e7e70330e5b40d1350cde8d",
+    "rpc-operations.jsonl": "4b8506aa2afff4d6b09866332707a4d56252c38e8701f7fc8ab9c6d9b10dffba",
+    "rpc-capture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rpc.pcap": "8f1abd6a488827ad96a956d62ec50913c86e153e56da40e9a36ac60b26de8673",
+    "rpc.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C42-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C42-s11/collector.jsonl": "55ed79c1bb41734f95cda5b293a955e54ff9678e04a03aaa13daa21df1c5202d",
+    "n5f8-shared_priority-C42-s11/algorithm-settings.json": "c9de99cb36b62e27a92ab5b7bc3f1a1c89a44d278190a32003d6e56436a811a7",
+    "n5f8-shared_priority-C42-s11/final-state.json": "9808e7e38060da68e4b7a7aa31e99ca8f1f5c1f41a7db0bfaa771400d9cb2041",
+    "n5f8-shared_priority-C42-s11/packets.json": "9d135497c7044da351c996302fcc5f60961ee654bbaee74098d122fb6bdfd7b1",
+    "n5f8-shared_priority-C42-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-shared_priority-C42-s11/host.json": "ef7fdc688be0caaa0779be37f2c9b043868b755c111cf035ab844b4776239a48",
+    "n5f8-shared_priority-C42-s11/ingestion.jsonl": "88cdec77e15b9e5762150b48f45e2bd9ce8c8d888117b4ef1c62c128f113df1d",
+    "n5f8-shared_priority-C42-s11/destination.pcap": "b8a562062288c3c481eaf143a97497dce489b504cd520e4a52e60499cb016f32",
+    "n5f8-shared_priority-C42-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C42-s11/availability.jsonl": "f48d0f1ac87ee181b44d4dc49691ccd7c687f16fc85c94f0e53a8f28523d0168",
+    "n5f8-shared_priority-C42-s11/wall-clock-samples.json": "67550291d7b64fb0bb12c261ca1a281ff845c5509f7f320965019ef1a8dab2fa",
+    "n5f8-shared_priority-C42-s11/result.json": "f230d859550ae4f63de660d468ec346e8ed397f63ce079dd5ea1a6c77f4a4634",
+    "n5f8-shared_priority-C42-s11/control-ledger.json": "7c55b2009c36465bf56ca1ef55eac14a483eea1d5d03061a94e6f044dc432445",
+    "n5f8-shared_priority-C42-s11/send.jsonl": "6b34e0f82fa5b32539359fe38ec302f5d00e14242ac7c35d9948fd3cdd361f73",
+    "n5f8-shared_priority-C42-s11/actions.jsonl": "09c1488fe3a0b8704c1696b964a384f31cd1fdd59ebfb8cf26a1b250f36ed0d0",
+    "n5f8-shared_priority-C42-s11/destination.jsonl": "cf866b4bbad5efb3ffb4f8ac12223f817eb04a1aca9c6ecc3a009042c8ad6441",
+    "n5f8-shared_priority-C42-s11/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f8-shared_priority-C42-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f8-shared_priority-C42-s11/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f8-shared_priority-C42-s11/notice-send.jsonl": "cf8c3ca77579b7d8b53dfeb5d637dd0cf304f23f6eb92c31178a9c125e4a3eb0",
+    "n5f8-shared_priority-C42-s11/notices.jsonl": "9998c1e750fd092ef535c96248795d582e02e0f04a8fb92f0404ab82556e5836",
+    "n5f8-shared_priority-C42-s11/report-observations.jsonl": "7f9f476b5eca4138595fd60caa67f11d49f93f45cc241f024e11aff38f7c70a6",
+    "n5f8-shared_priority-C42-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C42-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C42-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-shared_priority-C42-s11/collector.pcap": "1ae075130014ed06cc27e391740ec2cdf7e454fc24960b5a95ae15a558593e84",
+    "n5f8-shared_priority-C42-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C42-s11/decisions.jsonl": "c65922922b0582481eb38457bb25374474c4f9b254bcfac958e6040450e88189",
+    "n5f8-stable-C47-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C47-s11/collector.jsonl": "4fb6718cf096989f17d3dfee979398c801bab81c3e088d90e9cd886fb6f89708",
+    "n5f8-stable-C47-s11/algorithm-settings.json": "c9de99cb36b62e27a92ab5b7bc3f1a1c89a44d278190a32003d6e56436a811a7",
+    "n5f8-stable-C47-s11/final-state.json": "5ff501b8da23187e51fad0b93a82436fd88cf1df59a2ddf09e343ca7f062163c",
+    "n5f8-stable-C47-s11/packets.json": "0674c07dd47812c52125141dd39339bc64df14694357d5cde187d4fc729c44ce",
+    "n5f8-stable-C47-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-stable-C47-s11/host.json": "88bbf01646450ba0d32c8a18512dcc64faed0c4f85b0e2b8630473d05f064cc2",
+    "n5f8-stable-C47-s11/ingestion.jsonl": "c3c2d2e23780723d53f20c5fdabb110ecc79b5f0b29be9c3789ea18b65a81972",
+    "n5f8-stable-C47-s11/destination.pcap": "50751e57f73005cd6f975f211a6606ceae70b58cd05712cf04bf1ffebe4c4e05",
+    "n5f8-stable-C47-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C47-s11/availability.jsonl": "eb6f71ce29e726c39ec76b846cee81eaa944561f93361f8080facff6ab1795e8",
+    "n5f8-stable-C47-s11/wall-clock-samples.json": "b3b6bb456ec475397b67de14d667ff1ace605ae6b005d447ec07f53f123057fb",
+    "n5f8-stable-C47-s11/result.json": "95660587e2d0b9ef692abb01b8c465574053c4a31366c1ed304efd5ef4fe03b3",
+    "n5f8-stable-C47-s11/control-ledger.json": "0aac9f5c131ce928190bb80c9a7308f2197cce7505670724abf0e955ebfefcee",
+    "n5f8-stable-C47-s11/send.jsonl": "94fdab66b7e79ff5717c4784d4ec0e61f34e8e3329e24a6967cf0d4aba1688f3",
+    "n5f8-stable-C47-s11/actions.jsonl": "35ff5b01fbbd2f7a048f87d76ecb972f9400aaa7e19c6091107aa1592d6eb56f",
+    "n5f8-stable-C47-s11/destination.jsonl": "77c29ae55d29414f784abef205b9bf3f89773245809caab64b18f02fac8667bd",
+    "n5f8-stable-C47-s11/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f8-stable-C47-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f8-stable-C47-s11/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f8-stable-C47-s11/notice-send.jsonl": "92887879c8f1f41b8e1b6f80396ee35dde8f069d4452d603726a689953dedfc5",
+    "n5f8-stable-C47-s11/notices.jsonl": "f1f768d040776e227511f4fe42be72eb119f77d8c3b2ed306414029cdcbdb6b4",
+    "n5f8-stable-C47-s11/report-observations.jsonl": "1a2c3a514229cc18ed249f3a6e1927035e02d1c959bfc3d4b45616ea9d96f60a",
+    "n5f8-stable-C47-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-stable-C47-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-stable-C47-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-stable-C47-s11/collector.pcap": "8a54364e08ce75ceca238383cc09a856c707939e70472ffd9feeffa660751049",
+    "n5f8-stable-C47-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C47-s11/decisions.jsonl": "082d88e637cc4ea8e7aa2128ac69b16d197a9885c3378f04b1cce8c2113babc7",
+    "n5f8-stable-C38-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C38-s11/collector.jsonl": "1e0a30612bad34dd472ca26b5e00a1cfd971f3554b95cd2ed1a63866805e1c5d",
+    "n5f8-stable-C38-s11/algorithm-settings.json": "c9de99cb36b62e27a92ab5b7bc3f1a1c89a44d278190a32003d6e56436a811a7",
+    "n5f8-stable-C38-s11/final-state.json": "392b6ae32888ae1092ca5e7ee61c88dafeedf066d8e9576c7c00c591f800a905",
+    "n5f8-stable-C38-s11/packets.json": "0e15f5a8b3b775a958a884b0138238039443d63d86d9915d61f2f36db42cf4d5",
+    "n5f8-stable-C38-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-stable-C38-s11/host.json": "c1478c710f3b49db219adf451762d8cdf72e71ada46961aa56475e926b51ca51",
+    "n5f8-stable-C38-s11/ingestion.jsonl": "a8b9b7709be87a386173298a4e669e9fdfc5b916c24bf41953feee915ed88f3c",
+    "n5f8-stable-C38-s11/destination.pcap": "7bdac071857c11a469a7fb239a1431ec8f81b163ec22ab8c6fca7a7f89c47fc8",
+    "n5f8-stable-C38-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C38-s11/availability.jsonl": "a19bc6980781345e20b5e2c1de9d7d300936db4167d8e586233718086276482a",
+    "n5f8-stable-C38-s11/wall-clock-samples.json": "4c59506e677c853485dd22db86abda2082c7d7148109fb07ac1fbc64b328c89a",
+    "n5f8-stable-C38-s11/result.json": "252432a264850ccec9b868ff006e500f4cd01e4389c971ceec7b4ad134d26892",
+    "n5f8-stable-C38-s11/control-ledger.json": "ef3bc60af6ec2d642be68e759a9a9a967fbbacd2261b2753be90733a6e2fea5c",
+    "n5f8-stable-C38-s11/send.jsonl": "b0e268d0114ac5df97c49a03a3d4feb1a93c07a5fe6f2ba052298803c07375c9",
+    "n5f8-stable-C38-s11/actions.jsonl": "124b5e5cb786234fd707a6b95d1867394c65c5d685870a8db75f0819b7c251a8",
+    "n5f8-stable-C38-s11/destination.jsonl": "e12e585a097ee9cadc148bf3346284b5de9664b7a025fde22cfec46a30f47403",
+    "n5f8-stable-C38-s11/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f8-stable-C38-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f8-stable-C38-s11/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f8-stable-C38-s11/notice-send.jsonl": "204470600312415509c692d0d713f38cf71b99236e141fcf0265d8a8edb2ae81",
+    "n5f8-stable-C38-s11/notices.jsonl": "cb6efa6660b85c7356fae5abbca8ba30f6b4f6eaac71e362079e9fc3f6dc3f88",
+    "n5f8-stable-C38-s11/report-observations.jsonl": "59805292e49274e95bb717bcadcd102f608156254a674bfaa20210e1a01e5576",
+    "n5f8-stable-C38-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-stable-C38-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-stable-C38-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-stable-C38-s11/collector.pcap": "9842791440766eaf16c14b866d613f7c2d29548d2c0eda120dbbd68a8fa2260b",
+    "n5f8-stable-C38-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C38-s11/decisions.jsonl": "73d26a90a4f9186091fde7d092f76a1e3649d42b0386c9374520e090af78d58b",
+    "n5f8-shared_priority-C42-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C42-s29/collector.jsonl": "3353595c0564001bc1aa91b87f7aa98d3c8d81a79dda8310c77686b4733a83ba",
+    "n5f8-shared_priority-C42-s29/algorithm-settings.json": "c9de99cb36b62e27a92ab5b7bc3f1a1c89a44d278190a32003d6e56436a811a7",
+    "n5f8-shared_priority-C42-s29/final-state.json": "b7eea19915cb63f45f58a2ace73faa921dab39ccbffbd1b49fba57a398b76db0",
+    "n5f8-shared_priority-C42-s29/packets.json": "1879319de49e2de12f31629f754ff18cf7dd0c70e28f5fef0e138efc75c1d6e2",
+    "n5f8-shared_priority-C42-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-shared_priority-C42-s29/host.json": "34aed52e686349cc706c73d8cdf23f874761e4160f69c6683658307825b842df",
+    "n5f8-shared_priority-C42-s29/ingestion.jsonl": "6fc19ab338b5763901ab294da30bee1f73a168b369cc06366f4429836824a57f",
+    "n5f8-shared_priority-C42-s29/destination.pcap": "d732e3c9b7e38f924ee1e792c026b2cda1fa6e00114df7640c5a386b91051149",
+    "n5f8-shared_priority-C42-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C42-s29/availability.jsonl": "80bb0b130e43e58169dbebe866e1a7cb1fc0f18ae84bbac4df8ac92ea87e5c34",
+    "n5f8-shared_priority-C42-s29/wall-clock-samples.json": "2ea788de72ce748111524d73abf58763c057ba571968cad56a89e84c99ee1d3e",
+    "n5f8-shared_priority-C42-s29/result.json": "6042d2770991e7ffc346f55fda3abc50b60d5a9c546f25ba15373b7a002c6815",
+    "n5f8-shared_priority-C42-s29/control-ledger.json": "57ef43c9763d2fd891d462ec17431bcede72d19f056057cbc3c4e4c26efd196e",
+    "n5f8-shared_priority-C42-s29/send.jsonl": "bdc6f0dfe772e9b5cb7bc87701bc4c402cfd7b83c14ea8307ed4dec626c290d0",
+    "n5f8-shared_priority-C42-s29/actions.jsonl": "4fbe84135a5bc34bfe6a84ec7b22d6e00e354495663ebaf0b76c21c67c667d38",
+    "n5f8-shared_priority-C42-s29/destination.jsonl": "3c9c07aaf85125c2c19b173fd901f90f71f60b8fd659e3366180c0ea28c3d66c",
+    "n5f8-shared_priority-C42-s29/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f8-shared_priority-C42-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f8-shared_priority-C42-s29/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f8-shared_priority-C42-s29/notice-send.jsonl": "266d8805f8e25a1abad8538735508fa163a46165830bb4114d56ccb5dd366a0a",
+    "n5f8-shared_priority-C42-s29/notices.jsonl": "7b307d659e89f6d851d43daa9680124c493a5067ad70bbc75a91b18db3b2afb1",
+    "n5f8-shared_priority-C42-s29/report-observations.jsonl": "e345715b4fbe32b9e284e9b769d3e9c43e2201b1673193d0b9cdbeea88032b86",
+    "n5f8-shared_priority-C42-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C42-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C42-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-shared_priority-C42-s29/collector.pcap": "d8eaf831a1c9507a04f352302295f6dc8ebab075f13a37f814b2d06322b0eab3",
+    "n5f8-shared_priority-C42-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C42-s29/decisions.jsonl": "28dca9e2429accea39b97dd73f9698ad3f0b2ebf5f4f78a5dc7ef692f73b1d0e",
+    "n5f8-stable-C38-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C38-s29/collector.jsonl": "c40af271e988472606de55debd9e2fa475665576e522876340517ced2f9bff09",
+    "n5f8-stable-C38-s29/algorithm-settings.json": "c9de99cb36b62e27a92ab5b7bc3f1a1c89a44d278190a32003d6e56436a811a7",
+    "n5f8-stable-C38-s29/final-state.json": "9a83ebfed258b1a3648d5668934c4e6aca70fc6bd080677327f5b18575f8345a",
+    "n5f8-stable-C38-s29/packets.json": "34a0d601b07d60589677c94262c9cb8ec4c75f461e0952fde5805e4ad53c3231",
+    "n5f8-stable-C38-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-stable-C38-s29/host.json": "2f2a53867c163cc48514e67c8a3a5d1e82b817fadc418b42ea14ff03ced301e1",
+    "n5f8-stable-C38-s29/ingestion.jsonl": "d7b141635fe2e140c5b586d01ced53f27bc42bc451ed3e8dbdb0883f39dce613",
+    "n5f8-stable-C38-s29/destination.pcap": "d3e819c525900d6ed8a26ff0e6da4851f696894f2fad00c05e0ec3e8a374cede",
+    "n5f8-stable-C38-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C38-s29/availability.jsonl": "d7a0d1a3780937cd17ec7595f287866b6c9cabc3dd1a50b040441453cdd86ca4",
+    "n5f8-stable-C38-s29/wall-clock-samples.json": "2630cf04e0c1314465780134b0e6b5ec4d65e4b143c0b7ff08cfcd05edbac7d2",
+    "n5f8-stable-C38-s29/result.json": "02fb71a4c34254941cb1210c675f2eaf1777b79921734dfbecc7a293e4635bd5",
+    "n5f8-stable-C38-s29/control-ledger.json": "f3fb1e179cbdb11d1e0470044c2f3e8189f8a71fdd5d942bc96025cf28a6095c",
+    "n5f8-stable-C38-s29/send.jsonl": "6dc20fda1cb21bcc11ae51b44dcc393369282933c0d7d51bf834e7c3764810fb",
+    "n5f8-stable-C38-s29/actions.jsonl": "c84852c26e5428e8f01826b82a30dd7d604d70ced86ba4ba0f8d70ae4431d320",
+    "n5f8-stable-C38-s29/destination.jsonl": "a60985c61a99e3dc8a62c72569702271dc1f4e39bc860010beb3140cb58d1050",
+    "n5f8-stable-C38-s29/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f8-stable-C38-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f8-stable-C38-s29/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f8-stable-C38-s29/notice-send.jsonl": "026db18fcef93ba341fe778eabdd346a60b8ffc92f95d4795ede3533800e087e",
+    "n5f8-stable-C38-s29/notices.jsonl": "b0477910a2989e3c74433598556cf428d0cad313d191768e1fcf825c81c261d9",
+    "n5f8-stable-C38-s29/report-observations.jsonl": "1c5d8ac3a5297eff15ac66e4fc7c301136096047e1c4787f65a35fbec0758cef",
+    "n5f8-stable-C38-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-stable-C38-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-stable-C38-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-stable-C38-s29/collector.pcap": "a721f9ecf87b05faa4c201971fafb8b7b9f3a373915e61e7984fb7a00f482b3f",
+    "n5f8-stable-C38-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C38-s29/decisions.jsonl": "5ed5907e7fe19e225d655e6ff4e22d58d69cbec4a6f321d0bc610caf8e65bf32",
+    "n5f8-stable-C47-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C47-s29/collector.jsonl": "70abce5dabfe66ae7fb753fd45d6c1a06e07ab0e5c172ca02ae83772f103184c",
+    "n5f8-stable-C47-s29/algorithm-settings.json": "c9de99cb36b62e27a92ab5b7bc3f1a1c89a44d278190a32003d6e56436a811a7",
+    "n5f8-stable-C47-s29/final-state.json": "597d405dec681dd7ced901dcd596234a9e4ce53c4d4ebba0c8eb5ec467606808",
+    "n5f8-stable-C47-s29/packets.json": "71f522663c775bd1d1e7a59a3a4de8e532cfa8525af64cd1e2bea367e9d10958",
+    "n5f8-stable-C47-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-stable-C47-s29/host.json": "157ee62197c1d033bf197c1957a73131719db4439bfc442714f1acd5d157343a",
+    "n5f8-stable-C47-s29/ingestion.jsonl": "dd9a989e48b539ec5222d3e91b7262761b1b2dfb8caca8e254aae8de5f9c746b",
+    "n5f8-stable-C47-s29/destination.pcap": "47eeaaa174d1999200970e2e88c14738b5632ffd565fda41777403c815fc1f50",
+    "n5f8-stable-C47-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C47-s29/availability.jsonl": "1b1a3925bc1bc4e2c56977658990f82e993d3af95c1671c032aa4d607dcb4f53",
+    "n5f8-stable-C47-s29/wall-clock-samples.json": "2b3e8f73fdd699f1ab390fd3b04ee0aec743739002d79f7919f2f144a78acfe6",
+    "n5f8-stable-C47-s29/result.json": "a911a0ebdf4e1c6662ab90fa084ff685b83e0f5b62930002e2f5c50a5713798f",
+    "n5f8-stable-C47-s29/control-ledger.json": "5ea49116453ade510dae20e4a5d7dd58a209579b08de5ec6f7cb4db22cd7a5a9",
+    "n5f8-stable-C47-s29/send.jsonl": "0d89960d589a335102f1c092f5f7ae00d01bb46de8e8fd0954b2520fa4ac58bd",
+    "n5f8-stable-C47-s29/actions.jsonl": "c1b71a4dae0cf1f71ba983eaa2b29e06715c59e4745dabe6b67d07a8b9e42fa3",
+    "n5f8-stable-C47-s29/destination.jsonl": "f4c2926fcd6ea9f60fc3de83a521b482338fccacca89a5118490261f63c4ae38",
+    "n5f8-stable-C47-s29/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f8-stable-C47-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f8-stable-C47-s29/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f8-stable-C47-s29/notice-send.jsonl": "ee6be0a56da2d805c05d566869dc7a5c137d05c4b70383c3a4af3509a9a67a4b",
+    "n5f8-stable-C47-s29/notices.jsonl": "cfefd8c4b44deda7cf5374b4599c446e1adfc1f45bd0725cff00fbad2367ad4b",
+    "n5f8-stable-C47-s29/report-observations.jsonl": "d503fd594a54e1bba95b19de46aa641f6b4751fce8333f2001df2968a3e3ab58",
+    "n5f8-stable-C47-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-stable-C47-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-stable-C47-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-stable-C47-s29/collector.pcap": "d8b7a81092a435d09449fb6358d37d59f8e9ca2c249da3008cb2321f96e67a58",
+    "n5f8-stable-C47-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-stable-C47-s29/decisions.jsonl": "cf2f3606bb59a4cb464bdb33b8a4c6823fb0119827073c7231214c98e3b764aa",
+    "n5f8-shared_priority-C38-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C38-s11/collector.jsonl": "8f34648743eb778881d60d52da301b19180eb37aa8b3df941ca322508767c88b",
+    "n5f8-shared_priority-C38-s11/algorithm-settings.json": "c9de99cb36b62e27a92ab5b7bc3f1a1c89a44d278190a32003d6e56436a811a7",
+    "n5f8-shared_priority-C38-s11/final-state.json": "b9f0cc0444738661abb8c72087d5636516b41dfc71b64bb118d6e3fc6e12b831",
+    "n5f8-shared_priority-C38-s11/packets.json": "13c16367cf1a88822aaf6f780cc814e0680c1c8310f77e9fdff97a7fd4b33928",
+    "n5f8-shared_priority-C38-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-shared_priority-C38-s11/host.json": "1fcae913a7ec0167d548eccf955fa1c70e1e95f4bfd35eb166a20fc64e548a8d",
+    "n5f8-shared_priority-C38-s11/ingestion.jsonl": "1078571fc3320a4cd3d1fb4016e9dd152a43bcb636f47507ec972c00bbc4c20a",
+    "n5f8-shared_priority-C38-s11/destination.pcap": "3b1e338ac51210b1e2e9892b2f5c8f1db26eae4195ffc0a30b082c944f82b85f",
+    "n5f8-shared_priority-C38-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C38-s11/availability.jsonl": "5eca1b038ed9bf07590f83bb6c6b98c406fefdacabf508829fdf8558998ad488",
+    "n5f8-shared_priority-C38-s11/wall-clock-samples.json": "6ed38eb041553b92f225a8a8701bd0f252d6ef3411dfbcfd63d338513253bb15",
+    "n5f8-shared_priority-C38-s11/result.json": "4fa2732190a73438449e743196ce41cb90b6d964d659e3d0b2a701638290625f",
+    "n5f8-shared_priority-C38-s11/control-ledger.json": "ea1c8c008b921c033783a4c4ee7bb93eabad9d2983e704272cb449c3a4e3c302",
+    "n5f8-shared_priority-C38-s11/send.jsonl": "6d59b817f7881fb129511e05d9d7a52fe603fd5da98908d086e2492bbeb25cea",
+    "n5f8-shared_priority-C38-s11/actions.jsonl": "0bfecc82dc2d7225711c2e31561a3fc09c2ee2062016d3cfdff16ec0dfc28d4a",
+    "n5f8-shared_priority-C38-s11/destination.jsonl": "c22b4104c7b790f7904b6104062d436a19687701f68c50702776d1564891458c",
+    "n5f8-shared_priority-C38-s11/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f8-shared_priority-C38-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f8-shared_priority-C38-s11/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f8-shared_priority-C38-s11/notice-send.jsonl": "7d8459d73f4517d9446b4a1628c11745175d4f2515e5aa839ff9ba8517086679",
+    "n5f8-shared_priority-C38-s11/notices.jsonl": "388986b228685610dd950f3deaf6e5bea3d7f3bc8eba66c8663305aaa2ceda41",
+    "n5f8-shared_priority-C38-s11/report-observations.jsonl": "c449750f5d699aa489c8f06b13292af80459171ddd1439d2b7427ec0b2d789ce",
+    "n5f8-shared_priority-C38-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C38-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C38-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-shared_priority-C38-s11/collector.pcap": "3f4dbe5d2766e9bcb1eb39f41efbad1e8ed3ee7404360ede259d37e12c0776a5",
+    "n5f8-shared_priority-C38-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C38-s11/decisions.jsonl": "6fb963f210c5539713b5fe289209afb33be941edcd0a2fe1f8121730f2857b7f",
+    "n5f8-shared_priority-C38-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C38-s29/collector.jsonl": "acb17b93f237de9862e8119ec54b2de60dfa16ab48ec4091f72a84af5b107763",
+    "n5f8-shared_priority-C38-s29/algorithm-settings.json": "c9de99cb36b62e27a92ab5b7bc3f1a1c89a44d278190a32003d6e56436a811a7",
+    "n5f8-shared_priority-C38-s29/final-state.json": "99734374a19cd96112305cfad79909eba908098c4bf4257584af3525e6c9944c",
+    "n5f8-shared_priority-C38-s29/packets.json": "b24b9f85dd8a6f5d239888ab13824553418fde447d08407f7fe52e982fa570c8",
+    "n5f8-shared_priority-C38-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-shared_priority-C38-s29/host.json": "c4dce1758f4c22ef7004f652559a7f32ff1347cdf292bc2e91ba14e422c7ec52",
+    "n5f8-shared_priority-C38-s29/ingestion.jsonl": "8247527b8c2beb3ae94d980b449ad9f49c6389eca5a90f855eaf07e1c0c942d2",
+    "n5f8-shared_priority-C38-s29/destination.pcap": "88fecb7c3fcc135477faf881165ca2b8f9659f9211ed607ca4f2aec52b058021",
+    "n5f8-shared_priority-C38-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C38-s29/availability.jsonl": "cdd9033d30c279169456a472cf594689c038956bfee2159c63e7014e18ae9de7",
+    "n5f8-shared_priority-C38-s29/wall-clock-samples.json": "754549994574cb277a7350cead0b8293e0f67a0bf5ebaf30a101451f2b5a47c4",
+    "n5f8-shared_priority-C38-s29/result.json": "ced191a70ae247d23975d44b5de85cb7ea16d9fafd2c149b69781895cc6f1af4",
+    "n5f8-shared_priority-C38-s29/control-ledger.json": "a286ccedad99130ef24d1588d4e49ab87b461f34448ecf7266134a72a8001163",
+    "n5f8-shared_priority-C38-s29/send.jsonl": "94aee5e2ffe85a58dc9bf5136e0903dec10e2989a1a252ae2e51e3a1fd6d462a",
+    "n5f8-shared_priority-C38-s29/actions.jsonl": "01f72f00067a2dda5ad235836f38d7eb7c41c523b4dc0bed0b6bb7a23dbefa6c",
+    "n5f8-shared_priority-C38-s29/destination.jsonl": "e3a2e57c48e739fed7a48fcf3959abbafdacc01802a7fccf7906b50ce8b1a1b4",
+    "n5f8-shared_priority-C38-s29/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f8-shared_priority-C38-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f8-shared_priority-C38-s29/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f8-shared_priority-C38-s29/notice-send.jsonl": "b7f36db7c3de2667790ccde82977f64f5d17fc1db0d4927aa78fef69505751f9",
+    "n5f8-shared_priority-C38-s29/notices.jsonl": "303af0c875913c6d33f0b8b79ed0da8721e60145d5d50af24f7c9f3ddbf78045",
+    "n5f8-shared_priority-C38-s29/report-observations.jsonl": "3b4398221105991cc44e9bfa2045e7849b2d895cc4aa6dcb454c3a692830f693",
+    "n5f8-shared_priority-C38-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C38-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f8-shared_priority-C38-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f8-shared_priority-C38-s29/collector.pcap": "a1018baa036a1366b22d673e39235071ffadd6a65028752b3a230ab9fd9762d4",
+    "n5f8-shared_priority-C38-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f8-shared_priority-C38-s29/decisions.jsonl": "69c3cc92fc9f3aea7ccd279a2e5f38146c8d3b48e137054d8d1ea9123f354e57",
+    "network-n5f8/node-4/sts4-eth1_in.pcap": "3d1398dfb333b6d407ee33cb93660404351444cfbbc6b958384f28753b3279fd",
+    "network-n5f8/node-4/sts4-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f8/node-4/sts4-eth2_out.pcap": "842ec63ac749eb3b87b7056faba90e49cb7eef2ea2a0b2b6bd3566fa7321b795",
+    "network-n5f8/node-4/switch.log": "69c2bed8f3806e8ee333d3ffc7fcb9b66873814a1ef066e78df61de235f66453",
+    "network-n5f8/node-4/sts4-eth2_in.pcap": "8163053cd77c99794a649c486d4415e166d9bbeabdba3e09a6431d299415132f",
+    "network-n5f8/node-1/sts1-eth2_out.pcap": "7546ea85200dbb5ee6a56658622ad6f04a40c50e27a1cc13e421b4ab0a715e62",
+    "network-n5f8/node-1/sts1-eth1_in.pcap": "ee7f5e46db3d146aa64df7dd7c656c90a44ecba6823f3e92481b8f57043e7448",
+    "network-n5f8/node-1/sts1-eth2_in.pcap": "612ff2c7477ea47ecaf654221cf39ed4ebe28ccaf1dca72c9766ad65a4e41500",
+    "network-n5f8/node-1/switch.log": "b8b2f778d9cf20bae1500690570a3cb85462b943eb57c6ce2f92002e7189e24f",
+    "network-n5f8/node-1/sts1-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f8/node-3/sts3-eth4_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f8/node-3/sts3-eth3_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f8/node-3/sts3-eth2_out.pcap": "53c3a8219f46da292a6d4fda0c49b5e1ad9d22474498193785b7e3568108a859",
+    "network-n5f8/node-3/sts3-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f8/node-3/sts3-eth4_in.pcap": "f38a1d7678edf3d635dd8707de6c3d7f79bf11ea88dce872353590093ac3cd72",
+    "network-n5f8/node-3/sts3-eth3_in.pcap": "de961e8921d16e1bdac52480f6ada73663a641c70f05035a63406bbc76ac9d00",
+    "network-n5f8/node-3/sts3-eth2_in.pcap": "ac5a1a4907c20079334ba41aa768d513b4b6a12c3c98b06020673d035893df3f",
+    "network-n5f8/node-3/switch.log": "9affdd96cd57b7e225d8652f0ca4a3aa3df1743c253a3d7b50df786a5808b165",
+    "network-n5f8/node-3/sts3-eth1_in.pcap": "e882894e4021759b5f34c59708923cf171f8f82e0b8123b7dfc583d1bc26cd3c",
+    "network-n5f8/node-2/sts2-eth1_in.pcap": "6ad7919ddb601188fb9c267806b1a7f7b39773fe79b42cd111e23e63f8f89581",
+    "network-n5f8/node-2/sts2-eth2_in.pcap": "9c0fcf7c93de41971b83ee12414e86bcdab315b5ac18d06a3c2dce096e26b6d8",
+    "network-n5f8/node-2/sts2-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f8/node-2/switch.log": "0210d26fa40fb305f8c1e05ba4e56e9968b947295632ff479dcc7ac56d152d48",
+    "network-n5f8/node-2/sts2-eth2_out.pcap": "9401e011e56bc2ca0c3e8b4444ac02f669a413c33633a3602366087ccadb792e",
+    "network-n5f8/node-5/sts5-eth2_in.pcap": "7405ba8e7b3937c0cf6175ce5d39d57ba03fcda6fd8c55b83ca79fe2aacada61",
+    "network-n5f8/node-5/sts5-eth1_in.pcap": "edd9886b96b8b36d64112653faf8df5922dda30362b08fe18fdf73401ea45adb",
+    "network-n5f8/node-5/sts5-eth2_out.pcap": "1fa5ed59dd0e510973826a71bbf955c4a8b57311b528692f7cc3b58d6d37cf49",
+    "network-n5f8/node-5/switch.log": "64ba9fdbd9f072b4b4070f27216a03d336f116c554138ceb5bd18be804ed593a",
+    "network-n5f8/node-5/sts5-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f8/node-6/sts6-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f8/node-6/sts6-eth1_in.pcap": "e00d8e442ceb906bbbe5385508e35c8718e6e3a3e767f38ecfdf6284ac44d1fa",
+    "network-n5f8/node-6/sts6-eth3_out.pcap": "1c6baac2da1dc4c634fe8c0569f6711d39322084de8340c5770da3b9f19ea713",
+    "network-n5f8/node-6/control.log": "952ce10fa817674510d77686b37208ba08f15ed71a254334718a349c2d930674",
+    "network-n5f8/node-6/switch.log": "462139fc83accb90a75982c6f84402a459660850f53ee7db7519bfceab469a37",
+    "network-n5f8/node-6/sts6-eth2_out.pcap": "748851a158ffdda6e0e5217afdc663339a9579130430ed83051e17c2ddd82821",
+    "network-n5f8/node-6/sts6-eth2_in.pcap": "4972464c46eebc74160df74c83cafa2fa0f5d2d3af502e02b401ffbc1cdf425b",
+    "network-n5f8/node-6/sts6-eth3_in.pcap": "256504b50a39977fe1a719bee49951b93e3bea121327da9967f6821ade0c0029"
+  }
+}

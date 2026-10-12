@@ -1,0 +1,478 @@
+{
+  "status": "frozen_with_unavailable_cells",
+  "confirmation_input_sha256": "034c532e4cd50827542629f9ca744c96f1a552a8bd62b8c244596955013bf846",
+  "selection_rule": {
+    "eligibility": "每候选两个训练业务、三个部署块共六例全部工程通过且窗口within",
+    "ranking": [
+      "worst_controller_upper",
+      "mean_controller_upper",
+      "mean_export_bytes_per_s",
+      "config_lex_none_minus_one"
+    ],
+    "no_feasible_candidate": "保留全部记录，该单元不冻结共同初始化",
+    "source_freeze": "执行适配器验收后另建首例前prepared源码快照，继承本名单与顺序"
+  },
+  "methods": [
+    "static",
+    "feedback",
+    "phase_joint",
+    "phase_guard",
+    "intopp_due",
+    "d_into_tt"
+  ],
+  "cells": [
+    {
+      "network_id": "n3f2",
+      "scenario": "stable",
+      "eligible_candidates": 2,
+      "selected": {
+        "network_id": "n3f2",
+        "scenario": "stable",
+        "candidate_id": "C21",
+        "config": [
+          150000,
+          400000,
+          200000,
+          200000
+        ],
+        "training_rank": 1,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 0.8138819136870717,
+        "mean_controller_upper": 0.7721017441700079,
+        "mean_controller_loss": [
+          0.7655767426479411,
+          0.7721017441700079
+        ],
+        "mean_collector_loss": [
+          0.5706810591686368,
+          0.5745783153815287
+        ],
+        "mean_export_bytes_per_s": 836.25
+      },
+      "status": "frozen_common_initialization"
+    },
+    {
+      "network_id": "n3f2",
+      "scenario": "shared_priority",
+      "eligible_candidates": 2,
+      "selected": {
+        "network_id": "n3f2",
+        "scenario": "shared_priority",
+        "candidate_id": "C22",
+        "config": [
+          600000,
+          100000,
+          400000,
+          150000
+        ],
+        "training_rank": 1,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 0.9870690448122591,
+        "mean_controller_upper": 0.980558509854375,
+        "mean_controller_loss": [
+          0.9711837534279231,
+          0.980558509854375
+        ],
+        "mean_collector_loss": [
+          0.633918086856985,
+          0.6392294472959951
+        ],
+        "mean_export_bytes_per_s": 840.0
+      },
+      "status": "frozen_common_initialization"
+    },
+    {
+      "network_id": "n5f2",
+      "scenario": "stable",
+      "eligible_candidates": 0,
+      "selected": null,
+      "status": "no_common_feasible_candidate"
+    },
+    {
+      "network_id": "n5f2",
+      "scenario": "shared_priority",
+      "eligible_candidates": 1,
+      "selected": {
+        "network_id": "n5f2",
+        "scenario": "shared_priority",
+        "candidate_id": "C05",
+        "config": [
+          600000,
+          600000,
+          600000,
+          600000,
+          600000,
+          600000,
+          600000,
+          600000
+        ],
+        "training_rank": 2,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 1.6528141536596246,
+        "mean_controller_upper": 1.643915894741413,
+        "mean_controller_loss": [
+          1.6361617450327837,
+          1.643915894741413
+        ],
+        "mean_collector_loss": [
+          1.4107129656682578,
+          1.4166070855449997
+        ],
+        "mean_export_bytes_per_s": 765.0
+      },
+      "status": "frozen_common_initialization"
+    },
+    {
+      "network_id": "n8f2",
+      "scenario": "stable",
+      "eligible_candidates": 2,
+      "selected": {
+        "network_id": "n8f2",
+        "scenario": "stable",
+        "candidate_id": "C41",
+        "config": [
+          1000000,
+          null,
+          null,
+          400000,
+          null,
+          400000,
+          600000,
+          1000000,
+          1000000,
+          null,
+          null,
+          null,
+          null,
+          150000
+        ],
+        "training_rank": 1,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 2.0804890908341793,
+        "mean_controller_upper": 2.0614700782424813,
+        "mean_controller_loss": [
+          2.0539271814989384,
+          2.0614700782424813
+        ],
+        "mean_collector_loss": [
+          1.886557812325697,
+          1.8926402214851514
+        ],
+        "mean_export_bytes_per_s": 681.25
+      },
+      "status": "frozen_common_initialization"
+    },
+    {
+      "network_id": "n8f2",
+      "scenario": "shared_priority",
+      "eligible_candidates": 2,
+      "selected": {
+        "network_id": "n8f2",
+        "scenario": "shared_priority",
+        "candidate_id": "C41",
+        "config": [
+          1000000,
+          null,
+          null,
+          400000,
+          null,
+          400000,
+          600000,
+          1000000,
+          1000000,
+          null,
+          null,
+          null,
+          null,
+          150000
+        ],
+        "training_rank": 1,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 1.8465032125956045,
+        "mean_controller_upper": 1.8247435116770667,
+        "mean_controller_loss": [
+          1.8148731506453475,
+          1.8247435116770667
+        ],
+        "mean_collector_loss": [
+          1.6030367570781794,
+          1.6109731711516695
+        ],
+        "mean_export_bytes_per_s": 677.5
+      },
+      "status": "frozen_common_initialization"
+    },
+    {
+      "network_id": "n5f4",
+      "scenario": "stable",
+      "eligible_candidates": 2,
+      "selected": {
+        "network_id": "n5f4",
+        "scenario": "stable",
+        "candidate_id": "C18",
+        "config": [
+          150000,
+          400000,
+          600000,
+          800000,
+          400000,
+          600000,
+          800000,
+          1000000,
+          400000,
+          800000,
+          1000000,
+          50000,
+          800000,
+          1000000,
+          50000,
+          100000
+        ],
+        "training_rank": 1,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 0.9163450467517615,
+        "mean_controller_upper": 0.8778723733402977,
+        "mean_controller_loss": [
+          0.8697986236134038,
+          0.8778723733402977
+        ],
+        "mean_collector_loss": [
+          0.6391678212945211,
+          0.6432088048267476
+        ],
+        "mean_export_bytes_per_s": 1758.75
+      },
+      "status": "frozen_common_initialization"
+    },
+    {
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "eligible_candidates": 2,
+      "selected": {
+        "network_id": "n5f4",
+        "scenario": "shared_priority",
+        "candidate_id": "C29",
+        "config": [
+          600000,
+          null,
+          null,
+          50000,
+          800000,
+          400000,
+          null,
+          1000000,
+          null,
+          null,
+          600000,
+          null,
+          null,
+          null,
+          800000,
+          null
+        ],
+        "training_rank": 1,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 1.0257013883800614,
+        "mean_controller_upper": 1.0173557889491158,
+        "mean_controller_loss": [
+          1.0087841746968869,
+          1.0173557889491158
+        ],
+        "mean_collector_loss": [
+          0.7279535239095889,
+          0.733385357999848
+        ],
+        "mean_export_bytes_per_s": 871.25
+      },
+      "status": "frozen_common_initialization"
+    },
+    {
+      "network_id": "n5f8",
+      "scenario": "stable",
+      "eligible_candidates": 2,
+      "selected": {
+        "network_id": "n5f8",
+        "scenario": "stable",
+        "candidate_id": "C38",
+        "config": [
+          200000,
+          null,
+          null,
+          null,
+          50000,
+          200000,
+          null,
+          null,
+          150000,
+          null,
+          1000000,
+          50000,
+          400000,
+          600000,
+          null,
+          600000,
+          null,
+          null,
+          150000,
+          1000000,
+          null,
+          null,
+          200000,
+          null,
+          null,
+          400000,
+          100000,
+          null,
+          null,
+          null,
+          600000,
+          50000
+        ],
+        "training_rank": 1,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 0.6374827911157355,
+        "mean_controller_upper": 0.6040699538839261,
+        "mean_controller_loss": [
+          0.5942959767255748,
+          0.6040699538839261
+        ],
+        "mean_collector_loss": [
+          0.36587369648170887,
+          0.36967487975234353
+        ],
+        "mean_export_bytes_per_s": 2993.75
+      },
+      "status": "frozen_common_initialization"
+    },
+    {
+      "network_id": "n5f8",
+      "scenario": "shared_priority",
+      "eligible_candidates": 2,
+      "selected": {
+        "network_id": "n5f8",
+        "scenario": "shared_priority",
+        "candidate_id": "C38",
+        "config": [
+          200000,
+          null,
+          null,
+          null,
+          50000,
+          200000,
+          null,
+          null,
+          150000,
+          null,
+          1000000,
+          50000,
+          400000,
+          600000,
+          null,
+          600000,
+          null,
+          null,
+          150000,
+          1000000,
+          null,
+          null,
+          200000,
+          null,
+          null,
+          400000,
+          100000,
+          null,
+          null,
+          null,
+          600000,
+          50000
+        ],
+        "training_rank": 1,
+        "eligible": true,
+        "feasibility": [
+          "within",
+          "within",
+          "within",
+          "within",
+          "within",
+          "within"
+        ],
+        "worst_controller_upper": 0.7826893383873799,
+        "mean_controller_upper": 0.7240091259140923,
+        "mean_controller_loss": [
+          0.7114097847648257,
+          0.7240091259140923
+        ],
+        "mean_collector_loss": [
+          0.4162355399948345,
+          0.42122372201480046
+        ],
+        "mean_export_bytes_per_s": 2995.0
+      },
+      "status": "frozen_common_initialization"
+    }
+  ]
+}

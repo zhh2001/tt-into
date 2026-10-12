@@ -1,0 +1,1815 @@
+{
+  "batch_id": "b03",
+  "block": 0,
+  "network_id": "n5f4",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "n5f4-shared_priority-C37-s11",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C37",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        100000,
+        null,
+        null,
+        400000,
+        null,
+        1000000,
+        600000,
+        150000,
+        400000,
+        null,
+        600000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 24,
+      "block": 0,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 158511961034000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 36,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 158522382832758,
+      "rpc_stop_index": 193,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 242,
+      "checks": 4208,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2279,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 239,
+      "shared_cache_advances": 239
+    },
+    {
+      "name": "n5f4-shared_priority-C37-s29",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C37",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        100000,
+        null,
+        null,
+        400000,
+        null,
+        1000000,
+        600000,
+        150000,
+        400000,
+        null,
+        600000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 25,
+      "block": 0,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 158523633113000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 193,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 158534051205417,
+      "rpc_stop_index": 350,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 242,
+      "checks": 4208,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2279,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 239,
+      "shared_cache_advances": 239
+    },
+    {
+      "name": "n5f4-shared_priority-C29-s11",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 26,
+      "block": 0,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 158535291472000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 350,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 158545675972922,
+      "rpc_stop_index": 507,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 149,
+      "checks": 3836,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2187,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 147,
+      "shared_cache_advances": 147
+    },
+    {
+      "name": "n5f4-shared_priority-C29-s29",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 27,
+      "block": 0,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 158546883297000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 507,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 158557263698358,
+      "rpc_stop_index": 664,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 148,
+      "checks": 3832,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2187,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 147,
+      "shared_cache_advances": 147
+    },
+    {
+      "name": "n5f4-stable-C18-s29",
+      "network_id": "n5f4",
+      "scenario": "stable",
+      "candidate_id": "C18",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        150000,
+        400000,
+        600000,
+        800000,
+        400000,
+        600000,
+        800000,
+        1000000,
+        400000,
+        800000,
+        1000000,
+        50000,
+        800000,
+        1000000,
+        50000,
+        100000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 28,
+      "block": 0,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 158558424396000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 664,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 158568848868732,
+      "rpc_stop_index": 821,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 293,
+      "checks": 4412,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2330,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 290,
+      "shared_cache_advances": 290
+    },
+    {
+      "name": "n5f4-stable-C18-s11",
+      "network_id": "n5f4",
+      "scenario": "stable",
+      "candidate_id": "C18",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        150000,
+        400000,
+        600000,
+        800000,
+        400000,
+        600000,
+        800000,
+        1000000,
+        400000,
+        800000,
+        1000000,
+        50000,
+        800000,
+        1000000,
+        50000,
+        100000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 29,
+      "block": 0,
+      "training_rank": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 158570109583000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 821,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 158580471126074,
+      "rpc_stop_index": 978,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 294,
+      "checks": 4416,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2331,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 291,
+      "shared_cache_advances": 291
+    },
+    {
+      "name": "n5f4-stable-C37-s11",
+      "network_id": "n5f4",
+      "scenario": "stable",
+      "candidate_id": "C37",
+      "business_seed": 11,
+      "method": "static",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        100000,
+        null,
+        null,
+        400000,
+        null,
+        1000000,
+        600000,
+        150000,
+        400000,
+        null,
+        600000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 30,
+      "block": 0,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 158581792087000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 978,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 158592211880174,
+      "rpc_stop_index": 1135,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 241,
+      "checks": 4204,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2278,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 238,
+      "shared_cache_advances": 238
+    },
+    {
+      "name": "n5f4-stable-C37-s29",
+      "network_id": "n5f4",
+      "scenario": "stable",
+      "candidate_id": "C37",
+      "business_seed": 29,
+      "method": "static",
+      "initial_config": [
+        200000,
+        null,
+        null,
+        null,
+        100000,
+        null,
+        null,
+        400000,
+        null,
+        1000000,
+        600000,
+        150000,
+        400000,
+        null,
+        600000,
+        150000
+      ],
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480,
+          "e2": 480,
+          "e3": 780,
+          "e4": 780,
+          "e5": 780
+        },
+        "export_bytes_per_s": 1800,
+        "control_bytes_per_s": 1200
+      },
+      "scope": "已消费训练业务的静态部署重复确认",
+      "position": 31,
+      "block": 0,
+      "training_rank": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 158593466096000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 1135,
+      "observation_period_us": 100000,
+      "decision_period_us": 1000000,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 158603850421075,
+      "rpc_stop_index": 1292,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 241,
+      "checks": 4204,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "observer_checks": 2278,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 238,
+      "shared_cache_advances": 238
+    }
+  ],
+  "started_monotonic_ns": 158509920780768,
+  "switch_pids": [
+    550991,
+    551005,
+    551019,
+    551033,
+    551047,
+    551061
+  ],
+  "cleaned_monotonic_ns": 158605375424714,
+  "artifact_sha256": {
+    "rpc.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "rpc.jsonl": "78f72cb3bae306ca920214a837b8509efcd4de2e98d58ffd4cc41c87721b2d62",
+    "rpc-operations.jsonl": "8e6cdd1198914343b48044228cdfb0e98e769565a0e879272680c4f783a2bd1b",
+    "rpc-capture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rpc.pcap": "63f1360e5ba92c85c935bfb52c6ed6ede4bd89636b08c08a7d3c6346bb805cf8",
+    "rpc.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C29-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C29-s29/collector.jsonl": "2257e2421181e14f7ec735acdac8a71d1fad8170d7fdbc2520580753e5c315cd",
+    "n5f4-shared_priority-C29-s29/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-shared_priority-C29-s29/final-state.json": "0fa97db07583d7eb354e7d08d77d4c30b053bd781878ab4ebd3d2564bf07ca8e",
+    "n5f4-shared_priority-C29-s29/packets.json": "b7fa050726b429b88fdfdd0eeaa81ec71bea2b984d86a7c7b5d77eacd828d25c",
+    "n5f4-shared_priority-C29-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-C29-s29/host.json": "d07c98d0fb38ad2133e4d4122fbed4ac20299da44053f9114431d0cee776115d",
+    "n5f4-shared_priority-C29-s29/ingestion.jsonl": "1b12e6782d98b03c8c791fb21f58fa644ac2cbe91a3b0793bb65cdc98295ee7e",
+    "n5f4-shared_priority-C29-s29/destination.pcap": "b15b872caa8b3e966fbff5018f304ba4e6cf495d5acfea254847b5ab7977c383",
+    "n5f4-shared_priority-C29-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C29-s29/availability.jsonl": "4784f598bbc74e705cdd3f9766708ce5eb3ad5f7d7e0c344a09389588191f653",
+    "n5f4-shared_priority-C29-s29/wall-clock-samples.json": "60d0ee544add088ecd24c9cf49dec2242b0f9014511087d9ae0549711e0117fb",
+    "n5f4-shared_priority-C29-s29/result.json": "9a0719a2a4095147d31394b94c850fa074343c3c1aadb4de8c271fb9fb10ae94",
+    "n5f4-shared_priority-C29-s29/control-ledger.json": "cecd6745f931b353d205937ae186d4f1582e75d8d39b0fbe109a30d1c55edb62",
+    "n5f4-shared_priority-C29-s29/send.jsonl": "bda1698edbd44fe102e32de88cdbdb3a94121687a4c9d5eab8b7d682b8c3ac18",
+    "n5f4-shared_priority-C29-s29/actions.jsonl": "1d2586ae2cb453d32299570b67bc91c263f2c41377acca8584162ea09dc248d3",
+    "n5f4-shared_priority-C29-s29/destination.jsonl": "c7f374f82c0ed34358707826f1823a3aad1d95af61e7d967344c460fd26e97bf",
+    "n5f4-shared_priority-C29-s29/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-shared_priority-C29-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-shared_priority-C29-s29/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-shared_priority-C29-s29/notice-send.jsonl": "2fa75d7a4b283afa74387afcbcee47a19468dfc277e50d8d595fffac64ac6e63",
+    "n5f4-shared_priority-C29-s29/notices.jsonl": "88a3bf828dbdc549a0b5960f92a6fea273199e079157e626548f826379fc5a42",
+    "n5f4-shared_priority-C29-s29/report-observations.jsonl": "33fd8203f55a154811d6ba64e991526f1f3df2a7a08c3973ecc24ebe7c2b3fc8",
+    "n5f4-shared_priority-C29-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C29-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C29-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-C29-s29/collector.pcap": "26c8079d2caf424fa295c4ace817f67268796fabd0839d56f945c3f0f43df0a6",
+    "n5f4-shared_priority-C29-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C29-s29/decisions.jsonl": "61f296d9e320d5ba39f7b76f51e52d8cef66a012b6a1958ee9bf776d58a6c413",
+    "n5f4-stable-C18-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C18-s29/collector.jsonl": "38f188f4b1c1c652faf01795240d26269368a904b107f7dff56f92cff5834c60",
+    "n5f4-stable-C18-s29/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-stable-C18-s29/final-state.json": "49044204a4113c3f40c398ebfa8a8e074ef27567b0dca6144e7362edfe8fe3bd",
+    "n5f4-stable-C18-s29/packets.json": "9053b6a17ed4f13b4c954ba2fe6cc86a08ed08b0021a7d11d9c1e1a678a34654",
+    "n5f4-stable-C18-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-stable-C18-s29/host.json": "54ba3da600faeed383b3a384f32846e48e636b8109db30921a664eb12187d680",
+    "n5f4-stable-C18-s29/ingestion.jsonl": "45f2498b068721840b7ab68e953aca2fa37b1dd95cea9ecc53b85695029869e1",
+    "n5f4-stable-C18-s29/destination.pcap": "12630598e1e8f2b2eb8aa8a4b0201abd9dc41a1928f779391e2db5841f47b07b",
+    "n5f4-stable-C18-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C18-s29/availability.jsonl": "9f2e2fcd4e448b09233df9ddcf378c7a261c6d709bddda87fc94451d1e2f4ac9",
+    "n5f4-stable-C18-s29/wall-clock-samples.json": "a6586045463e99e868da6076b13345b269cfccb2c185b1d0ea4938f1326b4f12",
+    "n5f4-stable-C18-s29/result.json": "cb55eb61a741438260ee74b0def3cdc22f2817a082c541a13524b17f963caecc",
+    "n5f4-stable-C18-s29/control-ledger.json": "d7b5a17198de0977641f548a1bcebc433301b28eae5a994834594cdd97467787",
+    "n5f4-stable-C18-s29/send.jsonl": "e28bf8561f7c96d33f36a7725316ce8673c310287d778f897a8b09fe60005b72",
+    "n5f4-stable-C18-s29/actions.jsonl": "7f05541298a53e38f0d1196b0062a29982b0747d05b831a327285509f85e39be",
+    "n5f4-stable-C18-s29/destination.jsonl": "d1f79fb8683c2b96f1996437b32216bb3e546f28c532a18227ab937dd7d7fb1e",
+    "n5f4-stable-C18-s29/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f4-stable-C18-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-stable-C18-s29/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f4-stable-C18-s29/notice-send.jsonl": "5752b7d99255028f607e80c3361f1c6eb2f628cf06743b758d4367858c9583ec",
+    "n5f4-stable-C18-s29/notices.jsonl": "4137f542731b08ba00d754adf5d773514dad544fefe9bd760c4340684441dde9",
+    "n5f4-stable-C18-s29/report-observations.jsonl": "b51fb521e37bd05312b4d1a0c2ce701c2308906ebf4156d304c17f40c8bb9be0",
+    "n5f4-stable-C18-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-stable-C18-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-stable-C18-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-stable-C18-s29/collector.pcap": "350f8ce68d1293d61e712f415b8b78466c3f995447d7e5701c71073b606b345e",
+    "n5f4-stable-C18-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C18-s29/decisions.jsonl": "2e7957d88af541f212d3dfb6cdf190917918a9ffba77903a8c228ac7e52d9003",
+    "n5f4-shared_priority-C37-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C37-s29/collector.jsonl": "d3d66bd8cbad6b92d5879e71da83edb7b993b8b580abe3c3abe520addf9589ee",
+    "n5f4-shared_priority-C37-s29/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-shared_priority-C37-s29/final-state.json": "8dc555accb4407eeb2770717ad0f85dd0fab0ba35a9f133f041dbc8e08a7bfd6",
+    "n5f4-shared_priority-C37-s29/packets.json": "d45c7dc377241e7567e92be060a78d086505a42738c72f11f85cfb589d92c7f2",
+    "n5f4-shared_priority-C37-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-C37-s29/host.json": "ef57c2307117f492a696bb84001877fe4b90e7ebe1fe6c682439efc541d73521",
+    "n5f4-shared_priority-C37-s29/ingestion.jsonl": "b679a05c2cfc52b63841cb1671ba0245424c8ff9f312b3de317a54522268a31c",
+    "n5f4-shared_priority-C37-s29/destination.pcap": "6d9cc71fa6aeec455fab4cd16ffc57767b897cc29b0d4a125eaccda542f29b32",
+    "n5f4-shared_priority-C37-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C37-s29/availability.jsonl": "84ec474f6d11ecabcb60496e92175a551995e9f99b7adadd36d0ef40f97954a5",
+    "n5f4-shared_priority-C37-s29/wall-clock-samples.json": "22152d4de0fdcc5d4e9588ce941cc5459770fcd23e66bbce5472c9bf7578f0d9",
+    "n5f4-shared_priority-C37-s29/result.json": "0b7c296e6098127e6aed679f61f52f89719475e3feac0bdd4bc0afb667da8ebb",
+    "n5f4-shared_priority-C37-s29/control-ledger.json": "640697ebae7e89e0d9451eca63706590661d001f229ceb7d69a867bd01fdc56c",
+    "n5f4-shared_priority-C37-s29/send.jsonl": "290c972ecf8334b3829b6c154e42a7f25c3a5cf55575666adac986762f2a4dfa",
+    "n5f4-shared_priority-C37-s29/actions.jsonl": "2be6741fca3610ae281585891d8cc0257ac727812beb1dc429bb9ba14327cedb",
+    "n5f4-shared_priority-C37-s29/destination.jsonl": "5816c8aead9501d5c8c6ae33b10f33f9fa78ed9a7d1613bbb5033796cde18463",
+    "n5f4-shared_priority-C37-s29/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-shared_priority-C37-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-shared_priority-C37-s29/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-shared_priority-C37-s29/notice-send.jsonl": "7ee59191371498fb3417f9f080968266de9188ba5b6a626afd5bbe3ae95da244",
+    "n5f4-shared_priority-C37-s29/notices.jsonl": "114951138ba17a6616b6ca3427aeffb4938b4a1a8d8d6a16e3e1b73610d23d13",
+    "n5f4-shared_priority-C37-s29/report-observations.jsonl": "b2ee5c19a26c2924898bda34e80559012f99da5073181b9063df64ec52972463",
+    "n5f4-shared_priority-C37-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C37-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C37-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-C37-s29/collector.pcap": "71ca0b702e2e168480e194a1bec3184b63ea09eccbe17e47750f497b644671b1",
+    "n5f4-shared_priority-C37-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C37-s29/decisions.jsonl": "41165798896d1bb01d671aff42d23c2a4d51906d57f816468948cc7aea5b8690",
+    "n5f4-stable-C37-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C37-s11/collector.jsonl": "cc65847b9a7be49f96f147309e88b63935994777253f70800bb4017b3f3ac89c",
+    "n5f4-stable-C37-s11/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-stable-C37-s11/final-state.json": "4eec6f0e6a623b6cc7620342af8ad9a857f38a942e6f0f870f7fba6260af96d2",
+    "n5f4-stable-C37-s11/packets.json": "4efd4dd2a2a6f1a201898b853efbc8a5ecc4568fcaaea967ac1fc4321bb71b37",
+    "n5f4-stable-C37-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-stable-C37-s11/host.json": "3c84250fcfce6c4a665ba52c6d6fb58ca383facb1a0a2ec4262422fda01de229",
+    "n5f4-stable-C37-s11/ingestion.jsonl": "b4b901ee2d628e7968296e27aa623c421f756d830f3de7a3b56f9f8a4d2b34b8",
+    "n5f4-stable-C37-s11/destination.pcap": "12ddca56928b200207c91ab33f892acb8a16e93d843a5cc46591399050391cea",
+    "n5f4-stable-C37-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C37-s11/availability.jsonl": "dd3c47f868541b30fa7ceea62fde85e02280378b266a0724ca3f1d978cdde464",
+    "n5f4-stable-C37-s11/wall-clock-samples.json": "571d71691ae98c4747e1fabd231fcc73fdce82df5ed71b5065f3d517a0969747",
+    "n5f4-stable-C37-s11/result.json": "50d5e029f309d24ef340409c1e2a2fb7f7eb7e199420370a0173c066ae63a6bd",
+    "n5f4-stable-C37-s11/control-ledger.json": "bf0a527da64db0880713b11aed617fa2cefc90b5fc45722e1979404c7833b466",
+    "n5f4-stable-C37-s11/send.jsonl": "e4ea370f276a44eab61e595abb15ff9d44f06def1f107af2c067b9a32eefcbf0",
+    "n5f4-stable-C37-s11/actions.jsonl": "14dcf19a6cf45be5000105d4efaf8f342fa3c70fc10c0caf3db2d3c1ed3026ac",
+    "n5f4-stable-C37-s11/destination.jsonl": "c54e02f1165bff9cb0d6721252179a299688f700f295d4e2498373b5a2f3752a",
+    "n5f4-stable-C37-s11/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f4-stable-C37-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-stable-C37-s11/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f4-stable-C37-s11/notice-send.jsonl": "1cc48dd15db74268e0e92ef8c6abe8942b333d0c95085a5b8e0302e8c5194e18",
+    "n5f4-stable-C37-s11/notices.jsonl": "babe27419c692fd86af65befa78c16151dff3fe719d0a123e319c90a6b787863",
+    "n5f4-stable-C37-s11/report-observations.jsonl": "36da92e79f305bd4706b8cfdac308289d3eccec28f1fa47fab7144893df817fb",
+    "n5f4-stable-C37-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-stable-C37-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-stable-C37-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-stable-C37-s11/collector.pcap": "e2b0d16ec270a2dc41876899160d4dd0986d985ae48d09475100a76b16194c18",
+    "n5f4-stable-C37-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C37-s11/decisions.jsonl": "7e8c358d4f5bf9b26672a2f2f5b6dd550c0206096c8ead0312b13fdc15ec246b",
+    "n5f4-shared_priority-C29-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C29-s11/collector.jsonl": "df06859a178ba943fc1f733370d91f86debf9b3b04e100cc9a82ab6db1d653fe",
+    "n5f4-shared_priority-C29-s11/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-shared_priority-C29-s11/final-state.json": "f8e6525914eb5e8a212f8e7cdbd37dec954ea55456bfec8bd2eda501ef134d65",
+    "n5f4-shared_priority-C29-s11/packets.json": "ef5f2daf3306518fcfaa6d59cb179d2a86c2b75e76566f5d6b246a5112b2a409",
+    "n5f4-shared_priority-C29-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-C29-s11/host.json": "b52d9dab41784e455478bc75c42971f9ac9cf08bf339cdec736fc6578d08b7d2",
+    "n5f4-shared_priority-C29-s11/ingestion.jsonl": "96dfe7481f790bdd3efaf9bf4d05e8d1cc967eb1eb52d12b9a7a44c3e5ec3b4f",
+    "n5f4-shared_priority-C29-s11/destination.pcap": "c3f583ecbf92f94d7cd683119f377414a13e5277cbfb15020e06fd2425ed867d",
+    "n5f4-shared_priority-C29-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C29-s11/availability.jsonl": "fbe1ed20ba483b1b1ad3d1072122257343f49639b8fcb8ae04faf6c1cf3c30c5",
+    "n5f4-shared_priority-C29-s11/wall-clock-samples.json": "bc8c6a2af02d2e5a2bda025e7bdfde4b36874fb8aab1076514acc72e687462bd",
+    "n5f4-shared_priority-C29-s11/result.json": "5bd234fe7b1b044cad6294abfa8760730e2c1cd18e1b4c452e3f7afe67ff8bca",
+    "n5f4-shared_priority-C29-s11/control-ledger.json": "e2779891d15b24a5168d0f63a2f2f67042aa2525dcd20aafc6e26c41387eafd4",
+    "n5f4-shared_priority-C29-s11/send.jsonl": "00ef249b714508333754f70fa48c0d4940b8928967829012059488dfb4e29af2",
+    "n5f4-shared_priority-C29-s11/actions.jsonl": "68616d17067619e39dbe4def9293be0b42c3e0e0c6006b5f2387b11ba73d341d",
+    "n5f4-shared_priority-C29-s11/destination.jsonl": "8d2486ba8de7a5ee2b9b3962e5a6ed108d4344e60ea938bf6cb9fbfbc666495a",
+    "n5f4-shared_priority-C29-s11/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-shared_priority-C29-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-shared_priority-C29-s11/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-shared_priority-C29-s11/notice-send.jsonl": "8e84b804dcc5c8d2baf8987d88a8fe027e5a7c8e395e4ac468d34d9f72957486",
+    "n5f4-shared_priority-C29-s11/notices.jsonl": "7d1ffc3d363ea6dc3da00ac4543097bf74f0cf36a047d19f9ac796a91261042b",
+    "n5f4-shared_priority-C29-s11/report-observations.jsonl": "5391a0857a558cf29a1d7f1ef2bfed76e5dfe036cc869925a9f4ee06061038b0",
+    "n5f4-shared_priority-C29-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C29-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C29-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-C29-s11/collector.pcap": "b57d48eaad93b18322cf9f6439a52ccf739c6e5ad99c37d5b2da486a08b1ac49",
+    "n5f4-shared_priority-C29-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C29-s11/decisions.jsonl": "8246d8000fe299582d7f94bc3c50be0b4f32ac52cb3fbc2311b27f3c00852b25",
+    "n5f4-stable-C37-s29/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C37-s29/collector.jsonl": "43ee988b8cc9a8e47fd24bf0be948e26d66dbb148b2b94e84732e3dc28d569ea",
+    "n5f4-stable-C37-s29/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-stable-C37-s29/final-state.json": "430230bc7f2628a984f53b2f53c47a930161f8f4b8ca3793b177934d1a1e1f9f",
+    "n5f4-stable-C37-s29/packets.json": "6aafecf6e27ea53ae41c14afd1a618a461e9835122896fd3affb0a199f3ed8a9",
+    "n5f4-stable-C37-s29/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-stable-C37-s29/host.json": "498314e23d54e352251c30903151bc1a9d3f62c6ea70b5a5b4d98d764780785a",
+    "n5f4-stable-C37-s29/ingestion.jsonl": "882a9bea04eb9da771635b3ced29a2ee2d997340804ea98f1700eeef63764030",
+    "n5f4-stable-C37-s29/destination.pcap": "be6422d6cda2c1ba9472e65957412c8a529eb19ea053dbb3c7a59a04fcb74b9a",
+    "n5f4-stable-C37-s29/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C37-s29/availability.jsonl": "e7a18b16f8d4e1c3786dc056235e6d08b93082610e123dd7666cf860d962ddfe",
+    "n5f4-stable-C37-s29/wall-clock-samples.json": "e3406df183bc2fbe62751e33b054a49772fab94eb6e8cfe34bd6e1f54f63a743",
+    "n5f4-stable-C37-s29/result.json": "c06712bded750bc1dea6360ab97c23eea8a32b1fcf6c1a84f9c4141262f75f42",
+    "n5f4-stable-C37-s29/control-ledger.json": "f5c54e3e9d602cc3bd6087f3306dde9278fdbf788fcc5a4b6b097968f18a42eb",
+    "n5f4-stable-C37-s29/send.jsonl": "267e3a61af1cc1b950cc705eac5165e34a8b33a62473babcc45dce12c62da062",
+    "n5f4-stable-C37-s29/actions.jsonl": "08c28b4a7c474ddaa3ec1087b0f3f85157ecff9bc6bd5f85b7a875d72f0e087f",
+    "n5f4-stable-C37-s29/destination.jsonl": "7a7012d2465c5a9e3b625b62fcb84c2c4a21345064bff739232ae81ca73bdea3",
+    "n5f4-stable-C37-s29/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f4-stable-C37-s29/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-stable-C37-s29/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f4-stable-C37-s29/notice-send.jsonl": "4ade33417c9ca8d38318b209d018c6f0bb53b75bff0a51fbb90f5d7f0432e088",
+    "n5f4-stable-C37-s29/notices.jsonl": "101a898021043ae14a0458aef920158d9373a218df4c70ea5812b3ce0481ee1a",
+    "n5f4-stable-C37-s29/report-observations.jsonl": "95d15c66d86cb61ccf7a2d5d2e00e7fef0ac0f7fe1b761d05867955601e4fe30",
+    "n5f4-stable-C37-s29/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-stable-C37-s29/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-stable-C37-s29/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-stable-C37-s29/collector.pcap": "c5fe5dda18ff12b7df929e7dcfd1d58950a72d8b2c7fe5d0cb11384fe5c3cba3",
+    "n5f4-stable-C37-s29/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C37-s29/decisions.jsonl": "fd3041a48779516545149db1114b4982537fc869d82036b299e7c7c30c92d1f7",
+    "n5f4-stable-C18-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C18-s11/collector.jsonl": "66adc73bbaafaf578c7c52b37eeaa73745e420d910a7d908068483e091cc7c56",
+    "n5f4-stable-C18-s11/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-stable-C18-s11/final-state.json": "17a3d66af908e45b9f9aae462cebf579256e4358f491302cb44400fd0f3c2481",
+    "n5f4-stable-C18-s11/packets.json": "dc37e50cd34b2fbe0e2474642ccb6d36baa59530c7c8aa013ab50ef3c24cee82",
+    "n5f4-stable-C18-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-stable-C18-s11/host.json": "85c3a7736b303bc6763a19bd570dc7280cde3ef8e3e41d8522c4ef1f51be7184",
+    "n5f4-stable-C18-s11/ingestion.jsonl": "776a744439c4b6e7e2026fe98bac1deeef2e709952d08af1bad6f3b43c113ac9",
+    "n5f4-stable-C18-s11/destination.pcap": "72e488b19c92b221ad6a7d56e8742fd995ae5408cceedd62be3ea9e41c6b3b70",
+    "n5f4-stable-C18-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C18-s11/availability.jsonl": "caa1f1fcc9fe8d89daac177c80a1ab7f1d7bd4c1bdc5c42195f7e31fc5a540cf",
+    "n5f4-stable-C18-s11/wall-clock-samples.json": "732c59e804acde1cf05180d66d752e968c29aed51be97e8838323b5baa656380",
+    "n5f4-stable-C18-s11/result.json": "b18e5e170b4af13c4679f7a6ea56df3eb821dfd91e8a7724c9380484a01e4a2a",
+    "n5f4-stable-C18-s11/control-ledger.json": "a531583edfc61d312c89a9530554abac8f8a2c784e64a940af656badee212720",
+    "n5f4-stable-C18-s11/send.jsonl": "98b873b484babfa5490f63d52f7fedd924e93dd03e9a4913019b28f2a3c4d738",
+    "n5f4-stable-C18-s11/actions.jsonl": "c9905abc229df62f4c047f7f0a97e22bf5b9199526c57ba0020a9283693fa484",
+    "n5f4-stable-C18-s11/destination.jsonl": "86832dfdc7727d0b2595d42816cb9641b4ad871f948c871b34c88f5d44fcb5d9",
+    "n5f4-stable-C18-s11/notice-schedule.json": "f081e4b03de9021320c52e3ac3c4cc382e16e9b0593a9bb05d9c896dd819d10a",
+    "n5f4-stable-C18-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-stable-C18-s11/tasks.json": "d1e7807958aa2633e79936aa83a1ae154e3265916db71ede8b7c9db72c6e91d2",
+    "n5f4-stable-C18-s11/notice-send.jsonl": "993dcb333d002f4b998928f6ba2979842b0a4d70e65cc720edf7a76187d8d64d",
+    "n5f4-stable-C18-s11/notices.jsonl": "feca797823219e4038113554d2e73ab713a2b92513660a3e7a1baf4ce3105963",
+    "n5f4-stable-C18-s11/report-observations.jsonl": "8258d266e8955b204aaedef3adcb404d877291f3964d0038074b6be10707ab4e",
+    "n5f4-stable-C18-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-stable-C18-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-stable-C18-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-stable-C18-s11/collector.pcap": "f71b964d19b7fdf1f404e047531445b8470936522deed2738edeaa15eac91dc4",
+    "n5f4-stable-C18-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-stable-C18-s11/decisions.jsonl": "0a1774cd57974595581fc63b430b23424bcd4f7faad294b2165544907cfa821c",
+    "n5f4-shared_priority-C37-s11/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C37-s11/collector.jsonl": "8bb93fcd390f11fd74af4be2318adb551270886a21e71dc324189b201618d27e",
+    "n5f4-shared_priority-C37-s11/algorithm-settings.json": "a185f9d51fa00f5815d030f65650a3b87be800a61e7c250825dae66a56c6532b",
+    "n5f4-shared_priority-C37-s11/final-state.json": "8eb5910a433aa5b0e89f632c4eb19c434dc8c90261faf79ed395f355751c503c",
+    "n5f4-shared_priority-C37-s11/packets.json": "6c593cd573f699e39b9f878070523e5af7dfb1bcf6fdd17aeddeb69db94c6aba",
+    "n5f4-shared_priority-C37-s11/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-C37-s11/host.json": "dde01155437bb17b47e390272310d1c467883fbf21fb036237e04c4444b5e20c",
+    "n5f4-shared_priority-C37-s11/ingestion.jsonl": "8945a35c9147ab54ad604fee306ca12b72cf955e4d5f7ea35d3a0bafde358e1d",
+    "n5f4-shared_priority-C37-s11/destination.pcap": "9182bd52e264351e65ccfd4dfda2b02d42c34c744ee609913bd473b0472e1ede",
+    "n5f4-shared_priority-C37-s11/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C37-s11/availability.jsonl": "470f59b7ba13979610bb03d28cdba3d241fbe6c1238bd477b975a542c27721a9",
+    "n5f4-shared_priority-C37-s11/wall-clock-samples.json": "42d0cbdc08a30d5967ab4b3005e79d80569b997f01f00c7108b3265501daf8cc",
+    "n5f4-shared_priority-C37-s11/result.json": "fabc4575b596647b8ce2c9765a2e802cf27e4ab792656c7d1b9940519aaf2466",
+    "n5f4-shared_priority-C37-s11/control-ledger.json": "b5ec4ecf1b15b451adae74613e9a8ce0ce5edfd4ff2033d708b4dd7139bc5fea",
+    "n5f4-shared_priority-C37-s11/send.jsonl": "c6ce1d1e855ce78948e4ba9d6f1c96bcaaf9b1950b63dbf7d7f833cf0b9271a4",
+    "n5f4-shared_priority-C37-s11/actions.jsonl": "265b1ece53a1d2f10f101990e506d06f18292a074fb2fd97ccc101ca188da5a3",
+    "n5f4-shared_priority-C37-s11/destination.jsonl": "f4017dbb2a597d271147fbe2c2d2dde983716e16e61a528f6f2b34a92d34a61f",
+    "n5f4-shared_priority-C37-s11/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-shared_priority-C37-s11/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-shared_priority-C37-s11/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-shared_priority-C37-s11/notice-send.jsonl": "6a7f9156747117cf236d357e588dfba5091a0754cf3b6fe4da4ccdd54eb1b658",
+    "n5f4-shared_priority-C37-s11/notices.jsonl": "ae79f5a1dd7affdcabd69f3f0f3ff89a604a2ba2b6a9a640a689f5df22ff3ac7",
+    "n5f4-shared_priority-C37-s11/report-observations.jsonl": "6ed9e2c6849a649184b81f3ae40b8f24127151c1ceee7d61ecd65a3aa3c311ab",
+    "n5f4-shared_priority-C37-s11/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C37-s11/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-shared_priority-C37-s11/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-shared_priority-C37-s11/collector.pcap": "3400fa015f28cea856c5b29e3daf339ae484531f4c59e7baf45d59ad857b4a55",
+    "n5f4-shared_priority-C37-s11/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-shared_priority-C37-s11/decisions.jsonl": "5cdbd060414466135fbc08b3c36d29b5c63fcaae625b9af03225415c480f5460",
+    "network-n5f4/node-4/sts4-eth1_in.pcap": "9ffff7c8de64ee62c71afe8e5e7e5ed75bdc4fd89c89629dcdaf86595fbf369e",
+    "network-n5f4/node-4/sts4-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-4/sts4-eth2_out.pcap": "f324f2f90e6033586cd40e673ec3c66679216d3fc6ed5c81991efd1751a35ecb",
+    "network-n5f4/node-4/switch.log": "b231d353bfdd7b26d0ce77e79835d003f0824b71b982c9ac9981ef41cd831a25",
+    "network-n5f4/node-4/sts4-eth2_in.pcap": "5a4f85eaf2caf5db57012076c3da8d7e4cda99fceccbb7a907622ee98a1d2602",
+    "network-n5f4/node-1/sts1-eth2_out.pcap": "685504c68fa7edc75ffa575ef820b121cced79d6178c4df1a493687add808341",
+    "network-n5f4/node-1/sts1-eth1_in.pcap": "b92e039acb8d7fb34cd65343212469b72824d286a2f2fae936d2f8fc02b26563",
+    "network-n5f4/node-1/sts1-eth2_in.pcap": "425f1e822ceafc9087677a7fbcd366f562dd367c6daae2ca3e5393f934638aef",
+    "network-n5f4/node-1/switch.log": "b8b2f778d9cf20bae1500690570a3cb85462b943eb57c6ce2f92002e7189e24f",
+    "network-n5f4/node-1/sts1-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth4_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth3_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth2_out.pcap": "0a97aea3c317c7d03902d13c98600ab9beee7917dba3b5baa92daf44e521bfb6",
+    "network-n5f4/node-3/sts3-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth4_in.pcap": "e1f90795ff1afa1e19f1aed7b625e3e6fc1289f396a4813df341bd267adaf8ff",
+    "network-n5f4/node-3/sts3-eth3_in.pcap": "2374a0ae99c720a785906e1670eb759c78c65122507af31514eb53e9758e4dec",
+    "network-n5f4/node-3/sts3-eth2_in.pcap": "1c473133d0b7f8fcb45740c70f59a14359634f2f4f066025493dd9c0bf455679",
+    "network-n5f4/node-3/switch.log": "211c2b92860406eee630adb03a6d33e9361e9ddfb8767dc3497820538c97b9d1",
+    "network-n5f4/node-3/sts3-eth1_in.pcap": "72148e8fca0fbaa83a923a78e3db8b3974c93e3fa3efa0d16d9048cd599f15de",
+    "network-n5f4/node-2/sts2-eth1_in.pcap": "bf59f17f7b18a317f132aebdd2c5372ac51eb2eeb227b1e9020d8d919790f5e7",
+    "network-n5f4/node-2/sts2-eth2_in.pcap": "ea53dd18d21b9b41805077115496a4b85d6d7d3e1865e7c15a88e6b0607dc3e2",
+    "network-n5f4/node-2/sts2-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-2/switch.log": "0210d26fa40fb305f8c1e05ba4e56e9968b947295632ff479dcc7ac56d152d48",
+    "network-n5f4/node-2/sts2-eth2_out.pcap": "4f9acf3c66f4d4944955d4de3f76127c05e2b928e51a6e613d6d4368af8cb907",
+    "network-n5f4/node-5/sts5-eth2_in.pcap": "e726f4b03d22aefe46b1db8805769b2e26400c5f9497fa4d54f39888c0b5ebb4",
+    "network-n5f4/node-5/sts5-eth1_in.pcap": "22d2a11119dd7052446eaa8663fca7c86d7ed32c8212c9fd8129e1b2fa75c506",
+    "network-n5f4/node-5/sts5-eth2_out.pcap": "47345fafe8e92065546d4e2c42a962b3af6cc8f8c4ef7573dd57878d71a164d0",
+    "network-n5f4/node-5/switch.log": "1a42b901b471bb44afe8435edbd429cad390f722d85844aae745c533c29437b4",
+    "network-n5f4/node-5/sts5-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-6/sts6-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-6/sts6-eth1_in.pcap": "3b93b7127404355f14f173b0b969d3ba605a4d831ce7ed96919785b08a0ab977",
+    "network-n5f4/node-6/sts6-eth3_out.pcap": "63bd3b4a069e3b962bf4cce24dcaae3fd3c8e1073711917429583da991a2fc00",
+    "network-n5f4/node-6/control.log": "952ce10fa817674510d77686b37208ba08f15ed71a254334718a349c2d930674",
+    "network-n5f4/node-6/switch.log": "5bd0133d267d3e7251be92dcc2c62c2db8ce34450e0e040d58167ee822a7b9bd",
+    "network-n5f4/node-6/sts6-eth2_out.pcap": "b85f245b21130a8c2a79c2ddf963568aaa3cde4793c754268b2fc631ea732deb",
+    "network-n5f4/node-6/sts6-eth2_in.pcap": "5c392992ce849aec13e4cba6936a7d004e504339abad0eac55d15617379d0fa2",
+    "network-n5f4/node-6/sts6-eth3_in.pcap": "c1e560c5c10875bb8c55e73f66b43c621f962d2b32d2d2e5082f8f529274ed83"
+  }
+}

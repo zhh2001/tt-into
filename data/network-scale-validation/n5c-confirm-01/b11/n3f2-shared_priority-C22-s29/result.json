@@ -1,0 +1,122 @@
+{
+  "name": "n3f2-shared_priority-C22-s29",
+  "network_id": "n3f2",
+  "scenario": "shared_priority",
+  "candidate_id": "C22",
+  "business_seed": 29,
+  "method": "static",
+  "initial_config": [
+    600000,
+    100000,
+    400000,
+    150000
+  ],
+  "adaptive": {
+    "gain_margin": 0.0,
+    "reserve_fraction": 0.0,
+    "lookback_us": 3000000,
+    "cluster_fraction": 0.25,
+    "period_relative_mad": 0.2,
+    "measurement_start_us": 2000000,
+    "measurement_end_us": 10000000
+  },
+  "budget": {
+    "link_bytes_per_s": {
+      "e1": 240,
+      "e2": 240,
+      "e3": 390
+    },
+    "export_bytes_per_s": 900,
+    "control_bytes_per_s": 1200
+  },
+  "scope": "已消费训练业务的静态部署重复确认",
+  "position": 91,
+  "block": 2,
+  "training_rank": 1,
+  "status": "passed",
+  "origin_monotonic_ns": 159305430955000,
+  "duration_us": 10000000,
+  "diagnostics": false,
+  "topology": {
+    "family": "two_entry_merge_chain",
+    "sampling_nodes": 3,
+    "sink": 4,
+    "flows": [
+      {
+        "identity": {
+          "session": 20,
+          "tag": 1001
+        },
+        "slot": 1,
+        "sport": 10101,
+        "entry_node": 1,
+        "source_interface_index": 0,
+        "path": [
+          1,
+          3
+        ]
+      },
+      {
+        "identity": {
+          "session": 20,
+          "tag": 2002
+        },
+        "slot": 7,
+        "sport": 10107,
+        "entry_node": 2,
+        "source_interface_index": 1,
+        "path": [
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  "initial_source_counts": [
+    {
+      "flow": {
+        "session": 20,
+        "tag": 1001
+      },
+      "node": 1,
+      "slot": 1,
+      "count": 0
+    },
+    {
+      "flow": {
+        "session": 20,
+        "tag": 2002
+      },
+      "node": 2,
+      "slot": 7,
+      "count": 0
+    }
+  ],
+  "rpc_start_index": 175,
+  "observation_period_us": 100000,
+  "decision_period_us": 1000000,
+  "warmup_us": [
+    0,
+    2000000
+  ],
+  "measurement_window_us": [
+    2000000,
+    10000000
+  ],
+  "ended_monotonic_ns": 159315797936490,
+  "rpc_stop_index": 228,
+  "errors": [],
+  "packet_count": 160,
+  "report_count": 140,
+  "checks": 1886,
+  "decision_count": 10,
+  "successful_updates": 0,
+  "paid_counts": 0,
+  "skipped_epochs": 0,
+  "observer_checks": 2178,
+  "observation_slots": 100,
+  "completed_observations": 100,
+  "skipped_observations": 0,
+  "visible_reports": 138,
+  "shared_cache_advances": 138
+}
