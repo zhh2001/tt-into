@@ -39,4 +39,4 @@ python3 experiments/plot_scale_comparison.py --analysis data/network-scale-compa
 
 首次comparison-01因独立文献核对器变量覆盖完整节点集合而中断，原状态和实际输入保留于network-scale-comparison-failures/n5d-interrupted-01。新的check_scale_comparison_literature保留完整基础头链路集合，五失败案例67752项定向核对及历史稀疏配置回归通过；原方法、参数、初始化和预算保持不变。3017–3020已消费，正式02重新审计身份，不混入完整排名。
 
-有限敏感性范围已冻结于data/network-scale-sensitivity-plan/n5e-scope-01，80例、五节点四流重点、static与phase_guard，当前无新业务生成或网络运行。
+有限敏感性范围已冻结于data/network-scale-sensitivity-plan/n5e-scope-01，80例、五节点四流重点、static与phase_guard，现已完成全部80例，复现及结果见README-sensitivity.md。

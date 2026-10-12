@@ -1,0 +1,951 @@
+{
+  "batch_id": "b00",
+  "block": 0,
+  "network_id": "n5f4",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "n5f4-O1000-s11-static",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "condition_id": "O1000",
+      "data_budget_multiplier": 1.0,
+      "observation_period_us": 1000000,
+      "business_seed": 11,
+      "block": 0,
+      "method": "static",
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480.0,
+          "e2": 480.0,
+          "e3": 780.0,
+          "e4": 780.0,
+          "e5": 780.0
+        },
+        "export_bytes_per_s": 1800.0,
+        "control_bytes_per_s": 1200
+      },
+      "decision_period_us": 1000000,
+      "scope": "训练11的低预算与秒级观察端点烟测",
+      "position": 0,
+      "status": "passed",
+      "origin_monotonic_ns": 177477616555000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 36,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 177488028272470,
+      "rpc_stop_index": 193,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 148,
+      "checks": 3852,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "literature_checks": 0,
+      "observer_checks": 374,
+      "observation_slots": 10,
+      "completed_observations": 10,
+      "skipped_observations": 0,
+      "visible_reports": 134,
+      "shared_cache_advances": 134,
+      "condition_checks": 20
+    },
+    {
+      "name": "n5f4-B085-s11-static",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "condition_id": "B085",
+      "data_budget_multiplier": 0.85,
+      "observation_period_us": 100000,
+      "business_seed": 11,
+      "block": 0,
+      "method": "static",
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 408.0,
+          "e2": 408.0,
+          "e3": 663.0,
+          "e4": 663.0,
+          "e5": 663.0
+        },
+        "export_bytes_per_s": 1530.0,
+        "control_bytes_per_s": 1200
+      },
+      "decision_period_us": 1000000,
+      "scope": "训练11的低预算与秒级观察端点烟测",
+      "position": 1,
+      "status": "passed",
+      "origin_monotonic_ns": 177489138446000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 193,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 177499553984208,
+      "rpc_stop_index": 350,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 148,
+      "checks": 3852,
+      "decision_count": 10,
+      "successful_updates": 0,
+      "paid_counts": 0,
+      "skipped_epochs": 0,
+      "literature_checks": 0,
+      "observer_checks": 2187,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 147,
+      "shared_cache_advances": 147,
+      "condition_checks": 20
+    },
+    {
+      "name": "n5f4-B085-s11-phase_guard",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "condition_id": "B085",
+      "data_budget_multiplier": 0.85,
+      "observation_period_us": 100000,
+      "business_seed": 11,
+      "block": 0,
+      "method": "phase_guard",
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 408.0,
+          "e2": 408.0,
+          "e3": 663.0,
+          "e4": 663.0,
+          "e5": 663.0
+        },
+        "export_bytes_per_s": 1530.0,
+        "control_bytes_per_s": 1200
+      },
+      "decision_period_us": 1000000,
+      "scope": "训练11的低预算与秒级观察端点烟测",
+      "position": 2,
+      "status": "passed",
+      "origin_monotonic_ns": 177500739962000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 350,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 177511194652632,
+      "rpc_stop_index": 552,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 162,
+      "checks": 4861,
+      "decision_count": 10,
+      "successful_updates": 5,
+      "paid_counts": 40,
+      "skipped_epochs": 0,
+      "literature_checks": 0,
+      "observer_checks": 2200,
+      "observation_slots": 100,
+      "completed_observations": 100,
+      "skipped_observations": 0,
+      "visible_reports": 160,
+      "shared_cache_advances": 160,
+      "condition_checks": 20
+    },
+    {
+      "name": "n5f4-O1000-s11-phase_guard",
+      "network_id": "n5f4",
+      "scenario": "shared_priority",
+      "candidate_id": "C29",
+      "initial_config": [
+        600000,
+        null,
+        null,
+        50000,
+        800000,
+        400000,
+        null,
+        1000000,
+        null,
+        null,
+        600000,
+        null,
+        null,
+        null,
+        800000,
+        null
+      ],
+      "condition_id": "O1000",
+      "data_budget_multiplier": 1.0,
+      "observation_period_us": 1000000,
+      "business_seed": 11,
+      "block": 0,
+      "method": "phase_guard",
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "budget": {
+        "link_bytes_per_s": {
+          "e1": 480.0,
+          "e2": 480.0,
+          "e3": 780.0,
+          "e4": 780.0,
+          "e5": 780.0
+        },
+        "export_bytes_per_s": 1800.0,
+        "control_bytes_per_s": 1200
+      },
+      "decision_period_us": 1000000,
+      "scope": "训练11的低预算与秒级观察端点烟测",
+      "position": 3,
+      "status": "passed",
+      "origin_monotonic_ns": 177512429535000,
+      "duration_us": 10000000,
+      "diagnostics": false,
+      "topology": {
+        "family": "two_entry_merge_chain",
+        "sampling_nodes": 5,
+        "sink": 6,
+        "flows": [
+          {
+            "identity": {
+              "session": 20,
+              "tag": 1001
+            },
+            "slot": 1,
+            "sport": 10101,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 2002
+            },
+            "slot": 7,
+            "sport": 10107,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 3003
+            },
+            "slot": 42,
+            "sport": 10142,
+            "entry_node": 1,
+            "source_interface_index": 0,
+            "path": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "identity": {
+              "session": 20,
+              "tag": 4004
+            },
+            "slot": 250,
+            "sport": 10350,
+            "entry_node": 2,
+            "source_interface_index": 1,
+            "path": [
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "initial_source_counts": [
+        {
+          "flow": {
+            "session": 20,
+            "tag": 1001
+          },
+          "node": 1,
+          "slot": 1,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 2002
+          },
+          "node": 2,
+          "slot": 7,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 3003
+          },
+          "node": 1,
+          "slot": 42,
+          "count": 0
+        },
+        {
+          "flow": {
+            "session": 20,
+            "tag": 4004
+          },
+          "node": 2,
+          "slot": 250,
+          "count": 0
+        }
+      ],
+      "rpc_start_index": 552,
+      "warmup_us": [
+        0,
+        2000000
+      ],
+      "measurement_window_us": [
+        2000000,
+        10000000
+      ],
+      "ended_monotonic_ns": 177522825736259,
+      "rpc_stop_index": 751,
+      "errors": [],
+      "packet_count": 320,
+      "report_count": 171,
+      "checks": 4834,
+      "decision_count": 10,
+      "successful_updates": 2,
+      "paid_counts": 40,
+      "skipped_epochs": 0,
+      "literature_checks": 0,
+      "observer_checks": 394,
+      "observation_slots": 10,
+      "completed_observations": 10,
+      "skipped_observations": 0,
+      "visible_reports": 154,
+      "shared_cache_advances": 154,
+      "condition_checks": 20
+    }
+  ],
+  "started_monotonic_ns": 177475430791341,
+  "switch_pids": [
+    630435,
+    630449,
+    630463,
+    630477,
+    630491,
+    630505
+  ],
+  "cleaned_monotonic_ns": 177524237593387,
+  "artifact_sha256": {
+    "rpc.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "rpc.jsonl": "6a3b5e18dd3bab7d18586b3b4e6ac595b626ac777a27c27edaf306c901285989",
+    "rpc-operations.jsonl": "9f80a6a2bc680af294cc84ac110a3cf72ce7e3c1ab34b247e6ecab282664fed0",
+    "rpc-capture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rpc.pcap": "31bb3f2285efd504fc9d4a714e804163d63afab31362c3ab6242f86dc227637f",
+    "rpc.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-B085-s11-phase_guard/count-observations.jsonl": "fdce92ac64b8c8bf76caad872aee9b76e168f578bee18c7ca4c9cb764f96c808",
+    "n5f4-B085-s11-phase_guard/collector.jsonl": "9cf3340df9d4c618c2c2f7c306af0eacc3dbe35ea44b4122c294e326c00df166",
+    "n5f4-B085-s11-phase_guard/algorithm-settings.json": "4d817fd67c15068c5db37938907d53b653bd1c0296a17d1b02dc03dbc55d6ce1",
+    "n5f4-B085-s11-phase_guard/final-state.json": "d21f145de3e37db7e0cb8121b83af8bbb7c445287f51594192e54272a679fa4a",
+    "n5f4-B085-s11-phase_guard/packets.json": "ef5f2daf3306518fcfaa6d59cb179d2a86c2b75e76566f5d6b246a5112b2a409",
+    "n5f4-B085-s11-phase_guard/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-B085-s11-phase_guard/host.json": "efe197cdd77914f5baea586205d30bfe860465803be7896a9ac55df47c5eab37",
+    "n5f4-B085-s11-phase_guard/ingestion.jsonl": "79c1714a1418a75a75611a74790d8ecb2073f4262d2eee826241ad4a6b2ad667",
+    "n5f4-B085-s11-phase_guard/destination.pcap": "52407a8fd5077c6581adab2477ae257710ba9127a190125f631119c83b2a43ed",
+    "n5f4-B085-s11-phase_guard/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-B085-s11-phase_guard/availability.jsonl": "084c4067e4490f0ebae2380ae3077f7d48b809904fb228f81ede368f1dce0b1d",
+    "n5f4-B085-s11-phase_guard/wall-clock-samples.json": "7f0c31ed720bd5ab6b784549b48dad85e0bd3d183b518cb970fb46364e581ef6",
+    "n5f4-B085-s11-phase_guard/result.json": "9fdfff0358da6b67dbd4f4425aea0f4a1ecfad5c1ef95eb702c59388714c12cd",
+    "n5f4-B085-s11-phase_guard/control-ledger.json": "12ffc878ef41c1eebb461d7afc700973883ad99cb55fa2cf312331e8f57919ed",
+    "n5f4-B085-s11-phase_guard/send.jsonl": "54768fba3d59cf69828574621b4c9de32353b0034374c4ad76051305942f6f6a",
+    "n5f4-B085-s11-phase_guard/actions.jsonl": "5ba1dbd80f3e7ea2cea1825e687c576af55fd21298e4aeb33772955d42d6e901",
+    "n5f4-B085-s11-phase_guard/destination.jsonl": "411d2bc1c8af20bbe13534b46b8ea63cfca5bec5d05d9becbf3a78fc19768805",
+    "n5f4-B085-s11-phase_guard/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-B085-s11-phase_guard/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-B085-s11-phase_guard/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-B085-s11-phase_guard/notice-send.jsonl": "82b03e550b651fb917aeb8fe20962ec5cc1c5efdfeefdadd70b6438758d8c457",
+    "n5f4-B085-s11-phase_guard/notices.jsonl": "279f5d6f6d742f75573d6fbe2a79da772cb4f3b10edf1b3b37e2e186bcb85ae9",
+    "n5f4-B085-s11-phase_guard/report-observations.jsonl": "499185dd21fe0bd799ec46a8a44c59ecbaaecc9f1b75c27e9c0a4b48e19bfc8c",
+    "n5f4-B085-s11-phase_guard/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-B085-s11-phase_guard/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-B085-s11-phase_guard/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-B085-s11-phase_guard/collector.pcap": "dc385038c435f55200fe4583112673a7c616fd797c22dc616cf81b576064b9d3",
+    "n5f4-B085-s11-phase_guard/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-B085-s11-phase_guard/decisions.jsonl": "042ce16eebc944641a44cbc5ed84e8ce4f834ac528a1b43de7b0119056600287",
+    "n5f4-O1000-s11-static/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-O1000-s11-static/collector.jsonl": "2ac79bd8ffc3278f25dbda138260e378c51da6aa1281a81de7590d2610e5dd94",
+    "n5f4-O1000-s11-static/algorithm-settings.json": "66570f3f7b3a6bf18049cbd45ba956a0d10aabe6dbdd782f8a1dc2d984312d4e",
+    "n5f4-O1000-s11-static/final-state.json": "22e681de85659e6fdc88bfed5aa37945e034df7d23e4c587e9b8519fe6834c12",
+    "n5f4-O1000-s11-static/packets.json": "6c593cd573f699e39b9f878070523e5af7dfb1bcf6fdd17aeddeb69db94c6aba",
+    "n5f4-O1000-s11-static/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-O1000-s11-static/host.json": "687ea47f599cb06a57a7be7931cd8f38efc4d48b59b1abad6633056e2851842a",
+    "n5f4-O1000-s11-static/ingestion.jsonl": "3c9fcef9797f43730cb4c77332a037c6cfd18c8782847ceaa32580a115b2e564",
+    "n5f4-O1000-s11-static/destination.pcap": "792e1b75b8f350bddebfd32c68914966f7c013f43e4167b2441c00f974c2fbe8",
+    "n5f4-O1000-s11-static/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-O1000-s11-static/availability.jsonl": "94f703460976396b11d63f21e1cca9553c3c7ecbf26a1567803ab72993cc9a6a",
+    "n5f4-O1000-s11-static/wall-clock-samples.json": "ff2cfdfb6c27aef1fb1088de679c257a1a9f69f51b5c817f4e187fc9757b6259",
+    "n5f4-O1000-s11-static/result.json": "bb87f7a7a6b5654af39b17f87ceb8aecc21dedd41ffd8186bf1a96d13b7a19ce",
+    "n5f4-O1000-s11-static/control-ledger.json": "82a4f482985a5f28e50eed0c0c051aaab13ea43309c22eeed209905f613f9d61",
+    "n5f4-O1000-s11-static/send.jsonl": "27a576c1211e0dc857b6f81a83bed44808be797c61b2b8caa4bb4f5cb2f39342",
+    "n5f4-O1000-s11-static/actions.jsonl": "e6735d33a2b2694d929f23172898d7a5819d81c088f658891b7ecb743cf37871",
+    "n5f4-O1000-s11-static/destination.jsonl": "b546d00a3dd7ea961be5fe29d6c728ec031aa2cfcf0ce540672d5059d7eac0d2",
+    "n5f4-O1000-s11-static/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-O1000-s11-static/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-O1000-s11-static/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-O1000-s11-static/notice-send.jsonl": "405b6ea25d294a0eeb3b46c90d5ac76e55d897fd79c76bbbc4ce158248dc470b",
+    "n5f4-O1000-s11-static/notices.jsonl": "9d74e58af07ab8a94f8bf4d874b0e947f60f1bd7b2eed6c72b40955700b01c59",
+    "n5f4-O1000-s11-static/report-observations.jsonl": "af3e488f8c325d501a99aef97e9a8b3ca462f16924c578484aa692857a0696db",
+    "n5f4-O1000-s11-static/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-O1000-s11-static/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-O1000-s11-static/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-O1000-s11-static/collector.pcap": "54426c92186a32a6ada17609c6b1518c4ec7c557651994d59aecd4ce235e1396",
+    "n5f4-O1000-s11-static/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-O1000-s11-static/decisions.jsonl": "31c7c1ab2897c6d952e144d6bda3a315a1240471dfaf9ca6bebc9eac002afa07",
+    "n5f4-O1000-s11-phase_guard/count-observations.jsonl": "dc9a46f1c3557613a468a1062bd2dd93dea9ed46e89f5fc1b006d88b3a130a11",
+    "n5f4-O1000-s11-phase_guard/collector.jsonl": "ffa9f0aff504341d6c8255a13d7c84179169eb01af32c6e5c45b578a4122dbf2",
+    "n5f4-O1000-s11-phase_guard/algorithm-settings.json": "9bf81c04e1f5bb541e09c349dbf328cf9f33ff91cd98d36190f49ede7d7b2ce8",
+    "n5f4-O1000-s11-phase_guard/final-state.json": "7357c92aecf37068547ade060a807bce6aacc82bd2c6049cf7e32057073f0c6a",
+    "n5f4-O1000-s11-phase_guard/packets.json": "08c93e074fdc9dd54728c4cf600434dd7e057fc43945cd2df048322d8b7423c6",
+    "n5f4-O1000-s11-phase_guard/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-O1000-s11-phase_guard/host.json": "23b56a891fe7200ab692d3dc19325d22d6fb1d6e0784894be7d42d82eaaa0582",
+    "n5f4-O1000-s11-phase_guard/ingestion.jsonl": "d0514d80c4f59e7c452ed8a6045dea523832423f62db7fe9f2d7bd2e01a27407",
+    "n5f4-O1000-s11-phase_guard/destination.pcap": "d3a01fa58c881a9f93d989946dc3066f4290c197a40f8badce640128c8865ed6",
+    "n5f4-O1000-s11-phase_guard/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-O1000-s11-phase_guard/availability.jsonl": "83056492600a1f61d7aa600fa75fe8b5a13ff88f8dea2cfce5f9b552b323c9da",
+    "n5f4-O1000-s11-phase_guard/wall-clock-samples.json": "d5b1e53918c75e5936834e0fe8154eaa95f61117ff59cdd06a007afa61f8678f",
+    "n5f4-O1000-s11-phase_guard/result.json": "c2306b15a0d35a47ac659251f286cbbe75e506ab6cf23275efa0b9d3cdea47d0",
+    "n5f4-O1000-s11-phase_guard/control-ledger.json": "d0c974af65c71e84c0c363ce80f3c3b903636cbfce06f86ae84c3196a3e96823",
+    "n5f4-O1000-s11-phase_guard/send.jsonl": "023acb9b895d03105008b67c3018afde34e4e0a767686db89e84d73341abee4c",
+    "n5f4-O1000-s11-phase_guard/actions.jsonl": "90e286f46eed2fc02c201df4eae1fa52c850219005b595ecead857a0dd28038b",
+    "n5f4-O1000-s11-phase_guard/destination.jsonl": "021398d36c4307fbac47005bfb6d7df6ef470c281fc1b49ed1b1b68125125e39",
+    "n5f4-O1000-s11-phase_guard/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-O1000-s11-phase_guard/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-O1000-s11-phase_guard/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-O1000-s11-phase_guard/notice-send.jsonl": "aba240eb1f70a267fc1b4832ffee83a54bc530d95fda59201ec892ec31b048af",
+    "n5f4-O1000-s11-phase_guard/notices.jsonl": "f35aef97982d2e7fa6934a6d843bcab496347ef21fc5dab65db62dcf8dbd71b6",
+    "n5f4-O1000-s11-phase_guard/report-observations.jsonl": "3bcea7e0154a425265e83dde9e3a78cbbcd271b4ee6be1a3e61ba6504034229e",
+    "n5f4-O1000-s11-phase_guard/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-O1000-s11-phase_guard/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-O1000-s11-phase_guard/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-O1000-s11-phase_guard/collector.pcap": "024aa50c5bb0cbc6a8c02fd64a7c232981377cb8851e0de612e02d5afa36be1f",
+    "n5f4-O1000-s11-phase_guard/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-O1000-s11-phase_guard/decisions.jsonl": "9b629f47472470f63aeb1b9026f55fba682be75ebefd0b9ddd7ad2be4fa6edbc",
+    "n5f4-B085-s11-static/count-observations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-B085-s11-static/collector.jsonl": "346832b4b6cd7f976ac341aa25d7c516b5c58d21dee3235afa92e682bf7daf07",
+    "n5f4-B085-s11-static/algorithm-settings.json": "73314d561a81fd119a70429f7684e734e5a1f31375c7cf0b7e3d56104398b02b",
+    "n5f4-B085-s11-static/final-state.json": "5ea8157cc2a57c93dfbe1fba34a847f632e2aa184562678bd6be8e59f2fe7fde",
+    "n5f4-B085-s11-static/packets.json": "5c1480ed7f1b3a71e39c80986643084a3c8ed29b6302e7a3a133afd53fe13167",
+    "n5f4-B085-s11-static/collector.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-B085-s11-static/host.json": "fed919b9a82ae4da71030c25e6c8d7a97c4f5f5a5d47ea47702febaebb399a9f",
+    "n5f4-B085-s11-static/ingestion.jsonl": "c2e71dc5e71c8cfc28aa217ef6a82e9aa64e7460a00f1dcaf7f3a9136738a337",
+    "n5f4-B085-s11-static/destination.pcap": "377852602cdc17d266a4794a7e4028b1f894b72537c2a434b363a562e00142cb",
+    "n5f4-B085-s11-static/collector.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-B085-s11-static/availability.jsonl": "1c0b2c9f4cb5d17439c44252708990a884feff6b300f15aabc7a81ec6e5d1c19",
+    "n5f4-B085-s11-static/wall-clock-samples.json": "29d285dc9461d484139b2b7e846d28a253b7b7b4a0038343f03e235b2348c4e2",
+    "n5f4-B085-s11-static/result.json": "a6cb00562b9ddc353158b946801818b9c680d11d095bb3bcd49e1d4ce82cc02b",
+    "n5f4-B085-s11-static/control-ledger.json": "1ffa1889458713497d9de003cb9f2577f70cf70ca3838f0cb271987fed73ac77",
+    "n5f4-B085-s11-static/send.jsonl": "bbb4c325f48688ae613d053f095c2f9cb1e497804b266e870cd3903397cb7e21",
+    "n5f4-B085-s11-static/actions.jsonl": "4fdc0ea16b21112c257472402b5e4783049d1206ecbb31915afa00e63242fd25",
+    "n5f4-B085-s11-static/destination.jsonl": "557df910ccd12d2ac5c8f23b17e85084db2733a5eb4d3459942b7efa8aac2114",
+    "n5f4-B085-s11-static/notice-schedule.json": "ad43aee5d101bf0bb3d9190f8832c9bfa74d3ee17c24214b8414d80af507385f",
+    "n5f4-B085-s11-static/reconciliation.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "n5f4-B085-s11-static/tasks.json": "c9bde68fdb5f04a000f542838582ebfddec58bee50a4f1298079ad0673f1d58a",
+    "n5f4-B085-s11-static/notice-send.jsonl": "c91399bb1db54af4bc992bb61502ebeeb0f0acdcce6b87103362f598647b4641",
+    "n5f4-B085-s11-static/notices.jsonl": "eef3dc971d94eb64d77f1a095d70420ec99c3eacc188538d005a297a94a8d465",
+    "n5f4-B085-s11-static/report-observations.jsonl": "f9c78a768e22a7b9b5beb72bba236fa72eeaaa24b58c60d41008dc2b1b9e0594",
+    "n5f4-B085-s11-static/collector.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-B085-s11-static/destination.ready": "ed1a545bb85e55816bbf9566b028b2a0bc456b88f49f6f266c0401048824194b",
+    "n5f4-B085-s11-static/destination.stop": "a11c3d917a2149a4b548217038bc8f2dd2130a1966e0c7af5c4225d81f25a8c3",
+    "n5f4-B085-s11-static/collector.pcap": "3ad5343fd1cc8cd80a70afbad4730a73690b8f414aa6237df09db65dbded590a",
+    "n5f4-B085-s11-static/destination.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "n5f4-B085-s11-static/decisions.jsonl": "68ac83740ad61a8d7e90d6d8c0868c3cd77ae2b1cbc5c419e71a8ddf302c4317",
+    "network-n5f4/node-4/sts4-eth1_in.pcap": "806ab36c770c81fb608a48917a9112e2257690ac9bd3a172708aac5fcffca256",
+    "network-n5f4/node-4/sts4-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-4/sts4-eth2_out.pcap": "2aa0de189bdf52b3c197505aff837607d8417515e76a1b26e4b73dba23a40f15",
+    "network-n5f4/node-4/switch.log": "69c2bed8f3806e8ee333d3ffc7fcb9b66873814a1ef066e78df61de235f66453",
+    "network-n5f4/node-4/sts4-eth2_in.pcap": "82ac7f4fc2d7170584cc886da9b91a65bfdb6c2956416859151462ba547a3bab",
+    "network-n5f4/node-1/sts1-eth2_out.pcap": "cb5a9a6d920b021fc232c0d62bd3c4eb575971ea781d397c0de4f059e139d3d8",
+    "network-n5f4/node-1/sts1-eth1_in.pcap": "cde20bf0e3d09bf94b331d28cae29ab493478c47bae5423ad0e5a56ecba08b9f",
+    "network-n5f4/node-1/sts1-eth2_in.pcap": "c5182ae15cf48fd34e57343eca4d8af0f6719f9ed5f72d9b5c00703aebb89ce0",
+    "network-n5f4/node-1/switch.log": "a581f6a1c8fb9a6878d412e7057e633b8f4ee608704a2be57eda11f5597f4471",
+    "network-n5f4/node-1/sts1-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth4_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth3_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth2_out.pcap": "cd7ef9e2b491f7e4a75ff8932d1aa0fb2eb3e0c1635f965ab2aba75b5470fc02",
+    "network-n5f4/node-3/sts3-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-3/sts3-eth4_in.pcap": "3d0a0cd6f628b019780db2c98188cc7fd5ff464426edc95ddf16b31d6e43232d",
+    "network-n5f4/node-3/sts3-eth3_in.pcap": "6120ef21e6418c37c8efd2125a963f17e0f98160c38c3cf238ccca8dcbd02866",
+    "network-n5f4/node-3/sts3-eth2_in.pcap": "c755a0e46f9b401ea34c12f96521f77a05e6eb56099f97cd69f136cec922a740",
+    "network-n5f4/node-3/switch.log": "ac072a3c9bad0637b0a2c7993819f34892836f453395b7aa0bcc14ede18b6b91",
+    "network-n5f4/node-3/sts3-eth1_in.pcap": "357c354f9b9982b2cc5858f295cbfa12ac67304a88b0494a2edbd3fb062c938a",
+    "network-n5f4/node-2/sts2-eth1_in.pcap": "bf21fd95f0e569a2c14f14ee113ea36caacd5603511f366c0871fb11495446e6",
+    "network-n5f4/node-2/sts2-eth2_in.pcap": "7025438428e60348c910b9c9bfab344c6130a51505091b157c237d5ac9ad9868",
+    "network-n5f4/node-2/sts2-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-2/switch.log": "8cac178caed3e5cd53ea7079f01aee51a702d263f7306463d8e5645a4a5ee4e2",
+    "network-n5f4/node-2/sts2-eth2_out.pcap": "be3cfe3ffe7fe05eab3170e778411c5746a2bf2c95f0cec4fcb361b5e0749360",
+    "network-n5f4/node-5/sts5-eth2_in.pcap": "65d5389f47e5522b4bb3629f86d0abc810d39e040d5e5ee9ace8c5acf3e15114",
+    "network-n5f4/node-5/sts5-eth1_in.pcap": "d7f0ab6432040a8052fd2837dd6ac73cb73bd8a2e644b27a85ea3d3460bef7f3",
+    "network-n5f4/node-5/sts5-eth2_out.pcap": "3525fb37f87bfdf504279bb4650a86fffa44c0160c4a973171a8dc48f8a76684",
+    "network-n5f4/node-5/switch.log": "984babfa18b1ab015573d2ed3c769586366935d58ab36c249e0d1ddbe9e24acf",
+    "network-n5f4/node-5/sts5-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-6/sts6-eth1_out.pcap": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "network-n5f4/node-6/sts6-eth1_in.pcap": "0a15e498d446c4126493329cd24bb859b4121b6f3b91a1d7f117ba6e5ff72b5a",
+    "network-n5f4/node-6/sts6-eth3_out.pcap": "9ec15ba12b60b26fc0190c23a9ac09c381ff06dd0f47a09baa9f57e039f612bd",
+    "network-n5f4/node-6/control.log": "952ce10fa817674510d77686b37208ba08f15ed71a254334718a349c2d930674",
+    "network-n5f4/node-6/switch.log": "4e8cff7c7ea5d944b6c7a970f785b8ec561b268913a5259015fdf6f187e0e907",
+    "network-n5f4/node-6/sts6-eth2_out.pcap": "55179c1f28175a83b871ba58feaa32fe094bfccf1d8dde39f4cbe51aef399799",
+    "network-n5f4/node-6/sts6-eth2_in.pcap": "475d90580c16c77541d96ef4672d0b988b6becc42981297cf6f47ac1056e5743",
+    "network-n5f4/node-6/sts6-eth3_in.pcap": "c92669a28ef93a22c060799da6bee836137ffc3ee69a88b47f184a0b5d721bdc"
+  }
+}

@@ -1,0 +1,4208 @@
+{
+  "header_types" : [
+    {
+      "name" : "scalars_0",
+      "id" : 0,
+      "fields" : [
+        ["tmp", 1, false],
+        ["tmp_0", 1, false],
+        ["tmp_1", 1, false],
+        ["tmp_2", 1, false],
+        ["tmp_3", 1, false],
+        ["count_0", 32, false],
+        ["tmp_4", 32, false],
+        ["threshold_0", 48, false],
+        ["previous_0", 48, false],
+        ["valid_0", 1, false],
+        ["capacity_0", 8, false],
+        ["metadata_t.parsed", 8, false],
+        ["metadata_t.sport", 16, false],
+        ["metadata_t.dport", 16, false],
+        ["metadata_t.flow_index", 32, false],
+        ["metadata_t.enabled", 1, false],
+        ["metadata_t.flow_tag", 32, false],
+        ["metadata_t.session", 32, false],
+        ["metadata_t.node_id", 8, false],
+        ["metadata_t.source", 1, false],
+        ["metadata_t.sink", 1, false],
+        ["metadata_t.mtu", 16, false],
+        ["metadata_t.mtu_blocked", 1, false],
+        ["_padding_0", 6, false]
+      ]
+    },
+    {
+      "name" : "standard_metadata",
+      "id" : 1,
+      "fields" : [
+        ["ingress_port", 9, false],
+        ["egress_spec", 9, false],
+        ["egress_port", 9, false],
+        ["instance_type", 32, false],
+        ["packet_length", 32, false],
+        ["enq_timestamp", 32, false],
+        ["enq_qdepth", 19, false],
+        ["deq_timedelta", 32, false],
+        ["deq_qdepth", 19, false],
+        ["ingress_global_timestamp", 48, false],
+        ["egress_global_timestamp", 48, false],
+        ["mcast_grp", 16, false],
+        ["egress_rid", 16, false],
+        ["checksum_error", 1, false],
+        ["parser_error", 32, false],
+        ["priority", 3, false],
+        ["_padding", 3, false]
+      ]
+    },
+    {
+      "name" : "ethernet_t",
+      "id" : 2,
+      "fields" : [
+        ["dst", 48, false],
+        ["src", 48, false],
+        ["ether_type", 16, false]
+      ]
+    },
+    {
+      "name" : "ipv4_t",
+      "id" : 3,
+      "fields" : [
+        ["version", 4, false],
+        ["ihl", 4, false],
+        ["diffserv", 8, false],
+        ["total_len", 16, false],
+        ["identification", 16, false],
+        ["flags", 3, false],
+        ["frag_offset", 13, false],
+        ["ttl", 8, false],
+        ["protocol", 8, false],
+        ["checksum", 16, false],
+        ["src", 32, false],
+        ["dst", 32, false]
+      ]
+    },
+    {
+      "name" : "int_t",
+      "id" : 4,
+      "fields" : [
+        ["count", 8, false],
+        ["init_ttl", 8, false],
+        ["version", 8, false],
+        ["metric", 8, false],
+        ["flow_tag", 32, false],
+        ["session", 32, false]
+      ]
+    },
+    {
+      "name" : "udp_t",
+      "id" : 5,
+      "fields" : [
+        ["src", 16, false],
+        ["dst", 16, false],
+        ["length", 16, false],
+        ["checksum", 16, false]
+      ]
+    },
+    {
+      "name" : "tcp_t",
+      "id" : 6,
+      "fields" : [
+        ["src", 16, false],
+        ["dst", 16, false],
+        ["seq", 32, false],
+        ["ack", 32, false],
+        ["data_offset", 4, false],
+        ["reserved", 4, false],
+        ["flags", 8, false],
+        ["window", 16, false],
+        ["checksum", 16, false],
+        ["urgent", 16, false]
+      ]
+    },
+    {
+      "name" : "record_t",
+      "id" : 7,
+      "fields" : [
+        ["switch_id", 8, false],
+        ["hop", 8, false],
+        ["generated_us", 48, false],
+        ["queue_packets", 32, false]
+      ]
+    }
+  ],
+  "headers" : [
+    {
+      "name" : "scalars",
+      "id" : 0,
+      "header_type" : "scalars_0",
+      "metadata" : true,
+      "pi_omit" : true
+    },
+    {
+      "name" : "standard_metadata",
+      "id" : 1,
+      "header_type" : "standard_metadata",
+      "metadata" : true,
+      "pi_omit" : true
+    },
+    {
+      "name" : "ethernet",
+      "id" : 2,
+      "header_type" : "ethernet_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "ipv4",
+      "id" : 3,
+      "header_type" : "ipv4_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "telemetry",
+      "id" : 4,
+      "header_type" : "int_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "udp",
+      "id" : 5,
+      "header_type" : "udp_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "tcp",
+      "id" : 6,
+      "header_type" : "tcp_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "records[0]",
+      "id" : 7,
+      "header_type" : "record_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "records[1]",
+      "id" : 8,
+      "header_type" : "record_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "records[2]",
+      "id" : 9,
+      "header_type" : "record_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "records[3]",
+      "id" : 10,
+      "header_type" : "record_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "records[4]",
+      "id" : 11,
+      "header_type" : "record_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "records[5]",
+      "id" : 12,
+      "header_type" : "record_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "records[6]",
+      "id" : 13,
+      "header_type" : "record_t",
+      "metadata" : false,
+      "pi_omit" : true
+    },
+    {
+      "name" : "records[7]",
+      "id" : 14,
+      "header_type" : "record_t",
+      "metadata" : false,
+      "pi_omit" : true
+    }
+  ],
+  "header_stacks" : [
+    {
+      "name" : "records",
+      "id" : 0,
+      "header_type" : "record_t",
+      "size" : 8,
+      "header_ids" : [7, 8, 9, 10, 11, 12, 13, 14]
+    }
+  ],
+  "header_union_types" : [],
+  "header_unions" : [],
+  "header_union_stacks" : [],
+  "field_lists" : [
+    {
+      "id" : 1,
+      "name" : "field_list1",
+      "elements" : [
+        {
+          "type" : "field",
+          "value" : ["scalars", "metadata_t.sink"]
+        }
+      ]
+    }
+  ],
+  "errors" : [
+    ["NoError", 0],
+    ["PacketTooShort", 1],
+    ["NoMatch", 2],
+    ["StackOutOfBounds", 3],
+    ["HeaderTooShort", 4],
+    ["ParserTimeout", 5],
+    ["ParserInvalidArgument", 6],
+    ["UnsupportedIPv4", 7],
+    ["BadTelemetryCount", 8],
+    ["BadStateVersion", 9]
+  ],
+  "enums" : [],
+  "parsers" : [
+    {
+      "name" : "parser",
+      "id" : 0,
+      "init_state" : "start",
+      "parse_states" : [
+        {
+          "name" : "start",
+          "id" : 0,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.parsed"]
+                },
+                {
+                  "type" : "hexstr",
+                  "value" : "0x00"
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.sport"]
+                },
+                {
+                  "type" : "hexstr",
+                  "value" : "0x0000"
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.dport"]
+                },
+                {
+                  "type" : "hexstr",
+                  "value" : "0x0000"
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.enabled"]
+                },
+                {
+                  "type" : "hexstr",
+                  "value" : "0x00"
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.mtu_blocked"]
+                },
+                {
+                  "type" : "hexstr",
+                  "value" : "0x00"
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "ethernet"
+                }
+              ],
+              "op" : "extract"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x0800",
+              "mask" : null,
+              "next_state" : "ipv4"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x88b6",
+              "mask" : null,
+              "next_state" : "ipv4"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "ether_type"]
+            }
+          ]
+        },
+        {
+          "name" : "ipv4",
+          "id" : 1,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "ipv4"
+                }
+              ],
+              "op" : "extract"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "tmp"]
+                },
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "b2d",
+                      "left" : null,
+                      "right" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "and",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "==",
+                              "left" : {
+                                "type" : "field",
+                                "value" : ["ipv4", "version"]
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x04"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "==",
+                              "left" : {
+                                "type" : "field",
+                                "value" : ["ipv4", "ihl"]
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x05"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "op" : "d2b",
+                    "left" : null,
+                    "right" : {
+                      "type" : "field",
+                      "value" : ["scalars", "tmp"]
+                    }
+                  }
+                },
+                {
+                  "type" : "hexstr",
+                  "value" : "0x7"
+                }
+              ],
+              "op" : "verify"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x88b6",
+              "mask" : null,
+              "next_state" : "telemetry"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : "transport"
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "ether_type"]
+            }
+          ]
+        },
+        {
+          "name" : "telemetry",
+          "id" : 2,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "telemetry"
+                }
+              ],
+              "op" : "extract"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "tmp_0"]
+                },
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "b2d",
+                      "left" : null,
+                      "right" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "and",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "==",
+                              "left" : {
+                                "type" : "field",
+                                "value" : ["telemetry", "version"]
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x06"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "==",
+                              "left" : {
+                                "type" : "field",
+                                "value" : ["telemetry", "metric"]
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x01"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "op" : "d2b",
+                    "left" : null,
+                    "right" : {
+                      "type" : "field",
+                      "value" : ["scalars", "tmp_0"]
+                    }
+                  }
+                },
+                {
+                  "type" : "hexstr",
+                  "value" : "0x9"
+                }
+              ],
+              "op" : "verify"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "tmp_1"]
+                },
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "b2d",
+                      "left" : null,
+                      "right" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "<=",
+                          "left" : {
+                            "type" : "field",
+                            "value" : ["telemetry", "count"]
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0x08"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "op" : "d2b",
+                    "left" : null,
+                    "right" : {
+                      "type" : "field",
+                      "value" : ["scalars", "tmp_1"]
+                    }
+                  }
+                },
+                {
+                  "type" : "hexstr",
+                  "value" : "0x8"
+                }
+              ],
+              "op" : "verify"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x00",
+              "mask" : null,
+              "next_state" : "transport"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : "record"
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "field",
+              "value" : ["telemetry", "count"]
+            }
+          ]
+        },
+        {
+          "name" : "record",
+          "id" : 3,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "stack",
+                  "value" : "records"
+                }
+              ],
+              "op" : "extract"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.parsed"]
+                },
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "+",
+                          "left" : {
+                            "type" : "field",
+                            "value" : ["scalars", "metadata_t.parsed"]
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0x01"
+                          }
+                        }
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0xff"
+                      }
+                    }
+                  }
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "tmp_2"]
+                },
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "?",
+                      "left" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00"
+                      },
+                      "cond" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "<",
+                          "left" : {
+                            "type" : "field",
+                            "value" : ["scalars", "metadata_t.parsed"]
+                          },
+                          "right" : {
+                            "type" : "field",
+                            "value" : ["telemetry", "count"]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "op" : "set"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x01",
+              "mask" : null,
+              "next_state" : "record"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : "transport"
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_2"]
+            }
+          ]
+        },
+        {
+          "name" : "transport",
+          "id" : 4,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "tmp_3"]
+                },
+                {
+                  "type" : "expression",
+                  "value" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "?",
+                      "left" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00"
+                      },
+                      "cond" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "and",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "==",
+                              "left" : {
+                                "type" : "field",
+                                "value" : ["ipv4", "frag_offset"]
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x0000"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "==",
+                              "left" : {
+                                "type" : "expression",
+                                "value" : {
+                                  "op" : "&",
+                                  "left" : {
+                                    "type" : "field",
+                                    "value" : ["ipv4", "flags"]
+                                  },
+                                  "right" : {
+                                    "type" : "hexstr",
+                                    "value" : "0x01"
+                                  }
+                                }
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x00"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "op" : "set"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x0111",
+              "mask" : null,
+              "next_state" : "udp"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0106",
+              "mask" : null,
+              "next_state" : "tcp"
+            },
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_3"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "protocol"]
+            }
+          ]
+        },
+        {
+          "name" : "udp",
+          "id" : 5,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "udp"
+                }
+              ],
+              "op" : "extract"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.sport"]
+                },
+                {
+                  "type" : "field",
+                  "value" : ["udp", "src"]
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.dport"]
+                },
+                {
+                  "type" : "field",
+                  "value" : ["udp", "dst"]
+                }
+              ],
+              "op" : "set"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : []
+        },
+        {
+          "name" : "tcp",
+          "id" : 6,
+          "parser_ops" : [
+            {
+              "parameters" : [
+                {
+                  "type" : "regular",
+                  "value" : "tcp"
+                }
+              ],
+              "op" : "extract"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.sport"]
+                },
+                {
+                  "type" : "field",
+                  "value" : ["tcp", "src"]
+                }
+              ],
+              "op" : "set"
+            },
+            {
+              "parameters" : [
+                {
+                  "type" : "field",
+                  "value" : ["scalars", "metadata_t.dport"]
+                },
+                {
+                  "type" : "field",
+                  "value" : ["tcp", "dst"]
+                }
+              ],
+              "op" : "set"
+            }
+          ],
+          "transitions" : [
+            {
+              "type" : "default",
+              "value" : null,
+              "mask" : null,
+              "next_state" : null
+            }
+          ],
+          "transition_key" : []
+        }
+      ]
+    }
+  ],
+  "parse_vsets" : [],
+  "deparsers" : [
+    {
+      "name" : "deparser",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 329,
+        "column" : 8,
+        "source_fragment" : "TTDeparser"
+      },
+      "order" : ["ethernet", "ipv4", "telemetry", "records[0]", "records[1]", "records[2]", "records[3]", "records[4]", "records[5]", "records[6]", "records[7]", "udp", "tcp"],
+      "primitives" : []
+    }
+  ],
+  "meter_arrays" : [],
+  "counter_arrays" : [],
+  "register_arrays" : [
+    {
+      "name" : "TTIngress.packet_count",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 126,
+        "column" : 34,
+        "source_fragment" : "packet_count"
+      },
+      "size" : 256,
+      "bitwidth" : 32
+    },
+    {
+      "name" : "TTEgress.time_threshold",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 207,
+        "column" : 34,
+        "source_fragment" : "time_threshold"
+      },
+      "size" : 256,
+      "bitwidth" : 48
+    },
+    {
+      "name" : "TTEgress.last_timestamp",
+      "id" : 2,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 208,
+        "column" : 34,
+        "source_fragment" : "last_timestamp"
+      },
+      "size" : 256,
+      "bitwidth" : 48
+    },
+    {
+      "name" : "TTEgress.max_count",
+      "id" : 3,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 209,
+        "column" : 33,
+        "source_fragment" : "max_count"
+      },
+      "size" : 256,
+      "bitwidth" : 8
+    },
+    {
+      "name" : "TTEgress.has_sample",
+      "id" : 4,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 211,
+        "column" : 33,
+        "source_fragment" : "has_sample"
+      },
+      "size" : 256,
+      "bitwidth" : 1
+    }
+  ],
+  "calculations" : [
+    {
+      "name" : "calc",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 321,
+        "column" : 8,
+        "source_fragment" : "update_checksum(hdr.ipv4.isValid(), ..."
+      },
+      "algo" : "csum16",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["ipv4", "version"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ihl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "diffserv"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "total_len"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "identification"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "flags"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "frag_offset"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ttl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "protocol"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "src"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "dst"]
+        }
+      ]
+    },
+    {
+      "name" : "calc_0",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 115,
+        "column" : 8,
+        "source_fragment" : "verify_checksum(hdr.ipv4.isValid(), ..."
+      },
+      "algo" : "csum16",
+      "input" : [
+        {
+          "type" : "field",
+          "value" : ["ipv4", "version"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ihl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "diffserv"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "total_len"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "identification"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "flags"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "frag_offset"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "ttl"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "protocol"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "src"]
+        },
+        {
+          "type" : "field",
+          "value" : ["ipv4", "dst"]
+        }
+      ]
+    }
+  ],
+  "learn_lists" : [],
+  "actions" : [
+    {
+      "name" : "NoAction",
+      "id" : 0,
+      "runtime_data" : [],
+      "primitives" : []
+    },
+    {
+      "name" : "TTIngress.discard",
+      "id" : 1,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "mark_to_drop",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "standard_metadata"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 130,
+            "column" : 23,
+            "source_fragment" : "mark_to_drop(sm)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "TTIngress.discard",
+      "id" : 2,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "mark_to_drop",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "standard_metadata"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 130,
+            "column" : 23,
+            "source_fragment" : "mark_to_drop(sm)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "TTIngress.discard",
+      "id" : 3,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "mark_to_drop",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "standard_metadata"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 130,
+            "column" : 23,
+            "source_fragment" : "mark_to_drop(sm)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "TTIngress.set_node",
+      "id" : 4,
+      "runtime_data" : [
+        {
+          "name" : "node_id",
+          "bitwidth" : 8
+        },
+        {
+          "name" : "source",
+          "bitwidth" : 1
+        },
+        {
+          "name" : "sink",
+          "bitwidth" : 1
+        },
+        {
+          "name" : "mtu",
+          "bitwidth" : 16
+        }
+      ],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.node_id"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 0
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 132,
+            "column" : 8,
+            "source_fragment" : "meta.node_id = node_id"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.source"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 1
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 132,
+            "column" : 32,
+            "source_fragment" : "meta.source = source"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.sink"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 2
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 133,
+            "column" : 8,
+            "source_fragment" : "meta.sink = sink"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.mtu"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 3
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 133,
+            "column" : 26,
+            "source_fragment" : "meta.mtu = mtu"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "TTIngress.assign_flow",
+      "id" : 5,
+      "runtime_data" : [
+        {
+          "name" : "index",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "tag",
+          "bitwidth" : 32
+        },
+        {
+          "name" : "session",
+          "bitwidth" : 32
+        }
+      ],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 0
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 140,
+            "column" : 8,
+            "source_fragment" : "meta.flow_index = index"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_tag"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 1
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 140,
+            "column" : 33,
+            "source_fragment" : "meta.flow_tag = tag"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.session"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 2
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 140,
+            "column" : 54,
+            "source_fragment" : "meta.session = session"
+          }
+        },
+        {
+          "op" : "_jump_if_zero",
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 141,
+            "column" : 8,
+            "source_fragment" : "if"
+          },
+          "parameters" : [
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "b2d",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "<",
+                      "left" : {
+                        "type" : "local",
+                        "value" : 0
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00000100"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x5"
+            }
+          ]
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.enabled"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x01"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 141,
+            "column" : 34,
+            "source_fragment" : "meta.enabled = 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "TTIngress.forward",
+      "id" : 6,
+      "runtime_data" : [
+        {
+          "name" : "port",
+          "bitwidth" : 9
+        },
+        {
+          "name" : "dst_mac",
+          "bitwidth" : 48
+        },
+        {
+          "name" : "src_mac",
+          "bitwidth" : 48
+        }
+      ],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "egress_spec"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 0
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 150,
+            "column" : 8,
+            "source_fragment" : "sm.egress_spec = port"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "dst"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 1
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 151,
+            "column" : 8,
+            "source_fragment" : "hdr.ethernet.dst = dst_mac"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "src"]
+            },
+            {
+              "type" : "runtime_data",
+              "value" : 2
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 151,
+            "column" : 36,
+            "source_fragment" : "hdr.ethernet.src = src_mac"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int169",
+      "id" : 7,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.enabled"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 169,
+            "column" : 16,
+            "source_fragment" : "meta.enabled = 0"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int173",
+      "id" : 8,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "count_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "TTIngress.packet_count"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 173,
+            "column" : 16,
+            "source_fragment" : "packet_count.read(count, meta.flow_index)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "count_0"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "count_0"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00000001"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 174,
+            "column" : 16,
+            "source_fragment" : "count = count + 1"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "TTIngress.packet_count"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "count_0"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 175,
+            "column" : 16,
+            "source_fragment" : "packet_count.write(meta.flow_index, count)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int185",
+      "id" : 9,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "telemetry"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 185,
+            "column" : 20,
+            "source_fragment" : "hdr.telemetry.setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["telemetry", "count"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x00"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 185,
+            "column" : 46,
+            "source_fragment" : "hdr.telemetry.count = 0"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["telemetry", "init_ttl"]
+            },
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 186,
+            "column" : 20,
+            "source_fragment" : "hdr.telemetry.init_ttl = hdr.ipv4.ttl"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["telemetry", "version"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x06"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 187,
+            "column" : 20,
+            "source_fragment" : "hdr.telemetry.version = 6"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["telemetry", "metric"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x01"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 187,
+            "column" : 47,
+            "source_fragment" : "hdr.telemetry.metric = 1"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["telemetry", "flow_tag"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_tag"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 188,
+            "column" : 20,
+            "source_fragment" : "hdr.telemetry.flow_tag = meta.flow_tag"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["telemetry", "session"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.session"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 188,
+            "column" : 60,
+            "source_fragment" : "hdr.telemetry.session = meta.session"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "ether_type"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x88b6"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 6,
+            "column" : 31,
+            "source_fragment" : "0x88b6; ..."
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "total_len"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["ipv4", "total_len"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x000c"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 190,
+            "column" : 20,
+            "source_fragment" : "hdr.ipv4.total_len = hdr.ipv4.total_len + 12"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int192",
+      "id" : 10,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.mtu_blocked"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x01"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 192,
+            "column" : 20,
+            "source_fragment" : "meta.mtu_blocked = 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int197",
+      "id" : 11,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "clone_ingress_pkt_to_egress",
+          "parameters" : [
+            {
+              "type" : "hexstr",
+              "value" : "0x00000064"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 197,
+            "column" : 16,
+            "source_fragment" : "clone_preserving_field_list(CloneType.I2E, REPORT_SESSION, 1)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int199",
+      "id" : 12,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "ttl"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["ipv4", "ttl"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0xff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 199,
+            "column" : 12,
+            "source_fragment" : "hdr.ipv4.ttl = hdr.ipv4.ttl - 1"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int233",
+      "id" : 13,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "total_len"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "&",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "*",
+                              "left" : {
+                                "type" : "expression",
+                                "value" : {
+                                  "op" : "&",
+                                  "left" : {
+                                    "type" : "field",
+                                    "value" : ["telemetry", "count"]
+                                  },
+                                  "right" : {
+                                    "type" : "hexstr",
+                                    "value" : "0xffff"
+                                  }
+                                }
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x000c"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0xffff"
+                          }
+                        }
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x0020"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 233,
+            "column" : 12,
+            "source_fragment" : "hdr.ipv4.total_len = 20 + 12 + 12 * (bit<16>) hdr.telemetry.count"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_4"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "&",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "&",
+                              "left" : {
+                                "type" : "expression",
+                                "value" : {
+                                  "op" : "+",
+                                  "left" : {
+                                    "type" : "expression",
+                                    "value" : {
+                                      "op" : "&",
+                                      "left" : {
+                                        "type" : "expression",
+                                        "value" : {
+                                          "op" : "*",
+                                          "left" : {
+                                            "type" : "expression",
+                                            "value" : {
+                                              "op" : "&",
+                                              "left" : {
+                                                "type" : "field",
+                                                "value" : ["telemetry", "count"]
+                                              },
+                                              "right" : {
+                                                "type" : "hexstr",
+                                                "value" : "0xffff"
+                                              }
+                                            }
+                                          },
+                                          "right" : {
+                                            "type" : "hexstr",
+                                            "value" : "0x000c"
+                                          }
+                                        }
+                                      },
+                                      "right" : {
+                                        "type" : "hexstr",
+                                        "value" : "0xffff"
+                                      }
+                                    }
+                                  },
+                                  "right" : {
+                                    "type" : "hexstr",
+                                    "value" : "0x0020"
+                                  }
+                                }
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0xffff"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0xffffffff"
+                          }
+                        }
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x0000000e"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 234,
+            "column" : 21,
+            "source_fragment" : "14 + (bit<32>) hdr.ipv4.total_len"
+          }
+        },
+        {
+          "op" : "truncate",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "tmp_4"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 234,
+            "column" : 12,
+            "source_fragment" : "truncate(14 + (bit<32>) hdr.ipv4.total_len)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int238",
+      "id" : 14,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "total_len"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "-",
+                      "left" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "&",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "+",
+                              "left" : {
+                                "type" : "field",
+                                "value" : ["ipv4", "total_len"]
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0xfff4"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0xffff"
+                          }
+                        }
+                      },
+                      "right" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "&",
+                          "left" : {
+                            "type" : "expression",
+                            "value" : {
+                              "op" : "*",
+                              "left" : {
+                                "type" : "expression",
+                                "value" : {
+                                  "op" : "&",
+                                  "left" : {
+                                    "type" : "field",
+                                    "value" : ["telemetry", "count"]
+                                  },
+                                  "right" : {
+                                    "type" : "hexstr",
+                                    "value" : "0xffff"
+                                  }
+                                }
+                              },
+                              "right" : {
+                                "type" : "hexstr",
+                                "value" : "0x000c"
+                              }
+                            }
+                          },
+                          "right" : {
+                            "type" : "hexstr",
+                            "value" : "0xffff"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 238,
+            "column" : 20,
+            "source_fragment" : "hdr.ipv4.total_len = hdr.ipv4.total_len - 12 - ..."
+          }
+        },
+        {
+          "op" : "remove_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "telemetry"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 240,
+            "column" : 20,
+            "source_fragment" : "hdr.telemetry.setInvalid()"
+          }
+        },
+        {
+          "op" : "pop",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "records"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x8"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 240,
+            "column" : 48,
+            "source_fragment" : "hdr.records.pop_front(8)"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ethernet", "ether_type"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0800"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 5,
+            "column" : 26,
+            "source_fragment" : "0x0800; ..."
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int262",
+      "id" : 15,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "threshold_0"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x0000000186a0"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 14,
+            "column" : 37,
+            "source_fragment" : "100000; ..."
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int261",
+      "id" : 16,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "threshold_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "TTEgress.time_threshold"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 261,
+            "column" : 20,
+            "source_fragment" : "time_threshold.read(threshold, meta.flow_index)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int275",
+      "id" : 17,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "push",
+          "parameters" : [
+            {
+              "type" : "header_stack",
+              "value" : "records"
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x1"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 275,
+            "column" : 28,
+            "source_fragment" : "hdr.records.push_front(1)"
+          }
+        },
+        {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "records[0]"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 276,
+            "column" : 28,
+            "source_fragment" : "hdr.records[0].setValid()"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["records[0]", "switch_id"]
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.node_id"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 277,
+            "column" : 28,
+            "source_fragment" : "hdr.records[0].switch_id = meta.node_id"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["records[0]", "generated_us"]
+            },
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "egress_global_timestamp"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 278,
+            "column" : 28,
+            "source_fragment" : "hdr.records[0].generated_us = sm.egress_global_timestamp"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["records[0]", "queue_packets"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["standard_metadata", "deq_qdepth"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffffffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 279,
+            "column" : 28,
+            "source_fragment" : "hdr.records[0].queue_packets = (bit<32>) sm.deq_qdepth"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["records[0]", "hop"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "-",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["telemetry", "init_ttl"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["ipv4", "ttl"]
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 280,
+            "column" : 28,
+            "source_fragment" : "hdr.records[0].hop = hdr.telemetry.init_ttl - hdr.ipv4.ttl"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["telemetry", "count"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["telemetry", "count"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 281,
+            "column" : 28,
+            "source_fragment" : "hdr.telemetry.count = hdr.telemetry.count + 1"
+          }
+        },
+        {
+          "op" : "assign",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["ipv4", "total_len"]
+            },
+            {
+              "type" : "expression",
+              "value" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["ipv4", "total_len"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x000c"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffff"
+                  }
+                }
+              }
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 282,
+            "column" : 28,
+            "source_fragment" : "hdr.ipv4.total_len = hdr.ipv4.total_len + 12"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "TTEgress.last_timestamp"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            },
+            {
+              "type" : "field",
+              "value" : ["standard_metadata", "ingress_global_timestamp"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 283,
+            "column" : 28,
+            "source_fragment" : "last_timestamp.write(meta.flow_index, now)"
+          }
+        },
+        {
+          "op" : "register_write",
+          "parameters" : [
+            {
+              "type" : "register_array",
+              "value" : "TTEgress.has_sample"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            },
+            {
+              "type" : "hexstr",
+              "value" : "0x01"
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 284,
+            "column" : 28,
+            "source_fragment" : "has_sample.write(meta.flow_index, 1)"
+          }
+        }
+      ]
+    },
+    {
+      "name" : "into_int263",
+      "id" : 18,
+      "runtime_data" : [],
+      "primitives" : [
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "previous_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "TTEgress.last_timestamp"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 263,
+            "column" : 20,
+            "source_fragment" : "last_timestamp.read(previous, meta.flow_index)"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "valid_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "TTEgress.has_sample"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 264,
+            "column" : 20,
+            "source_fragment" : "has_sample.read(valid, meta.flow_index)"
+          }
+        },
+        {
+          "op" : "register_read",
+          "parameters" : [
+            {
+              "type" : "field",
+              "value" : ["scalars", "capacity_0"]
+            },
+            {
+              "type" : "register_array",
+              "value" : "TTEgress.max_count"
+            },
+            {
+              "type" : "field",
+              "value" : ["scalars", "metadata_t.flow_index"]
+            }
+          ],
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 265,
+            "column" : 20,
+            "source_fragment" : "max_count.read(capacity, meta.flow_index)"
+          }
+        }
+      ]
+    }
+  ],
+  "pipelines" : [
+    {
+      "name" : "ingress",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 124,
+        "column" : 8,
+        "source_fragment" : "TTIngress"
+      },
+      "init_table" : "TTIngress.node_config",
+      "tables" : [
+        {
+          "name" : "TTIngress.node_config",
+          "id" : 0,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 135,
+            "column" : 10,
+            "source_fragment" : "node_config"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [4],
+          "actions" : ["TTIngress.set_node"],
+          "base_default_next" : "node_3",
+          "next_tables" : {
+            "TTIngress.set_node" : "node_3"
+          },
+          "default_entry" : {
+            "action_id" : 4,
+            "action_const" : false,
+            "action_data" : ["0x0", "0x0", "0x0", "0x5dc"],
+            "action_entry_const" : false
+          }
+        },
+        {
+          "name" : "tbl_discard",
+          "id" : 1,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 162,
+            "column" : 12,
+            "source_fragment" : "discard()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [2],
+          "actions" : ["TTIngress.discard"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "TTIngress.discard" : null
+          },
+          "default_entry" : {
+            "action_id" : 2,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_discard_0",
+          "id" : 2,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 164,
+            "column" : 12,
+            "source_fragment" : "discard()"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [3],
+          "actions" : ["TTIngress.discard"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "TTIngress.discard" : null
+          },
+          "default_entry" : {
+            "action_id" : 3,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "TTIngress.flow_map",
+          "id" : 3,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 143,
+            "column" : 10,
+            "source_fragment" : "flow_map"
+          },
+          "key" : [
+            {
+              "match_type" : "exact",
+              "name" : "hdr.ipv4.src",
+              "target" : ["ipv4", "src"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "hdr.ipv4.dst",
+              "target" : ["ipv4", "dst"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "hdr.ipv4.protocol",
+              "target" : ["ipv4", "protocol"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "meta.sport",
+              "target" : ["scalars", "metadata_t.sport"],
+              "mask" : null
+            },
+            {
+              "match_type" : "exact",
+              "name" : "meta.dport",
+              "target" : ["scalars", "metadata_t.dport"],
+              "mask" : null
+            }
+          ],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 256,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [5, 0],
+          "actions" : ["TTIngress.assign_flow", "NoAction"],
+          "base_default_next" : "node_8",
+          "next_tables" : {
+            "TTIngress.assign_flow" : "node_8",
+            "NoAction" : "node_8"
+          },
+          "default_entry" : {
+            "action_id" : 0,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
+          }
+        },
+        {
+          "name" : "tbl_into_int169",
+          "id" : 4,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 169,
+            "column" : 29,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [7],
+          "actions" : ["into_int169"],
+          "base_default_next" : "node_10",
+          "next_tables" : {
+            "into_int169" : "node_10"
+          },
+          "default_entry" : {
+            "action_id" : 7,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int173",
+          "id" : 5,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 173,
+            "column" : 16,
+            "source_fragment" : "packet_count.read(count, meta.flow_index); ..."
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [8],
+          "actions" : ["into_int173"],
+          "base_default_next" : "node_12",
+          "next_tables" : {
+            "into_int173" : "node_12"
+          },
+          "default_entry" : {
+            "action_id" : 8,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int185",
+          "id" : 6,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 185,
+            "column" : 20,
+            "source_fragment" : "hdr.telemetry.setValid(); hdr.telemetry.count = 0; ..."
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [9],
+          "actions" : ["into_int185"],
+          "base_default_next" : "node_16",
+          "next_tables" : {
+            "into_int185" : "node_16"
+          },
+          "default_entry" : {
+            "action_id" : 9,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int192",
+          "id" : 7,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 192,
+            "column" : 37,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [10],
+          "actions" : ["into_int192"],
+          "base_default_next" : "node_16",
+          "next_tables" : {
+            "into_int192" : "node_16"
+          },
+          "default_entry" : {
+            "action_id" : 10,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int197",
+          "id" : 8,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 197,
+            "column" : 16,
+            "source_fragment" : "clone_preserving_field_list(CloneType.I2E, REPORT_SESSION, 1)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [11],
+          "actions" : ["into_int197"],
+          "base_default_next" : "tbl_into_int199",
+          "next_tables" : {
+            "into_int197" : "tbl_into_int199"
+          },
+          "default_entry" : {
+            "action_id" : 11,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int199",
+          "id" : 9,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 199,
+            "column" : 25,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [12],
+          "actions" : ["into_int199"],
+          "base_default_next" : "TTIngress.ipv4_forward",
+          "next_tables" : {
+            "into_int199" : "TTIngress.ipv4_forward"
+          },
+          "default_entry" : {
+            "action_id" : 12,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "TTIngress.ipv4_forward",
+          "id" : 10,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 153,
+            "column" : 10,
+            "source_fragment" : "ipv4_forward"
+          },
+          "key" : [
+            {
+              "match_type" : "exact",
+              "name" : "hdr.ipv4.dst",
+              "target" : ["ipv4", "dst"],
+              "mask" : null
+            }
+          ],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 32,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [6, 1],
+          "actions" : ["TTIngress.forward", "TTIngress.discard"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "TTIngress.forward" : null,
+            "TTIngress.discard" : null
+          },
+          "default_entry" : {
+            "action_id" : 1,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
+          }
+        }
+      ],
+      "action_profiles" : [],
+      "conditionals" : [
+        {
+          "name" : "node_3",
+          "id" : 0,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 160,
+            "column" : 12,
+            "source_fragment" : "sm.parser_error != error.NoError || sm.checksum_error != 0 || ..."
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "or",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "or",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "!=",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["standard_metadata", "parser_error"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x0"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "!=",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["standard_metadata", "checksum_error"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x00"
+                      }
+                    }
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "not",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "d2b",
+                      "left" : null,
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["ipv4", "$valid$"]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "tbl_discard",
+          "false_next" : "node_5"
+        },
+        {
+          "name" : "node_5",
+          "id" : 1,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 163,
+            "column" : 19,
+            "source_fragment" : "hdr.ipv4.ttl <= 1 || hdr.ipv4.total_len > meta.mtu"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "or",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "<=",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["ipv4", "ttl"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x01"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : ">",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["ipv4", "total_len"]
+                  },
+                  "right" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata_t.mtu"]
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "tbl_discard_0",
+          "false_next" : "TTIngress.flow_map"
+        },
+        {
+          "name" : "node_8",
+          "id" : 2,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 167,
+            "column" : 16,
+            "source_fragment" : "hdr.telemetry.isValid() && ..."
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "and",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "d2b",
+                  "left" : null,
+                  "right" : {
+                    "type" : "field",
+                    "value" : ["telemetry", "$valid$"]
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "or",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "!=",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["telemetry", "flow_tag"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["scalars", "metadata_t.flow_tag"]
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "!=",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["telemetry", "session"]
+                      },
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["scalars", "metadata_t.session"]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "tbl_into_int169",
+          "false_next" : "node_10"
+        },
+        {
+          "name" : "node_10",
+          "id" : 3,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 171,
+            "column" : 16,
+            "source_fragment" : "meta.source == 1 && meta.enabled == 1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "and",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "==",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata_t.source"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x01"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "==",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata_t.enabled"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x01"
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "tbl_into_int173",
+          "false_next" : "node_12"
+        },
+        {
+          "name" : "node_12",
+          "id" : 4,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 182,
+            "column" : 16,
+            "source_fragment" : "meta.source == 1 && meta.enabled == 1 && ..."
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "and",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "and",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "metadata_t.source"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "metadata_t.enabled"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "not",
+                  "left" : null,
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "d2b",
+                      "left" : null,
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["telemetry", "$valid$"]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "node_13",
+          "false_next" : "node_16"
+        },
+        {
+          "name" : "node_13",
+          "id" : 5,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 184,
+            "column" : 20,
+            "source_fragment" : "hdr.ipv4.total_len <= meta.mtu - 12"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "<=",
+              "left" : {
+                "type" : "field",
+                "value" : ["ipv4", "total_len"]
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "metadata_t.mtu"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0xfff4"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffff"
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "tbl_into_int185",
+          "false_next" : "tbl_into_int192"
+        },
+        {
+          "name" : "node_16",
+          "id" : 6,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 195,
+            "column" : 16,
+            "source_fragment" : "meta.sink == 1 && hdr.telemetry.isValid() && ..."
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "and",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "and",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "==",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "metadata_t.sink"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0x01"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "d2b",
+                      "left" : null,
+                      "right" : {
+                        "type" : "field",
+                        "value" : ["telemetry", "$valid$"]
+                      }
+                    }
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : ">",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["telemetry", "count"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x00"
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : "tbl_into_int197",
+          "false_next" : "tbl_into_int199"
+        }
+      ]
+    },
+    {
+      "name" : "egress",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 205,
+        "column" : 8,
+        "source_fragment" : "TTEgress"
+      },
+      "init_table" : "node_22",
+      "tables" : [
+        {
+          "name" : "tbl_into_int233",
+          "id" : 11,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 233,
+            "column" : 31,
+            "source_fragment" : "= 20 + 12 + 12 * (bit<16>) hdr.telemetry.count; ..."
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [13],
+          "actions" : ["into_int233"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "into_int233" : null
+          },
+          "default_entry" : {
+            "action_id" : 13,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int238",
+          "id" : 12,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 238,
+            "column" : 39,
+            "source_fragment" : "= hdr.ipv4.total_len - 12 - ..."
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [14],
+          "actions" : ["into_int238"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "into_int238" : null
+          },
+          "default_entry" : {
+            "action_id" : 14,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int261",
+          "id" : 13,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 261,
+            "column" : 20,
+            "source_fragment" : "time_threshold.read(threshold, meta.flow_index)"
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [16],
+          "actions" : ["into_int261"],
+          "base_default_next" : "node_31",
+          "next_tables" : {
+            "into_int261" : "node_31"
+          },
+          "default_entry" : {
+            "action_id" : 16,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int262",
+          "id" : 14,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 262,
+            "column" : 52,
+            "source_fragment" : "="
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [15],
+          "actions" : ["into_int262"],
+          "base_default_next" : "tbl_into_int263",
+          "next_tables" : {
+            "into_int262" : "tbl_into_int263"
+          },
+          "default_entry" : {
+            "action_id" : 15,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int263",
+          "id" : 15,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 263,
+            "column" : 20,
+            "source_fragment" : "last_timestamp.read(previous, meta.flow_index); ..."
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [18],
+          "actions" : ["into_int263"],
+          "base_default_next" : "node_34",
+          "next_tables" : {
+            "into_int263" : "node_34"
+          },
+          "default_entry" : {
+            "action_id" : 18,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        },
+        {
+          "name" : "tbl_into_int275",
+          "id" : 16,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 275,
+            "column" : 28,
+            "source_fragment" : "hdr.records.push_front(1); ..."
+          },
+          "key" : [],
+          "match_type" : "exact",
+          "type" : "simple",
+          "max_size" : 1024,
+          "with_counters" : false,
+          "support_timeout" : false,
+          "direct_meters" : null,
+          "action_ids" : [17],
+          "actions" : ["into_int275"],
+          "base_default_next" : null,
+          "next_tables" : {
+            "into_int275" : null
+          },
+          "default_entry" : {
+            "action_id" : 17,
+            "action_const" : true,
+            "action_data" : [],
+            "action_entry_const" : true
+          }
+        }
+      ],
+      "action_profiles" : [],
+      "conditionals" : [
+        {
+          "name" : "node_22",
+          "id" : 7,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 232,
+            "column" : 12,
+            "source_fragment" : "sm.instance_type == INGRESS_CLONE"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["standard_metadata", "instance_type"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x00000001"
+              }
+            }
+          },
+          "true_next" : "tbl_into_int233",
+          "false_next" : "node_24"
+        },
+        {
+          "name" : "node_24",
+          "id" : 8,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 235,
+            "column" : 19,
+            "source_fragment" : "hdr.ipv4.isValid()"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "d2b",
+              "left" : null,
+              "right" : {
+                "type" : "field",
+                "value" : ["ipv4", "$valid$"]
+              }
+            }
+          },
+          "false_next" : null,
+          "true_next" : "node_25"
+        },
+        {
+          "name" : "node_25",
+          "id" : 9,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 236,
+            "column" : 16,
+            "source_fragment" : "meta.sink == 1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "metadata_t.sink"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x01"
+              }
+            }
+          },
+          "true_next" : "node_26",
+          "false_next" : "node_28"
+        },
+        {
+          "name" : "node_26",
+          "id" : 10,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 237,
+            "column" : 20,
+            "source_fragment" : "hdr.telemetry.isValid()"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "d2b",
+              "left" : null,
+              "right" : {
+                "type" : "field",
+                "value" : ["telemetry", "$valid$"]
+              }
+            }
+          },
+          "false_next" : null,
+          "true_next" : "tbl_into_int238"
+        },
+        {
+          "name" : "node_28",
+          "id" : 11,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 258,
+            "column" : 20,
+            "source_fragment" : "meta.mtu_blocked == 1"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "metadata_t.mtu_blocked"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x01"
+              }
+            }
+          },
+          "true_next" : null,
+          "false_next" : "node_29"
+        },
+        {
+          "name" : "node_29",
+          "id" : 12,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 260,
+            "column" : 27,
+            "source_fragment" : "meta.enabled == 1 && hdr.telemetry.isValid()"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "and",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "==",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata_t.enabled"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x01"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "d2b",
+                  "left" : null,
+                  "right" : {
+                    "type" : "field",
+                    "value" : ["telemetry", "$valid$"]
+                  }
+                }
+              }
+            }
+          },
+          "false_next" : null,
+          "true_next" : "tbl_into_int261"
+        },
+        {
+          "name" : "node_31",
+          "id" : 13,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 262,
+            "column" : 24,
+            "source_fragment" : "threshold == 0"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "==",
+              "left" : {
+                "type" : "field",
+                "value" : ["scalars", "threshold_0"]
+              },
+              "right" : {
+                "type" : "hexstr",
+                "value" : "0x000000000000"
+              }
+            }
+          },
+          "true_next" : "tbl_into_int262",
+          "false_next" : "tbl_into_int263"
+        },
+        {
+          "name" : "node_34",
+          "id" : 14,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 266,
+            "column" : 24,
+            "source_fragment" : "meta.node_id == 0 || meta.node_id > 8"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "or",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "==",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata_t.node_id"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x00"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : ">",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "metadata_t.node_id"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x08"
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : null,
+          "false_next" : "node_35"
+        },
+        {
+          "name" : "node_35",
+          "id" : 15,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 268,
+            "column" : 31,
+            "source_fragment" : "valid == 0 || now - previous >= threshold"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "or",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "==",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["scalars", "valid_0"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x00"
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : ">=",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "&",
+                      "left" : {
+                        "type" : "expression",
+                        "value" : {
+                          "op" : "-",
+                          "left" : {
+                            "type" : "field",
+                            "value" : ["standard_metadata", "ingress_global_timestamp"]
+                          },
+                          "right" : {
+                            "type" : "field",
+                            "value" : ["scalars", "previous_0"]
+                          }
+                        }
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0xffffffffffff"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "field",
+                    "value" : ["scalars", "threshold_0"]
+                  }
+                }
+              }
+            }
+          },
+          "false_next" : null,
+          "true_next" : "node_36"
+        },
+        {
+          "name" : "node_36",
+          "id" : 16,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 269,
+            "column" : 28,
+            "source_fragment" : "hdr.telemetry.count >= capacity || ..."
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : "or",
+              "left" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : ">=",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["telemetry", "count"]
+                  },
+                  "right" : {
+                    "type" : "field",
+                    "value" : ["scalars", "capacity_0"]
+                  }
+                }
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : ">=",
+                  "left" : {
+                    "type" : "field",
+                    "value" : ["telemetry", "count"]
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0x08"
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : null,
+          "false_next" : "node_37"
+        },
+        {
+          "name" : "node_37",
+          "id" : 17,
+          "source_info" : {
+            "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+            "line" : 272,
+            "column" : 35,
+            "source_fragment" : "hdr.ipv4.total_len > meta.mtu - 12"
+          },
+          "expression" : {
+            "type" : "expression",
+            "value" : {
+              "op" : ">",
+              "left" : {
+                "type" : "field",
+                "value" : ["ipv4", "total_len"]
+              },
+              "right" : {
+                "type" : "expression",
+                "value" : {
+                  "op" : "&",
+                  "left" : {
+                    "type" : "expression",
+                    "value" : {
+                      "op" : "+",
+                      "left" : {
+                        "type" : "field",
+                        "value" : ["scalars", "metadata_t.mtu"]
+                      },
+                      "right" : {
+                        "type" : "hexstr",
+                        "value" : "0xfff4"
+                      }
+                    }
+                  },
+                  "right" : {
+                    "type" : "hexstr",
+                    "value" : "0xffff"
+                  }
+                }
+              }
+            }
+          },
+          "true_next" : null,
+          "false_next" : "tbl_into_int275"
+        }
+      ]
+    }
+  ],
+  "checksums" : [
+    {
+      "name" : "cksum",
+      "id" : 0,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 321,
+        "column" : 8,
+        "source_fragment" : "update_checksum(hdr.ipv4.isValid(), ..."
+      },
+      "target" : ["ipv4", "checksum"],
+      "type" : "generic",
+      "calculation" : "calc",
+      "verify" : false,
+      "update" : true,
+      "if_cond" : {
+        "type" : "expression",
+        "value" : {
+          "op" : "d2b",
+          "left" : null,
+          "right" : {
+            "type" : "field",
+            "value" : ["ipv4", "$valid$"]
+          }
+        }
+      }
+    },
+    {
+      "name" : "cksum_0",
+      "id" : 1,
+      "source_info" : {
+        "filename" : "/home/howard/tt-into/src/p4/into_int.p4",
+        "line" : 115,
+        "column" : 8,
+        "source_fragment" : "verify_checksum(hdr.ipv4.isValid(), ..."
+      },
+      "target" : ["ipv4", "checksum"],
+      "type" : "generic",
+      "calculation" : "calc_0",
+      "verify" : true,
+      "update" : false,
+      "if_cond" : {
+        "type" : "expression",
+        "value" : {
+          "op" : "d2b",
+          "left" : null,
+          "right" : {
+            "type" : "field",
+            "value" : ["ipv4", "$valid$"]
+          }
+        }
+      }
+    }
+  ],
+  "force_arith" : [],
+  "extern_instances" : [],
+  "field_aliases" : [
+    [
+      "queueing_metadata.enq_timestamp",
+      ["standard_metadata", "enq_timestamp"]
+    ],
+    [
+      "queueing_metadata.enq_qdepth",
+      ["standard_metadata", "enq_qdepth"]
+    ],
+    [
+      "queueing_metadata.deq_timedelta",
+      ["standard_metadata", "deq_timedelta"]
+    ],
+    [
+      "queueing_metadata.deq_qdepth",
+      ["standard_metadata", "deq_qdepth"]
+    ],
+    [
+      "intrinsic_metadata.ingress_global_timestamp",
+      ["standard_metadata", "ingress_global_timestamp"]
+    ],
+    [
+      "intrinsic_metadata.egress_global_timestamp",
+      ["standard_metadata", "egress_global_timestamp"]
+    ],
+    [
+      "intrinsic_metadata.mcast_grp",
+      ["standard_metadata", "mcast_grp"]
+    ],
+    [
+      "intrinsic_metadata.egress_rid",
+      ["standard_metadata", "egress_rid"]
+    ],
+    [
+      "intrinsic_metadata.priority",
+      ["standard_metadata", "priority"]
+    ]
+  ],
+  "program" : "/home/howard/tt-into/src/p4/into_int.p4",
+  "__meta__" : {
+    "version" : [2, 23],
+    "compiler" : "https://github.com/p4lang/p4c"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "status": "scope_frozen",
+  "execution_ready": false,
+  "network_started": false,
+  "business_generated": false,
+  "source_scope_sha256": "8318128d865e50ba0c3f9ba52b963a128094c8e7c1f98c190b0f706b2db85bdd",
+  "selection_basis": "首个完整规模均值形成前按中等规模与已有主方法确定，不按本轮效应大小挑选",
+  "cell": {
+    "network_id": "n5f4",
+    "scenario": "shared_priority",
+    "candidate_id": "C29",
+    "initial_config": [
+      600000,
+      null,
+      null,
+      50000,
+      800000,
+      400000,
+      null,
+      1000000,
+      null,
+      null,
+      600000,
+      null,
+      null,
+      null,
+      800000,
+      null
+    ]
+  },
+  "methods": [
+    "static",
+    "phase_guard"
+  ],
+  "method_parameters": {
+    "static": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "feedback": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "phase_joint": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "phase_guard": {
+      "adaptive": {
+        "gain_margin": 0.05,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      }
+    },
+    "intopp_due": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 144.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 1.0,
+        "weighted_dependencies": false
+      }
+    },
+    "d_into_tt": {
+      "adaptive": {
+        "gain_margin": 0.0,
+        "reserve_fraction": 0.0,
+        "lookback_us": 3000000,
+        "cluster_fraction": 0.25,
+        "period_relative_mad": 0.2,
+        "measurement_start_us": 2000000,
+        "measurement_end_us": 10000000
+      },
+      "literature": {
+        "value_scale": 432.0,
+        "average_change_bytes": 12.0,
+        "early_fraction": 0.0,
+        "weighted_dependencies": false
+      }
+    }
+  },
+  "conditions": [
+    {
+      "condition_id": "B085",
+      "data_budget_multiplier": 0.85,
+      "observation_period_us": 100000
+    },
+    {
+      "condition_id": "B100",
+      "data_budget_multiplier": 1.0,
+      "observation_period_us": 100000
+    },
+    {
+      "condition_id": "B115",
+      "data_budget_multiplier": 1.15,
+      "observation_period_us": 100000
+    },
+    {
+      "condition_id": "O250",
+      "data_budget_multiplier": 1.0,
+      "observation_period_us": 250000
+    },
+    {
+      "condition_id": "O1000",
+      "data_budget_multiplier": 1.0,
+      "observation_period_us": 1000000
+    }
+  ],
+  "independent_business_count": 4,
+  "deployment_blocks": 2,
+  "total_cases": 80,
+  "decision_period_us": 1000000,
+  "api_bytes_per_s": 1200,
+  "local_notice_payload_bytes_per_s": 128,
+  "initialization_rule": "全部条件继承n5f4重点C29，不重新搜索配置或策略参数；评价冻结运行点的敏感性",
+  "sensitivity_scope": "两预算方向与两观察周期，相对共同中心的五条件，不展开交叉矩阵",
+  "preflight_rule": "新的周期与预算入口独立核对实际观察槽、决策映射和费用；只用已消费训练11进行有限极端烟测",
+  "fresh_business_rule": "执行前审计全部持久输入，另存prepared业务身份及冻结顺序；当前不预留或生成新业务",
+  "completion_rule": "完成80例、独立年龄费用重建、全部配对及同源图；实质错误定向修复，保留退化、超限与不可评价，不按提升幅度扩展"
+}
